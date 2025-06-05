@@ -1,0 +1,13 @@
+User-agent: *
+Disallow: /
+
+# Permitir o acesso a determinadas páginas
+Allow: /index.html
+
+# Permitir o acesso a determinados diretórios
+Allow: /img/
+
+# Permitir o acesso a determinadas extensões de arquivo
+Allow: *.jpg
+Allow: *.png
+Allow: *.pdf
