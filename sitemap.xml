@@ -7,9 +7,17 @@
     <!-- Página Principal -->
     <url>
         <loc>https://www.protoncd.com.br/index.html</loc>
-        <lastmod>2025-12-04</lastmod>
+        <lastmod>2025-12-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
+    </url>
+
+    <!-- Página de Renovação CERCON Goiás -->
+    <url>
+        <loc>https://www.protoncd.com.br/cercon-goias.html</loc>
+        <lastmod>2025-12-05</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.95</priority>
     </url>
 
     <!-- Página de Análise de Vibração em Elevadores -->
