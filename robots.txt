@@ -1,19 +1,9 @@
 User-agent: *
-Disallow: /
+Allow: /
 
-# Permitir o acesso a determinadas páginas
-Allow: /index.html
-Allow: /cercon-goias.html
-Allow: /teste-arrancamento-olhais.html
-Allow: /analise-vibracao-elevadores.html
-
-# Permitir o acesso a determinados diretórios
-Allow: /img/
-
-# Permitir o acesso a determinadas extensões de arquivo
-Allow: *.jpg
-Allow: *.png
-Allow: *.pdf
+# Bloquear apenas diretórios desnecessários (se houver)
+# Disallow: /admin/
+# Disallow: /temp/
 
 # Sitemap
 Sitemap: https://www.protoncd.com.br/sitemap.xml
