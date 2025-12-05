@@ -4,6 +4,7 @@ Disallow: /
 # Permitir o acesso a determinadas páginas
 Allow: /index.html
 Allow: /cercon-goias.html
+Allow: /teste-arrancamento-olhais.html
 Allow: /analise-vibracao-elevadores.html
 
 # Permitir o acesso a determinados diretórios

@@ -20,6 +20,14 @@
         <priority>0.95</priority>
     </url>
 
+    <!-- Página de Teste de Arrancamento em Olhais -->
+    <url>
+        <loc>https://www.protoncd.com.br/teste-arrancamento-olhais.html</loc>
+        <lastmod>2025-12-05</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.95</priority>
+    </url>
+
     <!-- Página de Análise de Vibração em Elevadores -->
     <url>
         <loc>https://www.protoncd.com.br/analise-vibracao-elevadores.html</loc>
