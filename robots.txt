@@ -3,6 +3,7 @@ Disallow: /
 
 # Permitir o acesso a determinadas páginas
 Allow: /index.html
+Allow: /analise-vibracao-elevadores.html
 
 # Permitir o acesso a determinados diretórios
 Allow: /img/
@@ -11,3 +12,6 @@ Allow: /img/
 Allow: *.jpg
 Allow: *.png
 Allow: *.pdf
+
+# Sitemap
+Sitemap: https://www.protoncd.com.br/sitemap.xml
