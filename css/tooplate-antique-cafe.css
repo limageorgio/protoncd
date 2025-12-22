@@ -25,7 +25,11 @@ p a:hover {
 
 #contact p a { color: #066; }
 
-footer span a { color: #FFF; }
+footer span a { color: #333333; }
+
+.fa-inverse {
+    color: #333333;
+}
 
 .tm-logo-font {
     font-family: 'Oswald', sans-serif;

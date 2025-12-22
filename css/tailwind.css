@@ -1025,7 +1025,7 @@ video {
 
 .text-white {
   --tw-text-opacity: 1;
-  color: rgba(255, 255, 255, var(--tw-text-opacity));
+  color: rgba(51, 51, 51, var(--tw-text-opacity));
 }
 
 .hover\:text-gray-200:hover {
