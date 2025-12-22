@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proton Engenharia Mecânica | Inspeção Predial Completa para Condomínios no Brasil</title>
+    <meta name="description"
+        content="Landing page oficial da Proton Engenharia Mecânica: inspeções prediais, laudos técnicos e perícias para condomínios em Goiás, Brasília, Anápolis e em todo Brasil. HVAC/PMOC, elevadores, combate a incêndio, gás, pressurização, playgrounds, olhais e projetos de engenharia com ART CREA.">
+    <meta name="keywords"
+        content="inspeção predial, laudo técnico condomínio, proton engenharia, hvac pmoc, elevadores vibração, combate incêndio, gás predial, pressurização escadas, casa de bombas, teste olhais, perícia engenharia mecânica, síndico, administradora de condomínio, cercon goiás, avcb, clcb, inspeção sistemas mecânicos, brasil">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <link rel="canonical" href="https://www.protoncd.com.br/landing-servicos.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Source+Sans+3:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="img/faviconb.ico" type="image/x-icon">
+    <style>
+        :root {
+            color-scheme: dark;
+            --bg: #05060a;
+            --bg-soft: #0d1018;
+            --bg-card: #111726;
+            --primary: #0dd3a7;
+            --primary-dark: #0aa384;
+            --primary-light: #5ef3ce;
+            --text: #f1f5f9;
+            --text-soft: #c7d2fe;
+            --accent: #38bdf8;
+            --warning: #facc15;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: radial-gradient(circle at top left, rgba(14, 165, 233, 0.12), transparent 55%),
+                radial-gradient(circle at 80% 20%, rgba(13, 211, 167, 0.12), transparent 50%),
+                var(--bg);
+            color: var(--text);
+            font-family: 'Source Sans 3', Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        header {
+            padding: 24px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 999;
+            backdrop-filter: blur(16px);
+            background: rgba(5, 6, 10, 0.85);
+            border-bottom: 1px solid rgba(148, 163, 184, 0.12);
+        }
+
+        header .brand {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            text-decoration: none;
+            color: var(--text);
+        }
+
+        header .brand img {
+            width: 54px;
+            height: 54px;
+        }
+
+        header nav a {
+            color: var(--text-soft);
+            margin-left: 24px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        header nav a:hover,
+        header nav a:focus {
+            color: var(--primary-light);
+        }
+
+        .hero {
+            padding: 120px 5% 100px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 48px;
+            align-items: center;
+        }
+
+        .hero h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: clamp(2.6rem, 4vw, 3.8rem);
+            margin-bottom: 16px;
+        }
+
+        .hero h1 span {
+            color: var(--primary);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-soft);
+            max-width: 620px;
+        }
+
+        .cta-group {
+            margin-top: 32px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .btn-primary,
+        .btn-secondary {
+            padding: 16px 28px;
+            border-radius: 999px;
+            font-weight: 600;
+            font-size: 1.05rem;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            color: #05060a;
+            box-shadow: 0 10px 30px rgba(13, 211, 167, 0.25);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border: 1px solid rgba(148, 163, 184, 0.35);
+            color: var(--text);
+        }
+
+        .btn-primary:hover,
+        .btn-secondary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 14px 28px rgba(15, 118, 110, 0.25);
+        }
+
+        .blur-card {
+            background: rgba(17, 23, 38, 0.9);
+            border: 1px solid rgba(148, 163, 184, 0.15);
+            border-radius: 20px;
+            padding: 24px;
+            backdrop-filter: blur(24px);
+        }
+
+        section {
+            padding: 90px 5%;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 3vw, 2.8rem);
+            font-family: 'Montserrat', sans-serif;
+            margin-bottom: 12px;
+            text-align: center;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-soft);
+            max-width: 760px;
+            margin: 0 auto 48px;
+        }
+
+        .grid {
+            display: grid;
+            gap: 32px;
+        }
+
+        .grid-3 {
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        }
+
+        .grid-2 {
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        }
+
+        .service-card {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card h3 {
+            margin-top: 12px;
+            font-size: 1.35rem;
+            color: var(--primary-light);
+        }
+
+        .service-card ul {
+            margin: 16px 0 0;
+            padding-left: 20px;
+            color: var(--text-soft);
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(56, 189, 248, 0.18);
+            color: var(--accent);
+            padding: 6px 14px;
+            border-radius: 999px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+        }
+
+        .pill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: 24px 0 0;
+        }
+
+        .pill-list span {
+            border: 1px solid rgba(148, 163, 184, 0.25);
+            border-radius: 999px;
+            padding: 10px 18px;
+            font-size: 0.95rem;
+            color: var(--text-soft);
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 24px;
+        }
+
+        .stats .metric {
+            text-align: center;
+            padding: 24px;
+            border-radius: 18px;
+            border: 1px solid rgba(148, 163, 184, 0.2);
+            background: linear-gradient(145deg, rgba(17, 23, 38, 0.9), rgba(10, 12, 20, 0.9));
+        }
+
+        .metric strong {
+            display: block;
+            font-size: 2.2rem;
+            color: var(--primary-light);
+        }
+
+        .timeline {
+            counter-reset: step;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 56px;
+            margin-bottom: 32px;
+        }
+
+        .timeline-item::before {
+            counter-increment: step;
+            content: counter(step, decimal-leading-zero);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: #05060a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .region-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 18px;
+        }
+
+        .region-grid span {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 16px;
+            background: rgba(17, 23, 38, 0.8);
+            border-radius: 14px;
+            border: 1px solid rgba(148, 163, 184, 0.18);
+        }
+
+        .faq-item {
+            border: 1px solid rgba(148, 163, 184, 0.18);
+            border-radius: 16px;
+            padding: 20px 24px;
+            background: rgba(17, 23, 38, 0.8);
+        }
+
+        footer {
+            padding: 60px 5% 40px;
+            background: #030407;
+            border-top: 1px solid rgba(148, 163, 184, 0.15);
+        }
+
+        footer .contact-grid {
+            display: grid;
+            gap: 24px;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        }
+
+        footer a {
+            color: var(--primary-light);
+            text-decoration: none;
+        }
+
+        .whatsapp-cta-fixed {
+            position: fixed;
+            right: 24px;
+            bottom: 24px;
+            background: linear-gradient(135deg, #25d366, #128c7e);
+            border-radius: 999px;
+            padding: 14px 22px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #05060a;
+            font-weight: 600;
+            text-decoration: none;
+            box-shadow: 0 18px 36px rgba(37, 211, 102, 0.4);
+        }
+
+        .trust-lines {
+            margin-top: 18px;
+            color: rgba(226, 232, 240, 0.7);
+            font-size: 0.95rem;
+        }
+
+        .icon-circle {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            display: grid;
+            place-content: center;
+            background: rgba(13, 211, 167, 0.08);
+            color: var(--primary-light);
+            font-size: 1.5rem;
+        }
+
+        @media (max-width: 900px) {
+            header {
+                flex-direction: column;
+                gap: 18px;
+            }
+
+            header nav a {
+                margin: 0 12px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .hero {
+                padding-top: 90px;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .cta-group {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .timeline-item {
+                padding-left: 48px;
+            }
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "@id": "https://www.protoncd.com.br/landing-servicos.html#service",
+        "name": "Proton Engenharia Mecânica",
+        "alternateName": "Proton Engenharia",
+        "description": "Inspeções prediais, laudos técnicos e perícias em sistemas mecânicos para condomínios residenciais e comerciais no Brasil",
+        "url": "https://www.protoncd.com.br/landing-servicos.html",
+        "logo": "https://www.protoncd.com.br/img/logo_proton.png",
+        "telephone": "+55-62-99285-2704",
+        "email": "lima.georgio.eng@gmail.com",
+        "areaServed": [
+            {"@type": "City", "name": "Goiânia"},
+            {"@type": "City", "name": "Anápolis"},
+            {"@type": "City", "name": "Brasília"},
+            {"@type": "State", "name": "Goiás"},
+            {"@type": "State", "name": "Distrito Federal"},
+            {"@type": "State", "name": "São Paulo"},
+            {"@type": "State", "name": "Rio de Janeiro"},
+            {"@type": "State", "name": "Minas Gerais"},
+            {"@type": "State", "name": "Pará"},
+            {"@type": "Country", "name": "Brasil"}
+        ],
+        "founder": {
+            "@type": "Person",
+            "name": "Eng. Georgio Batista de Lima",
+            "jobTitle": "Engenheiro Mecânico"
+        },
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Serviços de engenharia para condomínios",
+            "itemListElement": [
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Inspeção HVAC e PMOC", "description": "Plano de Manutenção, Operação e Controle conforme Lei 13.589"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Inspeção de Combate a Incêndio", "description": "Laudos NBR 13714, NBR 10897, AVCB/CLCB/CERCON"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Análise de Vibração em Elevadores", "description": "Diagnóstico 360° exclusivo"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Inspeção de Gás Predial", "description": "Testes de estanqueidade conforme NBR 13523"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Teste de Arrancamento em Olhais", "description": "Ensaios NR-35 e NBR 16325 com ART"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Pacotes Integrados de Inspeção", "description": "Mobilização única para múltiplos sistemas"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Perícia Técnica e Laudos Judiciais", "description": "Atuação como perito e assistente técnico"}}
+            ]
+        }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Quais laudos e inspeções são obrigatórios para condomínios?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Condomínios precisam manter atualizados laudos de HVAC/PMOC, combate a incêndio, sistemas de gás, elevadores, pressurização de escadas, playgrounds e pontos de ancoragem (olhais). A Proton Engenharia coordena todos os documentos com ART CREA e atendimento às normas NBR e legislações estaduais."}
+            },
+            {
+                "@type": "Question",
+                "name": "Vocês atendem fora de Goiás e Distrito Federal?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sim. Atuamos nacionalmente com equipes distribuídas em Goiás, Distrito Federal, São Paulo, Pará e atendimento sob demanda em demais capitais e cidades do Brasil. Mobilizamos inspeções integradas reduzindo custos de deslocamento."}
+            },
+            {
+                "@type": "Question",
+                "name": "Como funciona o processo de contratação?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Após contato via WhatsApp ou formulário, realizamos uma reunião técnica para mapear sistemas, prazos e certificados exigidos. Em seguida enviamos proposta com cronograma, mobilizamos a equipe multidisciplinar, executamos medições instrumentais e entregamos laudos, ART e plano de ações priorizado."}
+            },
+            {
+                "@type": "Question",
+                "name": "É possível contratar pacotes integrados de inspeção?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sim. Oferecemos pacotes Essencial (HVAC, incêndio, gás) e Completo (incluindo casa de bombas, pressurização, elevadores, playgrounds e olhais). Também montamos combinações personalizadas conforme porte do condomínio e certificações exigidas."}
+            }
+        ]
+    }
+    </script>
+</head>
+
+<body>
+    <a class="whatsapp-cta-fixed"
+        href="https://api.whatsapp.com/send?phone=5562992852704&amp;text=Olá, preciso de inspeções prediais completas para meu condomínio"
+        target="_blank" rel="noopener noreferrer">📞 Consultar Proton</a>
+    <header>
+        <a class="brand" href="#topo">
+            <img src="img/logo_proton_branco.png" alt="Logotipo Proton Engenharia">
+            <div>
+                <strong style="font-family: 'Montserrat', sans-serif; font-size: 1.3rem;">Proton Engenharia</strong>
+                <div style="font-size: 0.95rem; color: var(--text-soft);">Inspeções e Laudos Prediais</div>
+            </div>
+        </a>
+        <nav>
+            <a href="#servicos">Serviços</a>
+            <a href="#beneficios">Diferenciais</a>
+            <a href="#processo">Como Atuamos</a>
+            <a href="#cobertura">Cobertura</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <main id="topo">
+        <section class="hero">
+            <div>
+                <div class="badge">Síndicos, administradoras e gestores prediais</div>
+                <h1>Inspeção Predial <span>360º</span> para Condomínios em Goiás, Brasília, Anápolis e em todo Brasil
+                </h1>
+                <p>Coordenamos <strong>todos os laudos técnicos obrigatórios</strong> para manter seu condomínio
+                    regularizado com o Corpo de Bombeiros, CREA e legislações municipais. Equipe multidisciplinar,
+                    tecnologia 360º exclusiva para elevadores e mobilização otimizada para reduzir custos.</p>
+                <div class="cta-group">
+                    <a class="btn-primary"
+                        href="https://api.whatsapp.com/send?phone=5562992852704&amp;text=Quero um pacote completo de inspeções para meu condomínio"
+                        target="_blank" rel="noopener noreferrer">Falar com Eng. Georgio</a>
+                    <a class="btn-secondary" href="#servicos">Ver serviços completos</a>
+                </div>
+                <div class="trust-lines">+10 anos entregando laudos com ART CREA • Única com análise de vibração 360º
+                    para elevadores no Brasil • Atendimento nacional</div>
+            </div>
+            <div class="blur-card">
+                <h2 style="font-family: 'Montserrat', sans-serif; font-size: 1.4rem; margin-top: 0;">Por que os síndicos
+                    nos escolhem?</h2>
+                <ul style="margin: 18px 0 0; padding-left: 20px; color: var(--text-soft);">
+                    <li>Pacotes Essencial e Completo com mobilização única.</li>
+                    <li>Laudos HVAC/PMOC, incêndio, gás, elevadores, pressurização, playgrounds e olhais.</li>
+                    <li>Entrega com ART CREA, relatório fotográfico, plano de ação e cronograma de renovação.</li>
+                    <li>Atendimento prioritário para Goiás, Brasília, Anápolis e suporte nacional.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="servicos">
+            <h2 class="section-title">Serviços de Engenharia Mecânica para Condomínios</h2>
+            <p class="section-subtitle">Integramos inspeções legais, avaliações instrumentais e perícias técnicas para
+                garantir segurança, conformidade e previsibilidade orçamentária aos síndicos e administradoras.</p>
+
+            <div class="grid grid-3">
+                <div class="blur-card service-card">
+                    <div class="icon-circle">🌀</div>
+                    <h3>HVAC, PMOC e Qualidade do Ar</h3>
+                    <p>Plano de Manutenção, Operação e Controle completo conforme Lei 13.589, Portaria 3.523 e ABNT NBR
+                        14679.</p>
+                    <ul>
+                        <li>Inventário de sistemas VRF/VRV, splits, exaustão e ventilação.</li>
+                        <li>Checklists de filtros, serpentinas, torres de resfriamento.</li>
+                        <li>Medições de temperatura, umidade, velocidade do ar e CO₂.</li>
+                    </ul>
+                </div>
+
+                <div class="blur-card service-card">
+                    <div class="icon-circle">🔥</div>
+                    <h3>Combate a Incêndio & CERCON</h3>
+                    <p>Laudos para AVCB, CLCB e CERCON com testes funcionais de bombas, hidrantes, sprinklers, alarmes e
+                        sinalização.</p>
+                    <ul>
+                        <li>Conformidade NBR 13714, NBR 10897 e ITs estaduais.</li>
+                        <li>Digitalização de projetos NT 01/2025 CBMGO.</li>
+                        <li>Checklist documental e plano de adequações.</li>
+                    </ul>
+                </div>
+
+                <div class="blur-card service-card">
+                    <div class="icon-circle">🚡</div>
+                    <h3>Elevadores: Vibração 360º</h3>
+                    <p>Diagnóstico exclusivo com sensores multieixos, áudio e vídeo 4K para ruídos, trepidações e
+                        conforto.</p>
+                    <ul>
+                        <li>Laudo técnico com ART CREA e espectro de vibração.</li>
+                        <li>Auditoria de manutenção e análise de responsabilidade.</li>
+                        <li>Recomendações para modernização e redução de paradas.</li>
+                    </ul>
+                </div>
+
+                <div class="blur-card service-card">
+                    <div class="icon-circle">⛽</div>
+                    <h3>Gás Predial GLP/GN</h3>
+                    <p>Ensaios de estanqueidade, inspeção da central, reguladores, ventilação e tubulações conforme NBR
+                        13523 e NBR 15526.</p>
+                    <ul>
+                        <li>Detector de gases calibrado e registro fotográfico.</li>
+                        <li>Verificação de abrigo, distâncias de segurança e sinalização.</li>
+                        <li>Plano de manutenção preventiva e emergencial.</li>
+                    </ul>
+                </div>
+
+                <div class="blur-card service-card">
+                    <div class="icon-circle">🏗️</div>
+                    <h3>Casa de Bombas & Pressurização</h3>
+                    <p>Inspeção hidráulica, pressurização de escadas, ventilação e sistemas auxiliares para conformidade
+                        NR e Corpo de Bombeiros.</p>
+                    <ul>
+                        <li>Verificação de bombas principais, jockey e válvulas.</li>
+                        <li>Medição de pressão diferencial em escadas enclausuradas.</li>
+                        <li>Simulação de black-out e redundância energética.</li>
+                    </ul>
+                </div>
+
+                <div class="blur-card service-card">
+                    <div class="icon-circle">🧠</div>
+                    <h3>Perícias e Laudos Judiciais</h3>
+                    <p>Atuação como perito do juízo ou assistente técnico em disputas condominiais e industriais.</p>
+                    <ul>
+                        <li>Análise de falhas, acidentes e responsabilidade civil.</li>
+                        <li>Modelagem de danos materiais e cronogramas periciais.</li>
+                        <li>Participação em audiências e sustentações técnicas.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="grid grid-2" style="margin-top: 48px;">
+                <div class="blur-card service-card">
+                    <div class="icon-circle">🧒</div>
+                    <h3>Playgrounds & Áreas de Lazer</h3>
+                    <p>Laudos de conformidade NBR 16071 e NBR 14350 com foco em prevenção de acidentes infantis.</p>
+                    <ul>
+                        <li>Avaliação de equipamentos, pisos amortecedores e fixações.</li>
+                        <li>Plano de manutenção trimestral e documentação fotográfica.</li>
+                        <li>Checklist para auditorias de seguradoras.</li>
+                    </ul>
+                </div>
+                <div class="blur-card service-card">
+                    <div class="icon-circle">🛡️</div>
+                    <h3>Olhais e Trabalho em Altura</h3>
+                    <p>Teste de arrancamento conforme NR-35 e NBR 16325 com dinamômetro certificado RBC.</p>
+                    <ul>
+                        <li>Laudo com validade de 12 meses e ART CREA.</li>
+                        <li>Inventário de pontos de ancoragem e linhas de vida.</li>
+                        <li>Análise de risco para manutenção de fachadas e limpeza predial.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="blur-card" style="margin-top: 48px;">
+                <h3 style="margin: 0; font-size: 1.4rem; color: var(--warning);">Pacotes Integrados para Síndicos</h3>
+                <p style="color: var(--text-soft);">Reduza até 40% dos custos com mobilização simultânea e entregas
+                    coordenadas:</p>
+                <div class="pill-list">
+                    <span>Pacote Essencial: HVAC + Incêndio + Gás + ARTs</span>
+                    <span>Pacote Completo: HVAC + Incêndio + Gás + Casa de Bombas + Pressurização + Elevadores +
+                        Playgrounds + Olhais</span>
+                    <span>Pacotes Personalizados para condomínios-clube e empreendimentos mistos</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="beneficios" style="background: rgba(8, 11, 19, 0.92);">
+            <h2 class="section-title">Diferenciais Proton Engenharia</h2>
+            <p class="section-subtitle">Gerenciamos do orçamento à entrega dos laudos, garantindo previsibilidade para o
+                síndico e segurança para condôminos.</p>
+
+            <div class="stats">
+                <div class="metric">
+                    <strong>+10</strong>
+                    <span>Anos em inspeções prediais e perícias mecânicas.</span>
+                </div>
+                <div class="metric">
+                    <strong>360º</strong>
+                    <span>Tecnologia exclusiva de análise de vibração e ruído em elevadores.</span>
+                </div>
+                <div class="metric">
+                    <strong>ART</strong>
+                    <span>Todas as entregas com ART CREA e rastreabilidade documental.</span>
+                </div>
+                <div class="metric">
+                    <strong>24h</strong>
+                    <span>Prazo médio para agenda emergencial em Goiás, Brasília e Anápolis.</span>
+                </div>
+            </div>
+
+            <div class="grid grid-3" style="margin-top: 48px;">
+                <div class="blur-card">
+                    <h3>Gestão única para o síndico</h3>
+                    <p>Um gerente técnico acompanha todo o ciclo: briefing, inspeção in loco, produção dos laudos,
+                        protocolo no portal do Corpo de Bombeiros e renovações futuras.</p>
+                </div>
+                <div class="blur-card">
+                    <h3>Instrumentação avançada</h3>
+                    <p>Termografia, registradores de dados, analisadores de vibração e detectores calibrados asseguram
+                        precisão e robustez das evidências técnicas.</p>
+                </div>
+                <div class="blur-card">
+                    <h3>Compliance e estabilidade documental</h3>
+                    <p>Arquivos entregues em PDF/A, planilhas de controle de validade, cronograma de próximas inspeções
+                        e suporte para auditorias de seguradoras e administradoras.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="processo">
+            <h2 class="section-title">Como conduzimos as inspeções</h2>
+            <p class="section-subtitle">Planejamento claro, prazos realistas e comunicação contínua com síndicos,
+                administradoras e conselhos.</p>
+
+            <div class="blur-card timeline">
+                <div class="timeline-item">
+                    <h3>Diagnóstico inicial</h3>
+                    <p>Reunião técnica para mapear sistemas, prazos de certificados, histórico de não conformidades e
+                        demandas específicas do condomínio.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Mobilização integrada</h3>
+                    <p>Agenda coordenada por torre/bloco, comunicação prévia aos moradores e deslocamento simultâneo da
+                        equipe multidisciplinar.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Medições e testes instrumentais</h3>
+                    <p>Execução de checklists normativos, testes funcionais, registros fotográficos e entrevistas com
+                        responsáveis técnicos de manutenção.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Laudos, ART e plano de ação</h3>
+                    <p>Entrega de relatórios técnicos com ART CREA, matriz de riscos, cronograma de adequações e suporte
+                        no protocolo junto aos órgãos fiscalizadores.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="cobertura" style="background: rgba(8, 13, 21, 0.95);">
+            <h2 class="section-title">Cobertura técnica nacional</h2>
+            <p class="section-subtitle">Base operacional em Goiás, Brasília e Anápolis com engenheiros credenciados em
+                São Paulo, Pará, Minas Gerais e atendimento sob demanda em demais capitais brasileiras.</p>
+
+            <div class="region-grid">
+                <span>📍 Goiânia, Aparecida de Goiânia e Região Metropolitana</span>
+                <span>📍 Anápolis, Trindade, Senador Canedo, Rio Verde</span>
+                <span>📍 Brasília, Águas Claras, Taguatinga, Valparaíso</span>
+                <span>📍 São Paulo (capital, Campinas, ABC, interior)</span>
+                <span>📍 Rio de Janeiro, Niterói, Região dos Lagos</span>
+                <span>📍 Belo Horizonte, Contagem, Uberlândia</span>
+                <span>📍 Salvador, Feira de Santana, Vitória da Conquista</span>
+                <span>📍 Pará (Belém, Parauapebas, Marabá)</span>
+                <span>🌎 Atendimento remoto para auditorias documentais em todo Brasil</span>
+            </div>
+        </section>
+
+        <section id="faq">
+            <h2 class="section-title">Perguntas frequentes</h2>
+            <p class="section-subtitle">Principais dúvidas de síndicos, conselhos fiscais e administradoras
+                profissionais sobre inspeções e laudos prediais.</p>
+
+            <div class="grid grid-2">
+                <div class="faq-item">
+                    <h3>Quais são os prazos de renovação dos laudos?</h3>
+                    <p>HVAC/PMOC e gás predial devem ser renovados anualmente. Teste de olhais tem validade de 12 meses.
+                        CERCON e AVCB variam entre 1 e 3 anos conforme o Corpo de Bombeiros. Nosso cronograma indica as
+                        próximas datas críticas.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Vocês auxiliam na digitalização de projetos do Corpo de Bombeiros?</h3>
+                    <p>Sim. Adequamos plantas para padrão digital NT 01/2025 (CBMGO) e demais normas estaduais,
+                        protocolamos no sistema e acompanhamos até a emissão do certificado.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>É possível dividir o pagamento por etapas ou blocos?</h3>
+                    <p>Oferecemos condições conforme o porte do condomínio, com faturamento por etapa de inspeção ou
+                        pacote integrado, sempre mantendo a entrega unificada dos documentos.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Administradoras podem terceirizar todos os laudos com vocês?</h3>
+                    <p>Sim. Criamos contratos guarda-chuva com matriz e filiais, disponibilizamos painel com status dos
+                        condomínios e compartilhamos documentação para auditorias internas e seguradoras.</p>
+                </div>
+            </div>
+        </section>
+
+        <section
+            style="padding: 80px 5%; background: linear-gradient(135deg, rgba(13, 211, 167, 0.16), rgba(14, 165, 233, 0.08));">
+            <div class="blur-card" style="max-width: 960px; margin: 0 auto; text-align: center;">
+                <h2 class="section-title" style="margin-bottom: 24px;">Pronto para regularizar todos os sistemas do seu
+                    condomínio?</h2>
+                <p style="color: var(--text-soft); font-size: 1.1rem;">Fale com um engenheiro da Proton e receba um
+                    diagnóstico gratuito dos laudos obrigatórios, cronograma de renovações e proposta integrada para
+                    Goiás, Brasília, Anápolis e demais regiões do Brasil.</p>
+                <div class="cta-group" style="justify-content: center; margin-top: 28px;">
+                    <a class="btn-primary"
+                        href="https://api.whatsapp.com/send?phone=5562992852704&amp;text=Gostaria de regularizar todos os laudos do meu condomínio"
+                        target="_blank" rel="noopener noreferrer">Iniciar conversa no WhatsApp</a>
+                    <a class="btn-secondary"
+                        href="mailto:lima.georgio.eng@gmail.com?subject=Orçamento%20Proton%20Engenharia">Solicitar
+                        proposta por e-mail</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contato">
+        <div class="contact-grid">
+            <div>
+                <h3 style="font-family: 'Montserrat', sans-serif;">Contato direto</h3>
+                <p><strong>Eng. Georgio Batista de Lima (Goiás e Centro-Oeste)</strong><br>
+                    Tel/WhatsApp: <a href="https://api.whatsapp.com/send?phone=5562992852704" target="_blank"
+                        rel="noopener noreferrer">(62) 99285-2704</a><br>
+                    E-mail: <a href="mailto:lima.georgio.eng@gmail.com">lima.georgio.eng@gmail.com</a></p>
+                <p><strong>Eng. Marina Saccardo (São Paulo e Sudeste)</strong><br>
+                    Tel/WhatsApp: <a href="https://api.whatsapp.com/send?phone=5516982203631" target="_blank"
+                        rel="noopener noreferrer">(16) 98220-3631</a><br>
+                    E-mail: <a href="mailto:ma.saccardoengenheira@gmail.com">ma.saccardoengenheira@gmail.com</a></p>
+                <p><strong>Eng. Luciene Marques (Pará e Norte)</strong><br>
+                    Tel/WhatsApp: <a href="https://api.whatsapp.com/send?phone=558196537023" target="_blank"
+                        rel="noopener noreferrer">(81) 9653-7023</a><br>
+                    E-mail: <a href="mailto:luciene.silva.eng@gmail.com">luciene.silva.eng@gmail.com</a></p>
+            </div>
+            <div>
+                <h3 style="font-family: 'Montserrat', sans-serif;">Documentação e certificações</h3>
+                <ul style="list-style: none; padding: 0; margin: 0; color: var(--text-soft);">
+                    <li>✔ ART CREA em todas as entregas.</li>
+                    <li>✔ Instrumentos com calibração RBC.</li>
+                    <li>✔ Adequação às normas NBR, NR e legislações estaduais.</li>
+                    <li>✔ Protocolos eletrônicos junto ao Corpo de Bombeiros.</li>
+                </ul>
+            </div>
+            <div>
+                <h3 style="font-family: 'Montserrat', sans-serif;">Links úteis</h3>
+                <ul style="list-style: none; padding: 0; margin: 0;">
+                    <li><a href="https://www.protoncd.com.br/" target="_blank" rel="noopener noreferrer">Site
+                            institucional Proton Engenharia</a></li>
+                    <li><a href="https://www.protoncd.com.br/pacotes-servicos.html" target="_blank"
+                            rel="noopener noreferrer">Pacotes de inspeção integrados</a></li>
+                    <li><a href="https://www.protoncd.com.br/cercon-goias.html" target="_blank"
+                            rel="noopener noreferrer">Renovação CERCON Goiás</a></li>
+                    <li><a href="https://www.protoncd.com.br/analise-vibracao-elevadores.html" target="_blank"
+                            rel="noopener noreferrer">Análise de vibração em elevadores</a></li>
+                </ul>
+            </div>
+        </div>
+        <p style="margin-top: 40px; color: rgba(148, 163, 184, 0.6);">© 2025 Proton Engenharia Mecânica • Todos os
+            direitos reservados • CNPJ 16.887.672/0001-09</p>
+    </footer>
+</body>
+
+</html>
