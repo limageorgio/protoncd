@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proton Engenharia Mecânica | Inspeção Predial Completa para Condomínios no Brasil</title>
     <meta name="description"
-        content="Landing page oficial da Proton Engenharia Mecânica: inspeções prediais, laudos técnicos e perícias para condomínios em Goiás, Brasília, Anápolis e em todo Brasil. HVAC/PMOC, elevadores, combate a incêndio, gás, pressurização, playgrounds, olhais e projetos de engenharia com ART CREA.">
+        content="Landing page oficial da Proton Engenharia Mecânica: inspeções prediais, laudos técnicos, perícias e ensaios 360º em elevadores para condomínios em Goiás, Brasília, Anápolis e em todo Brasil. HVAC/PMOC, combate a incêndio, gás, pressurização, playgrounds e olhais com ART CREA.">
     <meta name="keywords"
         content="inspeção predial, laudo técnico condomínio, proton engenharia, hvac pmoc, elevadores vibração, combate incêndio, gás predial, pressurização escadas, casa de bombas, teste olhais, perícia engenharia mecânica, síndico, administradora de condomínio, cercon goiás, avcb, clcb, inspeção sistemas mecânicos, brasil">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -346,6 +346,58 @@
             box-shadow: 0 8px 24px rgba(2, 6, 23, 0.45);
         }
 
+        .card-link {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            height: 100%;
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s ease;
+        }
+
+        .card-link .icon-circle {
+            margin-bottom: 0;
+        }
+
+        .card-link:hover,
+        .card-link:focus {
+            color: var(--primary-light);
+        }
+
+        .card-link:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 6px;
+            border-radius: 18px;
+        }
+
+        .card-link:hover .icon-circle,
+        .card-link:focus .icon-circle {
+            background: rgba(56, 189, 248, 0.18);
+            color: var(--accent);
+        }
+
+        .card-cta {
+            margin-top: auto;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 600;
+            color: var(--primary-light);
+            font-size: 0.98rem;
+        }
+
+        .card-cta::after {
+            content: '→';
+            font-size: 1.1rem;
+            transition: transform 0.2s ease;
+        }
+
+        .card-link:hover .card-cta::after,
+        .card-link:focus .card-cta::after {
+            transform: translateX(4px);
+        }
+
         .card h3 {
             margin-top: 0;
             margin-bottom: 12px;
@@ -465,7 +517,8 @@
             gap: clamp(14px, 3vw, 20px);
         }
 
-        .region-grid span {
+        .region-grid span,
+        .region-grid a {
             display: inline-flex;
             align-items: center;
             gap: 10px;
@@ -474,6 +527,15 @@
             border-radius: 16px;
             border: 1px solid rgba(148, 163, 184, 0.16);
             color: rgba(226, 232, 240, 0.85);
+            text-decoration: none;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .region-grid a:hover,
+        .region-grid a:focus {
+            transform: translateY(-2px);
+            border-color: rgba(56, 189, 248, 0.45);
+            color: var(--primary-light);
         }
 
         .faq-grid {
@@ -698,7 +760,7 @@
                 {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Inspeção HVAC e PMOC", "description": "Plano de Manutenção, Operação e Controle conforme Lei 13.589"}},
                 {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Inspeção de Combate a Incêndio", "description": "Laudos NBR 13714, NBR 10897, AVCB/CLCB/CERCON"}},
                 {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Análise de Vibração em Elevadores", "description": "Diagnóstico 360° exclusivo"}},
-                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Inspeção de Gás Predial", "description": "Testes de estanqueidade conforme NBR 13523"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Inspeção de Gás Predial", "description": "Inspeções visuais conforme NBR 13523"}},
                 {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Teste de Arrancamento em Olhais", "description": "Ensaios NR-35 e NBR 16325 com ART"}},
                 {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Pacotes Integrados de Inspeção", "description": "Mobilização única para múltiplos sistemas"}},
                 {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Perícia Técnica e Laudos Judiciais", "description": "Atuação como perito e assistente técnico"}}
@@ -751,7 +813,7 @@
     <header class="site-header">
         <div class="container header-inner">
             <a class="brand" href="#topo">
-                <img src="img/logo_proton_branco.png" alt="Logotipo Proton Engenharia">
+                <img src="img/logo_proton_branco.png" alt="Logotipo Proton Engenharia" loading="lazy" decoding="async">
                 <span class="brand-text">
                     <strong>Proton Engenharia</strong>
                     <span>Inspeções e Laudos Prediais</span>
@@ -836,112 +898,145 @@
 
                 <div class="card-grid" data-mobile="scroll">
                     <article class="card">
-                        <div class="icon-circle">🌀</div>
-                        <h3>HVAC, PMOC e Qualidade do Ar</h3>
-                        <p>Plano de Manutenção, Operação e Controle completo conforme Lei 13.589, Portaria 3.523 e ABNT
-                            NBR 14679.</p>
-                        <ul>
-                            <li>Inventário de sistemas VRF/VRV, splits, exaustão e ventilação.</li>
-                            <li>Checklists de filtros, serpentinas, torres de resfriamento.</li>
-                            <li>Medições de temperatura, umidade, velocidade do ar e CO₂.</li>
-                        </ul>
+                        <a class="card-link" href="/inspecao-hvac-pmoc.html">
+                            <div class="icon-circle">🌀</div>
+                            <h3>HVAC, PMOC e Qualidade do Ar</h3>
+                            <p>Plano de Manutenção, Operação e Controle completo conforme Lei 13.589, Portaria 3.523 e
+                                ABNT
+                                NBR 14679.</p>
+                            <ul>
+                                <li>Inventário de sistemas VRF/VRV, splits, exaustão e ventilação.</li>
+                                <li>Checklists de filtros, serpentinas, torres de resfriamento.</li>
+                                <li>Medições de temperatura, umidade, velocidade do ar e CO₂.</li>
+                            </ul>
+                            <span class="card-cta">Ver checklist HVAC/PMOC</span>
+                        </a>
                     </article>
 
                     <article class="card">
-                        <div class="icon-circle">🔥</div>
-                        <h3>Combate a Incêndio &amp; CERCON</h3>
-                        <p>Laudos para AVCB, CLCB e CERCON com testes funcionais de bombas, hidrantes, sprinklers,
-                            alarmes e sinalização.</p>
-                        <ul>
-                            <li>Conformidade NBR 13714, NBR 10897 e ITs estaduais.</li>
-                            <li>Digitalização de projetos NT 01/2025 CBMGO.</li>
-                            <li>Checklist documental e plano de adequações.</li>
-                        </ul>
+                        <a class="card-link" href="/inspecao-combate-incendio.html">
+                            <div class="icon-circle">🔥</div>
+                            <h3>Combate a Incêndio &amp; CERCON</h3>
+                            <p>Laudos para AVCB, CLCB e CERCON com testes funcionais de bombas, hidrantes, sprinklers,
+                                alarmes e sinalização.</p>
+                            <ul>
+                                <li>Conformidade NBR 13714, NBR 10897 e ITs estaduais.</li>
+                                <li>Digitalização de projetos NT 01/2025 CBMGO.</li>
+                                <li>Checklist documental e plano de adequações.</li>
+                            </ul>
+                            <span class="card-cta">Ver laudo de combate a incêndio</span>
+                        </a>
                     </article>
 
                     <article class="card">
-                        <div class="icon-circle">🚡</div>
-                        <h3>Elevadores: Vibração 360º</h3>
-                        <p>Diagnóstico exclusivo com sensores multieixos, áudio e vídeo 4K para ruídos, trepidações e
-                            conforto.</p>
-                        <ul>
-                            <li>Laudo técnico com ART CREA e espectro de vibração.</li>
-                            <li>Auditoria de manutenção e análise de responsabilidade.</li>
-                            <li>Recomendações para modernização e redução de paradas.</li>
-                        </ul>
+                        <a class="card-link" href="/analise-vibracao-elevadores.html">
+                            <div class="icon-circle">🚡</div>
+                            <h3>Elevadores: Vibração 360º</h3>
+                            <p>Diagnóstico exclusivo com sensores multieixos, áudio e vídeo 4K para ruídos, trepidações
+                                e
+                                conforto.</p>
+                            <ul>
+                                <li>Laudo técnico com ART CREA e espectro de vibração.</li>
+                                <li>Auditoria de manutenção e análise de responsabilidade.</li>
+                                <li>Recomendações para modernização e redução de paradas.</li>
+                            </ul>
+                            <span class="card-cta">Conhecer análise 360º</span>
+                        </a>
                     </article>
 
                     <article class="card">
-                        <div class="icon-circle">⛽</div>
-                        <h3>Gás Predial GLP/GN</h3>
-                        <p>Ensaios de estanqueidade, inspeção da central, reguladores, ventilação e tubulações conforme
-                            NBR 13523 e NBR 15526.</p>
-                        <ul>
-                            <li>Detector de gases calibrado e registro fotográfico.</li>
-                            <li>Verificação de abrigo, distâncias de segurança e sinalização.</li>
-                            <li>Plano de manutenção preventiva e emergencial.</li>
-                        </ul>
+                        <a class="card-link" href="/inspecao-gas-predial.html">
+                            <div class="icon-circle">⛽</div>
+                            <h3>Gás Predial GLP/GN</h3>
+                            <p>Inspeções visuais da central, reguladores, ventilação e tubulações conforme
+                                NBR 13523 e NBR 15526.</p>
+                            <ul>
+                                <li>Checklist visual da central e dos reguladores.</li>
+                                <li>Verificação de abrigo, distâncias de segurança e sinalização.</li>
+                                <li>Plano de manutenção preventiva e orientações de segurança.</li>
+                            </ul>
+                            <span class="card-cta">Ver inspeção de gás predial</span>
+                        </a>
                     </article>
 
                     <article class="card">
-                        <div class="icon-circle">🏗️</div>
-                        <h3>Casa de Bombas &amp; Pressurização</h3>
-                        <p>Inspeção hidráulica, pressurização de escadas, ventilação e sistemas auxiliares para
-                            conformidade NR e Corpo de Bombeiros.</p>
-                        <ul>
-                            <li>Verificação de bombas principais, jockey e válvulas.</li>
-                            <li>Medição de pressão diferencial em escadas enclausuradas.</li>
-                            <li>Simulação de black-out e redundância energética.</li>
-                        </ul>
+                        <a class="card-link" href="/inspecao-casa-bombas.html">
+                            <div class="icon-circle">🏗️</div>
+                            <h3>Casa de Bombas &amp; Pressurização</h3>
+                            <p>Inspeção hidráulica, pressurização de escadas, ventilação e sistemas auxiliares para
+                                conformidade NR e Corpo de Bombeiros.</p>
+                            <ul>
+                                <li>Verificação de bombas principais, jockey e válvulas.</li>
+                                <li>Medição de pressão diferencial em escadas enclausuradas.</li>
+                                <li>Simulação de black-out e redundância energética.</li>
+                            </ul>
+                            <span class="card-cta">Ver inspeção em casa de bombas</span>
+                        </a>
                     </article>
 
                     <article class="card">
-                        <div class="icon-circle">🧠</div>
-                        <h3>Perícias e Laudos Judiciais</h3>
-                        <p>Atuação como perito do juízo ou assistente técnico em disputas condominiais e industriais.
-                        </p>
-                        <ul>
-                            <li>Análise de falhas, acidentes e responsabilidade civil.</li>
-                            <li>Modelagem de danos materiais e cronogramas periciais.</li>
-                            <li>Participação em audiências e sustentações técnicas.</li>
-                        </ul>
+                        <a class="card-link" href="/laudo-pericial-engenharia.html">
+                            <div class="icon-circle">🧠</div>
+                            <h3>Perícias e Laudos Judiciais</h3>
+                            <p>Atuação como perito do juízo ou assistente técnico em disputas condominiais e
+                                industriais.
+                            </p>
+                            <ul>
+                                <li>Análise de falhas, acidentes e responsabilidade civil.</li>
+                                <li>Modelagem de danos materiais e cronogramas periciais.</li>
+                                <li>Participação em audiências e sustentações técnicas.</li>
+                            </ul>
+                            <span class="card-cta">Ver perícias técnicas</span>
+                        </a>
                     </article>
                 </div>
 
                 <div class="card-grid" data-mobile="scroll" style="margin-top: clamp(40px, 6vw, 56px);">
                     <article class="card">
-                        <div class="icon-circle">🧒</div>
-                        <h3>Playgrounds &amp; Áreas de Lazer</h3>
-                        <p>Laudos de conformidade NBR 16071 e NBR 14350 com foco em prevenção de acidentes infantis.</p>
-                        <ul>
-                            <li>Avaliação de equipamentos, pisos amortecedores e fixações.</li>
-                            <li>Plano de manutenção trimestral e documentação fotográfica.</li>
-                            <li>Checklist para auditorias de seguradoras.</li>
-                        </ul>
+                        <a class="card-link" href="/inspecao-playgrounds.html">
+                            <div class="icon-circle">🧒</div>
+                            <h3>Playgrounds &amp; Áreas de Lazer</h3>
+                            <p>Laudos de conformidade NBR 16071 e NBR 14350 com foco em prevenção de acidentes infantis.
+                            </p>
+                            <ul>
+                                <li>Avaliação de equipamentos, pisos amortecedores e fixações.</li>
+                                <li>Plano de manutenção trimestral e documentação fotográfica.</li>
+                                <li>Checklist para auditorias de seguradoras.</li>
+                            </ul>
+                            <span class="card-cta">Ver laudo de playground</span>
+                        </a>
                     </article>
                     <article class="card">
-                        <div class="icon-circle">🛡️</div>
-                        <h3>Olhais e Trabalho em Altura</h3>
-                        <p>Teste de arrancamento conforme NR-35 e NBR 16325 com dinamômetro certificado RBC.</p>
-                        <ul>
-                            <li>Laudo com validade de 12 meses e ART CREA.</li>
-                            <li>Inventário de pontos de ancoragem e linhas de vida.</li>
-                            <li>Análise de risco para manutenção de fachadas e limpeza predial.</li>
-                        </ul>
+                        <a class="card-link" href="/teste-arrancamento-olhais.html">
+                            <div class="icon-circle">🛡️</div>
+                            <h3>Olhais e Trabalho em Altura</h3>
+                            <p>Teste de arrancamento conforme NR-35 e NBR 16325 com dinamômetro certificado RBC.</p>
+                            <ul>
+                                <li>Laudo com validade de 12 meses e ART CREA.</li>
+                                <li>Inventário de pontos de ancoragem e linhas de vida.</li>
+                                <li>Análise de risco para manutenção de fachadas e limpeza predial.</li>
+                            </ul>
+                            <span class="card-cta">Ver teste de arrancamento</span>
+                        </a>
                     </article>
                 </div>
 
                 <article class="card" style="margin-top: clamp(44px, 6vw, 60px);">
-                    <h3 style="margin: 0; font-size: 1.4rem; color: var(--warning);">Pacotes Integrados para Síndicos
-                    </h3>
-                    <p style="color: var(--text-soft);">Reduza até 40% dos custos com mobilização simultânea e entregas
-                        coordenadas:</p>
-                    <div class="pill-list">
-                        <span>Pacote Essencial: HVAC + Incêndio + Gás + ARTs</span>
-                        <span>Pacote Completo: HVAC + Incêndio + Gás + Casa de Bombas + Pressurização + Elevadores +
-                            Playgrounds + Olhais</span>
-                        <span>Pacotes Personalizados para condomínios-clube e empreendimentos mistos</span>
-                    </div>
+                    <a class="card-link" href="/pacotes-servicos.html">
+                        <h3 style="margin: 0; font-size: 1.4rem; color: var(--warning);">Pacotes Integrados para
+                            Síndicos
+                        </h3>
+                        <p style="color: var(--text-soft);">Reduza até 40% dos custos com mobilização simultânea e
+                            entregas
+                            coordenadas:</p>
+                        <div class="pill-list">
+                            <span>Pacote Essencial: HVAC + Incêndio + Gás + ARTs</span>
+                            <span>Pacote Completo: HVAC + Incêndio + Gás + Casa de Bombas + Pressurização + Elevadores +
+                                Playgrounds + Olhais</span>
+                            <span>Pacotes Personalizados para condomínios-clube e empreendimentos mistos</span>
+                        </div>
+                        <span class="card-cta">Conhecer pacotes integrados</span>
+                    </a>
                 </article>
             </div>
         </section>
@@ -1036,9 +1131,12 @@
                 </header>
 
                 <div class="region-grid">
-                    <span>📍 Goiânia, Aparecida de Goiânia e Região Metropolitana</span>
-                    <span>📍 Anápolis, Trindade, Senador Canedo, Rio Verde</span>
-                    <span>📍 Brasília, Águas Claras, Taguatinga, Valparaíso</span>
+                    <a href="/goiania/inspecao-predial-goiania.html">📍 Goiânia, Aparecida de Goiânia e Região
+                        Metropolitana</a>
+                    <a href="/anapolis/inspecao-predial-anapolis.html">📍 Anápolis, Trindade, Senador Canedo</a>
+                    <a href="/rio-verde/inspecao-predial-rio-verde.html">📍 Rio Verde, Jataí e sudoeste goiano</a>
+                    <a href="/brasilia/inspecao-predial-brasilia.html">📍 Brasília, Águas Claras, Taguatinga,
+                        Valparaíso</a>
                     <span>📍 São Paulo (capital, Campinas, ABC, interior)</span>
                     <span>📍 Rio de Janeiro, Niterói, Região dos Lagos</span>
                     <span>📍 Belo Horizonte, Contagem, Uberlândia</span>

@@ -86,16 +86,16 @@ Otimização profissional para buscadores (Google, Bing, etc.) com foco em palav
 ### **inspecao-gas-predial.html**
 **Palavras-chave primárias:**
 - inspeção gás predial
-- teste estanqueidade gás
+- inspeção visual gás
 - laudo gás glp gnv
 - nbr 13523 15526
 - instalação gás condomínio
 
 **Long-tail keywords:**
-- teste estanqueidade instalação gás goiânia
+- inspeção visual instalação gás goiânia
 - laudo técnico gás predial art
 - inspeção gás condomínio bombeiros
-- detector vazamento gás predial
+- checklist segurança gás predial
 
 **Prioridade:** 0.93
 **Changefreq:** Monthly
@@ -390,7 +390,7 @@ Rede de links internos forte:
 
 ### **Curto Prazo (1-3 meses)**
 1. **Google My Business:** Criar/otimizar perfil completo
-2. **Backlinks locais:** Parcerias, CREA-GO, associações
+2. **Backlinks locais:** Parcerias, CREA, associações
 3. **Blog técnico:** 1 artigo/mês sobre normas, casos
 4. **Rich Snippets:** FAQ Schema em páginas de serviço
 

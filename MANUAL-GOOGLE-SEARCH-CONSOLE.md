@@ -387,7 +387,7 @@ https://www.bing.com/webmasters/help
 ## 🎯 Próximos Passos (Avançado)
 
 1. **Backlinks de Qualidade**
-   - Cadastrar em diretórios: CREA-GO, sindicatos, associações
+   - Cadastrar em diretórios: CREA, sindicatos, associações
    - Parcerias com administradoras de condomínios
    - Guest posts em blogs de engenharia
 

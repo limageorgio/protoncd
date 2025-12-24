@@ -84,6 +84,32 @@
 <priority>0.90</priority>
 </url>
 
+<!-- Páginas Locais - Sistemas Mecânicos -->
+<url>
+<loc>https://www.protoncd.com.br/goiania/inspecao-predial-goiania.html</loc>
+<lastmod>2025-12-24</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.92</priority>
+</url>
+<url>
+<loc>https://www.protoncd.com.br/anapolis/inspecao-predial-anapolis.html</loc>
+<lastmod>2025-12-24</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.91</priority>
+</url>
+<url>
+<loc>https://www.protoncd.com.br/rio-verde/inspecao-predial-rio-verde.html</loc>
+<lastmod>2025-12-24</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.90</priority>
+</url>
+<url>
+<loc>https://www.protoncd.com.br/brasilia/inspecao-predial-brasilia.html</loc>
+<lastmod>2025-12-24</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.93</priority>
+</url>
+
 <!-- Página Comercial -->
 <url>
 <loc>https://www.protoncd.com.br/franquias.html</loc>

@@ -96,7 +96,7 @@
 
 ### 4. Link Building Local
 **Ação:** Conseguir backlinks de qualidade
-- [ ] Diretórios profissionais: CREA-GO, sindicatos, associações
+- [ ] Diretórios profissionais: CREA, sindicatos, associações
 - [ ] Parcerias: Administradoras de condomínios, imobiliárias
 - [ ] Guest posts: Blogs de construção civil, engenharia, condomínios
 - [ ] Mencionar em: Portais de notícias locais (Goiânia, Anápolis)

@@ -121,7 +121,7 @@
 
 | Fonte | Status | Prioridade |
 |-------|--------|------------|
-| CREA-GO | 🔴 | Alta |
+| CREA | 🔴 | Alta |
 | Sindicatos Engenharia | 🔴 | Alta |
 | Administradoras Condomínios | 🔴 | Média |
 | Diretórios Locais | 🔴 | Média |
@@ -182,7 +182,7 @@
 7. ⚠️ **Otimizar imagens (WebP)**
 
 ### Desejável (Próximos 3 Meses)
-8. ⚪ Conseguir backlinks CREA-GO
+8. ⚪ Conseguir backlinks CREA
 9. ⚪ Criar 10 artigos de blog
 10. ⚪ Implementar chat online
 11. ⚪ Criar vídeos para YouTube
