@@ -75,9 +75,7 @@
         .faq-item {
             border-left: 4px solid #059669;
             transition: all 0.3s;
-        }
-
-        .faq-item:hover {
+            padding: 2rem;
             background: rgba(5, 150, 105, 0.05);
             border-left-color: #d97706;
         }
@@ -854,21 +852,21 @@
             }
 
             return `
-                <div class="faq-item bg-white p-6 rounded-lg mb-6 shadow-md" data-categoria="${faq.categoria}">
-                    <div class="flex justify-between items-start mb-3">
-                        <h3 class="text-xl font-bold text-gray-900 flex-1">${faq.pergunta}</h3>
-                        <i class="fas fa-tools text-green-600 text-2xl ml-3"></i>
+                <div class="faq-item bg-white p-8 rounded-lg mb-6 shadow-md" data-categoria="${faq.categoria}">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-900 flex-1" style="font-weight: 700;">${faq.pergunta}</h3>
+                        <i class="fas fa-tools text-green-600 text-2xl ml-4"></i>
                     </div>
-                    <p class="text-gray-800 leading-relaxed mb-4">${faq.resposta}</p>
-                    <div class="flex flex-wrap gap-2 items-center">
+                    <p class="text-gray-800 leading-relaxed mb-5">${faq.resposta}</p>
+                    <div class="flex flex-wrap gap-3 items-center">
                         <span class="responsibility-badge ${respClass}">
-                            <i class="fas fa-user-shield mr-1"></i> ${faq.responsabilidade}
+                            <i class="fas fa-user-shield mr-2"></i> ${faq.responsabilidade}
                         </span>
                         <span class="${gravClass} font-bold text-sm">
-                            <i class="fas fa-exclamation-triangle mr-1"></i> ${faq.gravidade}
+                            <i class="fas fa-exclamation-triangle mr-2"></i> ${faq.gravidade}
                         </span>
                         <span class="text-sm text-gray-600 ml-auto">
-                            <i class="fas fa-book mr-1"></i> ${faq.normas.join(', ')}
+                            <i class="fas fa-book mr-2"></i> ${faq.normas.join(', ')}
                         </span>
                     </div>
                     ${referencias}
@@ -876,7 +874,97 @@
             `;
         }
 
-        // Busca
+        // Busca Semântica
+        // Função para normalizar texto (remover acentos e caracteres especiais)
+        function normalizarTexto(texto) {
+            return texto
+                .toLowerCase()
+                .normalize('NFD')
+                .replace(/[\u0300-\u036f]/g, '')
+                .replace(/[^\w\s]/g, ' ')
+                .trim();
+        }
+
+        // Sinônimos e termos relacionados no contexto de engenharia
+        const sinonimos = {
+            'ar condicionado': ['hvac', 'climatizacao', 'climatizador', 'refrigeracao', 'ar-condicionado', 'split', 'vrf', 'climatização'],
+            'elevador': ['elevadores', 'ascensor', 'lift'],
+            'incendio': ['fogo', 'combate', 'avcb', 'clcb', 'bombeiro', 'hidrante', 'sprinkler', 'incêndio'],
+            'gas': ['glp', 'gnv', 'instalacao de gas', 'tubulacao de gas', 'gás'],
+            'bomba': ['bombas', 'pressurizacao', 'recalque', 'succao', 'pressurização', 'sucção'],
+            'condensadora': ['evaporadora', 'unidade externa', 'compressor'],
+            'playground': ['parquinho', 'brinquedo', 'area de lazer', 'área de lazer'],
+            'pmoc': ['manutencao', 'plano de manutencao', 'manutenção'],
+            'ventilacao': ['ventilador', 'exaustao', 'exaustor', 'ventilação', 'exaustão'],
+            'ruido': ['barulho', 'som', 'vibracao', 'ruído', 'vibração'],
+            'norma': ['nbr', 'abnt', 'regulamento', 'legislacao', 'legislação'],
+            'pressao': ['pressurizado', 'psi', 'bar', 'pressão'],
+            'tanque': ['reservatorio', 'cisterna', 'reservatório'],
+            'vazamento': ['infiltracao', 'goteira', 'infiltração'],
+            'manutencao': ['preventiva', 'corretiva', 'revisao', 'manutenção', 'revisão']
+        };
+
+        // Função para expandir termo de busca com sinônimos
+        function expandirComSinonimos(termo) {
+            const termoNorm = normalizarTexto(termo);
+            let termos = [termoNorm];
+
+            // Adiciona sinônimos diretos
+            for (const [chave, valores] of Object.entries(sinonimos)) {
+                if (normalizarTexto(chave).includes(termoNorm) || termoNorm.includes(normalizarTexto(chave))) {
+                    termos.push(...valores.map(v => normalizarTexto(v)));
+                }
+                valores.forEach(valor => {
+                    if (normalizarTexto(valor).includes(termoNorm) || termoNorm.includes(normalizarTexto(valor))) {
+                        termos.push(normalizarTexto(chave));
+                        termos.push(...valores.map(v => normalizarTexto(v)));
+                    }
+                });
+            }
+
+            return [...new Set(termos)];
+        }
+
+        // Função para calcular relevância semântica
+        function calcularRelevancia(faq, termosBusca) {
+            let pontos = 0;
+            const perguntaNorm = normalizarTexto(faq.pergunta);
+            const respostaNorm = normalizarTexto(faq.resposta);
+            const normasNorm = faq.normas.map(n => normalizarTexto(n)).join(' ');
+
+            termosBusca.forEach(termo => {
+                // Palavras individuais do termo
+                const palavras = termo.split(/\s+/).filter(p => p.length > 2);
+
+                palavras.forEach(palavra => {
+                    // Correspondência exata na pergunta vale mais
+                    if (perguntaNorm.includes(palavra)) {
+                        pontos += palavra.length > 5 ? 10 : 5;
+                        // Bônus se estiver no início
+                        if (perguntaNorm.startsWith(palavra)) pontos += 5;
+                    }
+
+                    // Correspondência na resposta
+                    if (respostaNorm.includes(palavra)) {
+                        pontos += palavra.length > 5 ? 3 : 2;
+                    }
+
+                    // Correspondência nas normas
+                    if (normasNorm.includes(palavra)) {
+                        pontos += 4;
+                    }
+
+                    // Correspondência em categoria
+                    if (normalizarTexto(faq.categoria).includes(palavra)) {
+                        pontos += 6;
+                    }
+                });
+            });
+
+            return pontos;
+        }
+
+        // Busca com implementação semântica
         document.getElementById('searchInput').addEventListener('input', function (e) {
             const termo = e.target.value.toLowerCase();
             if (termo.length < 3 && termo.length > 0) return;
@@ -886,11 +974,20 @@
                 return;
             }
 
-            const resultados = todosOsFaqs.filter(faq =>
-                faq.pergunta.toLowerCase().includes(termo) ||
-                faq.resposta.toLowerCase().includes(termo) ||
-                faq.normas.some(norma => norma.toLowerCase().includes(termo))
-            );
+            // Expandir termo com sinônimos
+            const termosExpandidos = expandirComSinonimos(termo);
+
+            // Calcular relevância para cada FAQ
+            const resultadosComPontos = todosOsFaqs.map(faq => ({
+                faq: faq,
+                pontos: calcularRelevancia(faq, termosExpandidos)
+            }));
+
+            // Filtrar apenas resultados com pontos > 0 e ordenar por relevância
+            const resultados = resultadosComPontos
+                .filter(r => r.pontos > 0)
+                .sort((a, b) => b.pontos - a.pontos)
+                .map(r => r.faq);
 
             const container = document.getElementById('faqsContainer');
             if (resultados.length === 0) {
@@ -898,6 +995,7 @@
                     <div class="text-center text-gray-600 py-10">
                         <i class="fas fa-search text-6xl mb-4"></i>
                         <p class="text-xl">Nenhum resultado encontrado para "${termo}"</p>
+                        <p class="text-sm mt-2">Tente usar termos como: HVAC, elevador, incêndio, gás, bomba, playground</p>
                     </div>
                 `;
             } else {
