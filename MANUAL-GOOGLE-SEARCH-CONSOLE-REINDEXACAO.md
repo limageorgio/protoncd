@@ -106,7 +106,7 @@ https://www.protoncd.com.br
 |---|-----|-------------------|-------------------|---------|
 | 10 | `https://www.protoncd.com.br/inspecao-gas-predial.html` | 2025-12-21 | 0.93 | NR-13, NB-70, conformidade Corpo de Bombeiros |
 | 11 | `https://www.protoncd.com.br/inspecao-casa-bombas.html` | 2025-12-21 | 0.93 | NBR 5626, IT-15 CBMGO, sistema crítico |
-| 12 | `https://www.protoncd.com.br/inspecao-combate-incendio.html` | 2025-12-21 | 0.93 | IT-14 CBMGO, obrigatório auditorias CERCON |
+PAREI AQUI | 12 | `https://www.protoncd.com.br/inspecao-combate-incendio.html` | 2025-12-21 | 0.93 | IT-14 CBMGO, obrigatório auditorias CERCON |
 | 13 | `https://www.protoncd.com.br/inspecao-pressurizacao-escadas.html` | 2025-12-21 | 0.92 | NBR 14880, IT-15 CBMGO, requisito AVCB |
 | 14 | `https://www.protoncd.com.br/inspecao-playgrounds.html` | 2025-12-21 | 0.92 | NBR 16071, seguradoras, responsabilidade civil |
 | 15 | `https://www.protoncd.com.br/teste-arrancamento-olhais.html` | 2025-12-21 | 0.91 | NR-35 obrigatória, teste anual, risco alto |
