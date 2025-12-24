@@ -369,7 +369,7 @@
 						class="text-white py-1 md:py-3 px-4">Serviços</a>
 				</li>
 				<li class="inline-block mb-4 mx-4 text-white"><a href="conhecimento-tecnico/index.html"
-						class="text-white py-1 md:py-3 px-4">Base de Conhecimento</a>
+						class="text-white py-1 md:py-3 px-4 external-link">Base de Conhecimento</a>
 				</li>
 				<li class="inline-block mb-4 mx-4 text-white"><a href="#customer"
 						class="text-white py-1 md:py-3 px-4">Clientes</a>
@@ -425,7 +425,7 @@
 							class="inline-block tm-bg-green transition text-white text-xl pt-3 pb-4 px-8 rounded-md mr-4">
 							<i class="fas fa-cogs mr-3"></i>Saiba mais</a>
 						<a href="conhecimento-tecnico/index.html"
-							class="inline-block tm-bg-gold transition text-white text-xl pt-3 pb-4 px-8 rounded-md">
+							class="inline-block tm-bg-gold transition text-white text-xl pt-3 pb-4 px-8 rounded-md external-link">
 							<i class="fas fa-book-open mr-3"></i>Base de Conhecimento</a>
 					</div>
 				</div>
@@ -1529,7 +1529,9 @@
 
 		$(function () {
 			var tmNav = $('#tm-nav');
-			tmNav.singlePageNav();
+			tmNav.singlePageNav({
+				filter: ":not(.external-link)"
+			});
 
 			checkAndShowHideMenu();
 			window.addEventListener('resize', checkAndShowHideMenu);
