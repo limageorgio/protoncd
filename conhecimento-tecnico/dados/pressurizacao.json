@@ -1,0 +1,39 @@
+{
+    "categoria": "Sistemas de Pressurização",
+    "descricao": "Pressurização de escadas e sistemas de segurança contra incêndio",
+    "faqs": [
+        {
+            "id": "press-001",
+            "pergunta": "A ausência de pressostato diferencial é irregular?",
+            "resposta": "Sim. Em sistemas de pressurização de escadas projetados com motoventilador principal e reserva, as normas exigem supervisão automática da pressão para comandar o conjunto reserva sempre que o principal falhar ou não alcançar a vazão prevista. Se o projeto aprovado pelo CBMGO prevê dois motores, a construtora deve instalar pressostato diferencial (ou sensor equivalente) que monitore a pressão no duto e acione o segundo motor, ou apresentar documentação técnica que comprove outro método automático equivalente. Sem essa comprovação, o sistema permanece irregular e deve ser ajustado.",
+            "normas": [
+                "NBR 14880",
+                "IT-15 CBMGO"
+            ],
+            "responsabilidade": "Construtora",
+            "gravidade": "Crítica"
+        },
+        {
+            "id": "press-002",
+            "pergunta": "Filtros sujos em ventiladores são responsabilidade de quem?",
+            "resposta": "Após a entrega, a limpeza/substituição de filtros e ajuste de correias em ventiladores centrífugos são responsabilidade do condomínio como manutenção preventiva de rotina. Conforme boas práticas de engenharia e manuais de operação, elementos filtrantes são componentes de desgaste natural que exigem higienização periódica para garantir vazão de ar projetada e vida útil do motor. A construtora não possui responsabilidade sobre acúmulo de sujidade decorrente do uso do sistema após a entrega. Cabe ao condomínio incluir verificação e limpeza em seu plano de manutenção periódica.",
+            "normas": [
+                "NBR 14880",
+                "Manuais do fabricante"
+            ],
+            "responsabilidade": "Condomínio",
+            "gravidade": "Baixa (manutenção rotineira)"
+        },
+        {
+            "id": "press-003",
+            "pergunta": "Vibração perceptível em moto ventilador exige medição instrumental para ser tratada?",
+            "resposta": "Não. Vibrações anormais percebidas em inspeção comparativa com outras máquinas idênticas são indícios suficientes de desequilíbrio, desalinhamento ou falha de montagem. Mesmo sem medição imediata, trata-se de fato físico observável que deve ser corrigido antes da entrega, sob responsabilidade da construtora. A ordem de serviço deve exigir diagnóstico técnico da empresa instaladora, com relatório que comprove a regularização ou justifique, por escrito, a ausência de diferença relevante.",
+            "normas": [
+                "NBR 14880",
+                "Boas práticas de manutenção"
+            ],
+            "responsabilidade": "Construtora",
+            "gravidade": "Alta"
+        }
+    ]
+}

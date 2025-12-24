@@ -1,0 +1,17 @@
+{
+    "categoria": "Impermeabilização e Infiltrações",
+    "descricao": "Problemas de estanqueidade, infiltrações e alagamentos",
+    "faqs": [
+        {
+            "id": "imp-001",
+            "pergunta": "Alagamento no poço de elevador é sempre problema do condomínio?",
+            "resposta": "Não. A ocorrência de alagamento nos poços dos elevadores é improcedente como manutenção do condomínio se a origem for infiltração ou falha de estanqueidade. A integridade do poço depende exclusivamente de impermeabilização eficiente. Se o acúmulo de água decorre de falha na impermeabilização (vício oculto) ou vazamentos das tubulações internas da obra (erros de montagem ou materiais), a responsabilidade pela correção e reparo dos danos ao equipamento é da construtora, dentro do prazo de garantia. A responsabilidade será do condomínio apenas se ficar comprovado que o alagamento foi causado por fatores externos ao sistema construtivo, como lavagem inadequada de pavimentos com escoamento direto para o poço.",
+            "normas": [
+                "NBR 16042",
+                "NBR 9575"
+            ],
+            "responsabilidade": "Mista - depende da origem",
+            "gravidade": "Crítica"
+        }
+    ]
+}

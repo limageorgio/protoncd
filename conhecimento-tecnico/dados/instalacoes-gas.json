@@ -1,0 +1,53 @@
+{
+    "categoria": "Instalações de Gás",
+    "descricao": "Segurança e conformidade em sistemas de gás predial",
+    "faqs": [
+        {
+            "id": "gas-001",
+            "pergunta": "Por que a proximidade entre medidores de gás e energia é crítica?",
+            "resposta": "Durante a inspeção foi identificado vazamento de gás na região dos medidores, materializando o risco de ignição pela proximidade com a medição de energia elétrica. Isso evidencia que, mesmo com distanciamento aparentemente conforme normas do CBMGO, qualquer falha no sistema de gás expõe o local a risco elevado se não houver barreiras físicas e vedação adequada entre os abrigos. Recomenda-se, sob responsabilidade da construtora: garantir fechamento hermético das caixas e passagens, evitar comunicação direta entre compartimentos, prover ventilação forçada ou natural direcionada para o exterior e orientar as empresas instaladoras sobre zonas de risco. Ao condomínio cabe manter rotina de inspeção com detecção de gás e controle de acesso aos abrigos para prevenir intervenções inadequadas.",
+            "normas": [
+                "NBR 15923",
+                "IT-29 CBMGO"
+            ],
+            "responsabilidade": "Construtora (mitigação) e Condomínio (inspeção rotineira)",
+            "gravidade": "Crítica"
+        },
+        {
+            "id": "gas-002",
+            "pergunta": "Caixa de abrigo com abertura irregular é problema de uso?",
+            "resposta": "Não. Quando a caixa foi instalada com abertura irregular para passagem de tubulação, sem o devido acabamento, deixando partes metálicas expostas com risco de corte, trata-se de vício de execução e acabamento. A instalação sem fechamento adequado compromete estanqueidade, acabamento e segurança do conjunto. É totalmente improcedente atribuir ao condomínio a responsabilidade. Cabe à construtora refazer a instalação com fechamento adequado das aberturas, acabamento completo, proteção das arestas metálicas e vedação correta da interface com a parede.",
+            "normas": [
+                "NBR 15923"
+            ],
+            "responsabilidade": "Construtora",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "gas-003",
+            "pergunta": "A falta de portinhola no abastecimento é item de manutenção?",
+            "resposta": "Não. A ausência de portinhola na Central de Gás para abertura de abastecimento configura não conformidade de execução e segurança. A falta compromete fechamento físico e proteção do ponto de abastecimento, expondo componentes do sistema, favorecendo acesso indevido e aumentando risco de danos mecânicos, vandalismo e acidentes em área sensível (gás inflamável). Trata-se de elemento integrante do sistema que deveria ter sido entregue completo conforme normas de instalações de gás e diretrizes do Corpo de Bombeiros. A responsabilidade pelo fornecimento e instalação é da construtora.",
+            "normas": [
+                "NBR 15923",
+                "IT-29 CBMGO"
+            ],
+            "responsabilidade": "Construtora",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "gas-004",
+            "pergunta": "Quando é possível reduzir a distância entre a central de GLP e um depósito de resíduos?",
+            "resposta": "Somente quando todas as condições normativas forem comprovadamente atendidas. A NBR 13523 e a NT 28/2014 permitem considerar 3,0 m de afastamento quando os resíduos próximos são de fácil combustão (classe A) e existe barreira que obriga o caminhamento dos vapores acima de 3,0 m. Entretanto, essa barreira precisa ser classificada como parede corta-fogo com TRRF mínimo de 120 minutos conforme NBR 10636. Sem laudo ou memorial que comprove o desempenho, a redução não é válida e a construtora deve manter o distanciamento original ou adequar a parede com espessura e revestimentos ignífugos para garantir o isolamento equivalente.",
+            "normas": [
+                "NT 28/2014 CBMGO",
+                "NBR 13523",
+                "NBR 10636"
+            ],
+            "referencias": [
+                "https://www.bombeiros.go.gov.br/wp-content/uploads/2014/10/nt-28_2014-gas-liquefeito-de-petroleo-parte-1_manipulacao-utilizacao-e-central-de-glp.pdf"
+            ],
+            "responsabilidade": "Construtora",
+            "gravidade": "Crítica"
+        }
+    ]
+}

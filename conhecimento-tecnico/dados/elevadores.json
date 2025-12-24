@@ -1,0 +1,99 @@
+{
+    "categoria": "Elevadores e Transporte Vertical",
+    "descricao": "Problemas em elevadores, cabos, fossos e sistemas de transporte vertical",
+    "faqs": [
+        {
+            "id": "elev-001",
+            "pergunta": "O que configura vício de instalação versus desgaste natural em elevadores?",
+            "resposta": "Arranhões superficiais e marcas de impacto compatíveis com a rotina do condomínio (mudanças, carrinhos, uso diário) são responsabilidade do condomínio. Entretanto, riscos profundos com traços de montagem inadequada, ajustes forçados ou mau alinhamento têm origem na instalação. Esses vícios de execução nem sempre são identificados na vistoria inicial e se manifestam como vícios ocultos da fase construtiva, cobertos pela garantia de 1 ano. A construtora deve realizar avaliação técnica para separar o que é desgaste de uso dos danos de instalação e, confirmada a falha de montagem, executar a correção, independentemente da assinatura do termo de entrega.",
+            "normas": [
+                "NBR 16042",
+                "Código de Defesa do Consumidor"
+            ],
+            "responsabilidade": "Mista - requer avaliação técnica",
+            "gravidade": "Média"
+        },
+        {
+            "id": "elev-002",
+            "pergunta": "Cabos soltos no fosso são problema da conservadora ou da construtora?",
+            "resposta": "A acomodação inadequada dos cabos no fosso, presos apenas com abraçadeiras e sem canaletas ou bandejamento projetado, caracteriza vício construtivo/instalação do sistema de transporte vertical. A responsabilidade permanece com a construtora, ainda que a execução tenha sido terceirizada (ex.: Atlas). Durante o período de garantia, cabe à construtora coordenar a correção junto à empresa responsável técnica pelos elevadores, garantindo atendimento às normas aplicáveis e à segurança operacional.",
+            "normas": [
+                "NBR 16042",
+                "NBR NM 207"
+            ],
+            "responsabilidade": "Construtora",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "elev-003",
+            "pergunta": "Ruído e vibração excessivos são sempre problema de manutenção?",
+            "resposta": "Não. Os fabricantes de elevadores definem limites de vibração e ruído para operação aceitável (ex.: Schindler estabelece 62 dB(A) no fosso e movimentação lateral inferior a 25 mg). Ensaios que identificam níveis superiores ou vibrações coincidentes com ruídos em operação real configuram não conformidade técnica. Mesmo quando a construtora questiona os valores medidos, o registro audiovisual de vibração sincronizada com ruído caracteriza evidência física de anomalia. Cabe à construtora coordenar a análise e correção durante a garantia, acionando a empresa de manutenção para investigar rolamentos, contrapeso, guias e sistemas de amortecimento.",
+            "normas": [
+                "NBR 16042",
+                "ISO 8041",
+                "Boletins técnicos de fabricantes"
+            ],
+            "referencias": [
+                "https://www.schindler.com.br/content/dam/website/br/docs/elevadores/schindler-ruidos-vibracoes-informe.pdf/_jcr_content/renditions/original./schindler-ruidos-vibracoes-informe.pdf"
+            ],
+            "responsabilidade": "Construtora",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "elev-004",
+            "pergunta": "Qual o padrão aceitável para cartazes de alerta nos elevadores?",
+            "resposta": "A Lei Estadual 20.518/2019 exige a afixação de cartaz informativo, de caráter de alerta, na parte externa dos elevadores, em local visível e em língua portuguesa. O termo \"cartaz\" pressupõe suporte de dimensões que garantam leitura rápida, com mensagem clara de advertência. Placas diminutas ou com tipografia ilegível não atendem à finalidade legal de alertar usuários. É responsabilidade da construtora entregar o sistema com sinalização visível e funcional, podendo o condomínio complementar apenas após a conformidade mínima ser atendida.",
+            "normas": [
+                "Lei Estadual 20.518/2019 (GO)"
+            ],
+            "referencias": [
+                "https://legisla.casacivil.go.gov.br/api/v2/pesquisa/legislacoes/100721/pdf"
+            ],
+            "responsabilidade": "Construtora",
+            "gravidade": "Média"
+        },
+        {
+            "id": "elev-005",
+            "pergunta": "Como tratar ruídos anormais em motores de tração?",
+            "resposta": "Ruídos excessivos em motores de tração, percebidos em comparação direta com outras máquinas idênticas, são indícios de desbalanceamento, desgaste de rolamentos ou falhas de montagem. São fatos físicos observáveis que justificam intervenção corretiva, mesmo sem medição instrumental imediata. A construtora deve acionar a empresa instaladora para diagnóstico e correção antes da entrega, evitando agravamento do defeito e riscos operacionais. O condomínio só deve assumir o sistema após justificativa técnica formal ou correção.",
+            "normas": [
+                "NBR 16042"
+            ],
+            "responsabilidade": "Construtora",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "elev-006",
+            "pergunta": "A numeração provisória das casas de máquinas pode permanecer após a entrega?",
+            "resposta": "Não é recomendável manter identificações provisórias ou ambíguas na casa de máquinas. A rastreabilidade operacional exige que a numeração de cabines, quadros de comando e registros de manutenção estejam alinhados. Incoerências geram risco em emergências e dificultam inspeções. A construtora deve padronizar a sinalização conforme a identificação oficial de cada equipamento antes da entrega. Caso não o faça, recomenda-se ao condomínio providenciar a padronização o quanto antes.",
+            "normas": [
+                "Boas práticas de manutenção",
+                "NBR 5410 (organização de quadros elétricos)"
+            ],
+            "responsabilidade": "Construtora",
+            "gravidade": "Média"
+        },
+        {
+            "id": "elev-007",
+            "pergunta": "Pintura do fosso é apenas questão estética?",
+            "resposta": "Não. A NR 15 trata de ambientes insalubres e orienta eliminar agentes nocivos, como excesso de óleos lubrificantes. A pintura ajuda a identificar vazamentos futuros, facilita limpeza e permite aplicar sinalização obrigatória (NR 26) nas áreas de segurança. Marcas persistentes de óleo indicam que o problema não é apenas estético, mas afeta condições de trabalho e inspeção. A construtora deve corrigir a origem do vazamento, limpar e repintar a área para entrega em conformidade.",
+            "normas": [
+                "NR 15",
+                "NR 26"
+            ],
+            "responsabilidade": "Construtora",
+            "gravidade": "Média"
+        },
+        {
+            "id": "elev-008",
+            "pergunta": "Como proceder quando há evidência de contato com água em elevadores?",
+            "resposta": "Contato de elevadores com água (alagamentos, infiltrações) compromete componentes elétricos, eletrônicos e mecânicos, reduzindo a vida útil por corrosão e aumentando o risco de falhas. Recomenda-se avaliação conjunta entre construtora, condomínio e empresa de manutenção para inspecionar poço, conectores, sensores e botoeiras antes da entrega ou reativação. Devem ser realizados testes específicos e, se necessário, desmontes seletivos para garantir que não haja oxidação ou contaminação que comprometa a segurança operacional.",
+            "normas": [
+                "Boas práticas de manutenção",
+                "NBR NM 207"
+            ],
+            "responsabilidade": "Construtora",
+            "gravidade": "Alta"
+        }
+    ]
+}

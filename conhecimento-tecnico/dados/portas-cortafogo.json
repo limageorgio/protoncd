@@ -1,0 +1,28 @@
+{
+    "categoria": "Portas Corta-Fogo e Segurança",
+    "descricao": "Problemas em portas corta-fogo, sistemas de combate a incêndio e segurança predial",
+    "faqs": [
+        {
+            "id": "pcf-001",
+            "pergunta": "A vistoria de entrega isenta a construtora de problemas em portas corta-fogo?",
+            "resposta": "Não. A vistoria de entrega apenas comprova a posse do imóvel, mas não extingue a responsabilidade da construtora sobre o desempenho dos sistemas prediais. Portas corta-fogo são itens de segurança contra incêndio e devem fechar de forma hermética e automática conforme norma. Desalinhamentos ou falhas de fechamento que surgem após os primeiros usos ou em razão do assentamento do edifício caracterizam vício oculto ou falha de desempenho, muitas vezes não perceptível em vistoria visual rápida. Nesses casos, o produto está impróprio para o uso e o Código de Defesa do Consumidor obriga o fornecedor a sanar o vício, independentemente de o problema ter sido apontado na entrega. A responsabilidade da construtora perdura durante o prazo de garantia legal/contratual (5 anos para segurança e solidez, em regra).",
+            "normas": [
+                "NBR 11742",
+                "IT-09 CBMGO",
+                "Código de Defesa do Consumidor"
+            ],
+            "responsabilidade": "Construtora",
+            "gravidade": "Crítica"
+        },
+        {
+            "id": "pcf-002",
+            "pergunta": "Maçaneta solta em PCF de casa de máquinas é desgaste de uso?",
+            "resposta": "Não. A porta corta-fogo da casa de máquinas é um equipamento de segurança de acesso restrito e baixíssima circulação. Se a maçaneta solta ou apresenta folgas relevantes em curto prazo após a entrega, trata-se de vício de instalação ou qualidade do componente. A alegação de que o problema decorre de falta de manutenção preventiva do condomínio é improcedente, pois o esforço de uso é mínimo. Cabe à construtora substituir ou ajustar o ferragem para que o conjunto mantenha o desempenho exigido em emergências. Desgaste natural só poderia ser cogitado em portas de alto tráfego, o que não é o caso de uma área técnica.",
+            "normas": [
+                "NBR 11742"
+            ],
+            "responsabilidade": "Construtora",
+            "gravidade": "Média"
+        }
+    ]
+}

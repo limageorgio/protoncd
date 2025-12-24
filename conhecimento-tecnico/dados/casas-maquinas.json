@@ -1,0 +1,27 @@
+{
+    "categoria": "Casas de Máquinas e Ambientes Técnicos",
+    "descricao": "Requisitos de acabamento e manutenção de áreas técnicas",
+    "faqs": [
+        {
+            "id": "casa-001",
+            "pergunta": "Por que o piso da casa de máquinas precisa de tratamento especial?",
+            "resposta": "Encontramos frequentemente casas de máquinas com piso de concreto cru, sem pintura ou selamento. A poeira que surge nesse cenário não é meramente sujeira de uso, mas resultado da desagregação do próprio concreto por falta de tratamento. A manutenção rotineira do condomínio consegue remover o pó solto, mas não corrige a causa raiz. Normas de desempenho (ex.: NBR 15575) e boas práticas recomendam piso protegido (pintura epóxi ou selador) em ambientes técnicos para evitar emissão contínua de poeira mineral, que prejudica componentes eletroeletrônicos e mecânicos dos elevadores. Portanto, a correção (pintura/selamento adequado) é responsabilidade da construtora; ao condomínio cabe apenas a limpeza após o acabamento correto.",
+            "normas": [
+                "NBR 15575"
+            ],
+            "responsabilidade": "Construtora",
+            "gravidade": "Média"
+        },
+        {
+            "id": "casa-002",
+            "pergunta": "Sujeira e marcas de óleo no poço são responsabilidade de quem?",
+            "resposta": "A sujeira e marcas de óleo no poço após a entrega são de responsabilidade do condomínio (ou empresa terceirizada), tratando-se de zeladoria e manutenção preventiva. O acúmulo de resíduos e vazamentos pontuais de lubrificantes devem ser tratados pela equipe de manutenção ou conservadora de elevadores. Contudo, a ausência de área de segurança delimitada no poço caracteriza vício de instalação. A norma técnica exige sinalização e delimitação clara das áreas de segurança para proteção dos técnicos durante manutenção. Cabe à construtora providenciar a correta delimitação e sinalização, garantindo atendimento às normas de segurança do trabalho.",
+            "normas": [
+                "NBR 16042",
+                "NR-12"
+            ],
+            "responsabilidade": "Mista - limpeza é do condomínio, sinalização é da construtora",
+            "gravidade": "Alta (sinalização)"
+        }
+    ]
+}
