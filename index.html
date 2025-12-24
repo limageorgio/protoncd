@@ -355,30 +355,31 @@
 
 	<div id="intro" class="parallax-window" data-parallax="scroll" data-image-src="img/eng_fundo_azul.png">
 		<nav id="tm-nav" class="w-full menu-opacity rounded-menu">
-			<div class="tm-container px-2 md:py-6 text-right ">
-				<li class="inline-block mb-4 mx-4 text-white"><a href="#intro"
-						class="text-white py-1 md:py-3 px-4">Introdução</a>
-				</li>
-				<li class="inline-block mb-4 mx-4 text-white"><a href="#about"
-						class="text-white py-1 md:py-3 px-4">Nossa
-						Empresa</a> </li>
-				<li class="inline-block mb-4 mx-4 text-white"><a href="#staff"
-						class="text-white py-1 md:py-3 px-4">Nossa
-						Equipe</a> </li>
-				<li class="inline-block mb-4 mx-4 text-white"><a href="#menu"
-						class="text-white py-1 md:py-3 px-4">Serviços</a>
-				</li>
-				<li class="inline-block mb-4 mx-4 text-white"><a href="conhecimento-tecnico/index.html"
-						class="text-white py-1 md:py-3 px-4 external-link">Base de Conhecimento</a>
-				</li>
-				<li class="inline-block mb-4 mx-4 text-white"><a href="#customer"
-						class="text-white py-1 md:py-3 px-4">Clientes</a>
-				</li>
-				<li class="inline-block mb-4 mx-4 text-white"><a href="#contact"
-						class="text-white py-1 md:py-3 px-4">Contato</a>
-				</li>
-				<li id="menu-toggle-button" class="inline-block mb-4 mx-4"> <img src="img/logo_proton_branco.png"
-						alt="Proton Engenharia" width="50" height="50" style="margin-bottom: -35px;"></li>
+			<div class="tm-container px-2 py-2 flex items-center justify-between">
+				<ul class="flex items-center space-x-2">
+					<li class="inline-block text-white"><a href="#intro" class="text-white py-2 px-3">Introdução</a>
+					</li>
+					<li class="inline-block text-white"><a href="#about" class="text-white py-2 px-3">Nossa
+							Empresa</a> </li>
+					<li class="inline-block text-white"><a href="#staff" class="text-white py-2 px-3">Nossa
+							Equipe</a> </li>
+					<li class="inline-block text-white"><a href="#menu" class="text-white py-2 px-3">Serviços</a>
+					</li>
+					<li class="inline-block text-white"><a href="#customer" class="text-white py-2 px-3">Clientes</a>
+					</li>
+					<li class="inline-block text-white"><a href="#contact" class="text-white py-2 px-3">Contato</a>
+					</li>
+				</ul>
+				<div class="flex items-center space-x-6">
+					<div id="menu-toggle-button" class="flex items-center">
+						<img src="img/logo_proton_branco.png" alt="Proton Engenharia" width="40" height="40">
+					</div>
+					<div class="flex items-center border-l border-white border-opacity-30 pl-6">
+						<a href="conhecimento-tecnico/index.html" class="text-white py-2 px-3 external-link"
+							style="color: #ffffff !important;">Base de
+							Conhecimento</a>
+					</div>
+				</div>
 			</div>
 		</nav>
 
@@ -1547,13 +1548,7 @@
 			});
 
 			$(document).scroll(function () {
-				var distanceFromTop = $(document).scrollTop();
-
-				if (distanceFromTop > 100) {
-					tmNav.addClass('scroll');
-				} else {
-					tmNav.removeClass('scroll');
-				}
+				// Menu sempre visível - scroll desabilitado
 			});
 			$(document).ready(function () {
 				$('.slick-slider').slick({

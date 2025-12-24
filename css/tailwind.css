@@ -17,16 +17,17 @@ Use a better box model (opinionated).
   box-sizing: border-box;
 }
 
-        video {
-            position: fixed;
-            top: 0;
-            left: 0;
-            min-width: 100%;
-            min-height: 100%;
-			width: auto;
-    		height: auto;
-            z-index: -1;
-        }
+video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+}
+
 /**
 Use a more readable tab size (opinionated).
 */
@@ -34,7 +35,7 @@ Use a more readable tab size (opinionated).
 html {
   -moz-tab-size: 4;
   -o-tab-size: 4;
-     tab-size: 4;
+  tab-size: 4;
 }
 
 /**
@@ -68,15 +69,16 @@ Improve consistency of default fonts in all browsers. (https://github.com/sindre
 
 body {
   font-family:
-		system-ui,
-		-apple-system, /* Firefox supports this but not yet `system-ui` */
-		'Segoe UI',
-		Roboto,
-		Helvetica,
-		Arial,
-		sans-serif,
-		'Apple Color Emoji',
-		'Segoe UI Emoji';
+    system-ui,
+    -apple-system,
+    /* Firefox supports this but not yet `system-ui` */
+    'Segoe UI',
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif,
+    'Apple Color Emoji',
+    'Segoe UI Emoji';
 }
 
 /*
@@ -107,7 +109,7 @@ Add the correct text decoration in Chrome, Edge, and Safari.
 
 abbr[title] {
   -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  text-decoration: underline dotted;
 }
 
 /**
@@ -129,12 +131,12 @@ kbd,
 samp,
 pre {
   font-family:
-		ui-monospace,
-		SFMono-Regular,
-		Consolas,
-		'Liberation Mono',
-		Menlo,
-		monospace;
+    ui-monospace,
+    SFMono-Regular,
+    Consolas,
+    'Liberation Mono',
+    Menlo,
+    monospace;
   /* 1 */
   font-size: 1em;
   /* 2 */
@@ -427,12 +429,14 @@ textarea {
   resize: vertical;
 }
 
-input::-moz-placeholder, textarea::-moz-placeholder {
+input::-moz-placeholder,
+textarea::-moz-placeholder {
   opacity: 1;
   color: #9ca3af;
 }
 
-input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
   opacity: 1;
   color: #9ca3af;
 }
@@ -563,7 +567,9 @@ video {
   display: none;
 }
 
-*, ::before, ::after {
+*,
+::before,
+::after {
   --tw-border-opacity: 1;
   border-color: rgba(229, 231, 235, var(--tw-border-opacity));
 }
@@ -733,14 +739,18 @@ video {
 }
 
 @-webkit-keyframes ping {
-  75%, 100% {
+
+  75%,
+  100% {
     transform: scale(2);
     opacity: 0;
   }
 }
 
 @keyframes ping {
-  75%, 100% {
+
+  75%,
+  100% {
     transform: scale(2);
     opacity: 0;
   }
@@ -759,30 +769,34 @@ video {
 }
 
 @-webkit-keyframes bounce {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(-25%);
-    -webkit-animation-timing-function: cubic-bezier(0.8,0,1,1);
-            animation-timing-function: cubic-bezier(0.8,0,1,1);
+    -webkit-animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
   }
 
   50% {
     transform: none;
-    -webkit-animation-timing-function: cubic-bezier(0,0,0.2,1);
-            animation-timing-function: cubic-bezier(0,0,0.2,1);
+    -webkit-animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
   }
 }
 
 @keyframes bounce {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(-25%);
-    -webkit-animation-timing-function: cubic-bezier(0.8,0,1,1);
-            animation-timing-function: cubic-bezier(0.8,0,1,1);
+    -webkit-animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
   }
 
   50% {
     transform: none;
-    -webkit-animation-timing-function: cubic-bezier(0,0,0.2,1);
-            animation-timing-function: cubic-bezier(0,0,0.2,1);
+    -webkit-animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
   }
 }
 
@@ -1043,12 +1057,19 @@ video {
   color: rgba(217, 119, 6, var(--tw-text-opacity));
 }
 
-*, ::before, ::after {
+*,
+::before,
+::after {
   --tw-shadow: 0 0 #0000;
 }
 
-*, ::before, ::after {
-  --tw-ring-inset: var(--tw-empty,/*!*/ /*!*/);
+*,
+::before,
+::after {
+  --tw-ring-inset: var(--tw-empty,
+      /*!*/
+      /*!*/
+    );
   --tw-ring-offset-width: 0px;
   --tw-ring-offset-color: #fff;
   --tw-ring-color: rgba(59, 130, 246, 0.5);
@@ -1158,11 +1179,9 @@ video {
   }
 }
 
-@media (min-width: 1280px) {
-}
+@media (min-width: 1280px) {}
 
-@media (min-width: 1536px) {
-}
+@media (min-width: 1536px) {}
 
 .logo {
   display: flex;
@@ -1170,45 +1189,59 @@ video {
 }
 
 .menu-opacity {
-    background-color: rgba(0, 0, 0, 0.3); /* Aqui, 0.5 define a opacidade de 50% (valores entre 0 e 1) */
-    backdrop-filter: blur(10px); /* Opcional: adicione um efeito de desfoque ao fundo */
+  background-color: rgba(0, 0, 0, 0.65);
+  /* Aumentado para 65% de opacidade para melhor contraste */
+  backdrop-filter: blur(10px);
+  /* Opcional: adicione um efeito de desfoque ao fundo */
 }
 
 .rounded-menu {
-    border-radius: 25px; /* Ajuste o valor conforme necessário para o grau de arredondamento desejado */
+  border-radius: 25px;
+  /* Ajuste o valor conforme necessário para o grau de arredondamento desejado */
 }
 
 #tm-nav {
-    margin-top: 20px; /* Ajuste o valor conforme necessário */
+  margin-top: 20px;
+  /* Ajuste o valor conforme necessário */
 }
 
 #tm-nav {
-    margin-bottom: 20px; /* Ajuste o valor conforme necessário */
+  margin-bottom: 20px;
+  /* Ajuste o valor conforme necessário */
 }
 
 #tm-nav ul {
-    list-style: none; /* Remove os marcadores de lista */
-    padding: 0; /* Remove o preenchimento padrão da lista */
-    margin: 0; /* Remove as margens para que os elementos fiquem juntos */
+  list-style: none;
+  /* Remove os marcadores de lista */
+  padding: 0;
+  /* Remove o preenchimento padrão da lista */
+  margin: 0;
+  /* Remove as margens para que os elementos fiquem juntos */
 }
 
 #tm-nav ul li {
-    padding: 10px; /* Adicione algum preenchimento interno para espaçamento entre os elementos */
-    border-radius: 10px; /* Define o raio das bordas para 10px (ajuste conforme necessário) */
-    margin: 0; /* Remove as margens para que os elementos fiquem juntos */
+  padding: 10px;
+  /* Adicione algum preenchimento interno para espaçamento entre os elementos */
+  border-radius: 10px;
+  /* Define o raio das bordas para 10px (ajuste conforme necessário) */
+  margin: 0;
+  /* Remove as margens para que os elementos fiquem juntos */
 }
 
 #tm-nav ul li:first-child {
-    border-top-left-radius: 10px; /* Aplica borda superior arredondada ao primeiro elemento */
-    border-top-right-radius: 10px; /* Aplica borda superior arredondada ao primeiro elemento */
+  border-top-left-radius: 10px;
+  /* Aplica borda superior arredondada ao primeiro elemento */
+  border-top-right-radius: 10px;
+  /* Aplica borda superior arredondada ao primeiro elemento */
 }
 
 #tm-nav ul li:last-child {
-    border-bottom-left-radius: 10px; /* Aplica borda inferior arredondada ao último elemento */
-    border-bottom-right-radius: 10px; /* Aplica borda inferior arredondada ao último elemento */
+  border-bottom-left-radius: 10px;
+  /* Aplica borda inferior arredondada ao último elemento */
+  border-bottom-right-radius: 10px;
+  /* Aplica borda inferior arredondada ao último elemento */
 }
+
 .menu-hidden {
-    display: none;
+  display: none;
 }
-
-
