@@ -1,0 +1,82 @@
+/* Correções Mobile - Proton Engenharia */
+
+/* Fix 1: Textos em áreas brancas devem ser escuros no mobile */
+@media (max-width: 768px) {
+
+    /* Textos dentro de containers brancos */
+    .bg-white.bg-opacity-80 p,
+    .bg-white.bg-opacity-80 h1,
+    .bg-white.bg-opacity-80 h2,
+    .bg-white.bg-opacity-80 h3 {
+        color: #333333 !important;
+    }
+
+    /* Strong tags dentro de containers brancos */
+    .bg-white.bg-opacity-80 strong {
+        color: #059669 !important;
+        /* Verde Proton para destaque */
+    }
+
+    /* Fix 2: Alinhamento dos botões WhatsApp no mobile */
+    #whatsAppWidget {
+        bottom: 20px !important;
+        right: 15px !important;
+    }
+
+    #whatsAppWidget2 {
+        bottom: 90px !important;
+        right: 15px !important;
+    }
+
+    #whatsAppWidget3 {
+        bottom: 160px !important;
+        right: 15px !important;
+    }
+
+    /* Ajuste dos labels dos botões WhatsApp */
+    #whatsAppWidget span,
+    #whatsAppWidget2 span,
+    #whatsAppWidget3 span {
+        font-size: 10px !important;
+        padding: 6px 8px !important;
+        max-width: 70px !important;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+/* Extra small devices (< 480px) */
+@media (max-width: 480px) {
+    #whatsAppWidget {
+        bottom: 15px !important;
+        right: 10px !important;
+    }
+
+    #whatsAppWidget2 {
+        bottom: 80px !important;
+        right: 10px !important;
+    }
+
+    #whatsAppWidget3 {
+        bottom: 145px !important;
+        right: 10px !important;
+    }
+
+    /* Reduz tamanho dos círculos WhatsApp */
+    #whatsAppWidget div div,
+    #whatsAppWidget2 div div,
+    #whatsAppWidget3 div div {
+        height: 45px !important;
+        width: 45px !important;
+    }
+
+    /* Labels ainda menores */
+    #whatsAppWidget span,
+    #whatsAppWidget2 span,
+    #whatsAppWidget3 span {
+        font-size: 9px !important;
+        padding: 4px 6px !important;
+        max-width: 60px !important;
+    }
+}
