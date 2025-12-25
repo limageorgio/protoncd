@@ -1764,37 +1764,9 @@
 			window.open(url);
 		});
 
-		$('#customerCarousel').slick({
-			slidesToShow: 3,
-			arrows: true,
-			responsive: [
-				{
-					breakpoint: 768,
-					settings: {
-						slidesToShow: 1,
-					},
-				},
-			],
-		});
+		// Remover inicialização prematura do Slick - será feito no $(document).ready()
 	</script>
 
-	<script>
-		$('.slick-slider').slick({
-			slidesToShow: 1,
-			arrows: true,
-			autoplay: true,        // Ativar o avanço automático
-			autoplaySpeed: 1000,   // Intervalo de tempo entre os slides (em milissegundos)
-			responsive: [
-				{
-					breakpoint: 768,
-					settings: {
-						slidesToShow: 1,
-						arrows: true,
-					}
-				}
-			]
-		});	
-	</script>
 	<script>
 		function enviarWhatsApp() {
 			const name = document.getElementById("Name").value;
@@ -1809,8 +1781,6 @@
 
 			window.location.href = whatsappLink;
 		}
-		}
-	}	
 	</script>
 	<script>
 		function checkAndShowHideMenu() {
@@ -1843,20 +1813,35 @@
 			$(document).scroll(function () {
 				// Menu sempre visível - scroll desabilitado
 			});
-			$(document).ready(function () {
-				$('.slick-slider').slick({
-					slidesToShow: 1,
-					arrows: true,
-					responsive: [
-						{
-							breakpoint: 768,
-							settings: {
-								slidesToShow: 1,
-								arrows: true,
-							}
+
+			// Inicializar carrosséis Slick após DOM carregar
+			$('#customerCarousel').slick({
+				slidesToShow: 3,
+				arrows: true,
+				responsive: [
+					{
+						breakpoint: 768,
+						settings: {
+							slidesToShow: 1,
+						},
+					},
+				],
+			});
+
+			$('.slick-slider').slick({
+				slidesToShow: 1,
+				arrows: true,
+				autoplay: true,
+				autoplaySpeed: 3000,
+				responsive: [
+					{
+						breakpoint: 768,
+						settings: {
+							slidesToShow: 1,
+							arrows: true,
 						}
-					]
-				});
+					}
+				]
 			});
 			document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 				anchor.addEventListener('click', function (e) {
