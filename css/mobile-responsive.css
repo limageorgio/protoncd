@@ -1,0 +1,365 @@
+/* Mobile Responsive Styles for Proton Engenharia Website */
+
+/* ===== Navigation Menu Mobile ===== */
+@media (max-width: 768px) {
+    #tm-nav .tm-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #tm-nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #tm-nav ul.hidden {
+        display: none !important;
+    }
+
+    #tm-nav li {
+        width: 100%;
+        margin: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    #tm-nav li a {
+        display: block;
+        padding: 12px 20px;
+        font-size: 16px;
+    }
+
+    #menu-toggle {
+        display: block !important;
+        cursor: pointer;
+        padding: 10px;
+        background: transparent;
+        border: none;
+    }
+
+    #menu-toggle-button {
+        cursor: pointer;
+        padding: 10px;
+    }
+
+    /* Content Boxes */
+    .bg-white.bg-opacity-80,
+    .bg-white.bg-opacity-90 {
+        padding: 1.5rem !important;
+    }
+
+    /* Typography Adjustments */
+    .text-5xl {
+        font-size: 2rem !important;
+        line-height: 1.2 !important;
+    }
+
+    .text-4xl {
+        font-size: 1.875rem !important;
+        line-height: 1.2 !important;
+    }
+
+    .text-3xl {
+        font-size: 1.5rem !important;
+        line-height: 1.2 !important;
+    }
+
+    .text-2xl {
+        font-size: 1.25rem !important;
+        line-height: 1.2 !important;
+    }
+
+    .text-xl {
+        font-size: 1.125rem !important;
+        line-height: 1.4 !important;
+    }
+
+    .text-lg {
+        font-size: 1rem !important;
+        line-height: 1.4 !important;
+    }
+
+    /* Buttons */
+    .inline-block.tm-bg-green,
+    .inline-block.tm-bg-gold,
+    .inline-block[class*="bg-"] {
+        display: block !important;
+        margin: 10px 0 !important;
+        text-align: center;
+        width: 100% !important;
+    }
+
+    /* Menu Items */
+    .tm-menu-item,
+    .tm-menu-item-2 {
+        flex-direction: column !important;
+        text-align: center;
+    }
+
+    .tm-menu-item img,
+    .tm-menu-item-2 img {
+        width: 100% !important;
+        max-width: 300px !important;
+        height: auto !important;
+        margin: 10px auto !important;
+    }
+
+    .tm-menu-item .text-right,
+    .tm-menu-item-2 .text-right {
+        text-align: center !important;
+        margin-right: 0 !important;
+    }
+
+    .tm-menu-item .ml-3,
+    .tm-menu-item .ml-6,
+    .tm-menu-item .sm\:ml-6 {
+        margin-left: 0 !important;
+        text-align: center;
+    }
+
+    .tm-menu-item-2 .mr-6 {
+        margin-right: 0 !important;
+    }
+
+    /* Team Member Images */
+    .col-lg-4 {
+        float: none !important;
+        width: 100% !important;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .col-lg-4 img {
+        width: 100% !important;
+        height: auto !important;
+        max-width: 300px !important;
+        margin: 0 auto !important;
+        display: block !important;
+    }
+
+    /* Flex Containers */
+    .flex.items-center.space-x-6 {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .flex.items-center.border-l {
+        border-left: none !important;
+        padding-left: 0 !important;
+        margin-top: 10px;
+    }
+
+    .flex.flex-col.lg\:flex-row {
+        flex-direction: column !important;
+    }
+
+    /* Grid Layouts */
+    .grid.grid-cols-2,
+    .grid.grid-cols-3 {
+        grid-template-columns: 1fr !important;
+    }
+
+    .grid.gap-8,
+    .grid.gap-6 {
+        gap: 1rem !important;
+    }
+
+    /* Cards */
+    .benefit-card,
+    .tm-item-container {
+        margin: 1rem 0 !important;
+    }
+
+    /* Video Container */
+    .relative.inline-block.max-w-3xl {
+        max-width: 100% !important;
+        padding: 0 1rem;
+    }
+
+    /* Containers & Padding */
+    .container.mx-auto.tm-container {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+
+    .py-24 {
+        padding-top: 3rem !important;
+        padding-bottom: 3rem !important;
+    }
+
+    .sm\:py-48 {
+        padding-top: 3rem !important;
+        padding-bottom: 3rem !important;
+    }
+
+    .px-12 {
+        padding-left: 1.5rem !important;
+        padding-right: 1.5rem !important;
+    }
+
+    .p-12 {
+        padding: 1.5rem !important;
+    }
+
+    /* Forms */
+    .flex-1.rounded-xl.p-12 {
+        padding: 1.5rem !important;
+    }
+
+    input.w-full,
+    textarea.w-full {
+        font-size: 16px !important;
+        padding: 0.75rem 0 !important;
+    }
+}
+
+/* ===== Extra Small Devices (phones, 480px and down) ===== */
+@media (max-width: 480px) {
+
+    /* WhatsApp Widgets */
+    #whatsAppWidget,
+    #whatsAppWidget2,
+    #whatsAppWidget3 {
+        right: 10px !important;
+        z-index: 9999 !important;
+    }
+
+    #whatsAppWidget {
+        bottom: 10px !important;
+        margin-bottom: 0 !important;
+    }
+
+    #whatsAppWidget2 {
+        bottom: 75px !important;
+        margin-bottom: 0 !important;
+    }
+
+    #whatsAppWidget3 {
+        bottom: 140px !important;
+        margin-bottom: 0 !important;
+    }
+
+    #whatsAppWidget div div,
+    #whatsAppWidget2 div div,
+    #whatsAppWidget3 div div {
+        height: 45px !important;
+        width: 45px !important;
+    }
+
+    #whatsAppWidget span,
+    #whatsAppWidget2 span,
+    #whatsAppWidget3 span {
+        font-size: 10px !important;
+        padding: 6px !important;
+        max-width: 70px !important;
+    }
+
+    /* Ultra compact typography */
+    .text-5xl {
+        font-size: 1.75rem !important;
+    }
+
+    .text-4xl {
+        font-size: 1.5rem !important;
+    }
+
+    .text-3xl {
+        font-size: 1.25rem !important;
+    }
+
+    /* Content padding */
+    .bg-white.bg-opacity-80,
+    .bg-white.bg-opacity-90 {
+        padding: 1rem !important;
+    }
+
+    .px-8 {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+
+    /* Minimum touch target size */
+    a,
+    button {
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* SVG Icons */
+    svg.w-16.h-16 {
+        width: 3rem !important;
+        height: 3rem !important;
+    }
+
+    /* Video overlay text */
+    .absolute.bottom-4 p {
+        font-size: 0.875rem !important;
+    }
+}
+
+/* ===== Landscape Mode for Mobile ===== */
+@media (max-height: 500px) and (orientation: landscape) {
+    .parallax-window {
+        min-height: auto !important;
+    }
+
+    .py-24,
+    .sm\:py-48 {
+        padding-top: 2rem !important;
+        padding-bottom: 2rem !important;
+    }
+}
+
+/* ===== Tablet Portrait ===== */
+@media (min-width: 481px) and (max-width: 768px) {
+    .text-4xl {
+        font-size: 2rem !important;
+    }
+
+    .text-3xl {
+        font-size: 1.75rem !important;
+    }
+
+    .bg-white.bg-opacity-80,
+    .bg-white.bg-opacity-90 {
+        padding: 2rem !important;
+    }
+}
+
+/* ===== Accessibility & Touch Improvements ===== */
+@media (max-width: 768px) {
+
+    /* Improve touch targets */
+    a,
+    button {
+        padding: 0.75rem 1rem;
+    }
+
+    /* Better contrast for readability */
+    .text-white {
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    }
+
+    /* Prevent horizontal scroll */
+    body {
+        overflow-x: hidden;
+    }
+
+    .container,
+    .tm-container {
+        overflow-x: hidden;
+    }
+
+    /* Ensure images don't overflow */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Fix for inline-block whitespace issues */
+    .inline-block {
+        display: block;
+        width: 100%;
+    }
+}

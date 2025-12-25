@@ -9,6 +9,14 @@
     <meta name="description"
         content="Inspeção predial em Goiânia para condomínios verticais: ensaios 360º em elevadores, PMOC, playgrounds NBR 16071 e teste de olhais NR-35, com laudos ART e conformidade CERCON.">
     <link rel="canonical" href="https://www.protoncd.com.br/goiania/inspecao-predial-goiania.html">
+
+    <!-- Hreflang para variantes regionais -->
+    <link rel="alternate" hreflang="pt-BR" href="https://www.protoncd.com.br/goiania/inspecao-predial-goiania.html">
+    <link rel="alternate" hreflang="pt-BR" href="https://www.protoncd.com.br/brasilia/inspecao-predial-brasilia.html">
+    <link rel="alternate" hreflang="pt-BR" href="https://www.protoncd.com.br/anapolis/inspecao-predial-anapolis.html">
+    <link rel="alternate" hreflang="pt-BR" href="https://www.protoncd.com.br/rio-verde/inspecao-predial-rio-verde.html">
+    <link rel="alternate" hreflang="x-default" href="https://www.protoncd.com.br/">
+
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 
     <!-- Open Graph / Facebook -->
@@ -363,6 +371,70 @@
 
             .cta-group {
                 flex-direction: column;
+            }
+
+            /* Melhorias Mobile Específicas */
+            body {
+                font-size: 16px;
+                overflow-x: hidden;
+            }
+
+            .hero {
+                padding: 2rem clamp(16px, 4vw, 32px);
+            }
+
+            h1 {
+                font-size: clamp(1.75rem, 5vw, 2.4rem) !important;
+                line-height: 1.2 !important;
+            }
+
+            h2.section-title {
+                font-size: clamp(1.5rem, 4vw, 1.9rem) !important;
+            }
+
+            h3 {
+                font-size: 1.15rem !important;
+            }
+
+            .btn-primary,
+            .btn-secondary {
+                width: 100%;
+                justify-content: center;
+                padding: 14px 24px;
+                font-size: 0.95rem;
+            }
+
+            .card {
+                padding: 20px;
+            }
+
+            .badge {
+                font-size: 0.75rem;
+                padding: 5px 12px;
+            }
+
+            .grid.two {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+                text-align: center;
+            }
+
+            .list {
+                padding-left: 20px;
+                font-size: 0.95rem;
+            }
+
+            main {
+                padding: 0 16px;
+            }
+
+            section {
+                margin-bottom: 48px;
             }
         }
     </style>

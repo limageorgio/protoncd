@@ -1,6 +1,6 @@
 # Manual de Reindexação no Google Search Console
 **Proton Engenharia Mecânica**  
-Atualizado em: 24/12/2025
+Atualizado em: 25/12/2025
 
 ---
 
@@ -10,7 +10,8 @@ Atualizado em: 24/12/2025
 3. [Lista de URLs por Ordem de Prioridade](#lista-de-urls-por-ordem-de-prioridade)
 4. [Procedimento de Reindexação](#procedimento-de-reindexacao)
 5. [Monitoramento Pós-Reindexação](#monitoramento-pos-reindexacao)
-6. [Checklist de Validação](#checklist-de-validacao)
+6. [Integração com Google Analytics 4](#integracao-com-google-analytics-4)
+7. [Checklist de Validação](#checklist-de-validacao)
 
 ---
 
@@ -123,12 +124,46 @@ PAREI AQUI | 12 | `https://www.protoncd.com.br/inspecao-combate-incendio.html` |
 
 ---
 
-### 🥉 **PRIORIDADE 6 - Páginas Comerciais (Valor Agregado: Baixo-Médio)**
+### 🥉 **PRIORIDADE 6 - Base de Conhecimento Técnico (Valor Agregado: SEO + Autoridade)**
+**Critério:** Conteúdo educacional, long-tail keywords, autoridade de domínio, backlinks orgânicos
+
+| # | URL | Última Modificação | Prioridade Sitemap | Motivo |
+|---|-----|-------------------|-------------------|---------|
+| 18 | `https://www.protoncd.com.br/conhecimento-tecnico/` | 2025-12-25 | 0.88 | Hub central de conteúdo, SEO educacional, featured snippets |
+
+**Atualização recente (25/12/2025):**
+- ✅ Base de conhecimento técnico com 9 categorias de problemas e soluções
+- ✅ Conteúdo baseado em casos reais de inspeções prediais
+- ✅ Categorias: Elevadores, HVAC, Portas Corta-Fogo, Pressurizaçãio, Playgrounds, Gás, Impermeabilização, Estruturas Metálicas, Casas de Máquinas
+- ✅ Schema.org FAQ e Article implementados
+- ✅ Ideal para ranquear em buscas educacionais tipo "como resolver [problema]"
+
+**Categorias da Base de Conhecimento:**
+- **Elevadores:** Análise de vibração, ruídos anormais, desalinhamento
+- **HVAC/Climatização:** Problemas de refrigeração, eficiência energética, manutenção PMOC
+- **Portas Corta-Fogo:** Vedação, fechamento automático, conformidade NBR
+- **Pressurizaçào de Escadas:** Insuficiência de pressão, exaustores
+- **Playgrounds:** NBR 16071, pisos inadequados, equipamentos danificados
+- **Instalações de Gás:** Vazamentos, conformidade NR-13, válvulas
+- **Impermeabilização:** Infiltrações, lajes, reservatórios
+- **Estruturas Metálicas:** Corrosão, soldas, estabilidade
+- **Casas de Máquinas:** Ventilação inadequada, sistemas hidráulicos
+
+**Benefícios SEO:**
+- 🎯 **Long-tail keywords:** Captura buscas específicas tipo "vibração excessiva elevador condomínio"
+- 📚 **Autoridade técnica:** Google reconhece expertise em engenharia mecânica
+- 🔗 **Link building:** Síndicos e administradoras compartilham conteúdo educacional
+- ⭐ **Featured Snippets:** Formato FAQ ideal para posições zero
+- 📈 **Tráfego qualificado:** Usuários pesquisando problemas = alta intenção de conversão
+
+---
+
+### 🥉 **PRIORIDADE 7 - Páginas Comerciais (Valor Agregado: Baixo-Médio)**
 **Critério:** Expansão de rede, parcerias, modelo de negócio
 
 | # | URL | Última Modificação | Prioridade Sitemap | Motivo |
 |---|-----|-------------------|-------------------|---------|
-| 18 | `https://www.protoncd.com.br/franquias.html` | 2025-12-21 | 0.85 | Modelo de franquia, expansão nacional |
+| 19 | `https://www.protoncd.com.br/franquias.html` | 2025-12-21 | 0.85 | Modelo de franquia, expansão nacional |
 
 ---
 
@@ -236,8 +271,9 @@ Filtro: Últimos 28 dias
 Métricas: Cliques, Impressões, CTR, Posição média
 ```
 
-**Páginas a Monitorar (Top 5):**
+**Páginas a Monitorar (Top 6):**
 - `/` (homepage)
+- `/conhecimento-tecnico/` (base de conhecimento - nova)
 - `/goiania/inspecao-predial-goiania.html`
 - `/analise-vibracao-elevadores.html`
 - `/cercon-goias.html`
@@ -257,6 +293,8 @@ Verificar posições para keywords-alvo:
 - "inspeção predial engenharia"
 - "PMOC Goiás"
 - "laudo elevador NBR 16042"
+- "como resolver vibração elevador" (nova - base conhecimento)
+- "problemas HVAC condomínio" (nova - base conhecimento)
 
 **Local (Goiânia):**
 - "inspeção predial Goiânia"
@@ -267,6 +305,437 @@ Verificar posições para keywords-alvo:
 - "inspeção predial Brasília"
 - "HVAC órgãos públicos Brasília"
 - "teste olhais Brasília NR-35"
+
+---
+
+## 📊 Integração com Google Analytics 4
+
+### Por que Integrar GA4 com Search Console?
+
+**Benefícios:**
+- 📈 Rastrear conversões de tráfego orgânico (WhatsApp, formulários, telefonemas)
+- 🎯 Identificar quais páginas convertem melhor
+- 💰 Calcular ROI real de SEO (valor por sessão orgânica)
+- 🔍 Correlacionar queries do Search Console com comportamento no GA4
+- 📊 Criar relatórios unificados de performance
+
+---
+
+### Passo 1: Conectar Search Console ao Google Analytics 4
+
+#### Requisitos:
+- Conta Google Analytics 4 configurada (Property ID: G-XXXXXXXX)
+- Permissões de administrador em ambas ferramentas
+
+#### Procedimento:
+
+1. **No Google Analytics 4:**
+   - Acesse: https://analytics.google.com
+   - Selecione a propriedade: **Proton Engenharia (www.protoncd.com.br)**
+   - Menu: **Admin** (engrenagem no canto inferior esquerdo)
+   - Coluna "Propriedade": **Configurações da propriedade**
+
+2. **Ativar Integração:**
+   - Role até: **Vínculos do produto**
+   - Clique em: **Vínculos do Search Console**
+   - Botão: **Vincular**
+   - Selecione: `https://www.protoncd.com.br`
+   - Confirme: **Enviar**
+
+3. **Verificar Integração:**
+   - No GA4, acesse: **Relatórios > Aquisição > Search Console**
+   - Deve aparecer dados de: Consultas, Landing Pages, Países, Dispositivos
+   - Prazo para dados aparecerem: 24-48 horas
+
+---
+
+### Passo 2: Configurar Eventos de Conversão Personalizados
+
+#### Eventos Críticos para Proton Engenharia:
+
+**1. Cliques em WhatsApp (3 widgets)**
+```javascript
+// Adicionar no arquivo JS principal ou inline
+
+// WhatsApp Widget 1 (Principal)
+document.getElementById('whatsAppWidget').addEventListener('click', function() {
+  gtag('event', 'whatsapp_click', {
+    'event_category': 'conversao',
+    'event_label': 'whatsapp_principal',
+    'widget_position': 'principal',
+    'value': 1
+  });
+});
+
+// WhatsApp Widget 2
+document.getElementById('whatsAppWidget2').addEventListener('click', function() {
+  gtag('event', 'whatsapp_click', {
+    'event_category': 'conversao',
+    'event_label': 'whatsapp_secundario',
+    'widget_position': 'secundario',
+    'value': 1
+  });
+});
+
+// WhatsApp Widget 3
+document.getElementById('whatsAppWidget3').addEventListener('click', function() {
+  gtag('event', 'whatsapp_click', {
+    'event_category': 'conversao',
+    'event_label': 'whatsapp_terciario',
+    'widget_position': 'terciario',
+    'value': 1
+  });
+});
+```
+
+**2. Visualização de Telefone**
+```javascript
+// Rastrear quando usuário clica no telefone
+const telefones = document.querySelectorAll('a[href^="tel:"]');
+telefones.forEach(tel => {
+  tel.addEventListener('click', function() {
+    gtag('event', 'phone_click', {
+      'event_category': 'conversao',
+      'event_label': this.textContent,
+      'phone_number': this.href.replace('tel:', ''),
+      'value': 2
+    });
+  });
+});
+```
+
+**3. Engajamento com Base de Conhecimento**
+```javascript
+// Rastrear expansão de cards de problemas
+if (window.location.pathname.includes('/conhecimento-tecnico')) {
+  const cards = document.querySelectorAll('.problem-card');
+  cards.forEach(card => {
+    card.addEventListener('click', function() {
+      const categoria = this.dataset.categoria;
+      const problema = this.querySelector('h3').textContent;
+      
+      gtag('event', 'knowledge_engagement', {
+        'event_category': 'conteudo',
+        'event_label': categoria,
+        'problem_title': problema,
+        'value': 0.5
+      });
+    });
+  });
+}
+```
+
+**4. Scroll Depth (Engajamento)**
+```javascript
+// Rastrear quando usuário rola 75% da página
+let scrolled75 = false;
+
+window.addEventListener('scroll', function() {
+  const scrollPercent = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+  
+  if (scrollPercent > 75 && !scrolled75) {
+    scrolled75 = true;
+    gtag('event', 'scroll_depth', {
+      'event_category': 'engajamento',
+      'event_label': '75_percent',
+      'page_path': window.location.pathname
+    });
+  }
+});
+```
+
+**5. Tempo de Permanência (Sessões Qualificadas)**
+```javascript
+// Rastrear usuários que ficam mais de 60 segundos
+setTimeout(function() {
+  gtag('event', 'engaged_session', {
+    'event_category': 'engajamento',
+    'event_label': 'tempo_minimo_60s',
+    'session_duration': 60
+  });
+}, 60000); // 60 segundos
+```
+
+---
+
+### Passo 3: Marcar Eventos como Conversões no GA4
+
+1. **No Google Analytics 4:**
+   - Menu: **Configurar > Eventos**
+   - Localizar eventos:
+     - `whatsapp_click`
+     - `phone_click`
+     - `knowledge_engagement`
+     - `engaged_session`
+
+2. **Ativar como Conversão:**
+   - Toggle **"Marcar como conversão"** para cada evento
+   - Eventos marcados aparecem em: **Relatórios > Engajamento > Conversões**
+
+3. **Definir Valores Monetários (Opcional):**
+   - `whatsapp_click`: R$ 50 (lead qualificado)
+   - `phone_click`: R$ 80 (intenção alta)
+   - `knowledge_engagement`: R$ 10 (interesse educacional)
+   - `engaged_session`: R$ 5 (engajamento)
+
+---
+
+### Passo 4: Criar Segmentos Personalizados
+
+#### Segmento 1: "Tráfego Orgânico de Páginas Regionais"
+```
+Condições:
+- Origem da sessão: google / organic
+- Landing Page contém: /goiania/ OU /brasilia/ OU /anapolis/ OU /rio-verde/
+```
+
+**Uso:** Comparar conversão de tráfego local vs. nacional
+
+#### Segmento 2: "Usuários da Base de Conhecimento"
+```
+Condições:
+- Página visitada contém: /conhecimento-tecnico/
+- Eventos incluem: knowledge_engagement
+```
+
+**Uso:** Medir eficácia do conteúdo educacional em gerar conversões
+
+#### Segmento 3: "Conversores de Alta Intenção"
+```
+Condições:
+- Evento de conversão: whatsapp_click OU phone_click
+- Origem: google / organic
+- Tempo de permanência > 60 segundos
+```
+
+**Uso:** Identificar jornada típica de leads qualificados
+
+---
+
+### Passo 5: Configurar Relatórios Personalizados
+
+#### Relatório 1: "Performance SEO por Página"
+
+**No GA4:**
+1. Menu: **Explorar > Criar exploração**
+2. Tipo: **Exploração de forma livre**
+3. Configuração:
+   ```
+   Dimensões:
+   - Landing page
+   - País
+   - Origem/Mídia (google / organic)
+   
+   Métricas:
+   - Usuários
+   - Sessões
+   - Taxa de conversão de whatsapp_click
+   - Taxa de conversão de phone_click
+   - Receita do evento (se valores configurados)
+   - Tempo médio de engajamento
+   ```
+4. Filtro: **Origem/Mídia = google / organic**
+5. Salvar como: **"SEO - Performance por Landing Page"**
+
+#### Relatório 2: "ROI de Páginas Regionais"
+```
+Dimensões:
+- Landing page (filtrar: contém /goiania/, /brasilia/, etc.)
+- Cidade
+- Dispositivo
+
+Métricas:
+- Conversões (whatsapp + phone)
+- Valor total das conversões
+- Custo de aquisição: R$ 0 (orgânico)
+- ROI: (Valor conversões - Custo) / Custo × 100
+```
+
+#### Relatório 3: "Funil de Conversão - Base de Conhecimento"
+```
+Etapas:
+1. Visita /conhecimento-tecnico/ (100%)
+2. Evento: knowledge_engagement (% usuários engajados)
+3. Navegação para página de serviço (% interessados)
+4. Conversão: whatsapp_click ou phone_click (% convertidos)
+```
+
+---
+
+### Passo 6: Dashboards de Monitoramento
+
+#### Dashboard Recomendado: "SEO + Conversões"
+
+**Widgets a adicionar:**
+
+1. **Tráfego Orgânico (30 dias)**
+   - Gráfico de linha: Usuários orgânicos por dia
+   - Comparação: Período anterior
+
+2. **Top 5 Landing Pages Orgânicas**
+   - Tabela: Página | Usuários | Conversões | Taxa de Conversão
+   - Ordenar por: Conversões (decrescente)
+
+3. **Conversões por Fonte (WhatsApp vs. Telefone)**
+   - Gráfico de pizza: Distribuição de eventos de conversão
+
+4. **Taxa de Rejeição por Página Regional**
+   - Gráfico de barras: Goiânia, Brasília, Anápolis, Rio Verde
+   - Meta: < 60%
+
+5. **Queries do Search Console (Top 10)**
+   - Tabela integrada: Query | Cliques | Impressões | CTR | Posição
+
+6. **Valor Gerado por Tráfego Orgânico**
+   - Número único: Receita total de eventos (últimos 30 dias)
+   - Comparação: Mês anterior
+
+---
+
+### Métricas Importantes para Monitorar
+
+| Métrica | Meta | Frequência | Ação se Abaixo da Meta |
+|---------|------|------------|------------------------|
+| **Taxa de Conversão Orgânica** | 3-5% | Semanal | Otimizar CTAs, testar posições de WhatsApp |
+| **Tempo Médio de Engajamento** | > 90s | Semanal | Melhorar conteúdo, adicionar FAQs |
+| **Taxa de Rejeição** | < 55% | Semanal | Verificar velocidade, mobile-friendly |
+| **Conversões de /conhecimento-tecnico/** | 10+ por mês | Mensal | Expandir categorias, adicionar CTAs |
+| **Valor por Sessão Orgânica** | R$ 5-10 | Mensal | Revisar valores de evento, qualificar tráfego |
+| **Conversões Páginas Regionais** | 50+ por mês | Mensal | Reforçar SEO local, adicionar provas sociais |
+
+---
+
+### Passo 7: Alertas Automáticos (Opcional)
+
+**Configure alertas para:**
+
+1. **Queda de Tráfego Orgânico > 20%**
+   - Email: (inserir email webmaster)
+   - Verificar: Desindexação, penalização, problemas técnicos
+
+2. **Taxa de Conversão < 2%**
+   - Email: (inserir email marketing)
+   - Verificar: CTAs, posição de WhatsApp, mobile UX
+
+3. **Aumento de Rejeição > 70%**
+   - Email: (inserir email desenvolvedor)
+   - Verificar: Erros 404, velocidade, compatibilidade mobile
+
+**Configuração no GA4:**
+- Menu: **Admin > Alertas personalizados**
+- Criar alerta para cada condição acima
+
+---
+
+### Código de Implementação Completo
+
+**Adicionar no `<head>` de todas as páginas (se ainda não estiver):**
+
+```html
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-33VH6XTPZF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-33VH6XTPZF', {
+    'send_page_view': true,
+    'anonymize_ip': true
+  });
+</script>
+```
+
+**Adicionar no final do `<body>` (antes de `</body>`):**
+
+```html
+<!-- Eventos de Conversão GA4 -->
+<script>
+// WhatsApp Clicks
+const whatsappWidgets = document.querySelectorAll('[id^="whatsAppWidget"]');
+whatsappWidgets.forEach((widget, index) => {
+  widget.addEventListener('click', function() {
+    gtag('event', 'whatsapp_click', {
+      'event_category': 'conversao',
+      'event_label': 'widget_' + (index + 1),
+      'value': 1
+    });
+  });
+});
+
+// Phone Clicks
+const telefones = document.querySelectorAll('a[href^="tel:"]');
+telefones.forEach(tel => {
+  tel.addEventListener('click', function() {
+    gtag('event', 'phone_click', {
+      'event_category': 'conversao',
+      'event_label': this.textContent.trim(),
+      'value': 2
+    });
+  });
+});
+
+// Scroll Depth 75%
+let scrolled75 = false;
+window.addEventListener('scroll', function() {
+  const scrollPercent = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+  if (scrollPercent > 75 && !scrolled75) {
+    scrolled75 = true;
+    gtag('event', 'scroll_depth', {
+      'event_category': 'engajamento',
+      'event_label': '75_percent'
+    });
+  }
+});
+
+// Engaged Session (60s)
+setTimeout(function() {
+  gtag('event', 'engaged_session', {
+    'event_category': 'engajamento',
+    'event_label': 'tempo_minimo_60s'
+  });
+}, 60000);
+</script>
+```
+
+---
+
+### Checklist de Implementação GA4
+
+- [ ] **Search Console vinculado ao GA4**
+- [ ] **Eventos de WhatsApp configurados** (3 widgets)
+- [ ] **Eventos de telefone configurados**
+- [ ] **Scroll depth implementado**
+- [ ] **Engaged session implementado**
+- [ ] **Eventos marcados como conversões no GA4**
+- [ ] **Valores monetários definidos** (opcional)
+- [ ] **Segmentos personalizados criados** (mínimo 2)
+- [ ] **Relatório "SEO - Performance" criado**
+- [ ] **Dashboard de monitoramento configurado**
+- [ ] **Alertas automáticos ativados**
+- [ ] **Teste de eventos funcionando** (usar GA4 DebugView)
+
+---
+
+### Teste de Validação (Após Implementação)
+
+1. **DebugView do GA4:**
+   - URL: https://analytics.google.com > DebugView
+   - Navegue pelo site em modo privado adicionando `?debug=true` na URL
+   - Exemplo: `https://www.protoncd.com.br/?debug=true`
+   - Clique nos botões de WhatsApp e telefone
+   - Verifique se eventos aparecem em tempo real
+
+2. **Teste de Conversão:**
+   - Abra o site em modo anônimo
+   - Clique em WhatsApp Widget
+   - Aguarde 3-5 minutos
+   - Verifique: GA4 > Relatórios > Tempo real > Eventos
+   - Deve aparecer: `whatsapp_click`
+
+3. **Integração Search Console:**
+   - Aguarde 48 horas após vincular
+   - Acesse: GA4 > Relatórios > Aquisição > Search Console
+   - Deve exibir: Consultas, Landing Pages, Países
 
 ---
 
@@ -337,7 +806,49 @@ Verificar posições para keywords-alvo:
 
 ---
 
-### Cenário 3: Lançamento de Nova Cidade (1 página nova)
+### Cenário 3: Lançamento de Base de Conhecimento (Conteúdo Educacional)
+**Exemplo:** Criação de hub de problemas técnicos e soluções (NOVO - 25/12/2025)
+
+**Ação:**
+1. Criar `/conhecimento-tecnico/index.html`
+2. Adicionar 9 categorias JSON com casos reais
+3. Adicionar ao `sitemap.xml` (prioridade 0.88)
+4. Adicionar link no menu de navegação principal
+5. Implementar Schema.org FAQPage e Article
+6. Deploy completo
+7. Método 1: Inspeção da página principal + homepage
+8. Tempo: 10 minutos + 48-72h para indexação e ranking
+
+**URLs Prioritárias (ordem de reindexação):**
+1. `https://www.protoncd.com.br/conhecimento-tecnico/` (NOVO)
+2. `/` (homepage com novo link no menu)
+
+**Benefícios Esperados:**
+- 📚 Ranqueamento para 50+ long-tail keywords educacionais
+- 🎯 Featured snippets tipo "como resolver [problema]"
+- 📈 Aumento de 20-30% em tráfego orgânico (30-60 dias)
+- 🔗 Backlinks naturais de síndicos/administradoras
+- ⭐ Autoridade de domínio E-A-T (Expertise, Authority, Trust)
+
+**Keywords-Alvo (Base Conhecimento):**
+- "vibração excessiva elevador condomínio"
+- "como resolver problema HVAC"
+- "porta corta fogo não fecha sozinha"
+- "playground condomínio NBR 16071"
+- "vazamento gás predial o que fazer"
+- "infiltração laje condomínio"
+- "pressurizaçào escada insuficiente"
+- "corrosão estrutura metálica"
+
+**Monitoramento Específico:**
+- Google Search Console > Desempenho > Filtrar por `/conhecimento-tecnico/`
+- Verificar consultas do tipo "como", "o que fazer", "resolver", "problema"
+- Monitorar CTR (esperado: 8-12% vs 2-4% páginas comerciais)
+- Verificar featured snippets (ferramenta: SEMrush Position Tracking)
+
+---
+
+### Cenário 4: Lançamento de Nova Cidade (1 página nova)
 **Exemplo:** Expansão para Aparecida de Goiânia
 
 **Ação:**
@@ -357,7 +868,7 @@ Verificar posições para keywords-alvo:
 
 ---
 
-### Cenário 4: Mudança de Estrutura (10+ páginas)
+### Cenário 5: Mudança de Estrutura (10+ páginas)
 **Exemplo:** Migração de domínio, reorganização de URLs
 
 **Ação:**
@@ -398,6 +909,20 @@ Verificar posições para keywords-alvo:
 
 ### Template de Log:
 
+```
+Data: 25/12/2025
+Responsável: [Nome]
+Motivo: Lançamento da Base de Conhecimento Técnico com 9 categorias
+URLs Reindexadas:
+  1. /conhecimento-tecnico/ - [hora]
+  2. / (homepage - novo link no menu) - [hora]
+Método: Inspeção Individual + Atualização Sitemap
+Status (72h): [A preencher]
+Observações: 9 categorias JSON, Schema FAQPage, 50+ keywords educacionais
+Impacto Esperado: +20-30% tráfego orgânico em 30-60 dias
+```
+
+**Exemplo anterior:**
 ```
 Data: 24/12/2025
 Responsável: [Nome]
