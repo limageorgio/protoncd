@@ -1,0 +1,166 @@
+/* Core Web Vitals Optimization - Proton Engenharia */
+/* Atualizado: 25/12/2025 */
+
+/* ===== LCP - LARGEST CONTENTFUL PAINT ===== */
+
+/* Otimizar fontes com font-display: swap */
+@font-face {
+    font-family: 'Raleway';
+    font-display: swap;
+    /* Evita FOIT - Flash of Invisible Text */
+    /* src definido em outro lugar */
+}
+
+@font-face {
+    font-family: 'Oswald';
+    font-display: swap;
+    /* src definido em outro lugar */
+}
+
+/* Garantir que imagens críticas tenham prioridade */
+.parallax-window {
+    /* Imagem de fundo otimizada */
+    background-attachment: scroll;
+    /* Melhor performance no mobile */
+}
+
+/* ===== FID - FIRST INPUT DELAY ===== */
+
+/* Garantir que botões e links sejam interativos rapidamente */
+a,
+button,
+input,
+textarea,
+select {
+    /* Evitar delays de touch em mobile */
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Otimizar event handlers */
+.tm-menu-item,
+.tm-menu-item-2,
+#whatsAppWidget,
+#whatsAppWidget2,
+#whatsAppWidget3 {
+    /* Usar transform para animações (melhor performance) */
+    will-change: transform;
+}
+
+/* ===== CLS - CUMULATIVE LAYOUT SHIFT ===== */
+
+/* Garantir que imagens tenham espaço reservado */
+img {
+    /* Prevenir CLS */
+    max-width: 100%;
+    height: auto;
+}
+
+/* Layout estável para WhatsApp widgets (position fixed) */
+#whatsAppWidget,
+#whatsAppWidget2,
+#whatsAppWidget3 {
+    /* Position fixed não afeta layout */
+    position: fixed !important;
+    /* Garantir que não cause reflow */
+    contain: layout style paint;
+}
+
+/* Reservar espaço para conteúdo que carrega dinamicamente */
+.parallax-window {
+    min-height: 600px;
+    /* Evitar layout shift */
+}
+
+/* Estabilizar menu de navegação */
+#tm-nav {
+    /* Altura mínima para evitar shift */
+    min-height: 60px;
+}
+
+/* ===== OTIMIZAÇÕES GERAIS DE PERFORMANCE ===== */
+
+/* Reduzir repaint/reflow */
+.tm-bg-green,
+.tm-bg-gold,
+.tm-bg-brown {
+    /* Usar transform para animações */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    will-change: transform, opacity;
+}
+
+/* Otimizar animações */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Lazy loading para elementos abaixo da dobra */
+.lazy-load {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.lazy-load.loaded {
+    opacity: 1;
+}
+
+/* ===== MOBILE OPTIMIZATIONS ===== */
+@media (max-width: 768px) {
+
+    /* Reduzir complexidade de parallax no mobile */
+    .parallax-window {
+        background-attachment: scroll !important;
+        background-size: cover !important;
+    }
+
+    /* Otimizar menu mobile para FID */
+    #tm-nav ul {
+        /* GPU acceleration */
+        transform: translateZ(0);
+        will-change: transform;
+    }
+}
+
+/* ===== PRELOAD HINTS ===== */
+
+/* Adicionar no HTML:
+<link rel="preload" as="image" href="img/eng_fundo_azul.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://www.googletagmanager.com" />
+<link rel="dns-prefetch" href="https://www.google-analytics.com" />
+*/
+
+/* ===== CONTENÇÃO DE LAYOUT ===== */
+
+/* Prevenir layout shifts em containers principais */
+.container,
+.tm-container {
+    /* Contenção de layout */
+    contain: layout style;
+}
+
+/* Estabilizar grid/flex containers */
+.flex,
+.grid {
+    contain: layout;
+}
+
+/* ===== OTIMIZAÇÃO DE RENDERIZAÇÃO ===== */
+
+/* Usar content-visibility para offscreen content */
+.tm-menu-item,
+.tm-menu-item-2 {
+    /* Renderizar apenas quando visível */
+    content-visibility: auto;
+    contain-intrinsic-size: 0 500px;
+    /* Altura estimada */
+}
+
+/* ===== CRITICAL CSS ===== */
+
+/* CSS crítico deve estar inline no <head> */
+/* Este arquivo deve ser carregado com defer ou no final do body */

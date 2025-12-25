@@ -85,6 +85,30 @@ https://www.protoncd.com.br
 - ✅ Meta descriptions atualizadas com novos serviços
 - ✅ Open Graph e Twitter Cards completos
 - ✅ 8 novos FAQs (2 por cidade)
+- ✅ **Hreflang tags implementadas** (SEO internacional/regional)
+
+**Implementação de Hreflang (25/12/2025):**
+
+Para evitar problemas de conteúdo duplicado e indicar ao Google a segmentação regional, foram implementadas tags hreflang nas 4 páginas regionais:
+
+```html
+<!-- Exemplo: goiania/inspecao-predial-goiania.html -->
+<link rel="alternate" hreflang="pt-BR" href="https://www.protoncd.com.br/goiania/inspecao-predial-goiania.html" />
+<link rel="alternate" hreflang="pt-BR" href="https://www.protoncd.com.br/brasilia/inspecao-predial-brasilia.html" />
+<link rel="alternate" hreflang="pt-BR" href="https://www.protoncd.com.br/anapolis/inspecao-predial-anapolis.html" />
+<link rel="alternate" hreflang="pt-BR" href="https://www.protoncd.com.br/rio-verde/inspecao-predial-rio-verde.html" />
+<link rel="alternate" hreflang="x-default" href="https://www.protoncd.com.br/" />
+```
+
+**Benefícios:**
+- 🌍 Evita penalização por conteúdo duplicado entre páginas regionais
+- 🎯 Melhora ranqueamento em buscas locais ("inspeção predial Goiânia")
+- 📍 Google entende que são variações regionais do mesmo serviço
+- ✅ Resolve warning "Página alternativa com tag canônica adequada"
+
+**Validação:**
+- Verificar em: `https://search.google.com/test/rich-results`
+- Google Search Console > Melhorias > Internacionalização
 
 ---
 
@@ -107,7 +131,7 @@ https://www.protoncd.com.br
 |---|-----|-------------------|-------------------|---------|
 | 10 | `https://www.protoncd.com.br/inspecao-gas-predial.html` | 2025-12-21 | 0.93 | NR-13, NB-70, conformidade Corpo de Bombeiros |
 | 11 | `https://www.protoncd.com.br/inspecao-casa-bombas.html` | 2025-12-21 | 0.93 | NBR 5626, IT-15 CBMGO, sistema crítico |
-PAREI AQUI | 12 | `https://www.protoncd.com.br/inspecao-combate-incendio.html` | 2025-12-21 | 0.93 | IT-14 CBMGO, obrigatório auditorias CERCON |
+| 12 | `https://www.protoncd.com.br/inspecao-combate-incendio.html` | 2025-12-21 | 0.93 | IT-14 CBMGO, obrigatório auditorias CERCON |
 | 13 | `https://www.protoncd.com.br/inspecao-pressurizacao-escadas.html` | 2025-12-21 | 0.92 | NBR 14880, IT-15 CBMGO, requisito AVCB |
 | 14 | `https://www.protoncd.com.br/inspecao-playgrounds.html` | 2025-12-21 | 0.92 | NBR 16071, seguradoras, responsabilidade civil |
 | 15 | `https://www.protoncd.com.br/teste-arrancamento-olhais.html` | 2025-12-21 | 0.91 | NR-35 obrigatória, teste anual, risco alto |
@@ -984,6 +1008,305 @@ Observações: Schema expandido de 2 para 4 serviços, 8 novos FAQs
 2. Testar em `https://search.google.com/test/rich-results`
 3. Verificar propriedades obrigatórias: name, @type, address (LocalBusiness)
 4. Re-solicitar indexação após correção
+
+---
+
+### Problema 4: "Página alternativa com tag canônica adequada"
+**Causas:**
+- Atributo lang incorreto (en vs pt-BR)
+- Falta de hreflang tags para páginas regionais
+- Canonical apontando para URL diferente
+- Páginas regionais sem diferenciação clara
+
+**Solução:**
+1. Verificar `<html lang="pt-BR">` em todas as páginas
+2. Implementar hreflang tags nas 4 páginas regionais:
+   ```html
+   <link rel="alternate" hreflang="pt-BR" href="https://www.protoncd.com.br/goiania/..." />
+   <link rel="alternate" hreflang="x-default" href="https://www.protoncd.com.br/" />
+   ```
+3. Verificar canonical tag aponta para a própria página
+4. Solicitar reindexação após correção
+
+---
+
+### Problema 5: "Core Web Vitals ruins (baixa pontuação)"
+**Causas:**
+- LCP > 2.5s (imagens pesadas, CSS bloqueante)
+- FID > 100ms (JavaScript bloqueante)
+- CLS > 0.1 (elementos sem dimensões, fontes)
+- Servidor lento ou sem CDN
+
+**Solução:**
+1. **Otimizar LCP:**
+   - Comprimir imagens (WebP, lazy loading)
+   - Usar `<link rel="preload">` para recursos críticos
+   - Minificar CSS/JS
+2. **Reduzir FID:**
+   - Adiar JavaScript não crítico (`defer`, `async`)
+   - Minimizar execução de scripts pesados
+3. **Corrigir CLS:**
+   - Definir width/height em imagens
+   - Reservar espaço para anúncios/widgets
+   - Usar `font-display: swap` em @font-face
+4. Testar em: `https://pagespeed.web.dev/`
+
+---
+
+### Problema 6: "Taxa de rejeição alta (> 70%)"
+**Causas:**
+- Conteúdo não corresponde à intenção de busca
+- Página lenta (> 3s para carregar)
+- Layout confuso ou não mobile-friendly
+- CTAs pouco visíveis
+
+**Solução:**
+1. Analisar queries no Search Console - ajustar conteúdo
+2. Otimizar velocidade (Core Web Vitals)
+3. Testar mobile-friendly: `https://search.google.com/test/mobile-friendly`
+4. Destacar WhatsApp widgets e telefones
+5. Adicionar FAQs para responder dúvidas comuns
+6. Monitorar via GA4: Engajamento > Taxa de rejeição
+
+---
+
+### Problema 7: "Queda súbita no ranking (> 10 posições)"
+**Causas:**
+- Atualização de algoritmo do Google
+- Concorrente criou conteúdo melhor
+- Penalização por link spam ou conteúdo duplicado
+- Problemas técnicos (site fora do ar, erros 500)
+
+**Solução:**
+1. Verificar Search Console > Manual Actions
+2. Analisar concorrentes: `site:concorrente.com.br [keyword]`
+3. Verificar uptime do site (24h sem quedas)
+4. Revisar backlinks em ferramentas como Ahrefs/SEMrush
+5. Enriquecer conteúdo (adicionar 300+ palavras, FAQs, vídeos)
+6. Monitorar recuperação em 14-30 dias
+7. Considerar campanhas Google Ads temporárias
+
+---
+
+## ⚡ Core Web Vitals - Otimização de Performance
+
+### O que são Core Web Vitals?
+
+Métricas de UX que o Google usa para ranqueamento desde 2021:
+
+| Métrica | Nome | Meta | Impacto |
+|---------|------|------|--------|
+| **LCP** | Largest Contentful Paint | < 2.5s | Velocidade de carregamento do conteúdo principal |
+| **FID** | First Input Delay | < 100ms | Interatividade (tempo até primeira interação) |
+| **CLS** | Cumulative Layout Shift | < 0.1 | Estabilidade visual (elementos não pulam) |
+
+### Status Atual do Site Proton (25/12/2025)
+
+**Verificar em:** `https://pagespeed.web.dev/`
+
+**Página de Teste:** `https://www.protoncd.com.br/`
+
+---
+
+### 1. LCP - Largest Contentful Paint (< 2.5s)
+
+#### O que é medido:
+- Tempo até o maior elemento visível carregar (imagem, vídeo, bloco de texto)
+
+#### Causas comuns de LCP ruim:
+- ❌ Imagens não otimizadas (PNG/JPG grandes)
+- ❌ CSS/JavaScript bloqueantes no `<head>`
+- ❌ Servidor lento (sem cache/CDN)
+- ❌ Fontes web pesadas sem preload
+
+#### Soluções implementadas:
+```html
+<!-- Preload da imagem hero -->
+<link rel="preload" as="image" href="img/eng_fundo_azul.png" />
+
+<!-- Lazy loading para imagens secundárias -->
+<img src="servico.jpg" loading="lazy" width="600" height="400" />
+
+<!-- CSS inline crítico (acima da dobra) -->
+<style>
+  /* CSS crítico aqui */
+</style>
+
+<!-- CSS não crítico com defer -->
+<link rel="stylesheet" href="css/styles.css" media="print" onload="this.media='all'" />
+```
+
+#### Soluções adicionais:
+1. **Comprimir imagens:**
+   - Converter PNG → WebP (economia de 30-50%)
+   - Redimensionar imagens para tamanho real de exibição
+   - Usar ferramentas: TinyPNG, Squoosh, ImageOptim
+
+2. **CDN para assets estáticos:**
+   - Considerar Cloudflare ou similar
+   - Cache de 1 ano para imagens/CSS/JS
+
+3. **Preconnect para recursos externos:**
+   ```html
+   <link rel="preconnect" href="https://fonts.googleapis.com" />
+   <link rel="preconnect" href="https://www.googletagmanager.com" />
+   ```
+
+---
+
+### 2. FID - First Input Delay (< 100ms)
+
+#### O que é medido:
+- Tempo entre primeira interação do usuário (clique, tap) e resposta do browser
+
+#### Causas comuns de FID ruim:
+- ❌ JavaScript bloqueante no carregamento
+- ❌ Scripts pesados executando no main thread
+- ❌ Muitos event listeners
+
+#### Soluções implementadas:
+```html
+<!-- JavaScript não crítico com defer -->
+<script src="js/jquery-3.6.0.min.js" defer></script>
+<script src="js/parallax.min.js" defer></script>
+
+<!-- JavaScript crítico com async -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-33VH6XTPZF"></script>
+```
+
+#### Soluções adicionais:
+1. **Code splitting:**
+   - Carregar apenas JS necessário por página
+   - Evitar bibliotecas completas (usar apenas funções necessárias)
+
+2. **Reduzir execução de JS:**
+   - Remover console.logs em produção
+   - Minificar e comprimir JS (Gzip/Brotli)
+
+3. **Web Workers para tarefas pesadas:**
+   - Processamento em background (se aplicável)
+
+---
+
+### 3. CLS - Cumulative Layout Shift (< 0.1)
+
+#### O que é medido:
+- Mudanças inesperadas no layout durante carregamento
+
+#### Causas comuns de CLS ruim:
+- ❌ Imagens sem dimensões (width/height)
+- ❌ Fontes web sem font-display
+- ❌ Anúncios/widgets que empurram conteúdo
+- ❌ Animações CSS que mudam layout
+
+#### Soluções implementadas:
+```html
+<!-- Imagens com dimensões fixas -->
+<img src="servico.jpg" width="600" height="400" alt="Serviço" />
+
+<!-- Fontes com display swap -->
+<style>
+  @font-face {
+    font-family: 'Raleway';
+    font-display: swap; /* Evita FOIT (flash of invisible text) */
+    src: url('fonts/raleway.woff2') format('woff2');
+  }
+</style>
+
+<!-- WhatsApp widgets com posição fixa (não afeta layout) -->
+<div id="whatsAppWidget" style="position: fixed; bottom: 20px; right: 20px;">
+  <!-- Widget aqui -->
+</div>
+```
+
+#### Soluções adicionais:
+1. **Reservar espaço para conteúdo dinâmico:**
+   ```css
+   .loading-skeleton {
+     min-height: 300px; /* Espaço reservado */
+     background: #f0f0f0;
+   }
+   ```
+
+2. **Evitar inserção de conteúdo acima da dobra:**
+   - Banners/avisos devem aparecer no final da página
+
+3. **Transformações CSS que não afetam layout:**
+   ```css
+   /* BOM - não afeta layout */
+   .animation {
+     transform: scale(1.1);
+     opacity: 0.9;
+   }
+   
+   /* RUIM - afeta layout */
+   .animation {
+     margin-top: 20px; /* Empurra conteúdo abaixo */
+   }
+   ```
+
+---
+
+### Checklist de Otimização Core Web Vitals
+
+#### LCP (< 2.5s)
+- [ ] Imagens hero otimizadas (WebP, < 200KB)
+- [ ] Preload de recursos críticos
+- [ ] CSS inline para acima da dobra
+- [ ] Servidor com cache habilitado
+- [ ] CDN para assets estáticos (opcional)
+
+#### FID (< 100ms)
+- [ ] JavaScript com defer/async
+- [ ] Scripts não críticos no final do `<body>`
+- [ ] Minificação de JS habilitada
+- [ ] Redução de third-party scripts
+
+#### CLS (< 0.1)
+- [ ] Todas as imagens com width/height
+- [ ] Fontes com font-display: swap
+- [ ] Elementos fixos não afetam layout
+- [ ] Espaço reservado para conteúdo dinâmico
+
+---
+
+### Ferramentas de Monitoramento
+
+1. **PageSpeed Insights**
+   - URL: `https://pagespeed.web.dev/`
+   - Testa mobile + desktop
+   - Fornece sugestões específicas
+
+2. **Google Search Console**
+   - Menu: **Experiência > Core Web Vitals**
+   - Agrupa URLs com problemas
+   - Dados reais de usuários (CrUX)
+
+3. **Chrome DevTools**
+   - F12 > Lighthouse
+   - Performance > Filmstrip
+   - Network > Throttling (simular 3G)
+
+4. **WebPageTest**
+   - URL: `https://www.webpagetest.org/`
+   - Teste de múltiplas localizações
+   - Waterfall detalhado
+
+---
+
+### Metas Proton Engenharia
+
+| Página | LCP Atual | FID Atual | CLS Atual | Meta LCP | Meta FID | Meta CLS |
+|--------|-----------|-----------|-----------|----------|----------|----------|
+| Homepage | TBD | TBD | TBD | < 2.0s | < 80ms | < 0.05 |
+| Goiânia | TBD | TBD | TBD | < 2.0s | < 80ms | < 0.05 |
+| Elevadores | TBD | TBD | TBD | < 2.5s | < 100ms | < 0.1 |
+
+**Próximos passos:**
+1. Medir baseline atual com PageSpeed Insights
+2. Implementar otimizações prioritárias (LCP primeiro)
+3. Re-testar após 7 dias
+4. Monitorar Search Console > Core Web Vitals mensalmente
 
 ---
 

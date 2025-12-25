@@ -5,5 +5,16 @@ Allow: /
 # Disallow: /admin/
 # Disallow: /temp/
 
+# Crawl-delay (opcional - remover se causar problemas)
+# Crawl-delay: 1
+
 # Sitemap
 Sitemap: https://www.protoncd.com.br/sitemap.xml
+
+# Otimização adicional (25/12/2025)
+# Permitir explicitamente páginas importantes
+Allow: /goiania/
+Allow: /brasilia/
+Allow: /anapolis/
+Allow: /rio-verde/
+Allow: /conhecimento-tecnico/
