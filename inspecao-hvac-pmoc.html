@@ -107,7 +107,9 @@
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/tailwind.css">
     <link rel="stylesheet" href="css/tooplate-antique-cafe.css">
-    <link rel="stylesheet" href="css/mobile-responsive.css">`n`t<link rel="stylesheet" href="css/text-rendering-fix.css">`n`t<link rel="stylesheet" href="../css/text-rendering-fix.css">
+    <link rel="stylesheet" href="css/mobile-responsive.css">`n`t
+    <link rel="stylesheet" href="css/text-rendering-fix.css">`n`t
+    <link rel="stylesheet" href="../css/text-rendering-fix.css">
     <link rel="icon" href="img/faviconb.ico" type="image/x-icon">
     <link rel="icon" href="img/faviconb.png" type="image/png">
     <style>
@@ -149,10 +151,12 @@
         gtag('js', new Date());
         gtag('config', 'AW-11202831655'); 
     </script>
-	<link rel="stylesheet" href="css/core-web-vitals.css" media="print" onload="this.media='all'">
-	<link rel="stylesheet" href="css/mobile-fix.css">
-	<noscript><link rel="stylesheet" href="css/core-web-vitals.css">
-	<link rel="stylesheet" href="css/mobile-fix.css"></noscript>
+    <link rel="stylesheet" href="css/core-web-vitals.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/mobile-fix.css">
+    <noscript>
+        <link rel="stylesheet" href="css/core-web-vitals.css">
+        <link rel="stylesheet" href="css/mobile-fix.css">
+    </noscript>
 
 </head>
 
@@ -182,27 +186,32 @@
 
     <div id="intro" class="parallax-window" data-parallax="scroll" data-image-src="img/eng_fundo_azul.png">
         <nav id="tm-nav" class="w-full menu-opacity rounded-menu">
-            <div class="tm-container px-2 md:py-6 text-right ">
-                <li class="inline-block mb-4 mx-4 text-white"><a href="https://www.protoncd.com.br/"
-                        class="text-white py-1 md:py-3 px-4">P�gina Inicial</a></li>
-                <li class="inline-block mb-4 mx-4 text-white"><a href="#quando-obrigatorio"
-                        class="text-white py-1 md:py-3 px-4">Quando � Obrigat�rio</a>
-                </li>
-                <li class="inline-block mb-4 mx-4 text-white"><a href="#servico"
-                        class="text-white py-1 md:py-3 px-4">Servi�os</a>
-                </li>
-                <li class="inline-block mb-4 mx-4 text-white"><a href="#pmoc"
-                        class="text-white py-1 md:py-3 px-4">PMOC</a> </li>
-                <li class="inline-block mb-4 mx-4 text-white"><a href="#tipos-sistemas-detalhado"
-                        class="text-white py-1 md:py-3 px-4">Tipos de Sistemas</a>
-                </li>
-                <li class="inline-block mb-4 mx-4 text-white"><a href="#beneficios"
-                        class="text-white py-1 md:py-3 px-4">Benef�cios</a></li>
-                <li class="inline-block mb-4 mx-4 text-white"><a href="#contato"
-                        class="text-white py-1 md:py-3 px-4">Contato</a>
-                </li>
-                <li id="menu-toggle-button" class="inline-block mb-4 mx-4"> <img src="img/logo_proton_branco.png"
-                        alt="Proton Engenharia" width="50" height="50" style="margin-bottom: -35px;"></li>
+            <div class="tm-container px-2 py-2 flex items-center justify-between">
+                <button id="menu-toggle" class="md:hidden text-white p-2">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+                <ul class="flex items-center space-x-2 hidden md:flex">
+                    <li class="inline-block text-white"><a href="https://www.protoncd.com.br/"
+                            class="text-white py-2 px-3">P�gina Inicial</a></li>
+                    <li class="inline-block text-white"><a href="#quando-obrigatorio"
+                            class="text-white py-2 px-3">Quando � Obrigat�rio</a></li>
+                    <li class="inline-block text-white"><a href="#servico" class="text-white py-2 px-3">Servi�os</a>
+                    </li>
+                    <li class="inline-block text-white"><a href="#pmoc" class="text-white py-2 px-3">PMOC</a></li>
+                    <li class="inline-block text-white"><a href="#tipos-sistemas-detalhado"
+                            class="text-white py-2 px-3">Tipos de Sistemas</a></li>
+                    <li class="inline-block text-white"><a href="#beneficios"
+                            class="text-white py-2 px-3">Benef�cios</a></li>
+                    <li class="inline-block text-white"><a href="#contato" class="text-white py-2 px-3">Contato</a></li>
+                    <li class="inline-block text-white"><a href="conhecimento-tecnico/index.html"
+                            class="text-white py-2 px-3 external-link" title="Conhecimento"><i
+                                class="fas fa-book-open"></i></a></li>
+                </ul>
+                <div class="flex items-center space-x-6">
+                    <div id="menu-toggle-button" class="flex items-center">
+                        <img src="img/logo_proton_branco.png" alt="Proton Engenharia" width="40" height="40">
+                    </div>
+                </div>
             </div>
         </nav>
 

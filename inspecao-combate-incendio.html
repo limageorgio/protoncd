@@ -27,7 +27,9 @@
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/tailwind.css">
     <link rel="stylesheet" href="css/tooplate-antique-cafe.css">
-    <link rel="stylesheet" href="css/mobile-responsive.css">`n`t<link rel="stylesheet" href="css/text-rendering-fix.css">`n`t<link rel="stylesheet" href="../css/text-rendering-fix.css">
+    <link rel="stylesheet" href="css/mobile-responsive.css">`n`t
+    <link rel="stylesheet" href="css/text-rendering-fix.css">`n`t
+    <link rel="stylesheet" href="../css/text-rendering-fix.css">
     <link rel="icon" href="img/faviconb.ico" type="image/x-icon">
     <style>
         .badge-norma {
@@ -41,33 +43,39 @@
             margin: .25rem
         }
     </style>
-	<link rel="stylesheet" href="css/core-web-vitals.css" media="print" onload="this.media='all'">
-	<link rel="stylesheet" href="css/mobile-fix.css">
-	<noscript><link rel="stylesheet" href="css/core-web-vitals.css">
-	<link rel="stylesheet" href="css/mobile-fix.css"></noscript>
+    <link rel="stylesheet" href="css/core-web-vitals.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/mobile-fix.css">
+    <noscript>
+        <link rel="stylesheet" href="css/core-web-vitals.css">
+        <link rel="stylesheet" href="css/mobile-fix.css">
+    </noscript>
 
 </head>
 
 <body>
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5NNLDWJX" height="0" width="0"
             style="display:none;visibility:hidden"></iframe></noscript>
-    <nav id="tm-nav" class="fixed w-full z-50">
-        <div class="tm-container mx-auto px-2 md:py-6 text-right">
-            <button class="md:hidden py-2 px-2" id="menu-toggle"><i class="fas fa-2x fa-bars tm-text-gold"></i></button>
-            <ul class="mb-3 md:mb-0 text-2xl font-normal flex justify-end flex-col md:flex-row text-white">
-                <li class="inline-block mb-4 mx-4 text-white"><a href="index.html"
-                        class="tm-text-gold py-1 md:py-3 px-4">In�cio</a></li>
-                <li class="inline-block mb-4 mx-4 text-white"><a href="#sistema"
-                        class="tm-text-gold py-1 md:py-3 px-4">O Sistema</a></li>
-                <li class="inline-block mb-4 mx-4 text-white"><a href="#normas"
-                        class="tm-text-gold py-1 md:py-3 px-4">Normas</a></li>
-                <li class="inline-block mb-4 mx-4 text-white"><a href="#inspecao"
-                        class="tm-text-gold py-1 md:py-3 px-4">Inspe��o</a></li>
-                <li class="inline-block mb-4 mx-4 text-white"><a href="#faq"
-                        class="tm-text-gold py-1 md:py-3 px-4">FAQ</a></li>
-                <li class="inline-block mb-4 mx-4 text-white"><a href="#contato"
-                        class="tm-text-gold py-1 md:py-3 px-4">Contato</a></li>
+    <nav id="tm-nav" class="w-full menu-opacity rounded-menu">
+        <div class="tm-container px-2 py-2 flex items-center justify-between">
+            <button id="menu-toggle" class="md:hidden text-white p-2">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+            <ul class="flex items-center space-x-2 hidden md:flex">
+                <li class="inline-block text-white"><a href="index.html" class="text-white py-2 px-3">In�cio</a></li>
+                <li class="inline-block text-white"><a href="#sistema" class="text-white py-2 px-3">O Sistema</a></li>
+                <li class="inline-block text-white"><a href="#normas" class="text-white py-2 px-3">Normas</a></li>
+                <li class="inline-block text-white"><a href="#inspecao" class="text-white py-2 px-3">Inspe��o</a></li>
+                <li class="inline-block text-white"><a href="#faq" class="text-white py-2 px-3">FAQ</a></li>
+                <li class="inline-block text-white"><a href="#contato" class="text-white py-2 px-3">Contato</a></li>
+                <li class="inline-block text-white"><a href="conhecimento-tecnico/index.html"
+                        class="text-white py-2 px-3 external-link" title="Conhecimento"><i
+                            class="fas fa-book-open"></i></a></li>
             </ul>
+            <div class="flex items-center space-x-6">
+                <div id="menu-toggle-button" class="flex items-center">
+                    <img src="img/logo_proton_branco.png" alt="Proton Engenharia" width="40" height="40">
+                </div>
+            </div>
         </div>
     </nav>
 
@@ -82,7 +90,8 @@
                     <h2 class="text-3xl tm-text-green font-medium mb-8">Bombas, Hidrantes, Sprinklers e Alarmes</h2>
                     <p class="text-xl leading-9 mb-6 text-white">Laudo t�cnico de <strong>sistemas de prote��o e combate
                             a inc�ndio</strong> conforme <strong>NBR 13714</strong>, <strong>NBR 10897</strong> e
-                        <strong>IT do Corpo de Bombeiros</strong>.</p>
+                        <strong>IT do Corpo de Bombeiros</strong>.
+                    </p>
                     <div class="bg-red-50 border-l-4 border-red-600 p-6 rounded-r-lg mb-6">
                         <p class="text-xl font-bold text-red-700 mb-3 text-gray-900"><i
                                 class="fas fa-exclamation-triangle mr-2"></i> SISTEMA INOPERANTE = VIDAS EM RISCO</p>
@@ -177,7 +186,8 @@
                             <h3 class="text-2xl font-bold text-yellow-400 mb-4"><i class="fas fa-valve mr-2"></i> 5. VRP
                                 - V�lvula Redutora de Press�o</h3>
                             <p class="text-base leading-7 text-gray-900">Reduz press�o excessiva na rede para evitar
-                                <strong>ruptura de mangueiras</strong> e garantir opera��o segura dos hidrantes.</p>
+                                <strong>ruptura de mangueiras</strong> e garantir opera��o segura dos hidrantes.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -347,7 +357,8 @@
                                 manuten��o?</h3>
                             <p class="text-base leading-7 text-gray-900"><strong>Sim.</strong> Teste
                                 <strong>mensal</strong> de detectores e sirenes. Limpeza semestral (poeira prejudica
-                                sensores). Bateria deve ser substitu�da a cada 3-5 anos.</p>
+                                sensores). Bateria deve ser substitu�da a cada 3-5 anos.
+                            </p>
                         </div>
                         <div class="border-l-4 border-cyan-600 pl-6 py-4 bg-cyan-50 rounded-r-lg">
                             <h3 class="text-xl font-bold text-yellow-400 mb-3">6. Quem pode emitir o laudo?</h3>

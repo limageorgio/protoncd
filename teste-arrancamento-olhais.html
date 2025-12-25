@@ -71,7 +71,9 @@
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/tailwind.css">
     <link rel="stylesheet" href="css/tooplate-antique-cafe.css">
-    <link rel="stylesheet" href="css/mobile-responsive.css">`n`t<link rel="stylesheet" href="css/text-rendering-fix.css">`n`t<link rel="stylesheet" href="../css/text-rendering-fix.css">
+    <link rel="stylesheet" href="css/mobile-responsive.css">`n`t
+    <link rel="stylesheet" href="css/text-rendering-fix.css">`n`t
+    <link rel="stylesheet" href="../css/text-rendering-fix.css">
     <link rel="icon" href="img/faviconb.ico" type="image/x-icon">
     <link rel="icon" href="img/faviconb.png" type="image/png">
     <style>
@@ -192,10 +194,12 @@
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11202831655"></script>
     <script> window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'AW-11202831655'); </script>
-	<link rel="stylesheet" href="css/core-web-vitals.css" media="print" onload="this.media='all'">
-	<link rel="stylesheet" href="css/mobile-fix.css">
-	<noscript><link rel="stylesheet" href="css/core-web-vitals.css">
-	<link rel="stylesheet" href="css/mobile-fix.css"></noscript>
+    <link rel="stylesheet" href="css/core-web-vitals.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/mobile-fix.css">
+    <noscript>
+        <link rel="stylesheet" href="css/core-web-vitals.css">
+        <link rel="stylesheet" href="css/mobile-fix.css">
+    </noscript>
 
 </head>
 
@@ -228,30 +232,32 @@
     <!-- Hero Section -->
     <div id="intro" class="parallax-window" data-parallax="scroll" data-image-src="img/eng_fundo_azul.png">
         <nav id="tm-nav" class="w-full menu-opacity rounded-menu">
-            <div class="tm-container px-2 md:py-6 text-right ">
-                <li class="inline-block mb-4 mx-4 text-white"><a href="index.html"
-                        class="text-white py-1 md:py-3 px-4">P�gina
-                        Inicial</a></li>
-                <li class="inline-block mb-4 mx-4 text-white"><a href="#obrigatoriedade"
-                        class="text-white py-1 md:py-3 px-4">Quando � Obrigat�rio</a>
-                </li>
-                <li class="inline-block mb-4 mx-4 text-white"><a href="#o-teste" class="text-white py-1 md:py-3 px-4">O
-                        Teste</a>
-                </li>
-                <li class="inline-block mb-4 mx-4 text-white"><a href="#tipos-ancoragem"
-                        class="text-white py-1 md:py-3 px-4">Tipos de Ancoragem</a></li>
-                <li class="inline-block mb-4 mx-4 text-white"><a href="#normas"
-                        class="text-white py-1 md:py-3 px-4">Normas</a></li>
-                <li class="inline-block mb-4 mx-4 text-white"><a href="#alerta"
-                        class="text-white py-1 md:py-3 px-4">Riscos
-                        Legais</a></li>
-                <li class="inline-block mb-4 mx-4 text-white"><a href="#faq"
-                        class="text-white py-1 md:py-3 px-4">FAQ</a></li>
-                <li class="inline-block mb-4 mx-4 text-white"><a href="#contato"
-                        class="text-white py-1 md:py-3 px-4">Contato</a>
-                </li>
-                <li id="menu-toggle-button" class="inline-block mb-4 mx-4"> <img src="img/logo_proton_branco.png"
-                        alt="Proton Engenharia" width="50" height="50" style="margin-bottom: -35px;"></li>
+            <div class="tm-container px-2 py-2 flex items-center justify-between">
+                <button id="menu-toggle" class="md:hidden text-white p-2">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+                <ul class="flex items-center space-x-2 hidden md:flex">
+                    <li class="inline-block text-white"><a href="index.html" class="text-white py-2 px-3">P�gina
+                            Inicial</a></li>
+                    <li class="inline-block text-white"><a href="#obrigatoriedade" class="text-white py-2 px-3">Quando �
+                            Obrigat�rio</a></li>
+                    <li class="inline-block text-white"><a href="#o-teste" class="text-white py-2 px-3">O Teste</a></li>
+                    <li class="inline-block text-white"><a href="#tipos-ancoragem" class="text-white py-2 px-3">Tipos de
+                            Ancoragem</a></li>
+                    <li class="inline-block text-white"><a href="#normas" class="text-white py-2 px-3">Normas</a></li>
+                    <li class="inline-block text-white"><a href="#alerta" class="text-white py-2 px-3">Riscos Legais</a>
+                    </li>
+                    <li class="inline-block text-white"><a href="#faq" class="text-white py-2 px-3">FAQ</a></li>
+                    <li class="inline-block text-white"><a href="#contato" class="text-white py-2 px-3">Contato</a></li>
+                    <li class="inline-block text-white"><a href="conhecimento-tecnico/index.html"
+                            class="text-white py-2 px-3 external-link" title="Conhecimento"><i
+                                class="fas fa-book-open"></i></a></li>
+                </ul>
+                <div class="flex items-center space-x-6">
+                    <div id="menu-toggle-button" class="flex items-center">
+                        <img src="img/logo_proton_branco.png" alt="Proton Engenharia" width="40" height="40">
+                    </div>
+                </div>
             </div>
         </nav>
 
