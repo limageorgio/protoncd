@@ -1,0 +1,16 @@
+# Permitir acesso direto a todos os arquivos nesta pasta
+Options +Indexes
+IndexOptions FancyIndexing
+
+# Permitir acesso de qualquer origem
+<IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "*"
+</IfModule>
+
+# Configurar tipos MIME para diferentes arquivos
+<IfModule mod_mime.c>
+    AddType text/html .html
+    AddType video/mp4 .mp4
+    AddType video/webm .webm
+    AddType application/pdf .pdf
+</IfModule>
