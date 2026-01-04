@@ -618,6 +618,7 @@
         elevator: 'Elevador 1',
         inspectionNumber: 'INS-2025-001',
         date: '2025-07-08',
+        roiStart: 403,
         roiDuration: 94,
         pauseStart: 42,
         pauseEnd: 52,
@@ -625,10 +626,16 @@
       }
     };
 
-    let currentTime = 0;
+    const roiStart = state.meta.roiStart || 0;
+    const roiEnd = roiStart + (state.meta.roiDuration || 0);
+    const series = normalizeSeries(state, roiStart, roiEnd);
+
+    let currentTime = 0; // Tempo relativo ao início da ROI
     let isPlaying = false;
     let rafId = null;
     let duration = state.meta.roiDuration || 0;
+
+    const clampToROI = (t) => Math.max(0, Math.min(duration, t));
 
     function qs(sel) {
       return document.querySelector(sel);
@@ -639,6 +646,19 @@
       const m = Math.floor(s / 60).toString().padStart(2, '0');
       const ss = (s % 60).toString().padStart(2, '0');
       return `${m}:${ss}`;
+    }
+
+    function normalizeSeries(src, start, end) {
+      const clamp = (arr) => (arr || [])
+        .filter(p => p && isFinite(p.t) && isFinite(p.y) && p.t >= start && p.t <= end)
+        .map(p => ({ t: p.t - start, y: p.y }));
+
+      return {
+        noise: clamp(src.noise),
+        vibX: clamp(src.vibX),
+        vibY: clamp(src.vibY),
+        vibZ: clamp(src.vibZ)
+      };
     }
 
     function fitData(data, width, height, padX = 40, padY = 22) {
@@ -834,10 +854,10 @@
         ctx2.setTransform(dpr, 0, 0, dpr, 0, 0);
         ctx3.setTransform(dpr, 0, 0, dpr, 0, 0);
 
-        const noiseData = state.noise || [];
-        const vibXData = state.vibX || [];
-        const vibYData = state.vibY || [];
-        const vibZData = state.vibZ || [];
+        const noiseData = series.noise || [];
+        const vibXData = series.vibX || [];
+        const vibYData = series.vibY || [];
+        const vibZData = series.vibZ || [];
 
         const map1 = fitData(noiseData, r1.width, r1.height);
         const mapX = fitData(vibXData, r2.width, r2.height);
@@ -1002,10 +1022,10 @@
 
         if (cvTime) cvTime.textContent = formatTime(t);
 
-        const n = findNearest(state.noise, t);
-        const vx = findNearest(state.vibX, t);
-        const vy = findNearest(state.vibY, t);
-        const vz = findNearest(state.vibZ, t);
+        const n = findNearest(series.noise, t);
+        const vx = findNearest(series.vibX, t);
+        const vy = findNearest(series.vibY, t);
+        const vz = findNearest(series.vibZ, t);
 
         if (cvNoise) cvNoise.textContent = n && isFinite(n.y) ? n.y.toFixed(1) : '--';
         if (cvVx) cvVx.textContent = vx && isFinite(vx.y) ? vx.y.toFixed(2) : '--';
@@ -1051,8 +1071,8 @@
     function tick() {
       try {
         if (isPlaying) {
-          currentTime += 0.033; // ~30fps
-          if (currentTime > duration) {
+          currentTime = clampToROI(currentTime + 0.033); // ~30fps relativo à ROI
+          if (currentTime >= duration) {
             currentTime = duration;
             isPlaying = false;
           }
@@ -1064,7 +1084,7 @@
           try {
             const ytTime = youtubePlayer.getCurrentTime();
             if (ytTime !== undefined && isFinite(ytTime)) {
-              currentTime = ytTime;
+              currentTime = clampToROI(ytTime - roiStart);
             }
           } catch (e) {
             // Ignorar erros de sincronização
@@ -1092,7 +1112,10 @@
     }
 
     function skip(delta) {
-      currentTime = Math.max(0, Math.min(duration, currentTime + delta));
+      currentTime = clampToROI(currentTime + delta);
+      if (youtubePlayer && youtubeReady && !youtubeError && !isLocalFile) {
+        youtubePlayer.seekTo(roiStart + currentTime, true);
+      }
       updateTimeUI(currentTime);
       updateTimelineDom(currentTime);
       updateCurrentValues(currentTime);
@@ -1100,7 +1123,10 @@
     }
 
     function seekTo(t) {
-      currentTime = Math.max(0, Math.min(duration, t));
+      currentTime = clampToROI(t);
+      if (youtubePlayer && youtubeReady && !youtubeError && !isLocalFile) {
+        youtubePlayer.seekTo(roiStart + currentTime, true);
+      }
       updateTimeUI(currentTime);
       updateTimelineDom(currentTime);
       updateCurrentValues(currentTime);
@@ -1181,7 +1207,7 @@
 
       if (canvasNoise) {
         canvasNoise.addEventListener('mousemove', (e) => {
-          showTooltip(canvasNoise, e, state.noise, 'dB', '#f97316');
+          showTooltip(canvasNoise, e, series.noise, 'dB', '#f97316');
         });
         canvasNoise.addEventListener('mouseleave', hideTooltip);
       }
@@ -1197,13 +1223,13 @@
           let nearestX = null, nearestY = null, nearestZ = null;
           let minDist = Infinity;
 
-          for (let i = 0; i < state.vibX.length; i++) {
-            const dist = Math.abs(state.vibX[i].t - targetTime);
+          for (let i = 0; i < series.vibX.length; i++) {
+            const dist = Math.abs(series.vibX[i].t - targetTime);
             if (dist < minDist) {
               minDist = dist;
-              nearestX = state.vibX[i];
-              nearestY = state.vibY[i];
-              nearestZ = state.vibZ[i];
+              nearestX = series.vibX[i];
+              nearestY = series.vibY[i];
+              nearestZ = series.vibZ[i];
             }
           }
 
@@ -1231,7 +1257,7 @@
       // Inicializar YouTube se houver URL e não for arquivo local
 
       if (typeof isLocalFile !== 'undefined' && !isLocalFile) {
-        initYouTubePlayer('oKdSESNGCU4', 403);
+        initYouTubePlayer('oKdSESNGCU4', roiStart);
       }
 
     });
@@ -1271,7 +1297,7 @@
         console.log('YouTube API Ready');
         const vid = document.getElementById('player');
         if (vid && vid.parentElement) {
-          initYouTubePlayer('oKdSESNGCU4', 403);
+          initYouTubePlayer('oKdSESNGCU4', roiStart);
         }
       };
     }
@@ -1355,8 +1381,8 @@
     function onPlayerReady(event) {
       console.log('YouTube player ready');
       // Sincronizar tempo do player com nosso currentTime
-      if (youtubePlayer && currentTime > 0) {
-        youtubePlayer.seekTo(currentTime);
+      if (youtubePlayer) {
+        youtubePlayer.seekTo(roiStart + currentTime);
       }
     }
 
