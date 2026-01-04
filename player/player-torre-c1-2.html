@@ -144,6 +144,14 @@
       overflow: hidden;
     }
 
+    /* Garantir que o iframe do YouTube ocupe todo o espaço e exponha controles 360° */
+    #player iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 400px;
+      aspect-ratio: 16/9;
+    }
+
     .offlineNotice {
       position: absolute;
       top: 12px;
@@ -477,7 +485,7 @@
   <header>
     <h1 class="title">🎬 Player Offline - Análise</h1>
     <p class="subtitle">Europark Noronha • Torre C1 - Elevador Carga</p>
-    <p class="subtitle" style="margin-top:4px; font-size:12px;">INS-2026-016 • 2025-12-29 • Exportado em 04/01/2026, 13:30:53</p>
+    <p class="subtitle" style="margin-top:4px; font-size:12px;">INS-2026-016 • 2025-12-29 • Exportado em 04/01/2026, 14:48:11</p>
   </header>
 
   <main class="container">
@@ -1348,6 +1356,24 @@
             onStateChange: onPlayerStateChange
           }
         });
+
+        // Forçar atributos essenciais para 360° no iframe
+        const apply360Attributes = () => {
+          if (!youtubePlayer || typeof youtubePlayer.getIframe !== 'function') return;
+          const iframe = youtubePlayer.getIframe();
+          if (!iframe) return;
+          iframe.setAttribute('allowfullscreen', 'true');
+          iframe.setAttribute('allow', 'accelerometer; gyroscope; magnetometer; vr; xr-spatial-tracking; autoplay; encrypted-media; picture-in-picture; fullscreen');
+          iframe.style.width = '100%';
+          iframe.style.height = '100%';
+          iframe.style.minHeight = '400px';
+          iframe.style.aspectRatio = '16/9';
+        };
+
+        // Aplicar imediatamente e após pequenos delays (quando iframe está pronto)
+        apply360Attributes();
+        setTimeout(apply360Attributes, 300);
+        setTimeout(apply360Attributes, 800);
       } catch (e) {
         console.error('Erro ao inicializar YouTube:', e);
         youtubeError = true;
@@ -1357,6 +1383,18 @@
 
     function onPlayerReady(event) {
       console.log('YouTube player ready');
+      // Reaplicar atributos 360° por segurança
+      if (youtubePlayer && typeof youtubePlayer.getIframe === 'function') {
+        const iframe = youtubePlayer.getIframe();
+        if (iframe) {
+          iframe.setAttribute('allowfullscreen', 'true');
+          iframe.setAttribute('allow', 'accelerometer; gyroscope; magnetometer; vr; xr-spatial-tracking; autoplay; encrypted-media; picture-in-picture; fullscreen');
+          iframe.style.width = '100%';
+          iframe.style.height = '100%';
+          iframe.style.minHeight = '400px';
+          iframe.style.aspectRatio = '16/9';
+        }
+      }
       // Sincronizar tempo do player com nosso currentTime
       if (youtubePlayer && currentTime > 0) {
         youtubePlayer.seekTo(currentTime);
