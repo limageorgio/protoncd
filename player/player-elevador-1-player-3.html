@@ -41,6 +41,36 @@
       box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
     }
 
+    .header-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .header-body {
+      overflow: hidden;
+      transition: max-height 0.25s ease, opacity 0.25s ease;
+      max-height: 400px;
+      opacity: 1;
+    }
+
+    header.collapsed .header-body {
+      opacity: 0;
+    }
+
+    .header-toggle {
+      padding: 8px 12px;
+      font-size: 12px;
+      font-weight: 700;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: var(--text);
+      border-radius: 10px;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
     .title {
       font-size: 20px;
       font-weight: 800;
@@ -481,9 +511,17 @@
 </head>
 
 <body>
-  <header>
-    <h1 class="title">🎬 Player Offline - Análise</h1>
-    <p class="subtitle">Relatório interativo com sincronização de gráficos (Totalmente offline)</p>
+  <header id="pageHeader" class="header-accordion">
+    <div class="header-row">
+      <div>
+        <h1 class="title">🎬 Player Offline - Análise</h1>
+      </div>
+      <button id="toggleHeader" class="header-toggle" aria-expanded="true" aria-controls="headerBody">Recolher
+        ▲</button>
+    </div>
+    <div id="headerBody" class="header-body">
+      <p class="subtitle">Relatório interativo com sincronização de gráficos (Totalmente offline)</p>
+    </div>
   </header>
 
   <main class="container">
@@ -636,6 +674,32 @@
     let duration = state.meta.roiDuration || 0;
 
     const clampToROI = (t) => Math.max(0, Math.min(duration, t));
+
+    function setupHeaderAccordion() {
+      const header = document.getElementById('pageHeader');
+      const body = document.getElementById('headerBody');
+      const btn = document.getElementById('toggleHeader');
+      if (!header || !body || !btn) return;
+
+      let open = true;
+
+      const sync = () => {
+        const h = body.scrollHeight;
+        body.style.maxHeight = open ? `${h}px` : '0px';
+        body.style.opacity = open ? '1' : '0';
+        header.classList.toggle('collapsed', !open);
+        btn.textContent = open ? 'Recolher ▲' : 'Expandir ▼';
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      };
+
+      btn.addEventListener('click', () => {
+        open = !open;
+        sync();
+      });
+
+      window.addEventListener('resize', sync);
+      sync();
+    }
 
     function qs(sel) {
       return document.querySelector(sel);
@@ -1135,6 +1199,8 @@
 
     // Event listeners
     document.addEventListener('DOMContentLoaded', () => {
+      setupHeaderAccordion();
+
       const btnPlay = qs('#btnPlay');
       const btnPause = qs('#btnPause');
       const btnBack = qs('#btnBack');
