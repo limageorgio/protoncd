@@ -822,6 +822,33 @@
         }
 
         /**
+         * Formatar data do GitHub para brasileiro
+         */
+        function formatarDataGitHub(dateString) {
+            try {
+                // GitHub retorna ISO 8601: 2026-01-05T14:30:45Z
+                if (!dateString) return 'Data desconhecida';
+
+                // Parse manual para garantir compatibilidade
+                const parts = dateString.split('T');
+                const dateParts = parts[0].split('-'); // [2026, 01, 05]
+                const timeParts = parts[1].split(':'); // [14, 30, 45Z ou 45]
+
+                const ano = dateParts[0];
+                const mes = dateParts[1];
+                const dia = dateParts[2];
+                const hora = timeParts[0];
+                const minuto = timeParts[1];
+                const segundo = timeParts[2].replace('Z', '').substring(0, 2);
+
+                return `${dia}/${mes}/${ano} ${hora}:${minuto}:${segundo}`;
+            } catch (error) {
+                console.error('Erro ao formatar data:', dateString, error);
+                return 'Data inválida';
+            }
+        }
+
+        /**
          * Listar arquivos da pasta player/ via GitHub API
          */
         async function listFiles(token) {
@@ -869,16 +896,8 @@
                     const sizeKb = (file.size / 1024).toFixed(2);
                     const pagesUrl = generatePublicUrl(file.name);
 
-                    // Formatar data e hora
-                    const fileDate = new Date(file.updated_at);
-                    const dataHora = fileDate.toLocaleString('pt-BR', {
-                        year: 'numeric',
-                        month: '2-digit',
-                        day: '2-digit',
-                        hour: '2-digit',
-                        minute: '2-digit',
-                        second: '2-digit'
-                    });
+                    // Formatar data usando função robusta
+                    const dataHora = formatarDataGitHub(file.updated_at);
 
                     console.log(`📂 Arquivo listado: ${file.name}, SHA: ${file.sha}, Data: ${dataHora}`);
                     return `
