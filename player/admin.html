@@ -822,6 +822,35 @@
         }
 
         /**
+         * Obter data de modificação do arquivo via commit history
+         */
+        async function getFileModifiedDate(filename, token) {
+            try {
+                const url = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/commits?path=${GITHUB_FOLDER}/${filename}&per_page=1`;
+                const res = await fetch(url, {
+                    headers: {
+                        'Authorization': `Bearer ${token}`,
+                        'Accept': 'application/vnd.github.v3+json'
+                    }
+                });
+
+                if (!res.ok) {
+                    console.warn(`Não conseguiu pegar data de ${filename}`);
+                    return null;
+                }
+
+                const commits = await res.json();
+                if (commits && commits.length > 0 && commits[0].commit && commits[0].commit.committer) {
+                    return commits[0].commit.committer.date;
+                }
+                return null;
+            } catch (error) {
+                console.error(`Erro ao pegar data de ${filename}:`, error);
+                return null;
+            }
+        }
+
+        /**
          * Formatar data do GitHub para brasileiro
          */
         function formatarDataGitHub(dateString) {
@@ -892,12 +921,24 @@
                     return;
                 }
 
-                fileList.innerHTML = files.map(file => {
+                // Pegar datas de modificação de todos os arquivos
+                setFileListStatus('info', 'Carregando datas de modificação...');
+                const filesWithDates = await Promise.all(files.map(async (file) => {
+                    const modifiedDate = await getFileModifiedDate(file.name, token);
+                    return {
+                        ...file,
+                        modifiedDate
+                    };
+                }));
+
+                fileList.innerHTML = filesWithDates.map(file => {
                     const sizeKb = (file.size / 1024).toFixed(2);
                     const pagesUrl = generatePublicUrl(file.name);
 
                     // Formatar data usando função robusta
-                    const dataHora = formatarDataGitHub(file.updated_at);
+                    const dataHora = file.modifiedDate
+                        ? formatarDataGitHub(file.modifiedDate)
+                        : 'Data não disponível';
 
                     console.log(`📂 Arquivo listado: ${file.name}, SHA: ${file.sha}, Data: ${dataHora}`);
                     return `
