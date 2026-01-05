@@ -615,7 +615,7 @@
                 }
 
                 const repoData = await repoResponse.json();
-                
+
                 // Verifica permissão de escrita
                 if (!repoData.permissions || !repoData.permissions.push) {
                     throw new Error('Token sem permissão de escrita no repositório');
@@ -636,13 +636,13 @@
         function showTokenStatus(type, message) {
             tokenStatus.style.display = 'block';
             tokenStatus.className = `token-status ${type}`;
-            
+
             const icons = {
                 success: '✅',
                 error: '❌',
                 info: 'ℹ️'
             };
-            
+
             tokenStatusIcon.textContent = icons[type] || 'ℹ️';
             tokenStatusText.textContent = message;
         }
@@ -721,20 +721,20 @@
         // Listener para botão de validação de token
         validateTokenBtn.addEventListener('click', async () => {
             const token = githubToken.value.trim();
-            
+
             if (!token) {
                 showTokenStatus('error', 'Por favor, insira um token de acesso');
                 return;
             }
-            
+
             if (!token.startsWith('ghp_') && !token.startsWith('github_pat_')) {
                 showTokenStatus('error', 'Token deve começar com "ghp_" ou "github_pat_"');
                 return;
             }
-            
+
             showTokenStatus('info', 'Validando token...');
             validateTokenBtn.disabled = true;
-            
+
             try {
                 const result = await validateGitHubToken(token);
                 tokenValidated = true;
@@ -759,7 +759,7 @@
                 showAlert('Valide o token do GitHub antes de enviar', 'error');
                 return;
             }
-            
+
             const token = githubToken.value.trim();
             if (!token) {
                 showAlert('Token inválido', 'error');
