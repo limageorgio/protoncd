@@ -1000,12 +1000,12 @@
         // Ações da lista (copiar, excluir)
         fileList.addEventListener('click', async (event) => {
             const target = event.target;
-            
+
             if (target.dataset.action === 'copy') {
                 const url = target.dataset.url;
                 copyToClipboard(url);
             }
-            
+
             if (target.dataset.action === 'delete') {
                 const name = target.dataset.name;
                 const sha = target.dataset.sha;
