@@ -838,19 +838,19 @@
                 }
 
                 const data = await res.json();
-                
+
                 // Filtrar apenas arquivos HTML, excluindo arquivos do sistema
                 const excludedFiles = ['admin.html', 'index.html', '.htaccess', 'README.md', 'validate-html.js'];
                 const files = data.filter(item => {
                     // Apenas arquivos (não diretórios)
                     if (item.type !== 'file') return false;
-                    
+
                     // Apenas .html
                     if (!item.name.toLowerCase().endsWith('.html')) return false;
-                    
+
                     // Excluir arquivos do sistema
                     if (excludedFiles.includes(item.name)) return false;
-                    
+
                     return true;
                 });
 
