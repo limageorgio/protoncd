@@ -11,9 +11,10 @@
       --panel: #0f172a;
       --muted: #aab2cf;
       --text: #eef2ff;
-      --accent: #60a5fa;
+        ctx.fillStyle = 'rgba(255, 159, 28, 0.16)';
       --accent2: #22d3ee;
     }
+        ctx.strokeStyle = 'rgba(255, 159, 28, 0.35)';
 
     * {
       box-sizing: border-box;
@@ -795,13 +796,16 @@
         const width = x1 - x0;
         
         if (width > 0) {
-          ctx.fillStyle = 'rgba(239, 68, 68, 0.15)';
+          // Faixa de pausa (visual similar à referência)
+          ctx.fillStyle = 'rgba(255, 159, 28, 0.16)';
           ctx.fillRect(x0, map.y1, width, map.y0 - map.y1);
           
-          ctx.strokeStyle = 'rgba(239, 68, 68, 0.4)';
+          // Linhas verticais demarcando início/fim
+          ctx.strokeStyle = 'rgba(255, 159, 28, 0.35)';
           ctx.lineWidth = 1;
-          ctx.setLineDash([4, 4]);
-          ctx.strokeRect(x0, map.y1, width, map.y0 - map.y1);
+          ctx.setLineDash([6, 4]);
+          ctx.beginPath(); ctx.moveTo(x0, map.y1); ctx.lineTo(x0, map.y0); ctx.stroke();
+          ctx.beginPath(); ctx.moveTo(x1, map.y1); ctx.lineTo(x1, map.y0); ctx.stroke();
           ctx.setLineDash([]);
         }
       } catch (e) {
