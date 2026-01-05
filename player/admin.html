@@ -676,7 +676,7 @@
         function showTokenStatus(isValid, message) {
             tokenStatus.classList.add('show');
             tokenStatus.classList.remove('checking', 'valid', 'invalid');
-            
+
             if (isValid) {
                 tokenStatus.classList.add('valid');
                 tokenStatusIcon.textContent = '✅';
@@ -792,7 +792,7 @@
         // Listener para botão de validação do token
         validateTokenBtn.addEventListener('click', async function (e) {
             e.preventDefault();
-            
+
             const token = githubToken.value.trim();
             if (!token) {
                 showTokenStatus(false, 'Digite o token GitHub');
@@ -803,7 +803,7 @@
             validateTokenBtn.disabled = true;
 
             const result = await validateGitHubToken(token);
-            
+
             showTokenStatus(result.valid, result.message);
             validateTokenBtn.disabled = false;
         });
