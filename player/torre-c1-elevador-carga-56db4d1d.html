@@ -791,8 +791,13 @@
     function drawPause(ctx, map, pauseStart, pauseEnd) {
       try {
         if (!ctx || !map || pauseStart === null || pauseEnd === null) return;
-        const x0 = map.sx(pauseStart);
-        const x1 = map.sx(pauseEnd);
+        // Garantir que a faixa seja desenhada apenas dentro do range do gráfico
+        const start = Math.max(map.tMin, Math.min(map.tMax, pauseStart));
+        const end = Math.max(map.tMin, Math.min(map.tMax, pauseEnd));
+        if (!Number.isFinite(start) || !Number.isFinite(end) || start === end) return;
+
+        const x0 = map.sx(Math.min(start, end));
+        const x1 = map.sx(Math.max(start, end));
         const width = x1 - x0;
         
         if (width > 0) {
