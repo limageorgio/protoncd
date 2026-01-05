@@ -378,6 +378,92 @@
             opacity: 0.6;
             cursor: not-allowed;
         }
+
+        .file-list-status {
+            margin-top: 10px;
+            padding: 12px;
+            border-radius: 6px;
+            font-size: 13px;
+            display: none;
+        }
+
+        .file-list-status.info {
+            background: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+
+        .file-list-status.success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .file-list-status.error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        .file-list {
+            margin-top: 12px;
+            background: #f8f9ff;
+            border: 1px solid #e0e5ff;
+            border-radius: 8px;
+            padding: 10px;
+            display: none;
+        }
+
+        .file-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 6px;
+            border-bottom: 1px solid #e5e8ff;
+        }
+
+        .file-row:last-child {
+            border-bottom: none;
+        }
+
+        .file-name {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 4px;
+        }
+
+        .file-meta {
+            font-size: 12px;
+            color: #666;
+        }
+
+        .file-actions {
+            display: flex;
+            gap: 6px;
+        }
+
+        .small-btn {
+            padding: 6px 10px;
+            border-radius: 4px;
+            border: none;
+            font-size: 12px;
+            cursor: pointer;
+            color: white;
+            background: #667eea;
+            text-decoration: none;
+        }
+
+        .small-btn:hover {
+            background: #5566c9;
+        }
+
+        .small-btn.danger {
+            background: #e55353;
+        }
+
+        .small-btn.danger:hover {
+            background: #c94a4a;
+        }
     </style>
 </head>
 
@@ -442,12 +528,26 @@
                     <li>Extensão: .html</li>
                     <li>Tamanho máximo: 5MB</li>
                     <li>MIME type verificado</li>
-                    <li>Conteúdo verificado para malware</li>
-                    <li>Scripts bloqueados</li>
-                    <li>Event handlers bloqueados</li>
-                    <li>iframes e embeds bloqueados</li>
-                    <li>PHP/ASP/CGI bloqueado</li>
+                    <li>Conteúdo verificado (eval, document.write, meta refresh)</li>
+                    <li>Bloqueio de protocolos perigosos (javascript:, data:, about:)</li>
+                    <li>Redirecionamentos suspeitos bloqueados (window.location)</li>
+                    <li>PHP/ASP bloqueado</li>
+                    <li>HTML básico exigido (DOCTYPE/html/head/body)</li>
                 </ul>
+            </div>
+
+            <!-- Gerenciamento de Arquivos -->
+            <div class="section">
+                <h2>Gerenciar Arquivos (Admin)</h2>
+                <p style="font-size: 13px; color: #666; margin-bottom: 10px;">Somente quem possui o token válido pode
+                    listar e excluir arquivos na pasta <strong>player/</strong>.</p>
+
+                <button type="button" id="listFilesBtn" class="validate-token-btn" disabled>📂 Listar arquivos em
+                    player/</button>
+
+                <div class="file-list-status info" id="fileListStatus">Use seu token para carregar a lista de arquivos.
+                </div>
+                <div class="file-list" id="fileList"></div>
             </div>
         </form>
 
@@ -485,12 +585,16 @@
         const tokenStatus = document.getElementById('tokenStatus');
         const tokenStatusIcon = document.getElementById('tokenStatusIcon');
         const tokenStatusText = document.getElementById('tokenStatusText');
+        const listFilesBtn = document.getElementById('listFilesBtn');
+        const fileList = document.getElementById('fileList');
+        const fileListStatus = document.getElementById('fileListStatus');
 
         // Estado de autenticação
         let tokenValidated = false;
 
         // Estado inicial: requer validação
         submitBtn.disabled = true;
+        listFilesBtn.disabled = true;
 
         // ========================================
         // VALIDADORES
@@ -703,6 +807,115 @@
             });
         }
 
+        /**
+         * Status da lista de arquivos
+         */
+        function setFileListStatus(type, message) {
+            fileListStatus.style.display = 'block';
+            fileListStatus.className = `file-list-status ${type}`;
+            fileListStatus.textContent = message;
+        }
+
+        /**
+         * Listar arquivos da pasta player/ via GitHub API
+         */
+        async function listFiles(token) {
+            const url = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${GITHUB_FOLDER}`;
+            setFileListStatus('info', 'Carregando arquivos...');
+            listFilesBtn.disabled = true;
+
+            try {
+                const res = await fetch(url, {
+                    headers: {
+                        'Authorization': `Bearer ${token}`,
+                        'Accept': 'application/vnd.github.v3+json'
+                    }
+                });
+
+                if (!res.ok) {
+                    const errorText = await res.text();
+                    throw new Error(errorText || 'Erro ao carregar lista');
+                }
+
+                const data = await res.json();
+                const files = data.filter(item => item.type === 'file');
+
+                if (!files.length) {
+                    fileList.style.display = 'none';
+                    setFileListStatus('info', 'Nenhum arquivo encontrado em player/.');
+                    return;
+                }
+
+                fileList.innerHTML = files.map(file => {
+                    const sizeKb = (file.size / 1024).toFixed(2);
+                    const pagesUrl = generatePublicUrl(file.name);
+                    return `
+                        <div class="file-row" data-name="${file.name}" data-sha="${file.sha}">
+                            <div>
+                                <div class="file-name">${file.name}</div>
+                                <div class="file-meta">${sizeKb} KB</div>
+                            </div>
+                            <div class="file-actions">
+                                <a class="small-btn" href="${pagesUrl}" target="_blank">Ver</a>
+                                <button class="small-btn danger" data-action="delete" data-name="${file.name}" data-sha="${file.sha}">Excluir</button>
+                            </div>
+                        </div>
+                    `;
+                }).join('');
+
+                fileList.style.display = 'block';
+                setFileListStatus('success', 'Arquivos carregados.');
+            } catch (error) {
+                console.error('Erro ao listar arquivos:', error);
+                setFileListStatus('error', error.message);
+            } finally {
+                listFilesBtn.disabled = false;
+            }
+        }
+
+        /**
+         * Excluir arquivo
+         */
+        async function deleteFile(filename, sha, token) {
+            if (!confirm(`Deseja excluir o arquivo ${filename}?`)) return;
+
+            const url = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${GITHUB_FOLDER}/${filename}`;
+            const payload = {
+                message: `Delete: ${filename}`,
+                sha,
+                branch: GITHUB_BRANCH,
+                committer: {
+                    name: "ProtonCD Admin",
+                    email: "admin@protoncd.com.br"
+                }
+            };
+
+            try {
+                setFileListStatus('info', `Excluindo ${filename}...`);
+                const res = await fetch(url, {
+                    method: 'DELETE',
+                    headers: {
+                        'Authorization': `Bearer ${token}`,
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/vnd.github.v3+json'
+                    },
+                    body: JSON.stringify(payload)
+                });
+
+                if (!res.ok) {
+                    const errorText = await res.text();
+                    throw new Error(errorText || 'Erro ao excluir');
+                }
+
+                setFileListStatus('success', `Arquivo ${filename} excluído.`);
+                // Recarregar lista
+                await listFiles(token);
+            } catch (error) {
+                console.error('Erro ao excluir arquivo:', error);
+                setFileListStatus('error', error.message);
+            }
+        }
+
         // ========================================
         // EVENT LISTENERS
         // ========================================
@@ -740,13 +953,40 @@
                 const result = await validateGitHubToken(token);
                 tokenValidated = true;
                 submitBtn.disabled = false;
+                listFilesBtn.disabled = false;
                 showTokenStatus('success', `Token validado! Usuário: ${result.user}`);
             } catch (error) {
                 tokenValidated = false;
                 submitBtn.disabled = true;
+                listFilesBtn.disabled = true;
                 showTokenStatus('error', error.message);
             } finally {
                 validateTokenBtn.disabled = false;
+            }
+        });
+
+        // Listar arquivos
+        listFilesBtn.addEventListener('click', async () => {
+            const token = githubToken.value.trim();
+            if (!token) {
+                showAlert('Token inválido', 'error');
+                return;
+            }
+            await listFiles(token);
+        });
+
+        // Ações da lista (excluir)
+        fileList.addEventListener('click', async (event) => {
+            const target = event.target;
+            if (target.dataset.action === 'delete') {
+                const name = target.dataset.name;
+                const sha = target.dataset.sha;
+                const token = githubToken.value.trim();
+                if (!token) {
+                    showAlert('Token inválido', 'error');
+                    return;
+                }
+                await deleteFile(name, sha, token);
             }
         });
 
