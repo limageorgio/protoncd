@@ -868,6 +868,7 @@
                 fileList.innerHTML = files.map(file => {
                     const sizeKb = (file.size / 1024).toFixed(2);
                     const pagesUrl = generatePublicUrl(file.name);
+                    console.log(`📂 Arquivo listado: ${file.name}, SHA: ${file.sha}`);
                     return `
                         <div class="file-row" data-name="${file.name}" data-sha="${file.sha}">
                             <div style="flex: 1;">
@@ -895,25 +896,45 @@
         }
 
         /**
-         * Excluir arquivo
+         * Excluir arquivo - refetcha SHA antes de deletar
          */
         async function deleteFile(filename, sha, token) {
             if (!confirm(`Deseja excluir o arquivo ${filename}?`)) return;
 
-            const url = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${GITHUB_FOLDER}/${filename}`;
-            const payload = {
-                message: `Delete: ${filename}`,
-                sha,
-                branch: GITHUB_BRANCH,
-                committer: {
-                    name: "ProtonCD Admin",
-                    email: "admin@protoncd.com.br"
-                }
-            };
-
             try {
+                setFileListStatus('info', `Preparando exclusão de ${filename}...`);
+                
+                // Refetchar SHA atual (em caso de arquivo ter sido modificado)
+                const fileUrl = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${GITHUB_FOLDER}/${filename}`;
+                const fileRes = await fetch(fileUrl, {
+                    headers: {
+                        'Authorization': `token ${token}`,
+                        'Accept': 'application/vnd.github.v3+json'
+                    }
+                });
+
+                if (!fileRes.ok) {
+                    const errorData = await fileRes.json().catch(() => ({}));
+                    throw new Error(`Arquivo não encontrado: ${errorData.message || fileRes.statusText}`);
+                }
+
+                const fileData = await fileRes.json();
+                const currentSha = fileData.sha;
+
+                // Agora fazer DELETE com SHA atual
+                const deleteUrl = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${GITHUB_FOLDER}/${filename}`;
+                const payload = {
+                    message: `Delete: ${filename}`,
+                    sha: currentSha, // Usar SHA que acabou de fetchar
+                    branch: GITHUB_BRANCH,
+                    committer: {
+                        name: "ProtonCD Admin",
+                        email: "admin@protoncd.com.br"
+                    }
+                };
+
                 setFileListStatus('info', `Excluindo ${filename}...`);
-                const res = await fetch(url, {
+                const deleteRes = await fetch(deleteUrl, {
                     method: 'DELETE',
                     headers: {
                         'Authorization': `token ${token}`,
@@ -923,18 +944,26 @@
                     body: JSON.stringify(payload)
                 });
 
-                if (!res.ok) {
-                    const errorData = await res.json().catch(() => ({}));
-                    console.error('Erro ao excluir:', errorData);
-                    throw new Error(errorData.message || `Erro ${res.status}: ${res.statusText}`);
+                if (!deleteRes.ok) {
+                    const errorData = await deleteRes.json().catch(() => ({}));
+                    console.error('Erro GitHub DELETE:', {
+                        status: deleteRes.status,
+                        statusText: deleteRes.statusText,
+                        error: errorData,
+                        url: deleteUrl,
+                        sha: currentSha
+                    });
+                    throw new Error(errorData.message || `Erro ${deleteRes.status}: ${deleteRes.statusText}`);
                 }
 
-                setFileListStatus('success', `Arquivo ${filename} excluído.`);
-                // Recarregar lista
-                await listFiles(token);
+                setFileListStatus('success', `Arquivo ${filename} excluído com sucesso.`);
+                console.log(`✅ Arquivo ${filename} excluído`);
+                
+                // Recarregar lista após 1 segundo
+                setTimeout(() => listFiles(token), 1000);
             } catch (error) {
-                console.error('Erro ao excluir arquivo:', error);
-                setFileListStatus('error', error.message);
+                console.error('❌ Erro ao excluir arquivo:', error);
+                setFileListStatus('error', `Erro ao excluir: ${error.message}`);
             }
         }
 
