@@ -500,27 +500,28 @@
          * Validar conteúdo HTML procurando por padrões perigosos
          */
         function validateHTMLContent(content) {
+            // Padrões verdadeiramente perigosos que devemos bloquear
             const dangerous_patterns = [
-                /<script[^>]*>.*?<\/script>/is,              // Scripts inline
-                /javascript:/i,                              // JavaScript protocol
-                /on\w+\s*=/i,                               // Event handlers (onclick, onerror, etc)
-                /<iframe[^>]*>/i,                           // iframes
-                /<object[^>]*>/i,                           // Objects
-                /<embed[^>]*>/i,                            // Embeds
-                /<applet[^>]*>/i,                           // Applets
-                /<?php/i,                                    // PHP tags
-                /<%/i,                                       // ASP tags
-                /<\?xml/i,                                   // XML processing
+                /<script[^>]*src\s*=\s*["'](?:javascript:|data:|about:)/i,  // Scripts com protocolos perigosos
+                /<script[^>]*>\s*eval\s*\(/i,                                // eval() direto
+                /<script[^>]*>\s*document\.write\s*\(/i,                     // document.write suspeito
+                /<?php/i,                                                     // PHP tags
+                /<%[^=]/i,                                                    // ASP tags (permite <%=)
+                /<script[^>]*>\s*window\.location/i,                         // Redirecionamento suspeito
+                /<script[^>]*>\s*location\.href/i,                           // Redirecionamento suspeito
+                /<meta[^>]*http-equiv\s*=\s*["']refresh["'][^>]*url=/i,     // Meta refresh com URL
             ];
 
             for (let pattern of dangerous_patterns) {
                 if (pattern.test(content)) {
+                    console.warn('⚠️ Padrão perigoso detectado:', pattern);
                     return false;
                 }
             }
 
             // Verificar se é HTML válido (básico)
-            if (!/<html/i.test(content) && !/<body/i.test(content) && !/<!/i.test(content)) {
+            if (!/<html/i.test(content) && !/<body/i.test(content) && !/<head/i.test(content) && !/<!DOCTYPE/i.test(content)) {
+                console.warn('⚠️ Não parece ser um arquivo HTML válido');
                 return false;
             }
 

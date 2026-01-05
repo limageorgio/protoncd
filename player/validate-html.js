@@ -8,33 +8,30 @@
  */
 
 /**
- * Validar conteúdo HTML procurando por padrões perigosos
+ * Validar conteúdo HTML procurando por padrões verdadeiramente perigosos
  */
 function validateHTMLContent(content) {
+    // Padrões verdadeiramente perigosos que devemos bloquear
     const dangerous_patterns = [
-        /<script[^>]*>.*?<\/script>/is,              // Scripts inline
-        /javascript:/i,                              // JavaScript protocol
-        /on\w+\s*=/i,                               // Event handlers (onclick, onerror, etc)
-        /<iframe[^>]*>/i,                           // iframes
-        /<object[^>]*>/i,                           // Objects
-        /<embed[^>]*>/i,                            // Embeds
-        /<applet[^>]*>/i,                           // Applets
-        /<?php/i,                                    // PHP tags
-        /<%/i,                                       // ASP tags
-        /<\?xml/i,                                   // XML processing
+        /<script[^>]*src\s*=\s*["'](?:javascript:|data:|about:)/i,  // Scripts com protocolos perigosos
+        /<script[^>]*>\s*eval\s*\(/i,                                // eval() direto
+        /<script[^>]*>\s*document\.write\s*\(/i,                     // document.write suspeito
+        /<?php/i,                                                     // PHP tags
+        /<%[^=]/i,                                                    // ASP tags (permite <%=)
+        /<script[^>]*>\s*window\.location/i,                         // Redirecionamento suspeito
+        /<script[^>]*>\s*location\.href/i,                           // Redirecionamento suspeito
+        /<meta[^>]*http-equiv\s*=\s*["']refresh["'][^>]*url=/i,     // Meta refresh com URL
     ];
 
     const patternNames = [
-        'Scripts inline',
-        'JavaScript protocol',
-        'Event handlers',
-        'iframes',
-        'Objects',
-        'Embeds',
-        'Applets',
+        'Script com protocolo perigoso (javascript:, data:, about:)',
+        'Uso de eval() detectado',
+        'document.write() suspeito',
         'PHP tags',
         'ASP tags',
-        'XML processing'
+        'Redirecionamento window.location',
+        'Redirecionamento location.href',
+        'Meta refresh com URL'
     ];
 
     for (let i = 0; i < dangerous_patterns.length; i++) {
@@ -44,8 +41,8 @@ function validateHTMLContent(content) {
     }
 
     // Verificar se é HTML válido (básico)
-    if (!/<html/i.test(content) && !/<body/i.test(content) && !/<!/i.test(content)) {
-        return { valid: false, error: 'HTML básico ou inválido' };
+    if (!/<html/i.test(content) && !/<body/i.test(content) && !/<head/i.test(content) && !/<!DOCTYPE/i.test(content)) {
+        return { valid: false, error: 'Não parece ser um arquivo HTML válido' };
     }
 
     return { valid: true, error: null };
