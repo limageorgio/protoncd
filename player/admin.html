@@ -470,7 +470,7 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>🎬 ProtonCD Player</h1>
+            <h1>�️ Elevator Inspektor Player</h1>
             <p>Sistema Seguro de Upload para GitHub</p>
         </div>
 
@@ -519,21 +519,6 @@
                 <div class="progress-bar" id="progressBar">
                     <div class="progress-bar-fill" id="progressFill"></div>
                 </div>
-            </div>
-
-            <!-- Validações -->
-            <div class="section">
-                <h2>Validações Aplicadas</h2>
-                <ul class="validations">
-                    <li>Extensão: .html</li>
-                    <li>Tamanho máximo: 5MB</li>
-                    <li>MIME type verificado</li>
-                    <li>Conteúdo verificado (eval, document.write, meta refresh)</li>
-                    <li>Bloqueio de protocolos perigosos (javascript:, data:, about:)</li>
-                    <li>Redirecionamentos suspeitos bloqueados (window.location)</li>
-                    <li>PHP/ASP bloqueado</li>
-                    <li>HTML básico exigido (DOCTYPE/html/head/body)</li>
-                </ul>
             </div>
 
             <!-- Gerenciamento de Arquivos -->
@@ -595,6 +580,26 @@
         // Estado inicial: requer validação
         submitBtn.disabled = true;
         listFilesBtn.disabled = true;
+
+        // ========================================
+        // LEMBRAR TOKEN (localStorage)
+        // ========================================
+
+        // Carregar token salvo ao iniciar
+        const savedToken = localStorage.getItem('github_token');
+        if (savedToken) {
+            githubToken.value = savedToken;
+        }
+
+        // Salvar token quando validado
+        function saveToken(token) {
+            localStorage.setItem('github_token', token);
+        }
+
+        // Limpar token salvo
+        function clearToken() {
+            localStorage.removeItem('github_token');
+        }
 
         // ========================================
         // VALIDADORES
@@ -865,11 +870,13 @@
                     const pagesUrl = generatePublicUrl(file.name);
                     return `
                         <div class="file-row" data-name="${file.name}" data-sha="${file.sha}">
-                            <div>
+                            <div style="flex: 1;">
                                 <div class="file-name">${file.name}</div>
                                 <div class="file-meta">${sizeKb} KB</div>
+                                <div class="url-box" style="margin-top: 8px; font-size: 11px; padding: 6px;">${pagesUrl}</div>
                             </div>
                             <div class="file-actions">
+                                <button class="small-btn" data-action="copy" data-url="${pagesUrl}">📋 Copiar link</button>
                                 <a class="small-btn" href="${pagesUrl}" target="_blank">Ver</a>
                                 <button class="small-btn danger" data-action="delete" data-name="${file.name}" data-sha="${file.sha}">Excluir</button>
                             </div>
@@ -968,6 +975,7 @@
                 tokenValidated = true;
                 submitBtn.disabled = false;
                 listFilesBtn.disabled = false;
+                saveToken(token);
                 showTokenStatus('success', `Token validado! Usuário: ${result.user}`);
             } catch (error) {
                 tokenValidated = false;
@@ -989,9 +997,15 @@
             await listFiles(token);
         });
 
-        // Ações da lista (excluir)
+        // Ações da lista (copiar, excluir)
         fileList.addEventListener('click', async (event) => {
             const target = event.target;
+            
+            if (target.dataset.action === 'copy') {
+                const url = target.dataset.url;
+                copyToClipboard(url);
+            }
+            
             if (target.dataset.action === 'delete') {
                 const name = target.dataset.name;
                 const sha = target.dataset.sha;
