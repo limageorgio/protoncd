@@ -314,6 +314,70 @@
         .copy-btn:hover {
             background: #218838;
         }
+
+        .token-status {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-radius: 6px;
+            font-size: 13px;
+            margin-top: 8px;
+            display: none;
+        }
+
+        .token-status.show {
+            display: flex;
+        }
+
+        .token-status.valid {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .token-status.invalid {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        .token-status.checking {
+            background: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+
+        .token-status-icon {
+            margin-right: 8px;
+            font-size: 16px;
+        }
+
+        .token-status-text {
+            flex: 1;
+        }
+
+        .validate-token-btn {
+            width: 100%;
+            padding: 10px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 8px;
+            transition: background 0.2s;
+        }
+
+        .validate-token-btn:hover:not(:disabled) {
+            background: #764ba2;
+        }
+
+        .validate-token-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
     </style>
 </head>
 
@@ -345,6 +409,13 @@
 
                 <label for="githubToken">Token de Acesso Pessoal GitHub:</label>
                 <input type="password" id="githubToken" name="githubToken" placeholder="ghp_xxxxxxxxxxxxx" required>
+
+                <button type="button" class="validate-token-btn" id="validateTokenBtn">Validar Token</button>
+
+                <div class="token-status" id="tokenStatus">
+                    <span class="token-status-icon" id="tokenStatusIcon">⏳</span>
+                    <span class="token-status-text" id="tokenStatusText">Validando token...</span>
+                </div>
 
                 <small>
                     📌 <a href="https://github.com/settings/tokens" target="_blank">Gerar token em GitHub Settings</a>
@@ -425,6 +496,14 @@
         const progressFill = document.getElementById('progressFill');
         const alertContainer = document.getElementById('alertContainer');
         const successDetails = document.getElementById('successDetails');
+        const githubToken = document.getElementById('githubToken');
+        const validateTokenBtn = document.getElementById('validateTokenBtn');
+        const tokenStatus = document.getElementById('tokenStatus');
+        const tokenStatusIcon = document.getElementById('tokenStatusIcon');
+        const tokenStatusText = document.getElementById('tokenStatusText');
+
+        // Flag para rastrear se token foi validado
+        let tokenValidated = false;
 
         // ========================================
         // VALIDADORES
@@ -536,6 +615,96 @@
         }
 
         /**
+         * Validar token GitHub verificando acesso à API
+         */
+        async function validateGitHubToken(token) {
+            if (!token.trim()) {
+                return { valid: false, message: 'Token não informado' };
+            }
+
+            try {
+                // Primeiro: validar autenticação do usuário
+                const userResponse = await fetch('https://api.github.com/user', {
+                    headers: {
+                        'Authorization': `token ${token}`,
+                        'Accept': 'application/vnd.github.v3+json'
+                    }
+                });
+
+                if (!userResponse.ok) {
+                    if (userResponse.status === 401) {
+                        return { valid: false, message: 'Token inválido ou expirado' };
+                    }
+                    throw new Error(`HTTP ${userResponse.status}`);
+                }
+
+                const userData = await userResponse.json();
+
+                // Segundo: verificar permissão de escrita no repositório
+                const repoUrl = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}`;
+                const repoResponse = await fetch(repoUrl, {
+                    headers: {
+                        'Authorization': `token ${token}`,
+                        'Accept': 'application/vnd.github.v3+json'
+                    }
+                });
+
+                if (!repoResponse.ok) {
+                    return { valid: false, message: 'Acesso negado ao repositório' };
+                }
+
+                const repoData = await repoResponse.json();
+
+                // Verificar se pode fazer push
+                if (!repoData.pushed_at) {
+                    return { valid: false, message: 'Sem permissão de escrita no repositório' };
+                }
+
+                return {
+                    valid: true,
+                    message: `✓ Autenticado como ${userData.login}`,
+                    username: userData.login
+                };
+            } catch (error) {
+                return { valid: false, message: `Erro: ${error.message}` };
+            }
+        }
+
+        /**
+         * Mostrar status do token
+         */
+        function showTokenStatus(isValid, message) {
+            tokenStatus.classList.add('show');
+            tokenStatus.classList.remove('checking', 'valid', 'invalid');
+            
+            if (isValid) {
+                tokenStatus.classList.add('valid');
+                tokenStatusIcon.textContent = '✅';
+                tokenStatusText.textContent = message;
+                tokenValidated = true;
+                submitBtn.disabled = false;
+            } else {
+                tokenStatus.classList.add('invalid');
+                tokenStatusIcon.textContent = '❌';
+                tokenStatusText.textContent = message;
+                tokenValidated = false;
+                submitBtn.disabled = true;
+            }
+        }
+
+        /**
+         * Mostrar status "validando"
+         */
+        function showTokenChecking() {
+            tokenStatus.classList.add('show', 'checking');
+            tokenStatus.classList.remove('valid', 'invalid');
+            tokenStatusIcon.textContent = '⏳';
+            tokenStatusText.textContent = 'Validando token...';
+            tokenValidated = false;
+            submitBtn.disabled = true;
+        }
+
+        /**
          * Mostrar alerta
          */
         function showAlert(message, type = 'info') {
@@ -612,12 +781,39 @@
             passwordStrength.style.width = strength + '%';
         });
 
+        // Listener para input do token GitHub
+        githubToken.addEventListener('input', function () {
+            // Resetar status quando o token é alterado
+            tokenStatus.classList.remove('show');
+            tokenValidated = false;
+            submitBtn.disabled = true;
+        });
+
+        // Listener para botão de validação do token
+        validateTokenBtn.addEventListener('click', async function (e) {
+            e.preventDefault();
+            
+            const token = githubToken.value.trim();
+            if (!token) {
+                showTokenStatus(false, 'Digite o token GitHub');
+                return;
+            }
+
+            showTokenChecking();
+            validateTokenBtn.disabled = true;
+
+            const result = await validateGitHubToken(token);
+            
+            showTokenStatus(result.valid, result.message);
+            validateTokenBtn.disabled = false;
+        });
+
         // Form submission
         form.addEventListener('submit', async function (e) {
             e.preventDefault();
 
             const adminPassword = password.value.trim();
-            const githubToken = document.getElementById('githubToken').value.trim();
+            const githubTokenValue = githubToken.value.trim();
             const selectedFile = file.files[0];
 
             if (!adminPassword) {
@@ -625,8 +821,13 @@
                 return;
             }
 
-            if (!githubToken) {
+            if (!githubTokenValue) {
                 showAlert('Digite o token de acesso do GitHub', 'error');
+                return;
+            }
+
+            if (!tokenValidated) {
+                showAlert('❌ Valide o token GitHub antes de enviar', 'error');
                 return;
             }
 
@@ -671,12 +872,13 @@
                 progressFill.style.width = '60%';
 
                 // Fazer upload para GitHub
-                const uploadResult = await uploadToGitHub(selectedFile.name, content, githubToken);
+                const uploadResult = await uploadToGitHub(selectedFile.name, content, githubTokenValue);
 
                 progressFill.style.width = '100%';
                 form.reset();
                 fileInfo.classList.remove('show');
                 passwordStrength.style.width = '0%';
+                tokenStatus.classList.remove('show');
 
                 // Mostrar sucesso com URLs
                 showAlert('Arquivo enviado para GitHub com sucesso!', 'success');
