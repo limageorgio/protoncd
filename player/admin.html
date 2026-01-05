@@ -315,6 +315,60 @@
             background: #218838;
         }
 
+        .device-box {
+            background: #f7f8ff;
+            border: 1px solid #e0e5ff;
+            border-radius: 8px;
+            padding: 14px;
+            margin-top: 10px;
+            display: none;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .device-box strong {
+            color: #333;
+        }
+
+        .code-box {
+            background: #fff;
+            border: 1px dashed #667eea;
+            padding: 10px;
+            border-radius: 6px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: #667eea;
+            margin: 10px 0;
+        }
+
+        .login-status {
+            margin-top: 10px;
+            padding: 12px;
+            border-radius: 6px;
+            display: none;
+            font-size: 14px;
+        }
+
+        .login-status.info {
+            background: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+
+        .login-status.success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .login-status.error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
         .token-status {
             display: flex;
             align-items: center;
@@ -391,35 +445,24 @@
         <div id="alertContainer"></div>
 
         <form id="uploadForm">
-            <!-- Seção de Autenticação -->
+            <!-- Seção de Login com GitHub (Device Flow) -->
             <div class="section">
-                <h2>Autenticação Admin</h2>
+                <h2>Login com GitHub</h2>
 
-                <label for="password">Senha de Administrador:</label>
-                <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
+                <button type="button" class="validate-token-btn" id="loginGithubBtn">Entrar com GitHub</button>
 
-                <div class="password-strength">
-                    <div class="password-strength-fill" id="passwordStrength"></div>
-                </div>
-            </div>
+                <div class="login-status info" id="loginStatus"></div>
 
-            <!-- Seção de Configuração GitHub -->
-            <div class="section">
-                <h2>Configuração GitHub</h2>
-
-                <label for="githubToken">Token de Acesso Pessoal GitHub:</label>
-                <input type="password" id="githubToken" name="githubToken" placeholder="ghp_xxxxxxxxxxxxx" required>
-
-                <button type="button" class="validate-token-btn" id="validateTokenBtn">Validar Token</button>
-
-                <div class="token-status" id="tokenStatus">
-                    <span class="token-status-icon" id="tokenStatusIcon">⏳</span>
-                    <span class="token-status-text" id="tokenStatusText">Validando token...</span>
+                <div class="device-box" id="deviceBox">
+                    <p><strong>1)</strong> Abra: <a href="https://github.com/login/device"
+                            target="_blank">https://github.com/login/device</a></p>
+                    <p><strong>2)</strong> Cole o código abaixo e confirme:</p>
+                    <div class="code-box" id="userCode">----</div>
+                    <p><strong>3)</strong> Volte aqui, o login será detectado automaticamente.</p>
                 </div>
 
                 <small>
-                    📌 <a href="https://github.com/settings/tokens" target="_blank">Gerar token em GitHub Settings</a>
-                    (escopo: repo, conteúdo)
+                    Usa OAuth Device Flow (client_id público). Não precisa senha admin nem colar token.
                 </small>
             </div>
 
@@ -471,7 +514,6 @@
         // CONFIGURAÇÃO
         // ========================================
 
-        const ADMIN_PASSWORD = 'trocar_senha_aqui_123';
         const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5MB
 
         // GitHub Configuration
@@ -479,14 +521,13 @@
         const GITHUB_REPO = 'protoncd';
         const GITHUB_BRANCH = 'main';
         const GITHUB_FOLDER = 'player';
+        const GITHUB_CLIENT_ID = 'Ov23lieFkK4SiFGzUM5k';
 
         // ========================================
         // ELEMENTOS DO DOM
         // ========================================
 
         const form = document.getElementById('uploadForm');
-        const password = document.getElementById('password');
-        const passwordStrength = document.getElementById('passwordStrength');
         const file = document.getElementById('file');
         const fileName = document.getElementById('fileName');
         const fileSize = document.getElementById('fileSize');
@@ -496,14 +537,21 @@
         const progressFill = document.getElementById('progressFill');
         const alertContainer = document.getElementById('alertContainer');
         const successDetails = document.getElementById('successDetails');
-        const githubToken = document.getElementById('githubToken');
-        const validateTokenBtn = document.getElementById('validateTokenBtn');
-        const tokenStatus = document.getElementById('tokenStatus');
-        const tokenStatusIcon = document.getElementById('tokenStatusIcon');
-        const tokenStatusText = document.getElementById('tokenStatusText');
+        const loginGithubBtn = document.getElementById('loginGithubBtn');
+        const loginStatus = document.getElementById('loginStatus');
+        const deviceBox = document.getElementById('deviceBox');
+        const userCodeBox = document.getElementById('userCode');
 
-        // Flag para rastrear se token foi validado
-        let tokenValidated = false;
+        // Estado de autenticação
+        let accessToken = null;
+        let loginValidated = false;
+        let pollTimeout = null;
+
+        // Estado inicial: requer login
+        submitBtn.disabled = true;
+        setTimeout(() => {
+            setLoginStatus('info', 'Clique em "Entrar com GitHub" para autorizar.');
+        }, 50);
 
         // ========================================
         // VALIDADORES
@@ -538,26 +586,6 @@
             }
 
             return true;
-        }
-
-        /**
-         * Gerar hash SHA-256 (usando SubtleCrypto)
-         */
-        async function generateSHA256(message) {
-            const msgBuffer = new TextEncoder().encode(message);
-            const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
-            const hashArray = Array.from(new Uint8Array(hashBuffer));
-            const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
-            return hashHex;
-        }
-
-        /**
-         * Comparar senhas com hash
-         */
-        async function verifyPassword(inputPassword) {
-            const inputHash = await generateSHA256(inputPassword);
-            const adminHash = await generateSHA256(ADMIN_PASSWORD);
-            return inputHash === adminHash;
         }
 
         /**
@@ -615,93 +643,115 @@
         }
 
         /**
-         * Validar token GitHub verificando acesso à API
+         * Atualizar status visual do login
          */
-        async function validateGitHubToken(token) {
-            if (!token.trim()) {
-                return { valid: false, message: 'Token não informado' };
+        function setLoginStatus(type, message) {
+            loginStatus.className = `login-status ${type}`;
+            loginStatus.textContent = message;
+            loginStatus.style.display = 'block';
+        }
+
+        /**
+         * Mostrar código do device flow
+         */
+        function showDeviceCode(code, verifyUrl) {
+            userCodeBox.textContent = code;
+            deviceBox.style.display = 'block';
+        }
+
+        /**
+         * Iniciar fluxo OAuth Device Code
+         */
+        async function startGitHubDeviceFlow() {
+            // Reset
+            accessToken = null;
+            loginValidated = false;
+            submitBtn.disabled = true;
+            if (pollTimeout) {
+                clearTimeout(pollTimeout);
+                pollTimeout = null;
             }
+
+            setLoginStatus('info', 'Solicitando código ao GitHub...');
 
             try {
-                // Primeiro: validar autenticação do usuário
-                const userResponse = await fetch('https://api.github.com/user', {
-                    headers: {
-                        'Authorization': `token ${token}`,
-                        'Accept': 'application/vnd.github.v3+json'
-                    }
+                const res = await fetch('https://github.com/login/device/code', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                    body: JSON.stringify({
+                        client_id: GITHUB_CLIENT_ID,
+                        scope: 'repo'
+                    })
                 });
 
-                if (!userResponse.ok) {
-                    if (userResponse.status === 401) {
-                        return { valid: false, message: 'Token inválido ou expirado' };
-                    }
-                    throw new Error(`HTTP ${userResponse.status}`);
+                if (!res.ok) {
+                    throw new Error('Falha ao solicitar código');
                 }
 
-                const userData = await userResponse.json();
+                const data = await res.json();
+                const { device_code, user_code, verification_uri, interval } = data;
 
-                // Segundo: verificar permissão de escrita no repositório
-                const repoUrl = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}`;
-                const repoResponse = await fetch(repoUrl, {
-                    headers: {
-                        'Authorization': `token ${token}`,
-                        'Accept': 'application/vnd.github.v3+json'
-                    }
-                });
+                showDeviceCode(user_code, verification_uri);
+                setLoginStatus('info', 'Abra o link, cole o código e autorize. Detectaremos automaticamente...');
 
-                if (!repoResponse.ok) {
-                    return { valid: false, message: 'Acesso negado ao repositório' };
-                }
-
-                const repoData = await repoResponse.json();
-
-                // Verificar se pode fazer push
-                if (!repoData.pushed_at) {
-                    return { valid: false, message: 'Sem permissão de escrita no repositório' };
-                }
-
-                return {
-                    valid: true,
-                    message: `✓ Autenticado como ${userData.login}`,
-                    username: userData.login
-                };
-            } catch (error) {
-                return { valid: false, message: `Erro: ${error.message}` };
+                // Iniciar polling para trocar device_code por access_token
+                pollDeviceToken(device_code, interval || 5);
+            } catch (err) {
+                setLoginStatus('error', 'Erro ao iniciar login: ' + err.message);
             }
         }
 
         /**
-         * Mostrar status do token
+         * Polling para trocar device_code por access_token
          */
-        function showTokenStatus(isValid, message) {
-            tokenStatus.classList.add('show');
-            tokenStatus.classList.remove('checking', 'valid', 'invalid');
+        async function pollDeviceToken(deviceCode, intervalSeconds) {
+            const intervalMs = Math.max((intervalSeconds || 5) * 1000, 3000);
 
-            if (isValid) {
-                tokenStatus.classList.add('valid');
-                tokenStatusIcon.textContent = '✅';
-                tokenStatusText.textContent = message;
-                tokenValidated = true;
-                submitBtn.disabled = false;
-            } else {
-                tokenStatus.classList.add('invalid');
-                tokenStatusIcon.textContent = '❌';
-                tokenStatusText.textContent = message;
-                tokenValidated = false;
-                submitBtn.disabled = true;
-            }
-        }
+            const poll = async () => {
+                try {
+                    const res = await fetch('https://github.com/login/oauth/access_token', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                        body: JSON.stringify({
+                            client_id: GITHUB_CLIENT_ID,
+                            device_code: deviceCode,
+                            grant_type: 'urn:ietf:params:oauth:grant-type:device_code'
+                        })
+                    });
 
-        /**
-         * Mostrar status "validando"
-         */
-        function showTokenChecking() {
-            tokenStatus.classList.add('show', 'checking');
-            tokenStatus.classList.remove('valid', 'invalid');
-            tokenStatusIcon.textContent = '⏳';
-            tokenStatusText.textContent = 'Validando token...';
-            tokenValidated = false;
-            submitBtn.disabled = true;
+                    const data = await res.json();
+
+                    if (data.error === 'authorization_pending') {
+                        pollTimeout = setTimeout(poll, intervalMs);
+                        return;
+                    }
+
+                    if (data.error === 'slow_down') {
+                        pollTimeout = setTimeout(poll, intervalMs + 5000);
+                        return;
+                    }
+
+                    if (data.error === 'expired_token' || data.error === 'access_denied') {
+                        setLoginStatus('error', 'Login não autorizado ou expirado. Tente novamente.');
+                        return;
+                    }
+
+                    if (data.access_token) {
+                        accessToken = data.access_token;
+                        loginValidated = true;
+                        setLoginStatus('success', '✅ Login GitHub confirmado. Pode enviar o arquivo.');
+                        submitBtn.disabled = false;
+                        deviceBox.style.display = 'none';
+                        return;
+                    }
+
+                    setLoginStatus('error', 'Erro inesperado no login.');
+                } catch (err) {
+                    setLoginStatus('error', 'Falha ao validar login: ' + err.message);
+                }
+            };
+
+            pollTimeout = setTimeout(poll, intervalMs);
         }
 
         /**
@@ -775,59 +825,20 @@
             }
         });
 
-        // Listeners para input de senha
-        password.addEventListener('input', function () {
-            const strength = Math.min(password.value.length * 10, 100);
-            passwordStrength.style.width = strength + '%';
-        });
-
-        // Listener para input do token GitHub
-        githubToken.addEventListener('input', function () {
-            // Resetar status quando o token é alterado
-            tokenStatus.classList.remove('show');
-            tokenValidated = false;
-            submitBtn.disabled = true;
-        });
-
-        // Listener para botão de validação do token
-        validateTokenBtn.addEventListener('click', async function (e) {
+        // Listener para botão de login GitHub (device flow)
+        loginGithubBtn.addEventListener('click', async function (e) {
             e.preventDefault();
-
-            const token = githubToken.value.trim();
-            if (!token) {
-                showTokenStatus(false, 'Digite o token GitHub');
-                return;
-            }
-
-            showTokenChecking();
-            validateTokenBtn.disabled = true;
-
-            const result = await validateGitHubToken(token);
-
-            showTokenStatus(result.valid, result.message);
-            validateTokenBtn.disabled = false;
+            await startGitHubDeviceFlow();
         });
 
         // Form submission
         form.addEventListener('submit', async function (e) {
             e.preventDefault();
 
-            const adminPassword = password.value.trim();
-            const githubTokenValue = githubToken.value.trim();
             const selectedFile = file.files[0];
 
-            if (!adminPassword) {
-                showAlert('Digite a senha de administrador', 'error');
-                return;
-            }
-
-            if (!githubTokenValue) {
-                showAlert('Digite o token de acesso do GitHub', 'error');
-                return;
-            }
-
-            if (!tokenValidated) {
-                showAlert('❌ Valide o token GitHub antes de enviar', 'error');
+            if (!accessToken || !loginValidated) {
+                showAlert('Faça login com GitHub antes de enviar', 'error');
                 return;
             }
 
@@ -844,13 +855,6 @@
 
             if (selectedFile.size > MAX_FILE_SIZE) {
                 showAlert('Arquivo maior que 5MB', 'error');
-                return;
-            }
-
-            // Verificar autenticação
-            const isAuthenticated = await verifyPassword(adminPassword);
-            if (!isAuthenticated) {
-                showAlert('Senha de administrador incorreta', 'error');
                 return;
             }
 
@@ -872,13 +876,11 @@
                 progressFill.style.width = '60%';
 
                 // Fazer upload para GitHub
-                const uploadResult = await uploadToGitHub(selectedFile.name, content, githubTokenValue);
+                const uploadResult = await uploadToGitHub(selectedFile.name, content, accessToken);
 
                 progressFill.style.width = '100%';
                 form.reset();
                 fileInfo.classList.remove('show');
-                passwordStrength.style.width = '0%';
-                tokenStatus.classList.remove('show');
 
                 // Mostrar sucesso com URLs
                 showAlert('Arquivo enviado para GitHub com sucesso!', 'success');
