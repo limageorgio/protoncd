@@ -838,11 +838,25 @@
                 }
 
                 const data = await res.json();
-                const files = data.filter(item => item.type === 'file');
+                
+                // Filtrar apenas arquivos HTML, excluindo arquivos do sistema
+                const excludedFiles = ['admin.html', 'index.html', '.htaccess', 'README.md', 'validate-html.js'];
+                const files = data.filter(item => {
+                    // Apenas arquivos (não diretórios)
+                    if (item.type !== 'file') return false;
+                    
+                    // Apenas .html
+                    if (!item.name.toLowerCase().endsWith('.html')) return false;
+                    
+                    // Excluir arquivos do sistema
+                    if (excludedFiles.includes(item.name)) return false;
+                    
+                    return true;
+                });
 
                 if (!files.length) {
                     fileList.style.display = 'none';
-                    setFileListStatus('info', 'Nenhum arquivo encontrado em player/.');
+                    setFileListStatus('info', 'Nenhum arquivo HTML de player encontrado em player/.');
                     return;
                 }
 
