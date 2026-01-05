@@ -677,18 +677,28 @@
             try {
                 const res = await fetch('https://github.com/login/device/code', {
                     method: 'POST',
-                    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-                    body: JSON.stringify({
+                    headers: { 
+                        'Accept': 'application/json'
+                    },
+                    body: new URLSearchParams({
                         client_id: GITHUB_CLIENT_ID,
                         scope: 'repo'
                     })
                 });
 
                 if (!res.ok) {
-                    throw new Error('Falha ao solicitar código');
+                    const errorText = await res.text();
+                    console.error('GitHub API error:', errorText);
+                    throw new Error(`GitHub respondeu com status ${res.status}`);
                 }
 
                 const data = await res.json();
+                
+                if (!data.device_code || !data.user_code) {
+                    console.error('Resposta inválida:', data);
+                    throw new Error('Resposta inválida do GitHub');
+                }
+
                 const { device_code, user_code, verification_uri, interval } = data;
 
                 showDeviceCode(user_code, verification_uri);
@@ -697,7 +707,12 @@
                 // Iniciar polling para trocar device_code por access_token
                 pollDeviceToken(device_code, interval || 5);
             } catch (err) {
-                setLoginStatus('error', 'Erro ao iniciar login: ' + err.message);
+                console.error('Erro completo:', err);
+                let errorMsg = err.message;
+                if (err.message.includes('fetch')) {
+                    errorMsg = 'Erro de rede ou CORS. Verifique sua conexão e tente novamente.';
+                }
+                setLoginStatus('error', 'Erro ao iniciar login: ' + errorMsg);
             }
         }
 
@@ -711,15 +726,24 @@
                 try {
                     const res = await fetch('https://github.com/login/oauth/access_token', {
                         method: 'POST',
-                        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-                        body: JSON.stringify({
+                        headers: { 
+                            'Accept': 'application/json'
+                        },
+                        body: new URLSearchParams({
                             client_id: GITHUB_CLIENT_ID,
                             device_code: deviceCode,
                             grant_type: 'urn:ietf:params:oauth:grant-type:device_code'
                         })
                     });
 
+                    if (!res.ok) {
+                        console.error('Polling error status:', res.status);
+                        setLoginStatus('error', 'Erro ao validar login com GitHub');
+                        return;
+                    }
+
                     const data = await res.json();
+                    console.log('Poll response:', data);
 
                     if (data.error === 'authorization_pending') {
                         pollTimeout = setTimeout(poll, intervalMs);
@@ -745,8 +769,15 @@
                         return;
                     }
 
+                    if (data.error) {
+                        console.error('GitHub error:', data.error);
+                        setLoginStatus('error', 'Erro GitHub: ' + data.error);
+                        return;
+                    }
+
                     setLoginStatus('error', 'Erro inesperado no login.');
                 } catch (err) {
+                    console.error('Poll error:', err);
                     setLoginStatus('error', 'Falha ao validar login: ' + err.message);
                 }
             };
