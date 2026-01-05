@@ -677,7 +677,7 @@
             try {
                 const res = await fetch('https://github.com/login/device/code', {
                     method: 'POST',
-                    headers: { 
+                    headers: {
                         'Accept': 'application/json'
                     },
                     body: new URLSearchParams({
@@ -693,7 +693,7 @@
                 }
 
                 const data = await res.json();
-                
+
                 if (!data.device_code || !data.user_code) {
                     console.error('Resposta inválida:', data);
                     throw new Error('Resposta inválida do GitHub');
@@ -726,7 +726,7 @@
                 try {
                     const res = await fetch('https://github.com/login/oauth/access_token', {
                         method: 'POST',
-                        headers: { 
+                        headers: {
                             'Accept': 'application/json'
                         },
                         body: new URLSearchParams({
