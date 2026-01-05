@@ -868,12 +868,24 @@
                 fileList.innerHTML = files.map(file => {
                     const sizeKb = (file.size / 1024).toFixed(2);
                     const pagesUrl = generatePublicUrl(file.name);
-                    console.log(`📂 Arquivo listado: ${file.name}, SHA: ${file.sha}`);
+
+                    // Formatar data e hora
+                    const fileDate = new Date(file.updated_at);
+                    const dataHora = fileDate.toLocaleString('pt-BR', {
+                        year: 'numeric',
+                        month: '2-digit',
+                        day: '2-digit',
+                        hour: '2-digit',
+                        minute: '2-digit',
+                        second: '2-digit'
+                    });
+
+                    console.log(`📂 Arquivo listado: ${file.name}, SHA: ${file.sha}, Data: ${dataHora}`);
                     return `
                         <div class="file-row" data-name="${file.name}" data-sha="${file.sha}">
                             <div style="flex: 1;">
                                 <div class="file-name">${file.name}</div>
-                                <div class="file-meta">${sizeKb} KB</div>
+                                <div class="file-meta">${sizeKb} KB • 📅 ${dataHora}</div>
                                 <div class="url-box" style="margin-top: 8px; font-size: 11px; padding: 6px;">${pagesUrl}</div>
                             </div>
                             <div class="file-actions">
@@ -903,7 +915,7 @@
 
             try {
                 setFileListStatus('info', `Preparando exclusão de ${filename}...`);
-                
+
                 // Refetchar SHA atual (em caso de arquivo ter sido modificado)
                 const fileUrl = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${GITHUB_FOLDER}/${filename}`;
                 const fileRes = await fetch(fileUrl, {
@@ -958,7 +970,7 @@
 
                 setFileListStatus('success', `Arquivo ${filename} excluído com sucesso.`);
                 console.log(`✅ Arquivo ${filename} excluído`);
-                
+
                 // Recarregar lista após 1 segundo
                 setTimeout(() => listFiles(token), 1000);
             } catch (error) {
