@@ -467,9 +467,6 @@
       font-weight: 700;
     }
 
-    /* ===== RESPONSIVIDADE MOBILE ===== */
-    
-    /* Tablets e telas menores */
     @media (max-width: 960px) {
       .container {
         margin-top: 12px;
@@ -479,244 +476,7 @@
       }
       .legend {
         font-size: 10px;
-        gap: 8px;
       }
-    }
-
-    /* Mobile - ajustes gerais */
-    @media (max-width: 768px) {
-      body {
-        font-size: 14px;
-      }
-
-      header {
-        padding: 16px 12px;
-      }
-
-      .title {
-        font-size: 1.2rem !important;
-      }
-
-      .subtitle {
-        font-size: 11px !important;
-      }
-
-      .container {
-        max-width: 100%;
-        padding: 0 8px;
-        margin-top: 8px;
-      }
-
-      .panel {
-        padding: 10px;
-      }
-
-      .videoBar {
-        flex-direction: column;
-        gap: 8px;
-        padding: 10px;
-      }
-
-      .controls {
-        width: 100%;
-        justify-content: center;
-      }
-
-      .btn {
-        padding: 10px 16px;
-        font-size: 14px;
-        flex: 1;
-        min-width: 50px;
-      }
-
-      .timeInfo {
-        width: 100%;
-        justify-content: center;
-        font-size: 12px;
-      }
-
-      .chartPanel {
-        height: 150px;
-        padding: 8px;
-      }
-
-      .chartPanel.timelinePanel {
-        height: 70px;
-        padding: 6px 8px;
-      }
-
-      .chartTitle {
-        font-size: 12px;
-        margin-bottom: 6px;
-      }
-
-      .legend {
-        position: static;
-        justify-content: center;
-        margin-bottom: 6px;
-        font-size: 10px;
-        gap: 6px;
-        flex-wrap: wrap;
-      }
-
-      .currentValues {
-        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-        gap: 8px;
-      }
-
-      .cvItem {
-        padding: 8px;
-      }
-
-      .cvLabel {
-        font-size: 10px;
-      }
-
-      .cvValue {
-        font-size: 16px;
-      }
-
-      .collapsible-header {
-        padding: 10px;
-        font-size: 13px;
-      }
-
-      .meta {
-        grid-template-columns: 1fr 1fr;
-        gap: 8px;
-        font-size: 12px;
-      }
-    }
-
-    /* Mobile muito pequeno (smartphones portrait) */
-    @media (max-width: 480px) {
-      .title {
-        font-size: 1rem !important;
-      }
-
-      .videoWrap {
-        min-height: 200px;
-      }
-
-      .btn {
-        padding: 8px 12px;
-        font-size: 16px;
-      }
-
-      .chartPanel {
-        height: 120px;
-      }
-
-      .chartPanel.timelinePanel {
-        height: 60px;
-      }
-
-      .currentValues {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .meta {
-        grid-template-columns: 1fr;
-      }
-
-      .legend span {
-        font-size: 9px;
-      }
-    }
-
-    /* Detectar orientação landscape em mobile */
-    @media (max-width: 768px) and (orientation: landscape) {
-      .videoWrap {
-        min-height: 180px;
-      }
-
-      .chartPanel {
-        height: 100px;
-      }
-
-      .chartPanel.timelinePanel {
-        height: 50px;
-      }
-    }
-
-    /* Ajustes para touch devices */
-    @media (hover: none) and (pointer: coarse) {
-      .btn {
-        min-height: 44px;
-        min-width: 44px;
-      }
-
-      .controls {
-        gap: 10px;
-      }
-
-      canvas {
-        touch-action: pan-y;
-      }
-    }
-
-    /* ===== CLASSES DINÂMICAS POR TIPO DE DISPOSITIVO ===== */
-    
-    /* Mobile específico */
-    body.is-mobile .container {
-      padding: 0 6px;
-    }
-
-    body.is-mobile .btn {
-      font-size: 16px;
-      padding: 10px;
-      min-width: 48px;
-      min-height: 48px;
-    }
-
-    body.is-mobile .chartPanel {
-      height: 140px;
-    }
-
-    body.is-mobile .chartPanel.timelinePanel {
-      height: 65px;
-    }
-
-    body.is-mobile .title {
-      font-size: 1.1rem !important;
-    }
-
-    body.is-mobile .legend {
-      font-size: 9px;
-      gap: 4px;
-    }
-
-    /* Tablet específico */
-    body.is-tablet .container {
-      max-width: 900px;
-    }
-
-    body.is-tablet .btn {
-      font-size: 15px;
-      padding: 10px 14px;
-    }
-
-    body.is-tablet .chartPanel {
-      height: 160px;
-    }
-
-    body.is-tablet .chartPanel.timelinePanel {
-      height: 80px;
-    }
-
-    /* Desktop específico */
-    body.is-desktop .btn:hover {
-      background: rgba(255, 255, 255, 0.12);
-      border-color: rgba(255, 255, 255, 0.22);
-      transform: translateY(-1px);
-    }
-
-    body.is-desktop .chartPanel {
-      transition: border-color 0.2s ease;
-    }
-
-    body.is-desktop .chartPanel:hover {
-      border-color: rgba(255, 255, 255, 0.12);
     }
   </style>
 </head>
@@ -853,30 +613,6 @@
   </footer>
 
   <script>
-    // ===== DETECÇÃO DE DISPOSITIVO =====
-    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-    const isTablet = /(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(navigator.userAgent);
-    const isTouchDevice = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
-    const screenWidth = window.innerWidth;
-    
-    // Informação de dispositivo para debug
-    console.log('📱 Dispositivo detectado:', {
-      isMobile,
-      isTablet,
-      isTouchDevice,
-      screenWidth,
-      userAgent: navigator.userAgent.substring(0, 50) + '...'
-    });
-
-    // Aplicar classe ao body para ajustes específicos via CSS
-    if (isMobile && !isTablet) {
-      document.body.classList.add('is-mobile');
-    } else if (isTablet) {
-      document.body.classList.add('is-tablet');
-    } else {
-      document.body.classList.add('is-desktop');
-    }
-
     // Estado global (objeto literal para compatibilidade com player existente)
     const state = {
       youtubeUrl: 'https://youtu.be/pWJTEKOCsGk',
@@ -894,8 +630,7 @@
         pauseEnd: 74.35378505912782,
         offsets: {"noise":10.110603011444091,"vibration":10.110603011444091},
         thresholds: {"noiseThreshold":65,"vibrationThreshold":25}
-      },
-      deviceInfo: { isMobile, isTablet, isTouchDevice, screenWidth }
+      }
     };
 
     let currentTime = 0;
@@ -1123,10 +858,7 @@
 
         if (r1.width <= 0 || r1.height <= 0 || r2.width <= 0 || r2.height <= 0 || r3.width <= 0 || r3.height <= 0) return;
 
-        // Ajustar DPR em mobile para melhor performance
-        const baseDpr = (typeof window !== 'undefined' && (window.devicePixelRatio || 1)) || 1;
-        const dpr = state.deviceInfo?.isMobile ? Math.min(baseDpr, 2) : baseDpr;
-        
+        const dpr = (typeof window !== 'undefined' && (window.devicePixelRatio || 1)) || 1;
         c1.width = Math.floor(r1.width * dpr);
         c1.height = Math.floor(r1.height * dpr);
         c2.width = Math.floor(r2.width * dpr);
