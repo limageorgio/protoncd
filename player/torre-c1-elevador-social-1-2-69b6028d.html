@@ -1899,30 +1899,35 @@
       // Se ainda não começou (currentTime < roiStart), posicionar no início da ROI
       if (currentTime < roiStart) {
         currentTime = roiStart;
-        // Sincronizar com YouTube se disponível
-        try {
-          if (window.youtubePlayer && window.youtubeReady && !window.youtubeError && !window.isLocalFile) {
-            window.youtubePlayer.seekTo(roiStart, true);
-            window.youtubePlayer.playVideo();
-          }
-        } catch (e) {
-          console.error('Erro ao sincronizar YouTube no play:', e);
-        }
-      } else {
-        // Se já começou, sincronizar com YouTube antes de reproduzir
-        try {
-          if (window.youtubePlayer && window.youtubeReady && !window.youtubeError && !window.isLocalFile) {
-            window.youtubePlayer.seekTo(currentTime, true);
-            window.youtubePlayer.playVideo();
-          }
-        } catch (e) {
-          console.error('Erro ao sincronizar YouTube no play:', e);
-        }
       }
+      
+      // Sincronizar com YouTube se disponível
+      
+      try {
+        if (window.youtubePlayer && window.youtubeReady && !window.youtubeError && !window.isLocalFile) {
+          window.youtubePlayer.seekTo(currentTime, true);
+          window.youtubePlayer.playVideo();
+          console.log('▶️ YouTube reproduzindo em', currentTime.toFixed(2), 's');
+        }
+      } catch (e) {
+        console.error('Erro ao sincronizar YouTube no play:', e);
+      }
+      
     }
 
     function pause() {
       isPlaying = false;
+      // Pausar YouTube se disponível
+      
+      try {
+        if (window.youtubePlayer && window.youtubeReady && !window.youtubeError && !window.isLocalFile) {
+          window.youtubePlayer.pauseVideo();
+          console.log('⏸️ YouTube pausado');
+        }
+      } catch (e) {
+        console.error('Erro ao pausar YouTube:', e);
+      }
+      
     }
 
     function skip(delta) {
@@ -1931,7 +1936,18 @@
       updateTimelineDom(currentTime);
       updateCurrentValues(currentTime);
       renderCharts();
+      
       renderOverlayCharts();
+      // Sincronizar com YouTube
+      try {
+        if (window.youtubePlayer && window.youtubeReady && !window.youtubeError && !window.isLocalFile) {
+          window.youtubePlayer.seekTo(currentTime, true);
+          console.log('⏩ YouTube skip para', currentTime.toFixed(2), 's');
+        }
+      } catch (e) {
+        console.error('Erro ao skip YouTube:', e);
+      }
+      
     }
 
     function seekTo(t, autoPlay = false, rewindSeconds = 0) {
@@ -1959,18 +1975,29 @@
       
       try {
         if (window.youtubePlayer && window.youtubeReady && !window.youtubeError && !window.isLocalFile) {
-          console.log('📺 Sincronizando YouTube para', currentTime.toFixed(2), 's');
+          console.log('📺 Sincronizando YouTube para', currentTime.toFixed(2), 's, autoPlay:', autoPlay);
           isProgrammaticSeek = true;
           window.youtubePlayer.seekTo(currentTime, true);
           
           // Auto-play se solicitado
           if (autoPlay) {
-            console.log('▶️ Iniciando reprodução do YouTube');
+            console.log('▶️ Aguardando 150ms para iniciar reprodução do YouTube...');
             setTimeout(() => {
-              window.youtubePlayer.playVideo();
-              isPlaying = true;
-              isProgrammaticSeek = false;
-            }, 100);
+              try {
+                if (window.youtubePlayer && window.youtubeReady) {
+                  console.log('▶️ Chamando playVideo()...');
+                  window.youtubePlayer.playVideo();
+                  isPlaying = true;
+                  console.log('✅ playVideo() chamado com sucesso');
+                } else {
+                  console.error('❌ YouTube player não disponível no timeout');
+                }
+              } catch (err) {
+                console.error('❌ Erro ao chamar playVideo():', err);
+              } finally {
+                isProgrammaticSeek = false;
+              }
+            }, 150);
           } else {
             setTimeout(() => {
               isProgrammaticSeek = false;
@@ -2338,7 +2365,10 @@
     }
 
     function onPlayerReady(event) {
-      console.log('YouTube player ready');
+      console.log('✅ YouTube player ready');
+      youtubeReady = true;
+      window.youtubeReady = true;
+      
       // Sincronizar tempo do player com nosso currentTime
       if (youtubePlayer && currentTime > 0) {
         youtubePlayer.seekTo(currentTime);
