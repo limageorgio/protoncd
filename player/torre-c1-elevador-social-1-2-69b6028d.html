@@ -1956,13 +1956,21 @@
       try {
         if (window.youtubePlayer && window.youtubeReady && !window.youtubeError && !window.isLocalFile) {
           console.log('📺 Sincronizando YouTube para', currentTime.toFixed(2), 's');
+          isProgrammaticSeek = true;
           window.youtubePlayer.seekTo(currentTime, true);
           
           // Auto-play se solicitado
           if (autoPlay) {
             console.log('▶️ Iniciando reprodução do YouTube');
-            window.youtubePlayer.playVideo();
-            isPlaying = true;
+            setTimeout(() => {
+              window.youtubePlayer.playVideo();
+              isPlaying = true;
+              isProgrammaticSeek = false;
+            }, 100);
+          } else {
+            setTimeout(() => {
+              isProgrammaticSeek = false;
+            }, 200);
           }
         } else {
           console.warn('⚠️ YouTube não disponível:', {
@@ -2400,6 +2408,7 @@
     // Função para monitorar mudanças de posição do vídeo (seeking manual)
     let lastYouTubeTime = 0;
     let seekingMonitorInterval = null;
+    let isProgrammaticSeek = false;
     window.seekingMonitorInterval = null;
     
     function startSeekingMonitor() {
@@ -2416,8 +2425,8 @@
               // Detectar salto grande na posição (> 1 segundo) = usuário clicou na barra
               const timeDiff = Math.abs(ytTime - lastYouTubeTime);
               
-              if (timeDiff > 1.0 && lastYouTubeTime > 0) {
-                console.log('🎯 Seeking detectado: salto de', lastYouTubeTime.toFixed(2), 'para', ytTime.toFixed(2));
+              if (timeDiff > 1.0 && lastYouTubeTime > 0 && !isProgrammaticSeek) {
+                console.log('🎯 Seeking manual detectado: salto de', lastYouTubeTime.toFixed(2), 'para', ytTime.toFixed(2));
                 // Atualizar currentTime imediatamente
                 currentTime = ytTime;
                 // Atualizar UI instantaneamente
@@ -2425,6 +2434,8 @@
                 updateTimelineDom(currentTime);
                 updateCurrentValues(currentTime);
                 renderCharts();
+              } else if (isProgrammaticSeek && timeDiff > 1.0) {
+                console.log('⏩ Seeking programático ignorado (clique no gráfico)');
               }
               
               lastYouTubeTime = ytTime;
