@@ -400,15 +400,14 @@
       padding: 10px 12px;
       font-size: 11px;
       color: #e2e8f0;
-      display: none;
+      opacity: 0;
       pointer-events: none;
       text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8), -1px -1px 3px rgba(0, 0, 0, 0.8);
-    }
-      pointer-events: none;
+      transition: opacity 0.2s;
     }
 
     .overlay-values.visible {
-      display: block;
+      opacity: 1;
     }
 
     .overlay-value-item {
@@ -1446,9 +1445,10 @@
           }
           // Depois threshold e dados (com offset aplicado)
           drawThreshold(ctx2, mapX, state.meta.thresholds.vibrationThreshold, '#22d3ee', 'Limite');
-          drawLine(ctx2, vibXData, mapX, '#38bdf8', vibrationOffset);
-          drawLine(ctx2, vibYData, mapY, '#a78bfa', vibrationOffset);
-          drawLine(ctx2, vibZData, mapZ, '#10b981', vibrationOffset);
+          // Desenhar linhas de vibração (apenas eixos habilitados)
+          if (axisXEnabled) drawLine(ctx2, vibXData, mapX, '#38bdf8', vibrationOffset);
+          if (axisYEnabled) drawLine(ctx2, vibYData, mapY, '#a78bfa', vibrationOffset);
+          if (axisZEnabled) drawLine(ctx2, vibZData, mapZ, '#10b981', vibrationOffset);
         } else {
           drawNoData(ctx2, r2);
         }
@@ -2044,6 +2044,7 @@
       if (checkboxAxisX) {
         checkboxAxisX.addEventListener('change', (e) => {
           axisXEnabled = e.target.checked;
+          renderCharts();
           renderOverlayCharts();
           console.log('🎯 Eixo X:', e.target.checked ? 'Ativado' : 'Desativado');
         });
@@ -2052,6 +2053,7 @@
       if (checkboxAxisY) {
         checkboxAxisY.addEventListener('change', (e) => {
           axisYEnabled = e.target.checked;
+          renderCharts();
           renderOverlayCharts();
           console.log('🎯 Eixo Y:', e.target.checked ? 'Ativado' : 'Desativado');
         });
@@ -2060,6 +2062,7 @@
       if (checkboxAxisZ) {
         checkboxAxisZ.addEventListener('change', (e) => {
           axisZEnabled = e.target.checked;
+          renderCharts();
           renderOverlayCharts();
           console.log('🎯 Eixo Z:', e.target.checked ? 'Ativado' : 'Desativado');
         });
@@ -2195,7 +2198,13 @@
       updateTimelineDom(roiStart);
       updateCurrentValues(roiStart);
       renderCharts();
+      
+      // Inicializar overlays com valores padrão
       renderOverlayCharts();
+      toggleOverlayNoise(true);
+      toggleOverlayVibration(true);
+      toggleOverlayValues(true);
+      
       tick();
 
       // Inicializar YouTube se houver URL e não for arquivo local
