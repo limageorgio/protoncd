@@ -1576,9 +1576,9 @@
         const vz = findNearest(state.vibZ, t);
 
         if (cvNoise) cvNoise.textContent = n && isFinite(n.y) ? n.y.toFixed(1) : '--';
-        if (cvVx) cvVx.textContent = vx && isFinite(vx.y) ? vx.y.toFixed(2) : '--';
-        if (cvVy) cvVy.textContent = vy && isFinite(vy.y) ? vy.y.toFixed(2) : '--';
-        if (cvVz) cvVz.textContent = vz && isFinite(vz.y) ? vz.y.toFixed(2) : '--';
+        if (cvVx) cvVx.textContent = vx && isFinite(vx.y) ? vx.y.toFixed(2) + ' µm' : '--';
+        if (cvVy) cvVy.textContent = vy && isFinite(vy.y) ? vy.y.toFixed(2) + ' µm' : '--';
+        if (cvVz) cvVz.textContent = vz && isFinite(vz.y) ? vz.y.toFixed(2) + ' µm' : '--';
 
         // Atualizar valores no overlay também
         updateOverlayValues(t);
@@ -1661,8 +1661,9 @@
         // Desenhar threshold se necessário
         if (showThreshold && thresholdValue !== undefined) {
           const thresholdY = map.y0 - (thresholdValue - map.vMin) / (map.vMax - map.vMin || 1) * (map.y0 - map.y1);
-          ctx.strokeStyle = 'rgba(251, 191, 36, 0.6)';
-          ctx.lineWidth = 1;
+          // Usar cor laranja para ruído (#f59e0b) ou ciano para vibração dependendo do contexto
+          ctx.strokeStyle = color === '#f97316' ? 'rgba(245, 158, 11, 0.8)' : 'rgba(34, 211, 238, 0.8)';
+          ctx.lineWidth = 1.5;
           ctx.setLineDash([4, 4]);
           ctx.beginPath();
           ctx.moveTo(map.x0, thresholdY);
