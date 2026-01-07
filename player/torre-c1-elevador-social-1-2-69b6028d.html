@@ -1640,6 +1640,7 @@
 
     window.addEventListener('beforeunload', () => {
       if (rafId) cancelAnimationFrame(rafId);
+      if (seekingMonitorInterval) clearInterval(seekingMonitorInterval);
     });
 
     // YouTube API Integration
@@ -1752,6 +1753,9 @@
       if (youtubePlayer && currentTime > 0) {
         youtubePlayer.seekTo(currentTime);
       }
+      
+      // Iniciar monitoramento de seeking (quando usuário clica na barra de progresso)
+      startSeekingMonitor();
     }
 
     function onPlayerError(event) {
@@ -1806,6 +1810,66 @@
         isPlaying = true;
       } else if (event.data === window.YT.PlayerState.PAUSED) {
         isPlaying = false;
+      }
+      
+      // Detectar quando o vídeo está em buffer (geralmente após seeking)
+      if (event.data === window.YT.PlayerState.BUFFERING) {
+        // Sincronizar imediatamente com o tempo do YouTube
+        syncWithYouTube();
+      }
+    }
+
+    // Função para monitorar mudanças de posição do vídeo (seeking manual)
+    let lastYouTubeTime = 0;
+    let seekingMonitorInterval = null;
+    
+    function startSeekingMonitor() {
+      if (seekingMonitorInterval) return; // Já está monitorando
+      
+      seekingMonitorInterval = setInterval(() => {
+        try {
+          if (youtubePlayer && youtubeReady && !youtubeError && !isLocalFile) {
+            const ytTime = youtubePlayer.getCurrentTime();
+            
+            if (ytTime !== undefined && isFinite(ytTime)) {
+              // Detectar salto grande na posição (> 1 segundo) = usuário clicou na barra
+              const timeDiff = Math.abs(ytTime - lastYouTubeTime);
+              
+              if (timeDiff > 1.0) {
+                console.log('🎯 Seeking detectado: salto de', lastYouTubeTime.toFixed(2), 'para', ytTime.toFixed(2));
+                // Atualizar currentTime imediatamente
+                currentTime = ytTime;
+                // Atualizar UI instantaneamente
+                updateTimeUI(currentTime);
+                updateTimelineDom(currentTime);
+                updateCurrentValues(currentTime);
+                renderCharts();
+              }
+              
+              lastYouTubeTime = ytTime;
+            }
+          }
+        } catch (e) {
+          console.error('Erro no monitor de seeking:', e);
+        }
+      }, 100); // Verificar a cada 100ms
+    }
+    
+    function syncWithYouTube() {
+      try {
+        if (youtubePlayer && youtubeReady && !youtubeError && !isLocalFile) {
+          const ytTime = youtubePlayer.getCurrentTime();
+          if (ytTime !== undefined && isFinite(ytTime)) {
+            currentTime = ytTime;
+            lastYouTubeTime = ytTime;
+            updateTimeUI(currentTime);
+            updateTimelineDom(currentTime);
+            updateCurrentValues(currentTime);
+            renderCharts();
+          }
+        }
+      } catch (e) {
+        console.error('Erro ao sincronizar com YouTube:', e);
       }
     }
 
