@@ -362,11 +362,8 @@
       position: absolute;
       width: 50%;
       height: 30%;
-      background: rgba(0, 0, 0, 0.6);
       border-radius: 8px;
       padding: 8px;
-      backdrop-filter: blur(4px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
       display: none;
     }
 
@@ -401,14 +398,13 @@
       position: absolute;
       top: 10px;
       right: 10px;
-      background: rgba(0, 0, 0, 0.7);
-      backdrop-filter: blur(4px);
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      border-radius: 8px;
       padding: 10px 12px;
       font-size: 11px;
       color: #e2e8f0;
       display: none;
+      pointer-events: none;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8), -1px -1px 3px rgba(0, 0, 0, 0.8);
+    }
       pointer-events: none;
     }
 
@@ -1022,23 +1018,26 @@
           <div class="cvLabel" style="font-size: 0.85rem; color: #94a3b8; margin-bottom: 4px;">Vibração Z (µm)</div>
           <div class="cvValue vibZ" id="cvVz" style="font-size: 1rem; color: #10b981;">--</div>
         </div>
-        
-        <div class="cvItem" style="padding: 8px; border-radius: 6px; background: rgba(59, 130, 246, 0.08); border: 1px solid rgba(59, 130, 246, 0.2);">
-          <div class="cvLabel" style="font-size: 0.85rem; color: #94a3b8; margin-bottom: 6px;">Overlay Ruído</div>
-          <div style="display: flex; align-items: center; gap: 8px;">
-            <input type="checkbox" id="toggleOverlayNoise" style="cursor: pointer; width: 16px; height: 16px; accent-color: #3b82f6;">
-            <label for="toggleOverlayNoise" style="cursor: pointer; font-size: 0.9rem; color: #cbd5e1; user-select: none;">Exibir no player</label>
-          </div>
-        </div>
-        <div class="cvItem" style="padding: 8px; border-radius: 6px; background: rgba(59, 130, 246, 0.08); border: 1px solid rgba(59, 130, 246, 0.2);">
-          <div class="cvLabel" style="font-size: 0.85rem; color: #94a3b8; margin-bottom: 6px;">Overlay Vibração</div>
-          <div style="display: flex; align-items: center; gap: 8px;">
-            <input type="checkbox" id="toggleOverlayVibration" style="cursor: pointer; width: 16px; height: 16px; accent-color: #3b82f6;">
-            <label for="toggleOverlayVibration" style="cursor: pointer; font-size: 0.9rem; color: #cbd5e1; user-select: none;">Exibir no player</label>
-          </div>
-        </div>
-        
       </div>
+      
+      <div style="margin-top: 16px; padding: 12px; background: rgba(59, 130, 246, 0.08); border: 1px solid rgba(59, 130, 246, 0.2); border-radius: 8px;">
+        <div style="font-size: 0.85rem; color: #94a3b8; margin-bottom: 10px; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase;">Exibir no player</div>
+        <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <input type="checkbox" id="toggleOverlayNoise" style="cursor: pointer; width: 16px; height: 16px; accent-color: #f97316;">
+            <label for="toggleOverlayNoise" style="cursor: pointer; font-size: 0.95rem; color: #cbd5e1; user-select: none;">Ruído</label>
+          </div>
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <input type="checkbox" id="toggleOverlayVibration" style="cursor: pointer; width: 16px; height: 16px; accent-color: #38bdf8;">
+            <label for="toggleOverlayVibration" style="cursor: pointer; font-size: 0.95rem; color: #cbd5e1; user-select: none;">Vibração</label>
+          </div>
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <input type="checkbox" id="toggleOverlayValues" style="cursor: pointer; width: 16px; height: 16px; accent-color: #10b981;">
+            <label for="toggleOverlayValues" style="cursor: pointer; font-size: 0.95rem; color: #cbd5e1; user-select: none;">Dados</label>
+          </div>
+        </div>
+      </div>
+      
     </section>
 
     <!-- Seções retráteis -->
@@ -1574,13 +1573,13 @@
     // ===== FUNÇÕES DE OVERLAY NO YOUTUBE =====
     let overlayNoiseEnabled = false;
     let overlayVibrationEnabled = false;
+    let overlayValuesEnabled = false;
 
     function updateOverlayValues(t) {
       try {
-        const anyOverlayActive = overlayNoiseEnabled || overlayVibrationEnabled;
         const overlayValues = document.getElementById('overlayValues');
         
-        if (overlayValues && anyOverlayActive) {
+        if (overlayValues && overlayValuesEnabled) {
           const n = findNearest(state.noise, t);
           const vx = findNearest(state.vibX, t);
           const vy = findNearest(state.vibY, t);
@@ -1793,6 +1792,12 @@
 
       console.log('🎨 Overlay Vibração:', enabled ? 'Ativado' : 'Desativado');
     }
+
+    function toggleOverlayValues(enabled) {
+      overlayValuesEnabled = enabled;
+      updateOverlayValues(currentTime);
+      console.log('🎨 Overlay Dados:', enabled ? 'Ativado' : 'Desativado');
+    }
     
 
     function updateTimeUI(t) {
@@ -1990,6 +1995,7 @@
       // Event listeners para checkboxes de overlay
       const checkboxOverlayNoise = qs('#toggleOverlayNoise');
       const checkboxOverlayVibration = qs('#toggleOverlayVibration');
+      const checkboxOverlayValues = qs('#toggleOverlayValues');
 
       if (checkboxOverlayNoise) {
         checkboxOverlayNoise.addEventListener('change', (e) => {
@@ -2000,6 +2006,12 @@
       if (checkboxOverlayVibration) {
         checkboxOverlayVibration.addEventListener('change', (e) => {
           toggleOverlayVibration(e.target.checked);
+        });
+      }
+
+      if (checkboxOverlayValues) {
+        checkboxOverlayValues.addEventListener('change', (e) => {
+          toggleOverlayValues(e.target.checked);
         });
       }
       
