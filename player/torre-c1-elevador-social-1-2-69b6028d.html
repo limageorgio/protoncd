@@ -363,7 +363,6 @@
       width: 50%;
       height: 30%;
       border-radius: 8px;
-      padding: 8px;
       display: none;
     }
 
@@ -1003,7 +1002,7 @@
           <div class="cvValue" id="cvTime" style="font-size: 1rem; color: #cbd5e1;">00:00</div>
         </div>
         <div class="cvItem" style="padding: 8px; border-radius: 6px; background: rgba(255,255,255,0.02);">
-          <div class="cvLabel" style="font-size: 0.85rem; color: #94a3b8; margin-bottom: 4px;">Ruído (dB)</div>
+          <div class="cvLabel" style="font-size: 0.85rem; color: #94a3b8; margin-bottom: 4px;">Ruído (dBA)</div>
           <div class="cvValue noise" id="cvNoise" style="font-size: 1rem; color: #f97316;">--</div>
         </div>
         <div class="cvItem" style="padding: 8px; border-radius: 6px; background: rgba(255,255,255,0.02);">
@@ -1020,20 +1019,39 @@
         </div>
       </div>
       
-      <div style="margin-top: 16px; padding: 12px; background: rgba(59, 130, 246, 0.08); border: 1px solid rgba(59, 130, 246, 0.2); border-radius: 8px;">
-        <div style="font-size: 0.85rem; color: #94a3b8; margin-bottom: 10px; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase;">Exibir no player</div>
-        <div style="display: flex; gap: 20px; flex-wrap: wrap;">
-          <div style="display: flex; align-items: center; gap: 8px;">
-            <input type="checkbox" id="toggleOverlayNoise" style="cursor: pointer; width: 16px; height: 16px; accent-color: #f97316;">
-            <label for="toggleOverlayNoise" style="cursor: pointer; font-size: 0.95rem; color: #cbd5e1; user-select: none;">Ruído</label>
+      <div style="margin-top: 16px; display: flex; gap: 16px; flex-wrap: wrap;">
+        <div style="flex: 1; min-width: 300px; padding: 12px; background: rgba(59, 130, 246, 0.08); border: 1px solid rgba(59, 130, 246, 0.2); border-radius: 8px;">
+          <div style="font-size: 0.85rem; color: #94a3b8; margin-bottom: 10px; font-weight: 600; letter-spacing: 0.5px;">Exibir no player</div>
+          <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <input type="checkbox" id="toggleOverlayNoise" checked style="cursor: pointer; width: 16px; height: 16px; accent-color: #f97316;">
+              <label for="toggleOverlayNoise" style="cursor: pointer; font-size: 0.95rem; color: #cbd5e1; user-select: none;">Ruído</label>
+            </div>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <input type="checkbox" id="toggleOverlayVibration" checked style="cursor: pointer; width: 16px; height: 16px; accent-color: #38bdf8;">
+              <label for="toggleOverlayVibration" style="cursor: pointer; font-size: 0.95rem; color: #cbd5e1; user-select: none;">Vibração</label>
+            </div>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <input type="checkbox" id="toggleOverlayValues" checked style="cursor: pointer; width: 16px; height: 16px; accent-color: #10b981;">
+              <label for="toggleOverlayValues" style="cursor: pointer; font-size: 0.95rem; color: #cbd5e1; user-select: none;">Dados</label>
+            </div>
           </div>
-          <div style="display: flex; align-items: center; gap: 8px;">
-            <input type="checkbox" id="toggleOverlayVibration" style="cursor: pointer; width: 16px; height: 16px; accent-color: #38bdf8;">
-            <label for="toggleOverlayVibration" style="cursor: pointer; font-size: 0.95rem; color: #cbd5e1; user-select: none;">Vibração</label>
-          </div>
-          <div style="display: flex; align-items: center; gap: 8px;">
-            <input type="checkbox" id="toggleOverlayValues" style="cursor: pointer; width: 16px; height: 16px; accent-color: #10b981;">
-            <label for="toggleOverlayValues" style="cursor: pointer; font-size: 0.95rem; color: #cbd5e1; user-select: none;">Dados</label>
+        </div>
+        <div style="flex: 1; min-width: 300px; padding: 12px; background: rgba(59, 130, 246, 0.08); border: 1px solid rgba(59, 130, 246, 0.2); border-radius: 8px;">
+          <div style="font-size: 0.85rem; color: #94a3b8; margin-bottom: 10px; font-weight: 600; letter-spacing: 0.5px;">Eixos para exibição</div>
+          <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <input type="checkbox" id="toggleAxisX" checked style="cursor: pointer; width: 16px; height: 16px; accent-color: #38bdf8;">
+              <label for="toggleAxisX" style="cursor: pointer; font-size: 0.95rem; color: #cbd5e1; user-select: none;">X</label>
+            </div>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <input type="checkbox" id="toggleAxisY" checked style="cursor: pointer; width: 16px; height: 16px; accent-color: #a78bfa;">
+              <label for="toggleAxisY" style="cursor: pointer; font-size: 0.95rem; color: #cbd5e1; user-select: none;">Y</label>
+            </div>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <input type="checkbox" id="toggleAxisZ" checked style="cursor: pointer; width: 16px; height: 16px; accent-color: #10b981;">
+              <label for="toggleAxisZ" style="cursor: pointer; font-size: 0.95rem; color: #cbd5e1; user-select: none;">Z</label>
+            </div>
           </div>
         </div>
       </div>
@@ -1571,9 +1589,12 @@
 
     
     // ===== FUNÇÕES DE OVERLAY NO YOUTUBE =====
-    let overlayNoiseEnabled = false;
-    let overlayVibrationEnabled = false;
-    let overlayValuesEnabled = false;
+    let overlayNoiseEnabled = true;
+    let overlayVibrationEnabled = true;
+    let overlayValuesEnabled = true;
+    let axisXEnabled = true;
+    let axisYEnabled = true;
+    let axisZEnabled = true;
 
     function updateOverlayValues(t) {
       try {
@@ -1722,10 +1743,10 @@
         ctx.stroke();
         ctx.setLineDash([]);
 
-        // Desenhar linhas de vibração
-        drawLine(ctx, vibXData, mapX, '#38bdf8', 0);
-        drawLine(ctx, vibYData, mapY, '#a78bfa', 0);
-        drawLine(ctx, vibZData, mapZ, '#10b981', 0);
+        // Desenhar linhas de vibração (apenas eixos habilitados)
+        if (axisXEnabled) drawLine(ctx, vibXData, mapX, '#38bdf8', 0);
+        if (axisYEnabled) drawLine(ctx, vibYData, mapY, '#a78bfa', 0);
+        if (axisZEnabled) drawLine(ctx, vibZData, mapZ, '#10b981', 0);
 
         // Desenhar cursor de tempo atual
         drawCursor(ctx, mapX, currentTime, '#ffffff');
@@ -2012,6 +2033,35 @@
       if (checkboxOverlayValues) {
         checkboxOverlayValues.addEventListener('change', (e) => {
           toggleOverlayValues(e.target.checked);
+        });
+      }
+
+      // Event listeners para checkboxes de eixos
+      const checkboxAxisX = qs('#toggleAxisX');
+      const checkboxAxisY = qs('#toggleAxisY');
+      const checkboxAxisZ = qs('#toggleAxisZ');
+
+      if (checkboxAxisX) {
+        checkboxAxisX.addEventListener('change', (e) => {
+          axisXEnabled = e.target.checked;
+          renderOverlayCharts();
+          console.log('🎯 Eixo X:', e.target.checked ? 'Ativado' : 'Desativado');
+        });
+      }
+
+      if (checkboxAxisY) {
+        checkboxAxisY.addEventListener('change', (e) => {
+          axisYEnabled = e.target.checked;
+          renderOverlayCharts();
+          console.log('🎯 Eixo Y:', e.target.checked ? 'Ativado' : 'Desativado');
+        });
+      }
+
+      if (checkboxAxisZ) {
+        checkboxAxisZ.addEventListener('change', (e) => {
+          axisZEnabled = e.target.checked;
+          renderOverlayCharts();
+          console.log('🎯 Eixo Z:', e.target.checked ? 'Ativado' : 'Desativado');
         });
       }
       
