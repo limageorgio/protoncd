@@ -1625,7 +1625,7 @@
       }
     }
 
-    function renderOverlayChart(canvasId, data, color, unit, showThreshold, thresholdValue) {
+    function renderOverlayChart(canvasId, data, color, unit, showThreshold, thresholdValue, offset = 0) {
       try {
         const canvas = document.getElementById(canvasId);
         if (!canvas) return;
@@ -1673,7 +1673,7 @@
         }
 
         // Desenhar linha de dados
-        drawLine(ctx, data, map, color, 0);
+        drawLine(ctx, data, map, color, offset);
 
         // Desenhar cursor de tempo atual
         drawCursor(ctx, map, currentTime, '#ffffff');
@@ -1683,6 +1683,9 @@
     }
 
     function renderOverlayCharts() {
+      const noiseOffset = state.meta?.offsets?.noise || 0;
+      const vibrationOffset = state.meta?.offsets?.vibration || 0;
+      
       if (overlayNoiseEnabled) {
         renderOverlayChart(
           'canvasOverlayNoise',
@@ -1690,7 +1693,8 @@
           '#f97316',
           'dB',
           true,
-          state.meta.thresholds.noiseThreshold
+          state.meta.thresholds.noiseThreshold,
+          noiseOffset
         );
       }
 
@@ -1745,9 +1749,9 @@
         ctx.setLineDash([]);
 
         // Desenhar linhas de vibração (apenas eixos habilitados)
-        if (axisXEnabled) drawLine(ctx, vibXData, mapX, '#38bdf8', 0);
-        if (axisYEnabled) drawLine(ctx, vibYData, mapY, '#a78bfa', 0);
-        if (axisZEnabled) drawLine(ctx, vibZData, mapZ, '#10b981', 0);
+        if (axisXEnabled) drawLine(ctx, vibXData, mapX, '#38bdf8', vibrationOffset);
+        if (axisYEnabled) drawLine(ctx, vibYData, mapY, '#a78bfa', vibrationOffset);
+        if (axisZEnabled) drawLine(ctx, vibZData, mapZ, '#10b981', vibrationOffset);
 
         // Desenhar cursor de tempo atual
         drawCursor(ctx, mapX, currentTime, '#ffffff');
