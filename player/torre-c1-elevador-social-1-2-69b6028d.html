@@ -1484,12 +1484,36 @@
       renderCharts();
     }
 
-    function seekTo(t) {
-      currentTime = Math.max(0, Math.min(duration, t));
+    function seekTo(t, autoPlay = false, rewindSeconds = 0) {
+      // Aplicar retrocesso se especificado
+      let targetTime = t - rewindSeconds;
+      targetTime = Math.max(0, Math.min(duration, targetTime));
+      
+      currentTime = targetTime;
       updateTimeUI(currentTime);
       updateTimelineDom(currentTime);
       updateCurrentValues(currentTime);
       renderCharts();
+      
+      // Sincronizar com YouTube se disponível
+      try {
+        if (window.youtubePlayer && window.youtubeReady && !window.youtubeError && !window.isLocalFile) {
+          window.youtubePlayer.seekTo(currentTime, true);
+          
+          // Auto-play se solicitado
+          if (autoPlay) {
+            window.youtubePlayer.playVideo();
+            isPlaying = true;
+          }
+        }
+      } catch (e) {
+        console.error('Erro ao sincronizar YouTube no seekTo:', e);
+      }
+      
+      // Auto-play mesmo sem YouTube (para gráficos)
+      if (autoPlay) {
+        isPlaying = true;
+      }
     }
 
     // Event listeners
@@ -1527,7 +1551,9 @@
           const rect = timeline.getBoundingClientRect();
           const pct = Math.max(0, Math.min(1, (ev.clientX - rect.left) / rect.width));
           const target = duration * pct;
-          seekTo(target);
+          // Retroceder 3 segundos e iniciar reprodução
+          seekTo(target, true, 3);
+          console.log('📍 Click na timeline:', target.toFixed(2), '→ posicionado em', (target - 3).toFixed(2), 's e iniciando reprodução');
         });
       }
 
@@ -1586,6 +1612,16 @@
           showTooltip(canvasNoise, e, state.noise, 'dB', '#f97316');
         });
         canvasNoise.addEventListener('mouseleave', hideTooltip);
+        
+        // Click no gráfico de ruído: retroceder 3s e iniciar reprodução
+        canvasNoise.addEventListener('click', (e) => {
+          const rect = canvasNoise.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const relativeX = x / rect.width;
+          const targetTime = duration * relativeX;
+          seekTo(targetTime, true, 3);
+          console.log('📍 Click no gráfico de ruído:', targetTime.toFixed(2), '→ posicionado em', (targetTime - 3).toFixed(2), 's e iniciando reprodução');
+        });
       }
 
       if (canvasVibration) {
@@ -1621,6 +1657,16 @@
           }
         });
         canvasVibration.addEventListener('mouseleave', hideTooltip);
+        
+        // Click no gráfico de vibração: retroceder 3s e iniciar reprodução
+        canvasVibration.addEventListener('click', (e) => {
+          const rect = canvasVibration.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const relativeX = x / rect.width;
+          const targetTime = duration * relativeX;
+          seekTo(targetTime, true, 3);
+          console.log('📍 Click no gráfico de vibração:', targetTime.toFixed(2), '→ posicionado em', (targetTime - 3).toFixed(2), 's e iniciando reprodução');
+        });
       }
 
       // Inicializar
