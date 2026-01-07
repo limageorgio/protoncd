@@ -1895,6 +1895,7 @@
     }
 
     function play() {
+      console.log('▶️ Função play chamada');
       isPlaying = true;
       // Se ainda não começou (currentTime < roiStart), posicionar no início da ROI
       if (currentTime < roiStart) {
@@ -1905,9 +1906,21 @@
       
       try {
         if (window.youtubePlayer && window.youtubeReady && !window.youtubeError && !window.isLocalFile) {
+          console.log('📺 YouTube disponível, sincronizando para', currentTime.toFixed(2), 's');
           window.youtubePlayer.seekTo(currentTime, true);
-          window.youtubePlayer.playVideo();
-          console.log('▶️ YouTube reproduzindo em', currentTime.toFixed(2), 's');
+          setTimeout(() => {
+            if (window.youtubePlayer) {
+              window.youtubePlayer.playVideo();
+              console.log('✅ YouTube reproduzindo');
+            }
+          }, 50);
+        } else {
+          console.warn('⚠️ YouTube não disponível:', {
+            player: !!window.youtubePlayer,
+            ready: window.youtubeReady,
+            error: window.youtubeError,
+            local: window.isLocalFile
+          });
         }
       } catch (e) {
         console.error('Erro ao sincronizar YouTube no play:', e);
@@ -1916,13 +1929,16 @@
     }
 
     function pause() {
+      console.log('⏸️ Função pause chamada');
       isPlaying = false;
       // Pausar YouTube se disponível
       
       try {
         if (window.youtubePlayer && window.youtubeReady && !window.youtubeError && !window.isLocalFile) {
           window.youtubePlayer.pauseVideo();
-          console.log('⏸️ YouTube pausado');
+          console.log('✅ YouTube pausado');
+        } else {
+          console.warn('⚠️ YouTube não disponível para pausar');
         }
       } catch (e) {
         console.error('Erro ao pausar YouTube:', e);
@@ -1931,7 +1947,9 @@
     }
 
     function skip(delta) {
+      console.log('⏩ Função skip chamada, delta:', delta);
       currentTime = Math.max(0, Math.min(duration, currentTime + delta));
+      console.log('🕒 Novo currentTime:', currentTime.toFixed(2));
       updateTimeUI(currentTime);
       updateTimelineDom(currentTime);
       updateCurrentValues(currentTime);
@@ -1942,7 +1960,13 @@
       try {
         if (window.youtubePlayer && window.youtubeReady && !window.youtubeError && !window.isLocalFile) {
           window.youtubePlayer.seekTo(currentTime, true);
-          console.log('⏩ YouTube skip para', currentTime.toFixed(2), 's');
+          console.log('✅ YouTube skip para', currentTime.toFixed(2), 's');
+        } else {
+          console.warn('⚠️ YouTube não disponível para skip:', {
+            player: !!window.youtubePlayer,
+            ready: window.youtubeReady,
+            error: window.youtubeError
+          });
         }
       } catch (e) {
         console.error('Erro ao skip YouTube:', e);
