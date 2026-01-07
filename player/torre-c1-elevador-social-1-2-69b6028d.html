@@ -309,6 +309,141 @@
       border-radius: 999px;
       border: 1px solid rgba(255, 255, 255, 0.12);
       color: var(--accent2);
+    }
+
+    /* Checkboxes discretos */
+    .overlay-checkbox-container {
+      margin-top: 8px;
+      padding: 6px 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      color: #94a3b8;
+      opacity: 0.7;
+      transition: opacity 0.2s;
+    }
+
+    .overlay-checkbox-container:hover {
+      opacity: 1;
+    }
+
+    .overlay-checkbox-container input[type="checkbox"] {
+      cursor: pointer;
+      width: 14px;
+      height: 14px;
+    }
+
+    .overlay-checkbox-container label {
+      cursor: pointer;
+      user-select: none;
+    }
+
+    /* Overlay sobre YouTube */
+    .video-overlay-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 10;
+    }
+
+    .overlay-chart {
+      position: absolute;
+      width: 50%;
+      height: 30%;
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 8px;
+      padding: 8px;
+      backdrop-filter: blur(4px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      display: none;
+    }
+
+    .overlay-chart.visible {
+      display: block;
+    }
+
+    .overlay-chart canvas {
+      width: 100% !important;
+      height: 100% !important;
+      display: block;
+    }
+
+    #overlayNoise {
+      top: 10px;
+      left: 10px;
+    }
+
+    #overlayVibration {
+      left: 10px;
+    }
+
+    #overlayVibration.position-top {
+      top: 10px;
+    }
+
+    #overlayVibration.position-below {
+      top: calc(30% + 20px);
+    }
+
+    .overlay-values {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(4px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 8px;
+      padding: 10px 12px;
+      font-size: 11px;
+      color: #e2e8f0;
+      display: none;
+      pointer-events: none;
+    }
+
+    .overlay-values.visible {
+      display: block;
+    }
+
+    .overlay-value-item {
+      margin-bottom: 6px;
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      font-family: ui-monospace, "SF Mono", Monaco, "Roboto Mono", Consolas, monospace;
+    }
+
+    .overlay-value-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .overlay-value-label {
+      color: #94a3b8;
+      font-size: 10px;
+    }
+
+    .overlay-value-number {
+      font-weight: 700;
+      font-size: 12px;
+    }
+
+    .overlay-value-number.noise {
+      color: #f97316;
+    }
+
+    .overlay-value-number.vibX {
+      color: #38bdf8;
+    }
+
+    .overlay-value-number.vibY {
+      color: #a78bfa;
+    }
+
+    .overlay-value-number.vibZ {
+      color: #10b981;
       font-weight: 700;
       font-size: 11px;
       letter-spacing: 0.3px;
@@ -777,7 +912,7 @@
     </div>
 
     <section class="panel hero">
-      <div class="videoWrap">
+      <div class="videoWrap" style="position: relative;">
         
           <div id="player"></div>
           <div id="playerError" style="display: none; background: rgba(220, 38, 38, 0.1); border: 1px solid rgba(220, 38, 38, 0.3); padding: 12px 16px; border-radius: 10px; color: #fca5a5; font-size: 13px;">
@@ -785,6 +920,36 @@
             <p style="margin-top: 0.5rem; font-size: 12px;">
               Para arquivos HTML locais, é recomendado usar um servidor HTTP ou acessar o vídeo diretamente no YouTube.
             </p>
+          </div>
+          <!-- Overlay sobre YouTube -->
+          <div class="video-overlay-container" id="videoOverlayContainer">
+            <!-- Gráfico de Ruído Overlay -->
+            <div id="overlayNoise" class="overlay-chart">
+              <canvas id="canvasOverlayNoise"></canvas>
+            </div>
+            <!-- Gráfico de Vibração Overlay -->
+            <div id="overlayVibration" class="overlay-chart">
+              <canvas id="canvasOverlayVibration"></canvas>
+            </div>
+            <!-- Valores Numéricos Overlay -->
+            <div id="overlayValues" class="overlay-values">
+              <div class="overlay-value-item">
+                <span class="overlay-value-label">Ruído:</span>
+                <span id="overlayValueNoise" class="overlay-value-number noise">--</span>
+              </div>
+              <div class="overlay-value-item">
+                <span class="overlay-value-label">Vib X:</span>
+                <span id="overlayValueVibX" class="overlay-value-number vibX">--</span>
+              </div>
+              <div class="overlay-value-item">
+                <span class="overlay-value-label">Vib Y:</span>
+                <span id="overlayValueVibY" class="overlay-value-number vibY">--</span>
+              </div>
+              <div class="overlay-value-item">
+                <span class="overlay-value-label">Vib Z:</span>
+                <span id="overlayValueVibZ" class="overlay-value-number vibZ">--</span>
+              </div>
+            </div>
           </div>
         
       </div>
@@ -814,6 +979,12 @@
           <span><i class="dotN"></i> Ruído (dB)</span>
         </div>
         <canvas id="noise"></canvas>
+        
+        <div class="overlay-checkbox-container">
+          <input type="checkbox" id="toggleOverlayNoise">
+          <label for="toggleOverlayNoise">Exibir no player</label>
+        </div>
+        
       </div>
       <div class="panel chartPanel">
         <p class="chartTitle">Gráfico de Vibração</p>
@@ -823,6 +994,12 @@
           <span><i class="dotV" style="background: #10b981;"></i> Vibração Z (µm)</span>
         </div>
         <canvas id="vibration"></canvas>
+        
+        <div class="overlay-checkbox-container">
+          <input type="checkbox" id="toggleOverlayVibration">
+          <label for="toggleOverlayVibration">Exibir no player</label>
+        </div>
+        
       </div>
     </section>
 
@@ -1373,10 +1550,238 @@
         if (cvVx) cvVx.textContent = vx && isFinite(vx.y) ? vx.y.toFixed(2) : '--';
         if (cvVy) cvVy.textContent = vy && isFinite(vy.y) ? vy.y.toFixed(2) : '--';
         if (cvVz) cvVz.textContent = vz && isFinite(vz.y) ? vz.y.toFixed(2) : '--';
+
+        // Atualizar valores no overlay também
+        updateOverlayValues(t);
       } catch (e) {
         console.error('Erro ao atualizar valores:', e);
       }
     }
+
+    
+    // ===== FUNÇÕES DE OVERLAY NO YOUTUBE =====
+    let overlayNoiseEnabled = false;
+    let overlayVibrationEnabled = false;
+
+    function updateOverlayValues(t) {
+      try {
+        const anyOverlayActive = overlayNoiseEnabled || overlayVibrationEnabled;
+        const overlayValues = document.getElementById('overlayValues');
+        
+        if (overlayValues && anyOverlayActive) {
+          const n = findNearest(state.noise, t);
+          const vx = findNearest(state.vibX, t);
+          const vy = findNearest(state.vibY, t);
+          const vz = findNearest(state.vibZ, t);
+
+          const noiseVal = document.getElementById('overlayValueNoise');
+          const vibXVal = document.getElementById('overlayValueVibX');
+          const vibYVal = document.getElementById('overlayValueVibY');
+          const vibZVal = document.getElementById('overlayValueVibZ');
+
+          if (noiseVal) noiseVal.textContent = n && isFinite(n.y) ? n.y.toFixed(1) + ' dB' : '--';
+          if (vibXVal) vibXVal.textContent = vx && isFinite(vx.y) ? vx.y.toFixed(2) + ' µm' : '--';
+          if (vibYVal) vibYVal.textContent = vy && isFinite(vy.y) ? vy.y.toFixed(2) + ' µm' : '--';
+          if (vibZVal) vibZVal.textContent = vz && isFinite(vz.y) ? vz.y.toFixed(2) + ' µm' : '--';
+
+          overlayValues.classList.add('visible');
+        } else if (overlayValues) {
+          overlayValues.classList.remove('visible');
+        }
+      } catch (e) {
+        console.error('Erro ao atualizar valores overlay:', e);
+      }
+    }
+
+    function renderOverlayChart(canvasId, data, color, unit, showThreshold, thresholdValue) {
+      try {
+        const canvas = document.getElementById(canvasId);
+        if (!canvas) return;
+
+        const rect = canvas.getBoundingClientRect();
+        if (rect.width <= 0 || rect.height <= 0) return;
+
+        const dpr = Math.min(window.devicePixelRatio || 1, 2);
+        canvas.width = Math.floor(rect.width * dpr);
+        canvas.height = Math.floor(rect.height * dpr);
+
+        const ctx = canvas.getContext('2d');
+        if (!ctx) return;
+
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        ctx.clearRect(0, 0, rect.width, rect.height);
+
+        if (!data || data.length === 0) return;
+
+        const map = fitData(data, rect.width, rect.height);
+        if (!map) return;
+
+        // Desenhar eixos sutis
+        ctx.strokeStyle = 'rgba(255, 255, 255, 0.1)';
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.moveTo(map.x0, map.y0);
+        ctx.lineTo(map.x1, map.y0);
+        ctx.moveTo(map.x0, map.y0);
+        ctx.lineTo(map.x0, map.y1);
+        ctx.stroke();
+
+        // Desenhar threshold se necessário
+        if (showThreshold && thresholdValue !== undefined) {
+          const thresholdY = map.y0 - (thresholdValue - map.vMin) / (map.vMax - map.vMin || 1) * (map.y0 - map.y1);
+          ctx.strokeStyle = 'rgba(251, 191, 36, 0.6)';
+          ctx.lineWidth = 1;
+          ctx.setLineDash([4, 4]);
+          ctx.beginPath();
+          ctx.moveTo(map.x0, thresholdY);
+          ctx.lineTo(map.x1, thresholdY);
+          ctx.stroke();
+          ctx.setLineDash([]);
+        }
+
+        // Desenhar linha de dados
+        drawLine(ctx, data, map, color, 0);
+
+        // Desenhar cursor de tempo atual
+        drawCursor(ctx, map, currentTime, '#ffffff');
+      } catch (e) {
+        console.error('Erro ao renderizar overlay:', canvasId, e);
+      }
+    }
+
+    function renderOverlayCharts() {
+      if (overlayNoiseEnabled) {
+        renderOverlayChart(
+          'canvasOverlayNoise',
+          state.noise || [],
+          '#f97316',
+          'dB',
+          true,
+          state.meta.thresholds.noiseThreshold
+        );
+      }
+
+      if (overlayVibrationEnabled) {
+        const vibXData = state.vibX || [];
+        const vibYData = state.vibY || [];
+        const vibZData = state.vibZ || [];
+        
+        const canvas = document.getElementById('canvasOverlayVibration');
+        if (!canvas) return;
+
+        const rect = canvas.getBoundingClientRect();
+        if (rect.width <= 0 || rect.height <= 0) return;
+
+        const dpr = Math.min(window.devicePixelRatio || 1, 2);
+        canvas.width = Math.floor(rect.width * dpr);
+        canvas.height = Math.floor(rect.height * dpr);
+
+        const ctx = canvas.getContext('2d');
+        if (!ctx) return;
+
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        ctx.clearRect(0, 0, rect.width, rect.height);
+
+        if (vibXData.length === 0) return;
+
+        const mapX = fitData(vibXData, rect.width, rect.height);
+        const mapY = fitData(vibYData, rect.width, rect.height);
+        const mapZ = fitData(vibZData, rect.width, rect.height);
+        
+        if (!mapX) return;
+
+        // Desenhar eixos sutis
+        ctx.strokeStyle = 'rgba(255, 255, 255, 0.1)';
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.moveTo(mapX.x0, mapX.y0);
+        ctx.lineTo(mapX.x1, mapX.y0);
+        ctx.moveTo(mapX.x0, mapX.y0);
+        ctx.lineTo(mapX.x0, mapX.y1);
+        ctx.stroke();
+
+        // Desenhar threshold
+        const thresholdY = mapX.y0 - (state.meta.thresholds.vibrationThreshold - mapX.vMin) / (mapX.vMax - mapX.vMin || 1) * (mapX.y0 - mapX.y1);
+        ctx.strokeStyle = 'rgba(34, 211, 238, 0.6)';
+        ctx.lineWidth = 1;
+        ctx.setLineDash([4, 4]);
+        ctx.beginPath();
+        ctx.moveTo(mapX.x0, thresholdY);
+        ctx.lineTo(mapX.x1, thresholdY);
+        ctx.stroke();
+        ctx.setLineDash([]);
+
+        // Desenhar linhas de vibração
+        drawLine(ctx, vibXData, mapX, '#38bdf8', 0);
+        drawLine(ctx, vibYData, mapY, '#a78bfa', 0);
+        drawLine(ctx, vibZData, mapZ, '#10b981', 0);
+
+        // Desenhar cursor de tempo atual
+        drawCursor(ctx, mapX, currentTime, '#ffffff');
+      }
+    }
+
+    function toggleOverlayNoise(enabled) {
+      overlayNoiseEnabled = enabled;
+      const overlayNoise = document.getElementById('overlayNoise');
+      const overlayVibration = document.getElementById('overlayVibration');
+      
+      if (overlayNoise) {
+        if (enabled) {
+          overlayNoise.classList.add('visible');
+          renderOverlayChart(
+            'canvasOverlayNoise',
+            state.noise || [],
+            '#f97316',
+            'dB',
+            true,
+            state.meta.thresholds.noiseThreshold
+          );
+        } else {
+          overlayNoise.classList.remove('visible');
+        }
+      }
+
+      // Ajustar posição do gráfico de vibração
+      if (overlayVibration) {
+        if (enabled) {
+          // Se ruído está ativo, vibração vai para baixo
+          overlayVibration.classList.remove('position-top');
+          overlayVibration.classList.add('position-below');
+        } else {
+          // Se ruído está inativo, vibração sobe para o topo
+          overlayVibration.classList.remove('position-below');
+          overlayVibration.classList.add('position-top');
+        }
+      }
+
+      console.log('🎨 Overlay Ruído:', enabled ? 'Ativado' : 'Desativado');
+    }
+
+    function toggleOverlayVibration(enabled) {
+      overlayVibrationEnabled = enabled;
+      const overlayVibration = document.getElementById('overlayVibration');
+      
+      if (overlayVibration) {
+        if (enabled) {
+          overlayVibration.classList.add('visible');
+          // Ajustar posição baseado no estado do ruído
+          if (overlayNoiseEnabled) {
+            overlayVibration.classList.remove('position-top');
+            overlayVibration.classList.add('position-below');
+          } else {
+            overlayVibration.classList.remove('position-below');
+            overlayVibration.classList.add('position-top');
+          }
+          renderOverlayCharts();
+        } else {
+          overlayVibration.classList.remove('visible');
+        }
+      }
+
+      console.log('🎨 Overlay Vibração:', enabled ? 'Ativado' : 'Desativado');
+    }
+    
 
     function updateTimeUI(t) {
       try {
@@ -1438,6 +1843,7 @@
         updateTimelineDom(currentTime);
         updateCurrentValues(currentTime);
         renderCharts();
+        renderOverlayCharts();
       } catch (e) {
         console.error('Erro render tick:', e);
       }
@@ -1482,6 +1888,7 @@
       updateTimelineDom(currentTime);
       updateCurrentValues(currentTime);
       renderCharts();
+      renderOverlayCharts();
     }
 
     function seekTo(t, autoPlay = false, rewindSeconds = 0) {
@@ -1503,6 +1910,7 @@
       updateTimelineDom(currentTime);
       updateCurrentValues(currentTime);
       renderCharts();
+      renderOverlayCharts();
       
       // Sincronizar com YouTube se disponível
       
@@ -1566,6 +1974,24 @@
       if (btnBack) btnBack.addEventListener('click', () => skip(-10));
       if (btnFwd) btnFwd.addEventListener('click', () => skip(10));
 
+      
+      // Event listeners para checkboxes de overlay
+      const checkboxOverlayNoise = qs('#toggleOverlayNoise');
+      const checkboxOverlayVibration = qs('#toggleOverlayVibration');
+
+      if (checkboxOverlayNoise) {
+        checkboxOverlayNoise.addEventListener('change', (e) => {
+          toggleOverlayNoise(e.target.checked);
+        });
+      }
+
+      if (checkboxOverlayVibration) {
+        checkboxOverlayVibration.addEventListener('change', (e) => {
+          toggleOverlayVibration(e.target.checked);
+        });
+      }
+      
+
       if (timeline) {
         timeline.addEventListener('click', (ev) => {
           const rect = timeline.getBoundingClientRect();
@@ -1580,6 +2006,7 @@
       window.addEventListener('resize', () => {
         try {
           renderCharts();
+          renderOverlayCharts();
         } catch (e) {
           console.error('Erro resize:', e);
         }
@@ -1694,6 +2121,7 @@
       updateTimelineDom(roiStart);
       updateCurrentValues(roiStart);
       renderCharts();
+      renderOverlayCharts();
       tick();
 
       // Inicializar YouTube se houver URL e não for arquivo local
