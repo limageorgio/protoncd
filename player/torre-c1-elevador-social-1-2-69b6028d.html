@@ -1490,27 +1490,47 @@
       targetTime = Math.max(0, Math.min(duration, targetTime));
       
       currentTime = targetTime;
+      
+      console.log('🎯 seekTo chamado:', {
+        tempo_clicado: t.toFixed(2),
+        retrocesso: rewindSeconds,
+        tempo_final: targetTime.toFixed(2),
+        autoPlay: autoPlay,
+        youtubeDisponivel: !!(window.youtubePlayer && window.youtubeReady)
+      });
+      
       updateTimeUI(currentTime);
       updateTimelineDom(currentTime);
       updateCurrentValues(currentTime);
       renderCharts();
       
       // Sincronizar com YouTube se disponível
+      
       try {
         if (window.youtubePlayer && window.youtubeReady && !window.youtubeError && !window.isLocalFile) {
+          console.log('📺 Sincronizando YouTube para', currentTime.toFixed(2), 's');
           window.youtubePlayer.seekTo(currentTime, true);
           
           // Auto-play se solicitado
           if (autoPlay) {
+            console.log('▶️ Iniciando reprodução do YouTube');
             window.youtubePlayer.playVideo();
             isPlaying = true;
           }
+        } else {
+          console.warn('⚠️ YouTube não disponível:', {
+            player: !!window.youtubePlayer,
+            ready: window.youtubeReady,
+            error: window.youtubeError,
+            local: window.isLocalFile
+          });
         }
       } catch (e) {
-        console.error('Erro ao sincronizar YouTube no seekTo:', e);
+        console.error('❌ Erro ao sincronizar YouTube no seekTo:', e);
       }
       
-      // Auto-play mesmo sem YouTube (para gráficos)
+      
+      // Auto-play dos gráficos
       if (autoPlay) {
         isPlaying = true;
       }
@@ -1686,7 +1706,7 @@
 
     window.addEventListener('beforeunload', () => {
       if (rafId) cancelAnimationFrame(rafId);
-      if (seekingMonitorInterval) clearInterval(seekingMonitorInterval);
+      if (window.seekingMonitorInterval) clearInterval(window.seekingMonitorInterval);
     });
 
     // YouTube API Integration
@@ -1868,9 +1888,12 @@
     // Função para monitorar mudanças de posição do vídeo (seeking manual)
     let lastYouTubeTime = 0;
     let seekingMonitorInterval = null;
+    window.seekingMonitorInterval = null;
     
     function startSeekingMonitor() {
       if (seekingMonitorInterval) return; // Já está monitorando
+      
+      console.log('🔍 Iniciando monitor de seeking');
       
       seekingMonitorInterval = setInterval(() => {
         try {
@@ -1881,7 +1904,7 @@
               // Detectar salto grande na posição (> 1 segundo) = usuário clicou na barra
               const timeDiff = Math.abs(ytTime - lastYouTubeTime);
               
-              if (timeDiff > 1.0) {
+              if (timeDiff > 1.0 && lastYouTubeTime > 0) {
                 console.log('🎯 Seeking detectado: salto de', lastYouTubeTime.toFixed(2), 'para', ytTime.toFixed(2));
                 // Atualizar currentTime imediatamente
                 currentTime = ytTime;
@@ -1899,6 +1922,8 @@
           console.error('Erro no monitor de seeking:', e);
         }
       }, 100); // Verificar a cada 100ms
+      
+      window.seekingMonitorInterval = seekingMonitorInterval;
     }
     
     function syncWithYouTube() {
@@ -1906,6 +1931,7 @@
         if (youtubePlayer && youtubeReady && !youtubeError && !isLocalFile) {
           const ytTime = youtubePlayer.getCurrentTime();
           if (ytTime !== undefined && isFinite(ytTime)) {
+            console.log('🔄 Sincronizando com YouTube:', ytTime.toFixed(2));
             currentTime = ytTime;
             lastYouTubeTime = ytTime;
             updateTimeUI(currentTime);
