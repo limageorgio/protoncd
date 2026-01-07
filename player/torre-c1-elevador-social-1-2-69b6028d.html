@@ -987,12 +987,6 @@
           <span><i class="dotN"></i> Ruído (dB)</span>
         </div>
         <canvas id="noise"></canvas>
-        
-        <div class="overlay-checkbox-container">
-          <input type="checkbox" id="toggleOverlayNoise">
-          <label for="toggleOverlayNoise">Exibir no player</label>
-        </div>
-        
       </div>
       <div class="panel chartPanel">
         <p class="chartTitle">Gráfico de Vibração</p>
@@ -1002,12 +996,6 @@
           <span><i class="dotV" style="background: #10b981;"></i> Vibração Z (µm)</span>
         </div>
         <canvas id="vibration"></canvas>
-        
-        <div class="overlay-checkbox-container">
-          <input type="checkbox" id="toggleOverlayVibration">
-          <label for="toggleOverlayVibration">Exibir no player</label>
-        </div>
-        
       </div>
     </section>
 
@@ -1034,6 +1022,22 @@
           <div class="cvLabel" style="font-size: 0.85rem; color: #94a3b8; margin-bottom: 4px;">Vibração Z (µm)</div>
           <div class="cvValue vibZ" id="cvVz" style="font-size: 1rem; color: #10b981;">--</div>
         </div>
+        
+        <div class="cvItem" style="padding: 8px; border-radius: 6px; background: rgba(59, 130, 246, 0.08); border: 1px solid rgba(59, 130, 246, 0.2);">
+          <div class="cvLabel" style="font-size: 0.85rem; color: #94a3b8; margin-bottom: 6px;">Overlay Ruído</div>
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <input type="checkbox" id="toggleOverlayNoise" style="cursor: pointer; width: 16px; height: 16px; accent-color: #3b82f6;">
+            <label for="toggleOverlayNoise" style="cursor: pointer; font-size: 0.9rem; color: #cbd5e1; user-select: none;">Exibir no player</label>
+          </div>
+        </div>
+        <div class="cvItem" style="padding: 8px; border-radius: 6px; background: rgba(59, 130, 246, 0.08); border: 1px solid rgba(59, 130, 246, 0.2);">
+          <div class="cvLabel" style="font-size: 0.85rem; color: #94a3b8; margin-bottom: 6px;">Overlay Vibração</div>
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <input type="checkbox" id="toggleOverlayVibration" style="cursor: pointer; width: 16px; height: 16px; accent-color: #3b82f6;">
+            <label for="toggleOverlayVibration" style="cursor: pointer; font-size: 0.9rem; color: #cbd5e1; user-select: none;">Exibir no player</label>
+          </div>
+        </div>
+        
       </div>
     </section>
 
