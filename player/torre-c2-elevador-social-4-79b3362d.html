@@ -309,6 +309,143 @@
       border-radius: 999px;
       border: 1px solid rgba(255, 255, 255, 0.12);
       color: var(--accent2);
+    }
+
+    /* Checkboxes discretos */
+    .overlay-checkbox-container {
+      margin-top: 10px;
+      padding: 8px 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 12px;
+      color: #cbd5e1;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+
+    .overlay-checkbox-container:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(59, 130, 246, 0.4);
+      color: #e2e8f0;
+    }
+
+    .overlay-checkbox-container input[type="checkbox"] {
+      cursor: pointer;
+      width: 16px;
+      height: 16px;
+      accent-color: #3b82f6;
+      flex-shrink: 0;
+    }
+
+    .overlay-checkbox-container label {
+      cursor: pointer;
+      user-select: none;
+      font-weight: 500;
+      letter-spacing: 0.3px;
+    }
+
+    /* Overlay sobre YouTube */
+    .video-overlay-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 10;
+    }
+
+    .overlay-chart {
+      position: absolute;
+      width: 50%;
+      height: 30%;
+      border-radius: 8px;
+      display: none;
+    }
+
+    .overlay-chart.visible {
+      display: block;
+    }
+
+    .overlay-chart canvas {
+      width: 100% !important;
+      height: 100% !important;
+      display: block;
+    }
+
+    #overlayNoise {
+      top: 20%;
+      left: 10px;
+    }
+
+    #overlayVibration {
+      left: 10px;
+    }
+
+    #overlayVibration.position-top {
+      top: 20%;
+    }
+
+    #overlayVibration.position-below {
+      top: calc(30% + 20% + 20px);
+    }
+
+    .overlay-values {
+      position: absolute;
+      top: 20%;
+      right: 10px;
+      padding: 10px 12px;
+      font-size: 11px;
+      color: #e2e8f0;
+      opacity: 0;
+      pointer-events: none;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8), -1px -1px 3px rgba(0, 0, 0, 0.8);
+      transition: opacity 0.2s;
+    }
+
+    .overlay-values.visible {
+      opacity: 1;
+    }
+
+    .overlay-value-item {
+      margin-bottom: 6px;
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      font-family: ui-monospace, "SF Mono", Monaco, "Roboto Mono", Consolas, monospace;
+    }
+
+    .overlay-value-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .overlay-value-label {
+      color: #94a3b8;
+      font-size: 10px;
+    }
+
+    .overlay-value-number {
+      font-weight: 700;
+      font-size: 12px;
+    }
+
+    .overlay-value-number.noise {
+      color: #f97316;
+    }
+
+    .overlay-value-number.vibX {
+      color: #38bdf8;
+    }
+
+    .overlay-value-number.vibY {
+      color: #a78bfa;
+    }
+
+    .overlay-value-number.vibZ {
+      color: #10b981;
       font-weight: 700;
       font-size: 11px;
       letter-spacing: 0.3px;
@@ -777,7 +914,7 @@
     </div>
 
     <section class="panel hero">
-      <div class="videoWrap">
+      <div class="videoWrap" style="position: relative;">
         
           <div id="player"></div>
           <div id="playerError" style="display: none; background: rgba(220, 38, 38, 0.1); border: 1px solid rgba(220, 38, 38, 0.3); padding: 12px 16px; border-radius: 10px; color: #fca5a5; font-size: 13px;">
@@ -785,6 +922,36 @@
             <p style="margin-top: 0.5rem; font-size: 12px;">
               Para arquivos HTML locais, é recomendado usar um servidor HTTP ou acessar o vídeo diretamente no YouTube.
             </p>
+          </div>
+          <!-- Overlay sobre YouTube -->
+          <div class="video-overlay-container" id="videoOverlayContainer">
+            <!-- Gráfico de Ruído Overlay -->
+            <div id="overlayNoise" class="overlay-chart">
+              <canvas id="canvasOverlayNoise"></canvas>
+            </div>
+            <!-- Gráfico de Vibração Overlay -->
+            <div id="overlayVibration" class="overlay-chart">
+              <canvas id="canvasOverlayVibration"></canvas>
+            </div>
+            <!-- Valores Numéricos Overlay -->
+            <div id="overlayValues" class="overlay-values">
+              <div class="overlay-value-item">
+                <span class="overlay-value-label">Ruído:</span>
+                <span id="overlayValueNoise" class="overlay-value-number noise">--</span>
+              </div>
+              <div class="overlay-value-item">
+                <span class="overlay-value-label">Vib X:</span>
+                <span id="overlayValueVibX" class="overlay-value-number vibX">--</span>
+              </div>
+              <div class="overlay-value-item">
+                <span class="overlay-value-label">Vib Y:</span>
+                <span id="overlayValueVibY" class="overlay-value-number vibY">--</span>
+              </div>
+              <div class="overlay-value-item">
+                <span class="overlay-value-label">Vib Z:</span>
+                <span id="overlayValueVibZ" class="overlay-value-number vibZ">--</span>
+              </div>
+            </div>
           </div>
         
       </div>
@@ -834,7 +1001,7 @@
           <div class="cvValue" id="cvTime" style="font-size: 1rem; color: #cbd5e1;">00:00</div>
         </div>
         <div class="cvItem" style="padding: 8px; border-radius: 6px; background: rgba(255,255,255,0.02);">
-          <div class="cvLabel" style="font-size: 0.85rem; color: #94a3b8; margin-bottom: 4px;">Ruído (dB)</div>
+          <div class="cvLabel" style="font-size: 0.85rem; color: #94a3b8; margin-bottom: 4px;">Ruído (dBA)</div>
           <div class="cvValue noise" id="cvNoise" style="font-size: 1rem; color: #f97316;">--</div>
         </div>
         <div class="cvItem" style="padding: 8px; border-radius: 6px; background: rgba(255,255,255,0.02);">
@@ -850,6 +1017,44 @@
           <div class="cvValue vibZ" id="cvVz" style="font-size: 1rem; color: #10b981;">--</div>
         </div>
       </div>
+      
+      <div style="margin-top: 16px; display: flex; gap: 16px; flex-wrap: wrap;">
+        <div style="flex: 1; min-width: 300px; padding: 12px; background: rgba(59, 130, 246, 0.08); border: 1px solid rgba(59, 130, 246, 0.2); border-radius: 8px;">
+          <div style="font-size: 0.85rem; color: #94a3b8; margin-bottom: 10px; font-weight: 600; letter-spacing: 0.5px;">Exibir no player</div>
+          <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <input type="checkbox" id="toggleOverlayNoise" checked style="cursor: pointer; width: 16px; height: 16px; accent-color: #f97316;">
+              <label for="toggleOverlayNoise" style="cursor: pointer; font-size: 0.95rem; color: #cbd5e1; user-select: none;">Ruído</label>
+            </div>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <input type="checkbox" id="toggleOverlayVibration" checked style="cursor: pointer; width: 16px; height: 16px; accent-color: #38bdf8;">
+              <label for="toggleOverlayVibration" style="cursor: pointer; font-size: 0.95rem; color: #cbd5e1; user-select: none;">Vibração</label>
+            </div>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <input type="checkbox" id="toggleOverlayValues" checked style="cursor: pointer; width: 16px; height: 16px; accent-color: #10b981;">
+              <label for="toggleOverlayValues" style="cursor: pointer; font-size: 0.95rem; color: #cbd5e1; user-select: none;">Dados</label>
+            </div>
+          </div>
+        </div>
+        <div style="flex: 1; min-width: 300px; padding: 12px; background: rgba(59, 130, 246, 0.08); border: 1px solid rgba(59, 130, 246, 0.2); border-radius: 8px;">
+          <div style="font-size: 0.85rem; color: #94a3b8; margin-bottom: 10px; font-weight: 600; letter-spacing: 0.5px;">Eixos para exibição</div>
+          <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <input type="checkbox" id="toggleAxisX" checked style="cursor: pointer; width: 16px; height: 16px; accent-color: #38bdf8;">
+              <label for="toggleAxisX" style="cursor: pointer; font-size: 0.95rem; color: #cbd5e1; user-select: none;">X</label>
+            </div>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <input type="checkbox" id="toggleAxisY" checked style="cursor: pointer; width: 16px; height: 16px; accent-color: #a78bfa;">
+              <label for="toggleAxisY" style="cursor: pointer; font-size: 0.95rem; color: #cbd5e1; user-select: none;">Y</label>
+            </div>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <input type="checkbox" id="toggleAxisZ" checked style="cursor: pointer; width: 16px; height: 16px; accent-color: #10b981;">
+              <label for="toggleAxisZ" style="cursor: pointer; font-size: 0.95rem; color: #cbd5e1; user-select: none;">Z</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      
     </section>
 
     <!-- Seções retráteis -->
@@ -1240,9 +1445,10 @@
           }
           // Depois threshold e dados (com offset aplicado)
           drawThreshold(ctx2, mapX, state.meta.thresholds.vibrationThreshold, '#22d3ee', 'Limite');
-          drawLine(ctx2, vibXData, mapX, '#38bdf8', vibrationOffset);
-          drawLine(ctx2, vibYData, mapY, '#a78bfa', vibrationOffset);
-          drawLine(ctx2, vibZData, mapZ, '#10b981', vibrationOffset);
+          // Desenhar linhas de vibração (apenas eixos habilitados)
+          if (axisXEnabled) drawLine(ctx2, vibXData, mapX, '#38bdf8', vibrationOffset);
+          if (axisYEnabled) drawLine(ctx2, vibYData, mapY, '#a78bfa', vibrationOffset);
+          if (axisZEnabled) drawLine(ctx2, vibZData, mapZ, '#10b981', vibrationOffset);
         } else {
           drawNoData(ctx2, r2);
         }
@@ -1370,13 +1576,255 @@
         const vz = findNearest(state.vibZ, t);
 
         if (cvNoise) cvNoise.textContent = n && isFinite(n.y) ? n.y.toFixed(1) : '--';
-        if (cvVx) cvVx.textContent = vx && isFinite(vx.y) ? vx.y.toFixed(2) : '--';
-        if (cvVy) cvVy.textContent = vy && isFinite(vy.y) ? vy.y.toFixed(2) : '--';
-        if (cvVz) cvVz.textContent = vz && isFinite(vz.y) ? vz.y.toFixed(2) : '--';
+        if (cvVx) cvVx.textContent = vx && isFinite(vx.y) ? vx.y.toFixed(2) + ' µm' : '--';
+        if (cvVy) cvVy.textContent = vy && isFinite(vy.y) ? vy.y.toFixed(2) + ' µm' : '--';
+        if (cvVz) cvVz.textContent = vz && isFinite(vz.y) ? vz.y.toFixed(2) + ' µm' : '--';
+
+        // Atualizar valores no overlay também
+        updateOverlayValues(t);
       } catch (e) {
         console.error('Erro ao atualizar valores:', e);
       }
     }
+
+    
+    // ===== FUNÇÕES DE OVERLAY NO YOUTUBE =====
+    let overlayNoiseEnabled = true;
+    let overlayVibrationEnabled = true;
+    let overlayValuesEnabled = true;
+    let axisXEnabled = true;
+    let axisYEnabled = true;
+    let axisZEnabled = true;
+
+    function updateOverlayValues(t) {
+      try {
+        const overlayValues = document.getElementById('overlayValues');
+        
+        if (overlayValues && overlayValuesEnabled) {
+          const n = findNearest(state.noise, t);
+          const vx = findNearest(state.vibX, t);
+          const vy = findNearest(state.vibY, t);
+          const vz = findNearest(state.vibZ, t);
+
+          const noiseVal = document.getElementById('overlayValueNoise');
+          const vibXVal = document.getElementById('overlayValueVibX');
+          const vibYVal = document.getElementById('overlayValueVibY');
+          const vibZVal = document.getElementById('overlayValueVibZ');
+
+          if (noiseVal) noiseVal.textContent = n && isFinite(n.y) ? n.y.toFixed(1) + ' dB' : '--';
+          if (vibXVal) vibXVal.textContent = vx && isFinite(vx.y) ? vx.y.toFixed(2) + ' µm' : '--';
+          if (vibYVal) vibYVal.textContent = vy && isFinite(vy.y) ? vy.y.toFixed(2) + ' µm' : '--';
+          if (vibZVal) vibZVal.textContent = vz && isFinite(vz.y) ? vz.y.toFixed(2) + ' µm' : '--';
+
+          overlayValues.classList.add('visible');
+        } else if (overlayValues) {
+          overlayValues.classList.remove('visible');
+        }
+      } catch (e) {
+        console.error('Erro ao atualizar valores overlay:', e);
+      }
+    }
+
+    function renderOverlayChart(canvasId, data, color, unit, showThreshold, thresholdValue, offset = 0) {
+      try {
+        const canvas = document.getElementById(canvasId);
+        if (!canvas) return;
+
+        const rect = canvas.getBoundingClientRect();
+        if (rect.width <= 0 || rect.height <= 0) return;
+
+        const dpr = Math.min(window.devicePixelRatio || 1, 2);
+        canvas.width = Math.floor(rect.width * dpr);
+        canvas.height = Math.floor(rect.height * dpr);
+
+        const ctx = canvas.getContext('2d');
+        if (!ctx) return;
+
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        ctx.clearRect(0, 0, rect.width, rect.height);
+
+        if (!data || data.length === 0) return;
+
+        const map = fitData(data, rect.width, rect.height);
+        if (!map) return;
+
+        // Desenhar eixos sutis
+        ctx.strokeStyle = 'rgba(255, 255, 255, 0.1)';
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.moveTo(map.x0, map.y0);
+        ctx.lineTo(map.x1, map.y0);
+        ctx.moveTo(map.x0, map.y0);
+        ctx.lineTo(map.x0, map.y1);
+        ctx.stroke();
+
+        // Desenhar threshold se necessário
+        if (showThreshold && thresholdValue !== undefined) {
+          const thresholdY = map.y0 - (thresholdValue - map.vMin) / (map.vMax - map.vMin || 1) * (map.y0 - map.y1);
+          // Usar cor laranja para ruído (#f59e0b) ou ciano para vibração dependendo do contexto
+          ctx.strokeStyle = color === '#f97316' ? 'rgba(245, 158, 11, 0.8)' : 'rgba(34, 211, 238, 0.8)';
+          ctx.lineWidth = 1.5;
+          ctx.setLineDash([4, 4]);
+          ctx.beginPath();
+          ctx.moveTo(map.x0, thresholdY);
+          ctx.lineTo(map.x1, thresholdY);
+          ctx.stroke();
+          ctx.setLineDash([]);
+        }
+
+        // Desenhar linha de dados
+        drawLine(ctx, data, map, color, offset);
+
+        // Desenhar cursor de tempo atual
+        drawCursor(ctx, map, currentTime, '#ffffff');
+      } catch (e) {
+        console.error('Erro ao renderizar overlay:', canvasId, e);
+      }
+    }
+
+    function renderOverlayCharts() {
+      const noiseOffset = state.meta?.offsets?.noise || 0;
+      const vibrationOffset = state.meta?.offsets?.vibration || 0;
+      
+      if (overlayNoiseEnabled) {
+        renderOverlayChart(
+          'canvasOverlayNoise',
+          state.noise || [],
+          '#f97316',
+          'dB',
+          true,
+          state.meta.thresholds.noiseThreshold,
+          noiseOffset
+        );
+      }
+
+      if (overlayVibrationEnabled) {
+        const vibXData = state.vibX || [];
+        const vibYData = state.vibY || [];
+        const vibZData = state.vibZ || [];
+        
+        const canvas = document.getElementById('canvasOverlayVibration');
+        if (!canvas) return;
+
+        const rect = canvas.getBoundingClientRect();
+        if (rect.width <= 0 || rect.height <= 0) return;
+
+        const dpr = Math.min(window.devicePixelRatio || 1, 2);
+        canvas.width = Math.floor(rect.width * dpr);
+        canvas.height = Math.floor(rect.height * dpr);
+
+        const ctx = canvas.getContext('2d');
+        if (!ctx) return;
+
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        ctx.clearRect(0, 0, rect.width, rect.height);
+
+        if (vibXData.length === 0) return;
+
+        const mapX = fitData(vibXData, rect.width, rect.height);
+        const mapY = fitData(vibYData, rect.width, rect.height);
+        const mapZ = fitData(vibZData, rect.width, rect.height);
+        
+        if (!mapX) return;
+
+        // Desenhar eixos sutis
+        ctx.strokeStyle = 'rgba(255, 255, 255, 0.1)';
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.moveTo(mapX.x0, mapX.y0);
+        ctx.lineTo(mapX.x1, mapX.y0);
+        ctx.moveTo(mapX.x0, mapX.y0);
+        ctx.lineTo(mapX.x0, mapX.y1);
+        ctx.stroke();
+
+        // Desenhar threshold
+        const thresholdY = mapX.y0 - (state.meta.thresholds.vibrationThreshold - mapX.vMin) / (mapX.vMax - mapX.vMin || 1) * (mapX.y0 - mapX.y1);
+        ctx.strokeStyle = 'rgba(34, 211, 238, 0.6)';
+        ctx.lineWidth = 1;
+        ctx.setLineDash([4, 4]);
+        ctx.beginPath();
+        ctx.moveTo(mapX.x0, thresholdY);
+        ctx.lineTo(mapX.x1, thresholdY);
+        ctx.stroke();
+        ctx.setLineDash([]);
+
+        // Desenhar linhas de vibração (apenas eixos habilitados)
+        if (axisXEnabled) drawLine(ctx, vibXData, mapX, '#38bdf8', vibrationOffset);
+        if (axisYEnabled) drawLine(ctx, vibYData, mapY, '#a78bfa', vibrationOffset);
+        if (axisZEnabled) drawLine(ctx, vibZData, mapZ, '#10b981', vibrationOffset);
+
+        // Desenhar cursor de tempo atual
+        drawCursor(ctx, mapX, currentTime, '#ffffff');
+      }
+    }
+
+    function toggleOverlayNoise(enabled) {
+      overlayNoiseEnabled = enabled;
+      const overlayNoise = document.getElementById('overlayNoise');
+      const overlayVibration = document.getElementById('overlayVibration');
+      
+      if (overlayNoise) {
+        if (enabled) {
+          overlayNoise.classList.add('visible');
+          renderOverlayChart(
+            'canvasOverlayNoise',
+            state.noise || [],
+            '#f97316',
+            'dB',
+            true,
+            state.meta.thresholds.noiseThreshold
+          );
+        } else {
+          overlayNoise.classList.remove('visible');
+        }
+      }
+
+      // Ajustar posição do gráfico de vibração
+      if (overlayVibration) {
+        if (enabled) {
+          // Se ruído está ativo, vibração vai para baixo
+          overlayVibration.classList.remove('position-top');
+          overlayVibration.classList.add('position-below');
+        } else {
+          // Se ruído está inativo, vibração sobe para o topo
+          overlayVibration.classList.remove('position-below');
+          overlayVibration.classList.add('position-top');
+        }
+      }
+
+      console.log('🎨 Overlay Ruído:', enabled ? 'Ativado' : 'Desativado');
+    }
+
+    function toggleOverlayVibration(enabled) {
+      overlayVibrationEnabled = enabled;
+      const overlayVibration = document.getElementById('overlayVibration');
+      
+      if (overlayVibration) {
+        if (enabled) {
+          overlayVibration.classList.add('visible');
+          // Ajustar posição baseado no estado do ruído
+          if (overlayNoiseEnabled) {
+            overlayVibration.classList.remove('position-top');
+            overlayVibration.classList.add('position-below');
+          } else {
+            overlayVibration.classList.remove('position-below');
+            overlayVibration.classList.add('position-top');
+          }
+          renderOverlayCharts();
+        } else {
+          overlayVibration.classList.remove('visible');
+        }
+      }
+
+      console.log('🎨 Overlay Vibração:', enabled ? 'Ativado' : 'Desativado');
+    }
+
+    function toggleOverlayValues(enabled) {
+      overlayValuesEnabled = enabled;
+      updateOverlayValues(currentTime);
+      console.log('🎨 Overlay Dados:', enabled ? 'Ativado' : 'Desativado');
+    }
+    
 
     function updateTimeUI(t) {
       try {
@@ -1438,6 +1886,7 @@
         updateTimelineDom(currentTime);
         updateCurrentValues(currentTime);
         renderCharts();
+        renderOverlayCharts();
       } catch (e) {
         console.error('Erro render tick:', e);
       }
@@ -1446,50 +1895,155 @@
     }
 
     function play() {
+      console.log('▶️ Função play chamada');
       isPlaying = true;
       // Se ainda não começou (currentTime < roiStart), posicionar no início da ROI
       if (currentTime < roiStart) {
         currentTime = roiStart;
-        // Sincronizar com YouTube se disponível
-        try {
-          if (window.youtubePlayer && window.youtubeReady && !window.youtubeError && !window.isLocalFile) {
-            window.youtubePlayer.seekTo(roiStart, true);
-            window.youtubePlayer.playVideo();
-          }
-        } catch (e) {
-          console.error('Erro ao sincronizar YouTube no play:', e);
-        }
-      } else {
-        // Se já começou, sincronizar com YouTube antes de reproduzir
-        try {
-          if (window.youtubePlayer && window.youtubeReady && !window.youtubeError && !window.isLocalFile) {
-            window.youtubePlayer.seekTo(currentTime, true);
-            window.youtubePlayer.playVideo();
-          }
-        } catch (e) {
-          console.error('Erro ao sincronizar YouTube no play:', e);
-        }
       }
+      
+      // Sincronizar com YouTube se disponível
+      
+      try {
+        if (window.youtubePlayer && window.youtubeReady && !window.youtubeError && !window.isLocalFile) {
+          console.log('📺 YouTube disponível, sincronizando para', currentTime.toFixed(2), 's');
+          window.youtubePlayer.seekTo(currentTime, true);
+          setTimeout(() => {
+            if (window.youtubePlayer) {
+              window.youtubePlayer.playVideo();
+              console.log('✅ YouTube reproduzindo');
+            }
+          }, 50);
+        } else {
+          console.warn('⚠️ YouTube não disponível:', {
+            player: !!window.youtubePlayer,
+            ready: window.youtubeReady,
+            error: window.youtubeError,
+            local: window.isLocalFile
+          });
+        }
+      } catch (e) {
+        console.error('Erro ao sincronizar YouTube no play:', e);
+      }
+      
     }
 
     function pause() {
+      console.log('⏸️ Função pause chamada');
       isPlaying = false;
+      // Pausar YouTube se disponível
+      
+      try {
+        if (window.youtubePlayer && window.youtubeReady && !window.youtubeError && !window.isLocalFile) {
+          window.youtubePlayer.pauseVideo();
+          console.log('✅ YouTube pausado');
+        } else {
+          console.warn('⚠️ YouTube não disponível para pausar');
+        }
+      } catch (e) {
+        console.error('Erro ao pausar YouTube:', e);
+      }
+      
     }
 
     function skip(delta) {
+      console.log('⏩ Função skip chamada, delta:', delta);
       currentTime = Math.max(0, Math.min(duration, currentTime + delta));
+      console.log('🕒 Novo currentTime:', currentTime.toFixed(2));
       updateTimeUI(currentTime);
       updateTimelineDom(currentTime);
       updateCurrentValues(currentTime);
       renderCharts();
+      
+      renderOverlayCharts();
+      // Sincronizar com YouTube
+      try {
+        if (window.youtubePlayer && window.youtubeReady && !window.youtubeError && !window.isLocalFile) {
+          window.youtubePlayer.seekTo(currentTime, true);
+          console.log('✅ YouTube skip para', currentTime.toFixed(2), 's');
+        } else {
+          console.warn('⚠️ YouTube não disponível para skip:', {
+            player: !!window.youtubePlayer,
+            ready: window.youtubeReady,
+            error: window.youtubeError
+          });
+        }
+      } catch (e) {
+        console.error('Erro ao skip YouTube:', e);
+      }
+      
     }
 
-    function seekTo(t) {
-      currentTime = Math.max(0, Math.min(duration, t));
+    function seekTo(t, autoPlay = false, rewindSeconds = 0) {
+      // Aplicar retrocesso se especificado
+      let targetTime = t - rewindSeconds;
+      targetTime = Math.max(0, Math.min(duration, targetTime));
+      
+      currentTime = targetTime;
+      
+      console.log('🎯 seekTo chamado:', {
+        tempo_clicado: t.toFixed(2),
+        retrocesso: rewindSeconds,
+        tempo_final: targetTime.toFixed(2),
+        autoPlay: autoPlay,
+        youtubeDisponivel: !!(window.youtubePlayer && window.youtubeReady)
+      });
+      
       updateTimeUI(currentTime);
       updateTimelineDom(currentTime);
       updateCurrentValues(currentTime);
       renderCharts();
+      renderOverlayCharts();
+      
+      // Sincronizar com YouTube se disponível
+      
+      try {
+        if (window.youtubePlayer && window.youtubeReady && !window.youtubeError && !window.isLocalFile) {
+          console.log('📺 Sincronizando YouTube para', currentTime.toFixed(2), 's, autoPlay:', autoPlay);
+          isProgrammaticSeek = true;
+          window.youtubePlayer.seekTo(currentTime, true);
+          
+          // Auto-play se solicitado
+          if (autoPlay) {
+            console.log('▶️ Aguardando 150ms para iniciar reprodução do YouTube...');
+            setTimeout(() => {
+              try {
+                if (window.youtubePlayer && window.youtubeReady) {
+                  console.log('▶️ Chamando playVideo()...');
+                  window.youtubePlayer.playVideo();
+                  isPlaying = true;
+                  console.log('✅ playVideo() chamado com sucesso');
+                } else {
+                  console.error('❌ YouTube player não disponível no timeout');
+                }
+              } catch (err) {
+                console.error('❌ Erro ao chamar playVideo():', err);
+              } finally {
+                isProgrammaticSeek = false;
+              }
+            }, 150);
+          } else {
+            setTimeout(() => {
+              isProgrammaticSeek = false;
+            }, 200);
+          }
+        } else {
+          console.warn('⚠️ YouTube não disponível:', {
+            player: !!window.youtubePlayer,
+            ready: window.youtubeReady,
+            error: window.youtubeError,
+            local: window.isLocalFile
+          });
+        }
+      } catch (e) {
+        console.error('❌ Erro ao sincronizar YouTube no seekTo:', e);
+      }
+      
+      
+      // Auto-play dos gráficos
+      if (autoPlay) {
+        isPlaying = true;
+      }
     }
 
     // Event listeners
@@ -1522,18 +2076,78 @@
       if (btnBack) btnBack.addEventListener('click', () => skip(-10));
       if (btnFwd) btnFwd.addEventListener('click', () => skip(10));
 
+      
+      // Event listeners para checkboxes de overlay
+      const checkboxOverlayNoise = qs('#toggleOverlayNoise');
+      const checkboxOverlayVibration = qs('#toggleOverlayVibration');
+      const checkboxOverlayValues = qs('#toggleOverlayValues');
+
+      if (checkboxOverlayNoise) {
+        checkboxOverlayNoise.addEventListener('change', (e) => {
+          toggleOverlayNoise(e.target.checked);
+        });
+      }
+
+      if (checkboxOverlayVibration) {
+        checkboxOverlayVibration.addEventListener('change', (e) => {
+          toggleOverlayVibration(e.target.checked);
+        });
+      }
+
+      if (checkboxOverlayValues) {
+        checkboxOverlayValues.addEventListener('change', (e) => {
+          toggleOverlayValues(e.target.checked);
+        });
+      }
+
+      // Event listeners para checkboxes de eixos
+      const checkboxAxisX = qs('#toggleAxisX');
+      const checkboxAxisY = qs('#toggleAxisY');
+      const checkboxAxisZ = qs('#toggleAxisZ');
+
+      if (checkboxAxisX) {
+        checkboxAxisX.addEventListener('change', (e) => {
+          axisXEnabled = e.target.checked;
+          renderCharts();
+          renderOverlayCharts();
+          console.log('🎯 Eixo X:', e.target.checked ? 'Ativado' : 'Desativado');
+        });
+      }
+
+      if (checkboxAxisY) {
+        checkboxAxisY.addEventListener('change', (e) => {
+          axisYEnabled = e.target.checked;
+          renderCharts();
+          renderOverlayCharts();
+          console.log('🎯 Eixo Y:', e.target.checked ? 'Ativado' : 'Desativado');
+        });
+      }
+
+      if (checkboxAxisZ) {
+        checkboxAxisZ.addEventListener('change', (e) => {
+          axisZEnabled = e.target.checked;
+          renderCharts();
+          renderOverlayCharts();
+          console.log('🎯 Eixo Z:', e.target.checked ? 'Ativado' : 'Desativado');
+        });
+      }
+      
+
       if (timeline) {
         timeline.addEventListener('click', (ev) => {
           const rect = timeline.getBoundingClientRect();
           const pct = Math.max(0, Math.min(1, (ev.clientX - rect.left) / rect.width));
           const target = duration * pct;
-          seekTo(target);
+          // Retroceder 3 segundos e iniciar reprodução
+          seekTo(target, true, 3);
+          console.log('📍 Click na timeline:', target.toFixed(2), '→ posicionado em', (target - 3).toFixed(2), 's e iniciando reprodução');
         });
       }
 
       window.addEventListener('resize', () => {
         try {
           renderCharts();
+          renderOverlayCharts();
         } catch (e) {
           console.error('Erro resize:', e);
         }
@@ -1586,6 +2200,16 @@
           showTooltip(canvasNoise, e, state.noise, 'dB', '#f97316');
         });
         canvasNoise.addEventListener('mouseleave', hideTooltip);
+        
+        // Click no gráfico de ruído: retroceder 3s e iniciar reprodução
+        canvasNoise.addEventListener('click', (e) => {
+          const rect = canvasNoise.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const relativeX = x / rect.width;
+          const targetTime = duration * relativeX;
+          seekTo(targetTime, true, 3);
+          console.log('📍 Click no gráfico de ruído:', targetTime.toFixed(2), '→ posicionado em', (targetTime - 3).toFixed(2), 's e iniciando reprodução');
+        });
       }
 
       if (canvasVibration) {
@@ -1621,6 +2245,16 @@
           }
         });
         canvasVibration.addEventListener('mouseleave', hideTooltip);
+        
+        // Click no gráfico de vibração: retroceder 3s e iniciar reprodução
+        canvasVibration.addEventListener('click', (e) => {
+          const rect = canvasVibration.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const relativeX = x / rect.width;
+          const targetTime = duration * relativeX;
+          seekTo(targetTime, true, 3);
+          console.log('📍 Click no gráfico de vibração:', targetTime.toFixed(2), '→ posicionado em', (targetTime - 3).toFixed(2), 's e iniciando reprodução');
+        });
       }
 
       // Inicializar
@@ -1628,6 +2262,13 @@
       updateTimelineDom(roiStart);
       updateCurrentValues(roiStart);
       renderCharts();
+      
+      // Inicializar overlays com valores padrão
+      renderOverlayCharts();
+      toggleOverlayNoise(true);
+      toggleOverlayVibration(true);
+      toggleOverlayValues(true);
+      
       tick();
 
       // Inicializar YouTube se houver URL e não for arquivo local
@@ -1640,6 +2281,7 @@
 
     window.addEventListener('beforeunload', () => {
       if (rafId) cancelAnimationFrame(rafId);
+      if (window.seekingMonitorInterval) clearInterval(window.seekingMonitorInterval);
     });
 
     // YouTube API Integration
@@ -1747,11 +2389,17 @@
     }
 
     function onPlayerReady(event) {
-      console.log('YouTube player ready');
+      console.log('✅ YouTube player ready');
+      youtubeReady = true;
+      window.youtubeReady = true;
+      
       // Sincronizar tempo do player com nosso currentTime
       if (youtubePlayer && currentTime > 0) {
         youtubePlayer.seekTo(currentTime);
       }
+      
+      // Iniciar monitoramento de seeking (quando usuário clica na barra de progresso)
+      startSeekingMonitor();
     }
 
     function onPlayerError(event) {
@@ -1806,6 +2454,75 @@
         isPlaying = true;
       } else if (event.data === window.YT.PlayerState.PAUSED) {
         isPlaying = false;
+      }
+      
+      // Detectar quando o vídeo está em buffer (geralmente após seeking)
+      if (event.data === window.YT.PlayerState.BUFFERING) {
+        // Sincronizar imediatamente com o tempo do YouTube
+        syncWithYouTube();
+      }
+    }
+
+    // Função para monitorar mudanças de posição do vídeo (seeking manual)
+    let lastYouTubeTime = 0;
+    let seekingMonitorInterval = null;
+    let isProgrammaticSeek = false;
+    window.seekingMonitorInterval = null;
+    
+    function startSeekingMonitor() {
+      if (seekingMonitorInterval) return; // Já está monitorando
+      
+      console.log('🔍 Iniciando monitor de seeking');
+      
+      seekingMonitorInterval = setInterval(() => {
+        try {
+          if (youtubePlayer && youtubeReady && !youtubeError && !isLocalFile) {
+            const ytTime = youtubePlayer.getCurrentTime();
+            
+            if (ytTime !== undefined && isFinite(ytTime)) {
+              // Detectar salto grande na posição (> 1 segundo) = usuário clicou na barra
+              const timeDiff = Math.abs(ytTime - lastYouTubeTime);
+              
+              if (timeDiff > 1.0 && lastYouTubeTime > 0 && !isProgrammaticSeek) {
+                console.log('🎯 Seeking manual detectado: salto de', lastYouTubeTime.toFixed(2), 'para', ytTime.toFixed(2));
+                // Atualizar currentTime imediatamente
+                currentTime = ytTime;
+                // Atualizar UI instantaneamente
+                updateTimeUI(currentTime);
+                updateTimelineDom(currentTime);
+                updateCurrentValues(currentTime);
+                renderCharts();
+              } else if (isProgrammaticSeek && timeDiff > 1.0) {
+                console.log('⏩ Seeking programático ignorado (clique no gráfico)');
+              }
+              
+              lastYouTubeTime = ytTime;
+            }
+          }
+        } catch (e) {
+          console.error('Erro no monitor de seeking:', e);
+        }
+      }, 100); // Verificar a cada 100ms
+      
+      window.seekingMonitorInterval = seekingMonitorInterval;
+    }
+    
+    function syncWithYouTube() {
+      try {
+        if (youtubePlayer && youtubeReady && !youtubeError && !isLocalFile) {
+          const ytTime = youtubePlayer.getCurrentTime();
+          if (ytTime !== undefined && isFinite(ytTime)) {
+            console.log('🔄 Sincronizando com YouTube:', ytTime.toFixed(2));
+            currentTime = ytTime;
+            lastYouTubeTime = ytTime;
+            updateTimeUI(currentTime);
+            updateTimelineDom(currentTime);
+            updateCurrentValues(currentTime);
+            renderCharts();
+          }
+        }
+      } catch (e) {
+        console.error('Erro ao sincronizar com YouTube:', e);
       }
     }
 
