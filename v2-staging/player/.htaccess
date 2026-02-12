@@ -1,0 +1,72 @@
+# ========================================
+# SEGURANÇA - PASTA PLAYER
+# Sistema 100% JavaScript - Sem PHP
+# ========================================
+
+# BLOQUER LISTAGEM DE DIRETÓRIOS
+Options -Indexes
+
+# Bloquear acesso ao próprio .htaccess
+<Files ".htaccess">
+    Order allow,deny
+    Deny from all
+</Files>
+
+# Bloquear acesso direto a index.html
+<Files "index.html">
+    Order allow,deny
+    Deny from all
+</Files>
+
+# Bloquear acesso a arquivos de configuração e sensíveis
+<FilesMatch "\.(conf|config|json|sql|log|env|txt|xml|yml|yaml|db)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Bloquear qualquer arquivo executável
+<FilesMatch "\.(php|phtml|php3|php4|php5|php7|phar|pht|phps|jsp|jspx|jsw|jsv|jspf|asp|aspx|cgi|pl|py|rb|exe|bat|com|cmd|sh|bin|jar)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# PERMITIR APENAS ARQUIVOS SEGURO
+<FilesMatch "\.(html?|js|css|mp4|webm|pdf|png|jpg|jpeg|gif|svg|ico)$">
+    Order allow,deny
+    Allow from all
+    
+    # Headers de segurança para HTML
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; media-src 'self'; frame-src 'none'; object-src 'none';"
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+</FilesMatch>
+
+# Configurar tipos MIME
+<IfModule mod_mime.c>
+    AddType text/html .html
+    AddType text/javascript .js
+    AddType text/css .css
+    AddType video/mp4 .mp4
+    AddType video/webm .webm
+    AddType application/pdf .pdf
+    AddCharset UTF-8 .html .js .css
+</IfModule>
+
+# Mod_rewrite para segurança adicional
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # Redirecionar index.html para fora
+    RewriteRule ^index\.html$ - [F]
+    
+    # Bloquear acesso direto a diretórios
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^(.*)$ - [F]
+</IfModule>
+
+# Desabilitar a execução de scripts em subdireórios
+<Directory /player>
+    php_flag engine off
+    AddType text/plain .php .phtml .php3 .php4 .php5 .php7
+</Directory>
