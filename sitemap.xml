@@ -149,6 +149,26 @@
 <priority>0.93</priority>
 </url>
 
+<!-- Páginas Locais - Ibitinga e Região -->
+<url>
+<loc>https://www.protoncd.com.br/ibitinga/inspecao-predial-ibitinga.html</loc>
+<lastmod>2026-01-29</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.92</priority>
+</url>
+<url>
+<loc>https://www.protoncd.com.br/ibitinga/avcb-clcb-ibitinga.html</loc>
+<lastmod>2026-01-29</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.93</priority>
+</url>
+<url>
+<loc>https://www.protoncd.com.br/ibitinga/regularizacao-galpoes-ibitinga.html</loc>
+<lastmod>2026-01-29</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.93</priority>
+</url>
+
 <!-- Página Comercial -->
 <url>
 <loc>https://www.protoncd.com.br/franquias.html</loc>
