@@ -4,8 +4,8 @@
 
 <!-- ============================================================
      PROTONCD SITEMAP v2.0
-     Atualizado: 2026-02-12 — Migração completa para v2
-     Total de URLs indexáveis: 29
+     Atualizado: 2026-02-15 — 7 novas páginas Ibitinga
+     Total de URLs indexáveis: 35
      ============================================================ -->
 
 <!-- ═══════════════════════════════════════════════════════════
@@ -202,8 +202,44 @@
   <priority>0.92</priority>
 </url>
 <url>
-  <loc>https://www.protoncd.com.br/ibitinga/avcb-clcb-ibitinga.html</loc>
-  <lastmod>2026-02-12</lastmod>
+  <loc>https://www.protoncd.com.br/ibitinga/prevencao-incendio-ibitinga.html</loc>
+  <lastmod>2026-02-15</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.92</priority>
+</url>
+<url>
+  <loc>https://www.protoncd.com.br/ibitinga/projetos-arquitetonicos-ibitinga.html</loc>
+  <lastmod>2026-02-15</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.92</priority>
+</url>
+<url>
+  <loc>https://www.protoncd.com.br/ibitinga/seguranca-trabalho-ibitinga.html</loc>
+  <lastmod>2026-02-15</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.92</priority>
+</url>
+<url>
+  <loc>https://www.protoncd.com.br/ibitinga/laudo-pericial-ibitinga.html</loc>
+  <lastmod>2026-02-15</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.92</priority>
+</url>
+<url>
+  <loc>https://www.protoncd.com.br/ibitinga/nr12-ibitinga.html</loc>
+  <lastmod>2026-02-15</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.92</priority>
+</url>
+<url>
+  <loc>https://www.protoncd.com.br/ibitinga/playgrounds-ibitinga.html</loc>
+  <lastmod>2026-02-15</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.92</priority>
+</url>
+<url>
+  <loc>https://www.protoncd.com.br/ibitinga/pmoc-ibitinga.html</loc>
+  <lastmod>2026-02-15</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.92</priority>
 </url>
