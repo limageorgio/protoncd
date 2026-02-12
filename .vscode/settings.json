@@ -1,0 +1,8 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "/^git add -A; git commit -m \"fix: client logos visibility - use light card bg instead of brightness/invert filter\"; git push$/": {
+            "approve": true,
+            "matchCommandLine": true
+        }
+    }
+}
