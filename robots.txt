@@ -1,20 +1,51 @@
 User-agent: *
 Allow: /
 
-# Bloquear apenas diretórios desnecessários (se houver)
-# Disallow: /admin/
-# Disallow: /temp/
+# Bloquear pastas não-indexáveis
+Disallow: /old/
+Disallow: /v2-staging/
+Disallow: /player/admin.html
+Disallow: /css/
+Disallow: /js/
+Disallow: /webfonts/
 
-# Crawl-delay (opcional - remover se causar problemas)
-# Crawl-delay: 1
+# Permitir explicitamente todas as páginas de serviço
+Allow: /analise-vibracao-elevadores.html
+Allow: /inspecao-hvac-pmoc.html
+Allow: /inspecao-sistemas-mecanicos.html
+Allow: /cercon-goias.html
+Allow: /laudo-pericial-engenharia.html
+Allow: /inspecao-combate-incendio.html
+Allow: /inspecao-gas-predial.html
+Allow: /inspecao-casa-bombas.html
+Allow: /inspecao-pressurizacao-escadas.html
+Allow: /inspecao-playgrounds.html
+Allow: /teste-arrancamento-olhais.html
+Allow: /landing-servicos.html
+Allow: /pacotes-servicos.html
+Allow: /franquias.html
 
-# Sitemap
-Sitemap: https://www.protoncd.com.br/sitemap.xml
-
-# Otimização adicional (25/12/2025)
-# Permitir explicitamente páginas importantes
+# Permitir todas as páginas regionais
 Allow: /goiania/
 Allow: /brasilia/
 Allow: /anapolis/
 Allow: /rio-verde/
+Allow: /sao-paulo/
+Allow: /rio-de-janeiro/
+Allow: /belo-horizonte/
+Allow: /curitiba/
+Allow: /porto-alegre/
+Allow: /ibitinga/
+
+# Permitir conhecimento técnico
 Allow: /conhecimento-tecnico/
+
+# Permitir player reports (mas não admin)
+Allow: /player/*.html
+Disallow: /player/admin.html
+
+# Permitir imagens para Google Images
+Allow: /img/
+
+# Sitemap
+Sitemap: https://www.protoncd.com.br/sitemap.xml

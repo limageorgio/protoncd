@@ -1,0 +1,40 @@
+{
+    "categoria": "Estruturas Metálicas e Escadas",
+    "descricao": "Casos envolvendo escadas metálicas, estruturas autoportantes e requisitos de estabilidade",
+    "faqs": [
+        {
+            "id": "est-001",
+            "pergunta": "Escada metálica em L sem coluna de apoio é irregular?",
+            "resposta": "Não necessariamente. A ausência de coluna de apoio no patamar intermediário pode ser tecnicamente aceitável quando a escada foi projetada como estrutura autoportante, com perfis dimensionados para garantir estabilidade e rigidez (sem deformações ou vibrações excessivas) durante a vistoria. Diferenças em relação a outras escadas do empreendimento não caracterizam vício por si só. Recomenda-se que a construtora apresente o projeto estrutural ou memorial de dimensionamento comprovando a tipologia autoportante e as verificações de resistência, em conformidade com boas práticas de engenharia e normas de estruturas metálicas.",
+            "normas": [
+                "NBR 14762",
+                "NBR 9077"
+            ],
+            "referencias": [],
+            "responsabilidade": "Construtora",
+            "gravidade": "Média"
+        },
+        {
+            "id": "est-002",
+            "pergunta": "Falhas de pintura em portões metálicos podem ser ignoradas porque não foram apontadas na entrega?",
+            "resposta": "Não. A vistoria de entrega não é termo de quitação absoluta nem exime a construtora de corrigir falhas de acabamento que surgem logo após a entrega. Oxidação precoce ou falhas de aderência da pintura em portões expostos às intempéries indicam preparação inadequada de superfície ou aplicação deficiente, caracterizando vício construtivo. O Código Civil e o Código de Defesa do Consumidor asseguram a responsabilidade da construtora pela qualidade dos materiais e acabamentos entregues. Assim, a empresa deve refazer o tratamento e a pintura para garantir a durabilidade prevista em projeto.",
+            "normas": [
+                "NBR 15575",
+                "Código de Defesa do Consumidor"
+            ],
+            "referencias": [],
+            "responsabilidade": "Construtora",
+            "gravidade": "Média"
+        },
+        {
+            "id": "est-003",
+            "pergunta": "A ausência de batentes de borracha em portões metálicos pode ser desconsiderada?",
+            "resposta": "Não. Portões metálicos sem amortecedores de borracha ou poliuretano nos pontos de batida geram impacto metal-metal, ruído excessivo e aceleram o desgaste de dobradiças, pivôs e fechaduras. Mesmo que não haja exigência expressa em norma específica, trata-se de boa prática de engenharia e manutenção preventiva. Recomenda-se instalar batentes amortecedores em ambos os lados de contato e revisar o ajuste após a implantação para garantir conforto acústico e longevidade do conjunto.",
+            "normas": [
+                "Boas práticas de manutenção"
+            ],
+            "responsabilidade": "Construtora",
+            "gravidade": "Média"
+        }
+    ]
+}

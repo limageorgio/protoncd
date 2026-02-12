@@ -1,0 +1,83 @@
+{
+    "categoria": "HVAC e Climatização",
+    "descricao": "Problemas comuns em sistemas de ar-condicionado, condensadoras e VRF",
+    "faqs": [
+        {
+            "id": "hvac-001",
+            "pergunta": "Por que a instalação da condensadora precisa respeitar os afastamentos do manual do fabricante?",
+            "resposta": "Em nossas inspeções, identificamos frequentemente unidades condensadoras instaladas com distâncias inferiores aos mínimos especificados pelos fabricantes (ex.: Samsung exige 300mm laterais conforme manual modelo AJ**TXJKH, pág. 7). A alegação de que \"o ambiente é altamente arejado\" não substitui o cumprimento das medidas geométricas fixas estabelecidas no manual. O fabricante define critérios objetivos, não condicionantes subjetivas de ventilação. A não conformidade pode invalidar a garantia contratual e gerar recirculação de ar quente em condições críticas, comprometendo a vida útil dos componentes por potencial superaquecimento.",
+            "normas": [
+                "Manual Samsung modelo AJ**TXJKH"
+            ],
+            "referencias": [
+                "https://downloadcenter.samsung.com/content/UM/202404/20240424112709923/DB68-09261A-05_IM_FJM_HP_Outdoor_EA_EN_240207-D01.pdf"
+            ],
+            "responsabilidade": "Construtora",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "hvac-002",
+            "pergunta": "A certificação da assistência técnica garante que a instalação está conforme as normas?",
+            "resposta": "Não. O Manual de Projeto das Unidades Centrais Midea VC Plus exige o cumprimento integral de critérios objetivos de dimensionamento (proporção de combinação, número máximo de evaporadoras, limites de comprimento e desnível de tubulações, condições de operação e requisitos de espaço). A certificação da assistência técnica não autoriza ajustes empíricos de espaçamento ou layout. O manual deixa claro, especialmente na Parte 3 - Posicionamento e instalação - e nas tabelas 1-5.1 e 1-5.2, que qualquer aplicação fora dos limites estabelecidos deve ser previamente analisada e aprovada pela Midea Carrier. Alegações genéricas de que o instalador \"validou\" o espaçamento não substituem a comprovação de atendimento às tabelas e diagramas. O descumprimento pode causar perda de desempenho, danos ao equipamento e cancelamento da garantia.",
+            "normas": [
+                "Manual de Projeto Midea VC Plus (Partes 1 a 3)",
+                "Tabela 1-5.1 e 1-5.2 Midea VC Plus"
+            ],
+            "referencias": [
+                "https://carrierdobrasil.com.br/wp-content/uploads/2020/10/Manual-de-Projeto-Unidades-Centrais-Midea-VC-Plus-I-10-22.pdf"
+            ],
+            "responsabilidade": "Construtora",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "hvac-003",
+            "pergunta": "A ventilação natural do ambiente pode compensar o não cumprimento dos afastamentos mínimos da condensadora?",
+            "resposta": "Não. É comum receber alegações de que ambientes \"altamente arejados\" ou com \"ventilação natural robusta\" justificariam o descumprimento das distâncias mínimas especificadas pelos fabricantes. Esta argumentação é tecnicamente improcedente. Os manuais de instalação estabelecem critérios geométricos fixos e objetivos (exemplo: 300mm laterais no modelo Samsung AJ**TXJKH, pág. 7), sem qualquer previsão de flexibilização baseada em condições subjetivas de ventilação do local. A conformidade técnica é aferida pelo atendimento integral às dimensões de projeto, não por suposições empíricas sobre correntes de ar. O descumprimento pode invalidar a garantia contratual e gerar recirculação de ar quente em condições críticas, comprometendo a vida útil dos componentes e a eficiência energética do sistema.",
+            "normas": [
+                "Manual Samsung modelo AJ**TXJKH",
+                "NBR 16401 (Instalações de ar-condicionado)"
+            ],
+            "referencias": [
+                "https://downloadcenter.samsung.com/content/UM/202404/20240424112709923/DB68-09261A-05_IM_FJM_HP_Outdoor_EA_EN_240207-D01.pdf"
+            ],
+            "responsabilidade": "Construtora",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "hvac-004",
+            "pergunta": "A NBR 16655 pode substituir as distâncias mínimas previstas no manual das condensadoras?",
+            "resposta": "Não. A NBR 16655 orienta que, na ausência de informações do fabricante, podem ser adotados afastamentos mínimos gerais (ex.: 200 mm). Entretanto, quando o fabricante fornece parâmetros específicos para cada modelo, esses valores prevalecem sobre recomendações genéricas de norma. Cada condensadora possui geometria, fluxo de ar e requisitos distintos definidos por ensaios próprios. Aplicar apenas o valor genérico pode restringir a tecnologia e comprometer desempenho, segurança e garantia do equipamento. Por isso, sempre deve prevalecer o manual da marca/modelo instalado.",
+            "normas": [
+                "NBR 16655",
+                "Manual de Instalação LG A5UW48GFA1"
+            ],
+            "referencias": [
+                "https://www.leverosintegra.com.br/download/manuais/LG/Manual-de-Instala%C3%A7%C3%A3o-Condesadora-A5UW48GFA1.pdf"
+            ],
+            "responsabilidade": "Construtora",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "hvac-005",
+            "pergunta": "É aceitável entregar apenas a tubulação frigorífica preparada sem instalar o equipamento?",
+            "resposta": "Não é recomendado. A preparação de tubulação frigorífica sem o equipamento instalado dificulta garantir compatibilidade com as características técnicas do projeto original (bitola, carga de fluido, diâmetros, comprimentos). A NBR 16655, item 4.2.4(e), estabelece que o acabamento visível deve ser compatível com a arquitetura da edificação, o que inclui isolamento, pintura e proteção das linhas aparentes. Além disso, o manual do fabricante condiciona a preparação da rede à instalação de unidades que respeitem as mesmas especificações de projeto. Entregar apenas a tubulação exposta, sem acabamento definitivo, gera risco de contaminação, entrada de umidade e perda de garantia.",
+            "normas": [
+                "NBR 16655"
+            ],
+            "referencias": [],
+            "responsabilidade": "Construtora",
+            "gravidade": "Média"
+        },
+        {
+            "id": "hvac-006",
+            "pergunta": "Quem deve manter a base das bombas de calor e condensadoras limpa?",
+            "resposta": "Os manuais de fabricantes de bombas de calor e condensadoras orientam manter as bases limpas e livres de detritos para evitar danos aos componentes e corrosão. Mesmo havendo rotinas de manutenção do condomínio, a construtora deve entregar o equipamento com acesso e acabamento que facilitem a limpeza periódica, evitando acúmulo crônico de sujeira desde a instalação inicial. Após a entrega, cabe ao condomínio manter a limpeza regular, mas irregularidades decorrentes de acabamento inadequado ou falta de proteção inicial permanecem como responsabilidade construtiva.",
+            "normas": [
+                "Manuais de fabricantes de bombas de calor"
+            ],
+            "referencias": [],
+            "responsabilidade": "Mista - Construtora prepara, Condomínio mantém",
+            "gravidade": "Média"
+        }
+    ]
+}

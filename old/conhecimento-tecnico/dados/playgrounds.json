@@ -1,0 +1,38 @@
+{
+    "categoria": "Playgrounds e Áreas Recreativas",
+    "descricao": "Conformidade e segurança em playgrounds conforme NBR 16071",
+    "faqs": [
+        {
+            "id": "play-001",
+            "pergunta": "O modelo do playground 'não exige fixação' dispensa os requisitos de segurança?",
+            "resposta": "Improcedente. A ABNT NBR 16071-2 (Requisitos de segurança) estabelece que o equipamento deve ser projetado e instalado de forma a não criar aberturas ou folgas onde cabeça, tronco, pernas, pés, mãos ou dedos possam ficar presos, inclusive aberturas que surgem pela movimentação ou deformação durante uso normal. Se o escorregador possui folga que permite ser levantado a ponto de criar vão acessível a partes do corpo de uma criança, trata-se de irregularidade normativa. A construtora deve promover correção da fixação/ancoragem ou travamento para eliminar possibilidade de criação desse espaço de aprisionamento.",
+            "normas": [
+                "NBR 16071-2",
+                "NBR 16071-4"
+            ],
+            "responsabilidade": "Construtora",
+            "gravidade": "Crítica"
+        },
+        {
+            "id": "play-002",
+            "pergunta": "Falta de barreira no topo do escorregador é problema?",
+            "resposta": "Sim. A NBR 16071-2 exige que, em plataformas de acesso a escorregadores, haja proteção contra queda por meio de barreira ou guarda-corpo, conforme altura e faixa etária. A existência de espaço aberto acima do início do escorregador, sem barra de contenção/apoio, permite que a criança perca o equilíbrio e caia diretamente sobre o plano inclinado, configurando falta de barreira/guarda-corpo e risco de queda não controlada. O acréscimo de barras não é 'melhoria opcional do condomínio', mas sim correção de não conformidade normativa sob responsabilidade da construtora.",
+            "normas": [
+                "NBR 16071-2"
+            ],
+            "responsabilidade": "Construtora",
+            "gravidade": "Crítica"
+        },
+        {
+            "id": "play-003",
+            "pergunta": "O projeto arquitetônico aprovado garante conformidade do playground?",
+            "resposta": "Não necessariamente. Em várias inspeções identificamos que o playground executado possui dimensões diferentes do projeto aprovado, resultando em redução das distâncias laterais de segurança. A alteração prática do tamanho útil da área compromete as faixas de segurança da NBR 16071, aumentando risco de colisões, quedas sobre elementos rígidos e interferência entre trajetórias de uso. Cabe à construtora corrigir a não conformidade, adequando o dimensionamento/posicionamento à área prevista em projeto e às distâncias mínimas normativas.",
+            "normas": [
+                "NBR 16071-1",
+                "NBR 16071-2"
+            ],
+            "responsabilidade": "Construtora",
+            "gravidade": "Alta"
+        }
+    ]
+}

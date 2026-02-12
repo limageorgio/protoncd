@@ -2,597 +2,855 @@
 <html lang="pt-BR">
 
 <head>
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+            var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true; j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-5NNLDWJX');</script>
+    <!-- GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-33VH6XTPZF"></script>
+    <script>window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'G-33VH6XTPZF');</script>
+
     <meta charset="UTF-8">
-    <title>Base de Conhecimento Técnico | Proton Engenharia</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Base de conhecimento técnico com problemas comuns encontrados em inspeções prediais e suas soluções. Documentação baseada em casos reais de engenharia mecânica.">
+        content="Base de conhecimento técnico Proton Engenharia: FAQs sobre inspeção predial, HVAC, elevadores, portas corta-fogo, playgrounds, gás, pressurização, impermeabilização e estruturas metálicas. Normas ABNT e responsabilidades.">
+    <meta name="keywords"
+        content="conhecimento técnico engenharia, FAQ inspeção predial, normas ABNT, NBR, HVAC FAQ, elevadores FAQ, portas corta-fogo, playgrounds normas, gás predial FAQ, pressurização FAQ, impermeabilização, estruturas metálicas">
+    <title>Base de Conhecimento Técnico | Proton Engenharia</title>
     <link rel="canonical" href="https://www.protoncd.com.br/conhecimento-tecnico/">
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600&family=Oswald:wght@600&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
+
+    <!-- Icons -->
     <link rel="stylesheet" href="../css/all.min.css">
-    <link rel="stylesheet" href="../css/tailwind.css">
-    <link rel="stylesheet" href="../css/tooplate-antique-cafe.css">
-    <link rel="stylesheet" href="../css/mobile-responsive.css">
-    <link rel="stylesheet" href="../css/text-rendering-fix.css">
     <link rel="icon" href="../img/faviconb.ico" type="image/x-icon">
+
+    <!-- Design System v2 -->
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/animations.css">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Base de Conhecimento Técnico | Proton Engenharia">
+    <meta property="og:description"
+        content="FAQs técnicos sobre inspeção predial: HVAC, elevadores, portas corta-fogo, playgrounds, gás, pressurização e mais. Normas ABNT, responsabilidades e gravidade.">
+    <meta property="og:url" content="https://www.protoncd.com.br/conhecimento-tecnico/">
+    <meta property="og:site_name" content="Proton Engenharia">
+    <meta property="og:locale" content="pt_BR">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "A unidade condensadora precisa estar a X cm da parede?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Sim. Fabricantes definem distâncias mínimas para evitar recirculação de ar quente. Verificar manual do modelo e NBR 16401." }
+        },
+        {
+          "@type": "Question",
+          "name": "Vibração ou ruído excessivo em elevador: é vício de instalação ou desgaste?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Depende da idade e histórico de manutenção. Elevadores novos com ruído anormal podem indicar vício de instalação. Elevadores antigos podem ter desgaste de componentes. Laudo com análise espectral FFT define a causa raiz." }
+        },
+        {
+          "@type": "Question",
+          "name": "Playground com projeto aprovado mas execução diferente é irregular?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Sim. A conformidade é avaliada contra as normas NBR 16071 e NBR 14350, não apenas contra o projeto aprovado. Divergências entre projeto e execução caracterizam não conformidade." }
+        }
+      ]
+    }
+    </script>
+
+    <!-- Page-specific styles -->
     <style>
+        /* Category Cards */
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: var(--space-4);
+        }
+
         .category-card {
-            transition: transform 0.3s, box-shadow 0.3s;
-            cursor: pointer;
-            padding: 2rem;
-            border-radius: 1rem;
+            padding: var(--space-6);
+            border-radius: var(--radius-xl);
             text-align: center;
-            color: white;
-            min-height: 180px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-subtle);
         }
 
         .category-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-glow-hover);
         }
 
-        .category-blue {
-            background: linear-gradient(to bottom right, #3b82f6, #2563eb);
+        .category-card i {
+            font-size: 2.5rem;
+            margin-bottom: var(--space-3);
+            display: block;
         }
 
-        .category-red {
-            background: linear-gradient(to bottom right, #ef4444, #dc2626);
+        .category-card h3 {
+            font-size: var(--fs-base);
+            font-weight: var(--fw-semibold);
+            color: var(--text-primary);
+            margin: 0;
         }
 
-        .category-gray {
-            background: linear-gradient(to bottom right, #4b5563, #374151);
+        .cat-blue {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(59, 130, 246, 0.05));
+            border-color: rgba(59, 130, 246, 0.2);
         }
 
-        .category-green {
-            background: linear-gradient(to bottom right, #10b981, #059669);
+        .cat-blue i {
+            color: #3b82f6;
         }
 
-        .category-yellow {
-            background: linear-gradient(to bottom right, #d97706, #b45309);
+        .cat-red {
+            background: linear-gradient(135deg, rgba(239, 68, 68, 0.15), rgba(239, 68, 68, 0.05));
+            border-color: rgba(239, 68, 68, 0.2);
         }
 
-        .category-orange {
-            background: linear-gradient(to bottom right, #f97316, #ea580c);
+        .cat-red i {
+            color: #ef4444;
         }
 
-        .category-purple {
-            background: linear-gradient(to bottom right, #a855f7, #9333ea);
+        .cat-gray {
+            background: linear-gradient(135deg, rgba(107, 114, 128, 0.15), rgba(107, 114, 128, 0.05));
+            border-color: rgba(107, 114, 128, 0.2);
         }
 
-        .category-cyan {
-            background: linear-gradient(to bottom right, #06b6d4, #0891b2);
+        .cat-gray i {
+            color: #9ca3af;
         }
 
-        .category-indigo {
-            background: linear-gradient(to bottom right, #4f46e5, #3730a3);
+        .cat-green {
+            background: linear-gradient(135deg, rgba(0, 204, 136, 0.15), rgba(0, 204, 136, 0.05));
+            border-color: rgba(0, 204, 136, 0.2);
         }
 
-        .faq-item {
-            border-left: 4px solid #059669;
-            transition: all 0.3s;
-            padding: 2rem;
-            background: rgba(5, 150, 105, 0.05);
-            border-left-color: #d97706;
+        .cat-green i {
+            color: #00cc88;
         }
 
-        .responsibility-badge {
-            display: inline-block;
-            padding: 0.25rem 0.75rem;
-            border-radius: 0.375rem;
-            font-size: 0.875rem;
-            font-weight: 600;
+        .cat-yellow {
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.15), rgba(245, 158, 11, 0.05));
+            border-color: rgba(245, 158, 11, 0.2);
+        }
+
+        .cat-yellow i {
+            color: #f59e0b;
+        }
+
+        .cat-orange {
+            background: linear-gradient(135deg, rgba(249, 115, 22, 0.15), rgba(249, 115, 22, 0.05));
+            border-color: rgba(249, 115, 22, 0.2);
+        }
+
+        .cat-orange i {
+            color: #f97316;
+        }
+
+        .cat-purple {
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.15), rgba(168, 85, 247, 0.05));
+            border-color: rgba(168, 85, 247, 0.2);
+        }
+
+        .cat-purple i {
+            color: #a855f7;
+        }
+
+        .cat-cyan {
+            background: linear-gradient(135deg, rgba(34, 211, 238, 0.15), rgba(34, 211, 238, 0.05));
+            border-color: rgba(34, 211, 238, 0.2);
+        }
+
+        .cat-cyan i {
+            color: #22d3ee;
+        }
+
+        .cat-indigo {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.15), rgba(99, 102, 241, 0.05));
+            border-color: rgba(99, 102, 241, 0.2);
+        }
+
+        .cat-indigo i {
+            color: #6366f1;
+        }
+
+        /* FAQ Items */
+        .kb-faq-item {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-xl);
+            padding: var(--space-6);
+            margin-bottom: var(--space-4);
+            transition: border-color 0.3s ease;
+        }
+
+        .kb-faq-item:hover {
+            border-color: var(--border-accent);
+        }
+
+        .kb-faq-item h3 {
+            font-size: var(--fs-lg);
+            font-weight: var(--fw-bold);
+            color: var(--text-primary);
+            margin-bottom: var(--space-3);
+            display: flex;
+            align-items: flex-start;
+            gap: var(--space-3);
+        }
+
+        .kb-faq-item h3 i {
+            color: var(--accent-green);
+            margin-top: 4px;
+            flex-shrink: 0;
+        }
+
+        .kb-faq-item .faq-body {
+            color: var(--text-secondary);
+            line-height: var(--lh-relaxed);
+            margin-bottom: var(--space-4);
+        }
+
+        .kb-faq-item .faq-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-3);
+            align-items: center;
+        }
+
+        /* Responsibility badges */
+        .resp-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-2);
+            padding: var(--space-1) var(--space-3);
+            border-radius: var(--radius-full);
+            font-size: var(--fs-sm);
+            font-weight: var(--fw-medium);
         }
 
         .resp-construtora {
-            background: #fef3c7;
-            color: #92400e;
+            background: rgba(245, 158, 11, 0.15);
+            color: #f59e0b;
+            border: 1px solid rgba(245, 158, 11, 0.3);
         }
 
         .resp-condominio {
-            background: #dbeafe;
-            color: #1e40af;
+            background: rgba(59, 130, 246, 0.15);
+            color: #60a5fa;
+            border: 1px solid rgba(59, 130, 246, 0.3);
         }
 
         .resp-mista {
-            background: #e5e7eb;
-            color: #374151;
+            background: rgba(107, 114, 128, 0.15);
+            color: #9ca3af;
+            border: 1px solid rgba(107, 114, 128, 0.3);
         }
 
-        .gravidade-critica {
-            color: #dc2626;
+        /* Severity badges */
+        .sev-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-2);
+            padding: var(--space-1) var(--space-3);
+            border-radius: var(--radius-full);
+            font-size: var(--fs-sm);
+            font-weight: var(--fw-bold);
         }
 
-        .gravidade-alta {
-            color: #ea580c;
+        .sev-critica {
+            color: #ef4444;
         }
 
-        .gravidade-media {
-            color: #d97706;
+        .sev-alta {
+            color: #f97316;
         }
 
-        .gravidade-baixa {
-            color: #059669;
+        .sev-media {
+            color: #eab308;
         }
 
+        .sev-baixa {
+            color: #22c55e;
+        }
+
+        .norma-tag {
+            font-size: var(--fs-sm);
+            color: var(--text-muted);
+            margin-left: auto;
+        }
+
+        /* Search input */
         .search-box {
+            position: relative;
             max-width: 600px;
-            margin: 0 auto;
+            margin: 0 auto var(--space-8);
         }
 
-        #categoriesContainer {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin-bottom: 2.5rem;
+        .search-box input {
+            width: 100%;
+            padding: var(--space-4) var(--space-6);
+            padding-left: calc(var(--space-6) + 24px);
+            background: var(--bg-card);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-full);
+            color: var(--text-primary);
+            font-family: var(--font-primary);
+            font-size: var(--fs-base);
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .search-box input:focus {
+            outline: none;
+            border-color: var(--accent-green);
+            box-shadow: 0 0 0 3px rgba(0, 204, 136, 0.15);
+        }
+
+        .search-box input::placeholder {
+            color: var(--text-muted);
+        }
+
+        .search-box i {
+            position: absolute;
+            left: var(--space-5);
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted);
+        }
+
+        /* Back button */
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-2);
+            padding: var(--space-2) var(--space-4);
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius-md);
+            color: var(--text-secondary);
+            font-size: var(--fs-sm);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-bottom: var(--space-4);
+        }
+
+        .back-btn:hover {
+            background: var(--glass-bg-hover);
+            color: var(--text-primary);
+        }
+
+        /* Results header */
+        .results-header {
+            font-size: var(--fs-2xl);
+            font-weight: var(--fw-bold);
+            margin-bottom: var(--space-4);
+        }
+
+        .results-desc {
+            color: var(--text-secondary);
+            font-size: var(--fs-lg);
+            margin-bottom: var(--space-6);
+        }
+
+        .no-results {
+            text-align: center;
+            padding: var(--space-12) 0;
+            color: var(--text-muted);
+        }
+
+        .no-results i {
+            font-size: 4rem;
+            margin-bottom: var(--space-4);
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .category-grid {
+                grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            }
+
+            .kb-faq-item .faq-meta {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .norma-tag {
+                margin-left: 0;
+            }
         }
     </style>
-    <link rel="stylesheet" href="../css/core-web-vitals.css" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="../css/mobile-fix.css">
-    <noscript>
-        <link rel="stylesheet" href="../css/core-web-vitals.css">
-        <link rel="stylesheet" href="../css/mobile-fix.css">
-    </noscript>
-
 </head>
 
-<body style="background-color: #fafaf9; margin: 0;">
-    <div class="tm-page-wrap mx-auto">
-        <section style="background: linear-gradient(135deg, #0369a1 0%, #059669 100%); padding: 1.5rem 0;">
-            <div class="container mx-auto" style="max-width: 1200px;">
-                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem;">
-                    <a href="../index.html">
-                        <img src="../img/logo_proton_branco.png" alt="Logo Proton Engenharia" style="height: 120px;">
-                    </a>
-                    <a href="../index.html"
-                        style="color: white; text-decoration: none; font-size: 0.9rem; opacity: 0.9;">← Voltar ao
-                        site</a>
-                </div>
-                <div style="text-align: center; padding: 1rem 0;">
-                    <h1 style="font-size: 1.75rem; margin-bottom: 0.5rem; color: white; font-weight: 600;">Base de
-                        Conhecimento Técnico</h1>
-                    <p style="font-size: 1rem; max-width: 700px; margin: 0 auto; color: rgba(255,255,255,0.95);">
-                        Documentação técnica baseada em casos reais de inspeções prediais
-                    </p>
-                </div>
-            </div>
-        </section>
+<body>
+    <!-- GTM noscript -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5NNLDWJX" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
 
-        <div class="container mx-auto tm-container" style="padding: 3rem 1rem;">
-            <!-- Busca -->
-            <div class="search-box" style="margin-bottom: 2.5rem;">
-                <input type="text" id="searchInput"
-                    style="width: 100%; padding: 0.875rem 1rem; font-size: 1rem; border: 2px solid #059669; border-radius: 0.5rem; outline: none; background: white;"
-                    placeholder="Buscar por problema, norma ou equipamento..."
-                    onfocus="this.style.borderColor='#047857'" onblur="this.style.borderColor='#059669'">
+    <!-- ========== NAVIGATION ========== -->
+    <nav class="nav" id="main-nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">
+                <img src="../img/logo_proton_branco.png" alt="Proton Engenharia" width="36" height="36">
+                <span class="nav-logo-text">PROTON <span>Engenharia</span></span>
+            </a>
+            <div class="nav-links">
+                <a href="../index.html">Início</a>
+                <a href="../index.html#servicos">Serviços</a>
+                <a href="#categorias">Categorias</a>
+                <a href="#faqs">Base Técnica</a>
+                <a href="../index.html#contato" class="nav-cta"><i class="fab fa-whatsapp"></i> Contato</a>
             </div>
-
-            <!-- Introdução -->
-            <div
-                style="background: #f0f9ff; border-left: 4px solid #0284c7; padding: 1.5rem; border-radius: 0.5rem; margin-bottom: 2rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
-                <h2 style="font-size: 1.5rem; font-weight: 700; color: #075985; margin-bottom: 0.75rem;">Sobre Esta Base
-                    de Conhecimento</h2>
-                <p style="font-size: 1rem; color: #1e293b; line-height: 1.7;">
-                    Esta documentação reúne <strong>problemas reais identificados em centenas de inspeções
-                        prediais</strong>
-                    realizadas pela Proton Engenharia em condomínios de Goiânia, Brasília, Anápolis e Rio Verde.
-                    Cada FAQ é baseado em casos concretos, argumentações técnicas fundamentadas em normas e manuais de
-                    fabricantes,
-                    e decisões sobre responsabilidades entre construtoras e condomínios.
-                </p>
-                <p style="font-size: 0.95rem; color: #334155; margin-top: 0.75rem;">
-                    <i class="fas fa-info-circle" style="color: #0284c7; margin-right: 0.5rem;"></i>
-                    Esta base é atualizada constantemente com novos casos e esclarecimentos técnicos.
-                </p>
-            </div>
-
-            <!-- Container das categorias -->
-            <div id="categoriesContainer">
-                <!-- Categorias serão carregadas via JavaScript -->
-            </div>
-
-            <!-- Container dos FAQs -->
-            <div id="faqsContainer">
-                <!-- FAQs serão carregados via JavaScript -->
-            </div>
+            <button class="nav-mobile-toggle" id="mobile-toggle" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
+    </nav>
 
-        <!-- Footer -->
-        <footer class="tm-footer text-center">
-            <p class="mb-0">Copyright &copy; <span id="currentYear"></span> Proton Engenharia |
-                <a href="../index.html" class="tm-text-gold">Voltar ao site</a>
-            </p>
-        </footer>
+    <!-- Mobile Menu -->
+    <div class="nav-mobile-menu" id="mobile-menu">
+        <button class="nav-mobile-close" id="mobile-close" aria-label="Fechar menu">&times;</button>
+        <a href="../index.html" class="mobile-link">Início</a>
+        <a href="../index.html#servicos" class="mobile-link">Serviços</a>
+        <a href="#categorias" class="mobile-link">Categorias</a>
+        <a href="#faqs" class="mobile-link">Base Técnica</a>
+        <a href="../index.html#contato" class="mobile-link">Contato</a>
     </div>
 
+    <!-- ========== HERO ========== -->
+    <section class="hero" id="inicio" style="min-height: auto; padding: var(--space-16) 0 var(--space-10);">
+        <div class="bg-dots"><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="hero-content">
+            <div class="hero-badges">
+                <span class="badge badge-green"><i class="fas fa-book"></i> Conhecimento</span>
+                <span class="badge badge-blue"><i class="fas fa-search"></i> Pesquisa</span>
+                <span class="badge badge-cyan"><i class="fas fa-clipboard-list"></i> Normas ABNT</span>
+            </div>
+            <h1>Base de <span class="text-gradient">Conhecimento Técnico</span></h1>
+            <p class="hero-subtitle">
+                Consulte problemas técnicos reais encontrados em inspeções prediais. Cada registro contém a
+                <strong>análise técnica</strong>, <strong>normas aplicáveis</strong>, <strong>responsabilidade</strong>
+                e <strong>gravidade</strong>.
+            </p>
+        </div>
+    </section>
+
+    <!-- ========== SEARCH ========== -->
+    <section class="section" style="padding-top: 0;">
+        <div class="container">
+            <div class="search-box reveal">
+                <i class="fas fa-search"></i>
+                <input type="text" id="searchInput" placeholder="Buscar por termo técnico, norma ou equipamento..."
+                    autocomplete="off">
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CATEGORIAS ========== -->
+    <section class="section" id="categorias" style="padding-top: 0;">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Categorias <span class="text-gradient">Técnicas</span></h2>
+                <div class="section-divider"></div>
+                <p>Selecione uma categoria para filtrar os problemas técnicos ou use a busca acima.</p>
+            </div>
+            <div id="categoriesContainer" class="category-grid reveal"></div>
+        </div>
+    </section>
+
+    <!-- ========== FAQs ========== -->
+    <section class="section" id="faqs">
+        <div class="container">
+            <div id="faqsContainer"></div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="../index.html" class="nav-logo"
+                        style="margin-bottom: var(--space-4); display: inline-flex;">
+                        <img src="../img/logo_proton_branco.png" alt="Proton Engenharia" width="36" height="36">
+                        <span class="nav-logo-text">PROTON <span>Engenharia</span></span>
+                    </a>
+                    <p style="color: var(--text-secondary); font-size: var(--fs-sm);">Engenharia diagnóstica com
+                        tecnologia 360° exclusiva. Laudos técnicos, inspeção predial e perícias mecânicas com ART-CREA.
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>Serviços</h4>
+                    <ul>
+                        <li><a href="../analise-vibracao-elevadores.html">Ensaios 360° Elevadores</a></li>
+                        <li><a href="../inspecao-sistemas-mecanicos.html">Sistemas Mecânicos</a></li>
+                        <li><a href="../inspecao-hvac-pmoc.html">HVAC/PMOC</a></li>
+                        <li><a href="../cercon-goias.html">CERCON Goiás</a></li>
+                        <li><a href="../laudo-pericial-engenharia.html">Laudos Periciais</a></li>
+                        <li><a href="../pacotes-servicos.html">Pacotes</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Recursos</h4>
+                    <ul>
+                        <li><a href="index.html">Conhecimento Técnico</a></li>
+                        <li><a href="../franquias.html">Franquias</a></li>
+                        <li><a href="../landing-servicos.html">Landing Serviços</a></li>
+                        <li><a href="../teste-arrancamento-olhais.html">Teste de Arrancamento</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contato</h4>
+                    <ul>
+                        <li><a href="tel:5562992852704"><i class="fas fa-phone" style="margin-right: 6px;"></i> (62)
+                                99285-2704</a></li>
+                        <li><a href="mailto:lima.georgio.eng@gmail.com"><i class="fas fa-envelope"
+                                    style="margin-right: 6px;"></i> E-mail</a></li>
+                        <li><a href="https://api.whatsapp.com/send?phone=5562992852704" target="_blank"
+                                rel="noopener noreferrer"><i class="fab fa-whatsapp" style="margin-right: 6px;"></i>
+                                WhatsApp</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear">2025</span> Proton Engenharia Diagnóstica. Todos os direitos
+                    reservados.</p>
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/in/georgiolima/" target="_blank" rel="noopener noreferrer"
+                        aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i
+                            class="fab fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"
+                        aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== EMBEDDED FAQ DATA ========== -->
     <script type="application/json" id="dados-embed">
 {
     "hvac-climatizacao.json": {
         "categoria": "HVAC e Climatização",
-        "descricao": "Problemas comuns em sistemas de ar-condicionado, condensadoras e VRF",
+        "descricao": "Questões recorrentes sobre sistemas de climatização, qualidade do ar interior, condensadoras, ventilação e manutenção conforme PMOC",
         "faqs": [
             {
                 "id": "hvac-001",
-                "pergunta": "Por que a instalação da condensadora precisa respeitar os afastamentos do manual do fabricante?",
-                "resposta": "Em nossas inspeções, identificamos frequentemente unidades condensadoras instaladas com distâncias inferiores aos mínimos especificados pelos fabricantes (ex.: Samsung exige 300mm laterais conforme manual modelo AJ**TXJKH, pág. 7). A alegação de que \"o ambiente é altamente arejado\" não substitui o cumprimento das medidas geométricas fixas estabelecidas no manual. O fabricante define critérios objetivos, não condicionantes subjetivas de ventilação. A não conformidade pode invalidar a garantia contratual e gerar recirculação de ar quente em condições críticas, comprometendo a vida útil dos componentes por potencial superaquecimento.",
-                "normas": [
-                    "Manual Samsung modelo AJ**TXJKH"
-                ],
-                "referencias": [
-                    "https://downloadcenter.samsung.com/content/UM/202404/20240424112709923/DB68-09261A-05_IM_FJM_HP_Outdoor_EA_EN_240207-D01.pdf"
-                ],
+                "pergunta": "A unidade condensadora precisa estar a X cm da parede conforme o fabricante?",
+                "resposta": "Sim. As distâncias mínimas entre a condensadora e as paredes ou obstáculos são definidas pelo fabricante no manual de instalação, e não apenas por normas gerais. Essas distâncias asseguram a troca de calor eficiente e evitam recirculação de ar quente. Se a instalação não respeitar as distâncias indicadas, pode-se caracterizar falha de instalação — mesmo que, por vezes, a limitação do espaço na laje técnica exija ajustes de projeto. O perito normalmente cruza as fotos de campo com o manual do modelo e registra a medição real.",
+                "normas": ["NBR 16401", "Manual do fabricante"],
+                "referencias": [],
                 "responsabilidade": "Construtora",
-                "gravidade": "Alta"
+                "gravidade": "Média"
             },
             {
                 "id": "hvac-002",
-                "pergunta": "A certificação da assistência técnica garante que a instalação está conforme as normas?",
-                "resposta": "Não. O Manual de Projeto das Unidades Centrais Midea VC Plus exige o cumprimento integral de critérios objetivos de dimensionamento (proporção de combinação, número máximo de evaporadoras, limites de comprimento e desnível de tubulações, condições de operação e requisitos de espaço). A certificação da assistência técnica não autoriza ajustes empíricos de espaçamento ou layout. O manual deixa claro, especialmente na Parte 3 - Posicionamento e instalação - e nas tabelas 1-5.1 e 1-5.2, que qualquer aplicação fora dos limites estabelecidos deve ser previamente analisada e aprovada pela Midea Carrier. Alegações genéricas de que o instalador \"validou\" o espaçamento não substituem a comprovação de atendimento às tabelas e diagramas. O descumprimento pode causar perda de desempenho, danos ao equipamento e cancelamento da garantia.",
-                "normas": [
-                    "Manual de Projeto Midea VC Plus (Partes 1 a 3)",
-                    "Tabela 1-5.1 e 1-5.2 Midea VC Plus"
-                ],
-                "referencias": [
-                    "https://carrierdobrasil.com.br/wp-content/uploads/2020/10/Manual-de-Projeto-Unidades-Centrais-Midea-VC-Plus-I-10-22.pdf"
-                ],
-                "responsabilidade": "Construtora",
-                "gravidade": "Alta"
+                "pergunta": "Se a assistência técnica não tem certificação de fábrica, o serviço pode ser aceito?",
+                "resposta": "A ausência de certificação da assistência técnica pelo fabricante não invalida automaticamente o serviço prestado, mas fragiliza a defesa em caso de falha. O ideal é que toda manutenção e instalação de sistemas de climatização seja feita por empresa credenciada ou que siga rigorosamente as orientações do fabricante. A responsabilidade técnica pelo serviço recai sobre quem o executa, e o condomínio pode exigir comprovação de capacitação da equipe como parte do PMOC.",
+                "normas": ["NBR 16401", "Portaria 3.523"],
+                "referencias": [],
+                "responsabilidade": "Condomínio",
+                "gravidade": "Baixa"
             },
             {
                 "id": "hvac-003",
-                "pergunta": "A ventilação natural do ambiente pode compensar o não cumprimento dos afastamentos mínimos da condensadora?",
-                "resposta": "Não. É comum receber alegações de que ambientes \"altamente arejados\" ou com \"ventilação natural robusta\" justificariam o descumprimento das distâncias mínimas especificadas pelos fabricantes. Esta argumentação é tecnicamente improcedente. Os manuais de instalação estabelecem critérios geométricos fixos e objetivos (exemplo: 300mm laterais no modelo Samsung AJ**TXJKH, pág. 7), sem qualquer previsão de flexibilização baseada em condições subjetivas de ventilação do local. A conformidade técnica é aferida pelo atendimento integral às dimensões de projeto, não por suposições empíricas sobre correntes de ar. O descumprimento pode invalidar a garantia contratual e gerar recirculação de ar quente em condições críticas, comprometendo a vida útil dos componentes e a eficiência energética do sistema.",
-                "normas": [
-                    "Manual Samsung modelo AJ**TXJKH",
-                    "NBR 16401 (Instalações de ar-condicionado)"
-                ],
-                "referencias": [
-                    "https://downloadcenter.samsung.com/content/UM/202404/20240424112709923/DB68-09261A-05_IM_FJM_HP_Outdoor_EA_EN_240207-D01.pdf"
-                ],
+                "pergunta": "A ventilação natural (cobogós, janelas) pode substituir a ventilação mecânica em áreas comuns?",
+                "resposta": "Depende do projeto e da norma aplicável. Em garagens, a NBR 16401 e códigos de obras locais geralmente permitem ventilação natural quando a área de abertura permanente é suficiente. Já em halls sociais e lobbies de edifícios de alto padrão, a ventilação natural pode não atender à exigência de conforto térmico e filtragem do ar. É necessário verificar o memorial descritivo do empreendimento e o laudo da construtora antes de afirmar que a solução natural é tecnicamente adequada.",
+                "normas": ["NBR 16401", "Código de Obras local"],
+                "referencias": [],
                 "responsabilidade": "Construtora",
-                "gravidade": "Alta"
+                "gravidade": "Média"
             },
             {
                 "id": "hvac-004",
-                "pergunta": "A NBR 16655 pode substituir as distâncias mínimas previstas no manual das condensadoras?",
-                "resposta": "Não. A NBR 16655 orienta que, na ausência de informações do fabricante, podem ser adotados afastamentos mínimos gerais (ex.: 200 mm). Contudo, quando o fabricante fornece parâmetros específicos para o modelo instalado, esses valores prevalecem. Cada condensadora possui fluxo de ar e requisitos definidos por ensaios próprios; aplicar apenas o valor genérico pode comprometer desempenho, segurança e garantia. Portanto, sempre deve prevalecer o manual da marca/modelo executado.",
-                "normas": [
-                    "NBR 16655",
-                    "Manual de Instalação LG A5UW48GFA1"
-                ],
-                "referencias": [
-                    "https://www.leverosintegra.com.br/download/manuais/LG/Manual-de-Instala%C3%A7%C3%A3o-Condesadora-A5UW48GFA1.pdf"
-                ],
-                "responsabilidade": "Construtora",
-                "gravidade": "Alta"
+                "pergunta": "A NBR 16655 (instalação de ar condicionado) se sobrepõe ao manual do fabricante?",
+                "resposta": "Não há sobreposição direta: a NBR 16655 trata de requisitos gerais de instalação (tubulação, dreno, fixação, distâncias genéricas), enquanto o manual do fabricante detalha particularidades do modelo (distâncias de parede, inclinação, carga máxima de tubulação). Em caso de conflito, prevalece a recomendação mais restritiva para garantir desempenho e segurança. Na prática, o perito deve citar ambas as referências e indicar qual parâmetro foi violado.",
+                "normas": ["NBR 16655", "Manual do fabricante"],
+                "referencias": [],
+                "responsabilidade": "Mista",
+                "gravidade": "Média"
             },
             {
                 "id": "hvac-005",
-                "pergunta": "É aceitável entregar apenas a tubulação frigorífica preparada sem instalar o equipamento?",
-                "resposta": "Não é recomendado. A preparação de tubulação frigorífica sem a unidade instalada dificulta garantir compatibilidade com o projeto original (bitolas, carga de fluido, comprimentos). A NBR 16655, item 4.2.4(e), exige acabamento compatível com a arquitetura, o que inclui isolamento e proteção das linhas aparentes. Manuais dos fabricantes também condicionam a preparação da rede à instalação de equipamentos que respeitem as especificações de projeto. Entregar apenas a tubulação exposta gera risco de contaminação e perda de garantia.",
-                "normas": [
-                    "NBR 16655"
-                ],
+                "pergunta": "Tubulações de gás refrigerante instaladas sem equipamento na ponta são irregulares?",
+                "resposta": "Pontos de espera (tubulações instaladas para futura ligação de equipamentos) são prática comum em edifícios novos. Não são irregulares desde que estejam lacrados com nitrogênio pressurizado e identificados. A ausência de pressurização pode permitir entrada de umidade e contaminar o sistema quando o equipamento for instalado. O condomínio deve verificar: 1) se os pontos de espera estão devidamente lacrados; 2) se o memorial descritivo previa a instalação futura; 3) se a tubulação foi testada com pressão positiva na entrega.",
+                "normas": ["NBR 16655", "Manual do fabricante"],
                 "referencias": [],
                 "responsabilidade": "Construtora",
-                "gravidade": "Média"
+                "gravidade": "Baixa"
             },
             {
                 "id": "hvac-006",
-                "pergunta": "Quem deve manter a base das bombas de calor e condensadoras limpa?",
-                "resposta": "Os manuais de bombas de calor orientam manter as bases limpas para evitar corrosão e danos aos componentes. A construtora deve entregar o equipamento com acesso e acabamento que facilitem a higienização periódica, evitando acúmulo crônico desde a instalação. Após a entrega, cabe ao condomínio incluir a limpeza na manutenção regular, mas falhas decorrentes de acabamento inadequado ou falta de proteção inicial permanecem sob responsabilidade construtiva.",
-                "normas": [
-                    "Manuais de fabricantes de bombas de calor"
-                ],
+                "pergunta": "Limpeza da base e das bombas de calor da piscina é responsabilidade do condomínio?",
+                "resposta": "Sim, desde que o sistema tenha sido entregue em condições normais de operação. A manutenção da base, drenos e bombas de calor é responsabilidade do condomínio após a entrega, conforme plano de manutenção (PMOC). No entanto, se houver falha de projeto (exemplo: base sem dreno adequado, inclinação incorreta ou suporte subdimensionado), a responsabilidade recai sobre a construtora ou projetista. O perito avalia caso a caso comparando o estado atual com o memorial descritivo e as normas.",
+                "normas": ["PMOC", "NBR 5674"],
                 "referencias": [],
-                "responsabilidade": "Mista - Construtora prepara, Condomínio mantém",
-                "gravidade": "Média"
+                "responsabilidade": "Condomínio",
+                "gravidade": "Baixa"
             }
         ]
     },
     "portas-cortafogo.json": {
-        "categoria": "Portas Corta-Fogo e Segurança",
-        "descricao": "Problemas em portas corta-fogo, sistemas de combate a incêndio e segurança predial",
+        "categoria": "Portas Corta-Fogo",
+        "descricao": "Casos técnicos envolvendo portas corta-fogo, molas, maçanetas e responsabilidade pela manutenção",
         "faqs": [
             {
                 "id": "pcf-001",
-                "pergunta": "A vistoria de entrega isenta a construtora de problemas em portas corta-fogo?",
-                "resposta": "Não. A vistoria de entrega apenas comprova a posse do imóvel, mas não extingue a responsabilidade da construtora sobre o desempenho dos sistemas prediais. Portas corta-fogo são itens de segurança contra incêndio e devem fechar de forma hermética e automática conforme norma. Desalinhamentos ou falhas de fechamento que surgem após os primeiros usos ou em razão do assentamento do edifício caracterizam vício oculto ou falha de desempenho, muitas vezes não perceptável em vistoria visual rápida. Nessas situações o produto está impróprio para uso e o Código de Defesa do Consumidor obriga o fornecedor a sanar o vício, independentemente de ter sido apontado na entrega. A responsabilidade da construtora perdura durante o prazo de garantia (geralmente 5 anos para segurança e solidez).",
-                "normas": [
-                    "NBR 11742",
-                    "IT-09 CBMGO",
-                    "Código de Defesa do Consumidor"
-                ],
+                "pergunta": "A porta corta-fogo foi vistoriada na entrega e aceita — ainda pode ser reclamada?",
+                "resposta": "Sim. A vistoria de entrega não é um termo de quitação absoluta. Se a porta apresenta defeito de funcionamento (mola desregulada, vedação inadequada, empenamento) logo após a entrega, isso pode ser caracterizado como vício oculto. O prazo para reclamação de vícios ocultos segue o Código Civil e o Código de Defesa do Consumidor. O perito verifica se a falha estava presente (porém não aparente) no momento da entrega e se a construtora cumpriu a norma de fabricação e instalação da porta.",
+                "normas": ["NBR 11742", "Código de Defesa do Consumidor"],
+                "referencias": [],
                 "responsabilidade": "Construtora",
-                "gravidade": "Crítica"
+                "gravidade": "Alta"
             },
             {
                 "id": "pcf-002",
-                "pergunta": "Maçaneta solta em PCF de casa de máquinas é desgaste de uso?",
-                "resposta": "Não. A porta corta-fogo da casa de máquinas é um equipamento de segurança de acesso restrito e baixíssima circulação. Se a maçaneta solta ou apresenta folgas relevantes em curto prazo após a entrega, trata-se de vício de instalação ou qualidade do componente. A alegação de que o problema decorre de falta de manutenção preventiva do condomínio é improcedente, pois o esforço de uso é mínimo. Cabe à construtora substituir ou ajustar o ferragem para que o conjunto mantenha o desempenho exigido em emergências. Desgaste natural só poderia ser cogitado em portas de alto tráfego.",
-                "normas": [
-                    "NBR 11742"
-                ],
-                "responsabilidade": "Construtora",
+                "pergunta": "Maçaneta de porta corta-fogo solta: responsabilidade da construtora ou condomínio?",
+                "resposta": "Se a maçaneta apresentou folga ou soltura nos primeiros meses após a entrega do imóvel, a responsabilidade é da construtora, pois indica vício de fabricação ou instalação. Se a soltura ocorreu após anos de uso normal e sem manutenção preventiva registrada, a responsabilidade tende a ser do condomínio. As portas corta-fogo devem receber manutenção periódica conforme recomendação do fabricante e normas ABNT. O histórico de manutenção e a idade da porta são determinantes para a análise pericial.",
+                "normas": ["NBR 11742", "NBR 5674"],
+                "referencias": [],
+                "responsabilidade": "Mista",
                 "gravidade": "Média"
             }
         ]
     },
     "elevadores.json": {
-        "categoria": "Elevadores e Transporte Vertical",
-        "descricao": "Problemas em elevadores, cabos, fossos e sistemas de transporte vertical",
+        "categoria": "Elevadores",
+        "descricao": "Problemas recorrentes em elevadores: ruídos, vibrações, cabos, fossos e definição de responsabilidade entre construtora, conservadora e condomínio",
         "faqs": [
             {
                 "id": "elev-001",
-                "pergunta": "O que configura vício de instalação versus desgaste natural em elevadores?",
-                "resposta": "Arranhões superficiais e marcas de impacto compatíveis com a rotina do condomínio (mudanças, carrinhos, uso diário) são responsabilidade do condomínio. Entretanto, riscos profundos com traços de montagem inadequada, ajustes forçados ou mau alinhamento têm origem na instalação. Esses vícios de execução nem sempre são identificados na vistoria inicial e se manifestam como vícios ocultos da fase construtiva, cobertos pela garantia de 1 ano. A construtora deve realizar avaliação técnica para separar o que é desgaste de uso dos danos de instalação e, confirmada a falha de montagem, executar a correção, independentemente da assinatura do termo de entrega.",
-                "normas": [
-                    "NBR 16042",
-                    "Código de Defesa do Consumidor"
-                ],
-                "responsabilidade": "Mista - requer avaliação técnica",
-                "gravidade": "Média"
-            },
-            {
-                "id": "elev-002",
-                "pergunta": "Cabos soltos no fosso são problema da conservadora ou da construtora?",
-                "resposta": "A acomodação inadequada dos cabos no fosso, presos apenas com abraçadeiras e sem canaletas ou bandejamento projetado, caracteriza vício construtivo/instalação do sistema de transporte vertical. A responsabilidade permanece com a construtora, ainda que a execução tenha sido terceirizada (ex.: Atlas). Durante o período de garantia, a construtora deve coordenar a correção com a responsável técnica pelos elevadores, garantindo conformidade normativa e segurança operacional.",
-                "normas": [
-                    "NBR 16042",
-                    "NBR NM 207"
-                ],
-                "responsabilidade": "Construtora",
+                "pergunta": "Vibração ou ruído excessivo em elevador: é vício de instalação ou desgaste natural?",
+                "resposta": "Depende da idade do equipamento, do histórico de manutenção e da análise técnica. Em elevadores recém-instalados (até 5 anos), ruídos e vibrações anormais geralmente indicam vício de instalação ou montagem. Já em equipamentos mais antigos, pode haver desgaste de guias, rolamentos, cabos ou polias. A análise espectral de vibração (FFT) permite identificar a frequência predominante e associá-la ao componente causador. O laudo técnico distingue de forma objetiva entre vício e desgaste, orientando a responsabilidade.",
+                "normas": ["NM 207", "NBR 16083"],
+                "referencias": [],
+                "responsabilidade": "Mista",
                 "gravidade": "Alta"
             },
             {
+                "id": "elev-002",
+                "pergunta": "Cabos soltos ou enrolados no fundo do fosso: há risco?",
+                "resposta": "Cabos soltos ou enrolados de forma irregular no fosso podem indicar falha de manutenção, comprimento excessivo de cabos de manobra (trailing cables) ou falta de guia-cabos adequado. Embora nem sempre represente risco imediato de acidente, é uma não conformidade que deve ser corrigida pela conservadora. O perito verifica: 1) se há interferência com amortecedores ou contrapeso; 2) se os cabos estão desgastados ou com emendas irregulares; 3) se o guia-cabos está instalado e funcional.",
+                "normas": ["NM 207", "NBR 16083", "NBR 16858"],
+                "referencias": [],
+                "responsabilidade": "Condomínio",
+                "gravidade": "Média"
+            },
+            {
                 "id": "elev-003",
-                "pergunta": "Ruído e vibração excessivos são sempre problema de manutenção?",
-                "resposta": "Não. Os fabricantes de elevadores definem limites de vibração e ruído para operação aceitável (ex.: Schindler estabelece 62 dB(A) no fosso e movimentação lateral inferior a 25 mg). Ensaios que identificam níveis superiores ou vibrações coincidentes com ruídos em operação real configuram não conformidade técnica. Mesmo quando a construtora questiona os valores medidos, o registro audiovisual de vibração sincronizada com ruído caracteriza evidência fásica de anomalia. Cabe à construtora coordenar a análise e correção durante a garantia, acionando a empresa de manutenção para investigar rolamentos, contrapeso, guias e sistemas de amortecimento.",
-                "normas": [
-                    "NBR 16042",
-                    "ISO 8041",
-                    "Boletins técnicos de fabricantes"
-                ],
-                "referencias": [
-                    "https://www.schindler.com.br/content/dam/website/br/docs/elevadores/schindler-ruidos-vibracoes-informe.pdf/_jcr_content/renditions/original./schindler-ruidos-vibracoes-informe.pdf"
-                ],
-                "responsabilidade": "Construtora",
+                "pergunta": "A conservadora alega que o ruído é normal — como o perito avalia?",
+                "resposta": "O perito utiliza analisador de vibração e decibelímetro para medir objetivamente os níveis de ruído e vibração dentro da cabina, na casa de máquinas e nos pavimentos. Os resultados são comparados com os limites das normas ABNT (NM 207 e NBR 16083) e com referências de conforto acústico (NBR 10152). Se os valores medidos ultrapassarem os limites normativos ou se o espectro de frequência revelar componentes de falha (como rolamentos danificados), o argumento de 'normalidade' da conservadora não se sustenta tecnicamente.",
+                "normas": ["NM 207", "NBR 10152", "NBR 16083"],
+                "referencias": [],
+                "responsabilidade": "Mista",
                 "gravidade": "Alta"
             },
             {
                 "id": "elev-004",
-                "pergunta": "Qual o padrão aceitável para cartazes de alerta nos elevadores?",
-                "resposta": "A Lei Estadual 20.518/2019 exige a afixação de cartaz informativo, com mensagem de alerta, na parte externa dos elevadores, em local visível e em língua portuguesa. O termo cartaz pressupõe suporte com dimensões que garantam leitura rápida. Placas diminutas ou com tipografia ilegível não atendem à finalidade legal de advertir usuários. A construtora deve entregar a sinalização visível e funcional, cabendo ao condomínio apenas manter e substituir após a conformidade inicial.",
-                "normas": [
-                    "Lei Estadual 20.518/2019 (GO)"
-                ],
-                "referencias": [
-                    "https://legisla.casacivil.go.gov.br/api/v2/pesquisa/legislacoes/100721/pdf"
-                ],
-                "responsabilidade": "Construtora",
-                "gravidade": "Média"
+                "pergunta": "O cartaz de alerta no elevador substitui a correção do problema?",
+                "resposta": "Não. A colocação de cartazes informativos ('elevador em manutenção', 'ruído em avaliação') é uma medida paliativa de comunicação, não substitui a obrigação técnica de corrigir o defeito. A conservadora e o condomínio (através do síndico) são corresponsáveis por garantir a segurança do transporte vertical. A permanência do cartaz por longos períodos sem ação corretiva pode, inclusive, agravar a responsabilidade em caso de acidente.",
+                "normas": ["NM 207", "Código Civil"],
+                "referencias": [],
+                "responsabilidade": "Mista",
+                "gravidade": "Alta"
             },
             {
                 "id": "elev-005",
-                "pergunta": "Como tratar ruídos anormais em motores de tração?",
-                "resposta": "Ruídos excessivos em motores de tração, percebidos em comparação direta com outras máquinas idênticas, são indícios de desbalanceamento, desgaste de rolamentos ou falhas de montagem. São fatos físicos observáveis que justificam intervenção corretiva, mesmo sem medição instrumental imediata. A construtora deve acionar a empresa instaladora para diagnóstico e correção antes da entrega, evitando agravamento do defeito e riscos operacionais. O condomínio só deve assumir o sistema após justificativa técnica formal ou correção.",
-                "normas": [
-                    "NBR 16042"
-                ],
+                "pergunta": "É normal a máquina de tração emitir ruído audível nos apartamentos?",
+                "resposta": "Não. A máquina de tração (motor principal do elevador) pode emitir algum ruído operacional, mas este não deve ser audível de forma incômoda dentro dos apartamentos. Se moradores reportam ruído proveniente da casa de máquinas, é necessário avaliar: 1) isolamento acústico da sala; 2) suportes antivibratórios da máquina; 3) desgaste de componentes mecânicos. A NBR 10152 estabelece níveis de pressão sonora aceitáveis para dormitórios e salas de estar, servindo como referência para a avaliação.",
+                "normas": ["NBR 10152", "NM 207"],
+                "referencias": [],
                 "responsabilidade": "Construtora",
                 "gravidade": "Alta"
             },
             {
                 "id": "elev-006",
-                "pergunta": "A numeração provisória das casas de máquinas pode permanecer após a entrega?",
-                "resposta": "Não é recomendável manter identificações provisórias ou ambíguas na casa de máquinas. A rastreabilidade operacional exige que a numeração de cabines, quadros de comando e registros de manutenção estejam alinhados. Incoerências geram risco em emergências e dificultam inspeções. A construtora deve padronizar a sinalização conforme a identificação oficial de cada equipamento antes da entrega. Caso não o faça, recomenda-se ao condomínio providenciar a padronização o quanto antes.",
-                "normas": [
-                    "Boas práticas de manutenção",
-                    "NBR 5410"
-                ],
+                "pergunta": "A numeração provisória (adesivos) nos botões da cabina pode permanecer após a entrega?",
+                "resposta": "Não. A numeração provisória (adesivos colados durante a obra) deve ser substituída por botoeiras definitivas antes da entrega do elevador ao condomínio. A permanência de adesivos sugere que o acabamento do elevador não foi concluído pela construtora ou que a conservadora não realizou a substituição que fazia parte do escopo de entrega. O perito registra esse ponto como falta de acabamento ou pendência de entrega.",
+                "normas": ["NM 207"],
+                "referencias": [],
                 "responsabilidade": "Construtora",
-                "gravidade": "Média"
+                "gravidade": "Baixa"
             },
             {
                 "id": "elev-007",
-                "pergunta": "Pintura do fosso é apenas questão estética?",
-                "resposta": "Não. A NR 15 define condições insalubres e orienta eliminar agentes nocivos, como excesso de óleos lubrificantes. A pintura auxilia a identificar vazamentos futuros, facilita limpeza e permite aplicar a sinalização obrigatória (NR 26) nas áreas de segurança. Marcas persistentes de óleo indicam problema de manutenção e segurança, não mero aspecto estético. A construtora deve corrigir a origem do vazamento, limpar e repintar a área antes da entrega.",
-                "normas": [
-                    "NR 15",
-                    "NR 26"
-                ],
+                "pergunta": "A falta de pintura ou acabamento no fosso do elevador é uma não conformidade?",
+                "resposta": "Depende do memorial descritivo e da norma aplicável. A NM 207 exige que o fosso seja limpo, iluminado e com paredes lisas. A falta de pintura pode não ser, por si só, uma não conformidade crítica, mas indica ausência de acabamento conforme boas práticas construtivas. Se a falta de acabamento for generalizada e o fosso apresentar rebarba de concreto, umidade ou ausência de iluminação, a situação é agravada. O perito registra o estado do fosso e compara com o memorial descritivo do empreendimento.",
+                "normas": ["NM 207", "NBR 16083"],
+                "referencias": [],
                 "responsabilidade": "Construtora",
-                "gravidade": "Média"
+                "gravidade": "Baixa"
             },
             {
                 "id": "elev-008",
-                "pergunta": "Como proceder quando há evidência de contato com água em elevadores?",
-                "resposta": "Contato de elevadores com água (alagamentos, infiltrações) compromete componentes elétricos, eletrônicos e mecânicos, reduzindo a vida útil por corrosão e aumentando o risco de falhas. Recomenda-se avaliação conjunta entre construtora, condomínio e empresa de manutenção para inspecionar poço, conectores, sensores e botoeiras antes da entrega ou reativação. Devem ser realizados testes específicos e, se necessário, desmontes seletivos para garantir que não haja oxidação ou contaminação que comprometa a segurança operacional.",
-                "normas": [
-                    "Boas práticas de manutenção",
-                    "NBR NM 207"
-                ],
-                "responsabilidade": "Construtora",
-                "gravidade": "Alta"
+                "pergunta": "A presença de água no poço do elevador é responsabilidade da construtora?",
+                "resposta": "Se a água provém de infiltração por falha de impermeabilização, sim. A impermeabilização do poço do elevador deve resistir à pressão hidrostática do lençol freático e à infiltração lateral. Falhas nesse sistema podem causar corrosão nos amortecedores, curto-circuito em componentes eletrônicos e proliferação de insetos. Se, no entanto, a água vem de manutenção interna (limpeza, vazamento de hidráulica do prédio), a responsabilidade é do condomínio. O perito verifica a origem da água.",
+                "normas": ["NBR 9575", "NM 207"],
+                "referencias": [],
+                "responsabilidade": "Mista",
+                "gravidade": "Crítica"
             }
         ]
     },
     "playgrounds.json": {
-        "categoria": "Playgrounds e Áreas Recreativas",
-        "descricao": "Conformidade e segurança em playgrounds conforme NBR 16071",
+        "categoria": "Playgrounds",
+        "descricao": "Não conformidades em playgrounds condominiais: fixação, barreiras e conformidade com normas NBR 16071 e NBR 14350",
         "faqs": [
             {
                 "id": "play-001",
-                "pergunta": "O modelo do playground 'não exige fixação' dispensa os requisitos de segurança?",
-                "resposta": "Improcedente. A ABNT NBR 16071-2 (Requisitos de segurança) estabelece que o equipamento deve ser projetado e instalado de forma a não criar aberturas ou folgas onde cabeça, tronco, pernas, pés, mãos ou dedos possam ficar presos, inclusive aberturas que surgem pela movimentação ou deformação durante uso normal. Se o escorregador possui folga que permite ser levantado a ponto de criar vão acessível a partes do corpo de uma criança, trata-se de irregularidade normativa. A construtora deve promover correção da fixação/ancoragem ou travamento para eliminar possibilidade de criação desse espaço de aprisionamento.",
-                "normas": [
-                    "NBR 16071-2",
-                    "NBR 16071-4"
-                ],
+                "pergunta": "Se o escorregador está fixo no piso, mas balança, é problema?",
+                "resposta": "Sim. A fixação do escorregador deve ser firme e estável, sem folgas ou oscilações perceptíveis durante o uso. Se o equipamento balança, há risco de tombamento ou desprendimento, especialmente com uso simultâneo por várias crianças. A NBR 16071 exige que os equipamentos sejam instalados conforme as especificações do fabricante e que a fixação resista a esforços dinâmicos. O perito verifica a ancoragem, o tipo de piso e a conformidade com a norma.",
+                "normas": ["NBR 16071", "NBR 14350"],
+                "referencias": [],
                 "responsabilidade": "Construtora",
-                "gravidade": "Crítica"
+                "gravidade": "Alta"
             },
             {
                 "id": "play-002",
-                "pergunta": "Falta de barreira no topo do escorregador é problema?",
-                "resposta": "Sim. A NBR 16071-2 exige que, em plataformas de acesso a escorregadores, haja proteção contra queda por meio de barreira ou guarda-corpo, conforme altura e faixa etária. A existência de espaço aberto acima do início do escorregador, sem barra de contenção/apoio, permite que a criança perca o equilíbrio e caia diretamente sobre o plano inclinado, configurando falta de barreira/guarda-corpo e risco de queda não controlada. O acréscimo de barras não é 'melhoria opcional do condomínio', mas sim correção de não conformidade normativa sob responsabilidade da construtora.",
-                "normas": [
-                    "NBR 16071-2"
-                ],
-                "responsabilidade": "Construtora",
-                "gravidade": "Crítica"
+                "pergunta": "A barreira de proteção no topo do escorregador está obstruída — é responsabilidade do condomínio?",
+                "resposta": "Se a barreira foi danificada por uso ou vandalismo após a entrega, a manutenção é responsabilidade do condomínio. Se a barreira nunca existiu ou foi entregue subdimensionada, a responsabilidade é da construtora. A NBR 16071 define dimensões mínimas para barreiras de proteção em equipamentos de playground conforme a faixa etária. O perito verifica a existência, as dimensões e o estado da barreira comparando com a norma e o projeto original.",
+                "normas": ["NBR 16071", "NBR 14350"],
+                "referencias": [],
+                "responsabilidade": "Mista",
+                "gravidade": "Alta"
             },
             {
                 "id": "play-003",
-                "pergunta": "O projeto arquitetônico aprovado garante conformidade do playground?",
-                "resposta": "Não necessariamente. Em várias inspeções identificamos que o playground executado possui dimensões diferentes do projeto aprovado, resultando em redução das distâncias laterais de segurança. A alteração prática do tamanho útil da área compromete as faixas de segurança da NBR 16071, aumentando risco de colisões, quedas sobre elementos rígidos e interferência entre trajetórias de uso. Cabe à construtora corrigir a não conformidade, adequando o dimensionamento/posicionamento à área prevista em projeto e às distâncias mínimas normativas.",
-                "normas": [
-                    "NBR 16071-1",
-                    "NBR 16071-2"
-                ],
+                "pergunta": "Se o projeto aprovado não exigia playground conforme NBR 16071, mas a construtora instalou equipamentos, a norma se aplica?",
+                "resposta": "Sim. Independentemente do que o projeto aprovado previa, se a construtora instalou equipamentos de playground, estes devem atender às normas de segurança vigentes (NBR 16071 e NBR 14350). A responsabilidade pela conformidade dos equipamentos instalados é da construtora. Se os equipamentos foram adquiridos pelo condomínio após a entrega, a responsabilidade pela adequação às normas passa ao condomínio.",
+                "normas": ["NBR 16071", "NBR 14350"],
+                "referencias": [],
                 "responsabilidade": "Construtora",
                 "gravidade": "Alta"
             }
         ]
     },
     "casas-maquinas.json": {
-        "categoria": "Casas de Máquinas e Ambientes Técnicos",
-        "descricao": "Requisitos de acabamento e manutenção de áreas técnicas",
+        "categoria": "Casas de Máquinas",
+        "descricao": "Problemas em casas de máquinas: pisos, instalações elétricas, bombas e limpeza de poços",
         "faqs": [
             {
-                "id": "casa-001",
-                "pergunta": "Por que o piso da casa de máquinas precisa de tratamento especial?",
-                "resposta": "Encontramos frequentemente casas de máquinas com piso de concreto cru, sem pintura ou selamento. A poeira que surge nesse cenário não é meramente sujeira de uso, mas resultado da desagregação do próprio concreto por falta de tratamento. A manutenção rotineira do condomínio consegue remover o pó solto, mas não corrige a causa raiz. Normas de desempenho (ex.: NBR 15575) e boas práticas recomendam piso protegido (pintura epóxi ou selador) em ambientes técnicos para evitar emissão contínua de poeira mineral, que prejudica componentes eletroeletrônicos e mecânicos dos elevadores. Portanto, a correção (pintura/selamento adequado) é responsabilidade da construtora; ao condomínio cabe apenas a limpeza após o acabamento correto.",
-                "normas": [
-                    "NBR 15575"
-                ],
+                "id": "cm-001",
+                "pergunta": "O piso da casa de máquinas precisa de tratamento especial?",
+                "resposta": "Sim. O piso da casa de máquinas deve ser liso, antiderrapante, resistente a óleo e de fácil limpeza. A NR-12 e a NM 207 exigem condições de acesso seguro para manutenção. Pisos irregulares, com buracos ou sem acabamento comprometem a segurança dos técnicos e dificultam a limpeza. Se o piso foi entregue sem tratamento adequado, a responsabilidade é da construtora.",
+                "normas": ["NR-12", "NM 207"],
+                "referencias": [],
                 "responsabilidade": "Construtora",
                 "gravidade": "Média"
             },
             {
-                "id": "casa-002",
-                "pergunta": "Sujeira e marcas de óleo no poço são responsabilidade de quem?",
-                "resposta": "A sujeira e marcas de óleo no poço após a entrega são de responsabilidade do condomínio (ou empresa terceirizada), tratando-se de zeladoria e manutenção preventiva. O acúmulo de resíduos e vazamentos pontuais de lubrificantes devem ser tratados pela equipe de manutenção ou conservadora de elevadores. Contudo, a ausência de área de segurança delimitada no poço caracteriza vício de instalação. A norma técnica exige sinalização e delimitação clara das áreas de segurança para proteção dos técnicos durante manutenção. Cabe à construtora providenciar a correta delimitação e sinalização, garantindo atendimento às normas de segurança do trabalho.",
-                "normas": [
-                    "NBR 16042",
-                    "NR-12"
-                ],
-                "responsabilidade": "Mista - limpeza é do condomínio, sinalização é da construtora",
-                "gravidade": "Alta (sinalização)"
+                "id": "cm-002",
+                "pergunta": "Sujeira e óleo acumulado no poço do elevador é responsabilidade da conservadora?",
+                "resposta": "A limpeza periódica do poço é responsabilidade do condomínio, mas a conservadora do elevador deve reportar condições anormais durante as visitas de manutenção. Se o acúmulo de óleo é proveniente de vazamento no equipamento do elevador, a conservadora é responsável pela correção. O contrato de manutenção deve prever limpeza periódica do poço. O perito avalia: 1) origem do resíduo; 2) frequência de manutenção registrada; 3) condições do dreno do poço.",
+                "normas": ["NM 207", "NBR 16083"],
+                "referencias": [],
+                "responsabilidade": "Mista",
+                "gravidade": "Média"
             }
         ]
     },
     "instalacoes-gas.json": {
         "categoria": "Instalações de Gás",
-        "descricao": "Segurança e conformidade em sistemas de gás predial",
+        "descricao": "Casos técnicos envolvendo centrais de GLP/GN, tubulação, ventilação, segurança e distâncias normativas",
         "faqs": [
             {
                 "id": "gas-001",
-                "pergunta": "Por que a proximidade entre medidores de gás e energia é crítica?",
-                "resposta": "Durante a inspeção foi identificado vazamento de gás na região dos medidores, materializando o risco de ignição pela proximidade com a medição de energia elétrica. Isso evidencia que, mesmo com distanciamento aparentemente conforme normas do CBMGO, qualquer falha no sistema de gás expõe o local a risco elevado se não houver barreiras físicas e vedação adequada entre os abrigos. Recomenda-se, sob responsabilidade da construtora: garantir fechamento hermético das caixas e passagens, evitar comunicação direta entre compartimentos, prover ventilação forçada ou natural direcionada para o exterior e orientar as empresas instaladoras sobre zonas de risco. Ao condomínio cabe manter rotina de inspeção com detecção de gás e controle de acesso aos abrigos para prevenir intervenções inadequadas.",
-                "normas": [
-                    "NBR 15923",
-                    "IT-29 CBMGO"
-                ],
-                "responsabilidade": "Construtora (mitigação) e Condomínio (inspeção rotineira)",
-                "gravidade": "Crítica"
+                "pergunta": "A proximidade dos medidores de gás à fiação elétrica é tolerável?",
+                "resposta": "Não. As normas NBR 13523 e NBR 15526 estabelecem distâncias mínimas de segurança entre medidores de gás e instalações elétricas, fontes de ignição e aberturas de edificações. Mesmo que a instalação existente funcione sem incidentes, a não conformidade com as distâncias normativas representa risco e deve ser corrigida. O responsável pela instalação (construtora ou concessionária de gás) deve garantir o atendimento à norma.",
+                "normas": ["NBR 13523", "NBR 15526"],
+                "referencias": [],
+                "responsabilidade": "Construtora",
+                "gravidade": "Alta"
             },
             {
                 "id": "gas-002",
-                "pergunta": "Caixa de abrigo com abertura irregular é problema de uso?",
-                "resposta": "Não. Quando a caixa foi instalada com abertura irregular para passagem de tubulação, sem o devido acabamento, deixando partes metálicas expostas com risco de corte, trata-se de vício de execução e acabamento. A instalação sem fechamento adequado compromete estanqueidade, acabamento e segurança do conjunto. É totalmente improcedente atribuir ao condomínio a responsabilidade. Cabe à construtora refazer a instalação com fechamento adequado das aberturas, acabamento completo, proteção das arestas metálicas e vedação correta da interface com a parede.",
-                "normas": [
-                    "NBR 15923"
-                ],
+                "pergunta": "A caixa de abrigo do regulador de pressão pode ficar embutida na alvenaria?",
+                "resposta": "Depende do projeto e da norma local. A NBR 15526 permite instalação embutida desde que haja ventilação adequada na caixa e acesso para manutenção. A caixa deve possuir drenagem, proteção contra chuva e identificação. Se a instalação embutida compromete a ventilação ou dificulta o acesso, o perito pode considerar como não conformidade.",
+                "normas": ["NBR 15526"],
+                "referencias": [],
                 "responsabilidade": "Construtora",
-                "gravidade": "Alta"
+                "gravidade": "Média"
             },
             {
                 "id": "gas-003",
-                "pergunta": "A falta de portinhola no abastecimento é item de manutenção?",
-                "resposta": "Não. A ausência de portinhola na Central de Gás para abertura de abastecimento configura não conformidade de execução e segurança. A falta compromete fechamento fásico e proteção do ponto de abastecimento, expondo componentes do sistema, favorecendo acesso indevido e aumentando risco de danos mecânicos, vandalismo e acidentes em área sensível (gás inflamável). Trata-se de elemento integrante do sistema que deveria ter sido entregue completo conforme normas de instalações de gás e diretrizes do Corpo de Bombeiros. A responsabilidade pelo fornecimento e instalação é da construtora.",
-                "normas": [
-                    "NBR 15923",
-                    "IT-29 CBMGO"
-                ],
-                "responsabilidade": "Construtora",
-                "gravidade": "Alta"
+                "pergunta": "A portinhola de ventilação da central de gás está obstruída — responsabilidade de quem?",
+                "resposta": "Se a obstrução foi causada por reformas do condomínio ou acúmulo de materiais, a responsabilidade é do condomínio. Se a portinhola foi entregue com dimensões insuficientes ou bloqueada por elementos construtivos, a responsabilidade é da construtora. A ventilação da central de GLP é requisito de segurança fundamental e sua obstrução pode causar acúmulo de gás em caso de vazamento. O perito mede as áreas de ventilação e compara com as exigências da NBR 13523.",
+                "normas": ["NBR 13523"],
+                "referencias": [],
+                "responsabilidade": "Mista",
+                "gravidade": "Crítica"
             },
             {
                 "id": "gas-004",
-                "pergunta": "Quando é possível reduzir a distância entre a central de GLP e um depósito de resíduos?",
-                "resposta": "Somente quando todas as condições normativas forem comprovadas. A NBR 13523 e a NT 28/2014 permitem considerar 3,0 m de afastamento quando os resíduos próximos são de fácil combustão (classe A) e existe barreira que obriga o caminhamento dos vapores acima de 3,0 m. Essa barreira precisa ser parede corta-fogo com TRRF mínimo de 120 minutos, conforme NBR 10636. Sem laudo que comprove o desempenho, a redução não é válida e a construtora deve manter o distanciamento original ou adequar a parede com espessura/revestimentos ignífugos equivalentes.",
-                "normas": [
-                    "NT 28/2014 CBMGO",
-                    "NBR 13523",
-                    "NBR 10636"
-                ],
-                "referencias": [
-                    "https://www.bombeiros.go.gov.br/wp-content/uploads/2014/10/nt-28_2014-gas-liquefeito-de-petroleo-parte-1_manipulacao-utilizacao-e-central-de-glp.pdf"
-                ],
+                "pergunta": "Qual a distância mínima entre a central de GLP e edificações ou aberturas?",
+                "resposta": "A NBR 13523 define distâncias mínimas que variam conforme a capacidade de armazenamento da central. Para centrais com até 190 kg, a distância mínima para limites de propriedade e aberturas de edificações é de 1,5 m. Para centrais maiores, as distâncias aumentam proporcionalmente. O perito mede as distâncias reais e compara com a tabela normativa, considerando todas as aberturas (janelas, portas, ralos, caixas de inspeção) no raio de influência.",
+                "normas": ["NBR 13523"],
+                "referencias": [],
                 "responsabilidade": "Construtora",
-                "gravidade": "Crítica"
+                "gravidade": "Alta"
             }
         ]
     },
     "pressurizacao.json": {
-        "categoria": "Sistemas de Pressurização",
-        "descricao": "Pressurização de escadas e sistemas de segurança contra incêndio",
+        "categoria": "Pressurização",
+        "descricao": "Questões sobre sistemas de pressurização de escadas, controle de fumaça e exaustão de emergência",
         "faqs": [
             {
                 "id": "press-001",
-                "pergunta": "A ausência de pressostato diferencial é irregular?",
-                "resposta": "Sim. Marcar o item como 'improcedente' contraria o princípio básico das normas de segurança contra incêndio: em sistemas com redundância de motoventiladores deve existir supervisão automática da pressão e acionamento do conjunto reserva em caso de falha. Se o projeto aprovado pelo CBMGO prevê dois motores, a construtora precisa instalar pressostato diferencial (ou sensor equivalente) que monitore a pressão e comande o segundo motor quando o primeiro não atingir o desempenho, ou comprovar documentalmente outra forma de supervisão automática equivalente. Sem essa comprovação, o sistema permanece irregular.",
-                "normas": [
-                    "NBR 14880",
-                    "IT-15 CBMGO"
-                ],
-                "responsabilidade": "Construtora",
-                "gravidade": "Crítica"
+                "pergunta": "O pressostato diferencial do sistema de pressurização está descalibrado — isso compromete a aprovação?",
+                "resposta": "Sim. O pressostato diferencial é o componente que controla a pressão dentro da escada enclausurada. Se descalibrado, pode manter pressão insuficiente (permitindo entrada de fumaça) ou excessiva (dificultando a abertura das portas). A calibração deve ser verificada e documentada em inspeções periódicas. A IT do Corpo de Bombeiros exige que o sistema opere dentro das faixas de pressão especificadas, e a descalibração pode comprometer a aprovação do AVCB/CERCON.",
+                "normas": ["NBR 14880", "IT Corpo de Bombeiros"],
+                "referencias": [],
+                "responsabilidade": "Condomínio",
+                "gravidade": "Alta"
             },
             {
                 "id": "press-002",
-                "pergunta": "Filtros sujos em ventiladores são responsabilidade de quem?",
-                "resposta": "Após a entrega, a limpeza/substituição de filtros e ajuste de correias em ventiladores centrífugos são responsabilidade do condomínio como manutenção preventiva de rotina. Conforme boas práticas de engenharia e manuais de operação, elementos filtrantes são componentes de desgaste natural que exigem higienização periódica para garantir vazão de ar projetada e vida útil do motor. A construtora não possui responsabilidade sobre acúmulo de sujidade decorrente do uso do sistema após a entrega. Cabe ao condomínio incluir verificação e limpeza em seu plano de manutenção periódica.",
-                "normas": [
-                    "NBR 14880",
-                    "Manuais do fabricante"
-                ],
+                "pergunta": "Os filtros do sistema de pressurização estão sujos — é motivo para reprovação na inspeção?",
+                "resposta": "Filtros sujos reduzem a vazão de ar e podem comprometer o diferencial de pressão necessário na escada. Embora a sujeira de filtro isoladamente não signifique reprovação automática, se o diferencial de pressão medido estiver abaixo do mínimo exigido por consequência dos filtros obstruídos, o sistema será considerado não conforme. A manutenção preventiva dos filtros é responsabilidade do condomínio e deve constar no plano de manutenção.",
+                "normas": ["NBR 14880", "NBR 5674"],
+                "referencias": [],
                 "responsabilidade": "Condomínio",
-                "gravidade": "Baixa (manutenção rotineira)"
+                "gravidade": "Média"
             },
             {
                 "id": "press-003",
-                "pergunta": "Vibração perceptável em moto ventilador exige medição instrumental para ser tratada?",
-                "resposta": "Não. Vibrações anormais percebidas em inspeção comparativa com outras máquinas idênticas são indícios suficientes de desequilíbrio ou falha de montagem. Mesmo sem medição imediata, trata-se de fato fásico observável que deve ser corrigido antes da entrega, sob responsabilidade da construtora. A empresa instaladora deve emitir relatório comprovando a regularização ou justificando, formalmente, a ausência de diferença relevante.",
-                "normas": [
-                    "NBR 14880",
-                    "Boas práticas de manutenção"
-                ],
-                "responsabilidade": "Construtora",
+                "pergunta": "A vibração excessiva do motoventilador de pressurização pode danificar a estrutura?",
+                "resposta": "Vibração excessiva do motoventilador pode causar fadiga em conexões de dutos, afrouxamento de fixações e, a longo prazo, comprometer suportes estruturais. Além disso, o ruído transmitido pela estrutura incomoda moradores e pode indicar desbalanceamento, falha de rolamentos ou suporte antivibratório inadequado. O perito mede a vibração com acelerômetro e compara com limites de máquinas rotativas. A correção pode demandar balanceamento dinâmico ou substituição de amortecedores.",
+                "normas": ["NBR 14880", "ISO 10816"],
+                "referencias": [],
+                "responsabilidade": "Mista",
                 "gravidade": "Alta"
             }
         ]
     },
     "impermeabilizacao.json": {
-        "categoria": "Impermeabilização e Infiltrações",
-        "descricao": "Problemas de estanqueidade, infiltrações e alagamentos",
+        "categoria": "Impermeabilização",
+        "descricao": "Problemas de impermeabilização relacionados a áreas técnicas e impacto nos sistemas mecânicos",
         "faqs": [
             {
                 "id": "imp-001",
-                "pergunta": "Alagamento no poço de elevador é sempre problema do condomínio?",
-                "resposta": "Não. A ocorrência de alagamento nos poços dos elevadores é improcedente como manutenção do condomínio se a origem for infiltração ou falha de estanqueidade. A integridade do poço depende exclusivamente de impermeabilização eficiente. Se o acúmulo de água decorre de falha na impermeabilização (vício oculto) ou vazamentos das tubulações internas da obra (erros de montagem ou materiais), a responsabilidade pela correção e reparo dos danos ao equipamento é da construtora, dentro do prazo de garantia. A responsabilidade será do condomínio apenas se ficar comprovado que o alagamento foi causado por fatores externos ao sistema construtivo, como lavagem inadequada de pavimentos com escoamento direto para o poço.",
-                "normas": [
-                    "NBR 16042",
-                    "NBR 9575"
-                ],
-                "responsabilidade": "Mista - depende da origem",
+                "pergunta": "O alagamento recorrente do poço do elevador pode ser resolvido apenas com bomba de drenagem?",
+                "resposta": "Não. A bomba de drenagem (bomba de esgotamento) é uma solução paliativa que não corrige a causa raiz. O alagamento recorrente do poço indica falha de impermeabilização, e a solução definitiva requer reparo ou reexecução da impermeabilização conforme NBR 9575. A presença contínua de água no poço corrói amortecedores, danifica componentes elétricos e compromete a segurança do elevador. O perito recomenda laudo de impermeabilização específico para definir a extensão da falha e a solução técnica adequada.",
+                "normas": ["NBR 9575", "NM 207"],
+                "referencias": [],
+                "responsabilidade": "Construtora",
                 "gravidade": "Crítica"
             }
         ]
@@ -605,10 +863,7 @@
                 "id": "est-001",
                 "pergunta": "Escada metálica em L sem coluna de apoio é irregular?",
                 "resposta": "Não necessariamente. A ausência de coluna de apoio no patamar intermediário pode ser tecnicamente aceitável quando a escada foi projetada como estrutura autoportante, com perfis dimensionados para garantir estabilidade e rigidez (sem deformações ou vibrações excessivas) durante a vistoria. Diferenças em relação a outras escadas do empreendimento não caracterizam vício por si só. Recomenda-se que a construtora apresente o projeto estrutural ou memorial de dimensionamento comprovando a tipologia autoportante e as verificações de resistência, em conformidade com boas práticas de engenharia e normas de estruturas metálicas.",
-                "normas": [
-                    "NBR 14762",
-                    "NBR 9077"
-                ],
+                "normas": ["NBR 14762", "NBR 9077"],
                 "referencias": [],
                 "responsabilidade": "Construtora",
                 "gravidade": "Média"
@@ -617,10 +872,7 @@
                 "id": "est-002",
                 "pergunta": "Falhas de pintura em portões metálicos podem ser ignoradas porque não foram apontadas na entrega?",
                 "resposta": "Não. A vistoria de entrega não é termo de quitação absoluta nem exime a construtora de corrigir falhas de acabamento que surgem logo após a entrega. Oxidação precoce ou falhas de aderência da pintura em portões expostos às intempéries indicam preparação inadequada de superfície ou aplicação deficiente, caracterizando vício construtivo. O Código Civil e o Código de Defesa do Consumidor asseguram a responsabilidade da construtora pela qualidade dos materiais e acabamentos entregues. Assim, a empresa deve refazer o tratamento e a pintura para garantir a durabilidade prevista em projeto.",
-                "normas": [
-                    "NBR 15575",
-                    "Código de Defesa do Consumidor"
-                ],
+                "normas": ["NBR 15575", "Código de Defesa do Consumidor"],
                 "referencias": [],
                 "responsabilidade": "Construtora",
                 "gravidade": "Média"
@@ -629,9 +881,7 @@
                 "id": "est-003",
                 "pergunta": "A ausência de batentes de borracha em portões metálicos pode ser desconsiderada?",
                 "resposta": "Não. Portões metálicos sem amortecedores de borracha ou poliuretano nos pontos de batida geram impacto metal-metal, ruído excessivo e aceleram o desgaste de dobradiças, pivôs e fechaduras. Mesmo que não haja exigência expressa em norma específica, trata-se de boa prática de engenharia e manutenção preventiva. Recomenda-se instalar amortecedores em ambos os lados de contato e revisar o ajuste após a implantação para assegurar conforto acústico e longevidade do conjunto.",
-                "normas": [
-                    "Boas práticas de manutenção"
-                ],
+                "normas": ["Boas práticas de manutenção"],
                 "referencias": [],
                 "responsabilidade": "Construtora",
                 "gravidade": "Média"
@@ -641,66 +891,22 @@
 }
     </script>
 
-    <script src="../js/jquery-3.6.0.min.js"></script>
+    <!-- ========== SCRIPTS ========== -->
+    <script src="../js/main.js"></script>
     <script>
         document.getElementById('currentYear').textContent = new Date().getFullYear();
 
-        // Dados das categorias (mapeamento dos arquivos JSON)
+        // Category definitions
         const categorias = [
-            {
-                nome: "HVAC e Climatização",
-                icone: "fas fa-wind",
-                arquivo: "hvac-climatizacao.json",
-                cor: "category-blue"
-            },
-            {
-                nome: "Portas Corta-Fogo",
-                icone: "fas fa-fire-extinguisher",
-                arquivo: "portas-cortafogo.json",
-                cor: "category-red"
-            },
-            {
-                nome: "Elevadores",
-                icone: "fas fa-elevator",
-                arquivo: "elevadores.json",
-                cor: "category-gray"
-            },
-            {
-                nome: "Playgrounds",
-                icone: "fas fa-child",
-                arquivo: "playgrounds.json",
-                cor: "category-green"
-            },
-            {
-                nome: "Casas de Máquinas",
-                icone: "fas fa-cogs",
-                arquivo: "casas-maquinas.json",
-                cor: "category-yellow"
-            },
-            {
-                nome: "Instalações de Gás",
-                icone: "fas fa-gas-pump",
-                arquivo: "instalacoes-gas.json",
-                cor: "category-orange"
-            },
-            {
-                nome: "Pressurização",
-                icone: "fas fa-fan",
-                arquivo: "pressurizacao.json",
-                cor: "category-purple"
-            },
-            {
-                nome: "Impermeabilização",
-                icone: "fas fa-tint",
-                arquivo: "impermeabilizacao.json",
-                cor: "category-cyan"
-            },
-            {
-                nome: "Estruturas Metálicas",
-                icone: "fas fa-drafting-compass",
-                arquivo: "estruturas-metalicas.json",
-                cor: "category-indigo"
-            }
+            { nome: "HVAC e Climatização", icone: "fas fa-wind", arquivo: "hvac-climatizacao.json", cor: "cat-blue" },
+            { nome: "Portas Corta-Fogo", icone: "fas fa-fire-extinguisher", arquivo: "portas-cortafogo.json", cor: "cat-red" },
+            { nome: "Elevadores", icone: "fas fa-elevator", arquivo: "elevadores.json", cor: "cat-gray" },
+            { nome: "Playgrounds", icone: "fas fa-child", arquivo: "playgrounds.json", cor: "cat-green" },
+            { nome: "Casas de Máquinas", icone: "fas fa-cogs", arquivo: "casas-maquinas.json", cor: "cat-yellow" },
+            { nome: "Instalações de Gás", icone: "fas fa-gas-pump", arquivo: "instalacoes-gas.json", cor: "cat-orange" },
+            { nome: "Pressurização", icone: "fas fa-fan", arquivo: "pressurizacao.json", cor: "cat-purple" },
+            { nome: "Impermeabilização", icone: "fas fa-tint", arquivo: "impermeabilizacao.json", cor: "cat-cyan" },
+            { nome: "Estruturas Metálicas", icone: "fas fa-drafting-compass", arquivo: "estruturas-metalicas.json", cor: "cat-indigo" }
         ];
 
         let todosOsFaqs = [];
@@ -710,17 +916,12 @@
         const rodandoLocal = typeof window !== 'undefined' && window.location.protocol === 'file:';
 
         function clonarProfundo(obj) {
-            if (typeof structuredClone === 'function') {
-                return structuredClone(obj);
-            }
+            if (typeof structuredClone === 'function') return structuredClone(obj);
             return JSON.parse(JSON.stringify(obj));
         }
 
         function registrarDadosCategoria(data, nomeExibicao) {
-            if (!data || !data.categoria || !Array.isArray(data.faqs)) {
-                return;
-            }
-
+            if (!data || !data.categoria || !Array.isArray(data.faqs)) return;
             const chaveCategoria = nomeExibicao || data.categoria;
             descricaoCategorias[chaveCategoria] = data.descricao || '';
             data.faqs.forEach(faq => {
@@ -732,193 +933,127 @@
 
         async function carregarDadosCategoria(cat) {
             try {
-                const response = await fetch(`dados/${cat.arquivo}`, { cache: 'no-cache' });
-                if (!response.ok) {
-                    throw new Error(`Status ${response.status}`);
-                }
+                const response = await fetch('dados/' + cat.arquivo, { cache: 'no-cache' });
+                if (!response.ok) throw new Error('Status ' + response.status);
                 const data = await response.json();
-                console.log(`Carregado ${cat.arquivo}: ${data.faqs.length} FAQs`);
                 registrarDadosCategoria(data, cat.nome);
             } catch (error) {
-                console.error(`Erro ao carregar ${cat.arquivo}:`, error);
                 if (dadosEmbed[cat.arquivo]) {
-                    console.warn(`Usando dados embutidos para ${cat.arquivo}`);
                     registrarDadosCategoria(clonarProfundo(dadosEmbed[cat.arquivo]), cat.nome);
                 }
             }
         }
 
-        // Carregar categorias
+        // Render category cards
         function carregarCategorias() {
             const container = document.getElementById('categoriesContainer');
             container.innerHTML = '';
             categorias.forEach(cat => {
-                const card = `
-                    <div class="category-card ${cat.cor}" data-arquivo="${cat.arquivo}" data-nome="${cat.nome}">
-                        <i class="${cat.icone}" style="font-size: 3rem; margin-bottom: 1rem;"></i>
-                        <h3 style="font-size: 1.25rem; font-weight: bold;">${cat.nome}</h3>
-                    </div>
-                `;
-                container.insertAdjacentHTML('beforeend', card);
-            });
-
-            container.querySelectorAll('.category-card').forEach(card => {
+                const card = document.createElement('div');
+                card.className = 'category-card ' + cat.cor;
+                card.setAttribute('data-arquivo', cat.arquivo);
+                card.setAttribute('data-nome', cat.nome);
+                card.innerHTML = '<i class="' + cat.icone + '"></i><h3>' + cat.nome + '</h3>';
                 card.addEventListener('click', () => {
-                    const arquivo = card.getAttribute('data-arquivo');
-                    const nome = card.getAttribute('data-nome');
-                    carregarFaqsPorCategoria(arquivo, nome);
+                    carregarFaqsPorCategoria(cat.arquivo, cat.nome);
                 });
+                container.appendChild(card);
             });
         }
 
         async function carregarTodosFaqs() {
             todosOsFaqs = [];
-            Object.keys(descricaoCategorias).forEach(chave => delete descricaoCategorias[chave]);
+            Object.keys(descricaoCategorias).forEach(k => delete descricaoCategorias[k]);
             for (const cat of categorias) {
                 if (rodandoLocal && dadosEmbed[cat.arquivo]) {
-                    console.log(`Executando localmente: usando dados embutidos para ${cat.arquivo}`);
                     registrarDadosCategoria(clonarProfundo(dadosEmbed[cat.arquivo]), cat.nome);
                 } else {
                     await carregarDadosCategoria(cat);
                 }
             }
-            console.log(`Total de FAQs carregados: ${todosOsFaqs.length}`);
             exibirTodosFaqs();
         }
 
-        // Exibir todos os FAQs
         function exibirTodosFaqs() {
             const container = document.getElementById('faqsContainer');
-            let html = '<h2 class="text-3xl font-bold text-green-700 mb-6 text-center">Todos os Problemas Técnicos</h2>';
-
-            todosOsFaqs.forEach(faq => {
-                html += criarCardFaq(faq);
-            });
-
+            let html = '<h2 class="results-header"><span class="text-gradient">Todos os Problemas Técnicos</span></h2>';
+            html += '<p class="results-desc">' + todosOsFaqs.length + ' registros na base de conhecimento</p>';
+            todosOsFaqs.forEach(faq => { html += criarCardFaq(faq); });
             container.innerHTML = html;
         }
 
-        // Carregar FAQs por categoria
         function carregarFaqsPorCategoria(arquivo, nomeCategoria) {
-            if (todosOsFaqs.length === 0) {
-                console.warn('FAQs ainda não carregados. Tente novamente em instantes.');
-                return;
-            }
-
-            const faqsCategoria = todosOsFaqs.filter(faq => faq.categoria === nomeCategoria);
-
-            if (faqsCategoria.length === 0) {
-                console.warn(`Nenhum FAQ encontrado para ${nomeCategoria}.`);
-                return;
-            }
-
-            const dadosCategoria = {
-                descricao: descricaoCategorias[nomeCategoria] || '',
-                faqs: faqsCategoria
-            };
-
-            console.log(`Categoria ${nomeCategoria}: ${faqsCategoria.length} FAQs`);
-            exibirFaqsCategoria(dadosCategoria, nomeCategoria);
+            if (todosOsFaqs.length === 0) return;
+            const faqsCat = todosOsFaqs.filter(faq => faq.categoria === nomeCategoria);
+            if (faqsCat.length === 0) return;
+            exibirFaqsCategoria({ descricao: descricaoCategorias[nomeCategoria] || '', faqs: faqsCat }, nomeCategoria);
         }
 
-        // Exibir FAQs de uma categoria
         function exibirFaqsCategoria(data, nomeCategoria) {
             const container = document.getElementById('faqsContainer');
-            let html = `
-                <div class="mb-4">
-                    <button onclick="exibirTodosFaqs()" class="bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded-lg">
-                        <i class="fas fa-arrow-left mr-2"></i> Voltar para todas as categorias
-                    </button>
-                </div>
-                <h2 class="text-3xl font-bold text-green-700 mb-3">${nomeCategoria}</h2>
-                <p class="text-lg text-gray-700 mb-6">${data.descricao}</p>
-            `;
-
-            data.faqs.forEach(faq => {
-                html += criarCardFaq(faq);
-            });
-
+            let html = '<button class="back-btn" onclick="exibirTodosFaqs()"><i class="fas fa-arrow-left"></i> Voltar</button>';
+            html += '<h2 class="results-header"><span class="text-gradient">' + nomeCategoria + '</span></h2>';
+            html += '<p class="results-desc">' + data.descricao + '</p>';
+            data.faqs.forEach(faq => { html += criarCardFaq(faq); });
             container.innerHTML = html;
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            window.scrollTo({ top: document.getElementById('faqs').offsetTop - 80, behavior: 'smooth' });
         }
 
-        // Criar card de FAQ
         function criarCardFaq(faq) {
             const respClass = faq.responsabilidade.includes('Construtora') ? 'resp-construtora' :
                 faq.responsabilidade.includes('Condomínio') ? 'resp-condominio' : 'resp-mista';
 
-            const gravClass = faq.gravidade.includes('Crítica') ? 'gravidade-critica' :
-                faq.gravidade.includes('Alta') ? 'gravidade-alta' :
-                    faq.gravidade.includes('Média') ? 'gravidade-media' : 'gravidade-baixa';
+            const sevClass = faq.gravidade.includes('Crítica') ? 'sev-critica' :
+                faq.gravidade.includes('Alta') ? 'sev-alta' :
+                    faq.gravidade.includes('Média') ? 'sev-media' : 'sev-baixa';
 
             let referencias = '';
             if (faq.referencias && faq.referencias.length > 0) {
-                referencias = '<div class="mt-3"><strong>Referências:</strong><ul class="list-disc list-inside ml-4">';
+                referencias = '<div style="margin-top: var(--space-3);"><strong style="color: var(--text-primary);">Referências:</strong><ul style="list-style: none; padding: 0; margin-top: var(--space-2);">';
                 faq.referencias.forEach(ref => {
-                    referencias += `<li><a href="${ref}" target="_blank" class="text-blue-600 hover:underline text-sm">${ref}</a></li>`;
+                    referencias += '<li><a href="' + ref + '" target="_blank" style="color: var(--accent-blue); font-size: var(--fs-sm);">' + ref + '</a></li>';
                 });
                 referencias += '</ul></div>';
             }
 
-            return `
-                <div class="faq-item bg-white p-8 rounded-lg mb-6 shadow-md" data-categoria="${faq.categoria}">
-                    <div class="flex justify-between items-start mb-4">
-                        <h3 class="text-xl font-bold text-gray-900 flex-1" style="font-weight: 700;">${faq.pergunta}</h3>
-                        <i class="fas fa-tools text-green-600 text-2xl ml-4"></i>
-                    </div>
-                    <p class="text-gray-800 leading-relaxed mb-5">${faq.resposta}</p>
-                    <div class="flex flex-wrap gap-3 items-center">
-                        <span class="responsibility-badge ${respClass}">
-                            <i class="fas fa-user-shield mr-2"></i> ${faq.responsabilidade}
-                        </span>
-                        <span class="${gravClass} font-bold text-sm">
-                            <i class="fas fa-exclamation-triangle mr-2"></i> ${faq.gravidade}
-                        </span>
-                        <span class="text-sm text-gray-600 ml-auto">
-                            <i class="fas fa-book mr-2"></i> ${faq.normas.join(', ')}
-                        </span>
-                    </div>
-                    ${referencias}
-                </div>
-            `;
+            return '<div class="kb-faq-item" data-categoria="' + faq.categoria + '">' +
+                '<h3><i class="fas fa-tools"></i><span>' + faq.pergunta + '</span></h3>' +
+                '<div class="faq-body">' + faq.resposta + '</div>' +
+                '<div class="faq-meta">' +
+                '<span class="resp-badge ' + respClass + '"><i class="fas fa-user-shield"></i> ' + faq.responsabilidade + '</span>' +
+                '<span class="sev-badge ' + sevClass + '"><i class="fas fa-exclamation-triangle"></i> ' + faq.gravidade + '</span>' +
+                '<span class="norma-tag"><i class="fas fa-book"></i> ' + faq.normas.join(', ') + '</span>' +
+                '</div>' +
+                referencias +
+                '</div>';
         }
 
-        // Busca Semântica
-        // Função para normalizar texto (remover acentos e caracteres especiais)
+        // ========== SEMANTIC SEARCH ==========
         function normalizarTexto(texto) {
-            return texto
-                .toLowerCase()
-                .normalize('NFD')
-                .replace(/[\u0300-\u036f]/g, '')
-                .replace(/[^\w\s]/g, ' ')
-                .trim();
+            return texto.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^\w\s]/g, ' ').trim();
         }
 
-        // Sinônimos e termos relacionados no contexto de engenharia
         const sinonimos = {
-            'ar condicionado': ['hvac', 'climatizacao', 'climatizador', 'refrigeracao', 'ar-condicionado', 'split', 'vrf', 'climatização'],
+            'ar condicionado': ['hvac', 'climatizacao', 'climatizador', 'refrigeracao', 'split', 'vrf'],
             'elevador': ['elevadores', 'ascensor', 'lift'],
-            'incendio': ['fogo', 'combate', 'avcb', 'clcb', 'bombeiro', 'hidrante', 'sprinkler', 'incêndio'],
-            'gas': ['glp', 'gnv', 'instalacao de gas', 'tubulacao de gas', 'gás'],
-            'bomba': ['bombas', 'pressurizacao', 'recalque', 'succao', 'pressurização', 'sucção'],
+            'incendio': ['fogo', 'combate', 'avcb', 'clcb', 'bombeiro', 'hidrante', 'sprinkler'],
+            'gas': ['glp', 'gnv', 'instalacao de gas', 'tubulacao de gas'],
+            'bomba': ['bombas', 'pressurizacao', 'recalque', 'succao'],
             'condensadora': ['evaporadora', 'unidade externa', 'compressor'],
-            'playground': ['parquinho', 'brinquedo', 'area de lazer', 'área de lazer'],
-            'pmoc': ['manutencao', 'plano de manutencao', 'manutenção'],
-            'ventilacao': ['ventilador', 'exaustao', 'exaustor', 'ventilação', 'exaustão'],
-            'ruido': ['barulho', 'som', 'vibracao', 'ruído', 'vibração'],
-            'norma': ['nbr', 'abnt', 'regulamento', 'legislacao', 'legislação'],
-            'pressao': ['pressurizado', 'psi', 'bar', 'pressão'],
-            'tanque': ['reservatorio', 'cisterna', 'reservatório'],
-            'vazamento': ['infiltracao', 'goteira', 'infiltração'],
-            'manutencao': ['preventiva', 'corretiva', 'revisao', 'manutenção', 'revisão']
+            'playground': ['parquinho', 'brinquedo', 'area de lazer'],
+            'pmoc': ['manutencao', 'plano de manutencao'],
+            'ventilacao': ['ventilador', 'exaustao', 'exaustor'],
+            'ruido': ['barulho', 'som', 'vibracao'],
+            'norma': ['nbr', 'abnt', 'regulamento', 'legislacao'],
+            'pressao': ['pressurizado', 'psi', 'bar'],
+            'tanque': ['reservatorio', 'cisterna'],
+            'vazamento': ['infiltracao', 'goteira'],
+            'manutencao': ['preventiva', 'corretiva', 'revisao']
         };
 
-        // Função para expandir termo de busca com sinônimos
         function expandirComSinonimos(termo) {
             const termoNorm = normalizarTexto(termo);
             let termos = [termoNorm];
-
-            // Adiciona sinônimos diretos
             for (const [chave, valores] of Object.entries(sinonimos)) {
                 if (normalizarTexto(chave).includes(termoNorm) || termoNorm.includes(normalizarTexto(chave))) {
                     termos.push(...valores.map(v => normalizarTexto(v)));
@@ -930,11 +1065,9 @@
                     }
                 });
             }
-
             return [...new Set(termos)];
         }
 
-        // Função para calcular relevância semântica
         function calcularRelevancia(faq, termosBusca) {
             let pontos = 0;
             const perguntaNorm = normalizarTexto(faq.pergunta);
@@ -942,57 +1075,31 @@
             const normasNorm = faq.normas.map(n => normalizarTexto(n)).join(' ');
 
             termosBusca.forEach(termo => {
-                // Palavras individuais do termo
                 const palavras = termo.split(/\s+/).filter(p => p.length > 2);
-
                 palavras.forEach(palavra => {
-                    // Correspondência exata na pergunta vale mais
                     if (perguntaNorm.includes(palavra)) {
                         pontos += palavra.length > 5 ? 10 : 5;
-                        // Bônus se estiver no início
                         if (perguntaNorm.startsWith(palavra)) pontos += 5;
                     }
-
-                    // Correspondência na resposta
-                    if (respostaNorm.includes(palavra)) {
-                        pontos += palavra.length > 5 ? 3 : 2;
-                    }
-
-                    // Correspondência nas normas
-                    if (normasNorm.includes(palavra)) {
-                        pontos += 4;
-                    }
-
-                    // Correspondência em categoria
-                    if (normalizarTexto(faq.categoria).includes(palavra)) {
-                        pontos += 6;
-                    }
+                    if (respostaNorm.includes(palavra)) pontos += palavra.length > 5 ? 3 : 2;
+                    if (normasNorm.includes(palavra)) pontos += 4;
+                    if (normalizarTexto(faq.categoria).includes(palavra)) pontos += 6;
                 });
             });
-
             return pontos;
         }
 
-        // Busca com implementação semântica
         document.getElementById('searchInput').addEventListener('input', function (e) {
             const termo = e.target.value.toLowerCase();
             if (termo.length < 3 && termo.length > 0) return;
+            if (termo.length === 0) { exibirTodosFaqs(); return; }
 
-            if (termo.length === 0) {
-                exibirTodosFaqs();
-                return;
-            }
-
-            // Expandir termo com sinônimos
             const termosExpandidos = expandirComSinonimos(termo);
-
-            // Calcular relevância para cada FAQ
             const resultadosComPontos = todosOsFaqs.map(faq => ({
                 faq: faq,
                 pontos: calcularRelevancia(faq, termosExpandidos)
             }));
 
-            // Filtrar apenas resultados com pontos > 0 e ordenar por relevância
             const resultados = resultadosComPontos
                 .filter(r => r.pontos > 0)
                 .sort((a, b) => b.pontos - a.pontos)
@@ -1000,23 +1107,17 @@
 
             const container = document.getElementById('faqsContainer');
             if (resultados.length === 0) {
-                container.innerHTML = `
-                    <div class="text-center text-gray-600 py-10">
-                        <i class="fas fa-search text-6xl mb-4"></i>
-                        <p class="text-xl">Nenhum resultado encontrado para "${termo}"</p>
-                        <p class="text-sm mt-2">Tente usar termos como: HVAC, elevador, incêndio, gás, bomba, playground</p>
-                    </div>
-                `;
+                container.innerHTML = '<div class="no-results"><i class="fas fa-search"></i>' +
+                    '<p style="font-size: var(--fs-xl);">Nenhum resultado para "' + termo + '"</p>' +
+                    '<p style="font-size: var(--fs-sm); margin-top: var(--space-2);">Tente: HVAC, elevador, incêndio, gás, bomba, playground</p></div>';
             } else {
-                let html = `<h2 class="text-2xl font-bold text-green-700 mb-4">Resultados da busca (${resultados.length})</h2>`;
-                resultados.forEach(faq => {
-                    html += criarCardFaq(faq);
-                });
+                let html = '<h2 class="results-header"><span class="text-gradient">Resultados da busca</span> (' + resultados.length + ')</h2>';
+                resultados.forEach(faq => { html += criarCardFaq(faq); });
                 container.innerHTML = html;
             }
         });
 
-        // Inicialização
+        // Init
         carregarCategorias();
         carregarTodosFaqs();
     </script>

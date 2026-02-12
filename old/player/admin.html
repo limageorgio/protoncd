@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Admin - Upload de Players - ProtonCD</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 600px;
+            width: 100%;
+            padding: 40px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            color: #333;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section h2 {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #667eea;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: 500;
+            font-size: 14px;
+        }
+
+        small {
+            display: block;
+            color: #999;
+            font-size: 12px;
+            margin-top: 5px;
+        }
+
+        small a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        small a:hover {
+            text-decoration: underline;
+        }
+
+        input[type="password"],
+        input[type="file"] {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            font-size: 14px;
+            font-family: inherit;
+            transition: border-color 0.3s;
+        }
+
+        input[type="password"]:focus,
+        input[type="file"]:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            margin-top: 10px;
+        }
+
+        button:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+        }
+
+        button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        .alert {
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            display: none;
+            animation: slideDown 0.3s ease;
+        }
+
+        .alert.show {
+            display: block;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .alert.success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .alert.error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        .alert.info {
+            background: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+
+        .warning {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            color: #856404;
+            padding: 12px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        .password-strength {
+            height: 4px;
+            background: #ddd;
+            border-radius: 2px;
+            margin-bottom: 15px;
+            overflow: hidden;
+        }
+
+        .password-strength-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #ff6b6b, #ffd93d, #6bcf7f);
+            width: 0;
+            transition: width 0.3s;
+        }
+
+        .file-info {
+            background: #f5f5f5;
+            padding: 12px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            display: none;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .file-info.show {
+            display: block;
+        }
+
+        .file-info strong {
+            color: #333;
+        }
+
+        .validations {
+            list-style: none;
+            padding: 0;
+        }
+
+        .validations li {
+            padding: 8px 0;
+            color: #555;
+            font-size: 14px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+        }
+
+        .validations li:before {
+            content: "✓";
+            color: #6bcf7f;
+            font-weight: bold;
+            margin-right: 10px;
+            font-size: 16px;
+        }
+
+        .validations li:last-child {
+            border-bottom: none;
+        }
+
+        .progress-bar {
+            height: 6px;
+            background: #eee;
+            border-radius: 3px;
+            margin: 20px 0;
+            overflow: hidden;
+            display: none;
+        }
+
+        .progress-bar.show {
+            display: block;
+        }
+
+        .progress-bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            width: 0;
+            transition: width 0.4s ease;
+        }
+
+        .success-details {
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            border-radius: 6px;
+            padding: 20px;
+            margin-top: 20px;
+            display: none;
+        }
+
+        .success-details.show {
+            display: block;
+        }
+
+        .success-details h3 {
+            color: #155724;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        .success-details p {
+            color: #155724;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        .success-details strong {
+            color: #0c3622;
+        }
+
+        .url-box {
+            background: white;
+            border: 1px solid #c3e6cb;
+            border-radius: 4px;
+            padding: 10px;
+            margin: 10px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            word-break: break-all;
+            color: #155724;
+        }
+
+        .copy-btn {
+            padding: 6px 12px;
+            font-size: 12px;
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-left: 5px;
+            margin-top: 5px;
+        }
+
+        .copy-btn:hover {
+            background: #218838;
+        }
+
+        .token-status {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-radius: 6px;
+            font-size: 13px;
+            margin-top: 8px;
+            display: none;
+        }
+
+        .token-status.show {
+            display: flex;
+        }
+
+        .token-status.valid {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .token-status.invalid {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        .token-status.checking {
+            background: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+
+        .token-status-icon {
+            margin-right: 8px;
+            font-size: 16px;
+        }
+
+        .token-status-text {
+            flex: 1;
+        }
+
+        .validate-token-btn {
+            width: 100%;
+            padding: 10px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 8px;
+            transition: background 0.2s;
+        }
+
+        .validate-token-btn:hover:not(:disabled) {
+            background: #764ba2;
+        }
+
+        .validate-token-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        .file-list-status {
+            margin-top: 10px;
+            padding: 12px;
+            border-radius: 6px;
+            font-size: 13px;
+            display: none;
+        }
+
+        .file-list-status.info {
+            background: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+
+        .file-list-status.success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .file-list-status.error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        .file-list {
+            margin-top: 12px;
+            background: #f8f9ff;
+            border: 1px solid #e0e5ff;
+            border-radius: 8px;
+            padding: 10px;
+            display: none;
+        }
+
+        .file-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 6px;
+            border-bottom: 1px solid #e5e8ff;
+        }
+
+        .file-row:last-child {
+            border-bottom: none;
+        }
+
+        .file-name {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 4px;
+        }
+
+        .file-meta {
+            font-size: 12px;
+            color: #666;
+        }
+
+        .file-actions {
+            display: flex;
+            gap: 6px;
+        }
+
+        .small-btn {
+            padding: 6px 10px;
+            border-radius: 4px;
+            border: none;
+            font-size: 12px;
+            cursor: pointer;
+            color: white;
+            background: #667eea;
+            text-decoration: none;
+        }
+
+        .small-btn:hover {
+            background: #5566c9;
+        }
+
+        .small-btn.danger {
+            background: #e55353;
+        }
+
+        .small-btn.danger:hover {
+            background: #c94a4a;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>�️ Elevator Inspektor Player</h1>
+            <p>Sistema Seguro de Upload para GitHub</p>
+        </div>
+
+        <div id="alertContainer"></div>
+
+        <form id="uploadForm">
+            <!-- Seção de Token GitHub -->
+            <div class="section">
+                <h2>Token de Acesso GitHub</h2>
+
+                <label for="githubToken">Token de Acesso Pessoal GitHub:</label>
+                <input type="password" id="githubToken" name="githubToken" placeholder="ghp_xxxxxxxxxxxxx" required>
+
+                <button type="button" class="validate-token-btn" id="validateTokenBtn">🔐 Validar Acesso</button>
+
+                <div class="token-status" id="tokenStatus">
+                    <span class="token-status-icon" id="tokenStatusIcon">⏳</span>
+                    <span class="token-status-text" id="tokenStatusText">Validando token...</span>
+                </div>
+
+                <small>
+                    📌 <a href="https://github.com/settings/tokens" target="_blank">Gerar token em GitHub Settings</a>
+                    → New token (classic) → Escopo: <code>repo</code>
+                </small>
+            </div>
+
+            <!-- Seção de Upload -->
+            <div class="section">
+                <h2>Upload de Arquivo</h2>
+
+                <div class="warning">
+                    ⚠️ <strong>Apenas arquivos HTML</strong> são permitidos. O conteúdo será validado para detectar
+                    código malicioso.
+                </div>
+
+                <label for="file">Selecione o arquivo HTML:</label>
+                <input type="file" id="file" name="file" accept=".html" required>
+
+                <div class="file-info" id="fileInfo">
+                    <strong>Arquivo selecionado:</strong> <span id="fileName"></span><br>
+                    <strong>Tamanho:</strong> <span id="fileSize"></span>
+                </div>
+
+                <button type="submit" id="submitBtn">Validar e Enviar para GitHub</button>
+
+                <div class="progress-bar" id="progressBar">
+                    <div class="progress-bar-fill" id="progressFill"></div>
+                </div>
+            </div>
+
+            <!-- Gerenciamento de Arquivos -->
+            <div class="section">
+                <h2>Gerenciar Arquivos (Admin)</h2>
+                <p style="font-size: 13px; color: #666; margin-bottom: 10px;">Somente quem possui o token válido pode
+                    listar e excluir arquivos na pasta <strong>player/</strong>.</p>
+
+                <button type="button" id="listFilesBtn" class="validate-token-btn" disabled>📂 Listar arquivos em
+                    player/</button>
+
+                <div class="file-list-status info" id="fileListStatus">Use seu token para carregar a lista de arquivos.
+                </div>
+                <div class="file-list" id="fileList"></div>
+            </div>
+        </form>
+
+        <div class="success-details" id="successDetails"></div>
+    </div>
+
+    <script>
+        // ========================================
+        // CONFIGURAÇÃO
+        // ========================================
+
+        // GitHub Configuration
+        const GITHUB_OWNER = 'limageorgio';
+        const GITHUB_REPO = 'protoncd';
+        const GITHUB_BRANCH = 'main';
+        const GITHUB_FOLDER = 'player';
+        const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5MB
+
+        // ========================================
+        // ELEMENTOS DO DOM
+        // ========================================
+
+        const form = document.getElementById('uploadForm');
+        const file = document.getElementById('file');
+        const fileName = document.getElementById('fileName');
+        const fileSize = document.getElementById('fileSize');
+        const fileInfo = document.getElementById('fileInfo');
+        const submitBtn = document.getElementById('submitBtn');
+        const progressBar = document.getElementById('progressBar');
+        const progressFill = document.getElementById('progressFill');
+        const alertContainer = document.getElementById('alertContainer');
+        const successDetails = document.getElementById('successDetails');
+        const githubToken = document.getElementById('githubToken');
+        const validateTokenBtn = document.getElementById('validateTokenBtn');
+        const tokenStatus = document.getElementById('tokenStatus');
+        const tokenStatusIcon = document.getElementById('tokenStatusIcon');
+        const tokenStatusText = document.getElementById('tokenStatusText');
+        const listFilesBtn = document.getElementById('listFilesBtn');
+        const fileList = document.getElementById('fileList');
+        const fileListStatus = document.getElementById('fileListStatus');
+
+        // Estado de autenticação
+        let tokenValidated = false;
+
+        // Estado inicial: requer validação
+        submitBtn.disabled = true;
+        listFilesBtn.disabled = true;
+
+        // ========================================
+        // LEMBRAR TOKEN (localStorage)
+        // ========================================
+
+        // Carregar token salvo ao iniciar
+        const savedToken = localStorage.getItem('github_token');
+        if (savedToken) {
+            githubToken.value = savedToken;
+        }
+
+        // Salvar token quando validado
+        function saveToken(token) {
+            localStorage.setItem('github_token', token);
+        }
+
+        // Limpar token salvo
+        function clearToken() {
+            localStorage.removeItem('github_token');
+        }
+
+        // ========================================
+        // VALIDADORES
+        // ========================================
+
+        /**
+         * Validar conteúdo HTML procurando por padrões perigosos
+         */
+        function validateHTMLContent(content) {
+            // Padrões verdadeiramente perigosos que devemos bloquear
+            const dangerous_patterns = [
+                /<script[^>]*src\s*=\s*["'](?:javascript:|data:|about:)/i,  // Scripts com protocolos perigosos
+                /<script[^>]*>\s*eval\s*\(/i,                                // eval() direto
+                /<script[^>]*>\s*document\.write\s*\(/i,                     // document.write suspeito
+                /<?php/i,                                                     // PHP tags
+                /<%[^=]/i,                                                    // ASP tags (permite <%=)
+                /<script[^>]*>\s*window\.location/i,                         // Redirecionamento suspeito
+                /<script[^>]*>\s*location\.href/i,                           // Redirecionamento suspeito
+                /<meta[^>]*http-equiv\s*=\s*["']refresh["'][^>]*url=/i,     // Meta refresh com URL
+            ];
+
+            for (let pattern of dangerous_patterns) {
+                if (pattern.test(content)) {
+                    console.warn('⚠️ Padrão perigoso detectado:', pattern);
+                    return false;
+                }
+            }
+
+            // Verificar se é HTML válido (básico)
+            if (!/<html/i.test(content) && !/<body/i.test(content) && !/<head/i.test(content) && !/<!DOCTYPE/i.test(content)) {
+                console.warn('⚠️ Não parece ser um arquivo HTML válido');
+                return false;
+            }
+
+            return true;
+        }
+
+        /**
+         * Fazer upload para GitHub via API
+         */
+        async function uploadToGitHub(filename, content, githubToken) {
+            const url = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${GITHUB_FOLDER}/${filename}`;
+
+            // Converter conteúdo para Base64 (exigido pela API GitHub)
+            const encoded = btoa(unescape(encodeURIComponent(content)));
+
+            const payload = {
+                message: `Upload: ${filename}`,
+                content: encoded,
+                branch: GITHUB_BRANCH,
+                committer: {
+                    name: "ProtonCD Admin",
+                    email: "admin@protoncd.com.br"
+                }
+            };
+
+            try {
+                const response = await fetch(url, {
+                    method: 'PUT',
+                    headers: {
+                        'Authorization': `token ${githubToken}`,
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/vnd.github.v3+json'
+                    },
+                    body: JSON.stringify(payload)
+                });
+
+                if (!response.ok) {
+                    const error = await response.json();
+                    throw new Error(error.message || 'Erro ao enviar para GitHub');
+                }
+
+                const data = await response.json();
+                return {
+                    success: true,
+                    path: data.content.path,
+                    sha: data.content.sha,
+                    url: `https://raw.githubusercontent.com/${GITHUB_OWNER}/${GITHUB_REPO}/${GITHUB_BRANCH}/${GITHUB_FOLDER}/${filename}`
+                };
+            } catch (error) {
+                throw new Error('Erro GitHub: ' + error.message);
+            }
+        }
+
+        /**
+         * Gerar URL pública do GitHub Pages
+         */
+        function generatePublicUrl(filename) {
+            return `https://limageorgio.github.io/protoncd/player/${filename}`;
+        }
+
+        /**
+         * Validar token do GitHub
+         */
+        async function validateGitHubToken(token) {
+            try {
+                // Verifica autenticação do usuário
+                const userResponse = await fetch('https://api.github.com/user', {
+                    headers: {
+                        'Authorization': `Bearer ${token}`,
+                        'Accept': 'application/vnd.github.v3+json'
+                    }
+                });
+
+                if (!userResponse.ok) {
+                    throw new Error('Token inválido ou expirado');
+                }
+
+                const userData = await userResponse.json();
+                console.log('✅ Usuário autenticado:', userData.login);
+
+                // Verifica acesso ao repositório
+                const repoUrl = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}`;
+                const repoResponse = await fetch(repoUrl, {
+                    headers: {
+                        'Authorization': `Bearer ${token}`,
+                        'Accept': 'application/vnd.github.v3+json'
+                    }
+                });
+
+                if (!repoResponse.ok) {
+                    throw new Error('Sem acesso ao repositório');
+                }
+
+                const repoData = await repoResponse.json();
+
+                // Verifica permissão de escrita
+                if (!repoData.permissions || !repoData.permissions.push) {
+                    throw new Error('Token sem permissão de escrita no repositório');
+                }
+
+                console.log('✅ Permissões validadas:', repoData.permissions);
+                return { valid: true, user: userData.login };
+
+            } catch (error) {
+                console.error('❌ Erro na validação:', error);
+                throw error;
+            }
+        }
+
+        /**
+         * Atualizar status visual da validação do token
+         */
+        function showTokenStatus(type, message) {
+            tokenStatus.style.display = 'block';
+            tokenStatus.className = `token-status ${type}`;
+
+            const icons = {
+                success: '✅',
+                error: '❌',
+                info: 'ℹ️'
+            };
+
+            tokenStatusIcon.textContent = icons[type] || 'ℹ️';
+            tokenStatusText.textContent = message;
+        }
+
+        /**
+         * Mostrar alerta
+         */
+        function showAlert(message, type = 'info') {
+            const alert = document.createElement('div');
+            alert.className = `alert ${type}`;
+            alert.textContent = message;
+            alertContainer.innerHTML = '';
+            alertContainer.appendChild(alert);
+
+            setTimeout(() => alert.classList.add('show'), 10);
+
+            setTimeout(() => {
+                alert.classList.remove('show');
+            }, 5000);
+        }
+
+        /**
+         * Mostrar detalhes de sucesso
+         */
+        function showSuccessDetails(data) {
+            const githubPagesUrl = generatePublicUrl(data.filename);
+            const githubRawUrl = `https://raw.githubusercontent.com/${GITHUB_OWNER}/${GITHUB_REPO}/${GITHUB_BRANCH}/${GITHUB_FOLDER}/${data.filename}`;
+
+            let html = `
+                <h3>✅ Arquivo Enviado com Sucesso!</h3>
+                <p><strong>Nome do arquivo:</strong> ${data.filename}</p>
+                <p><strong>Tamanho:</strong> ${(data.size / 1024).toFixed(2)} KB</p>
+                
+                <p><strong>URLs de Acesso:</strong></p>
+                
+                <p><strong>🌐 GitHub Pages (Recomendado):</strong></p>
+                <div class="url-box">${githubPagesUrl}</div>
+                <button class="copy-btn" onclick="copyToClipboard('${githubPagesUrl}')">Copiar</button>
+                
+                <p><strong>📝 GitHub Raw Content:</strong></p>
+                <div class="url-box">${githubRawUrl}</div>
+                <button class="copy-btn" onclick="copyToClipboard('${githubRawUrl}')">Copiar</button>
+            `;
+
+            successDetails.innerHTML = html;
+            successDetails.classList.add('show');
+        }
+
+        /**
+         * Copiar para clipboard
+         */
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                showAlert('URL copiada para clipboard!', 'success');
+            }).catch(err => {
+                showAlert('Erro ao copiar: ' + err.message, 'error');
+            });
+        }
+
+        /**
+         * Status da lista de arquivos
+         */
+        function setFileListStatus(type, message) {
+            fileListStatus.style.display = 'block';
+            fileListStatus.className = `file-list-status ${type}`;
+            fileListStatus.textContent = message;
+        }
+
+        /**
+         * Obter data de modificação do arquivo via commit history
+         */
+        async function getFileModifiedDate(filename, token) {
+            try {
+                const url = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/commits?path=${GITHUB_FOLDER}/${filename}&per_page=1`;
+                const res = await fetch(url, {
+                    headers: {
+                        'Authorization': `Bearer ${token}`,
+                        'Accept': 'application/vnd.github.v3+json'
+                    }
+                });
+
+                if (!res.ok) {
+                    console.warn(`Não conseguiu pegar data de ${filename}`);
+                    return null;
+                }
+
+                const commits = await res.json();
+                if (commits && commits.length > 0 && commits[0].commit && commits[0].commit.committer) {
+                    return commits[0].commit.committer.date;
+                }
+                return null;
+            } catch (error) {
+                console.error(`Erro ao pegar data de ${filename}:`, error);
+                return null;
+            }
+        }
+
+        /**
+         * Formatar data do GitHub para brasileiro
+         */
+        function formatarDataGitHub(dateString) {
+            try {
+                // GitHub retorna ISO 8601: 2026-01-05T14:30:45Z
+                if (!dateString) return 'Data desconhecida';
+
+                // Parse manual para garantir compatibilidade
+                const parts = dateString.split('T');
+                const dateParts = parts[0].split('-'); // [2026, 01, 05]
+                const timeParts = parts[1].split(':'); // [14, 30, 45Z ou 45]
+
+                const ano = dateParts[0];
+                const mes = dateParts[1];
+                const dia = dateParts[2];
+                const hora = timeParts[0];
+                const minuto = timeParts[1];
+                const segundo = timeParts[2].replace('Z', '').substring(0, 2);
+
+                return `${dia}/${mes}/${ano} ${hora}:${minuto}:${segundo}`;
+            } catch (error) {
+                console.error('Erro ao formatar data:', dateString, error);
+                return 'Data inválida';
+            }
+        }
+
+        /**
+         * Listar arquivos da pasta player/ via GitHub API
+         */
+        async function listFiles(token) {
+            const url = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${GITHUB_FOLDER}`;
+            setFileListStatus('info', 'Carregando arquivos...');
+            listFilesBtn.disabled = true;
+
+            try {
+                const res = await fetch(url, {
+                    headers: {
+                        'Authorization': `Bearer ${token}`,
+                        'Accept': 'application/vnd.github.v3+json'
+                    }
+                });
+
+                if (!res.ok) {
+                    const errorText = await res.text();
+                    throw new Error(errorText || 'Erro ao carregar lista');
+                }
+
+                const data = await res.json();
+
+                // Filtrar apenas arquivos HTML, excluindo arquivos do sistema
+                const excludedFiles = ['admin.html', 'index.html', '.htaccess', 'README.md', 'validate-html.js'];
+                const files = data.filter(item => {
+                    // Apenas arquivos (não diretórios)
+                    if (item.type !== 'file') return false;
+
+                    // Apenas .html
+                    if (!item.name.toLowerCase().endsWith('.html')) return false;
+
+                    // Excluir arquivos do sistema
+                    if (excludedFiles.includes(item.name)) return false;
+
+                    return true;
+                });
+
+                if (!files.length) {
+                    fileList.style.display = 'none';
+                    setFileListStatus('info', 'Nenhum arquivo HTML de player encontrado em player/.');
+                    return;
+                }
+
+                // Pegar datas de modificação de todos os arquivos
+                setFileListStatus('info', 'Carregando datas de modificação...');
+                const filesWithDates = await Promise.all(files.map(async (file) => {
+                    const modifiedDate = await getFileModifiedDate(file.name, token);
+                    return {
+                        ...file,
+                        modifiedDate
+                    };
+                }));
+
+                fileList.innerHTML = filesWithDates.map(file => {
+                    const sizeKb = (file.size / 1024).toFixed(2);
+                    const pagesUrl = generatePublicUrl(file.name);
+
+                    // Formatar data usando função robusta
+                    const dataHora = file.modifiedDate
+                        ? formatarDataGitHub(file.modifiedDate)
+                        : 'Data não disponível';
+
+                    console.log(`📂 Arquivo listado: ${file.name}, SHA: ${file.sha}, Data: ${dataHora}`);
+                    return `
+                        <div class="file-row" data-name="${file.name}" data-sha="${file.sha}">
+                            <div style="flex: 1;">
+                                <div class="file-name">${file.name}</div>
+                                <div class="file-meta">${sizeKb} KB • 📅 ${dataHora}</div>
+                                <div class="url-box" style="margin-top: 8px; font-size: 11px; padding: 6px;">${pagesUrl}</div>
+                            </div>
+                            <div class="file-actions">
+                                <button class="small-btn" data-action="copy" data-url="${pagesUrl}">📋 Copiar link</button>
+                                <a class="small-btn" href="${pagesUrl}" target="_blank">Ver</a>
+                                <button class="small-btn danger" data-action="delete" data-name="${file.name}" data-sha="${file.sha}">Excluir</button>
+                            </div>
+                        </div>
+                    `;
+                }).join('');
+
+                fileList.style.display = 'block';
+                setFileListStatus('success', 'Arquivos carregados.');
+            } catch (error) {
+                console.error('Erro ao listar arquivos:', error);
+                setFileListStatus('error', error.message);
+            } finally {
+                listFilesBtn.disabled = false;
+            }
+        }
+
+        /**
+         * Excluir arquivo - refetcha SHA antes de deletar
+         */
+        async function deleteFile(filename, sha, token) {
+            if (!confirm(`Deseja excluir o arquivo ${filename}?`)) return;
+
+            try {
+                setFileListStatus('info', `Preparando exclusão de ${filename}...`);
+
+                // Refetchar SHA atual (em caso de arquivo ter sido modificado)
+                const fileUrl = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${GITHUB_FOLDER}/${filename}`;
+                const fileRes = await fetch(fileUrl, {
+                    headers: {
+                        'Authorization': `token ${token}`,
+                        'Accept': 'application/vnd.github.v3+json'
+                    }
+                });
+
+                if (!fileRes.ok) {
+                    const errorData = await fileRes.json().catch(() => ({}));
+                    throw new Error(`Arquivo não encontrado: ${errorData.message || fileRes.statusText}`);
+                }
+
+                const fileData = await fileRes.json();
+                const currentSha = fileData.sha;
+
+                // Agora fazer DELETE com SHA atual
+                const deleteUrl = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${GITHUB_FOLDER}/${filename}`;
+                const payload = {
+                    message: `Delete: ${filename}`,
+                    sha: currentSha, // Usar SHA que acabou de fetchar
+                    branch: GITHUB_BRANCH,
+                    committer: {
+                        name: "ProtonCD Admin",
+                        email: "admin@protoncd.com.br"
+                    }
+                };
+
+                setFileListStatus('info', `Excluindo ${filename}...`);
+                const deleteRes = await fetch(deleteUrl, {
+                    method: 'DELETE',
+                    headers: {
+                        'Authorization': `token ${token}`,
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/vnd.github.v3+json'
+                    },
+                    body: JSON.stringify(payload)
+                });
+
+                if (!deleteRes.ok) {
+                    const errorData = await deleteRes.json().catch(() => ({}));
+                    console.error('Erro GitHub DELETE:', {
+                        status: deleteRes.status,
+                        statusText: deleteRes.statusText,
+                        error: errorData,
+                        url: deleteUrl,
+                        sha: currentSha
+                    });
+                    throw new Error(errorData.message || `Erro ${deleteRes.status}: ${deleteRes.statusText}`);
+                }
+
+                setFileListStatus('success', `Arquivo ${filename} excluído com sucesso.`);
+                console.log(`✅ Arquivo ${filename} excluído`);
+
+                // Recarregar lista após 1 segundo
+                setTimeout(() => listFiles(token), 1000);
+            } catch (error) {
+                console.error('❌ Erro ao excluir arquivo:', error);
+                setFileListStatus('error', `Erro ao excluir: ${error.message}`);
+            }
+        }
+
+        // ========================================
+        // EVENT LISTENERS
+        // ========================================
+
+        // Listeners para input de arquivo
+        file.addEventListener('change', function () {
+            if (file.files.length > 0) {
+                const selectedFile = file.files[0];
+                fileName.textContent = selectedFile.name;
+                fileSize.textContent = (selectedFile.size / 1024).toFixed(2) + ' KB';
+                fileInfo.classList.add('show');
+            } else {
+                fileInfo.classList.remove('show');
+            }
+        });
+
+        // Listener para botão de validação de token
+        validateTokenBtn.addEventListener('click', async () => {
+            const token = githubToken.value.trim();
+
+            if (!token) {
+                showTokenStatus('error', 'Por favor, insira um token de acesso');
+                return;
+            }
+
+            if (!token.startsWith('ghp_') && !token.startsWith('github_pat_')) {
+                showTokenStatus('error', 'Token deve começar com "ghp_" ou "github_pat_"');
+                return;
+            }
+
+            showTokenStatus('info', 'Validando token...');
+            validateTokenBtn.disabled = true;
+
+            try {
+                const result = await validateGitHubToken(token);
+                tokenValidated = true;
+                submitBtn.disabled = false;
+                listFilesBtn.disabled = false;
+                saveToken(token);
+                showTokenStatus('success', `Token validado! Usuário: ${result.user}`);
+            } catch (error) {
+                tokenValidated = false;
+                submitBtn.disabled = true;
+                listFilesBtn.disabled = true;
+                showTokenStatus('error', error.message);
+            } finally {
+                validateTokenBtn.disabled = false;
+            }
+        });
+
+        // Listar arquivos
+        listFilesBtn.addEventListener('click', async () => {
+            const token = githubToken.value.trim();
+            if (!token) {
+                showAlert('Token inválido', 'error');
+                return;
+            }
+            await listFiles(token);
+        });
+
+        // Ações da lista (copiar, excluir)
+        fileList.addEventListener('click', async (event) => {
+            const target = event.target;
+
+            if (target.dataset.action === 'copy') {
+                const url = target.dataset.url;
+                copyToClipboard(url);
+            }
+
+            if (target.dataset.action === 'delete') {
+                const name = target.dataset.name;
+                const sha = target.dataset.sha;
+                const token = githubToken.value.trim();
+                if (!token) {
+                    showAlert('Token inválido', 'error');
+                    return;
+                }
+                await deleteFile(name, sha, token);
+            }
+        });
+
+        // Form submission
+        form.addEventListener('submit', async function (e) {
+            e.preventDefault();
+
+            const selectedFile = file.files[0];
+
+            if (!tokenValidated) {
+                showAlert('Valide o token do GitHub antes de enviar', 'error');
+                return;
+            }
+
+            const token = githubToken.value.trim();
+            if (!token) {
+                showAlert('Token inválido', 'error');
+                return;
+            }
+
+            if (!selectedFile) {
+                showAlert('Selecione um arquivo', 'error');
+                return;
+            }
+
+            // Validações básicas no cliente
+            if (!selectedFile.name.toLowerCase().endsWith('.html')) {
+                showAlert('Apenas arquivos .html são permitidos', 'error');
+                return;
+            }
+
+            if (selectedFile.size > MAX_FILE_SIZE) {
+                showAlert('Arquivo maior que 5MB', 'error');
+                return;
+            }
+
+            // Desabilitar botão e mostrar progresso
+            submitBtn.disabled = true;
+            progressBar.classList.add('show');
+            progressFill.style.width = '0%';
+
+            try {
+                // Leitura do arquivo para validação
+                const content = await selectedFile.text();
+                progressFill.style.width = '30%';
+
+                // Validações de segurança
+                if (!validateHTMLContent(content)) {
+                    throw new Error('Arquivo contém conteúdo suspeito ou malicioso');
+                }
+
+                progressFill.style.width = '60%';
+
+                // Fazer upload para GitHub
+                const uploadResult = await uploadToGitHub(selectedFile.name, content, token);
+
+                progressFill.style.width = '100%';
+                form.reset();
+                fileInfo.classList.remove('show');
+
+                // Mostrar sucesso com URLs
+                showAlert('Arquivo enviado para GitHub com sucesso!', 'success');
+                showSuccessDetails({
+                    filename: selectedFile.name,
+                    size: selectedFile.size
+                });
+
+            } catch (error) {
+                showAlert('Erro: ' + error.message, 'error');
+                progressBar.classList.remove('show');
+            } finally {
+                submitBtn.disabled = false;
+                setTimeout(() => {
+                    progressBar.classList.remove('show');
+                    progressFill.style.width = '0%';
+                }, 1500);
+            }
+        });
+    </script>
+</body>
+
+</html>

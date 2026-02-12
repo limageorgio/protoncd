@@ -4,40 +4,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Player - ProtonCD</title>
+    <title>Elevator Inspektor Player - ProtonCD</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 50px auto;
+            font-family: 'Inter', 'Segoe UI', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #0a0a0f;
+            background-image: radial-gradient(ellipse at 30% 60%, rgba(59, 130, 246, 0.08) 0%, transparent 50%);
+            color: #f0f0f0;
             padding: 20px;
-            background-color: #f5f5f5;
         }
 
         .container {
-            background: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            background: rgba(26, 26, 46, 0.9);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.5), 0 0 30px rgba(59, 130, 246, 0.06);
+            max-width: 560px;
+            width: 100%;
+            text-align: center;
+            backdrop-filter: blur(20px);
+        }
+
+        .logo {
+            font-size: 48px;
+            margin-bottom: 16px;
         }
 
         h1 {
-            color: #333;
+            font-size: 24px;
+            margin-bottom: 12px;
+            background: linear-gradient(135deg, #60a5fa 0%, #22d3ee 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         p {
-            color: #666;
-            line-height: 1.6;
+            color: #a0aec0;
+            line-height: 1.7;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        .divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(96, 165, 250, 0.3), transparent);
+            margin: 24px 0;
+        }
+
+        a {
+            color: #60a5fa;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: #93c5fd;
+            text-decoration: underline;
+        }
+
+        .btn-home {
+            display: inline-block;
+            padding: 12px 28px;
+            background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+            color: white;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 14px;
+            margin-top: 8px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn-home:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(59, 130, 246, 0.3);
+            text-decoration: none;
+            color: white;
         }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <h1>Pasta Player - ProtonCD</h1>
-        <p>Esta é a pasta de arquivos públicos do ProtonCD.</p>
-        <p>Os arquivos nesta pasta podem ser acessados diretamente através de links públicos.</p>
-        <p><a href="/">Voltar para o site principal</a></p>
+        <div class="logo">🛗</div>
+        <h1>Elevator Inspektor Player</h1>
+        <p>Sistema de reprodução e análise de inspeções de elevadores.</p>
+        <p>Os relatórios de inspeção são acessados diretamente através de links individuais.</p>
+        <div class="divider"></div>
+        <a href="/" class="btn-home">← Voltar para o site principal</a>
     </div>
 </body>
 
