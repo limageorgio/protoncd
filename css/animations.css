@@ -119,20 +119,22 @@
 /* ===========================
    PULSE ANIMATION (for CTAs)
    =========================== */
-@keyframes pulse-glow {
+/* Flutuação suave dos botões */
+@keyframes btn-float {
 
     0%,
     100% {
-        box-shadow: 0 0 20px rgba(59, 130, 246, 0.2);
+        transform: translateY(0);
     }
 
     50% {
-        box-shadow: 0 0 40px rgba(59, 130, 246, 0.4);
+        transform: translateY(-3px);
     }
 }
 
+/* Pulse-glow agora usa a mesma animação float */
 .pulse-glow {
-    animation: pulse-glow 3s ease-in-out infinite;
+    animation: btn-float 4s ease-in-out infinite;
 }
 
 
