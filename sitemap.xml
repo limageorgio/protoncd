@@ -268,4 +268,120 @@
   <priority>0.92</priority>
 </url>
 
+<!-- ═══════════════════════════════════════════════════════════
+     ENGLISH PAGES — International clients
+     ═══════════════════════════════════════════════════════════ -->
+<url>
+  <loc>https://www.protoncd.com.br/en/</loc>
+  <lastmod>2026-02-16</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.90</priority>
+  <xhtml:link rel="alternate" hreflang="en" href="https://www.protoncd.com.br/en/" />
+  <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.protoncd.com.br/" />
+</url>
+<url>
+  <loc>https://www.protoncd.com.br/en/hvac-inspection-brazil.html</loc>
+  <lastmod>2026-02-16</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.85</priority>
+  <xhtml:link rel="alternate" hreflang="en" href="https://www.protoncd.com.br/en/hvac-inspection-brazil.html" />
+  <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.protoncd.com.br/inspecao-hvac-pmoc.html" />
+</url>
+<url>
+  <loc>https://www.protoncd.com.br/en/elevator-inspection-brazil.html</loc>
+  <lastmod>2026-02-16</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.85</priority>
+  <xhtml:link rel="alternate" hreflang="en" href="https://www.protoncd.com.br/en/elevator-inspection-brazil.html" />
+  <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.protoncd.com.br/analise-vibracao-elevadores.html" />
+</url>
+<url>
+  <loc>https://www.protoncd.com.br/en/fire-safety-brazil.html</loc>
+  <lastmod>2026-02-16</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.85</priority>
+  <xhtml:link rel="alternate" hreflang="en" href="https://www.protoncd.com.br/en/fire-safety-brazil.html" />
+  <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.protoncd.com.br/inspecao-combate-incendio.html" />
+</url>
+<url>
+  <loc>https://www.protoncd.com.br/en/playground-inspection-brazil.html</loc>
+  <lastmod>2026-02-16</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.85</priority>
+  <xhtml:link rel="alternate" hreflang="en" href="https://www.protoncd.com.br/en/playground-inspection-brazil.html" />
+  <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.protoncd.com.br/inspecao-playgrounds.html" />
+</url>
+<url>
+  <loc>https://www.protoncd.com.br/en/mechanical-systems-brazil.html</loc>
+  <lastmod>2026-02-16</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.85</priority>
+  <xhtml:link rel="alternate" hreflang="en" href="https://www.protoncd.com.br/en/mechanical-systems-brazil.html" />
+  <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.protoncd.com.br/inspecao-sistemas-mecanicos.html" />
+</url>
+<url>
+  <loc>https://www.protoncd.com.br/en/gas-inspection-brazil.html</loc>
+  <lastmod>2026-02-16</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.85</priority>
+  <xhtml:link rel="alternate" hreflang="en" href="https://www.protoncd.com.br/en/gas-inspection-brazil.html" />
+  <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.protoncd.com.br/inspecao-gas-predial.html" />
+</url>
+<url>
+  <loc>https://www.protoncd.com.br/en/pressurization-brazil.html</loc>
+  <lastmod>2026-02-16</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.85</priority>
+  <xhtml:link rel="alternate" hreflang="en" href="https://www.protoncd.com.br/en/pressurization-brazil.html" />
+  <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.protoncd.com.br/inspecao-pressurizacao-escadas.html" />
+</url>
+<url>
+  <loc>https://www.protoncd.com.br/en/workplace-safety-brazil.html</loc>
+  <lastmod>2026-02-16</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.85</priority>
+  <xhtml:link rel="alternate" hreflang="en" href="https://www.protoncd.com.br/en/workplace-safety-brazil.html" />
+  <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.protoncd.com.br/goiania/seguranca-trabalho-goiania.html" />
+</url>
+<url>
+  <loc>https://www.protoncd.com.br/en/boiler-pressure-vessel-brazil.html</loc>
+  <lastmod>2026-02-16</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.85</priority>
+  <xhtml:link rel="alternate" hreflang="en" href="https://www.protoncd.com.br/en/boiler-pressure-vessel-brazil.html" />
+  <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.protoncd.com.br/landing-servicos.html" />
+</url>
+<url>
+  <loc>https://www.protoncd.com.br/en/machinery-safety-brazil.html</loc>
+  <lastmod>2026-02-16</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.85</priority>
+  <xhtml:link rel="alternate" hreflang="en" href="https://www.protoncd.com.br/en/machinery-safety-brazil.html" />
+  <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.protoncd.com.br/ibitinga/nr12-ibitinga.html" />
+</url>
+<url>
+  <loc>https://www.protoncd.com.br/en/forensic-engineering-brazil.html</loc>
+  <lastmod>2026-02-16</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.85</priority>
+  <xhtml:link rel="alternate" hreflang="en" href="https://www.protoncd.com.br/en/forensic-engineering-brazil.html" />
+  <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.protoncd.com.br/laudo-pericial-engenharia.html" />
+</url>
+<url>
+  <loc>https://www.protoncd.com.br/en/pump-house-inspection-brazil.html</loc>
+  <lastmod>2026-02-16</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.85</priority>
+  <xhtml:link rel="alternate" hreflang="en" href="https://www.protoncd.com.br/en/pump-house-inspection-brazil.html" />
+  <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.protoncd.com.br/inspecao-casa-bombas.html" />
+</url>
+<url>
+  <loc>https://www.protoncd.com.br/en/training-nr-brazil.html</loc>
+  <lastmod>2026-02-16</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.85</priority>
+  <xhtml:link rel="alternate" hreflang="en" href="https://www.protoncd.com.br/en/training-nr-brazil.html" />
+  <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.protoncd.com.br/goiania/treinamentos-nr-goiania.html" />
+</url>
+
 </urlset>
