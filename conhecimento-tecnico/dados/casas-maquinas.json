@@ -22,6 +22,60 @@
             ],
             "responsabilidade": "Mista - limpeza é do condomínio, sinalização é da construtora",
             "gravidade": "Alta (sinalização)"
+        },
+        {
+            "id": "casa-003",
+            "pergunta": "A casa de máquinas precisa ter ventilação forçada?",
+            "resposta": "Depende do sistema. Para casas de máquinas de elevadores, a ABNT NBR 16042:2022 e a NBR 16858 estabelecem que o ambiente deve ter condições ambientais compatíveis com o funcionamento dos equipamentos — temperatura máxima recomendada de 40°C (conforme manual do fabricante). Se a ventilação natural não for suficiente para manter a temperatura dentro dos limites, é necessária ventilação forçada (exaustor/insuflador). Para casas de máquinas com compressores de ar-condicionado (VRF/VRV), o acúmulo de calor é significativo e a ventilação forçada é frequentemente obrigatória. A NBR 15575 (Norma de Desempenho) exige que áreas técnicas atendam os requisitos mínimos de habitabilidade funcional. Já a NR-17 (Ergonomia) complementa ao exigir condições de conforto térmico (temperatura efetiva entre 20°C e 23°C para ambientes com condicionamento ou temperaturas compatíveis com a atividade para os demais). O não fornecimento de ventilação adequada desde a entrega é responsabilidade da construtora; obstrução posterior por negligência é do condomínio.",
+            "normas": [
+                "ABNT NBR 16042:2022",
+                "ABNT NBR 15575",
+                "NR-17"
+            ],
+            "referencias": [],
+            "responsabilidade": "Construtora / Condomínio",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "casa-004",
+            "pergunta": "O acesso à casa de máquinas deve ser restrito? Quem define isso?",
+            "resposta": "Sim. O acesso à casa de máquinas deve ser restrito a pessoal autorizado, conforme múltiplas normas: (1) A NR-12, item 12.11.1, exige que máquinas e equipamentos em áreas de acesso restrito possuam sinalização e barreiras que impeçam o acesso de pessoas não autorizadas; (2) A NBR 16042 (elevadores) exige que a casa de máquinas tenha porta com tranca e sinalização 'Acesso Restrito — Somente Pessoal Autorizado'; (3) A NR-10 (para quadros elétricos) exige sinalização de advertência de risco elétrico e restrição de acesso; (4) A NBR 5674 (Manutenção de edificações) recomenda que áreas técnicas tenham acesso controlado. A responsabilidade por controlar o acesso é do condomínio (CC art. 1.348 — administração das partes comuns). A chave da casa de máquinas NÃO deve ficar disponível para moradores ou funcionários sem treinamento. Em caso de acidente com terceiro não autorizado em casa de máquinas, o síndico pode responder por negligência na guarda do espaço.",
+            "normas": [
+                "NR-12, item 12.11.1",
+                "ABNT NBR 16042",
+                "NR-10",
+                "ABNT NBR 5674",
+                "Código Civil, art. 1.348"
+            ],
+            "referencias": [],
+            "responsabilidade": "Condomínio / Síndico",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "casa-005",
+            "pergunta": "Iluminação deficiente na casa de máquinas é responsabilidade de quem?",
+            "resposta": "A iluminação inadequada em casa de máquinas é questão de segurança e desempenho. A ABNT NBR ISO/CIE 8995-1:2013 (Iluminação de ambientes de trabalho) define iluminância mínima de 200 lux para salas técnicas e de máquinas. A NR-17 (Ergonomia) exige que 'os níveis mínimos de iluminamento a serem observados nos locais de trabalho são os valores de iluminâncias estabelecidos na NBR 5413' — atualizada pela ISO/CIE 8995-1. Se a casa de máquinas foi entregue com iluminação insuficiente (número de pontos, potência ou tipo de luminária inadequados), trata-se de vício de projeto ou execução — responsabilidade da construtora. Se a iluminação era adequada na entrega e foi reduzida por queima de lâmpadas não substituídas, é responsabilidade de manutenção do condomínio. A inspeção deve medir a iluminância com luxímetro calibrado e comparar com o valor normativo. Em casas de máquinas de elevadores, a NBR 16042 reforça a exigência de iluminação adequada para manutenção segura.",
+            "normas": [
+                "ABNT NBR ISO/CIE 8995-1:2013",
+                "NR-17",
+                "ABNT NBR 16042"
+            ],
+            "referencias": [],
+            "responsabilidade": "Construtora (projeto) / Condomínio (manutenção)",
+            "gravidade": "Média"
+        },
+        {
+            "id": "casa-006",
+            "pergunta": "A casa de máquinas pode armazenar materiais de limpeza ou outros itens?",
+            "resposta": "Não. A casa de máquinas é área técnica exclusiva e não pode ser utilizada como depósito de materiais. A NBR 16042 (elevadores) veda expressamente o armazenamento de quaisquer materiais estranhos ao equipamento na casa de máquinas. A NR-23 proíbe armazenagem de materiais junto a equipamentos elétricos ou mecânicos por risco de incêndio. Guardar produtos de limpeza (muitos são inflamáveis — álcool, solventes) em casa de máquinas representa risco de incêndio, explosão e contaminação de componentes eletromecânicos. Além disso, o acúmulo de materiais dificulta o acesso para manutenção e pode bloquear rotas de fuga. O condomínio é responsável por manter a casa de máquinas limpa e livre de materiais estranhos. Em caso de sinistro (incêndio, explosão) causado por materiais armazenados indevidamente, o síndico pode responder por negligência (CC art. 1.348). Recomenda-se: sinalização 'Proibido armazenar materiais — Área técnica exclusiva', tranca com chave restrita e inspeção mensal de conformidade.",
+            "normas": [
+                "ABNT NBR 16042",
+                "NR-23",
+                "Código Civil, art. 1.348"
+            ],
+            "referencias": [],
+            "responsabilidade": "Condomínio / Síndico",
+            "gravidade": "Alta"
         }
     ]
 }

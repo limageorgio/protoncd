@@ -35,6 +35,48 @@
             ],
             "responsabilidade": "Construtora",
             "gravidade": "Média"
+        },
+        {
+            "id": "est-004",
+            "pergunta": "Qual norma técnica rege o projeto e a execução de estruturas metálicas?",
+            "resposta": "A norma principal é a ABNT NBR 8800:2008 (Projeto de estruturas de aço e de estruturas mistas de aço e concreto de edifícios), que define os critérios de dimensionamento pelo método dos estados limites. Normas complementares: NBR 14762:2010 (Dimensionamento de estruturas de aço formadas a frio — perfis leves como telhas, terças e montantes), NBR 6120:2019 (Ações para o cálculo de estruturas de edificações — define cargas permanentes, sobrecargas e cargas acidentais), NBR 6123:2023 (Forças devidas ao vento em edificações), NBR 8681:2003 (Ações e segurança nas estruturas — método de coeficientes parciais). A execução deve seguir a ABNT NBR 14931 (Execução de estruturas em geral) e padrões de soldagem conforme AWS D1.1 (Structural Welding Code) ou NBR 8800 Anexo N. Todo projeto estrutural em aço deve ter ART emitida por engenheiro habilitado (civil ou mecânico). A inspeção de estruturas existentes deve verificar: corrosão, deformações, fissuras em soldas, desaperto de parafusos, recalques de fundação e conformidade com o projeto original.",
+            "normas": [
+                "ABNT NBR 8800:2008",
+                "ABNT NBR 14762:2010",
+                "ABNT NBR 6120:2019",
+                "ABNT NBR 6123:2023",
+                "AWS D1.1 (Soldagem)"
+            ],
+            "referencias": [],
+            "responsabilidade": "Projetista / Construtor",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "est-005",
+            "pergunta": "Corrosão em estrutura metálica é sempre vício construtivo?",
+            "resposta": "Depende da causa e do prazo. A corrosão em estruturas metálicas pode ser: (1) Vício construtivo — quando a proteção anticorrosiva foi inadequada desde a execução (pintura sem primer, camada insuficiente, preparação de superfície deficiente). A NBR 15575 (Norma de Desempenho) exige vida útil de projeto para estruturas metálicas: mínimo de 50 anos para elementos estruturais, com manutenção adequada. Se a corrosão agressiva surge dentro dos primeiros 5 anos, há forte presunção de vício construtivo (CC art. 618 — garantia de solidez); (2) Falta de manutenção — a proteção anticorrosiva é um sistema de manutenção obrigatória. A NBR 5674 estabelece repintura preventiva a cada 3 a 5 anos para ambientes agressivos (maresia, indústrias) e 5 a 10 anos para ambientes normais. Se o condomínio não executou a manutenção prevista, a corrosão é responsabilidade sua; (3) Ambiente não previsto em projeto — se o projetista especificou proteção para ambiente rural e a edificação está próxima ao litoral, é erro de projeto. A classificação de agressividade ambiental segue a ABNT NBR 14847 e a ISO 12944 (Protection of steel: corrosion categories C1 a CX).",
+            "normas": [
+                "ABNT NBR 15575",
+                "ABNT NBR 5674:2012",
+                "ISO 12944 (Proteção anticorrosiva)",
+                "Código Civil, art. 618"
+            ],
+            "referencias": [],
+            "responsabilidade": "Construtora (vício) / Condomínio (manutenção)",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "est-006",
+            "pergunta": "Guarda-corpo e corrimão metálico — quais são os requisitos normativos?",
+            "resposta": "A ABNT NBR 14718:2019 (Esquadrias — Guarda-corpos para edificação) define os requisitos: (1) Altura mínima — 1,10 m para edificações em geral (medida do piso acabado ao topo do elemento de proteção). Para edificações com crianças (escolas, residências), pode ser exigido 1,20 m conforme legislação local; (2) Resistência — deve suportar carga horizontal de 730 N/m (uso residencial) a 1.460 N/m (uso público), sem deformação permanente; (3) Aberturas — os vazios entre elementos não podem permitir a passagem de uma esfera de 110 mm de diâmetro (para proteger crianças de aprisionamento); (4) Elementos escaláveis — barras horizontais que possam servir como 'escada' para crianças são proibidas até 1,10 m de altura; (5) Corrimão — a NBR 9077 (Saídas de emergência) exige corrimão em ambos os lados de escadas, com diâmetro entre 38 mm e 65 mm (seção circular), contínuo ao longo de toda a escada, com prolongamento de 30 cm nas extremidades. A NBR 9050 (Acessibilidade) exige corrimão duplo em alturas de 70 cm e 92 cm. Não conformidade em guarda-corpos é risco de queda — gravidade máxima.",
+            "normas": [
+                "ABNT NBR 14718:2019",
+                "ABNT NBR 9077",
+                "ABNT NBR 9050:2020 (Acessibilidade)"
+            ],
+            "referencias": [],
+            "responsabilidade": "Construtora / Projetista",
+            "gravidade": "Crítica"
         }
     ]
 }

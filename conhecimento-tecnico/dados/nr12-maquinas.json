@@ -1,0 +1,161 @@
+{
+    "categoria": "NR-12 — Máquinas e Equipamentos",
+    "descricao": "Segurança na operação, manutenção e adequação de máquinas e equipamentos conforme NR-12 e legislação vigente",
+    "faqs": [
+        {
+            "id": "nr12-001",
+            "pergunta": "O que é a NR-12 e qual é a sua base legal na CLT?",
+            "resposta": "A NR-12 (Segurança no Trabalho em Máquinas e Equipamentos) foi originalmente aprovada pela Portaria MTb nº 3.214/1978 e passou por ampla revisão pela Portaria MTE nº 916/2019 (consolidada). Sua base legal é o Capítulo V da CLT (arts. 154 a 201), especificamente a Seção XI — Das Máquinas e Equipamentos. O art. 184 da CLT determina que 'as máquinas e os equipamentos deverão ser dotados de dispositivos de partida e parada e outros que se fizerem necessários para a prevenção de acidentes do trabalho, especialmente quanto ao risco de acionamento acidental.' O art. 186 complementa que 'o Ministério do Trabalho estabelecerá normas adicionais sobre proteção e medidas de segurança na operação de máquinas e equipamentos.' A NR-12 regulamenta detalhadamente essas disposições legais, sendo seu cumprimento obrigatório para todas as empresas que possuam máquinas e equipamentos, sob pena de interdição (art. 161, CLT) e multas administrativas (art. 201, CLT).",
+            "normas": [
+                "NR-12 (Portaria MTE nº 916/2019)",
+                "CLT, arts. 184, 185, 186",
+                "CLT, art. 161 (Embargo e interdição)",
+                "CLT, art. 201 (Penalidades)"
+            ],
+            "referencias": [
+                "https://www.planalto.gov.br/ccivil_03/decreto-lei/del5452compilado.htm"
+            ],
+            "responsabilidade": "Empregador",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "nr12-002",
+            "pergunta": "Quais são as etapas obrigatórias da adequação de máquinas à NR-12?",
+            "resposta": "A adequação conforme NR-12 segue etapas técnicas sequenciais: (1) Inventário de máquinas e equipamentos — levantamento completo com identificação, localização, tipo e estado de conservação; (2) Apreciação de riscos conforme ABNT NBR ISO 12100:2013 — identificação de perigos, estimativa e avaliação de riscos em todas as fases de uso (operação, manutenção, limpeza, ajuste, transporte e desativação); (3) Categorização dos sistemas de segurança conforme ABNT NBR 14153 (Performance Level) ou NBR ISO 13849-1 — definição da categoria de segurança necessária (B, 1, 2, 3 ou 4); (4) Projeto e implementação das medidas de proteção (proteções fixas, móveis intertravadas, dispositivos de segurança, cortinas de luz, scanners, comandos bimanuais); (5) Elaboração do dossiê técnico com ART do engenheiro responsável; (6) Treinamento dos operadores conforme item 12.16 da NR-12. A apreciação de riscos é o documento central que fundamenta todas as decisões de adequação.",
+            "normas": [
+                "NR-12, itens 12.1 a 12.17",
+                "ABNT NBR ISO 12100:2013",
+                "ABNT NBR 14153",
+                "ABNT NBR ISO 13849-1"
+            ],
+            "referencias": [
+                "https://www.gov.br/trabalho-e-emprego/pt-br/acesso-a-informacao/participacao-social/conselhos-e-orgaos-colegiados/comissao-tripartite-partitaria-permanente/normas-regulamentadora/normas-regulamentadoras-702"
+            ],
+            "responsabilidade": "Empregador / Engenheiro de Segurança",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "nr12-003",
+            "pergunta": "O que é a apreciação de riscos exigida pela NR-12 e quem pode elaborá-la?",
+            "resposta": "A apreciação de riscos é o processo sistemático de identificação de perigos, estimativa e avaliação de riscos associados a máquinas e equipamentos, conforme metodologia da ABNT NBR ISO 12100:2013 ('Segurança de máquinas — Princípios gerais de projeto — Apreciação e redução de riscos'). A NR-12 exige que a apreciação considere todas as fases de vida útil da máquina, incluindo: construção, transporte, montagem, instalação, ajuste, operação, limpeza, manutenção, inspeção, desativação e desmonte. Deve ser elaborada por profissional legalmente habilitado — engenheiro mecânico, engenheiro de segurança do trabalho ou engenheiro de produção — com registro no CREA e emissão de ART (Anotação de Responsabilidade Técnica) conforme Lei nº 6.496/1977. A apreciação deve ser revisada sempre que houver modificações nas condições de trabalho, nos processos produtivos ou após ocorrência de acidente grave.",
+            "normas": [
+                "NR-12, item 12.2",
+                "ABNT NBR ISO 12100:2013",
+                "Lei nº 6.496/1977 (ART)",
+                "Lei nº 5.194/1966 (Exercício profissional de Engenharia)"
+            ],
+            "referencias": [
+                "https://www.planalto.gov.br/ccivil_03/leis/l6496.htm",
+                "https://www.planalto.gov.br/ccivil_03/leis/l5194.htm"
+            ],
+            "responsabilidade": "Engenheiro habilitado (CREA + ART)",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "nr12-004",
+            "pergunta": "A NR-12 se aplica a máquinas usadas ou só a máquinas novas?",
+            "resposta": "A NR-12 aplica-se a máquinas e equipamentos novos E usados, sem exceção. O item 12.1.1 da NR-12 estabelece que as disposições se aplicam 'a todas as atividades econômicas, sem prejuízo da observância do disposto nas demais Normas Regulamentadoras.' Não existe qualquer previsão de isenção por antiguidade do equipamento. Máquinas fabricadas antes da NR-12 vigente devem ser adequadas às exigências atuais. A Portaria MTE nº 916/2019 consolidou alterações que mantiveram expressamente a obrigatoriedade para máquinas em uso. O art. 184 da CLT é categórico ao exigir dispositivos de segurança em todas as máquinas, sem distinção de data de fabricação. O empregador que mantiver máquina usada sem adequação está sujeito a interdição pelo Auditor Fiscal do Trabalho (art. 161, CLT) e multas previstas no art. 201 da CLT.",
+            "normas": [
+                "NR-12, item 12.1.1",
+                "CLT, art. 184",
+                "CLT, art. 161",
+                "Portaria MTE nº 916/2019"
+            ],
+            "referencias": [
+                "https://www.planalto.gov.br/ccivil_03/decreto-lei/del5452compilado.htm"
+            ],
+            "responsabilidade": "Empregador",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "nr12-005",
+            "pergunta": "O que deve conter o inventário de máquinas e equipamentos exigido pela NR-12?",
+            "resposta": "O inventário é documento obrigatório conforme NR-12 item 12.15 e deve conter, no mínimo: (a) identificação por tipo, fabricante, modelo, capacidade e número de série; (b) localização em planta baixa; (c) descrição da aplicação/processo; (d) capacidade de produção; (e) estado de conservação; (f) tipo de proteção existente; (g) riscos identificados; (h) conformidade ou não com a NR-12. O inventário deve ser atualizado sempre que houver aquisição, desativação ou modificação de máquinas. Deve ficar disponível para consulta do SESMT, da CIPA, da fiscalização do MTE e dos trabalhadores. A falta de inventário configura descumprimento da NR-12 e pode resultar em autuação pelo Auditor Fiscal do Trabalho com multas previstas nos arts. 75 e 201 da CLT.",
+            "normas": [
+                "NR-12, item 12.15",
+                "CLT, art. 157, I (obrigação do empregador)",
+                "CLT, art. 201"
+            ],
+            "referencias": [
+                "https://www.planalto.gov.br/ccivil_03/decreto-lei/del5452compilado.htm"
+            ],
+            "responsabilidade": "Empregador",
+            "gravidade": "Média"
+        },
+        {
+            "id": "nr12-006",
+            "pergunta": "Quais são as categorias de segurança (Performance Level) para proteções de máquinas?",
+            "resposta": "As categorias de segurança são definidas pela ABNT NBR 14153 (baseada na EN 954-1) e pela ABNT NBR ISO 13849-1 (Performance Level). Existem 5 categorias: Categoria B (básica) — componentes devem resistir às condições previstas, sem redundância; Categoria 1 — como B, mas com componentes de segurança comprovados; Categoria 2 — como B, com verificação periódica automática da função de segurança; Categoria 3 — um defeito isolado não leva à perda da função de segurança (redundância); Categoria 4 — como 3, com detecção de defeitos e sistemas de diagnóstico mais rigorosos, garantindo a função de segurança mesmo com acúmulo de defeitos. A categoria exigida é determinada pela apreciação de riscos (severidade do dano, frequência de exposição e possibilidade de evitar o perigo). Máquinas com risco de amputação, esmagamento ou morte exigem, em regra, categorias 3 ou 4. A escolha inadequada da categoria de segurança gera responsabilidade civil e criminal do engenheiro signatário da ART.",
+            "normas": [
+                "ABNT NBR 14153",
+                "ABNT NBR ISO 13849-1",
+                "ABNT NBR ISO 12100:2013",
+                "NR-12, item 12.5"
+            ],
+            "referencias": [],
+            "responsabilidade": "Engenheiro habilitado",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "nr12-007",
+            "pergunta": "Quais são as penalidades por descumprimento da NR-12?",
+            "resposta": "O descumprimento da NR-12 gera consequências em múltiplas esferas: (1) Administrativa: multas aplicadas pelo Auditor Fiscal do Trabalho conforme art. 201 da CLT — 'as infrações relativas à medicina do trabalho serão punidas com multa de 3 a 30 vezes o valor de referência, e as concernentes à segurança do trabalho com multa de 5 a 50 vezes o mesmo valor', aplicadas em dobro em caso de reincidência. Interdição de máquinas e equipamentos conforme art. 161 da CLT quando houver 'grave e iminente risco para o trabalhador'; (2) Criminal: em caso de acidente com lesão ou morte, o empregador e o engenheiro responsável podem responder por lesão corporal culposa (art. 129, §6º, CP — pena de detenção de 2 meses a 1 ano) ou homicídio culposo (art. 121, §3º, CP — pena de detenção de 1 a 3 anos); (3) Previdenciária: ação regressiva do INSS contra a empresa (art. 120, Lei nº 8.213/1991); (4) Trabalhista: indenização por dano moral e material (arts. 186 e 927, Código Civil).",
+            "normas": [
+                "CLT, art. 201",
+                "CLT, art. 161",
+                "Código Penal, arts. 121 §3º e 129 §6º",
+                "Lei nº 8.213/1991, art. 120",
+                "Código Civil, arts. 186 e 927"
+            ],
+            "referencias": [
+                "https://www.planalto.gov.br/ccivil_03/decreto-lei/del5452compilado.htm",
+                "https://www.planalto.gov.br/ccivil_03/leis/l8213compilado.htm"
+            ],
+            "responsabilidade": "Empregador / Engenheiro responsável",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "nr12-008",
+            "pergunta": "É obrigatório treinamento para operadores de máquinas conforme NR-12?",
+            "resposta": "Sim. O item 12.16 da NR-12 estabelece que os operadores devem receber capacitação compatível com as funções, abrangendo: (a) descrição e identificação dos riscos associados a cada máquina, incluindo as proteções existentes; (b) funcionamento das proteções e razões pelas quais não devem ser removidas; (c) princípios de segurança na utilização da máquina; (d) procedimentos de trabalho seguro; (e) permissão de trabalho, quando aplicável. A capacitação deve ser ministrada por profissional qualificado e autorizado pelo empregador (NR-12, item 12.16.2), com carga horária mínima e registro documental. A CLT no art. 157, II, reforça que cabe à empresa 'instruir os empregados, através de ordens de serviço, quanto às precauções a tomar no sentido de evitar acidentes do trabalho ou doenças ocupacionais.' Trabalhador sem treinamento operando máquina configura falta grave do empregador, agravante em eventual ação judicial.",
+            "normas": [
+                "NR-12, item 12.16",
+                "CLT, art. 157, II",
+                "NR-01, item 1.7 (Capacitação)"
+            ],
+            "referencias": [
+                "https://www.planalto.gov.br/ccivil_03/decreto-lei/del5452compilado.htm"
+            ],
+            "responsabilidade": "Empregador",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "nr12-009",
+            "pergunta": "O que é o PPRPS e quando ele é exigido para máquinas?",
+            "resposta": "O PPRPS (Programa de Prevenção de Riscos em Prensas e Similares) é um instrumento específico previsto na NR-12 para prensas mecânicas, hidráulicas, pneumáticas, servo-prensas, similares (dobradeiras, guilhotinas, cisalhadoras) e equipamentos que apresentem zona de prensagem. Embora a revisão de 2019 tenha absorvido parte das exigências anteriores (Nota Técnica DSST nº 37/2004 e Nota Técnica nº 16/2005), o conceito do PPRPS permanece como referência técnica para empresas que operam com esses equipamentos. O programa deve incluir: cronograma de adequação; inventário específico de prensas e similares; apreciação de riscos individual por máquina; projeto de adequação com ART; plano de manutenção preventiva; procedimentos operacionais padronizados; e registro de treinamentos. Para empresas com grande parque de prensas, é recomendável manter o PPRPS como documento gerencial complementar ao dossiê técnico da NR-12.",
+            "normas": [
+                "NR-12, Anexo VIII",
+                "ABNT NBR ISO 12100:2013",
+                "ABNT NBR 13930 (Prensas mecânicas)"
+            ],
+            "referencias": [],
+            "responsabilidade": "Empregador / Engenheiro de Segurança",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "nr12-010",
+            "pergunta": "Manutenção em máquinas pode ser feita com a máquina em funcionamento?",
+            "resposta": "Em regra, não. O art. 185 da CLT é categórico: 'Os reparos, limpeza e ajustes somente poderão ser executados com as máquinas paradas, salvo se o movimento for indispensável à realização do ajuste.' A NR-12 regulamenta essa exigência no item 12.11, determinando que as máquinas devem possuir dispositivos de bloqueio para impedir acionamento durante manutenção (LOTO — Lock Out / Tag Out). O procedimento seguro exige: (1) comunicação a todos os envolvidos; (2) acionamento do dispositivo de bloqueio mecânico; (3) dissipação de energias residuais (elétrica, pneumática, hidráulica, potencial gravitacional); (4) verificação de energia zero; (5) sinalização com etiqueta de bloqueio identificando o trabalhador responsável. Somente quando o movimento for tecnicamente indispensável ao ajuste é que se admite operação com máquina em funcionamento, e neste caso com proteções adicionais e pessoal especialmente capacitado.",
+            "normas": [
+                "CLT, art. 185",
+                "NR-12, item 12.11",
+                "NR-10, item 10.5 (Bloqueio de energias)"
+            ],
+            "referencias": [
+                "https://www.planalto.gov.br/ccivil_03/decreto-lei/del5452compilado.htm"
+            ],
+            "responsabilidade": "Empregador / Manutentor",
+            "gravidade": "Alta"
+        }
+    ]
+}

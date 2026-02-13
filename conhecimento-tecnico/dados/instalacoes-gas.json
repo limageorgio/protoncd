@@ -48,6 +48,58 @@
             ],
             "responsabilidade": "Construtora",
             "gravidade": "Crítica"
+        },
+        {
+            "id": "gas-005",
+            "pergunta": "Qual é a norma que rege instalações de GLP em condomínios?",
+            "resposta": "As duas normas principais são: (1) ABNT NBR 13523:2019 (Central predial de GLP) — define projeto, instalação, operação e manutenção de centrais de gás liquefeito de petróleo para edifícios. Abrange: dimensionamento da central (recipientes, vaporizadores, reguladores de pressão), distâncias de segurança entre a central e edificações/divisas/fontes de ignição (tabelas detalhadas por capacidade), ventilação e proteção da central, tubulação de distribuição e medição individualizada; (2) ABNT NBR 15526:2012 (Redes de distribuição interna para gases combustíveis em instalações residenciais e comerciais) — define projeto e execução da rede interna de gás, desde o regulador de pressão até os pontos de consumo (fogão, aquecedor). Requisitos de pressão de teste de estanqueidade (1,5 × pressão de operação, por no mínimo 15 minutos sem queda), materiais aceitos (cobre, aço) e proibidos (PVC, mangueiras não homologadas), ventilação dos ambientes com equipamentos a gás. Toda instalação deve ter ART de engenheiro habilitado. A Resolução ANP nº 62/2022 regulamenta as distribuidoras de GLP.",
+            "normas": [
+                "ABNT NBR 13523:2019",
+                "ABNT NBR 15526:2012",
+                "Resolução ANP nº 62/2022"
+            ],
+            "referencias": [],
+            "responsabilidade": "Projetista / Construtora / Distribuidora",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "gas-006",
+            "pergunta": "Como deve ser feito o teste de estanqueidade em instalações de gás?",
+            "resposta": "O teste de estanqueidade é obrigatório para toda instalação de gás nova ou após reparos, conforme ABNT NBR 15526:2012: (1) A tubulação deve ser pressurizada com gás inerte (nitrogênio ou ar comprimido seco — NUNCA com GLP ou GN) à pressão de teste de 1,5 × a pressão máxima de operação, com mínimo de 200 kPa (2 kgf/cm²); (2) O tempo de teste deve ser suficiente para estabilização da temperatura: mínimo 15 minutos para redes até 100 m de comprimento e 30 minutos para redes maiores; (3) A medição é feita com manômetro calibrado com resolução mínima de 1 kPa; (4) O critério de aprovação é ZERO queda de pressão durante o período de teste (tolerância zero); (5) As conexões podem ser verificadas adicionalmente com solução espumógena (água com detergente); (6) O resultado deve ser registrado em laudo técnico com ART, identificando: trecho testado, pressão aplicada, duração, leitura inicial e final, resultado (aprovado/reprovado). Instalação de gás sem teste de estanqueidade documentado representa risco iminente de explosão e é motivo de interdição.",
+            "normas": [
+                "ABNT NBR 15526:2012, item 6.7",
+                "ABNT NBR 13523:2019"
+            ],
+            "referencias": [],
+            "responsabilidade": "Instalador / Engenheiro",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "gas-007",
+            "pergunta": "Quais são os sinais de vazamento de gás e o que fazer?",
+            "resposta": "Os sinais indicadores de vazamento de gás GLP/GN incluem: (1) Odor característico — o gás GLP (propano/butano) e o GN (metano) recebem adição de mercaptano (odorizante) pelas distribuidoras, conforme Resolução ANP, que lhes confere odor forte e característico. Se o cheiro for percebido, há vazamento; (2) Consumo anormal — se o consumo de gás aumentou sem alteração do uso, pode haver vazamento na rede interna; (3) Chama amarelada/alaranjada — em fogões e aquecedores indica combustão incompleta (ventilação insuficiente ou regulagem de ar); (4) Vegetação morta ao redor da central — em centrais externas enterradas, o gás no solo mata a vegetação. Procedimentos de emergência: NÃO acionar interruptores elétricos, NÃO usar celular ou qualquer fonte de ignição, ABRIR janelas e portas para ventilação, FECHAR o registro de gás (se acessível com segurança), EVACUAR o local, CHAMAR o Corpo de Bombeiros (193) e a distribuidora de gás. A NBR 15526 recomenda a instalação de detectores de gás em áreas de risco (casas de máquinas, centrais) com alarme sonoro e visual. A NR-20 complementa para ambientes industriais.",
+            "normas": [
+                "ABNT NBR 15526:2012",
+                "ABNT NBR 13523:2019",
+                "Resolução ANP nº 62/2022",
+                "NR-20"
+            ],
+            "referencias": [],
+            "responsabilidade": "Condomínio / Moradores",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "gas-008",
+            "pergunta": "A medição individualizada de gás é obrigatória em condomínios?",
+            "resposta": "Depende da legislação estadual/municipal e do tipo de instalação. A tendência legislativa é pela medição individualizada para promover consumo consciente e cobrança justa. Em Goiás, a Lei Estadual nº 14.447/2003 tornou obrigatória a medição individualizada de gás em novas edificações multifamiliares. No âmbito federal, a Lei nº 13.312/2016 estabeleceu que edificações condominiais residenciais devem adotar padrões de sustentabilidade, incluindo medição individualizada de água — o mesmo princípio é aplicado ao gás por legislações estaduais. A ABNT NBR 13523 prevê a instalação de medidores individuais (hidrômetros de gás) na central ou em shaft técnico, com leitura acessível. O projeto deve contemplar: válvula de corte individual por unidade, tubulação identificada, ventilação adequada do shaft de medição, e acesso para leitura/manutenção. Para condomínios existentes sem medição individual, a retrofit é possível mas requer projeto específico de engenheiro com ART.",
+            "normas": [
+                "ABNT NBR 13523:2019",
+                "Lei Estadual GO nº 14.447/2003",
+                "Lei nº 13.312/2016"
+            ],
+            "referencias": [],
+            "responsabilidade": "Construtora (novas) / Condomínio (retrofit)",
+            "gravidade": "Média"
         }
     ]
 }

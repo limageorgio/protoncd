@@ -33,6 +33,61 @@
             ],
             "responsabilidade": "Construtora",
             "gravidade": "Alta"
+        },
+        {
+            "id": "play-004",
+            "pergunta": "Qual norma define os pisos amortecedores de impacto em playgrounds?",
+            "resposta": "A ABNT NBR 16071-3:2012 (Parte 3 — Requisitos de segurança para pisos absorventes de impacto) especifica que toda área sob e ao redor de equipamentos de playground com altura de queda livre superior a 600 mm deve possuir piso absorvente de impacto (amortecedor). O piso deve atender ao valor máximo de HIC (Head Injury Criterion) de 1.000, testado conforme EN 1177 (método de queda de cabeça). Os tipos aceitos: grama sintética com base amortecedora, borracha reciclada (SBR) moldada ou em placas, borracha EPDM colorida, areia lavada (espessura mínima 300 mm), cascalho de madeira certificado. Piso de concreto, pedra, cerâmica ou asfalto sob equipamentos de playground é PROIBIDO pela norma. A zona amortecedora deve se estender por no mínimo 1,80 m além da projeção do equipamento (zona de queda). O não atendimento a esta norma configura risco crítico e expõe a construtora/condomínio a responsabilidade civil objetiva em caso de acidente (CDC art. 14 — defeito na prestação de serviço; CC art. 927, parágrafo único — responsabilidade independente de culpa por atividade de risco).",
+            "normas": [
+                "ABNT NBR 16071-3:2012",
+                "EN 1177 (Teste de impacto)",
+                "CDC, art. 14",
+                "Código Civil, art. 927, parágrafo único"
+            ],
+            "referencias": [],
+            "responsabilidade": "Construtora / Condomínio",
+            "gravidade": "Crítica"
+        },
+        {
+            "id": "play-005",
+            "pergunta": "Playground com selo do INMETRO garante total conformidade?",
+            "resposta": "Parcialmente. O selo do INMETRO garante que o equipamento foi certificado conforme a NBR 16071 no momento da fabricação — porém NÃO garante conformidade da INSTALAÇÃO. Os problemas mais frequentes encontrados em inspeções, mesmo em equipamentos certificados: (1) instalação com espaçamento inadequado entre equipamentos (NBR 16071-1 exige zona de segurança mínima de 2,50 m entre equipamentos); (2) fundações inadequadas ou superficiais; (3) piso amortecedor inexistente ou insuficiente sob o equipamento certificado; (4) alterações pós-instalação (soldas, cortes, adição de peças não certificadas); (5) supressão de peças durante montagem (parafusos, tampas, protetores). Além disso, a certificação INMETRO é para o produto — a responsabilidade pela correta instalação é do instalador e da construtora. A NBR 16071-4 (Métodos de ensaio) define os testes que devem ser feitos na posição instalada. A inspeção periódica por profissional habilitado é complementar e indispensável para verificar a condição real de uso.",
+            "normas": [
+                "ABNT NBR 16071-1 a 16071-7",
+                "Portaria INMETRO nº 563/2016",
+                "ABNT NBR 16071-4 (Métodos de ensaio)"
+            ],
+            "referencias": [],
+            "responsabilidade": "Construtora / Instalador",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "play-006",
+            "pergunta": "Quais são as zonas de segurança exigidas ao redor dos equipamentos de playground?",
+            "resposta": "A ABNT NBR 16071-1 define zonas de segurança que devem ser livres de obstáculos: (1) Zona de queda livre — área diretamente sob e ao redor do equipamento onde o usuário pode cair. Deve ter piso amortecedor conforme NBR 16071-3; (2) Zona de segurança lateral — distância mínima de 1,80 m a partir da projeção máxima do equipamento em todas as direções (para balanços, a zona se estende a 2,20 m à frente e atrás do arco de balanço); (3) Zona entre equipamentos — mínimo de 2,50 m entre dois equipamentos adjacentes; (4) Zona livre de obstáculos aéreos — nenhuma obstrução (galhos, telhados, cabos) a menos de 2,50 m acima da plataforma mais alta; (5) Para escorregadores — a zona de chegada se estende a 2,00 m além do final do escorrego. Obstáculos dentro dessas zonas (muros, pilares, árvores, outros equipamentos, bancos) representam risco grave. Em condomínios novos, a construtora é responsável pelo dimensionamento; em condomínios existentes que instalam novos equipamentos, a responsabilidade é do síndico/administradora. A NBR 16071-7 define periodicidade de inspeção: operacional (visual diária), funcional (mensal) e principal (anual por profissional habilitado).",
+            "normas": [
+                "ABNT NBR 16071-1:2012",
+                "ABNT NBR 16071-3:2012",
+                "ABNT NBR 16071-7:2012"
+            ],
+            "referencias": [],
+            "responsabilidade": "Construtora / Condomínio",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "play-007",
+            "pergunta": "Quem responde legalmente se uma criança se acidenta no playground do condomínio?",
+            "resposta": "A responsabilidade depende da causa do acidente: (1) Se o acidente decorre de vício do equipamento (defeito de fabricação, peça quebrada, falha estrutural) — responde o fabricante e a construtora que instalou (CDC art. 12 — responsabilidade pelo fato do produto, objetiva e solidária); (2) Se o acidente decorre de falha de manutenção (peça solta por falta de aperto, piso amortecedor degradado não substituído, corrosão não tratada) — responde o condomínio/síndico por negligência na manutenção (CC art. 1.348, V e art. 927); (3) Se o acidente decorre de não conformidade normativa da instalação (espaçamentos inadequados, zona de queda sobre piso duro) — responde a construtora (dentro da garantia) ou o condomínio (fora da garantia, se não providenciou adequação). O STJ tem jurisprudência consolidada: condomínios respondem objetivamente por acidentes em áreas comuns (REsp 1.535.727/SC). A idade da criança e a presença/ausência de supervisão são analisadas, mas NÃO excluem a responsabilidade por defeito do equipamento ou da instalação. Recomenda-se: inspeção periódica documentada (NBR 16071-7), seguro de responsabilidade civil e placas com faixa etária e regras de uso.",
+            "normas": [
+                "CDC, arts. 12 e 14",
+                "Código Civil, arts. 927, 932 e 1.348",
+                "ABNT NBR 16071 (Partes 1 a 7)"
+            ],
+            "referencias": [
+                "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm"
+            ],
+            "responsabilidade": "Fabricante / Construtora / Condomínio",
+            "gravidade": "Alta"
         }
     ]
 }

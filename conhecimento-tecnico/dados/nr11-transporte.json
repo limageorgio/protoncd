@@ -1,0 +1,104 @@
+{
+    "categoria": "NR-11 — Transporte e Movimentação de Materiais",
+    "descricao": "Segurança no transporte, movimentação, armazenagem e manuseio de materiais: empilhadeiras, pontes rolantes, transpaletes e guindastes",
+    "faqs": [
+        {
+            "id": "nr11-001",
+            "pergunta": "A NR-11 se aplica a quais tipos de equipamentos?",
+            "resposta": "A NR-11 (Transporte, Movimentação, Armazenagem e Manuseio de Materiais) aplica-se a todos os equipamentos utilizados para transporte e movimentação de cargas no ambiente de trabalho, incluindo: empilhadeiras (elétricas, GLP, diesel), transpaletes manuais e elétricos, pontes rolantes, talhas, guindastes, guinchos, esteiras transportadoras, monta-cargas (elevadores de carga em galpões), paleteiras, tratores industriais e plataformas elevatórias de carga. A base legal é a CLT, art. 182: 'O Ministério do Trabalho estabelecerá normas sobre: I - as precauções de segurança na movimentação de materiais nos locais de trabalho, os equipamentos a serem obrigatoriamente utilizados e as condições especiais a que estão sujeitas a operação e a manutenção desses equipamentos, inclusive exigências de pessoal habilitado.' A NR-11, item 11.1.1, exige que os equipamentos sejam 'calculados e construídos de maneira que ofereçam as necessárias garantias de resistência e segurança.' Todos devem ter manuais em português, programa de manutenção preventiva e identificação de capacidade de carga visível.",
+            "normas": [
+                "NR-11, item 11.1.1",
+                "CLT, art. 182"
+            ],
+            "referencias": [
+                "https://www.planalto.gov.br/ccivil_03/decreto-lei/del5452compilado.htm"
+            ],
+            "responsabilidade": "Empregador",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "nr11-002",
+            "pergunta": "A empresa é obrigada a fazer inspeção diária (checklist) na empilhadeira?",
+            "resposta": "Sim. A NR-11, item 11.1.5.1, determina que o operador deve realizar inspeção pré-operacional do equipamento antes de cada turno de trabalho. O checklist deve verificar, no mínimo: (a) nível de combustível/carga da bateria; (b) funcionamento de freios (serviço e estacionamento); (c) direção; (d) buzina e alarme sonoro de ré; (e) luzes (farol, lanterna de ré, giroflex); (f) espelhos retrovisores; (g) garfos (sem trincas, desgaste ou empenamento); (h) correntes e cilindros do mastro; (i) pneus (pressão e estado); (j) cinto de segurança; (k) protetor de carga superior (overhead guard); (l) estrutura de proteção contra capotamento (ROPS). A inspeção deve ser registrada em formulário próprio (ficha diária) e arquivada. Equipamento com defeito identificado na inspeção deve ser imediatamente retirado de operação. A ABNT NBR 11900 (Empilhadeiras — Verificações de segurança) detalha os itens técnicos adicionais. Acidente com empilhadeira sem checklist documentado configura negligência do empregador.",
+            "normas": [
+                "NR-11, item 11.1.5.1",
+                "ABNT NBR 11900",
+                "CLT, art. 157"
+            ],
+            "referencias": [],
+            "responsabilidade": "Operador / Empregador",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "nr11-003",
+            "pergunta": "Qual o peso máximo que um trabalhador pode carregar manualmente?",
+            "resposta": "A CLT é clara: 'Art. 198. É de 60 kg (sessenta quilogramas) o peso máximo que um empregado pode remover individualmente, ressalvadas as disposições especiais relativas ao trabalho do menor e da mulher.' Para mulheres, a CLT art. 390 estabelece limite de 20 kg para trabalho contínuo e 25 kg para trabalho ocasional. Para menores (14 a 18 anos), o art. 405, §5º, veda atividades que exijam emprego de força muscular superior a 20 kg (contínuo) ou 25 kg (ocasional). Porém, o limite de 60 kg da CLT não significa que cargas até esse peso sejam seguras — a NR-17 (Ergonomia), item 17.2.2, exige que a organização do trabalho considere 'as normas técnicas oficiais e, na sua ausência, as normas técnicas internacionais.' A NIOSH (National Institute for Occupational Safety and Health) recomenda que cargas acima de 23 kg já apresentem risco ergonômico significativo, dependendo da frequência, distância de carga e postura. A ISO 11228-1 estabelece limites baseados em análise biomecânica completa. A NR-11 complementa ao exigir que cargas superiores a 60 kg ou de difícil manejo sejam movimentadas por meios mecânicos.",
+            "normas": [
+                "CLT, arts. 198, 390 e 405 §5º",
+                "NR-11, item 11.2.1",
+                "NR-17, item 17.2.2",
+                "NIOSH Lifting Equation",
+                "ISO 11228-1"
+            ],
+            "referencias": [
+                "https://www.planalto.gov.br/ccivil_03/decreto-lei/del5452compilado.htm"
+            ],
+            "responsabilidade": "Empregador",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "nr11-004",
+            "pergunta": "Ponte rolante e talha precisam de inspeção periódica? Qual a norma?",
+            "resposta": "Sim. Pontes rolantes, talhas, guindastes e equipamentos de elevação de carga devem passar por inspeções periódicas conforme a NR-11 e as normas ABNT aplicáveis. A ABNT NBR 10015 (Inspeção de acessórios de movimentação de carga) e a ABNT NBR 8400 (Cálculo de equipamentos de levantamento e movimentação de cargas) são as referências principais. Os tipos de inspeção: (1) Diária — visual pelo operador antes do uso (cabos, ganchos, freios, limites de curso); (2) Mensal — verificação de desgaste de cabos de aço (conforme NBR ISO 4309 — critérios de descarte de cabos), lubrificação, trilhos e rodas; (3) Semestral/Anual — inspeção completa por engenheiro habilitado incluindo: teste funcional com carga nominal, verificação de freios (inclusive de emergência), calibração de limitadores de carga, teste de fim-de-curso, inspeção estrutural da viga principal e das travessas. O gancho deve ser inspecionado quanto a: abertura da boca (deformação máxima 10%), desgaste da seção (máximo 10%), trincas (ensaio com partículas magnéticas ou líquido penetrante). A inspeção deve gerar relatório técnico com ART. Bridge cranes com cargas acima de 10 toneladas geralmente requerem inspeção anual por NR-13 (vasos de pressão dos cilindros hidráulicos, se aplicável).",
+            "normas": [
+                "NR-11, item 11.1.3",
+                "ABNT NBR 10015",
+                "ABNT NBR 8400",
+                "ABNT NBR ISO 4309 (Cabos de aço — critérios de descarte)"
+            ],
+            "referencias": [],
+            "responsabilidade": "Empregador / Engenheiro",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "nr11-005",
+            "pergunta": "Quais são as regras de armazenagem segura de materiais conforme a NR-11?",
+            "resposta": "A NR-11, Anexo I (Regulamento Técnico de Procedimentos para Movimentação, Armazenagem e Manuseio de Chapas de Mármore, Granito e Outras Rochas), e os itens gerais 11.2 e 11.3, estabelecem regras para armazenagem: (1) Altura máxima de empilhamento — deve ser limitada de forma a garantir a estabilidade da pilha e a resistência do piso (verifique carga admissível do piso, conforme NBR 6120); (2) Corredores e passagens — largura mínima de 1,20 m para circulação de pessoas e devidamente sinalizados. Para tráfego de empilhadeiras, largura = largura da empilhadeira + largura da carga + 1,20 m (item 11.1.10); (3) Sinalização — faixas de piso sinalizando rotas de veículos e pedestres, espelhos convexos em cruzamentos com pouca visibilidade; (4) Altura de armazenamento — distância mínima de 1 metro do teto (para sprinklers é maior — NBR 10897 exige 0,90m livre entre topo da carga e deflector do sprinkler); (5) Materiais perigosos — devem seguir suas normas específicas (NR-20 para inflamáveis, NR-16 para explosivos/periculosidade); (6) Estanterias e porta-paletes — devem ser calculados por engenheiro, com capacidade de carga afixada e inspeção periódica (ABNT NBR 15524).",
+            "normas": [
+                "NR-11, itens 11.2 e 11.3",
+                "ABNT NBR 15524 (Porta-paletes)",
+                "ABNT NBR 6120:2019 (Ações para estruturas)",
+                "ABNT NBR 10897:2020 (Sprinklers)"
+            ],
+            "referencias": [],
+            "responsabilidade": "Empregador / Engenheiro",
+            "gravidade": "Média"
+        },
+        {
+            "id": "nr11-006",
+            "pergunta": "Quais são os acidentes mais comuns com empilhadeiras e como preveni-los?",
+            "resposta": "Os acidentes mais frequentes com empilhadeiras, segundo dados do Anuário Estatístico de Acidentes do Trabalho (AEAT/Previdência), são: (1) Tombamento/capotamento — causa nº 1 de óbitos. Fatores: excesso de velocidade em curvas, carga elevada demais no mastro, piso irregular, rampas. Prevenção: treinamento, respeito à capacidade de carga, redução de velocidade, cinto de segurança SEMPRE; (2) Atropelamento de pedestres — colisão com trabalhadores em corredores. Prevenção: sinalização de piso, espelhos convexos, alarme sonoro de ré, segregação de rotas de pedestres e veículos; (3) Queda de carga sobre operador ou terceiros — empilhamento instável, carga mal posicionada nos garfos. Prevenção: overhead guard, carga centralizada, paletização adequada, filmagem prévia; (4) Prensamento entre empilhadeira e estrutura — operador ou terceiro preso entre o veículo e parede/estante/coluna. Prevenção: treinamento de operação, espaço adequado de manobra, barreira física; (5) Queda do operador — descer da empilhadeira em movimento. Prevenção: nunca abandonar o veículo sem desligar, freio de estacionamento, garfos apoiados no chão. O empregador deve investigar cada acidente (NR-01) e registrar no PGR.",
+            "normas": [
+                "NR-11, itens 11.1.5 a 11.1.10",
+                "NR-01 (PGR — registro de acidentes)",
+                "CLT, art. 157"
+            ],
+            "referencias": [],
+            "responsabilidade": "Empregador / Operador",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "nr11-007",
+            "pergunta": "A NR-11 exige programa de manutenção preventiva para os equipamentos?",
+            "resposta": "Sim. A NR-11, item 11.1.3.1, determina que 'os equipamentos de transporte motorizados devem possuir sinal de advertência sonora (buzina)' e o item 11.1.3 exige que todos os equipamentos'sejam mantidos em perfeito estado de funcionamento.' Embora a NR-11 não detalhe um programa de manutenção prescritivo como a NR-12, a obrigação de manter em 'perfeito estado' implica necessariamente um programa de manutenção preventiva documentado. O programa deve incluir: (a) cronograma de manutenções preditivas e preventivas baseado nas recomendações do fabricante; (b) registro de todas as intervenções (corretivas e preventivas) com data, peças substituídas, profissional responsável; (c) controle de horas de operação (horímetro); (d) calibração periódica de limitadores de carga, fins de curso e dispositivos de segurança; (e) substituição preventiva de cabos de aço (conforme NBR ISO 4309 — critérios de descarte baseados em arames rompidos por passo); (f) controle de emissões para empilhadeiras a combustão (GLP/diesel) em ambiente fechado — monóxido de carbono máximo de 39 ppm (ACGIH TLV-TWA). A falta de programa de manutenção documentado agrava qualquer responsabilidade em caso de acidente.",
+            "normas": [
+                "NR-11, itens 11.1.3 e 11.1.3.1",
+                "ABNT NBR ISO 4309",
+                "NR-15, Anexo 11 (Agentes químicos — CO)"
+            ],
+            "referencias": [],
+            "responsabilidade": "Empregador",
+            "gravidade": "Alta"
+        }
+    ]
+}

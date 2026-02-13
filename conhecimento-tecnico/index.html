@@ -56,12 +56,13 @@
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Base de Conhecimento Técnico | Proton Engenharia">
-    <meta name="twitter:description" content="FAQs técnicos sobre inspeção predial: HVAC, elevadores, portas corta-fogo, playgrounds, gás, pressurização e mais. Normas ABNT, responsabilidades e gravidade.">
+    <meta name="twitter:description"
+        content="FAQs técnicos sobre inspeção predial: HVAC, elevadores, portas corta-fogo, playgrounds, gás, pressurização e mais. Normas ABNT, responsabilidades e gravidade.">
     <meta name="twitter:image" content="https://www.protoncd.com.br/img/logo_proton1x1.jpg">
 
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 
-    <!-- Schema.org -->
+    <!-- Schema.org — FAQPage com 30 perguntas estratégicas cobrindo todos os serviços -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -69,18 +70,153 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "A unidade condensadora precisa estar a X cm da parede?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Sim. Fabricantes definem distâncias mínimas para evitar recirculação de ar quente. Verificar manual do modelo e NBR 16401." }
+          "name": "A unidade condensadora precisa estar a X cm da parede conforme o fabricante?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Sim. As distâncias mínimas são definidas pelo fabricante no manual de instalação e pela NBR 16401. O descumprimento pode caracterizar falha de instalação." }
+        },
+        {
+          "@type": "Question",
+          "name": "Quem é responsável pelo PMOC — proprietário ou empresa de manutenção?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A Lei 13.589/2018 atribui ao proprietário ou síndico a responsabilidade de manter o PMOC. A empresa de manutenção executa, mas a obrigação legal é do responsável pelo imóvel." }
         },
         {
           "@type": "Question",
           "name": "Vibração ou ruído excessivo em elevador: é vício de instalação ou desgaste?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Depende da idade e histórico de manutenção. Elevadores novos com ruído anormal podem indicar vício de instalação. Elevadores antigos podem ter desgaste de componentes. Laudo com análise espectral FFT define a causa raiz." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Depende da idade e histórico de manutenção. Elevadores novos com ruído anormal podem indicar vício de instalação. Elevadores antigos podem ter desgaste. Laudo com análise FFT define a causa raiz." }
         },
         {
           "@type": "Question",
           "name": "Playground com projeto aprovado mas execução diferente é irregular?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Sim. A conformidade é avaliada contra as normas NBR 16071 e NBR 14350, não apenas contra o projeto aprovado. Divergências entre projeto e execução caracterizam não conformidade." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Sim. A conformidade é avaliada contra as normas NBR 16071 e NBR 14350, não apenas contra o projeto aprovado. Divergências caracterizam não conformidade." }
+        },
+        {
+          "@type": "Question",
+          "name": "O condomínio é obrigado a fazer inspeção nas portas corta-fogo?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Sim. A NBR 11742 exige manutenção periódica. Portas corta-fogo desgastadas ou travadas abertas perdem a classificação de resistência ao fogo e comprometem o AVCB." }
+        },
+        {
+          "@type": "Question",
+          "name": "A casa de bombas do condomínio precisa seguir alguma norma técnica?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Sim. Deve atender à NBR 5626:2020 (água fria e quente) e à NBR 13714:2000 (combate a incêndio). A bomba de incêndio deve ter alimentação elétrica independente e partida automática em até 30 segundos." }
+        },
+        {
+          "@type": "Question",
+          "name": "O que é golpe de aríete e como preveni-lo na casa de bombas?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Golpe de aríete é a sobrepressão transitória por interrupção brusca do fluxo. A NBR 5626:2020, item 5.5.10, exige avaliação e dispositivos de proteção como válvulas de alívio e soft-starters." }
+        },
+        {
+          "@type": "Question",
+          "name": "Quais treinamentos de segurança são obrigatórios por lei?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A CLT art. 157 e a NR-01 obrigam treinamentos específicos conforme a atividade: NR-10 (40h), NR-11 (empilhadeira), NR-12 (8h mín.), NR-13 (40h caldeiras), NR-20, NR-33 (16h/40h), NR-35 (8h). A falta configura infração gravíssima." }
+        },
+        {
+          "@type": "Question",
+          "name": "O que acontece se um trabalhador sofre acidente e o treinamento NR estava vencido?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Consequências gravíssimas: multa do MTE (NR-28), presunção de culpa civil (CC art. 927, Súmula 341 STF), responsabilidade criminal por homicídio/lesão culposa, e ação regressiva do INSS (Lei 8.213/91 art. 120)." }
+        },
+        {
+          "@type": "Question",
+          "name": "Meu galpão foi construído sem alvará — é possível regularizar?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Sim. O processo envolve laudo de estabilidade (NBR 16747), projeto as built, AVCB, aprovação sanitária/ambiental e pagamento de taxas. O Estatuto da Cidade (Lei 10.257/2001) reconhece a regularização fundiária." }
+        },
+        {
+          "@type": "Question",
+          "name": "Quais equipamentos são abrangidos pela NR-13?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Caldeiras a vapor (Categorias A, B, C), vasos de pressão (5 categorias), tubulações pressurizadas e tanques metálicos de armazenamento (Portaria MTP 672/2021). Base legal: CLT art. 200." }
+        },
+        {
+          "@type": "Question",
+          "name": "Vaso de pressão de ar comprimido da oficina precisa de inspeção NR-13?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Sim. Compressores e reservatórios estão sujeitos à NR-13 independentemente do porte da empresa. É necessário prontuário, válvula de segurança calibrada e placa de identificação. A explosão de vaso de ar comprimido pode ser fatal." }
+        },
+        {
+          "@type": "Question",
+          "name": "A NR-11 se aplica a quais tipos de equipamentos?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Empilhadeiras, transpaletes, pontes rolantes, talhas, guindastes, esteiras, monta-cargas e plataformas elevatórias. A CLT art. 182 exige pessoal habilitado e manutenção preventiva documentada." }
+        },
+        {
+          "@type": "Question",
+          "name": "Qual o peso máximo que um trabalhador pode carregar manualmente?",
+          "acceptedAnswer": { "@type": "Answer", "text": "CLT art. 198: 60 kg para homens. CLT art. 390: 20 kg (contínuo) ou 25 kg (ocasional) para mulheres. A NIOSH recomenda máximo de 23 kg considerando risco ergonômico. A NR-17 exige análise biomecânica." }
+        },
+        {
+          "@type": "Question",
+          "name": "Qual a diferença entre projeto arquitetônico e projeto estrutural?",
+          "acceptedAnswer": { "@type": "Answer", "text": "O arquitetônico define estética, função e espaço (Plano Diretor, NBR 9050). O estrutural calcula fundações, pilares, vigas e lajes (NBR 6118, NBR 8800). Ambos exigem ART/RRT e devem ser compatibilizados." }
+        },
+        {
+          "@type": "Question",
+          "name": "Quanto tempo dura a responsabilidade do engenheiro pela obra?",
+          "acceptedAnswer": { "@type": "Answer", "text": "O Código Civil art. 618 estabelece garantia de 5 anos pela solidez e segurança, contados da entrega. Para vícios ocultos, o prazo se estende. A prescrição para ação indenizatória é de 10 anos (CC art. 205)." }
+        },
+        {
+          "@type": "Question",
+          "name": "O que é o CERCON e por que ele substituiu o AVCB em Goiás?",
+          "acceptedAnswer": { "@type": "Answer", "text": "O CERCON é o sistema digital do CBMGO (IN 01/2025) que substituiu o AVCB presencial. O responsável técnico declara conformidade online pelo e-CBMGO, assumindo responsabilidade civil, criminal e perante o CREA/CAU." }
+        },
+        {
+          "@type": "Question",
+          "name": "O responsável técnico que assina o CERCON pode ser responsabilizado criminalmente?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Sim. Declaração falsa configura falsidade ideológica (CP art. 299, pena 1-5 anos). Em caso de sinistro, responde por homicídio culposo. A Lei 13.425/2017 (Lei Kiss) ampliou a responsabilidade para profissionais técnicos." }
+        },
+        {
+          "@type": "Question",
+          "name": "O que é a NR-12 e quais máquinas ela abrange?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A NR-12 estabelece requisitos de segurança para máquinas e equipamentos: proteções fixas/móveis, dispositivos de intertravamento, comandos bimanual, categorias de segurança (NBR 14153). Aplica-se a todas as fases de utilização." }
+        },
+        {
+          "@type": "Question",
+          "name": "O que é PGR e qual a diferença para o antigo PPRA?",
+          "acceptedAnswer": { "@type": "Answer", "text": "O PGR (Programa de Gerenciamento de Riscos) substituiu o PPRA desde janeiro/2022 conforme a nova NR-01. Inclui inventário de riscos e plano de ação, abrangendo TODOS os riscos ocupacionais (não só ambientais)." }
+        },
+        {
+          "@type": "Question",
+          "name": "O que é Análise Ergonômica do Trabalho (AET) e quando é obrigatória?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A AET é exigida pela NR-17 quando há inadequação do posto de trabalho. Deve avaliar mobiliário, organização, esforço físico e condições ambientais. É obrigatória quando identificado risco ergonômico no PGR." }
+        },
+        {
+          "@type": "Question",
+          "name": "Laudo pericial de engenharia pode ser usado como prova em processo judicial?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Sim. O CPC arts. 464-480 regulam a perícia judicial. O engenheiro atua como perito do juízo ou assistente técnico, emitindo laudo com ART que serve como prova técnica para o magistrado." }
+        },
+        {
+          "@type": "Question",
+          "name": "Todo edifício precisa de AVCB?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Sim. A Lei 13.425/2017 (Lei Kiss) tornou obrigatório o AVCB para todas as edificações e áreas de risco. A ausência sujeita o proprietário a multas, interdição e responsabilidade criminal em caso de sinistro." }
+        },
+        {
+          "@type": "Question",
+          "name": "Trabalho em altura: a partir de quantos metros é obrigatório seguir a NR-35?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A NR-35 define trabalho em altura como toda atividade acima de 2 metros do nível inferior com risco de queda. Exige treinamento de 8h, Análise de Risco, Permissão de Trabalho, e EPI específico (cinto tipo paraquedista)." }
+        },
+        {
+          "@type": "Question",
+          "name": "O sistema de pressurização de escadas é obrigatório em quais edifícios?",
+          "acceptedAnswer": { "@type": "Answer", "text": "É obrigatório em edifícios com escada enclausurada à prova de fumaça, conforme NBR 14880 e Instruções Técnicas dos Corpos de Bombeiros. A pressão diferencial deve ser de 50-80 Pa entre escada e pavimento." }
+        },
+        {
+          "@type": "Question",
+          "name": "A instalação de gás predial precisa de projeto técnico?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Sim. A NBR 15526 (GLP) e NBR 13523 (GN) exigem projeto por profissional habilitado com ART. O teste de estanqueidade é obrigatório antes da liberação e deve ser repetido periodicamente." }
+        },
+        {
+          "@type": "Question",
+          "name": "A impermeabilização de uma laje tem garantia de quantos anos?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A NBR 9575 classifica a vida útil mínima da impermeabilização entre 3 e 10 anos conforme o sistema. A NBR 15575 exige vida útil mínima de 8 anos para o sistema. A construtora responde por falhas (CC art. 618)." }
+        },
+        {
+          "@type": "Question",
+          "name": "Quais são os itens obrigatórios de inspeção em uma casa de máquinas de elevador?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A NBR 16858 e a NR-12 exigem: ventilação adequada, temperatura máxima de 40°C, iluminação mínima de 200 lux, acesso restrito, proibição de armazenamento, quadro de força protegido e sinalização." }
+        },
+        {
+          "@type": "Question",
+          "name": "Estrutura metálica com corrosão: vício construtivo ou falta de manutenção?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Depende da análise técnica conforme NBR 8800. Corrosão precoce (até 5 anos) pode indicar falha de tratamento superficial (vício). Corrosão tardia geralmente indica falta de manutenção preventiva pelo proprietário." }
+        },
+        {
+          "@type": "Question",
+          "name": "O que é laudo de inspeção predial e quando é obrigatório?",
+          "acceptedAnswer": { "@type": "Answer", "text": "É o documento técnico de avaliação das condições de manutenção e segurança da edificação, conforme NBR 16747:2018. A obrigatoriedade depende da legislação municipal — diversas cidades já possuem leis de autovistoria." }
         }
       ]
     }
@@ -899,6 +1035,771 @@
             }
         ]
     }
+,
+    "casas-bombas.json": {
+    "categoria": "Casa de Bombas e Sistemas Hidráulicos",
+    "descricao": "Inspeção de casas de bombas, sistemas hidráulicos prediais, bombas de recalque, combate a incêndio e automação hidromecânica",
+    "faqs": [
+        {
+            "id": "bombas-001",
+            "pergunta": "A casa de bombas do condomínio precisa seguir alguma norma técnica?",
+            "resposta": "Sim. A casa de bombas predial deve atender à ABNT NBR 5626:2020 (Sistemas prediais de água fria e água quente) e, quando houver sistema de combate a incêndio, também à ABNT NBR 13714:2000 (Sistemas de hidrantes e de mangotinhos para combate a incêndio). A NBR 5626 estabelece requisitos para dimensionamento de bombas de recalque, reservatórios, tubulações e válvulas, incluindo: vazão mínima de projeto, pressão estática e dinâmica nos pontos de consumo, proteção contra golpe de aríete (item 5.5.10), e ventilação adequada do ambiente. A NBR 13714 exige que bombas de incêndio sejam independentes do sistema de abastecimento doméstico, com acionamento automático por pressostato e partida em até 30 segundos. Além disso, o Código de Obras do município pode exigir condições específicas de acesso, iluminação, drenagem de piso e impermeabilização. A inspeção deve verificar todos esses itens e registrar não conformidades com fundamentação normativa.",
+            "normas": [
+                "ABNT NBR 5626:2020",
+                "ABNT NBR 13714:2000",
+                "Código de Obras Municipal"
+            ],
+            "referencias": [],
+            "responsabilidade": "Condomínio / Construtora",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "bombas-002",
+            "pergunta": "Qual a diferença entre bomba principal, bomba reserva (jockey) e bomba de incêndio?",
+            "resposta": "São três funções hidráulicas distintas no sistema predial: (1) Bomba principal de recalque — alimenta o reservatório superior a partir do inferior (cisterna). É dimensionada conforme a demanda de consumo diário do edifício (NBR 5626:2020). Opera por boia ou pressostato e deve ter potência compatível com a altura manométrica total; (2) Bomba jockey (pressurizadora) — mantém a pressão constante na rede quando não há consumo significativo. Trabalha em conjunto com a bomba principal, evitando acionamentos desnecessários. É uma bomba de menor vazão e potência; (3) Bomba de incêndio — dedicada exclusivamente ao sistema de combate a incêndio (hidrantes e/ou sprinklers). Conforme NBR 13714, deve ter alimentação elétrica independente (circuito exclusivo no QGBT, sem passar por disjuntor geral), partida automática por pressostato, e a reserva técnica de incêndio (RTI) no reservatório não pode ser utilizada para consumo doméstico. A NBR 10897:2020 (sprinklers) exige que a bomba de incêndio atenda à curva de desempenho com 150% da vazão nominal a no mínimo 65% da pressão nominal.",
+            "normas": [
+                "ABNT NBR 5626:2020",
+                "ABNT NBR 13714:2000",
+                "ABNT NBR 10897:2020"
+            ],
+            "referencias": [],
+            "responsabilidade": "Projetista / Condomínio",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "bombas-003",
+            "pergunta": "Quais são os itens obrigatórios de inspeção em uma casa de bombas?",
+            "resposta": "A inspeção técnica de uma casa de bombas deve abranger, no mínimo: (1) Estado das bombas — vibração excessiva, ruídos anormais, aquecimento, vedação dos selos mecânicos, alinhamento motor-bomba, fixação na base; (2) Quadro de comando — funcionamento do pressostato, boia de nível, disjuntores, contatores, relé térmico, indicações luminosas (manual/automático/defeito); (3) Tubulações e conexões — corrosão, vazamentos, suportes, válvulas de retenção, registros de gaveta, manômetros; (4) Reservatórios — nível, limpeza, tampa, extravasor (ladrão), tubo de ventilação conforme NBR 5626; (5) Válvula de retenção e válvula de pé com crivo — obrigatórias para evitar refluxo e perda de escorva; (6) Condições do ambiente — ventilação, iluminação (mínimo 200 lux conforme NBR 5413), drenagem de piso, acesso restrito, sinalização; (7) Para bombas de incêndio — teste funcional semanal (NBR 13714 recomenda), registro em livro de ocorrências, verificação de partida automática. O laudo de inspeção deve ser emitido com ART pelo engenheiro responsável.",
+            "normas": [
+                "ABNT NBR 5626:2020",
+                "ABNT NBR 13714:2000",
+                "ABNT NBR 5413 (Iluminância)",
+                "Lei nº 6.496/1977 (ART)"
+            ],
+            "referencias": [],
+            "responsabilidade": "Condomínio / Engenheiro inspetor",
+            "gravidade": "Média"
+        },
+        {
+            "id": "bombas-004",
+            "pergunta": "O que é golpe de aríete e como preveni-lo na casa de bombas?",
+            "resposta": "Golpe de aríete é o fenômeno hidráulico de sobrepressão transitória que ocorre quando há interrupção brusca do fluxo de água na tubulação — tipicamente por desligamento súbito da bomba, fechamento rápido de válvula ou falha de energia. A onda de pressão pode atingir valores várias vezes superiores à pressão de operação, causando ruptura de tubulações, danos a conexões, rompimento de registros e até destruição da bomba. A ABNT NBR 5626:2020, item 5.5.10, determina que 'o projetista deve avaliar a possibilidade de ocorrência de golpe de aríete e, quando necessário, prever dispositivos de proteção.' As medidas de prevenção incluem: (a) válvulas de retenção com fechamento suave (não-slam); (b) válvulas de alívio de pressão; (c) câmaras de ar (amortecedores) ou vasos de expansão com membrana; (d) dispositivos de partida suave (soft-starter) nos motores; (e) válvulas de fechamento lento (borboleta com redutor). A inspeção deve verificar a existência e funcionalidade desses dispositivos.",
+            "normas": [
+                "ABNT NBR 5626:2020, item 5.5.10",
+                "ABNT NBR 12214:2024 (Projeto de sistemas de bombeamento)"
+            ],
+            "referencias": [],
+            "responsabilidade": "Projetista / Condomínio",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "bombas-005",
+            "pergunta": "A reserva técnica de incêndio (RTI) pode ser usada para consumo?",
+            "resposta": "Não. A Reserva Técnica de Incêndio (RTI) é o volume de água armazenado no reservatório destinado exclusivamente ao sistema de combate a incêndio (hidrantes e/ou sprinklers), e sua utilização para consumo doméstico é vedada. A NBR 13714:2000 determina que a RTI deve ser calculada para garantir o funcionamento do sistema pelo tempo mínimo exigido (geralmente 30 ou 60 minutos conforme o risco da edificação). O reservatório deve possuir dispositivo físico (tubo de tomada em nível adequado ou reservatório separado) que impede que a água abaixo da cota da RTI seja consumida pelo sistema doméstico. As Instruções Técnicas dos Corpos de Bombeiros estaduais detalham os volumes mínimos: por exemplo, a IT 22 do CBMGO define RTI mínima de acordo com o tipo de ocupação e altura da edificação. A falta de RTI adequada é motivo de não emissão ou cassação do AVCB.",
+            "normas": [
+                "ABNT NBR 13714:2000",
+                "ABNT NBR 10897:2020",
+                "IT 22 do CBMGO (e equivalentes estaduais)",
+                "Lei nº 13.425/2017"
+            ],
+            "referencias": [],
+            "responsabilidade": "Condomínio / Corpo de Bombeiros",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "bombas-006",
+            "pergunta": "Qual a periodicidade recomendada de manutenção preventiva em bombas prediais?",
+            "resposta": "As periodicidades de manutenção em bombas hidráulicas prediais seguem as recomendações da ABNT NBR 5674:2012 (Manutenção de edificações) e do fabricante: (1) Diário/semanal — verificação visual de vazamentos, nível de óleo (se aplicável), funcionamento do painel de comando, alarmes, indicadores de pressão; (2) Quinzenal — teste de partida automática das bombas de incêndio, simulação de queda de pressão, verificação da bomba jockey; (3) Mensal — medição de corrente elétrica do motor, verificação de vibração e temperatura, lubrificação dos mancais, verificação de alinhamento e acoplamento; (4) Semestral — inspeção completa dos selos mecânicos, verificação de válvulas de retenção, teste de funcionamento de todas as válvulas, limpeza de filtros; (5) Anual — revisão geral com desmontagem se necessário, verificação de cavitação, ensaio de desempenho (vazão x pressão), calibração de manômetros e pressostatos. A NBR 5674 classifica o sistema hidráulico como item de manutenção obrigatória do edifício. O síndico é responsável solidário por manter o programa de manutenção atualizado (Código Civil, art. 1.348, V).",
+            "normas": [
+                "ABNT NBR 5674:2012",
+                "ABNT NBR 5626:2020",
+                "Código Civil, art. 1.348, V"
+            ],
+            "referencias": [
+                "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm"
+            ],
+            "responsabilidade": "Síndico / Administradora",
+            "gravidade": "Média"
+        },
+        {
+            "id": "bombas-007",
+            "pergunta": "O quadro de comando da casa de bombas precisa ter alimentação independente?",
+            "resposta": "Sim, especificamente para as bombas de incêndio. A NBR 13714:2000 exige que a bomba de incêndio tenha alimentação elétrica por circuito independente, derivado antes do dispositivo geral de manobra (disjuntor geral do edifício), de modo que o desligamento geral da energia do prédio não desligue a bomba de incêndio. O circuito deve ser protegido por disjuntor exclusivo, dimensionado para a corrente de partida do motor. Já para as bombas de recalque doméstico, a NBR 5410:2004 (Instalações elétricas de baixa tensão) determina que motores acima de determinada potência devem ter circuito dedicado com proteção específica. O quadro de comando deve possuir: chave de partida adequada (direta, estrela-triângulo ou soft-starter conforme potência), relé de falta de fase, relé térmico, botoeira de emergência, sinalização (funcionando/defeito/modo manual-automático) e proteção contra surtos (DPS). Para edifícios acima de 30m, a NBR 13714 recomenda considerar gerador de emergência para alimentação das bombas de incêndio.",
+            "normas": [
+                "ABNT NBR 13714:2000",
+                "ABNT NBR 5410:2004",
+                "ABNT NBR 10897:2020"
+            ],
+            "referencias": [],
+            "responsabilidade": "Projetista elétrico / Condomínio",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "bombas-008",
+            "pergunta": "Quais são os sinais de que uma bomba hidráulica precisa de substituição ou reparo urgente?",
+            "resposta": "Os sinais de alerta que indicam necessidade de intervenção urgente em bombas prediais incluem: (1) Vibração excessiva — desbalanceamento do rotor, desalinhamento, cavitação ou desgaste de rolamentos. Acima de 4,5 mm/s RMS (ISO 10816-1) já é considerado 'insatisfatório' para máquinas do Grupo 1; (2) Ruído anormal — som metálico intermitente pode indicar cavitação (a bomba está 'engolindo ar'), que causa erosão do rotor; (3) Vazamento pelos selos mecânicos — gotejamento contínuo superior ao aceitável (>20 gotas/min) indica necessidade de troca; (4) Superaquecimento do motor — temperatura de carcaça acima do limite da classe de isolamento (ex.: Classe B = 130°C, Classe F = 155°C, conforme NBR 17094); (5) Queda de pressão ou vazão — o sistema não atinge mais a pressão ou vazão de projeto, indicando desgaste interno; (6) Disparo frequente do relé térmico — sobrecorrente constante indica problema mecânico; (7) Partidas/paradas excessivamente frequentes (ciclagem) — geralmente causadas por vazamentos na rede, válvula de retenção com defeito ou pressostato desregulado. Qualquer desses sinais deve ser registrado e comunicado imediatamente à administração.",
+            "normas": [
+                "ISO 10816-1 (Vibração de máquinas)",
+                "ABNT NBR 17094 (Máquinas elétricas girantes)",
+                "ABNT NBR 5626:2020"
+            ],
+            "referencias": [],
+            "responsabilidade": "Equipe de manutenção / Engenheiro",
+            "gravidade": "Alta"
+        }
+    ]
+},
+    "treinamentos-nr.json": {
+    "categoria": "Treinamentos NR — Capacitação Obrigatória",
+    "descricao": "Treinamentos obrigatórios pelas Normas Regulamentadoras: NR-11, NR-12, NR-13, NR-17, NR-20, NR-33, NR-35 e outros",
+    "faqs": [
+        {
+            "id": "trein-001",
+            "pergunta": "Quais treinamentos de segurança são obrigatórios por lei?",
+            "resposta": "A CLT, em seu art. 157, II, obriga o empregador a 'instruir os empregados, através de ordens de serviço, quanto às precauções a tomar no sentido de evitar acidentes do trabalho ou doenças ocupacionais.' As Normas Regulamentadoras detalham os treinamentos específicos obrigatórios conforme a atividade: NR-05 (CIPA — 20h para membros titulares), NR-06 (uso correto de EPI), NR-10 (segurança em eletricidade — 40h básico), NR-11 (operação de empilhadeiras e transporte de materiais), NR-12 (segurança em máquinas — mínimo 8h), NR-13 (operação de caldeiras — 40h, vasos de pressão — específico), NR-17 (ergonomia no trabalho), NR-18 (construção civil — admissional 6h + periódico), NR-20 (inflamáveis e combustíveis — 8h a 32h conforme classe), NR-23 (proteção contra incêndios), NR-33 (espaço confinado — 16h trabalhador, 40h supervisor), NR-35 (trabalho em altura — 8h). A NR-01, item 1.7.1, reforça: 'o empregador deve promover capacitação e treinamento dos trabalhadores, em conformidade com o disposto nas NR.' A falta de treinamento configura infração gravíssima, passível de interdição (CLT art. 161).",
+            "normas": [
+                "CLT, art. 157, II",
+                "CLT, art. 161",
+                "NR-01, item 1.7.1",
+                "NR-05, NR-06, NR-10, NR-11, NR-12, NR-13, NR-17, NR-18, NR-20, NR-23, NR-33, NR-35"
+            ],
+            "referencias": [
+                "https://www.planalto.gov.br/ccivil_03/decreto-lei/del5452compilado.htm"
+            ],
+            "responsabilidade": "Empregador",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "trein-002",
+            "pergunta": "Qual a validade dos treinamentos NR e quando é necessária reciclagem?",
+            "resposta": "Cada NR define a periodicidade de reciclagem de seu respectivo treinamento: NR-05 (CIPA) — a cada mandato (1 ano); NR-10 (eletricidade) — reciclagem bienal, 8h; NR-11 (empilhadeira) — não especifica prazo fixo na norma, mas a prática consolidada é anual; NR-12 (máquinas) — não tem periodicidade fixa na norma, mas deve ocorrer sempre que houver mudança na máquina, processo ou após acidente; NR-13 (caldeiras) — reciclagem a cada 2 anos, com carga horária conforme categoria; NR-20 (inflamáveis) — reciclagem a cada 1 ano (Classe III) ou 3 anos (Classes I e II); NR-33 (espaço confinado) — reciclagem anual, 8h; NR-35 (trabalho em altura) — reciclagem bienal, 8h, ou sempre que houver mudança de procedimento, retorno após afastamento superior a 90 dias ou acidente grave. A NR-01, item 1.7.1.2, estabelece ainda que o treinamento deve ser reaplicado quando: (a) houver mudança de função; (b) houver alteração nos riscos; (c) após retorno de afastamento. Todos os certificados devem ser arquivados pelo empregador e estar disponíveis para fiscalização.",
+            "normas": [
+                "NR-01, item 1.7.1.2",
+                "NR-10, NR-12, NR-13, NR-20, NR-33, NR-35"
+            ],
+            "referencias": [],
+            "responsabilidade": "Empregador",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "trein-003",
+            "pergunta": "O treinamento de NR-11 para operador de empilhadeira — o que exige a norma?",
+            "resposta": "A NR-11 (Transporte, Movimentação, Armazenagem e Manuseio de Materiais) estabelece que somente trabalhadores capacitados e habilitados podem operar equipamentos de transporte com força motriz própria (item 11.1.5). O treinamento deve abranger: normas técnicas e procedimentos internos; interpretação de placas de capacidade de carga; verificações diárias pré-operação (checklist); regras de circulação e sinalização; noções de estabilidade e tombamento; limitações do equipamento; e procedimentos de emergência. Embora a NR-11 não especifique carga horária mínima (diferente de outras NRs), a prática consolidada e recomendada pela jurisprudência é de 16 a 24h (teórica + prática). O operador deve possuir CNH categoria B ou superior (quando a empilhadeira circular em vias públicas) e ASO (Atestado de Saúde Ocupacional) indicando aptidão para a função. O empregador que permite operação de empilhadeira por pessoa não capacitada responde por negligência em caso de acidente (Código Civil, art. 186 c/c art. 927; Código Penal, arts. 121 §3º / 129 §6º).",
+            "normas": [
+                "NR-11, itens 11.1.5 a 11.1.6",
+                "Código Civil, arts. 186 e 927",
+                "CLT, art. 157"
+            ],
+            "referencias": [
+                "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm"
+            ],
+            "responsabilidade": "Empregador",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "trein-004",
+            "pergunta": "Quem pode ministrar treinamentos de NR? É necessário ser engenheiro?",
+            "resposta": "A qualificação exigida para instrutores de treinamentos NR varia conforme a norma: (1) NR-10 — o profissional deve ter qualificação comprovada na área, mas não exige registro no CREA (pode ser Técnico em Eletrotécnica); (2) NR-12 — o treinamento deve ser ministrado por 'trabalhadores ou profissionais qualificados para este fim' (item 12.16.4), com conteúdo técnico que exige conhecimento das normas de segurança de máquinas; (3) NR-13 — o treinamento de operador de caldeira deve ser supervisionado por profissional habilitado (engenheiro com registro no CREA, conforme item 13.3.4); (4) NR-20 — instrutores devem ter 'formação, qualificação e experiência' na área (item 20.11.10); (5) NR-33 — o treinamento de supervisor de entrada deve ser ministrado por engenheiro de segurança do trabalho; (6) NR-35 — profissionais com 'comprovada proficiência no assunto' (item 35.3.6). Em geral, a NR-01 (item 1.7.1.1) aceita que treinamentos sejam ministrados por instrutores internos ou externos com qualificação comprovada. A responsabilidade pelo conteúdo e pela idoneidade do instrutor é do empregador.",
+            "normas": [
+                "NR-01, item 1.7.1.1",
+                "NR-10, NR-12 (item 12.16.4), NR-13 (item 13.3.4), NR-20, NR-33, NR-35 (item 35.3.6)"
+            ],
+            "referencias": [],
+            "responsabilidade": "Empregador",
+            "gravidade": "Média"
+        },
+        {
+            "id": "trein-005",
+            "pergunta": "Treinamento EAD de NR é válido juridicamente?",
+            "resposta": "Depende da NR específica. A Portaria MTP nº 671/2021 (que regulamenta a NR-01) admite treinamentos a distância (EAD) para a parte teórica, desde que observados os seguintes requisitos: (a) ambiente virtual de aprendizagem que permita rastreabilidade e controle de acesso; (b) avaliação de aprendizagem com nota mínima; (c) conteúdo programático idêntico ao presencial; (d) a parte prática deve ser sempre presencial. Porém, há NRs que PROÍBEM ou RESTRINGEM severamente o EAD: a NR-35 (trabalho em altura) exige treinamento prático presencial obrigatório; a NR-33 (espaço confinado) idem; a NR-20 (inflamáveis) exige simulação prática. A NR-12 admite EAD para a parte teórica, mas a prática (operação supervisionada) deve ser presencial. Importante: treinamentos realizados 100% em EAD, sem parte prática presencial, são frequentemente anulados pela Justiça do Trabalho em ações trabalhistas. O MTE, via Nota Técnica SEI nº 54/2018/CGNOR/DSST/SIT, alertou sobre a invalidade de treinamentos exclusivamente em plataforma digital quando a norma exige componente prático.",
+            "normas": [
+                "NR-01, item 1.7.1",
+                "Portaria MTP nº 671/2021",
+                "NR-33, NR-35, NR-20, NR-12"
+            ],
+            "referencias": [],
+            "responsabilidade": "Empregador",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "trein-006",
+            "pergunta": "O que acontece se um trabalhador sofre acidente e o treinamento NR estava vencido?",
+            "resposta": "A consequência é gravíssima e multifacetada: (1) Responsabilidade administrativa — multa do MTE por infração grave (NR-28, Anexo I). A multa pode ser multiplicada pelo número de trabalhadores em situação irregular; (2) Responsabilidade civil — presunção de culpa do empregador por negligência (Código Civil, art. 186 c/c art. 927). A Súmula 341 do STF ('É presumida a culpa do patrão ou comitente pelo ato culposo do empregado ou preposto') facilita a condenação. O trabalhador tem direito a indenização por danos morais, materiais e estéticos; (3) Responsabilidade criminal — o empregador e o gestor responsável podem responder por homicídio culposo (CP art. 121 §3º, pena 1-3 anos) ou lesão corporal culposa (CP art. 129 §6º). A falta de treinamento é agravante criminal por demonstrar negligência; (4) Responsabilidade previdenciária — o INSS pode ajuizar ação regressiva contra a empresa (Lei 8.213/91, art. 120) para ressarcimento dos benefícios pagos ao acidentado; (5) Nexo técnico epidemiológico (NTEP) — o acidente será enquadrado automaticamente como acidentário. O treinamento vencido equivale a treinamento inexistente para fins jurídicos.",
+            "normas": [
+                "NR-28, Anexo I",
+                "Código Civil, arts. 186, 927 e 932",
+                "Código Penal, arts. 121 §3º e 129 §6º",
+                "Lei nº 8.213/1991, art. 120",
+                "Súmula 341 do STF"
+            ],
+            "referencias": [
+                "https://www.planalto.gov.br/ccivil_03/leis/l8213compilado.htm"
+            ],
+            "responsabilidade": "Empregador / Gestor",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "trein-007",
+            "pergunta": "O treinamento de NR-20 (inflamáveis e combustíveis) — quais são as classes e cargas horárias?",
+            "resposta": "A NR-20 classifica as instalações em três classes de risco, cada uma com requisitos específicos de treinamento: (1) Classe I — postos revendedores de combustíveis (frentistas e operadores) e instalações que armazenam até 1 tonelada de GLP. Treinamento: curso de integração (4h) + básico (8h). Reciclagem: trienal (4h); (2) Classe II — engarrafadoras de GLP (>1 ton), atividades de transporte ou operação com inflamáveis envasados. Treinamento: integração (4h) + intermediário (16h). Reciclagem: bienal (4h); (3) Classe III — refinarias, petroquímicas, usinas de etanol, plantas de produção com inflamáveis em grande escala. Treinamento: integração (4h) + avançado I (24h) ou avançado II (32h). Reciclagem: anual (4h). A NR-20, item 20.11, exige conteúdo programático específico incluindo: propriedades dos inflamáveis, perigos e riscos, fontes de ignição, medidas de prevenção e controle, procedimentos de emergência. A parte prática deve incluir exercício simulado de emergência. A instalação que opera sem trabalhadores com treinamento válido pode sofrer interdição imediata (CLT art. 161, NR-28).",
+            "normas": [
+                "NR-20, itens 20.11 a 20.14",
+                "CLT, art. 161",
+                "NR-28"
+            ],
+            "referencias": [],
+            "responsabilidade": "Empregador",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "trein-008",
+            "pergunta": "Qual é a diferença entre treinamento de NR-33 (espaço confinado) para trabalhador e para supervisor?",
+            "resposta": "A NR-33 (Segurança e Saúde nos Trabalhos em Espaços Confinados) estabelece dois níveis distintos de capacitação: (1) Trabalhador autorizado e vigia — carga horária mínima de 16 horas, sendo obrigatória a parte prática. Conteúdo: definição e reconhecimento de espaços confinados, identificação dos riscos específicos, funcionamento de equipamentos de medição atmosférica, utilização de EPIs, procedimentos de entrada e saída, comunicação, primeiros socorros, noções de resgate. Reciclagem anual (8h); (2) Supervisor de entrada — carga horária mínima de 40 horas. Deve contemplar, além do conteúdo do trabalhador autorizado: análise de riscos e Permissão de Entrada e Trabalho (PET), procedimentos de emergência e resgate, legislação aplicável, estatísticas de acidentes em espaço confinado. O supervisor deve ser designado formalmente e ter responsabilidade por: emitir a PET, garantir que os procedimentos estão sendo seguidos, ordenar abandono do espaço confinado em caso de emergência (item 33.3.3). A NR-33 exige ainda que haja equipe de resgate treinada e com equipamentos disponíveis antes de qualquer entrada. Espaços confinados incluem: silos, tanques, tubulações, poços de visita, galerias, reservatórios.",
+            "normas": [
+                "NR-33, itens 33.3.4 a 33.3.6",
+                "NR-33, item 33.3.3 (supervisor)",
+                "CLT, art. 200"
+            ],
+            "referencias": [],
+            "responsabilidade": "Empregador / Supervisor",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "trein-009",
+            "pergunta": "O treinamento de NR-10 (eletricidade) é obrigatório para quem? Qual a carga horária?",
+            "resposta": "A NR-10 (Segurança em Instalações e Serviços em Eletricidade) exige treinamento para todos os trabalhadores que 'intervenham em instalações elétricas e serviços com eletricidade' (item 10.8.1), mesmo que a eletricidade não seja sua atividade principal. Há dois níveis: (1) Curso Básico — carga horária mínima de 40 horas (teórica + prática). Obrigatório para todo trabalhador que interaja com instalações elétricas, desde eletricistas até técnicos de manutenção que abrem quadros elétricos. Conteúdo: introdução à segurança com eletricidade, riscos de choque, arco elétrico, campos eletromagnéticos, técnicas de análise de risco, medidas de controle, normas técnicas (NBR 5410, NBR 14039), EPI/EPC, procedimentos de primeiros socorros (incluindo massagem cardíaca e DEA), sinalização; (2) Curso Complementar (SEP) — Sistema Elétrico de Potência — carga horária mínima de 40 horas adicionais. Obrigatório para profissionais que trabalham em alta tensão (acima de 1.000V CA ou 1.500V CC). A reciclagem do básico é bienal (8h mínimo). O profissional deve portar comprovante de treinamento válido durante o trabalho. A NR-10 aplica-se inclusive a condomínios cujos funcionários atuam em subestações, QGBTs ou painéis elétricos.",
+            "normas": [
+                "NR-10, itens 10.8.1 a 10.8.9",
+                "ABNT NBR 5410:2004",
+                "ABNT NBR 14039:2005",
+                "CLT, art. 200"
+            ],
+            "referencias": [],
+            "responsabilidade": "Empregador",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "trein-010",
+            "pergunta": "Como documentar e arquivar os treinamentos NR para fiscalização e defesa jurídica?",
+            "resposta": "A documentação adequada dos treinamentos é essencial para a defesa em fiscalizações do MTE e em ações judiciais. A NR-01 (item 1.7.1) e cada NR específica exigem que o certificado de treinamento contenha: (a) nome do trabalhador e CPF; (b) conteúdo programático ministrado; (c) carga horária (teórica e prática separadamente); (d) data e local; (e) nome, qualificação e assinatura do instrutor; (f) nome e CNPJ da empresa promotora; (g) assinatura do trabalhador. Recomendações adicionais para defesa robusta: (1) Lista de presença assinada por sessão, com horário de entrada e saída; (2) Avaliação de aprendizagem documentada (nota mínima para aprovação); (3) Registro fotográfico/vídeo da parte prática; (4) Cópia do material didático utilizado; (5) O registro no e-Social dos eventos S-2245 (Treinamentos e Capacitações) é obrigatório e deve ser informado até o dia 15 do mês subsequente ao treinamento. A ausência do S-2245 gera multa automática via DCTFWeb. Arquivar por no mínimo 20 anos (prazo prescricional para doenças ocupacionais, conforme entendimento do TST). Recomenda-se digitalização com backup em nuvem.",
+            "normas": [
+                "NR-01, item 1.7.1",
+                "Leiaute do e-Social — evento S-2245",
+                "CLT, art. 157",
+                "Lei nº 8.213/1991 (prazos prescricionais)"
+            ],
+            "referencias": [],
+            "responsabilidade": "Empregador / RH",
+            "gravidade": "Média"
+        }
+    ]
+},
+    "regularizacao-galpoes.json": {
+    "categoria": "Regularização de Galpões e Edificações",
+    "descricao": "Regularização de galpões industriais e comerciais: habite-se, alvará de funcionamento, laudo de estabilidade, AVCB e aprovação em prefeitura",
+    "faqs": [
+        {
+            "id": "galp-001",
+            "pergunta": "Meu galpão foi construído sem alvará — é possível regularizar?",
+            "resposta": "Sim, na maioria dos municípios é possível regularizar galpões construídos sem alvará de construção por meio do processo de 'regularização de obra' ou 'anistia'. O procedimento varia conforme a legislação municipal, mas geralmente envolve: (1) Laudo de estabilidade estrutural — assinado por engenheiro civil ou mecânico (com ART/CREA), atestando que a edificação suporta as cargas previstas e não apresenta riscos de colapso. A ABNT NBR 16747:2018 (Inspeção de edificações) e a NBR 6118 (Estruturas de concreto) ou NBR 8800 (Estruturas de aço) são as normas de referência; (2) Projeto 'as built' — planta da construção como executada, com memorial descritivo; (3) AVCB ou CLCB — aprovação pelo Corpo de Bombeiros; (4) Aprovação sanitária e ambiental — conforme a atividade (ANVISA, órgão ambiental municipal/estadual); (5) Pagamento de ISS retroativo e eventuais multas. O Código Civil, art. 1.299, garante ao proprietário o direito de construir, mas subordinado às posturas municipais (art. 1.228, §1º). A Lei nº 10.257/2001 (Estatuto da Cidade), art. 2º, VII, reconhece a regularização fundiária como diretriz da política urbana.",
+            "normas": [
+                "ABNT NBR 16747:2018",
+                "ABNT NBR 6118 (concreto) / NBR 8800 (aço)",
+                "Código Civil, arts. 1.228 e 1.299",
+                "Lei nº 10.257/2001 (Estatuto da Cidade), art. 2º, VII",
+                "Código de Obras Municipal"
+            ],
+            "referencias": [
+                "https://www.planalto.gov.br/ccivil_03/leis/leis_2001/l10257.htm"
+            ],
+            "responsabilidade": "Proprietário / Engenheiro responsável",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "galp-002",
+            "pergunta": "O que é o habite-se e por que ele é obrigatório para galpões?",
+            "resposta": "O Habite-se (ou Auto de Conclusão / Carta de Habitação, conforme o município) é o documento emitido pela prefeitura que atesta que a edificação foi construída conforme o projeto aprovado e está em condições de ser utilizada. É obrigatório para TODAS as edificações, incluindo galpões industriais e comerciais. Sem habite-se: (a) não é possível obter alvará de funcionamento definitivo; (b) o imóvel não pode ser financiado ou dado em garantia bancária; (c) a matrícula do imóvel fica irregular no Cartório de Registro de Imóveis; (d) o IPTU pode ser cobrado com alíquota majorada (muitos municípios aplicam alíquota progressiva para imóveis irregulares); (e) seguradoras podem recusar cobertura ou negar sinistros. Para galpões existentes sem habite-se, o processo de regularização requer laudo de estabilidade, projeto 'as built', PPCI aprovado pelo Corpo de Bombeiros e pagamento de taxas retroativas. A Lei nº 13.865/2019 facilitou a regularização de imóveis informais em alguns municípios.",
+            "normas": [
+                "Código de Obras Municipal",
+                "Lei nº 6.015/1973 (Registros Públicos), art. 167, II, 13",
+                "Lei nº 13.865/2019"
+            ],
+            "referencias": [
+                "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13865.htm"
+            ],
+            "responsabilidade": "Proprietário",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "galp-003",
+            "pergunta": "Qual é o laudo de estabilidade estrutural exigido para regularizar um galpão?",
+            "resposta": "O laudo de estabilidade estrutural é o documento técnico que atesta a segurança da estrutura do galpão, confirmando que ela suporta as cargas atuantes (peso próprio, sobrecarga, vento, sismo se aplicável). Deve ser elaborado por engenheiro habilitado com registro no CREA e emissão de ART. O conteúdo mínimo do laudo inclui: (1) Identificação da edificação — localização, proprietário, área construída, uso/ocupação; (2) Descrição do sistema estrutural — tipo (metálico, concreto, misto), dimensões, apoios, cobertura; (3) Inspeção visual detalhada — fissuras, corrosão, deformações, recalques; (4) Verificação de conformidade com as normas: NBR 8800:2008 (Estruturas de aço e mistas), NBR 6118:2014 (Concreto armado), NBR 6120:2019 (Ações para o cálculo de estruturas), NBR 6123:2023 (Forças devidas ao vento); (5) Ensaios complementares se necessário — esclerometria, ultrassom, prova de carga; (6) Conclusão — 'Apta' ou 'Inapta' para uso, com condições e ressalvas; (7) ART. Este laudo é requisito para habite-se retroativo e para emissão do AVCB.",
+            "normas": [
+                "ABNT NBR 8800:2008",
+                "ABNT NBR 6118:2014",
+                "ABNT NBR 6120:2019",
+                "ABNT NBR 6123:2023",
+                "ABNT NBR 16747:2018",
+                "Lei nº 6.496/1977 (ART)"
+            ],
+            "referencias": [],
+            "responsabilidade": "Engenheiro (CREA + ART)",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "galp-004",
+            "pergunta": "Galpão industrial precisa de AVCB?",
+            "resposta": "Sim. A Lei nº 13.425/2017 (Lei Kiss) tornou obrigatória a emissão do AVCB (Auto de Vistoria do Corpo de Bombeiros) para todas as edificações e áreas de risco, sem exceção de galpões industriais. A Lei se aplica a: 'edificações e áreas de reunião de público' e 'todas as edificações e áreas de risco em que sejam exercidas atividades definidas no regulamento do respectivo Corpo de Bombeiros' (art. 2º). Galpões industriais são classificados como ocupação industrial conforme a tabela de classificação do COSCIP estadual. Os requisitos mínimos de proteção contra incêndio incluem: extintores (NBR 12693), hidrantes ou mangotinhos (NBR 13714), sinalização de emergência (NBR 13434), iluminação de emergência (NBR 10898), saídas de emergência (NBR 9077), alarme de incêndio (NBR 17240 ou NBR 11836), e dependendo da área e carga de incêndio: sprinklers (NBR 10897), brigada de incêndio (NBR 14276). A ausência de AVCB sujeita o proprietário a multas, interdição e, em caso de sinistro, responsabilidade criminal por crime de perigo comum (Código Penal, art. 250 — incêndio).",
+            "normas": [
+                "Lei nº 13.425/2017, art. 2º",
+                "COSCIP Estadual",
+                "ABNT NBR 12693, 13714, 13434, 10898, 9077, 17240, 10897, 14276",
+                "Código Penal, art. 250"
+            ],
+            "referencias": [
+                "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2017/lei/l13425.htm"
+            ],
+            "responsabilidade": "Proprietário / Responsável técnico",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "galp-005",
+            "pergunta": "Quais são as etapas completas para regularizar um galpão do zero?",
+            "resposta": "O processo completo de regularização de um galpão existente envolve as seguintes etapas sequenciais: (1) Contratação de engenheiro/arquiteto — profissional habilitado com registro no CREA/CAU para responsabilidade técnica; (2) Levantamento planialtimétrico e 'as built' — planta do terreno e da edificação como executada; (3) Laudo de estabilidade estrutural — conforme NBR 16747, NBR 8800/6118; (4) Projeto de prevenção e combate a incêndio (PPCI) — dimensionamento de extintores, hidrantes, saídas de emergência, sinalização; (5) Protocolo no Corpo de Bombeiros — aprovação do PPCI e vistoria para emissão de AVCB/CLCB; (6) Protocolo na Prefeitura — pedido de regularização/habite-se com: projeto 'as built', ART, AVCB, licenças ambientais (se aplicável), comprovante de ISS; (7) Licenciamento ambiental — se a atividade for potencialmente poluidora (CONAMA Resolução 237/1997); (8) Alvará de funcionamento — emitido pela prefeitura após aprovação de todos os documentos; (9) Averbação no Cartório de Registro de Imóveis — atualização da matrícula com a construção regularizada (Lei 6.015/73). Prazo total estimado: 3 a 12 meses dependendo do município. Custo: varia conforme área, complexidade e taxas municipais.",
+            "normas": [
+                "ABNT NBR 16747:2018",
+                "Lei nº 13.425/2017",
+                "CONAMA Resolução 237/1997",
+                "Lei nº 6.015/1973",
+                "Código de Obras Municipal"
+            ],
+            "referencias": [],
+            "responsabilidade": "Proprietário / Engenheiro responsável",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "galp-006",
+            "pergunta": "Quais são as consequências de manter um galpão irregular?",
+            "resposta": "Manter um galpão sem regularização gera riscos em múltiplas esferas: (1) Administrativa/Fiscal — multa municipal por construção irregular, IPTU com alíquota progressiva, impossibilidade de obter alvará de funcionamento, auto de infração da prefeitura, risco de demolição compulsória em casos extremos (CTN, art. 142); (2) Civil — impossibilidade de vender ou financiar o imóvel, seguradora pode negar cobertura de sinistros (Código Civil, art. 762 — agravamento do risco), depreciação do valor do imóvel; (3) Trabalhista — se houver atividade com funcionários, a irregularidade do galpão agrava a responsabilidade em caso de acidente de trabalho. Auditores do MTE podem interditar a atividade por condições inseguras; (4) Criminal — em caso de sinistro com vítimas (incêndio, desabamento), o proprietário responde por crime culposo (CP art. 121 §3º / 256 — desabamento culposo, pena de 6 meses a 2 anos). A Lei 13.425/2017 estabeleceu responsabilidade criminal solidária para proprietários, gestores e responsáveis técnicos; (5) Ambiental — multas ambientais se a atividade não tiver licenciamento (Lei 9.605/1998, crimes ambientais).",
+            "normas": [
+                "Código Civil, art. 762",
+                "Código Penal, arts. 121 §3º e 256",
+                "Lei nº 13.425/2017",
+                "Lei nº 9.605/1998",
+                "CTN, art. 142"
+            ],
+            "referencias": [
+                "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2017/lei/l13425.htm",
+                "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm"
+            ],
+            "responsabilidade": "Proprietário",
+            "gravidade": "Alta"
+        }
+    ]
+},
+    "nr13-caldeiras.json": {
+    "categoria": "NR-13 — Caldeiras e Vasos de Pressão",
+    "descricao": "Segurança em caldeiras, vasos de pressão e tubulações: inspeção, prontuário, classificação e operação conforme NR-13",
+    "faqs": [
+        {
+            "id": "nr13-001",
+            "pergunta": "Quais equipamentos são abrangidos pela NR-13?",
+            "resposta": "A NR-13 (Caldeiras, Vasos de Pressão, Tubulações e Tanques Metálicos de Armazenamento) abrange: (1) Caldeiras a vapor — equipamentos que geram vapor de água sob pressão superior à atmosférica (item 13.1.1). Classificadas em: Categoria A (pressão >1.960 kPa ou P×V > 100), Categoria B (P×V entre 30 e 100 e pressão ≤1.960 kPa) e Categoria C (demais); (2) Vasos de pressão — reservatórios que operam sob pressão diferente da atmosférica (ar comprimido, gases, líquidos pressurizados). Classificados em 5 categorias (I a V) conforme o potencial de risco — função da pressão, volume e fluido; (3) Tubulações — redes de dutos de interligação entre equipamentos sujeitos a pressão ou vácuo; (4) Tanques metálicos de armazenamento — adicionados pela Portaria MTP nº 672/2021. A base legal da NR-13 é a CLT, art. 200, I e II: 'as disposições complementares às normas de que trata este Capítulo serão expedidas pelo Ministério do Trabalho' referentes a 'instalações elétricas, equipamentos a pressão, armazenagem e manuseio de combustíveis, líquidos e gases inflamáveis.' A NR-13 é considerada norma especial e prevalece sobre normas gerais.",
+            "normas": [
+                "NR-13, itens 13.1.1, 13.4 e 13.5",
+                "CLT, art. 200, I e II",
+                "Portaria MTP nº 672/2021"
+            ],
+            "referencias": [
+                "https://www.planalto.gov.br/ccivil_03/decreto-lei/del5452compilado.htm"
+            ],
+            "responsabilidade": "Empregador / Proprietário",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "nr13-002",
+            "pergunta": "Qual é a periodicidade das inspeções em caldeiras conforme a NR-13?",
+            "resposta": "A NR-13 define dois tipos de inspeção para caldeiras: (1) Inspeção de segurança periódica — Caldeira Categoria A: anual (inspeção interna e externa); Caldeira Categoria B: bienal; Caldeira Categoria C: trienal. Deve incluir exame interno, exame externo, teste hidrostático (quando aplicável) e verificação de dispositivos de segurança (válvulas de segurança, pressostatos, indicadores de nível). A inspeção deve ser realizada por Profissional Habilitado (PH) — engenheiro com registro no CREA e conhecimento comprovado em vasos e caldeiras; (2) Inspeção de segurança extraordinária — obrigatória quando: a caldeira ficar inativa por mais de 6 meses; sofrer alteração ou reparo importante; houver mudança de local de instalação; antes de colocação em funcionamento após montagem. A NR-13, item 13.4.4.7, permite que o intervalo entre inspeções seja ampliado em até 50% se a empresa possuir SPIE (Serviço Próprio de Inspeção de Equipamentos) certificado pelo INMETRO ou por organismo autorizado. Cada inspeção gera relatório técnico que deve ser anexado ao Prontuário da caldeira.",
+            "normas": [
+                "NR-13, itens 13.4.4.4 a 13.4.4.7",
+                "ABNT NBR 12177 (Caldeiras estacionárias a vapor)"
+            ],
+            "referencias": [],
+            "responsabilidade": "Profissional Habilitado (Engenheiro)",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "nr13-003",
+            "pergunta": "O que é o Prontuário de caldeira e vasos de pressão? É obrigatório?",
+            "resposta": "Sim, o Prontuário é obrigatório e deve ser constituído para cada caldeira e vaso de pressão. A NR-13, item 13.4.1.2 (caldeiras) e 13.5.1.2 (vasos de pressão), define o conteúdo mínimo: (a) código de projeto e ano de edição (ASME Section VIII, EN 13445, ou outro código reconhecido); (b) especificação dos materiais; (c) procedimentos de fabricação, montagem e inspeção utilizados; (d) desenhos e dados de projeto (PMTA — Pressão Máxima de Trabalho Admissível, temperatura, fluido); (e) memória de cálculo; (f) relatórios de todas as inspeções de segurança; (g) registros de reparos e alterações; (h) certificados de calibração dos dispositivos de segurança (válvulas de alívio); (i) registro de ocorrências; (j) relatório do teste hidrostático. O prontuário deve estar disponível no estabelecimento. Sua inexistência é infração grave — pode resultar em interdição do equipamento pelo Auditor Fiscal do Trabalho (CLT art. 161). Em caso de acidente com caldeira sem prontuário, configura-se negligência grosseira com agravamento da responsabilidade penal.",
+            "normas": [
+                "NR-13, itens 13.4.1.2 e 13.5.1.2",
+                "CLT, art. 161",
+                "ASME Section VIII (referência de projeto)"
+            ],
+            "referencias": [],
+            "responsabilidade": "Proprietário / PH",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "nr13-004",
+            "pergunta": "Quem pode operar uma caldeira e qual treinamento é exigido?",
+            "resposta": "A operação de caldeiras só pode ser exercida por profissional com Treinamento de Segurança na Operação de Caldeiras, conforme NR-13, item 13.3.4. Os requisitos variam por categoria: (1) Caldeira Categoria A — operador com treinamento de no mínimo 40 horas (teórica e prática), supervisionado por Profissional Habilitado. O conteúdo programático está detalhado no Anexo I da NR-13: noções de grandezas físicas e unidades, caldeiras (classificação, partes, acessórios, instrumentos), operação (partida, regime, parada), tratamento de água, manutenção, prevenção contra explosão e procedimentos de emergência; (2) Caldeira Categoria B — treinamento de 60 horas; (3) Caldeira Categoria C — treinamento conforme o risco e orientação do PH. O operador deve portar certificado válido. A reciclagem deve ocorrer a cada 2 anos ou quando houver modificação significativa no equipamento. Operar caldeira sem operador qualificado é infração de gravidade máxima (NR-28, Anexo I), com possibilidade de interdição imediata e responsabilidade criminal em caso de acidente.",
+            "normas": [
+                "NR-13, itens 13.3.4 e Anexo I",
+                "NR-28, Anexo I",
+                "CLT, art. 200"
+            ],
+            "referencias": [],
+            "responsabilidade": "Empregador",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "nr13-005",
+            "pergunta": "Vaso de pressão de ar comprimido da oficina precisa de inspeção NR-13?",
+            "resposta": "Sim. Compressores de ar e seus reservatórios (vasos de pressão) estão sujeitos à NR-13, independentemente do porte da empresa. A periodicidade de inspeção depende da classificação do vaso, que é definida pela combinação: fluido (Classe A — letal ou inflamável; Classe B — não-perigoso), grupo de potencial de risco (P × V), e pressão PMTA. Para oficinas típicas com compressores de 10 a 50 bar e volume até 1.000 litros, o vaso geralmente se enquadra na Categoria V (menor risco), com inspeção periódica a cada 5 anos (ou conforme regulamentação). Porém, o proprietário deve: (a) constituir o prontuário do vaso (placa de identificação, projeto, PMTA); (b) verificar se a válvula de segurança está calibrada e lacrada; (c) manter a placa de identificação legível; (d) possuir registro de ocorrências. A explosão de vaso de ar comprimido é um dos acidentes industriais mais comuns e pode ser fatal. O item 13.5.2.1 veda o uso de vasos de pressão sem placa de identificação ou com a PMTA excedida.",
+            "normas": [
+                "NR-13, itens 13.5.1 a 13.5.5",
+                "NR-13, item 13.5.2.1",
+                "ABNT NBR 15417 (Vasos de pressão — inspeção em serviço)"
+            ],
+            "referencias": [],
+            "responsabilidade": "Proprietário / Empregador",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "nr13-006",
+            "pergunta": "O que é teste hidrostático e quando ele é exigido pela NR-13?",
+            "resposta": "O teste hidrostático (TH) é o ensaio que consiste em submeter caldeiras e vasos de pressão a uma pressão superior à Pressão Máxima de Trabalho Admissível (PMTA) para verificar a integridade estrutural e a estanqueidade do equipamento. A pressão de teste é normalmente 1,5 × PMTA (conforme ASME Section VIII, Div. 1) ou valor definido no código de projeto. O procedimento: (1) esvaziar completamente o equipamento; (2) preencher com água (ou outro fluido incompressível); (3) pressurizar gradualmente até a pressão de teste; (4) manter por tempo determinado (geralmente 30 minutos); (5) inspecionar visualmente toda a superfície em busca de vazamentos, deformações ou trincas; (6) despressurizar gradualmente. A NR-13 exige TH: (a) na fabricação/montagem inicial; (b) sempre que houver reparo ou alteração estrutural (soldas, chapas substituídas); (c) quando recomendado pelo PH na inspeção de segurança periódica; (d) quando houver dúvida sobre a integridade do equipamento. O TH pode ser substituído por ensaio pneumático com medidas de segurança adicionais, ou por técnicas alternativas (emissão acústica, TOFD) autorizadas pelo PH, conforme item 13.5.4.8.",
+            "normas": [
+                "NR-13, itens 13.4.4.5 e 13.5.4.8",
+                "ASME Section VIII, Div. 1",
+                "ABNT NBR 15417"
+            ],
+            "referencias": [],
+            "responsabilidade": "Profissional Habilitado",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "nr13-007",
+            "pergunta": "Qual a responsabilidade do engenheiro que assina o laudo de caldeira/vaso de pressão?",
+            "resposta": "O Profissional Habilitado (PH) que realiza inspeções e assina laudos de caldeiras e vasos de pressão assume responsabilidade técnica, civil e criminal sobre suas conclusões. Especificamente: (1) Responsabilidade técnica — perante o CREA, conforme Lei nº 5.194/1966 e Resolução CONFEA nº 1.073/2016. A ART deve detalhar o escopo do serviço. Emitir laudo sem a devida inspeção ou sem competência técnica configura exercício ilegal ou irresponsável; (2) Responsabilidade civil — se o equipamento sofrer acidente após inspeção que atestou condição segura indevidamente, o PH responde solidariamente por danos (Código Civil, arts. 186 e 927). A 'culpa in eligendo' do contratante pode existir, mas não exime o PH; (3) Responsabilidade criminal — em caso de acidente fatal causado por falha que deveria ter sido identificada na inspeção, o PH pode responder por homicídio culposo (CP art. 121 §3º) ou lesão corporal culposa (CP art. 129 §6º). A perícia judicial inevitavelmente analisará o relatório de inspeção; (4) Responsabilidade administrativa — o MTE, via Auditores Fiscais, pode questionar laudos e exigir complementação. O PH deve comprovar sua qualificação em caldeiras e vasos (cursos, experiência documentada).",
+            "normas": [
+                "Lei nº 5.194/1966",
+                "Resolução CONFEA nº 1.073/2016",
+                "Código Civil, arts. 186 e 927",
+                "Código Penal, arts. 121 §3º e 129 §6º",
+                "NR-13, item 13.3.1"
+            ],
+            "referencias": [
+                "https://www.planalto.gov.br/ccivil_03/leis/l5194.htm"
+            ],
+            "responsabilidade": "Profissional Habilitado (Engenheiro)",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "nr13-008",
+            "pergunta": "A caldeira pode ser instalada em qualquer local da empresa?",
+            "resposta": "Não. A NR-13 impõe restrições rigorosas para a localização de caldeiras: (1) Casa de caldeiras — caldeiras de Categorias A e B devem ser instaladas em edificação própria (casa de caldeiras), construída em material resistente ao fogo, distante no mínimo 3 metros de outras edificações, depósitos de combustíveis, ou locais de grande circulação de pessoas (item 13.4.2.1); (2) Ventilação — a casa de caldeiras deve possuir ventilação permanente, natural ou forçada, que garanta renovação de ar e impeça acúmulo de gases; (3) Iluminação — adequada para operação e inspeção; (4) Saídas de emergência — pelo menos duas saídas, em direções opostas; (5) Sistema de drenagem — para esgotamento de águas e fluidos; (6) Proibições — caldeiras NÃO podem ser instaladas em subsolo, em ambientes confinados sem ventilação adequada, ou em locais que dificultem o acesso para inspeção e manutenção. Caldeiras Categoria C de baixa pressão podem ter requisitos de instalação simplificados, conforme orientação do PH. A disposição das caldeiras entre si deve respeitar distâncias mínimas para manutenção e escape. O não cumprimento dessas exigências é motivo de interdição.",
+            "normas": [
+                "NR-13, itens 13.4.2.1 a 13.4.2.5",
+                "CLT, art. 200",
+                "NBR 12177 (Caldeiras estacionárias)"
+            ],
+            "referencias": [],
+            "responsabilidade": "Empregador / Projetista",
+            "gravidade": "Alta"
+        }
+    ]
+},
+    "nr11-transporte.json": {
+    "categoria": "NR-11 — Transporte e Movimentação de Materiais",
+    "descricao": "Segurança no transporte, movimentação, armazenagem e manuseio de materiais: empilhadeiras, pontes rolantes, transpaletes e guindastes",
+    "faqs": [
+        {
+            "id": "nr11-001",
+            "pergunta": "A NR-11 se aplica a quais tipos de equipamentos?",
+            "resposta": "A NR-11 (Transporte, Movimentação, Armazenagem e Manuseio de Materiais) aplica-se a todos os equipamentos utilizados para transporte e movimentação de cargas no ambiente de trabalho, incluindo: empilhadeiras (elétricas, GLP, diesel), transpaletes manuais e elétricos, pontes rolantes, talhas, guindastes, guinchos, esteiras transportadoras, monta-cargas (elevadores de carga em galpões), paleteiras, tratores industriais e plataformas elevatórias de carga. A base legal é a CLT, art. 182: 'O Ministério do Trabalho estabelecerá normas sobre: I - as precauções de segurança na movimentação de materiais nos locais de trabalho, os equipamentos a serem obrigatoriamente utilizados e as condições especiais a que estão sujeitas a operação e a manutenção desses equipamentos, inclusive exigências de pessoal habilitado.' A NR-11, item 11.1.1, exige que os equipamentos sejam 'calculados e construídos de maneira que ofereçam as necessárias garantias de resistência e segurança.' Todos devem ter manuais em português, programa de manutenção preventiva e identificação de capacidade de carga visível.",
+            "normas": [
+                "NR-11, item 11.1.1",
+                "CLT, art. 182"
+            ],
+            "referencias": [
+                "https://www.planalto.gov.br/ccivil_03/decreto-lei/del5452compilado.htm"
+            ],
+            "responsabilidade": "Empregador",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "nr11-002",
+            "pergunta": "A empresa é obrigada a fazer inspeção diária (checklist) na empilhadeira?",
+            "resposta": "Sim. A NR-11, item 11.1.5.1, determina que o operador deve realizar inspeção pré-operacional do equipamento antes de cada turno de trabalho. O checklist deve verificar, no mínimo: (a) nível de combustível/carga da bateria; (b) funcionamento de freios (serviço e estacionamento); (c) direção; (d) buzina e alarme sonoro de ré; (e) luzes (farol, lanterna de ré, giroflex); (f) espelhos retrovisores; (g) garfos (sem trincas, desgaste ou empenamento); (h) correntes e cilindros do mastro; (i) pneus (pressão e estado); (j) cinto de segurança; (k) protetor de carga superior (overhead guard); (l) estrutura de proteção contra capotamento (ROPS). A inspeção deve ser registrada em formulário próprio (ficha diária) e arquivada. Equipamento com defeito identificado na inspeção deve ser imediatamente retirado de operação. A ABNT NBR 11900 (Empilhadeiras — Verificações de segurança) detalha os itens técnicos adicionais. Acidente com empilhadeira sem checklist documentado configura negligência do empregador.",
+            "normas": [
+                "NR-11, item 11.1.5.1",
+                "ABNT NBR 11900",
+                "CLT, art. 157"
+            ],
+            "referencias": [],
+            "responsabilidade": "Operador / Empregador",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "nr11-003",
+            "pergunta": "Qual o peso máximo que um trabalhador pode carregar manualmente?",
+            "resposta": "A CLT é clara: 'Art. 198. É de 60 kg (sessenta quilogramas) o peso máximo que um empregado pode remover individualmente, ressalvadas as disposições especiais relativas ao trabalho do menor e da mulher.' Para mulheres, a CLT art. 390 estabelece limite de 20 kg para trabalho contínuo e 25 kg para trabalho ocasional. Para menores (14 a 18 anos), o art. 405, §5º, veda atividades que exijam emprego de força muscular superior a 20 kg (contínuo) ou 25 kg (ocasional). Porém, o limite de 60 kg da CLT não significa que cargas até esse peso sejam seguras — a NR-17 (Ergonomia), item 17.2.2, exige que a organização do trabalho considere 'as normas técnicas oficiais e, na sua ausência, as normas técnicas internacionais.' A NIOSH (National Institute for Occupational Safety and Health) recomenda que cargas acima de 23 kg já apresentem risco ergonômico significativo, dependendo da frequência, distância de carga e postura. A ISO 11228-1 estabelece limites baseados em análise biomecânica completa. A NR-11 complementa ao exigir que cargas superiores a 60 kg ou de difícil manejo sejam movimentadas por meios mecânicos.",
+            "normas": [
+                "CLT, arts. 198, 390 e 405 §5º",
+                "NR-11, item 11.2.1",
+                "NR-17, item 17.2.2",
+                "NIOSH Lifting Equation",
+                "ISO 11228-1"
+            ],
+            "referencias": [
+                "https://www.planalto.gov.br/ccivil_03/decreto-lei/del5452compilado.htm"
+            ],
+            "responsabilidade": "Empregador",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "nr11-004",
+            "pergunta": "Ponte rolante e talha precisam de inspeção periódica? Qual a norma?",
+            "resposta": "Sim. Pontes rolantes, talhas, guindastes e equipamentos de elevação de carga devem passar por inspeções periódicas conforme a NR-11 e as normas ABNT aplicáveis. A ABNT NBR 10015 (Inspeção de acessórios de movimentação de carga) e a ABNT NBR 8400 (Cálculo de equipamentos de levantamento e movimentação de cargas) são as referências principais. Os tipos de inspeção: (1) Diária — visual pelo operador antes do uso (cabos, ganchos, freios, limites de curso); (2) Mensal — verificação de desgaste de cabos de aço (conforme NBR ISO 4309 — critérios de descarte de cabos), lubrificação, trilhos e rodas; (3) Semestral/Anual — inspeção completa por engenheiro habilitado incluindo: teste funcional com carga nominal, verificação de freios (inclusive de emergência), calibração de limitadores de carga, teste de fim-de-curso, inspeção estrutural da viga principal e das travessas. O gancho deve ser inspecionado quanto a: abertura da boca (deformação máxima 10%), desgaste da seção (máximo 10%), trincas (ensaio com partículas magnéticas ou líquido penetrante). A inspeção deve gerar relatório técnico com ART. Bridge cranes com cargas acima de 10 toneladas geralmente requerem inspeção anual por NR-13 (vasos de pressão dos cilindros hidráulicos, se aplicável).",
+            "normas": [
+                "NR-11, item 11.1.3",
+                "ABNT NBR 10015",
+                "ABNT NBR 8400",
+                "ABNT NBR ISO 4309 (Cabos de aço — critérios de descarte)"
+            ],
+            "referencias": [],
+            "responsabilidade": "Empregador / Engenheiro",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "nr11-005",
+            "pergunta": "Quais são as regras de armazenagem segura de materiais conforme a NR-11?",
+            "resposta": "A NR-11, Anexo I (Regulamento Técnico de Procedimentos para Movimentação, Armazenagem e Manuseio de Chapas de Mármore, Granito e Outras Rochas), e os itens gerais 11.2 e 11.3, estabelecem regras para armazenagem: (1) Altura máxima de empilhamento — deve ser limitada de forma a garantir a estabilidade da pilha e a resistência do piso (verifique carga admissível do piso, conforme NBR 6120); (2) Corredores e passagens — largura mínima de 1,20 m para circulação de pessoas e devidamente sinalizados. Para tráfego de empilhadeiras, largura = largura da empilhadeira + largura da carga + 1,20 m (item 11.1.10); (3) Sinalização — faixas de piso sinalizando rotas de veículos e pedestres, espelhos convexos em cruzamentos com pouca visibilidade; (4) Altura de armazenamento — distância mínima de 1 metro do teto (para sprinklers é maior — NBR 10897 exige 0,90m livre entre topo da carga e deflector do sprinkler); (5) Materiais perigosos — devem seguir suas normas específicas (NR-20 para inflamáveis, NR-16 para explosivos/periculosidade); (6) Estanterias e porta-paletes — devem ser calculados por engenheiro, com capacidade de carga afixada e inspeção periódica (ABNT NBR 15524).",
+            "normas": [
+                "NR-11, itens 11.2 e 11.3",
+                "ABNT NBR 15524 (Porta-paletes)",
+                "ABNT NBR 6120:2019 (Ações para estruturas)",
+                "ABNT NBR 10897:2020 (Sprinklers)"
+            ],
+            "referencias": [],
+            "responsabilidade": "Empregador / Engenheiro",
+            "gravidade": "Média"
+        },
+        {
+            "id": "nr11-006",
+            "pergunta": "Quais são os acidentes mais comuns com empilhadeiras e como preveni-los?",
+            "resposta": "Os acidentes mais frequentes com empilhadeiras, segundo dados do Anuário Estatístico de Acidentes do Trabalho (AEAT/Previdência), são: (1) Tombamento/capotamento — causa nº 1 de óbitos. Fatores: excesso de velocidade em curvas, carga elevada demais no mastro, piso irregular, rampas. Prevenção: treinamento, respeito à capacidade de carga, redução de velocidade, cinto de segurança SEMPRE; (2) Atropelamento de pedestres — colisão com trabalhadores em corredores. Prevenção: sinalização de piso, espelhos convexos, alarme sonoro de ré, segregação de rotas de pedestres e veículos; (3) Queda de carga sobre operador ou terceiros — empilhamento instável, carga mal posicionada nos garfos. Prevenção: overhead guard, carga centralizada, paletização adequada, filmagem prévia; (4) Prensamento entre empilhadeira e estrutura — operador ou terceiro preso entre o veículo e parede/estante/coluna. Prevenção: treinamento de operação, espaço adequado de manobra, barreira física; (5) Queda do operador — descer da empilhadeira em movimento. Prevenção: nunca abandonar o veículo sem desligar, freio de estacionamento, garfos apoiados no chão. O empregador deve investigar cada acidente (NR-01) e registrar no PGR.",
+            "normas": [
+                "NR-11, itens 11.1.5 a 11.1.10",
+                "NR-01 (PGR — registro de acidentes)",
+                "CLT, art. 157"
+            ],
+            "referencias": [],
+            "responsabilidade": "Empregador / Operador",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "nr11-007",
+            "pergunta": "A NR-11 exige programa de manutenção preventiva para os equipamentos?",
+            "resposta": "Sim. A NR-11, item 11.1.3.1, determina que 'os equipamentos de transporte motorizados devem possuir sinal de advertência sonora (buzina)' e o item 11.1.3 exige que todos os equipamentos'sejam mantidos em perfeito estado de funcionamento.' Embora a NR-11 não detalhe um programa de manutenção prescritivo como a NR-12, a obrigação de manter em 'perfeito estado' implica necessariamente um programa de manutenção preventiva documentado. O programa deve incluir: (a) cronograma de manutenções preditivas e preventivas baseado nas recomendações do fabricante; (b) registro de todas as intervenções (corretivas e preventivas) com data, peças substituídas, profissional responsável; (c) controle de horas de operação (horímetro); (d) calibração periódica de limitadores de carga, fins de curso e dispositivos de segurança; (e) substituição preventiva de cabos de aço (conforme NBR ISO 4309 — critérios de descarte baseados em arames rompidos por passo); (f) controle de emissões para empilhadeiras a combustão (GLP/diesel) em ambiente fechado — monóxido de carbono máximo de 39 ppm (ACGIH TLV-TWA). A falta de programa de manutenção documentado agrava qualquer responsabilidade em caso de acidente.",
+            "normas": [
+                "NR-11, itens 11.1.3 e 11.1.3.1",
+                "ABNT NBR ISO 4309",
+                "NR-15, Anexo 11 (Agentes químicos — CO)"
+            ],
+            "referencias": [],
+            "responsabilidade": "Empregador",
+            "gravidade": "Alta"
+        }
+    ]
+},
+    "projetos-estruturais.json": {
+    "categoria": "Projetos Arquitetônicos e Estruturais",
+    "descricao": "Projetos arquitetônicos, estruturais e de regularização: aprovação em prefeitura, laudos de estabilidade, ART e responsabilidades do projetista",
+    "faqs": [
+        {
+            "id": "proj-001",
+            "pergunta": "Qual a diferença entre projeto arquitetônico e projeto estrutural?",
+            "resposta": "São projetos complementares com escopos distintos: (1) Projeto arquitetônico — define a concepção estética, funcional e espacial da edificação: planta baixa, cortes, fachadas, áreas úteis, circulação, acessibilidade (NBR 9050:2020), ventilação/iluminação natural (conforme Código de Obras). É elaborado por arquiteto (CAU) ou engenheiro civil (CREA). Deve atender ao Plano Diretor municipal, Código de Obras e legislação de uso e ocupação do solo; (2) Projeto estrutural — define os elementos que suportam as cargas da edificação: fundações, pilares, vigas, lajes, treliças, muros de contenção. Deve ser calculado conforme as normas ABNT: NBR 6118 (concreto armado), NBR 8800 (estruturas de aço e mistas), NBR 7190 (estruturas de madeira), NBR 6120 (ações para estruturas), NBR 6123 (vento), NBR 8681 (ações e segurança nas estruturas). É elaborado obrigatoriamente por engenheiro civil ou mecânico (CREA), com ART específica. O projeto arquitetônico deve estar compatibilizado com o estrutural — interferências entre os dois são causa frequente de vícios construtivos e litígios judiciais.",
+            "normas": [
+                "ABNT NBR 6118:2014",
+                "ABNT NBR 8800:2008",
+                "ABNT NBR 6120:2019",
+                "ABNT NBR 6123:2023",
+                "ABNT NBR 9050:2020",
+                "Lei nº 12.378/2010 (CAU) / Lei nº 5.194/1966 (CREA)"
+            ],
+            "referencias": [],
+            "responsabilidade": "Arquiteto / Engenheiro",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "proj-002",
+            "pergunta": "Posso construir sem ART ou RRT? Quais as consequências?",
+            "resposta": "Não. A Lei nº 6.496/1977 institui a ART (Anotação de Responsabilidade Técnica) como obrigatória para toda obra ou serviço de engenharia. A Lei nº 12.378/2010 criou o RRT (Registro de Responsabilidade Técnica) equivalente para arquitetos. Construir sem ART/RRT tem consequências graves: (1) Administrativa — a obra pode ser embargada pela prefeitura por falta de responsável técnico; o profissional que executa sem ART pratica exercício ilegal, sujeito a multa pelo CREA/CAU; (2) Civil — sem ART, não existe formalmente um responsável técnico. Se ocorrer defeito estrutural, o proprietário não terá contra quem acionar a garantia legal de 5 anos (Código Civil, art. 618). A seguradora pode recusar cobertura por falta de responsável técnico; (3) Criminal — em caso de acidente com vítimas em obra sem ART, o responsável pela contratação responde por culpa 'in eligendo' (contratou profissional inadequado ou inexistente). O Código Penal, art. 256 (desabamento ou desmoronamento culposo), prevê pena de detenção; (4) Fiscal — a CEI/CNO (Cadastro Nacional de Obras junto à Receita Federal) exige a ART para registro da obra. Sem registro, há impossibilidade de regularização previdenciária (Lei 8.212/91, art. 30, VI).",
+            "normas": [
+                "Lei nº 6.496/1977 (ART)",
+                "Lei nº 12.378/2010 (RRT)",
+                "Código Civil, art. 618",
+                "Código Penal, art. 256",
+                "Lei nº 8.212/1991, art. 30, VI"
+            ],
+            "referencias": [
+                "https://www.planalto.gov.br/ccivil_03/leis/l6496.htm"
+            ],
+            "responsabilidade": "Proprietário / Profissional",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "proj-003",
+            "pergunta": "Quanto tempo dura a responsabilidade do engenheiro/arquiteto pela obra?",
+            "resposta": "O Código Civil, art. 618, estabelece: 'Nos contratos de empreitada de edifícios ou outras construções consideráveis, o empreiteiro de materiais e execução responderá, durante o prazo irredutível de cinco anos, pela solidez e segurança do trabalho, assim em razão dos materiais, como do solo.' Este prazo de 5 anos (garantia legal) começa a correr a partir da entrega da obra (habite-se ou termo de recebimento). Dentro deste prazo, o proprietário tem 180 dias para ajuizar a ação, contados da data em que o vício se manifestou (art. 618, parágrafo único). Porém, a jurisprudência do STJ amplia a responsabilidade: (a) Para vícios ocultos (que só se revelam depois), o prazo é de 1 ano a partir da descoberta do vício (Código Civil, art. 445, §1º); (b) A prescrição para ação indenizatória é de 10 anos (art. 205 do CC — prazo geral), conforme entendimento consolidado pelo STJ; (c) Para relações de consumo (CDC, art. 27), o prazo prescricional para reparação de danos é de 5 anos. O engenheiro projetista e o construtor respondem solidariamente. A ART documenta formalmente quem é o responsável técnico por cada etapa (projeto, execução, fiscalização).",
+            "normas": [
+                "Código Civil, arts. 205, 441, 445, 618 e 927",
+                "CDC, arts. 26 e 27",
+                "Lei nº 6.496/1977 (ART)"
+            ],
+            "referencias": [
+                "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm"
+            ],
+            "responsabilidade": "Engenheiro / Construtor",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "proj-004",
+            "pergunta": "O que é necessário para aprovar um projeto na prefeitura?",
+            "resposta": "A aprovação de projeto na prefeitura (licenciamento edilício) requer, tipicamente: (1) Documentação do terreno — matrícula atualizada do imóvel, certidão de uso e ocupação do solo, levantamento topográfico planialtimétrico; (2) Projeto arquitetônico — plantas, cortes, fachadas, memorial descritivo, quadro de áreas, demonstrando conformidade com: Código de Obras Municipal, Plano Diretor (Lei municipal), coeficiente de aproveitamento, taxa de ocupação, recuos obrigatórios, vagas de estacionamento, acessibilidade (NBR 9050); (3) ART/RRT — do projetista e do responsável técnico pela execução; (4) Projetos complementares conforme o porte — estrutural, elétrico (NBR 5410), hidrossanitário (NBR 8160), PPCI (para AVCB); (5) Licença ambiental — se exigida pelo município (para terrenos em APP, por exemplo); (6) Taxa de aprovação — guia de pagamento municipal. O prazo de análise varia: 30 a 120 dias conforme o município. Um profissional experiente conhece os 'gargalos' específicos de cada prefeitura e pode evitar retrabalhos. O Estatuto da Cidade (Lei 10.257/2001) garante prazos razoáveis para análise pelo poder público.",
+            "normas": [
+                "Código de Obras Municipal",
+                "Plano Diretor Municipal",
+                "ABNT NBR 9050:2020 (Acessibilidade)",
+                "ABNT NBR 5410:2004 (Elétrica)",
+                "ABNT NBR 8160 (Esgoto)",
+                "Lei nº 10.257/2001 (Estatuto da Cidade)"
+            ],
+            "referencias": [],
+            "responsabilidade": "Proprietário / Projetista",
+            "gravidade": "Média"
+        },
+        {
+            "id": "proj-005",
+            "pergunta": "O que é laudo de inspeção predial e quando ele é obrigatório?",
+            "resposta": "O laudo de inspeção predial é o documento técnico que avalia as condições de manutenção, uso, operação e segurança de uma edificação. A ABNT NBR 16747:2018 (Inspeção de edificações — Diretrizes, Conceitos, Terminologia e Procedimento) é a norma de referência nacional. A obrigatoriedade depende da legislação municipal/estadual: diversas cidades já possuem leis de autovistoria obrigatória — como a Lei nº 6.400/2013 (Rio de Janeiro), a Lei nº 9.913/2012 (Salvador), e projetos similares em Goiânia, São Paulo e outras capitais. A NBR 16747 define três níveis de inspeção conforme a complexidade: Nível 1 (edificações simples, até 3 pavimentos), Nível 2 (edificações de médio porte, com sistemas mais complexos), Nível 3 (grandes edificações com alto grau de complexidade). O laudo deve abordar: estrutura, vedações, revestimentos, instalações hidrossanitárias, elétricas, de gás, elevadores, HVAC, cobertura, impermeabilização, áreas comuns. Deve ser elaborado por engenheiro ou arquiteto com ART/RRT. O Código Civil, art. 1.348, V, atribui ao síndico a responsabilidade por conservação e guarda das partes comuns — fundamentando a demanda por inspeções periódicas.",
+            "normas": [
+                "ABNT NBR 16747:2018",
+                "Código Civil, art. 1.348, V",
+                "Legislação municipal de autovistoria (quando aplicável)"
+            ],
+            "referencias": [
+                "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm"
+            ],
+            "responsabilidade": "Síndico / Proprietário",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "proj-006",
+            "pergunta": "Reforma ou ampliação de galpão/edificação precisa de projeto e alvará?",
+            "resposta": "Sim. Qualquer reforma que altere a estrutura, a área construída ou o uso/ocupação da edificação requer projeto aprovado pela prefeitura e alvará de reforma. A ABNT NBR 16280:2015 (Reforma em edificações — Sistema de gestão de reformas) estabelece o procedimento obrigatório: (a) toda reforma deve ter responsável técnico habilitado (engenheiro ou arquiteto) com ART/RRT; (b) deve haver plano de reforma documentado; (c) para edificações condominiais, o síndico deve autorizar a reforma após análise técnica; (d) intervenções estruturais (demolição de paredes, abertura de vãos, reforço de fundações) exigem projeto estrutural complementar conforme NBR 6118/8800. O Código de Obras municipal tipicamente classifica as reformas em: reforma simples (sem alteração estrutural — geralmente dispensa alvará, mas exige ART), reforma com alteração estrutural (exige alvará e projeto), e ampliação (exige aprovação integral de projeto). Reforma executada sem alvará quando exigido sujeita o proprietário a multa, embargo da obra e obrigação de desfazimento. Em condomínios, a NBR 16280 é frequentemente citada por perícias e acolhida judicialmente como standard de mercado.",
+            "normas": [
+                "ABNT NBR 16280:2015",
+                "ABNT NBR 6118 / NBR 8800",
+                "Código de Obras Municipal",
+                "Lei nº 6.496/1977 (ART)"
+            ],
+            "referencias": [],
+            "responsabilidade": "Proprietário / Engenheiro",
+            "gravidade": "Alta"
+        }
+    ]
+},
+    "cercon-goias-detalhado.json": {
+    "categoria": "CERCON Goiás — Regularização CBMGO",
+    "descricao": "Sistema CERCON do Corpo de Bombeiros de Goiás: regularização, renovação, digitalização obrigatória, Instruções Técnicas e prazos",
+    "faqs": [
+        {
+            "id": "cercon-001",
+            "pergunta": "O que é o CERCON e por que ele substituiu a vistoria presencial em Goiás?",
+            "resposta": "O CERCON (Certificado de Conformidade) é o sistema digital do Corpo de Bombeiros Militar de Goiás (CBMGO) que substituiu o antigo AVCB presencial. Instituído pela Instrução Normativa (IN) nº 01/2025 — CBMGO, o CERCON funciona inteiramente online pela plataforma e-CBMGO. O objetivo é modernizar e agilizar o processo de regularização de edificações quanto à prevenção e combate a incêndio e pânico. No CERCON, o responsável técnico (engenheiro/arquiteto) declara digitalmente, sob sua responsabilidade profissional (ART/RRT), que a edificação está em conformidade com as Instruções Técnicas (ITs) do CBMGO e com o COSCIP-GO (Código de Segurança Contra Incêndio e Pânico de Goiás). A vistoria presencial do Corpo de Bombeiros pode ocorrer posteriormente, por amostragem ou denúncia, mas o certificado é emitido com base na declaração do profissional. Isso significa que a responsabilidade técnica recai integralmente sobre o profissional declarante — se a edificação não estiver de fato em conformidade, o profissional responde civil, criminal e administrativamente (CREA/CAU).",
+            "normas": [
+                "IN nº 01/2025 — CBMGO",
+                "COSCIP-GO (Lei Estadual nº 15.802/2006)",
+                "Lei nº 13.425/2017"
+            ],
+            "referencias": [],
+            "responsabilidade": "Responsável técnico (CREA/CAU)",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "cercon-002",
+            "pergunta": "Quais edificações precisam de CERCON em Goiás?",
+            "resposta": "Toda edificação e área de risco no Estado de Goiás precisa de regularização junto ao CBMGO, conforme o COSCIP-GO (Lei Estadual nº 15.802/2006) e a IN nº 01/2025. Especificamente: (a) edificações comerciais — lojas, escritórios, galerias, shoppings; (b) edificações de reunião de público — igrejas, casas de show, cinemas, estádios; (c) edificações residenciais multifamiliares — prédios de apartamentos (a partir de determinada altura ou área); (d) edificações industriais — galpões, fábricas; (e) edificações de serviços de saúde — hospitais, clínicas; (f) edificações educacionais — escolas, universidades; (g) depósitos e estacionamentos. A classificação segue as Instruções Técnicas do CBMGO, que definem grupo de ocupação, área, altura e carga de incêndio para dimensionar os sistemas de proteção exigidos. Residências unifamiliares (casas térreas e sobrados) geralmente são dispensadas, exceto se exercerem atividade comercial. A falta de CERCON impede a obtenção de alvará de funcionamento e pode gerar multa pela prefeitura e pelo próprio CBMGO.",
+            "normas": [
+                "COSCIP-GO (Lei Estadual nº 15.802/2006)",
+                "IN nº 01/2025 — CBMGO",
+                "Instruções Técnicas do CBMGO"
+            ],
+            "referencias": [],
+            "responsabilidade": "Proprietário / Responsável técnico",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "cercon-003",
+            "pergunta": "Quais são as Instruções Técnicas (ITs) mais importantes do CBMGO?",
+            "resposta": "O CBMGO publica Instruções Técnicas (ITs) que detalham os requisitos de proteção contra incêndio para cada sistema. As mais relevantes para a maioria das edificações: IT 01 — Procedimentos administrativos (processos de regularização); IT 02 — Classificação das edificações e áreas de risco (tabelas de ocupação, altura, área); IT 03 — Terminologia; IT 04 — Acesso de viaturas; IT 06 — Segurança estrutural contra incêndio; IT 07 — Compartimentação; IT 08 — Saídas de emergência (baseada na NBR 9077); IT 09 — Proteção contra incêndio em acabamento e revestimento; IT 11 — Iluminação de emergência (baseada na NBR 10898); IT 12 — Sinalização de emergência (baseada na NBR 13434); IT 13 — Prescrições para treinamento de Brigada de Incêndio; IT 15 — Alarme de incêndio; IT 20 — Extintores (baseada na NBR 12693); IT 21 — Hidrantes e mangotinhos (baseada na NBR 13714); IT 22 — Sprinklers (baseada na NBR 10897); IT 41 — Edificações existentes (regularização com condicionantes). O responsável técnico deve consultar TODAS as ITs aplicáveis à ocupação antes de emitir a declaração no CERCON.",
+            "normas": [
+                "Instruções Técnicas do CBMGO (IT 01 a IT 44)",
+                "COSCIP-GO"
+            ],
+            "referencias": [],
+            "responsabilidade": "Responsável técnico",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "cercon-004",
+            "pergunta": "Qual a validade do CERCON e como é feita a renovação?",
+            "resposta": "O CERCON tem validade determinada conforme a classificação de risco da edificação, geralmente entre 1 e 5 anos, conforme definido pelas ITs do CBMGO. A renovação deve ser solicitada ANTES do vencimento, pelo mesmo sistema digital (e-CBMGO). O processo de renovação exige: (a) declaração atualizada do responsável técnico atestando que a edificação mantém conformidade com as ITs; (b) ART/RRT vigente do responsável técnico; (c) comprovante de manutenção dos sistemas de proteção — extintores recargados e dentro da validade, hidrantes testados, sprinklers inspecionados, brigada treinada, sinalização em bom estado, iluminação de emergência funcional; (d) pagamento da taxa de renovação. A edificação que opera com CERCON vencido está irregular — mesma situação de não possuir CERCON. As consequências incluem: impossibilidade de renovar o alvará de funcionamento, multa do CBMGO, risco de interdição pela Vigilância Sanitária ou pelo Ministério Público (em caso de estabelecimentos de reunião de público), e agravamento de responsabilidade em caso de sinistro.",
+            "normas": [
+                "IN nº 01/2025 — CBMGO",
+                "COSCIP-GO"
+            ],
+            "referencias": [],
+            "responsabilidade": "Proprietário / Responsável técnico",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "cercon-005",
+            "pergunta": "O responsável técnico que assina o CERCON pode ser responsabilizado criminalmente?",
+            "resposta": "Sim. No sistema CERCON, o responsável técnico assina uma declaração digital de conformidade, assumindo integralmente a responsabilidade de que a edificação atende às ITs do CBMGO. Se a declaração for falsa (edificação não está de fato em conformidade), o profissional pode responder: (1) Criminal — por falsidade ideológica (CP art. 299 — 'omitir, em documento público ou particular, declaração que dele devia constar, ou nele inserir ou fazer inserir declaração falsa ou diversa da que devia ser escrita'), pena de 1 a 5 anos. Em caso de sinistro com vítimas, pode responder por homicídio culposo (CP art. 121 §3º) ou lesão corporal culposa, com agravante de negligência profissional; (2) Civil — indenização aos prejudicados por danos materiais e morais (CC arts. 186 e 927), solidariamente com o proprietário; (3) Administrativo/Profissional — processo ético-disciplinar no CREA (Lei 5.194/66, art. 71 — cancelamento de registro em casos graves) ou no CAU. A Lei 13.425/2017 (Lei Kiss) ampliou expressamente a responsabilidade para profissionais técnicos em caso de descumprimento das normas de segurança contra incêndio (art. 4º). A seriedade da declaração CERCON exige que o profissional efetivamente vistorie a edificação antes de assinar.",
+            "normas": [
+                "Código Penal, arts. 121 §3º e 299",
+                "Código Civil, arts. 186 e 927",
+                "Lei nº 5.194/1966, art. 71",
+                "Lei nº 13.425/2017, art. 4º"
+            ],
+            "referencias": [
+                "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2017/lei/l13425.htm"
+            ],
+            "responsabilidade": "Responsável técnico (Engenheiro/Arquiteto)",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "cercon-006",
+            "pergunta": "Edificação existente em Goiás que nunca teve AVCB/CERCON — como regularizar?",
+            "resposta": "A regularização de edificações existentes que nunca possuíram AVCB/CERCON em Goiás é tratada pela IT 41 do CBMGO (Edificações Existentes). Esta IT reconhece que muitas edificações antigas não conseguem atender integralmente às ITs atuais e permite um regime de condicionantes: (1) O responsável técnico realiza levantamento completo das condições da edificação; (2) Identifica os sistemas de proteção existentes e os faltantes; (3) Elabora plano de adequação com cronograma, priorizando: saídas de emergência, extintores, iluminação de emergência, sinalização e alarme (itens de proteção à vida); (4) Apresenta o projeto no sistema CERCON com as medidas compensatórias adotadas; (5) O CBMGO pode emitir CERCON condicionado, com prazo para implementação das adequações restantes. Para edificações com ocupação de reunião de público (bares, restaurantes, casas de show, escolas), a regularização é especialmente urgente — o Ministério Público de Goiás tem ajuizado ações civis públicas para interdição de estabelecimentos sem CERCON, com base na Lei 13.425/2017. O custo de regularização geralmente envolve: projeto do engenheiro + instalação dos sistemas faltantes + taxas do CBMGO.",
+            "normas": [
+                "IT 41 — CBMGO (Edificações Existentes)",
+                "COSCIP-GO",
+                "Lei nº 13.425/2017"
+            ],
+            "referencias": [],
+            "responsabilidade": "Proprietário / Responsável técnico",
+            "gravidade": "Alta"
+        }
+    ]
+}
 }
     </script>
 
@@ -917,7 +1818,20 @@
             { nome: "Instalações de Gás", icone: "fas fa-gas-pump", arquivo: "instalacoes-gas.json", cor: "cat-orange" },
             { nome: "Pressurização", icone: "fas fa-fan", arquivo: "pressurizacao.json", cor: "cat-purple" },
             { nome: "Impermeabilização", icone: "fas fa-tint", arquivo: "impermeabilizacao.json", cor: "cat-cyan" },
-            { nome: "Estruturas Metálicas", icone: "fas fa-drafting-compass", arquivo: "estruturas-metalicas.json", cor: "cat-indigo" }
+            { nome: "Estruturas Metálicas", icone: "fas fa-drafting-compass", arquivo: "estruturas-metalicas.json", cor: "cat-indigo" },
+            { nome: "NR-12 — Máquinas e Equipamentos", icone: "fas fa-cog", arquivo: "nr12-maquinas.json", cor: "cat-red" },
+            { nome: "Segurança do Trabalho e PGR", icone: "fas fa-hard-hat", arquivo: "seguranca-trabalho.json", cor: "cat-orange" },
+            { nome: "NR-17 — Ergonomia", icone: "fas fa-chair", arquivo: "nr17-ergonomia.json", cor: "cat-green" },
+            { nome: "Perícia de Engenharia", icone: "fas fa-gavel", arquivo: "pericia-engenharia.json", cor: "cat-indigo" },
+            { nome: "Incêndio, AVCB e CLCB", icone: "fas fa-fire", arquivo: "incendio-avcb.json", cor: "cat-red" },
+            { nome: "NR-35 — Trabalho em Altura", icone: "fas fa-mountain", arquivo: "nr35-altura-olhais.json", cor: "cat-yellow" },
+            { nome: "Casa de Bombas e Sistemas Hidráulicos", icone: "fas fa-water", arquivo: "casas-bombas.json", cor: "cat-blue" },
+            { nome: "Treinamentos NR", icone: "fas fa-chalkboard-teacher", arquivo: "treinamentos-nr.json", cor: "cat-orange" },
+            { nome: "Regularização de Galpões", icone: "fas fa-warehouse", arquivo: "regularizacao-galpoes.json", cor: "cat-gray" },
+            { nome: "NR-13 — Caldeiras e Vasos de Pressão", icone: "fas fa-thermometer-full", arquivo: "nr13-caldeiras.json", cor: "cat-red" },
+            { nome: "NR-11 — Transporte de Materiais", icone: "fas fa-dolly", arquivo: "nr11-transporte.json", cor: "cat-yellow" },
+            { nome: "Projetos Arquitetônicos e Estruturais", icone: "fas fa-building", arquivo: "projetos-estruturais.json", cor: "cat-purple" },
+            { nome: "CERCON Goiás", icone: "fas fa-file-alt", arquivo: "cercon-goias-detalhado.json", cor: "cat-green" }
         ];
 
         let todosOsFaqs = [];

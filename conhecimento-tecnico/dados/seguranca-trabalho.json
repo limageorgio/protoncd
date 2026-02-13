@@ -1,0 +1,174 @@
+{
+    "categoria": "Segurança do Trabalho e PGR",
+    "descricao": "Programa de Gerenciamento de Riscos (PGR/GRO), e-Social SST, LTCAT, PCMSO e obrigações legais do empregador",
+    "faqs": [
+        {
+            "id": "sst-001",
+            "pergunta": "O que é o PGR e por que ele substituiu o PPRA?",
+            "resposta": "O PGR (Programa de Gerenciamento de Riscos) é a ferramenta central do GRO (Gerenciamento de Riscos Ocupacionais), instituído pela NR-01 revisada pela Portaria SEPRT nº 6.730/2020 (vigência a partir de 03/01/2022). O PGR substituiu o antigo PPRA (Programa de Prevenção de Riscos Ambientais, que era previsto pela NR-09 anterior). A diferença fundamental é que o PPRA se limitava a riscos ambientais (físicos, químicos e biológicos), enquanto o PGR abrange TODOS os riscos ocupacionais — incluindo riscos mecânicos/de acidentes e riscos ergonômicos, integrando as exigências com a NR-17. O PGR deve ser composto por, no mínimo: (a) Inventário de Riscos Ocupacionais; (b) Plano de Ação. A base legal é a CLT, art. 157, I ('cabe às empresas cumprir e fazer cumprir as normas de segurança e medicina do trabalho') combinado com o art. 200 (competência do MTE para estabelecer normas complementares). Toda empresa com empregados regidos pela CLT deve possuir PGR.",
+            "normas": [
+                "NR-01, itens 1.5.3 a 1.5.7 (GRO/PGR)",
+                "Portaria SEPRT nº 6.730/2020",
+                "CLT, art. 157",
+                "CLT, art. 200"
+            ],
+            "referencias": [
+                "https://www.planalto.gov.br/ccivil_03/decreto-lei/del5452compilado.htm",
+                "https://www.in.gov.br/en/web/dou/-/portaria-seprt-n-6.730-de-9-de-marco-de-2020-247538988"
+            ],
+            "responsabilidade": "Empregador",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "sst-002",
+            "pergunta": "Quais são os eventos de SST obrigatórios no e-Social?",
+            "resposta": "O e-Social SST (Sistema de Escrituração Digital das Obrigações Fiscais, Previdenciárias e Trabalhistas) exige o envio de três eventos obrigatórios: (1) S-2210 — Comunicação de Acidente de Trabalho (CAT): deve ser enviado até o 1º dia útil seguinte ao acidente, ou imediatamente em caso de morte (art. 22 da Lei nº 8.213/1991 e art. 169 da CLT); (2) S-2220 — Monitoramento da Saúde do Trabalhador: registra os Atestados de Saúde Ocupacional (ASOs) de admissão, periódico, retorno ao trabalho, mudança de risco e demissional, conforme NR-07 (PCMSO); (3) S-2240 — Condições Ambientais do Trabalho: declara os agentes nocivos a que cada trabalhador está exposto, alimentando o PPP (Perfil Profissiográfico Previdenciário) digital e o LTCAT. A base legal é o Decreto nº 8.373/2014 (institui o e-Social) e a Lei nº 8.213/1991 (Planos de Benefícios da Previdência Social). O não envio ou envio fora do prazo gera multas automáticas.",
+            "normas": [
+                "Lei nº 8.213/1991, art. 22",
+                "Decreto nº 8.373/2014",
+                "CLT, art. 169",
+                "NR-07 (PCMSO)",
+                "NR-01 (GRO/PGR)"
+            ],
+            "referencias": [
+                "https://www.planalto.gov.br/ccivil_03/leis/l8213compilado.htm",
+                "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/decreto/d8373.htm"
+            ],
+            "responsabilidade": "Empregador",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "sst-003",
+            "pergunta": "O que é o LTCAT e qual sua relação com a aposentadoria especial?",
+            "resposta": "O LTCAT (Laudo Técnico das Condições Ambientais do Trabalho) é o documento que comprova a exposição do trabalhador a agentes nocivos para fins previdenciários, especificamente para a concessão de aposentadoria especial. Está previsto no art. 58, §1º, da Lei nº 8.213/1991: 'A comprovação da efetiva exposição do segurado aos agentes nocivos será feita mediante formulário, na forma estabelecida pelo INSS, emitido pela empresa ou seu preposto, com base em laudo técnico de condições ambientais do trabalho expedido por médico do trabalho ou engenheiro de segurança do trabalho.' O LTCAT deve ser elaborado por engenheiro de segurança do trabalho ou médico do trabalho (art. 58, §1º, Lei 8.213/91). Deve avaliar qualitativamente e quantitativamente a exposição a agentes físicos (ruído, calor, radiação), químicos (poeiras, vapores, gases) e biológicos, conforme Anexos da NR-15 e NR-16. Desde 2023, o LTCAT alimenta o evento S-2240 do e-Social, que substituiu o PPP em formulário físico.",
+            "normas": [
+                "Lei nº 8.213/1991, art. 58",
+                "Decreto nº 3.048/1999 (RPS), Anexo IV",
+                "NR-15 (Atividades insalubres)",
+                "NR-16 (Atividades perigosas)",
+                "IN INSS/PRES nº 128/2022"
+            ],
+            "referencias": [
+                "https://www.planalto.gov.br/ccivil_03/leis/l8213compilado.htm",
+                "https://www.planalto.gov.br/ccivil_03/decreto/d3048compilado.htm"
+            ],
+            "responsabilidade": "Engenheiro de Segurança ou Médico do Trabalho",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "sst-004",
+            "pergunta": "Quando a empresa é obrigada a constituir SESMT?",
+            "resposta": "O SESMT (Serviço Especializado em Engenharia de Segurança e em Medicina do Trabalho) é obrigatório conforme o art. 162 da CLT e a NR-04 (Portaria SEPRT nº 2.318/2022). O dimensionamento depende de dois fatores: (a) grau de risco da atividade econômica principal (1 a 4, conforme Quadro I da NR-04 e CNAE); (b) número total de empregados do estabelecimento. Por exemplo: uma empresa com grau de risco 3 e mais de 501 empregados deve manter, no mínimo, 1 engenheiro de segurança, 1 médico do trabalho, 1 enfermeiro do trabalho e técnicos de segurança em número proporcional. A composição mínima está no Quadro II da NR-04. Empresas com até 50 empregados em grau de risco 1 ou 2 podem estar dispensadas de SESMT próprio, mas NÃO estão dispensadas do cumprimento das demais NRs. O SESMT é o órgão interno responsável por aplicar os conhecimentos de engenharia de segurança e medicina do trabalho no ambiente laboral.",
+            "normas": [
+                "CLT, art. 162",
+                "NR-04 (SESMT)",
+                "Portaria SEPRT nº 2.318/2022"
+            ],
+            "referencias": [
+                "https://www.planalto.gov.br/ccivil_03/decreto-lei/del5452compilado.htm"
+            ],
+            "responsabilidade": "Empregador",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "sst-005",
+            "pergunta": "Quais são as obrigações da CIPA e quando ela é obrigatória?",
+            "resposta": "A CIPA (Comissão Interna de Prevenção de Acidentes e de Assédio) — nomenclatura atualizada pela Lei nº 14.457/2022 — é regulamentada pelo art. 163 da CLT e pela NR-05. Conforme a CLT: 'Será obrigatória a constituição de Comissão Interna de Prevenção de Acidentes e de Assédio (Cipa), em conformidade com instruções expedidas pelo Ministério do Trabalho e Previdência, nos estabelecimentos ou nos locais de obra nelas especificadas.' O dimensionamento segue o Quadro I da NR-05, considerando CNAE e número de empregados. As atribuições incluem: identificar riscos do processo de trabalho; elaborar mapa de riscos; propor medidas preventivas; verificar ambientes e condições de trabalho; divulgar informações de SST; participar da implementação das NRs. Os representantes dos empregados eleitos possuem estabilidade provisória (art. 165, CLT): 'não poderão sofrer despedida arbitrária, entendendo-se como tal a que não se fundar em motivo disciplinar, técnico, econômico ou financeiro.'",
+            "normas": [
+                "CLT, art. 163",
+                "CLT, art. 165 (estabilidade)",
+                "Lei nº 14.457/2022",
+                "NR-05 (CIPA)"
+            ],
+            "referencias": [
+                "https://www.planalto.gov.br/ccivil_03/decreto-lei/del5452compilado.htm",
+                "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14457.htm"
+            ],
+            "responsabilidade": "Empregador + Empregados eleitos",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "sst-006",
+            "pergunta": "O que é o PCMSO e quais exames médicos são obrigatórios?",
+            "resposta": "O PCMSO (Programa de Controle Médico de Saúde Ocupacional) é regulamentado pela NR-07 e fundamentado no art. 168 da CLT, que estabelece: 'Será obrigatório exame médico, por conta do empregador, nas condições estabelecidas neste artigo.' Os exames obrigatórios são: (1) Admissional — antes do trabalhador assumir suas atividades; (2) Periódico — conforme periodicidade definida no PCMSO (geralmente anual para menores de 18 e maiores de 45 anos, ou bianual para os demais, em atividades sem risco especial); (3) De retorno ao trabalho — obrigatório no primeiro dia de volta após afastamento por 30 ou mais dias por doença, acidente ou parto; (4) De mudança de risco — antes da alteração de atividade, posto ou setor que implique exposição a risco diferente; (5) Demissional — até 10 dias após o desligamento. Todos geram ASO (Atestado de Saúde Ocupacional) em duas vias. O PCMSO deve ser coordenado por médico do trabalho e integrar-se ao PGR (NR-01). O descumprimento gera multas e, em caso de doença ocupacional não detectada, responsabilização civil e criminal.",
+            "normas": [
+                "CLT, art. 168",
+                "NR-07 (PCMSO)",
+                "NR-01, item 1.5.5"
+            ],
+            "referencias": [
+                "https://www.planalto.gov.br/ccivil_03/decreto-lei/del5452compilado.htm"
+            ],
+            "responsabilidade": "Empregador / Médico do Trabalho",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "sst-007",
+            "pergunta": "O empregador pode ser responsabilizado criminalmente por acidente de trabalho?",
+            "resposta": "Sim. A responsabilidade criminal do empregador por acidente de trabalho está prevista em múltiplos dispositivos legais: (1) Homicídio culposo (art. 121, §3º, Código Penal) — pena de detenção de 1 a 3 anos — quando a morte do trabalhador resulta de negligência, imprudência ou imperícia do empregador; (2) Lesão corporal culposa (art. 129, §6º, CP) — pena de detenção de 2 meses a 1 ano; (3) Perigo para a vida ou saúde de outrem (art. 132, CP) — pena de detenção de 3 meses a 1 ano — 'expor a vida ou a saúde de outrem a perigo direto e iminente'; (4) Contravenção penal por omissão de cautela na guarda de animais ou maquinário. Além disso, o art. 19, §2º, da Lei nº 8.213/1991 estabelece que 'constitui contravenção penal, punível com multa, deixar a empresa de cumprir as normas de segurança e higiene do trabalho.' O art. 120 da mesma Lei prevê ação regressiva do INSS quando o acidente decorrer de negligência do empregador quanto às normas de segurança.",
+            "normas": [
+                "Código Penal, arts. 121 §3º, 129 §6º, 132",
+                "Lei nº 8.213/1991, arts. 19 §2º e 120",
+                "CLT, art. 157",
+                "Constituição Federal, art. 7º, XXVIII"
+            ],
+            "referencias": [
+                "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+                "https://www.planalto.gov.br/ccivil_03/leis/l8213compilado.htm",
+                "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+            ],
+            "responsabilidade": "Empregador / Diretor / Preposto",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "sst-008",
+            "pergunta": "Qual é o prazo para emissão da CAT após acidente de trabalho?",
+            "resposta": "A CAT (Comunicação de Acidente de Trabalho) deve ser emitida pela empresa em até 1 (um) dia útil seguinte ao da ocorrência do acidente, conforme art. 22 da Lei nº 8.213/1991. Em caso de morte, a comunicação deve ser imediata. A CLT no art. 169 reforça: 'Será obrigatória a notificação das doenças profissionais e das produzidas em virtude de condições especiais de trabalho.' A CAT deve ser registrada mesmo que não haja afastamento do trabalhador. A empresa que não emitir a CAT no prazo está sujeita a multa prevista no art. 22, §2º, da Lei nº 8.213/1991, variável conforme a legislação previdenciária vigente. Na omissão da empresa, a CAT pode ser emitida pelo próprio trabalhador, seus dependentes, pelo sindicato, pelo médico que o atendeu ou por qualquer autoridade pública. No e-Social, a CAT corresponde ao evento S-2210, que deve ser transmitido eletronicamente dentro do mesmo prazo legal.",
+            "normas": [
+                "Lei nº 8.213/1991, art. 22",
+                "CLT, art. 169",
+                "Decreto nº 3.048/1999, art. 336",
+                "e-Social, evento S-2210"
+            ],
+            "referencias": [
+                "https://www.planalto.gov.br/ccivil_03/leis/l8213compilado.htm",
+                "https://www.planalto.gov.br/ccivil_03/decreto/d3048compilado.htm"
+            ],
+            "responsabilidade": "Empregador",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "sst-009",
+            "pergunta": "Microempresas e MEIs são obrigados a ter PGR e PCMSO?",
+            "resposta": "Depende do grau de risco. A NR-01 (item 1.8.1) dispensa as Microempresas (ME) e Empresas de Pequeno Porte (EPP), enquadradas nos graus de risco 1 e 2, que não identificarem exposições ocupacionais a agentes físicos, químicos, biológicos e riscos relacionados a fatores ergonômicos, da elaboração do PGR. Porém, essa dispensa NÃO se aplica quando houver exposição a qualquer agente nocivo — nesse caso, o PGR é obrigatório. Quanto ao PCMSO, a NR-07 (item 7.1.2.1) permite que ME e EPP em graus de risco 1 e 2 sejam dispensadas da indicação de médico coordenador, mas NÃO estão dispensadas da realização dos exames médicos obrigatórios do art. 168 da CLT (admissional, periódico, demissional, etc.). O MEI (Microempreendedor Individual) que não possui empregados está dispensado dos programas de SST. Porém, ao contratar qualquer empregado, torna-se obrigado ao cumprimento de todas as NRs aplicáveis.",
+            "normas": [
+                "NR-01, item 1.8.1",
+                "NR-07, item 7.1.2.1",
+                "CLT, art. 168",
+                "LC nº 123/2006 (Estatuto da ME e EPP)"
+            ],
+            "referencias": [
+                "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp123.htm"
+            ],
+            "responsabilidade": "Empregador",
+            "gravidade": "Média"
+        },
+        {
+            "id": "sst-010",
+            "pergunta": "O que é o GRO e como ele se diferencia do PGR?",
+            "resposta": "O GRO (Gerenciamento de Riscos Ocupacionais) é o processo macro de gestão estabelecido pela NR-01 (itens 1.5.3 e seguintes), revisada pela Portaria SEPRT nº 6.730/2020. O GRO é o 'sistema' e o PGR é o 'documento'. O GRO define as diretrizes organizacionais de como a empresa identifica, avalia, controla e monitora seus riscos ocupacionais. O PGR é a materialização documental do GRO, composto obrigatoriamente por: (1) Inventário de Riscos Ocupacionais — com identificação e avaliação qualitativa ou quantitativa de perigos e riscos em todos os processos; (2) Plano de Ação — com cronograma, responsáveis e medidas de prevenção para cada risco identificado. A grande inovação do GRO é que ele integra todos os riscos (ambientais, mecânicos, ergonômicos) em um único sistema, substituindo a fragmentação que existia entre PPRA, AET (NR-17) e programas isolados. A revisão da NR-01 foi precedida de consulta pública e tripartite, conforme art. 155, I, da CLT.",
+            "normas": [
+                "NR-01, itens 1.5.3 a 1.5.7",
+                "Portaria SEPRT nº 6.730/2020",
+                "CLT, art. 155, I",
+                "CLT, art. 200"
+            ],
+            "referencias": [
+                "https://www.planalto.gov.br/ccivil_03/decreto-lei/del5452compilado.htm",
+                "https://www.in.gov.br/en/web/dou/-/portaria-seprt-n-6.730-de-9-de-marco-de-2020-247538988"
+            ],
+            "responsabilidade": "Empregador",
+            "gravidade": "Alta"
+        }
+    ]
+}

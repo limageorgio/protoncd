@@ -1,0 +1,113 @@
+{
+    "categoria": "Casa de Bombas e Sistemas Hidráulicos",
+    "descricao": "Inspeção de casas de bombas, sistemas hidráulicos prediais, bombas de recalque, combate a incêndio e automação hidromecânica",
+    "faqs": [
+        {
+            "id": "bombas-001",
+            "pergunta": "A casa de bombas do condomínio precisa seguir alguma norma técnica?",
+            "resposta": "Sim. A casa de bombas predial deve atender à ABNT NBR 5626:2020 (Sistemas prediais de água fria e água quente) e, quando houver sistema de combate a incêndio, também à ABNT NBR 13714:2000 (Sistemas de hidrantes e de mangotinhos para combate a incêndio). A NBR 5626 estabelece requisitos para dimensionamento de bombas de recalque, reservatórios, tubulações e válvulas, incluindo: vazão mínima de projeto, pressão estática e dinâmica nos pontos de consumo, proteção contra golpe de aríete (item 5.5.10), e ventilação adequada do ambiente. A NBR 13714 exige que bombas de incêndio sejam independentes do sistema de abastecimento doméstico, com acionamento automático por pressostato e partida em até 30 segundos. Além disso, o Código de Obras do município pode exigir condições específicas de acesso, iluminação, drenagem de piso e impermeabilização. A inspeção deve verificar todos esses itens e registrar não conformidades com fundamentação normativa.",
+            "normas": [
+                "ABNT NBR 5626:2020",
+                "ABNT NBR 13714:2000",
+                "Código de Obras Municipal"
+            ],
+            "referencias": [],
+            "responsabilidade": "Condomínio / Construtora",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "bombas-002",
+            "pergunta": "Qual a diferença entre bomba principal, bomba reserva (jockey) e bomba de incêndio?",
+            "resposta": "São três funções hidráulicas distintas no sistema predial: (1) Bomba principal de recalque — alimenta o reservatório superior a partir do inferior (cisterna). É dimensionada conforme a demanda de consumo diário do edifício (NBR 5626:2020). Opera por boia ou pressostato e deve ter potência compatível com a altura manométrica total; (2) Bomba jockey (pressurizadora) — mantém a pressão constante na rede quando não há consumo significativo. Trabalha em conjunto com a bomba principal, evitando acionamentos desnecessários. É uma bomba de menor vazão e potência; (3) Bomba de incêndio — dedicada exclusivamente ao sistema de combate a incêndio (hidrantes e/ou sprinklers). Conforme NBR 13714, deve ter alimentação elétrica independente (circuito exclusivo no QGBT, sem passar por disjuntor geral), partida automática por pressostato, e a reserva técnica de incêndio (RTI) no reservatório não pode ser utilizada para consumo doméstico. A NBR 10897:2020 (sprinklers) exige que a bomba de incêndio atenda à curva de desempenho com 150% da vazão nominal a no mínimo 65% da pressão nominal.",
+            "normas": [
+                "ABNT NBR 5626:2020",
+                "ABNT NBR 13714:2000",
+                "ABNT NBR 10897:2020"
+            ],
+            "referencias": [],
+            "responsabilidade": "Projetista / Condomínio",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "bombas-003",
+            "pergunta": "Quais são os itens obrigatórios de inspeção em uma casa de bombas?",
+            "resposta": "A inspeção técnica de uma casa de bombas deve abranger, no mínimo: (1) Estado das bombas — vibração excessiva, ruídos anormais, aquecimento, vedação dos selos mecânicos, alinhamento motor-bomba, fixação na base; (2) Quadro de comando — funcionamento do pressostato, boia de nível, disjuntores, contatores, relé térmico, indicações luminosas (manual/automático/defeito); (3) Tubulações e conexões — corrosão, vazamentos, suportes, válvulas de retenção, registros de gaveta, manômetros; (4) Reservatórios — nível, limpeza, tampa, extravasor (ladrão), tubo de ventilação conforme NBR 5626; (5) Válvula de retenção e válvula de pé com crivo — obrigatórias para evitar refluxo e perda de escorva; (6) Condições do ambiente — ventilação, iluminação (mínimo 200 lux conforme NBR 5413), drenagem de piso, acesso restrito, sinalização; (7) Para bombas de incêndio — teste funcional semanal (NBR 13714 recomenda), registro em livro de ocorrências, verificação de partida automática. O laudo de inspeção deve ser emitido com ART pelo engenheiro responsável.",
+            "normas": [
+                "ABNT NBR 5626:2020",
+                "ABNT NBR 13714:2000",
+                "ABNT NBR 5413 (Iluminância)",
+                "Lei nº 6.496/1977 (ART)"
+            ],
+            "referencias": [],
+            "responsabilidade": "Condomínio / Engenheiro inspetor",
+            "gravidade": "Média"
+        },
+        {
+            "id": "bombas-004",
+            "pergunta": "O que é golpe de aríete e como preveni-lo na casa de bombas?",
+            "resposta": "Golpe de aríete é o fenômeno hidráulico de sobrepressão transitória que ocorre quando há interrupção brusca do fluxo de água na tubulação — tipicamente por desligamento súbito da bomba, fechamento rápido de válvula ou falha de energia. A onda de pressão pode atingir valores várias vezes superiores à pressão de operação, causando ruptura de tubulações, danos a conexões, rompimento de registros e até destruição da bomba. A ABNT NBR 5626:2020, item 5.5.10, determina que 'o projetista deve avaliar a possibilidade de ocorrência de golpe de aríete e, quando necessário, prever dispositivos de proteção.' As medidas de prevenção incluem: (a) válvulas de retenção com fechamento suave (não-slam); (b) válvulas de alívio de pressão; (c) câmaras de ar (amortecedores) ou vasos de expansão com membrana; (d) dispositivos de partida suave (soft-starter) nos motores; (e) válvulas de fechamento lento (borboleta com redutor). A inspeção deve verificar a existência e funcionalidade desses dispositivos.",
+            "normas": [
+                "ABNT NBR 5626:2020, item 5.5.10",
+                "ABNT NBR 12214:2024 (Projeto de sistemas de bombeamento)"
+            ],
+            "referencias": [],
+            "responsabilidade": "Projetista / Condomínio",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "bombas-005",
+            "pergunta": "A reserva técnica de incêndio (RTI) pode ser usada para consumo?",
+            "resposta": "Não. A Reserva Técnica de Incêndio (RTI) é o volume de água armazenado no reservatório destinado exclusivamente ao sistema de combate a incêndio (hidrantes e/ou sprinklers), e sua utilização para consumo doméstico é vedada. A NBR 13714:2000 determina que a RTI deve ser calculada para garantir o funcionamento do sistema pelo tempo mínimo exigido (geralmente 30 ou 60 minutos conforme o risco da edificação). O reservatório deve possuir dispositivo físico (tubo de tomada em nível adequado ou reservatório separado) que impede que a água abaixo da cota da RTI seja consumida pelo sistema doméstico. As Instruções Técnicas dos Corpos de Bombeiros estaduais detalham os volumes mínimos: por exemplo, a IT 22 do CBMGO define RTI mínima de acordo com o tipo de ocupação e altura da edificação. A falta de RTI adequada é motivo de não emissão ou cassação do AVCB.",
+            "normas": [
+                "ABNT NBR 13714:2000",
+                "ABNT NBR 10897:2020",
+                "IT 22 do CBMGO (e equivalentes estaduais)",
+                "Lei nº 13.425/2017"
+            ],
+            "referencias": [],
+            "responsabilidade": "Condomínio / Corpo de Bombeiros",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "bombas-006",
+            "pergunta": "Qual a periodicidade recomendada de manutenção preventiva em bombas prediais?",
+            "resposta": "As periodicidades de manutenção em bombas hidráulicas prediais seguem as recomendações da ABNT NBR 5674:2012 (Manutenção de edificações) e do fabricante: (1) Diário/semanal — verificação visual de vazamentos, nível de óleo (se aplicável), funcionamento do painel de comando, alarmes, indicadores de pressão; (2) Quinzenal — teste de partida automática das bombas de incêndio, simulação de queda de pressão, verificação da bomba jockey; (3) Mensal — medição de corrente elétrica do motor, verificação de vibração e temperatura, lubrificação dos mancais, verificação de alinhamento e acoplamento; (4) Semestral — inspeção completa dos selos mecânicos, verificação de válvulas de retenção, teste de funcionamento de todas as válvulas, limpeza de filtros; (5) Anual — revisão geral com desmontagem se necessário, verificação de cavitação, ensaio de desempenho (vazão x pressão), calibração de manômetros e pressostatos. A NBR 5674 classifica o sistema hidráulico como item de manutenção obrigatória do edifício. O síndico é responsável solidário por manter o programa de manutenção atualizado (Código Civil, art. 1.348, V).",
+            "normas": [
+                "ABNT NBR 5674:2012",
+                "ABNT NBR 5626:2020",
+                "Código Civil, art. 1.348, V"
+            ],
+            "referencias": [
+                "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm"
+            ],
+            "responsabilidade": "Síndico / Administradora",
+            "gravidade": "Média"
+        },
+        {
+            "id": "bombas-007",
+            "pergunta": "O quadro de comando da casa de bombas precisa ter alimentação independente?",
+            "resposta": "Sim, especificamente para as bombas de incêndio. A NBR 13714:2000 exige que a bomba de incêndio tenha alimentação elétrica por circuito independente, derivado antes do dispositivo geral de manobra (disjuntor geral do edifício), de modo que o desligamento geral da energia do prédio não desligue a bomba de incêndio. O circuito deve ser protegido por disjuntor exclusivo, dimensionado para a corrente de partida do motor. Já para as bombas de recalque doméstico, a NBR 5410:2004 (Instalações elétricas de baixa tensão) determina que motores acima de determinada potência devem ter circuito dedicado com proteção específica. O quadro de comando deve possuir: chave de partida adequada (direta, estrela-triângulo ou soft-starter conforme potência), relé de falta de fase, relé térmico, botoeira de emergência, sinalização (funcionando/defeito/modo manual-automático) e proteção contra surtos (DPS). Para edifícios acima de 30m, a NBR 13714 recomenda considerar gerador de emergência para alimentação das bombas de incêndio.",
+            "normas": [
+                "ABNT NBR 13714:2000",
+                "ABNT NBR 5410:2004",
+                "ABNT NBR 10897:2020"
+            ],
+            "referencias": [],
+            "responsabilidade": "Projetista elétrico / Condomínio",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "bombas-008",
+            "pergunta": "Quais são os sinais de que uma bomba hidráulica precisa de substituição ou reparo urgente?",
+            "resposta": "Os sinais de alerta que indicam necessidade de intervenção urgente em bombas prediais incluem: (1) Vibração excessiva — desbalanceamento do rotor, desalinhamento, cavitação ou desgaste de rolamentos. Acima de 4,5 mm/s RMS (ISO 10816-1) já é considerado 'insatisfatório' para máquinas do Grupo 1; (2) Ruído anormal — som metálico intermitente pode indicar cavitação (a bomba está 'engolindo ar'), que causa erosão do rotor; (3) Vazamento pelos selos mecânicos — gotejamento contínuo superior ao aceitável (>20 gotas/min) indica necessidade de troca; (4) Superaquecimento do motor — temperatura de carcaça acima do limite da classe de isolamento (ex.: Classe B = 130°C, Classe F = 155°C, conforme NBR 17094); (5) Queda de pressão ou vazão — o sistema não atinge mais a pressão ou vazão de projeto, indicando desgaste interno; (6) Disparo frequente do relé térmico — sobrecorrente constante indica problema mecânico; (7) Partidas/paradas excessivamente frequentes (ciclagem) — geralmente causadas por vazamentos na rede, válvula de retenção com defeito ou pressostato desregulado. Qualquer desses sinais deve ser registrado e comunicado imediatamente à administração.",
+            "normas": [
+                "ISO 10816-1 (Vibração de máquinas)",
+                "ABNT NBR 17094 (Máquinas elétricas girantes)",
+                "ABNT NBR 5626:2020"
+            ],
+            "referencias": [],
+            "responsabilidade": "Equipe de manutenção / Engenheiro",
+            "gravidade": "Alta"
+        }
+    ]
+}

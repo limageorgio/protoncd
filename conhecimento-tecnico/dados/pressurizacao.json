@@ -34,6 +34,43 @@
             ],
             "responsabilidade": "Construtora",
             "gravidade": "Alta"
+        },
+        {
+            "id": "press-004",
+            "pergunta": "Qual a pressão diferencial exigida pela NBR 14880 para pressurização de escadas?",
+            "resposta": "A ABNT NBR 14880:2014 (Saídas de emergência em edifícios — Escadas de segurança — Controle de fumaça por pressurização) estabelece os valores de pressão diferencial entre a escada pressurizada e os pavimentos: pressão diferencial mínima de 50 Pa (Pascals) com todas as portas fechadas, sem exceder 80 Pa (para que as portas possam ser abertas com esforço razoável — máximo de 110 N na maçaneta). Quando uma porta é aberta, a velocidade do ar pela abertura deve ser de no mínimo 1,0 m/s para impedir a entrada de fumaça. O sistema deve ser projetado para funcionar com até 3 portas abertas simultaneamente (condição de evacuação). Os ensaios de comissionamento devem incluir: (a) medição da pressão diferencial com manômetro diferencial digital calibrado; (b) teste de velocidade do ar com anemômetro; (c) teste de esforço de abertura de porta com dinamômetro. Os resultados devem ser documentados pavimento a pavimento. O sistema deve ter acionamento automático pela central de detecção de incêndio e manual pelo posto de bombeiro (quando houver). A manutenção inclui teste funcional trimestral.",
+            "normas": [
+                "ABNT NBR 14880:2014",
+                "ABNT NBR 9077 (Saídas de emergência)"
+            ],
+            "referencias": [],
+            "responsabilidade": "Projetista / Construtora",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "press-005",
+            "pergunta": "O sistema de pressurização de escada deve funcionar com gerador de emergência?",
+            "resposta": "Sim. A ABNT NBR 14880 e as Instruções Técnicas dos Corpos de Bombeiros (ex.: IT-13 CBMSP, IT-15 CBMGO) exigem que o sistema de pressurização tenha alimentação elétrica por fonte de emergência (gerador diesel ou nobreak de grande porte) com tempo de autonomia mínimo compatível com o tempo de evacuação do edifício — geralmente 120 minutos (2 horas) conforme altura e população. O gerador deve ser dimensionado para alimentar simultaneamente: motoventiladores do sistema de pressurização, bomba de incêndio, iluminação de emergência, alarme de incêndio e elevador de emergência (quando houver). A NBR 10898:2013 (Iluminação de emergência) complementa os requisitos de autonomia. A partida do gerador deve ser automática (em até 12 segundos após a falha de energia da concessionária) e o motoventilador deve entrar em plena operação em no máximo 60 segundos. A manutenção do gerador (teste sob carga mensal) é responsabilidade do condomínio; a correta especificação e instalação é da construtora.",
+            "normas": [
+                "ABNT NBR 14880:2014",
+                "ABNT NBR 10898:2013",
+                "IT dos Corpos de Bombeiros estaduais"
+            ],
+            "referencias": [],
+            "responsabilidade": "Construtora (projeto) / Condomínio (manutenção)",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "press-006",
+            "pergunta": "Quais são as falhas mais comuns encontradas em sistemas de pressurização?",
+            "resposta": "As não conformidades mais frequentes identificadas em inspeções de sistemas de pressurização de escadas incluem: (1) Dutos com vazamentos — frestas em conexões, juntas sem vedação, furos por fixação indevida de elementos construtivos. Cada vazamento reduz a pressão final na escada; (2) Dampers (registros corta-fogo) travados ou inoperantes — devem abrir automaticamente junto com o sistema; (3) Portas de escada com defeito de fechamento — mola hidráulica desregulada ou ausente impede a vedação e compromete a pressurização; (4) Pressostato desregulado — o sensor que comanda o motoventilador reserva não aciona quando a pressão cai; (5) Filtros obstruídos — reduzem a vazão em até 40% sem alterar a corrente do motor (falha silenciosa); (6) Grelhas de tomada de ar obstruídas — se a tomada de ar externo estiver bloqueada (por obras, lixo ou vegetação), o sistema não consegue insuflar ar suficiente; (7) Projeto subdimensionado — ventilador com capacidade inferior à necessária para o número de pavimentos e condição de portas abertas. Cada item deve ser verificado durante o comissionamento (entrega) e nas inspeções periódicas. Sistema de pressurização inoperante ou deficiente é motivo para negativa de AVCB.",
+            "normas": [
+                "ABNT NBR 14880:2014",
+                "IT-15 CBMGO / IT-13 CBMSP"
+            ],
+            "referencias": [],
+            "responsabilidade": "Construtora / Condomínio",
+            "gravidade": "Alta"
         }
     ]
 }

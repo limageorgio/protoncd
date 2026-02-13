@@ -78,6 +78,77 @@
             "referencias": [],
             "responsabilidade": "Mista - Construtora prepara, Condomínio mantém",
             "gravidade": "Média"
+        },
+        {
+            "id": "hvac-007",
+            "pergunta": "PMOC é obrigatório para quais tipos de edificações e ambientes?",
+            "resposta": "Conforme o art. 1º da Lei nº 13.589/2018, todos os edifícios de uso público e coletivo com ambientes de ar interior climatizado artificialmente devem possuir PMOC. O §1º do mesmo artigo também estende a aplicação a ambientes climatizados de uso restrito, como processos produtivos, laboratoriais e hospitalares, observados regulamentos específicos.",
+            "normas": [
+                "Lei nº 13.589/2018 (arts. 1º e 1º, §1º)"
+            ],
+            "referencias": [
+                "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13589.htm"
+            ],
+            "responsabilidade": "Proprietário, locatário e preposto responsável",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "hvac-008",
+            "pergunta": "Quais bases normativas devem ser consideradas na elaboração do PMOC?",
+            "resposta": "A Lei nº 13.589/2018 determina, no art. 3º, que os sistemas de climatização e seus PMOCs devem observar parâmetros de qualidade do ar e requisitos de projeto. O parágrafo único do art. 3º remete expressamente à Resolução RE nº 9/2003 da ANVISA (e alterações posteriores) e às normas técnicas da ABNT aplicáveis.",
+            "normas": [
+                "Lei nº 13.589/2018 (art. 3º e parágrafo único)",
+                "Resolução RE nº 9/2003 (ANVISA)",
+                "Normas técnicas ABNT aplicáveis"
+            ],
+            "referencias": [
+                "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13589.htm"
+            ],
+            "responsabilidade": "Responsável técnico e responsáveis legais pelo imóvel",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "hvac-009",
+            "pergunta": "O que o responsável legal deve manter disponível para fiscalização sanitária?",
+            "resposta": "A Portaria GM/MS nº 3.523/1998, art. 6º, determina que, nos sistemas enquadrados no regulamento, deve existir responsável técnico habilitado para implantar e manter o PMOC no imóvel, garantir sua execução contínua, manter os registros dos procedimentos e divulgar os resultados das atividades de manutenção, operação e controle aos ocupantes.",
+            "normas": [
+                "Portaria GM/MS nº 3.523/1998 (art. 6º)"
+            ],
+            "referencias": [
+                "https://bvsms.saude.gov.br/bvs/saudelegis/gm/1998/prt3523_28_08_1998.html"
+            ],
+            "responsabilidade": "Proprietário, locatário, preposto e responsável técnico",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "hvac-010",
+            "pergunta": "A ausência de PMOC pode gerar infração sanitária?",
+            "resposta": "Sim. A Portaria GM/MS nº 3.523/1998 prevê, no art. 9º, que o descumprimento do regulamento configura infração sanitária, sujeitando os responsáveis às penalidades da Lei nº 6.437/1977. Essa lei prevê sanções administrativas como advertência, multa e até interdição parcial ou total do estabelecimento, conforme a gravidade do caso e decisão da autoridade sanitária competente.",
+            "normas": [
+                "Portaria GM/MS nº 3.523/1998 (art. 9º)",
+                "Lei nº 6.437/1977 (arts. 1º e 2º)"
+            ],
+            "referencias": [
+                "https://bvsms.saude.gov.br/bvs/saudelegis/gm/1998/prt3523_28_08_1998.html",
+                "https://www.planalto.gov.br/ccivil_03/leis/l6437.htm"
+            ],
+            "responsabilidade": "Responsáveis legais pelo imóvel e responsável técnico, quando exigido",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "hvac-011",
+            "pergunta": "PMOC é só um documento para arquivo ou exige rotina efetiva de manutenção?",
+            "resposta": "Não é apenas documento formal. A Lei nº 13.589/2018 define manutenção como atividades técnicas e administrativas para preservar o desempenho do sistema e a qualidade do ar interior (art. 2º, III). A Portaria GM/MS nº 3.523/1998 também exige limpeza, manutenção, operação e controle dos componentes do sistema, com execução contínua das atividades previstas no PMOC.",
+            "normas": [
+                "Lei nº 13.589/2018 (art. 2º, III)",
+                "Portaria GM/MS nº 3.523/1998 (arts. 5º e 6º)"
+            ],
+            "referencias": [
+                "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13589.htm",
+                "https://bvsms.saude.gov.br/bvs/saudelegis/gm/1998/prt3523_28_08_1998.html"
+            ],
+            "responsabilidade": "Responsável técnico e gestão do empreendimento",
+            "gravidade": "Alta"
         }
     ]
 }

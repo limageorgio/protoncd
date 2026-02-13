@@ -12,6 +12,76 @@
             ],
             "responsabilidade": "Mista - depende da origem",
             "gravidade": "Crítica"
+        },
+        {
+            "id": "imp-002",
+            "pergunta": "Qual norma técnica rege a impermeabilização em edificações?",
+            "resposta": "A norma principal é a ABNT NBR 9575:2010 (Impermeabilização — Seleção e Projeto), que estabelece os critérios para seleção do sistema de impermeabilização de acordo com a parte da construção a ser impermeabilizada e as condições de exposição. Complementada pela ABNT NBR 9574:2008 (Execução de impermeabilização), que define os procedimentos de execução. A NBR 9575 classifica os sistemas em: rígidos (argamassas impermeáveis, concreto impermeável) e flexíveis (mantas asfálticas, membranas poliméricas, spray de poliuréia). Os locais obrigatórios de impermeabilização incluem: lajes de cobertura, terraços, áreas molhadas (banheiros, cozinhas, lavanderias), reservatórios de água, piscinas, jardineiras, subsolos, poços de elevador e muros de arrimo enterrados. A garantia da construtora sobre impermeabilização é de 5 anos para solidez e segurança (Código Civil, art. 618). A NBR 15575 (Norma de Desempenho) exige vida útil mínima de 20 anos para o sistema de impermeabilização de coberturas quando adequadamente mantido.",
+            "normas": [
+                "ABNT NBR 9575:2010",
+                "ABNT NBR 9574:2008",
+                "ABNT NBR 15575 (Desempenho)",
+                "Código Civil, art. 618"
+            ],
+            "referencias": [],
+            "responsabilidade": "Construtora / Projetista",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "imp-003",
+            "pergunta": "Infiltração no subsolo — como identificar se é responsabilidade da construtora?",
+            "resposta": "A infiltração em subsolos é um dos vícios construtivos mais comuns e pode ter múltiplas origens: (1) Falha de impermeabilização — quando o sistema de impermeabilização das paredes de contenção ou da laje de fundo não foi executado conforme projeto ou conforme NBR 9575/9574. Indicadores: manchas de umidade contínuas, eflorescências (cristalizações brancas na superfície), água percolando pelas juntas; (2) Ausência de projeto de drenagem — muros de contenção enterrados necessitam de dreno profundo (colchão drenante com geotêxtil), além de impermeabilização. Sem drenagem, a pressão hidrostática empurra a água pelas fissuras; (3) Nível do lençol freático — se o subsolo foi projetado abaixo do lençol freático, o sistema deve contemplar impermeabilização com contrapressão e bomba de esgotamento permanente. A responsabilidade da construtora existe sempre que: o projeto de impermeabilização foi inadequado, a execução não seguiu o projeto, ou o vício era oculto na entrega. O Código Civil (art. 441) garante ao comprador redibição por vício oculto, e o art. 618 estabelece a garantia de solidez de 5 anos.",
+            "normas": [
+                "ABNT NBR 9575:2010",
+                "ABNT NBR 9574:2008",
+                "Código Civil, arts. 441 e 618",
+                "CDC, art. 18"
+            ],
+            "referencias": [
+                "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm"
+            ],
+            "responsabilidade": "Construtora",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "imp-004",
+            "pergunta": "Qual a periodicidade de manutenção da impermeabilização em coberturas?",
+            "resposta": "A ABNT NBR 5674:2012 (Manutenção de edificações) estabelece periodicidades mínimas de manutenção para sistemas de impermeabilização: (1) Inspeção visual — semestral (verificar acúmulo de água, vegetação, fissuras, descolamentos, furos); (2) Limpeza de ralos e calhas — mensal ou após chuvas intensas; (3) Verificação de juntas de dilatação — anual; (4) Inspeção técnica completa — a cada 3 anos (por profissional habilitado). A NBR 15575 (Norma de Desempenho) indica vida útil de projeto de no mínimo 20 anos para impermeabilização de coberturas, condicionada à manutenção adequada. Fatores que reduzem a vida útil: tráfego sobre a manta sem proteção mecânica, perfuração por instalação de antenas/equipamentos, vegetação com raízes, exposição UV sem proteção (mantas expostas sem pintura refletiva). O síndico é o responsável por manter o programa de manutenção atualizado (CC art. 1.348, V). A ausência de manutenção documentada pode ser usada pela construtora como argumento para eximir-se de garantia.",
+            "normas": [
+                "ABNT NBR 5674:2012",
+                "ABNT NBR 15575",
+                "Código Civil, art. 1.348, V"
+            ],
+            "referencias": [],
+            "responsabilidade": "Síndico / Administradora",
+            "gravidade": "Média"
+        },
+        {
+            "id": "imp-005",
+            "pergunta": "Manta asfáltica é o único tipo de impermeabilização aceito? Quais são as alternativas?",
+            "resposta": "Não. A NBR 9575:2010 reconhece diversos sistemas de impermeabilização, cada um adequado a condições específicas: (1) Manta asfáltica (NBR 9952) — a mais utilizada em lajes e coberturas, com diferentes tipos (I a IV) conforme resistência e flexibilidade. Aplicada com maçarico ou auto-adesiva; (2) Membrana asfáltica moldada no local — aplicada a frio ou a quente, com armadura de tela ou véu de fibra de vidro; (3) Membrana de poliuretano — bicomponente, aplicada por spray ou rolo, excelente aderência e elasticidade. Ideal para áreas de geometria complexa; (4) Membrana acrílica — aplicada a frio, indicada para áreas molhadas internas (banheiros); (5) Argamassa polimérica (NBR 11905) — sistema rígido, utilizado em alicerces, baldrames e áreas não sujeitas a movimentação; (6) Cristalização (impermeabilização por penetração) — produtos que penetram nos capilares do concreto e cristalizam, vedando fissuras de até 0,4mm. Cada sistema tem vida útil, custo e aplicação distintos. O projetista deve especificar o sistema conforme as condições de exposição (NBR 9575, tabela de seleção). A execução deve seguir as Diretrizes do IBI (Instituto Brasileiro de Impermeabilização).",
+            "normas": [
+                "ABNT NBR 9575:2010",
+                "ABNT NBR 9952 (Manta asfáltica)",
+                "ABNT NBR 11905 (Argamassa polimérica)"
+            ],
+            "referencias": [],
+            "responsabilidade": "Projetista / Construtora",
+            "gravidade": "Média"
+        },
+        {
+            "id": "imp-006",
+            "pergunta": "A construtora pode alegar que infiltração no reservatório não é vício construtivo?",
+            "resposta": "Dificilmente. Reservatórios de água (cisternas e caixas d'água superiores) exigem impermeabilização específica conforme NBR 9575 — são classificados como 'áreas sujeitas a lâmina d'água estática' e demandam sistemas com resistência à pressão hidrostática permanente. A NBR 5626:2020 complementa exigindo que reservatórios sejam estanques e protegidos contra contaminação. Infiltração em reservatório indica: (a) impermeabilização inadequada ou inexistente; (b) fissuras estruturais que comprometeram o sistema; (c) execução fora do especificado. Em todos os casos, trata-se de vício construtivo coberto pela garantia legal de 5 anos (CC art. 618). O CDC (art. 18) garante ao consumidor o direito de exigir reparação quando o produto/serviço apresenta 'vícios que os tornem impróprios ou inadequados ao consumo a que se destinam.' A jurisprudência do STJ é consolidada: infiltrações em reservatórios configuram vício de solidez e segurança, com inversão do ônus da prova em favor do consumidor.",
+            "normas": [
+                "ABNT NBR 9575:2010",
+                "ABNT NBR 5626:2020",
+                "Código Civil, art. 618",
+                "CDC, arts. 18 e 26"
+            ],
+            "referencias": [],
+            "responsabilidade": "Construtora",
+            "gravidade": "Alta"
         }
     ]
 }

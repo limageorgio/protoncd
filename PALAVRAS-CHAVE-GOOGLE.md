@@ -1,7 +1,7 @@
 # PROTON ENGENHARIA — Palavras-Chave e Buscas no Google
 
 **Documento extenso com todas as possibilidades de busca que podem levar à protoncd.com.br**
-Atualizado: 2026-02-12 | Total estimado: 900+ combinações
+Atualizado: 2026-02-12 | Total estimado: 1020+ combinações
 
 ---
 
@@ -32,6 +32,7 @@ Atualizado: 2026-02-12 | Total estimado: 900+ combinações
 23. [Buscas por Dúvida / Problema](#23-buscas-por-dúvida--problema)
 24. [Buscas por Profissional](#24-buscas-por-profissional)
 25. [Buscas por Segmento / Tipo de Cliente](#25-buscas-por-segmento--tipo-de-cliente)
+26. [Buscas de Intenção Legal (Autoridade Normativa)](#26-buscas-de-intenção-legal-autoridade-normativa)
 
 ---
 
@@ -173,7 +174,14 @@ Atualizado: 2026-02-12 | Total estimado: 900+ combinações
 - plano de manutenção operação e controle
 - lei 13589
 - lei 13.589/2018
+- lei 13.589/2018 planalto
+- artigo 1 lei 13.589/2018
+- PMOC lei federal
 - portaria 3523
+- portaria 3523/1998 texto oficial
+- PMOC portaria ministério da saúde
+- PMOC fiscalização vigilância sanitária
+- infração sanitária PMOC lei 6437
 - inspeção hvac
 - inspeção ar condicionado
 - inspeção climatização
@@ -1183,6 +1191,123 @@ Atualizado: 2026-02-12 | Total estimado: 900+ combinações
 
 ---
 
+## 26. BUSCAS DE INTENÇÃO LEGAL (AUTORIDADE NORMATIVA)
+
+> **Objetivo:** Capturar buscas de usuários que pesquisam por leis, normas e obrigações legais específicas — demonstrando autoridade técnica e jurídica que a concorrência não tem.
+
+### NR-12 — Intenção Legal
+- NR-12 é obrigatória?
+- NR-12 base legal CLT
+- CLT artigo 184 máquinas
+- multa por descumprir NR-12
+- penalidade NR-12
+- responsabilidade criminal NR-12
+- acidente máquina responsabilidade empregador
+- inventário de máquinas NR-12 item 12.15
+- apreciação de riscos ISO 12100
+- NBR 14153 categoria de segurança
+- ISO 13849-1 Performance Level
+- PPRPS NR-12 prensa
+- adequação NR-12 máquina usada
+- NR-12 treinamento obrigatório item 12.16
+- LOTO NR-12 procedimento bloqueio
+- interdição máquina NR-12
+
+### Segurança do Trabalho — Intenção Legal
+- PGR NR-01 obrigatório
+- PGR substituiu PPRA
+- Portaria SEPRT 6.730/2020
+- e-Social SST eventos obrigatórios
+- e-Social S-2210 S-2220 S-2240
+- LTCAT aposentadoria especial
+- Lei 8.213 artigo 58 LTCAT
+- SESMT NR-04 obrigatório
+- CLT artigo 162 SESMT
+- CIPA obrigatória Lei 14.457
+- PCMSO NR-07 exames obrigatórios
+- CLT artigo 168 exames médicos
+- responsabilidade criminal acidente trabalho
+- ação regressiva INSS empregador
+- Lei 8.213 artigo 120 ação regressiva
+- CAT prazo 24 horas
+- multa não emitir CAT
+- GRO gerenciamento riscos ocupacionais
+- MEI dispensa PGR NR-01
+
+### NR-17 Ergonomia — Intenção Legal
+- AET obrigatória NR-17
+- CLT artigo 198 peso máximo 60 kg
+- CLT artigo 199 trabalho sentado
+- NR-17 item 17.1.2 análise ergonômica
+- LER DORT doença ocupacional responsabilidade
+- Decreto 3.048 Anexo II doenças ocupacionais
+- NR-17 Anexo II telemarketing
+- AEP análise ergonômica preliminar
+- ISO 11228 levantamento de cargas
+- pausas obrigatórias NR-17
+- mobiliário NR-17 obrigatório
+- ergonomia obrigatória e-Social
+
+### Perícia de Engenharia — Intenção Legal
+- CPC artigo 464 perícia judicial
+- CPC artigo 156 perito judicial nomeação
+- perito engenheiro CPC
+- assistente técnico CPC artigo 466
+- laudo pericial valor probatório
+- NBR 16747 inspeção predial norma
+- NBR 14653 avaliação de imóveis
+- NBR 13752 perícia engenharia
+- vício oculto Código Civil 441
+- prazo garantia construção 5 anos
+- Código Civil artigo 618 construção
+- perito pena falso testemunho CP 342
+- responsabilidade perito CPC 158
+- sinistro perícia SUSEP
+- quesitos perícia engenharia
+
+### Incêndio / AVCB / CLCB — Intenção Legal
+- Lei 13.425 AVCB obrigatório
+- Lei Kiss incêndio obrigatório
+- AVCB obrigatório condomínio
+- multa sem AVCB
+- seguro sem AVCB nulo
+- responsabilidade criminal incêndio
+- CLT artigo 200 incêndio
+- NR-23 proteção contra incêndio
+- NBR 9077 saídas de emergência
+- NBR 13714 hidrantes norma
+- NBR 10897 sprinklers
+- NBR 14276 brigada de incêndio
+- PPCI projeto prevenção incêndio
+- CERCON Goiás COSCIP
+- CBMGO instrução técnica
+- CLCB certificado licenciamento
+- renovação AVCB prazo obrigatório
+- manutenção obrigatória extintores norma
+- inspeção predial incêndio lei
+
+### NR-35 / Trabalho em Altura — Intenção Legal
+- NR-35 trabalho em altura obrigatório
+- definição trabalho em altura 2 metros
+- CLT artigo 200 trabalho em altura
+- treinamento NR-35 8 horas obrigatório
+- reciclagem NR-35 2 anos
+- permissão de trabalho PT NR-35
+- teste arrancamento olhais obrigatório
+- NBR 16325 proteção contra quedas
+- NBR 16489 ancoragem norma
+- linha de vida NR-35 projeto
+- ponto de ancoragem carga 15 kN
+- ART linha de vida obrigatória
+- queda de altura principal causa morte trabalho
+- responsabilidade acidente queda altura
+- CLT artigo 157 obrigação empregador
+- condições impeditivas NR-35
+- plano de resgate NR-35
+- síndrome da suspensão trabalho altura
+
+---
+
 ## 📊 RESUMO QUANTITATIVO
 
 | Categoria | Qtd. Estimada |
@@ -1212,7 +1337,8 @@ Atualizado: 2026-02-12 | Total estimado: 900+ combinações
 | Dúvidas / Problemas | 40+ |
 | Por Profissional | 30+ |
 | Por Segmento / Cliente | 50+ |
-| **TOTAL ESTIMADO** | **~920+** |
+| Intenção Legal (Autoridade) | 100+ |
+| **TOTAL ESTIMADO** | **~1020+** |
 
 ---
 

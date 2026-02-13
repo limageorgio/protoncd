@@ -1,0 +1,115 @@
+{
+    "categoria": "NR-13 — Caldeiras e Vasos de Pressão",
+    "descricao": "Segurança em caldeiras, vasos de pressão e tubulações: inspeção, prontuário, classificação e operação conforme NR-13",
+    "faqs": [
+        {
+            "id": "nr13-001",
+            "pergunta": "Quais equipamentos são abrangidos pela NR-13?",
+            "resposta": "A NR-13 (Caldeiras, Vasos de Pressão, Tubulações e Tanques Metálicos de Armazenamento) abrange: (1) Caldeiras a vapor — equipamentos que geram vapor de água sob pressão superior à atmosférica (item 13.1.1). Classificadas em: Categoria A (pressão >1.960 kPa ou P×V > 100), Categoria B (P×V entre 30 e 100 e pressão ≤1.960 kPa) e Categoria C (demais); (2) Vasos de pressão — reservatórios que operam sob pressão diferente da atmosférica (ar comprimido, gases, líquidos pressurizados). Classificados em 5 categorias (I a V) conforme o potencial de risco — função da pressão, volume e fluido; (3) Tubulações — redes de dutos de interligação entre equipamentos sujeitos a pressão ou vácuo; (4) Tanques metálicos de armazenamento — adicionados pela Portaria MTP nº 672/2021. A base legal da NR-13 é a CLT, art. 200, I e II: 'as disposições complementares às normas de que trata este Capítulo serão expedidas pelo Ministério do Trabalho' referentes a 'instalações elétricas, equipamentos a pressão, armazenagem e manuseio de combustíveis, líquidos e gases inflamáveis.' A NR-13 é considerada norma especial e prevalece sobre normas gerais.",
+            "normas": [
+                "NR-13, itens 13.1.1, 13.4 e 13.5",
+                "CLT, art. 200, I e II",
+                "Portaria MTP nº 672/2021"
+            ],
+            "referencias": [
+                "https://www.planalto.gov.br/ccivil_03/decreto-lei/del5452compilado.htm"
+            ],
+            "responsabilidade": "Empregador / Proprietário",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "nr13-002",
+            "pergunta": "Qual é a periodicidade das inspeções em caldeiras conforme a NR-13?",
+            "resposta": "A NR-13 define dois tipos de inspeção para caldeiras: (1) Inspeção de segurança periódica — Caldeira Categoria A: anual (inspeção interna e externa); Caldeira Categoria B: bienal; Caldeira Categoria C: trienal. Deve incluir exame interno, exame externo, teste hidrostático (quando aplicável) e verificação de dispositivos de segurança (válvulas de segurança, pressostatos, indicadores de nível). A inspeção deve ser realizada por Profissional Habilitado (PH) — engenheiro com registro no CREA e conhecimento comprovado em vasos e caldeiras; (2) Inspeção de segurança extraordinária — obrigatória quando: a caldeira ficar inativa por mais de 6 meses; sofrer alteração ou reparo importante; houver mudança de local de instalação; antes de colocação em funcionamento após montagem. A NR-13, item 13.4.4.7, permite que o intervalo entre inspeções seja ampliado em até 50% se a empresa possuir SPIE (Serviço Próprio de Inspeção de Equipamentos) certificado pelo INMETRO ou por organismo autorizado. Cada inspeção gera relatório técnico que deve ser anexado ao Prontuário da caldeira.",
+            "normas": [
+                "NR-13, itens 13.4.4.4 a 13.4.4.7",
+                "ABNT NBR 12177 (Caldeiras estacionárias a vapor)"
+            ],
+            "referencias": [],
+            "responsabilidade": "Profissional Habilitado (Engenheiro)",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "nr13-003",
+            "pergunta": "O que é o Prontuário de caldeira e vasos de pressão? É obrigatório?",
+            "resposta": "Sim, o Prontuário é obrigatório e deve ser constituído para cada caldeira e vaso de pressão. A NR-13, item 13.4.1.2 (caldeiras) e 13.5.1.2 (vasos de pressão), define o conteúdo mínimo: (a) código de projeto e ano de edição (ASME Section VIII, EN 13445, ou outro código reconhecido); (b) especificação dos materiais; (c) procedimentos de fabricação, montagem e inspeção utilizados; (d) desenhos e dados de projeto (PMTA — Pressão Máxima de Trabalho Admissível, temperatura, fluido); (e) memória de cálculo; (f) relatórios de todas as inspeções de segurança; (g) registros de reparos e alterações; (h) certificados de calibração dos dispositivos de segurança (válvulas de alívio); (i) registro de ocorrências; (j) relatório do teste hidrostático. O prontuário deve estar disponível no estabelecimento. Sua inexistência é infração grave — pode resultar em interdição do equipamento pelo Auditor Fiscal do Trabalho (CLT art. 161). Em caso de acidente com caldeira sem prontuário, configura-se negligência grosseira com agravamento da responsabilidade penal.",
+            "normas": [
+                "NR-13, itens 13.4.1.2 e 13.5.1.2",
+                "CLT, art. 161",
+                "ASME Section VIII (referência de projeto)"
+            ],
+            "referencias": [],
+            "responsabilidade": "Proprietário / PH",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "nr13-004",
+            "pergunta": "Quem pode operar uma caldeira e qual treinamento é exigido?",
+            "resposta": "A operação de caldeiras só pode ser exercida por profissional com Treinamento de Segurança na Operação de Caldeiras, conforme NR-13, item 13.3.4. Os requisitos variam por categoria: (1) Caldeira Categoria A — operador com treinamento de no mínimo 40 horas (teórica e prática), supervisionado por Profissional Habilitado. O conteúdo programático está detalhado no Anexo I da NR-13: noções de grandezas físicas e unidades, caldeiras (classificação, partes, acessórios, instrumentos), operação (partida, regime, parada), tratamento de água, manutenção, prevenção contra explosão e procedimentos de emergência; (2) Caldeira Categoria B — treinamento de 60 horas; (3) Caldeira Categoria C — treinamento conforme o risco e orientação do PH. O operador deve portar certificado válido. A reciclagem deve ocorrer a cada 2 anos ou quando houver modificação significativa no equipamento. Operar caldeira sem operador qualificado é infração de gravidade máxima (NR-28, Anexo I), com possibilidade de interdição imediata e responsabilidade criminal em caso de acidente.",
+            "normas": [
+                "NR-13, itens 13.3.4 e Anexo I",
+                "NR-28, Anexo I",
+                "CLT, art. 200"
+            ],
+            "referencias": [],
+            "responsabilidade": "Empregador",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "nr13-005",
+            "pergunta": "Vaso de pressão de ar comprimido da oficina precisa de inspeção NR-13?",
+            "resposta": "Sim. Compressores de ar e seus reservatórios (vasos de pressão) estão sujeitos à NR-13, independentemente do porte da empresa. A periodicidade de inspeção depende da classificação do vaso, que é definida pela combinação: fluido (Classe A — letal ou inflamável; Classe B — não-perigoso), grupo de potencial de risco (P × V), e pressão PMTA. Para oficinas típicas com compressores de 10 a 50 bar e volume até 1.000 litros, o vaso geralmente se enquadra na Categoria V (menor risco), com inspeção periódica a cada 5 anos (ou conforme regulamentação). Porém, o proprietário deve: (a) constituir o prontuário do vaso (placa de identificação, projeto, PMTA); (b) verificar se a válvula de segurança está calibrada e lacrada; (c) manter a placa de identificação legível; (d) possuir registro de ocorrências. A explosão de vaso de ar comprimido é um dos acidentes industriais mais comuns e pode ser fatal. O item 13.5.2.1 veda o uso de vasos de pressão sem placa de identificação ou com a PMTA excedida.",
+            "normas": [
+                "NR-13, itens 13.5.1 a 13.5.5",
+                "NR-13, item 13.5.2.1",
+                "ABNT NBR 15417 (Vasos de pressão — inspeção em serviço)"
+            ],
+            "referencias": [],
+            "responsabilidade": "Proprietário / Empregador",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "nr13-006",
+            "pergunta": "O que é teste hidrostático e quando ele é exigido pela NR-13?",
+            "resposta": "O teste hidrostático (TH) é o ensaio que consiste em submeter caldeiras e vasos de pressão a uma pressão superior à Pressão Máxima de Trabalho Admissível (PMTA) para verificar a integridade estrutural e a estanqueidade do equipamento. A pressão de teste é normalmente 1,5 × PMTA (conforme ASME Section VIII, Div. 1) ou valor definido no código de projeto. O procedimento: (1) esvaziar completamente o equipamento; (2) preencher com água (ou outro fluido incompressível); (3) pressurizar gradualmente até a pressão de teste; (4) manter por tempo determinado (geralmente 30 minutos); (5) inspecionar visualmente toda a superfície em busca de vazamentos, deformações ou trincas; (6) despressurizar gradualmente. A NR-13 exige TH: (a) na fabricação/montagem inicial; (b) sempre que houver reparo ou alteração estrutural (soldas, chapas substituídas); (c) quando recomendado pelo PH na inspeção de segurança periódica; (d) quando houver dúvida sobre a integridade do equipamento. O TH pode ser substituído por ensaio pneumático com medidas de segurança adicionais, ou por técnicas alternativas (emissão acústica, TOFD) autorizadas pelo PH, conforme item 13.5.4.8.",
+            "normas": [
+                "NR-13, itens 13.4.4.5 e 13.5.4.8",
+                "ASME Section VIII, Div. 1",
+                "ABNT NBR 15417"
+            ],
+            "referencias": [],
+            "responsabilidade": "Profissional Habilitado",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "nr13-007",
+            "pergunta": "Qual a responsabilidade do engenheiro que assina o laudo de caldeira/vaso de pressão?",
+            "resposta": "O Profissional Habilitado (PH) que realiza inspeções e assina laudos de caldeiras e vasos de pressão assume responsabilidade técnica, civil e criminal sobre suas conclusões. Especificamente: (1) Responsabilidade técnica — perante o CREA, conforme Lei nº 5.194/1966 e Resolução CONFEA nº 1.073/2016. A ART deve detalhar o escopo do serviço. Emitir laudo sem a devida inspeção ou sem competência técnica configura exercício ilegal ou irresponsável; (2) Responsabilidade civil — se o equipamento sofrer acidente após inspeção que atestou condição segura indevidamente, o PH responde solidariamente por danos (Código Civil, arts. 186 e 927). A 'culpa in eligendo' do contratante pode existir, mas não exime o PH; (3) Responsabilidade criminal — em caso de acidente fatal causado por falha que deveria ter sido identificada na inspeção, o PH pode responder por homicídio culposo (CP art. 121 §3º) ou lesão corporal culposa (CP art. 129 §6º). A perícia judicial inevitavelmente analisará o relatório de inspeção; (4) Responsabilidade administrativa — o MTE, via Auditores Fiscais, pode questionar laudos e exigir complementação. O PH deve comprovar sua qualificação em caldeiras e vasos (cursos, experiência documentada).",
+            "normas": [
+                "Lei nº 5.194/1966",
+                "Resolução CONFEA nº 1.073/2016",
+                "Código Civil, arts. 186 e 927",
+                "Código Penal, arts. 121 §3º e 129 §6º",
+                "NR-13, item 13.3.1"
+            ],
+            "referencias": [
+                "https://www.planalto.gov.br/ccivil_03/leis/l5194.htm"
+            ],
+            "responsabilidade": "Profissional Habilitado (Engenheiro)",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "nr13-008",
+            "pergunta": "A caldeira pode ser instalada em qualquer local da empresa?",
+            "resposta": "Não. A NR-13 impõe restrições rigorosas para a localização de caldeiras: (1) Casa de caldeiras — caldeiras de Categorias A e B devem ser instaladas em edificação própria (casa de caldeiras), construída em material resistente ao fogo, distante no mínimo 3 metros de outras edificações, depósitos de combustíveis, ou locais de grande circulação de pessoas (item 13.4.2.1); (2) Ventilação — a casa de caldeiras deve possuir ventilação permanente, natural ou forçada, que garanta renovação de ar e impeça acúmulo de gases; (3) Iluminação — adequada para operação e inspeção; (4) Saídas de emergência — pelo menos duas saídas, em direções opostas; (5) Sistema de drenagem — para esgotamento de águas e fluidos; (6) Proibições — caldeiras NÃO podem ser instaladas em subsolo, em ambientes confinados sem ventilação adequada, ou em locais que dificultem o acesso para inspeção e manutenção. Caldeiras Categoria C de baixa pressão podem ter requisitos de instalação simplificados, conforme orientação do PH. A disposição das caldeiras entre si deve respeitar distâncias mínimas para manutenção e escape. O não cumprimento dessas exigências é motivo de interdição.",
+            "normas": [
+                "NR-13, itens 13.4.2.1 a 13.4.2.5",
+                "CLT, art. 200",
+                "NBR 12177 (Caldeiras estacionárias)"
+            ],
+            "referencias": [],
+            "responsabilidade": "Empregador / Projetista",
+            "gravidade": "Alta"
+        }
+    ]
+}

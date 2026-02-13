@@ -1,0 +1,85 @@
+{
+    "categoria": "CERCON Goiás — Regularização CBMGO",
+    "descricao": "Sistema CERCON do Corpo de Bombeiros de Goiás: regularização, renovação, digitalização obrigatória, Instruções Técnicas e prazos",
+    "faqs": [
+        {
+            "id": "cercon-001",
+            "pergunta": "O que é o CERCON e por que ele substituiu a vistoria presencial em Goiás?",
+            "resposta": "O CERCON (Certificado de Conformidade) é o sistema digital do Corpo de Bombeiros Militar de Goiás (CBMGO) que substituiu o antigo AVCB presencial. Instituído pela Instrução Normativa (IN) nº 01/2025 — CBMGO, o CERCON funciona inteiramente online pela plataforma e-CBMGO. O objetivo é modernizar e agilizar o processo de regularização de edificações quanto à prevenção e combate a incêndio e pânico. No CERCON, o responsável técnico (engenheiro/arquiteto) declara digitalmente, sob sua responsabilidade profissional (ART/RRT), que a edificação está em conformidade com as Instruções Técnicas (ITs) do CBMGO e com o COSCIP-GO (Código de Segurança Contra Incêndio e Pânico de Goiás). A vistoria presencial do Corpo de Bombeiros pode ocorrer posteriormente, por amostragem ou denúncia, mas o certificado é emitido com base na declaração do profissional. Isso significa que a responsabilidade técnica recai integralmente sobre o profissional declarante — se a edificação não estiver de fato em conformidade, o profissional responde civil, criminal e administrativamente (CREA/CAU).",
+            "normas": [
+                "IN nº 01/2025 — CBMGO",
+                "COSCIP-GO (Lei Estadual nº 15.802/2006)",
+                "Lei nº 13.425/2017"
+            ],
+            "referencias": [],
+            "responsabilidade": "Responsável técnico (CREA/CAU)",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "cercon-002",
+            "pergunta": "Quais edificações precisam de CERCON em Goiás?",
+            "resposta": "Toda edificação e área de risco no Estado de Goiás precisa de regularização junto ao CBMGO, conforme o COSCIP-GO (Lei Estadual nº 15.802/2006) e a IN nº 01/2025. Especificamente: (a) edificações comerciais — lojas, escritórios, galerias, shoppings; (b) edificações de reunião de público — igrejas, casas de show, cinemas, estádios; (c) edificações residenciais multifamiliares — prédios de apartamentos (a partir de determinada altura ou área); (d) edificações industriais — galpões, fábricas; (e) edificações de serviços de saúde — hospitais, clínicas; (f) edificações educacionais — escolas, universidades; (g) depósitos e estacionamentos. A classificação segue as Instruções Técnicas do CBMGO, que definem grupo de ocupação, área, altura e carga de incêndio para dimensionar os sistemas de proteção exigidos. Residências unifamiliares (casas térreas e sobrados) geralmente são dispensadas, exceto se exercerem atividade comercial. A falta de CERCON impede a obtenção de alvará de funcionamento e pode gerar multa pela prefeitura e pelo próprio CBMGO.",
+            "normas": [
+                "COSCIP-GO (Lei Estadual nº 15.802/2006)",
+                "IN nº 01/2025 — CBMGO",
+                "Instruções Técnicas do CBMGO"
+            ],
+            "referencias": [],
+            "responsabilidade": "Proprietário / Responsável técnico",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "cercon-003",
+            "pergunta": "Quais são as Instruções Técnicas (ITs) mais importantes do CBMGO?",
+            "resposta": "O CBMGO publica Instruções Técnicas (ITs) que detalham os requisitos de proteção contra incêndio para cada sistema. As mais relevantes para a maioria das edificações: IT 01 — Procedimentos administrativos (processos de regularização); IT 02 — Classificação das edificações e áreas de risco (tabelas de ocupação, altura, área); IT 03 — Terminologia; IT 04 — Acesso de viaturas; IT 06 — Segurança estrutural contra incêndio; IT 07 — Compartimentação; IT 08 — Saídas de emergência (baseada na NBR 9077); IT 09 — Proteção contra incêndio em acabamento e revestimento; IT 11 — Iluminação de emergência (baseada na NBR 10898); IT 12 — Sinalização de emergência (baseada na NBR 13434); IT 13 — Prescrições para treinamento de Brigada de Incêndio; IT 15 — Alarme de incêndio; IT 20 — Extintores (baseada na NBR 12693); IT 21 — Hidrantes e mangotinhos (baseada na NBR 13714); IT 22 — Sprinklers (baseada na NBR 10897); IT 41 — Edificações existentes (regularização com condicionantes). O responsável técnico deve consultar TODAS as ITs aplicáveis à ocupação antes de emitir a declaração no CERCON.",
+            "normas": [
+                "Instruções Técnicas do CBMGO (IT 01 a IT 44)",
+                "COSCIP-GO"
+            ],
+            "referencias": [],
+            "responsabilidade": "Responsável técnico",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "cercon-004",
+            "pergunta": "Qual a validade do CERCON e como é feita a renovação?",
+            "resposta": "O CERCON tem validade determinada conforme a classificação de risco da edificação, geralmente entre 1 e 5 anos, conforme definido pelas ITs do CBMGO. A renovação deve ser solicitada ANTES do vencimento, pelo mesmo sistema digital (e-CBMGO). O processo de renovação exige: (a) declaração atualizada do responsável técnico atestando que a edificação mantém conformidade com as ITs; (b) ART/RRT vigente do responsável técnico; (c) comprovante de manutenção dos sistemas de proteção — extintores recargados e dentro da validade, hidrantes testados, sprinklers inspecionados, brigada treinada, sinalização em bom estado, iluminação de emergência funcional; (d) pagamento da taxa de renovação. A edificação que opera com CERCON vencido está irregular — mesma situação de não possuir CERCON. As consequências incluem: impossibilidade de renovar o alvará de funcionamento, multa do CBMGO, risco de interdição pela Vigilância Sanitária ou pelo Ministério Público (em caso de estabelecimentos de reunião de público), e agravamento de responsabilidade em caso de sinistro.",
+            "normas": [
+                "IN nº 01/2025 — CBMGO",
+                "COSCIP-GO"
+            ],
+            "referencias": [],
+            "responsabilidade": "Proprietário / Responsável técnico",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "cercon-005",
+            "pergunta": "O responsável técnico que assina o CERCON pode ser responsabilizado criminalmente?",
+            "resposta": "Sim. No sistema CERCON, o responsável técnico assina uma declaração digital de conformidade, assumindo integralmente a responsabilidade de que a edificação atende às ITs do CBMGO. Se a declaração for falsa (edificação não está de fato em conformidade), o profissional pode responder: (1) Criminal — por falsidade ideológica (CP art. 299 — 'omitir, em documento público ou particular, declaração que dele devia constar, ou nele inserir ou fazer inserir declaração falsa ou diversa da que devia ser escrita'), pena de 1 a 5 anos. Em caso de sinistro com vítimas, pode responder por homicídio culposo (CP art. 121 §3º) ou lesão corporal culposa, com agravante de negligência profissional; (2) Civil — indenização aos prejudicados por danos materiais e morais (CC arts. 186 e 927), solidariamente com o proprietário; (3) Administrativo/Profissional — processo ético-disciplinar no CREA (Lei 5.194/66, art. 71 — cancelamento de registro em casos graves) ou no CAU. A Lei 13.425/2017 (Lei Kiss) ampliou expressamente a responsabilidade para profissionais técnicos em caso de descumprimento das normas de segurança contra incêndio (art. 4º). A seriedade da declaração CERCON exige que o profissional efetivamente vistorie a edificação antes de assinar.",
+            "normas": [
+                "Código Penal, arts. 121 §3º e 299",
+                "Código Civil, arts. 186 e 927",
+                "Lei nº 5.194/1966, art. 71",
+                "Lei nº 13.425/2017, art. 4º"
+            ],
+            "referencias": [
+                "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2017/lei/l13425.htm"
+            ],
+            "responsabilidade": "Responsável técnico (Engenheiro/Arquiteto)",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "cercon-006",
+            "pergunta": "Edificação existente em Goiás que nunca teve AVCB/CERCON — como regularizar?",
+            "resposta": "A regularização de edificações existentes que nunca possuíram AVCB/CERCON em Goiás é tratada pela IT 41 do CBMGO (Edificações Existentes). Esta IT reconhece que muitas edificações antigas não conseguem atender integralmente às ITs atuais e permite um regime de condicionantes: (1) O responsável técnico realiza levantamento completo das condições da edificação; (2) Identifica os sistemas de proteção existentes e os faltantes; (3) Elabora plano de adequação com cronograma, priorizando: saídas de emergência, extintores, iluminação de emergência, sinalização e alarme (itens de proteção à vida); (4) Apresenta o projeto no sistema CERCON com as medidas compensatórias adotadas; (5) O CBMGO pode emitir CERCON condicionado, com prazo para implementação das adequações restantes. Para edificações com ocupação de reunião de público (bares, restaurantes, casas de show, escolas), a regularização é especialmente urgente — o Ministério Público de Goiás tem ajuizado ações civis públicas para interdição de estabelecimentos sem CERCON, com base na Lei 13.425/2017. O custo de regularização geralmente envolve: projeto do engenheiro + instalação dos sistemas faltantes + taxas do CBMGO.",
+            "normas": [
+                "IT 41 — CBMGO (Edificações Existentes)",
+                "COSCIP-GO",
+                "Lei nº 13.425/2017"
+            ],
+            "referencias": [],
+            "responsabilidade": "Proprietário / Responsável técnico",
+            "gravidade": "Alta"
+        }
+    ]
+}

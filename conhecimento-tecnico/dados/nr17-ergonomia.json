@@ -1,0 +1,131 @@
+{
+    "categoria": "NR-17 — Ergonomia",
+    "descricao": "Análise Ergonômica do Trabalho (AET), levantamento de cargas, postos de trabalho e prevenção de LER/DORT",
+    "faqs": [
+        {
+            "id": "ergo-001",
+            "pergunta": "O que é a Análise Ergonômica do Trabalho (AET) e quando ela é obrigatória?",
+            "resposta": "A AET (Análise Ergonômica do Trabalho) é o estudo detalhado das condições de trabalho que avalia adaptação do posto, mobiliário, equipamentos, organização do trabalho e condições ambientais às características psicofisiológicas dos trabalhadores. Está prevista no item 17.1.2 da NR-17 (revisada pela Portaria SEPRT nº 6.730/2020): 'Para avaliar a adaptação das condições de trabalho às características psicofisiológicas dos trabalhadores, cabe ao empregador realizar a análise ergonômica do trabalho do posto de trabalho.' A AET é obrigatória quando: (a) a Avaliação Ergonômica Preliminar (AEP) identificar necessidade de aprofundamento; (b) houver queixas ou adoecimentos (LER/DORT) relacionados ao trabalho; (c) a fiscalização do MTE determinar. A base legal na CLT são os arts. 198 e 199: o art. 198 fixa o peso máximo de 60 kg para remoção individual; o art. 199 obriga a colocação de assentos que assegurem postura correta. A AET deve ser elaborada por ergonomista ou profissional habilitado.",
+            "normas": [
+                "NR-17, itens 17.1.1 e 17.1.2",
+                "CLT, art. 198",
+                "CLT, art. 199",
+                "Portaria SEPRT nº 6.730/2020"
+            ],
+            "referencias": [
+                "https://www.planalto.gov.br/ccivil_03/decreto-lei/del5452compilado.htm"
+            ],
+            "responsabilidade": "Empregador / Ergonomista",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "ergo-002",
+            "pergunta": "Qual é o limite de peso que um trabalhador pode carregar manualmente?",
+            "resposta": "O art. 198 da CLT estabelece limite claro: 'É de 60 kg (sessenta quilogramas) o peso máximo que um empregado pode remover individualmente, ressalvadas as disposições especiais relativas ao trabalho do menor e da mulher.' A NR-17 complementa com exigências adicionais: item 17.2.2 — quando houver levantamento, transporte e descarga individual de materiais, o empregador deve avaliar biomecânica e ergonomicamente a atividade, considerando a frequência, o trajeto, as posturas adotadas, as condições do piso e a capacidade individual do trabalhador. A ISO 11228-1 (Ergonomics — Manual handling) e o método NIOSH (Revised NIOSH Lifting Equation) são as referências técnicas para cálculo do peso máximo recomendado, que pode ser significativamente inferior a 60 kg dependendo da frequência, distância vertical, torção do tronco e distância horizontal. Para mulheres e menores de 18 anos, a CLT prevê proteção adicional, e a NR-17 determina adaptação das condições a cada trabalhador.",
+            "normas": [
+                "CLT, art. 198",
+                "NR-17, item 17.2.2",
+                "ISO 11228-1",
+                "Método NIOSH (RLE)"
+            ],
+            "referencias": [
+                "https://www.planalto.gov.br/ccivil_03/decreto-lei/del5452compilado.htm"
+            ],
+            "responsabilidade": "Empregador",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "ergo-003",
+            "pergunta": "O que são LER e DORT e como a empresa pode ser responsabilizada?",
+            "resposta": "LER (Lesões por Esforço Repetitivo) e DORT (Distúrbios Osteomusculares Relacionados ao Trabalho) são afecções do sistema musculoesquelético causadas ou agravadas por condições inadequadas de trabalho. São reconhecidas como doenças ocupacionais pelo Anexo II do Decreto nº 3.048/1999 (Regulamento da Previdência Social), e pelo art. 20 da Lei nº 8.213/1991 (equiparadas a acidente de trabalho). A empresa pode ser responsabilizada em múltiplas esferas: (1) Previdenciária — o INSS pode mover ação regressiva conforme art. 120 da Lei nº 8.213/1991; (2) Trabalhista — indenização por dano moral e material, estabilidade provisória de 12 meses após retorno de auxílio-doença acidentário (art. 118, Lei nº 8.213/1991); (3) Criminal — se comprovada negligência na adequação ergonômica (art. 129, §6º, CP). A principal defesa do empregador é demonstrar cumprimento da NR-17: AET realizada, postos adequados, pausas regulamentadas, treinamentos ministrados e acompanhamento pelo PCMSO (NR-07).",
+            "normas": [
+                "Lei nº 8.213/1991, arts. 20, 118 e 120",
+                "Decreto nº 3.048/1999, Anexo II",
+                "NR-17 (Ergonomia)",
+                "NR-07 (PCMSO)",
+                "Código Civil, art. 927"
+            ],
+            "referencias": [
+                "https://www.planalto.gov.br/ccivil_03/leis/l8213compilado.htm",
+                "https://www.planalto.gov.br/ccivil_03/decreto/d3048compilado.htm"
+            ],
+            "responsabilidade": "Empregador",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "ergo-004",
+            "pergunta": "Qual a diferença entre AEP e AET na nova NR-17?",
+            "resposta": "A revisão da NR-17 (Portaria SEPRT nº 6.730/2020) introduziu a AEP (Avaliação Ergonômica Preliminar) como primeiro nível de análise, seguida pela AET (Análise Ergonômica do Trabalho) para situações que demandam aprofundamento. A AEP é obrigatória para TODOS os postos de trabalho e deve ser integrada ao PGR (NR-01), identificando situações de risco ergonômico por meio de abordagens qualitativas, semiquantitativas ou quantitativas. A AEP funciona como triagem: postos que não apresentam riscos significativos podem ser encerrados nesse nível. Já a AET é obrigatória quando a AEP identificar: (a) inadequações que não foram solucionadas; (b) necessidade de avaliação mais aprofundada; (c) presença de queixas ou patologias como LER/DORT. A AET exige análise da tarefa real (não apenas prescrita), observação in loco, entrevistas com trabalhadores, medições biomecânicas e ambientais. A principal mudança é que antes toda situação era resolvida com AET; agora, a AEP é o ponto de entrada obrigatório.",
+            "normas": [
+                "NR-17, itens 17.1.1 e 17.1.2",
+                "NR-01, item 1.5.3 (integração PGR)",
+                "Portaria SEPRT nº 6.730/2020"
+            ],
+            "referencias": [
+                "https://www.in.gov.br/en/web/dou/-/portaria-seprt-n-6.730-de-9-de-marco-de-2020-247538988"
+            ],
+            "responsabilidade": "Empregador / Ergonomista",
+            "gravidade": "Média"
+        },
+        {
+            "id": "ergo-005",
+            "pergunta": "Quais são os requisitos ergonômicos para trabalho sentado e trabalho em pé?",
+            "resposta": "A CLT e a NR-17 possuem requisitos específicos para ambas as situações. Para trabalho sentado: o art. 199 da CLT determina que 'será obrigatória a colocação de assentos que assegurem postura correta ao trabalhador, capazes de evitar posições incômodas ou forçadas, sempre que a execução da tarefa exija que trabalhe sentado.' A NR-17, item 17.3, detalha: altura da superfície de trabalho compatível com a tarefa; características dimensionais da cadeira (encosto, profundidade do assento, apoio de braços); monitor na altura dos olhos; apoio para os pés quando necessário. Para trabalho em pé: o parágrafo único do art. 199 estabelece que 'quando o trabalho deva ser executado de pé, os empregados terão à sua disposição assentos para serem utilizados nas pausas que o serviço permitir.' A NR-17 reforça a necessidade de alternância postural, superfícies antifadiga e pausas regulares. Checkouts (PDVs) possuem regras adicionais no Anexo I da NR-17 (Operadores de Checkout), incluindo dimensões mínimas e acessibilidade.",
+            "normas": [
+                "CLT, art. 199 e parágrafo único",
+                "NR-17, item 17.3",
+                "NR-17, Anexo I (Checkout)",
+                "ABNT NBR 13966 (Cadeiras de escritório)"
+            ],
+            "referencias": [
+                "https://www.planalto.gov.br/ccivil_03/decreto-lei/del5452compilado.htm"
+            ],
+            "responsabilidade": "Empregador",
+            "gravidade": "Média"
+        },
+        {
+            "id": "ergo-006",
+            "pergunta": "Operadores de teleatendimento/telemarketing têm regras ergonômicas específicas?",
+            "resposta": "Sim. O Anexo II da NR-17 estabelece regras detalhadas e muito específicas para operadores de teleatendimento/telemarketing. As principais exigências são: (1) Jornada máxima de 6 horas diárias com 36 horas semanais (inclui tempo de atendimento, espera, login/logout); (2) Pausas obrigatórias: duas pausas de 10 minutos + pausa para alimentação de 20 minutos; (3) Mobiliário: mesa regulável, cadeira com 5 pés com rodízios, apoio de braços, headset individual fornecido gratuitamente; (4) Vedações: empresa não pode utilizar metas de produtividade que comprometam saúde do trabalhador; é proibido recusar ida ao banheiro; não se pode obrigar vendas por comissão que gerem estresse excessivo; (5) Ambiente: temperatura entre 20ºC e 23ºC, níveis de ruído conforme NR-15 e NR-17. Essas regras se aplicam independentemente do nome fantasia da função (SAC, call center, central de atendimento, telecobrança). O descumprimento gera multas agravadas por afetarem grande número de trabalhadores simultaneamente.",
+            "normas": [
+                "NR-17, Anexo II (Teleatendimento/Telemarketing)",
+                "CLT, arts. 198 e 199",
+                "NR-15 (Limites de tolerância)",
+                "Portaria SEPRT nº 6.730/2020"
+            ],
+            "referencias": [],
+            "responsabilidade": "Empregador",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "ergo-007",
+            "pergunta": "A NR-17 exige pausas obrigatórias durante a jornada de trabalho?",
+            "resposta": "A NR-17 não fixa pausas idênticas para todas as atividades, mas impõe a obrigatoriedade de pausas conforme a natureza da tarefa: (1) Para operadores de checkout (Anexo I): pausa de 10 minutos a cada 50 minutos trabalhados em atividades contínuas de entrada de dados; (2) Para teleatendimento (Anexo II): duas pausas de 10 minutos + pausa para alimentação de 20 minutos por jornada de 6 horas; (3) Para atividades com sobrecarga muscular estática ou dinâmica do sistema musculoesquelético: o item 17.6.3 determina que a organização do trabalho deve incluir pausas para recuperação muscular. A CLT complementa no art. 72: 'Nos serviços permanentes de mecanografia, a cada período de 90 minutos de trabalho consecutivo corresponderá um repouso de 10 minutos não deduzidos da duração normal de trabalho.' A AET, quando elaborada, pode recomendar pausas específicas adicionais, que passam a ser obrigatórias se incorporadas ao PGR.",
+            "normas": [
+                "NR-17, itens 17.6.3 e 17.5.1",
+                "NR-17, Anexos I e II",
+                "CLT, art. 72 (mecanografia)",
+                "CLT, art. 71 (intervalos gerais)"
+            ],
+            "referencias": [
+                "https://www.planalto.gov.br/ccivil_03/decreto-lei/del5452compilado.htm"
+            ],
+            "responsabilidade": "Empregador",
+            "gravidade": "Média"
+        },
+        {
+            "id": "ergo-008",
+            "pergunta": "Quais ferramentas técnicas o ergonomista utiliza na avaliação de riscos?",
+            "resposta": "As principais ferramentas e métodos utilizados na avaliação ergonômica, reconhecidos internacionalmente e aceitos pela fiscalização são: (1) NIOSH (Revised NIOSH Lifting Equation) — cálculo do peso máximo recomendado para levantamento manual de cargas, considerando 6 multiplicadores (frequência, distância, assimetria, pega, alturas); (2) OWAS (Ovako Working Posture Analysing System) — classificação de posturas corporais em 4 categorias de ação; (3) RULA (Rapid Upper Limb Assessment) — avaliação rápida de risco de LER/DORT em membros superiores; (4) REBA (Rapid Entire Body Assessment) — avaliação de corpo inteiro; (5) Strain Index — riscos em tarefas repetitivas de membros superiores; (6) Checklist de Couto — ferramenta brasileira para avaliação de fatores biomecânicos; (7) ISO 11226 — avaliação de posturas estáticas; (8) ISO 11228 (partes 1, 2 e 3) — levantamento, empurrar/puxar e movimentação repetitiva. A escolha da ferramenta depende do tipo de risco identificado na AEP. Os resultados devem ser documentados e inseridos no inventário de riscos do PGR.",
+            "normas": [
+                "NR-17, item 17.1.1",
+                "ISO 11228-1, ISO 11228-2, ISO 11228-3",
+                "ISO 11226",
+                "NR-01 (inventário de riscos do PGR)"
+            ],
+            "referencias": [],
+            "responsabilidade": "Ergonomista / Engenheiro de Segurança",
+            "gravidade": "Média"
+        }
+    ]
+}

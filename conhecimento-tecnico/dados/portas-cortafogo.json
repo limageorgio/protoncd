@@ -23,6 +23,48 @@
             ],
             "responsabilidade": "Construtora",
             "gravidade": "Média"
+        },
+        {
+            "id": "pcf-003",
+            "pergunta": "Qual norma técnica rege portas corta-fogo e quais são os requisitos mínimos?",
+            "resposta": "A norma principal é a ABNT NBR 11742:2018 (Porta corta-fogo para saída de emergência), que define os requisitos de desempenho: (1) Resistência ao fogo — classificada em: P-30 (30 minutos), P-60 (60 minutos), P-90 (90 minutos) e P-120 (120 minutos). O tempo é definido pelo projeto de proteção contra incêndio conforme o tipo de ocupação e altura do edifício; (2) Fechamento automático — a porta deve fechar completamente por mola de piso ou dobradiça com mola, sem necessidade de esforço manual; (3) Vedação — deve possuir selo intumescente na folha ou no batente, que expande com o calor e sela as frestas, impedindo a passagem de fumaça; (4) Barra antipânico — obrigatória em portas de escadas de emergência com grande fluxo (NBR 11785); (5) Sinalização — placa 'Porta Corta-Fogo — Mantenha Fechada' conforme NBR 13434-2. A porta deve possuir IPT (Instituto de Pesquisas Tecnológicas) ou INMETRO atestando o desempenho ao fogo. Portas sem certificação, com molas removidas, travadas abertas ou com selos intumescentes danificados estão irregular e comprometem toda a compartimentação do edifício.",
+            "normas": [
+                "ABNT NBR 11742:2018",
+                "ABNT NBR 11785 (Barra antipânico)",
+                "ABNT NBR 13434-2 (Sinalização)",
+                "ABNT NBR 6479 (Ensaio de resistência ao fogo)"
+            ],
+            "referencias": [],
+            "responsabilidade": "Construtora / Condomínio",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "pcf-004",
+            "pergunta": "Manter a porta corta-fogo travada aberta com calço é apenas um descuido?",
+            "resposta": "Não — é uma infração que pode ter consequências fatais. A porta corta-fogo é elemento de compartimentação do edifício, projetada para impedir a propagação de fogo e fumaça entre pavimentos e/ou setores. Quando travada aberta (com calço, extintor, lixeira ou qualquer objeto), a PCF perde completamente sua função: no momento do incêndio, o fogo e a fumaça se propagam livremente pela escada de emergência, que deveria ser rota de fuga protegida. Este foi exatamente o mecanismo do incêndio da Boate Kiss (Santa Maria-RS, 2013, 242 mortos) — a fumaça invadiu os ambientes por falta de compartimentação. A Lei 13.425/2017 (decorrente da tragédia) reforçou a responsabilidade criminal por descumprimento das normas de proteção contra incêndio. O síndico que não fiscaliza e permite que PCFs permaneçam abertas pode responder por negligência. A NR-23 exige que portas de saídas de emergência sejam mantidas desobstruídas e em condições de funcionamento. Solução: instalar retentores eletromagnéticos (hold-open) que liberam a porta automaticamente quando o alarme de incêndio é acionado — permitindo que a porta fique aberta no uso cotidiano sem comprometer a segurança.",
+            "normas": [
+                "ABNT NBR 11742:2018",
+                "NR-23",
+                "Lei nº 13.425/2017",
+                "ABNT NBR 9077 (Saídas de emergência)"
+            ],
+            "referencias": [
+                "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2017/lei/l13425.htm"
+            ],
+            "responsabilidade": "Condomínio / Síndico",
+            "gravidade": "Crítica"
+        },
+        {
+            "id": "pcf-005",
+            "pergunta": "Qual a periodicidade de manutenção das portas corta-fogo?",
+            "resposta": "A ABNT NBR 5674:2012 (Manutenção de edificações) e a NBR 11742:2018 recomendam: (1) Inspeção visual mensal — verificar se a porta fecha completamente, se a mola funciona, se não há obstrução, se a sinalização está legível; (2) Manutenção trimestral — lubrificação de dobradiças, verificação do alinhamento da folha, teste de fechamento completo, verificação dos selos intumescentes (sem danos, rachaduras ou descolamento); (3) Manutenção anual — inspeção completa por profissional habilitado, verificação de todas as ferragens, teste de barra antipânico (se houver), avaliação da integridade da folha (empenamento, amassados que comprometam a vedação). As molas são os componentes com maior desgaste — a tensão deve ser suficiente para fechar a porta completamente a partir de qualquer ângulo de abertura. Registros de manutenção devem ser mantidos e apresentados ao Corpo de Bombeiros na renovação do AVCB/CERCON. Em condomínios com dezenas de PCFs, recomenda-se planilha de controle individual por porta, com código de identificação e histórico de intervenções.",
+            "normas": [
+                "ABNT NBR 5674:2012",
+                "ABNT NBR 11742:2018"
+            ],
+            "referencias": [],
+            "responsabilidade": "Condomínio / Síndico",
+            "gravidade": "Alta"
         }
     ]
 }
