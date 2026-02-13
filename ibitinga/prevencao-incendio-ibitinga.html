@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
@@ -446,7 +446,178 @@
     </section>
 
     <!-- CONTATO -->
-    <section class="section contact-section" id="contato">
+    
+    <!-- SAIBA MAIS — Conteúdo Técnico Indexável -->
+    <section class="section saiba-mais-section">
+        <div class="container container-narrow">
+            <details class="saiba-mais-wrapper">
+                <summary class="saiba-mais-summary">
+                    <div class="sm-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <h2>Saiba Mais — <span>Incêndio, AVCB e CLCB</span></h2>
+                    <i class="fas fa-chevron-down sm-chevron"></i>
+                </summary>
+                <div class="saiba-mais-content">
+                    <p style="color:var(--text-secondary);font-size:var(--fs-sm);margin-bottom:var(--space-6);">Dúvidas técnicas frequentes com fundamentação em normas ABNT, NRs e legislação brasileira. Conteúdo elaborado por engenheiros da Proton.</p>
+                    <div class="sm-faq-list">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>O que é o AVCB e por que ele é obrigatório?</h3><span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>O AVCB (Auto de Vistoria do Corpo de Bombeiros) é o documento emitido pelo Corpo de Bombeiros Militar que atesta que a edificação cumpre as exigências de segurança contra incêndio e pânico. A base legal federal é a Lei nº 13.425/2017 (Lei Kiss), promulgada após a tragédia da Boate Kiss em Santa Maria-RS (2013, 242 mortos). O art. 2º estabelece que 'é obrigatória a adequação das edificações às normas de segurança contra incêndio e pânico.' A CLT complementa no art. 200, IV, que cabe ao MTE normatizar 'proteção contra incêndio em geral e as medidas preventivas adequadas, com exigências ao especial revestimento de portas e paredes, construção de paredes contra-fogo, diques e outros anteparos.' Cada estado regulamenta seus próprios Códigos de Segurança e Proteção Contra Incêndios e Pânico (COSCIP). Sem AVCB válido: (a) a edificação não pode funcionar legalmente; (b) o alvará de funcionamento é indeferido pela prefeitura; (c) o seguro pode ser recusado; (d) o proprietário e o responsável técnico respondem civil e criminalmente em caso de sinistro.</p>
+                            <div class="sm-normas"><span class="sm-norma-tag">Lei nº 13.425/2017 (Lei Kiss)</span><span class="sm-norma-tag">CLT, art. 200, IV</span><span class="sm-norma-tag">COSCIP estadual</span><span class="sm-norma-tag">Decreto estadual de segurança contra incêndio</span></div>
+                            <div style="margin-top:var(--space-2);display:flex;gap:var(--space-3);align-items:center;">
+                                <span class="sm-gravidade alta"><i class="fas fa-exclamation-circle"></i> Alta</span>
+                                <span style="font-size:var(--fs-xs);color:var(--text-muted);">Responsável: Proprietário / Responsável técnico</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>Qual a diferença entre AVCB e CLCB?</h3><span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>AVCB (Auto de Vistoria do Corpo de Bombeiros) e CLCB (Certificado de Licenciamento do Corpo de Bombeiros) são documentos que atestam conformidade com as normas de segurança contra incêndio, mas diferem em escopo e aplicabilidade: (1) AVCB — exigido para edificações de maior porte e risco (área superior ao limite definido pelo estado, edificações com público significativo, indústrias, hospitais). Requer vistoria presencial do Corpo de Bombeiros, análise de projeto aprovado e verificação de TODOS os sistemas instalados (hidrantes, sprinklers, alarme, iluminação de emergência, sinalização, extintores, saídas de emergência); (2) CLCB — destinado a edificações de menor porte e complexidade (geralmente comércios e serviços com área até o limite estadual, baixa lotação). É obtido por autodeclaração do proprietário ou responsável técnico, sem vistoria obrigatória (mas sujeito a fiscalização posterior). Em Goiás, o sistema CERCON (Certificado de Conformidade) do CBMGO é o equivalente ao CLCB para edificações simples. A validade varia por estado (geralmente 1 a 5 anos). Edificações com AVCB/CLCB vencido estão irregulares.</p>
+                            <div class="sm-normas"><span class="sm-norma-tag">Lei nº 13.425/2017</span><span class="sm-norma-tag">Legislação estadual (COSCIP)</span><span class="sm-norma-tag">CBMGO — Sistema CERCON (Goiás)</span></div>
+                            <div style="margin-top:var(--space-2);display:flex;gap:var(--space-3);align-items:center;">
+                                <span class="sm-gravidade alta"><i class="fas fa-exclamation-circle"></i> Alta</span>
+                                <span style="font-size:var(--fs-xs);color:var(--text-muted);">Responsável: Proprietário / Responsável técnico</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>Quais são os sistemas de proteção contra incêndio exigidos para edificações?</h3><span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>Os sistemas de proteção contra incêndio e pânico são classificados em ativos e passivos: SISTEMAS ATIVOS (combatem ou detectam o incêndio): (1) Extintores de incêndio — ABNT NBR 12693:2021; (2) Hidrantes e mangotinhos — ABNT NBR 13714:2000; (3) Chuveiros automáticos (sprinklers) — ABNT NBR 10897:2020; (4) Sistema de detecção e alarme — ABNT NBR 17240:2010; (5) Controle de fumaça — ABNT NBR 15828:2014. SISTEMAS PASSIVOS (protegem a estrutura e facilitam a evacuação): (1) Saídas de emergência — ABNT NBR 9077:2001; (2) Iluminação de emergência — ABNT NBR 10898:2013; (3) Sinalização de emergência — ABNT NBR 13434 (partes 1, 2 e 3); (4) Compartimentação e resistência ao fogo — ABNT NBR 14432:2001; (5) Portas corta-fogo — ABNT NBR 11742:2018; (6) Prescrições de afastamento — ABNT NBR 15575 e Código de Obras. A combinação de sistemas exigida depende da ocupação, da área, da altura e do risco da edificação, conforme Instruções Técnicas (ITs) do Corpo de Bombeiros estadual e o Código de Segurança Contra Incêndio vigente.</p>
+                            <div class="sm-normas"><span class="sm-norma-tag">ABNT NBR 12693:2021 (Extintores)</span><span class="sm-norma-tag">ABNT NBR 13714:2000 (Hidrantes)</span><span class="sm-norma-tag">ABNT NBR 10897:2020 (Sprinklers)</span><span class="sm-norma-tag">ABNT NBR 17240:2010 (Detecção e alarme)</span><span class="sm-norma-tag">ABNT NBR 9077:2001 (Saídas de emergência)</span><span class="sm-norma-tag">ABNT NBR 10898:2013 (Iluminação de emergência)</span></div>
+                            <div style="margin-top:var(--space-2);display:flex;gap:var(--space-3);align-items:center;">
+                                <span class="sm-gravidade alta"><i class="fas fa-exclamation-circle"></i> Alta</span>
+                                <span style="font-size:var(--fs-xs);color:var(--text-muted);">Responsável: Projetista / Proprietário</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>O que é o PPCI e quem deve elaborá-lo?</h3><span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>O PPCI (Plano de Prevenção e Proteção Contra Incêndio) — também chamado de Projeto Técnico de Segurança Contra Incêndio — é o projeto completo que especifica todos os sistemas de proteção contra incêndio e pânico necessários para a edificação. Deve ser elaborado por profissional habilitado (engenheiro civil, engenheiro de segurança do trabalho ou arquiteto com registro no CREA/CAU e habilitação específica), com ART ou RRT. O PPCI deve conter: (a) planta baixa com layout dos sistemas de proteção; (b) memorial descritivo de cada sistema; (c) dimensionamento hidráulico (hidrantes, sprinklers, reserva técnica de incêndio); (d) cálculo de lotação e dimensionamento de saídas de emergência (ABNT NBR 9077); (e) especificação de materiais e equipamentos por norma; (f) declaração de conformidade. O PPCI é submetido ao Corpo de Bombeiros para análise e aprovação ANTES da execução. Após aprovação e instalação dos sistemas, o Corpo de Bombeiros realiza vistoria para emissão do AVCB. Qualquer modificação posterior na edificação que altere área, ocupação ou risco exige novo PPCI.</p>
+                            <div class="sm-normas"><span class="sm-norma-tag">Lei nº 13.425/2017</span><span class="sm-norma-tag">ABNT NBR 9077:2001</span><span class="sm-norma-tag">ABNT NBR 15219:2005 (Plano de emergência)</span><span class="sm-norma-tag">Instruções Técnicas do CB estadual</span><span class="sm-norma-tag">Lei nº 5.194/1966 (ART)</span></div>
+                            <div style="margin-top:var(--space-2);display:flex;gap:var(--space-3);align-items:center;">
+                                <span class="sm-gravidade alta"><i class="fas fa-exclamation-circle"></i> Alta</span>
+                                <span style="font-size:var(--fs-xs);color:var(--text-muted);">Responsável: Engenheiro / Arquiteto habilitado</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>Quais são as penalidades por não possuir AVCB válido?</h3><span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>As consequências de operar sem AVCB válido são severas e multiesféricas: (1) Administrativa — multas aplicadas pelo Corpo de Bombeiros e pela Prefeitura (indeferimento ou cassação do alvará de funcionamento). Em Goiás, a lei estadual prevê multas progressivas, embargo e interdição; (2) Criminal — a Lei nº 13.425/2017 (Lei Kiss, art. 3º) tipifica como infração criminal a conduta de quem permitir o funcionamento de estabelecimento sem AVCB. Em caso de incêndio com vítimas, os responsáveis podem responder por homicídio doloso eventual (quando assumem o risco conhecendo a irregularidade) — como ocorreu na Boate Kiss, onde os réus foram condenados a mais de 20 anos de reclusão; (3) Civil — responsabilidade por danos materiais e morais a terceiros (Código Civil, arts. 186 e 927); (4) Securitária — a seguradora pode recusar cobertura se a edificação não possuía AVCB válido na data do sinistro (agravamento de risco, Código Civil, art. 769); (5) Trabalhista — o art. 161 da CLT autoriza a interdição de estabelecimento em caso de 'grave e iminente risco', com pagamento de salários durante a paralisação.</p>
+                            <div class="sm-normas"><span class="sm-norma-tag">Lei nº 13.425/2017, art. 3º</span><span class="sm-norma-tag">CLT, art. 161</span><span class="sm-norma-tag">Código Civil, arts. 186, 769, 927</span><span class="sm-norma-tag">Código Penal, arts. 121 e 132</span><span class="sm-norma-tag">Lei estadual de segurança contra incêndio</span></div>
+                            <div style="margin-top:var(--space-2);display:flex;gap:var(--space-3);align-items:center;">
+                                <span class="sm-gravidade alta"><i class="fas fa-exclamation-circle"></i> Alta</span>
+                                <span style="font-size:var(--fs-xs);color:var(--text-muted);">Responsável: Proprietário / Responsável técnico / Gestor</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>O que é a brigada de incêndio e quando ela é obrigatória?</h3><span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>A brigada de incêndio é o grupo organizado de trabalhadores voluntários ou designados, treinados para atuar em emergências (incêndio, evacuação, primeiros socorros). É regulamentada pela ABNT NBR 14276:2020 (Brigada de Incêndio — Requisitos e procedimentos). A obrigatoriedade varia conforme legislação estadual e federal: (1) A NR-23 (Proteção contra incêndios) obriga o empregador a adotar medidas de prevenção, incluindo pessoas capacitadas para operar os equipamentos e conduzir evacuação; (2) A Lei nº 13.425/2017, art. 2º, §1º, determina fiscalização periódica que inclui verificação de pessoal treinado; (3) A NBR 14276 define o dimensionamento mínimo por ocupação e área — por exemplo, edificações comerciais acima de 750 m² necessitam de brigadistas formados. A formação abrange: combate a princípio de incêndio, uso de extintores e hidrantes, técnicas de abandono de área, primeiros socorros e comunicação com Corpo de Bombeiros. A reciclagem é anual. Edificações sem brigada formada e documentada podem ter o AVCB indeferido ou cassado.</p>
+                            <div class="sm-normas"><span class="sm-norma-tag">ABNT NBR 14276:2020</span><span class="sm-norma-tag">NR-23 (Proteção contra incêndios)</span><span class="sm-norma-tag">Lei nº 13.425/2017</span><span class="sm-norma-tag">Instruções Técnicas do CB estadual</span></div>
+                            <div style="margin-top:var(--space-2);display:flex;gap:var(--space-3);align-items:center;">
+                                <span class="sm-gravidade alta"><i class="fas fa-exclamation-circle"></i> Alta</span>
+                                <span style="font-size:var(--fs-xs);color:var(--text-muted);">Responsável: Empregador / Proprietário</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>Qual o dimensionamento correto da reserva técnica de incêndio (RTI)?</h3><span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>A Reserva Técnica de Incêndio (RTI) é o volume de água exclusivamente destinado ao combate a incêndio, que deve estar permanentemente disponível no reservatório da edificação. O dimensionamento segue a ABNT NBR 13714:2000 (hidrantes e mangotinhos) e ABNT NBR 10897:2020 (sprinklers), considerando: (1) Para sistema de hidrantes: a RTI mínima depende do tipo de sistema — Tipo 1 (mangotinhos de 25mm): mínimo de 2.800 litros; Tipo 2 (mangueiras de 40mm): variável conforme vazão e autonomia, geralmente de 6.000 a 12.000 litros; Tipo 3 (mangueiras de 65mm): acima de 12.000 litros; (2) Para sprinklers: a NBR 10897 define a reserva conforme classificação de risco (leve, ordinário ou extraordinário), área de operação e densidade de aplicação — variando de 19.000 a mais de 100.000 litros; (3) A RTI não pode ser compartilhada com o consumo predial sem barrilete de separação ou dispositivo que garanta a reserva mínima. Em Goiás, as Instruções Técnicas do CBMGO podem exigir volumes superiores às normas ABNT dependendo da classificação da ocupação. A insuficiência de RTI é motivo para indeferimento do AVCB.</p>
+                            <div class="sm-normas"><span class="sm-norma-tag">ABNT NBR 13714:2000</span><span class="sm-norma-tag">ABNT NBR 10897:2020</span><span class="sm-norma-tag">Instruções Técnicas do CB estadual</span><span class="sm-norma-tag">ABNT NBR 5626 (Sistemas prediais de água)</span></div>
+                            <div style="margin-top:var(--space-2);display:flex;gap:var(--space-3);align-items:center;">
+                                <span class="sm-gravidade alta"><i class="fas fa-exclamation-circle"></i> Alta</span>
+                                <span style="font-size:var(--fs-xs);color:var(--text-muted);">Responsável: Projetista / Engenheiro Civil</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>O que é o CERCON do Corpo de Bombeiros de Goiás?</h3><span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>O CERCON (Certificado de Conformidade) é o sistema eletrônico do Corpo de Bombeiros Militar do Estado de Goiás (CBMGO) para emissão de documentos de regularização de edificações quanto à segurança contra incêndio e pânico. Regulamentado pela legislação estadual de Goiás (Lei Estadual e Decreto regulamentador do COSCIP-GO), o CERCON permite que estabelecimentos de baixa complexidade obtenham certificação por autodeclaração do responsável ou do engenheiro/arquiteto signatário, sem necessidade de vistoria prévia do Corpo de Bombeiros — similar ao CLCB de outros estados. No entanto, o Corpo de Bombeiros reserva o direito de realizar vistorias aleatórias ou motivadas, e sua informação falsa configura crime (falsidade ideológica, art. 299, CP). Para edificações de maior complexidade, o CERCON exige projeto técnico aprovado e vistoria presencial (equivalente ao AVCB). A PROTON realiza a assessoria completa: elaboração do PPCI, acompanhamento de aprovação no CBMGO, execução das adequações necessárias e obtenção do CERCON, com ART de engenheiro de segurança do trabalho.</p>
+                            <div class="sm-normas"><span class="sm-norma-tag">COSCIP-GO (Código de Segurança Contra Incêndio e Pânico de Goiás)</span><span class="sm-norma-tag">Lei nº 13.425/2017</span><span class="sm-norma-tag">Código Penal, art. 299 (falsidade ideológica)</span><span class="sm-norma-tag">CBMGO — Sistema CERCON</span></div>
+                            <div style="margin-top:var(--space-2);display:flex;gap:var(--space-3);align-items:center;">
+                                <span class="sm-gravidade alta"><i class="fas fa-exclamation-circle"></i> Alta</span>
+                                <span style="font-size:var(--fs-xs);color:var(--text-muted);">Responsável: Proprietário / Engenheiro habilitado</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>A Lei Kiss (nº 13.425/2017) se aplica apenas a casas noturnas?</h3><span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>Não. A Lei nº 13.425/2017, embora tenha sido motivada pelo incêndio na Boate Kiss, aplica-se a TODAS as edificações e áreas de risco. O art. 1º estabelece que a lei 'dispõe sobre as medidas de prevenção e combate a incêndio e a desastres em estabelecimentos, edificações e áreas de reunião de público.' O art. 2º é claro: 'é obrigatória a adequação das edificações às normas de segurança contra incêndio e pânico.' A Lei Kiss trouxe exigências relevantes para todos os setores: (1) Obriga Estados e Municípios a legislarem sobre prevenção contra incêndio (art. 2º, §1º); (2) Exige que o Corpo de Bombeiros tenha estrutura adequada para fiscalização (art. 2º, §2º); (3) Estabelece regras para eventos temporários com público significativo; (4) Responsabiliza solidariamente proprietários, administradores, construtores e responsáveis técnicos (art. 3º); (5) Torna obrigatória a autorização do Corpo de Bombeiros para funcionamento de estabelecimentos. Na prática, a Lei Kiss é invocada em qualquer ação judicial envolvendo incêndio em edificação irregular — independentemente do tipo de uso.</p>
+                            <div class="sm-normas"><span class="sm-norma-tag">Lei nº 13.425/2017, arts. 1º, 2º e 3º</span><span class="sm-norma-tag">CLT, art. 200, IV</span><span class="sm-norma-tag">Código Civil, art. 927 (responsabilidade objetiva)</span></div>
+                            <div style="margin-top:var(--space-2);display:flex;gap:var(--space-3);align-items:center;">
+                                <span class="sm-gravidade alta"><i class="fas fa-exclamation-circle"></i> Alta</span>
+                                <span style="font-size:var(--fs-xs);color:var(--text-muted);">Responsável: Proprietário / Poder Público / RT</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>Qual a periodicidade obrigatória de manutenção dos sistemas de combate a incêndio?</h3><span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>As manutenções dos sistemas de combate a incêndio seguem periodicidades definidas por norma e legislação: (1) Extintores — inspeção mensal visual + recarga anual ou quando utilizado + teste hidrostático a cada 5 anos (ABNT NBR 12693 e IT do CB); (2) Hidrantes — teste trimestral de funcionamento (válvulas, mangueiras, esguichos) + teste hidrostático de mangueiras a cada 5 anos (ABNT NBR 13714); (3) Sprinklers — inspeção semanal do sistema de alarme, trimestral das válvulas de governo e alarme, anual completa + teste de fluxo (ABNT NBR 10897 e NFPA 25); (4) Sistema de detecção e alarme — teste mensal dos acionadores manuais, semestral dos detectores, anual completo (ABNT NBR 17240); (5) Iluminação de emergência — teste mensal de funcionamento por 1 hora + teste anual de autonomia completa (ABNT NBR 10898); (6) Portas corta-fogo — inspeção semestral (ABNT NBR 11742); (7) Grupo moto-gerador de emergência — teste mensal sob carga. Todas as manutenções devem ser documentadas em livro ou sistema eletrônico. A falta de registro de manutenção é motivo para indeferimento ou cassação do AVCB e agravante em sinistro.</p>
+                            <div class="sm-normas"><span class="sm-norma-tag">ABNT NBR 12693 (Extintores)</span><span class="sm-norma-tag">ABNT NBR 13714 (Hidrantes)</span><span class="sm-norma-tag">ABNT NBR 10897 (Sprinklers)</span><span class="sm-norma-tag">ABNT NBR 17240 (Detecção e alarme)</span><span class="sm-norma-tag">ABNT NBR 10898 (Iluminação de emergência)</span><span class="sm-norma-tag">NFPA 25 (Inspeção e manutenção)</span></div>
+                            <div style="margin-top:var(--space-2);display:flex;gap:var(--space-3);align-items:center;">
+                                <span class="sm-gravidade alta"><i class="fas fa-exclamation-circle"></i> Alta</span>
+                                <span style="font-size:var(--fs-xs);color:var(--text-muted);">Responsável: Proprietário / Síndico / Gestor</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    </div>
+                    <div class="saiba-mais-cta">
+                        <a href="../conhecimento-tecnico/" class="sm-link-servico"><i class="fas fa-book-open"></i> Base de Conhecimento Completa</a>
+                    <a href="https://api.whatsapp.com/send?phone=5516982203631&text=Olá, preciso de informações sobre Incêndio, AVCB e CLCB em Ibitinga!" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" style="font-size:var(--fs-sm);padding:var(--space-2) var(--space-4);"><i class="fab fa-whatsapp"></i> Ibitinga (16)</a>                    </div>
+                </div>
+            </details>
+        </div>
+    </section>
+<section class="section contact-section" id="contato">
         <div class="container">
             <div class="section-header reveal">
                 <span class="badge badge-green">Contato</span>

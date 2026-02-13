@@ -575,7 +575,118 @@
     </section>
 
     <!-- CONTATO -->
-    <section class="section section-alt contact-section" id="contato">
+    
+    <!-- SAIBA MAIS — Conteúdo Técnico Indexável -->
+    <section class="section saiba-mais-section">
+        <div class="container container-narrow">
+            <details class="saiba-mais-wrapper">
+                <summary class="saiba-mais-summary">
+                    <div class="sm-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <h2>Saiba Mais — <span>Regularização de Galpões</span></h2>
+                    <i class="fas fa-chevron-down sm-chevron"></i>
+                </summary>
+                <div class="saiba-mais-content">
+                    <p style="color:var(--text-secondary);font-size:var(--fs-sm);margin-bottom:var(--space-6);">Dúvidas técnicas frequentes com fundamentação em normas ABNT, NRs e legislação brasileira. Conteúdo elaborado por engenheiros da Proton.</p>
+                    <div class="sm-faq-list">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>Meu galpão foi construído sem alvará — é possível regularizar?</h3><span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>Sim, na maioria dos municípios é possível regularizar galpões construídos sem alvará de construção por meio do processo de 'regularização de obra' ou 'anistia'. O procedimento varia conforme a legislação municipal, mas geralmente envolve: (1) Laudo de estabilidade estrutural — assinado por engenheiro civil ou mecânico (com ART/CREA), atestando que a edificação suporta as cargas previstas e não apresenta riscos de colapso. A ABNT NBR 16747:2018 (Inspeção de edificações) e a NBR 6118 (Estruturas de concreto) ou NBR 8800 (Estruturas de aço) são as normas de referência; (2) Projeto 'as built' — planta da construção como executada, com memorial descritivo; (3) AVCB ou CLCB — aprovação pelo Corpo de Bombeiros; (4) Aprovação sanitária e ambiental — conforme a atividade (ANVISA, órgão ambiental municipal/estadual); (5) Pagamento de ISS retroativo e eventuais multas. O Código Civil, art. 1.299, garante ao proprietário o direito de construir, mas subordinado às posturas municipais (art. 1.228, §1º). A Lei nº 10.257/2001 (Estatuto da Cidade), art. 2º, VII, reconhece a regularização fundiária como diretriz da política urbana.</p>
+                            <div class="sm-normas"><span class="sm-norma-tag">ABNT NBR 16747:2018</span><span class="sm-norma-tag">ABNT NBR 6118 (concreto) / NBR 8800 (aço)</span><span class="sm-norma-tag">Código Civil, arts. 1.228 e 1.299</span><span class="sm-norma-tag">Lei nº 10.257/2001 (Estatuto da Cidade), art. 2º, VII</span><span class="sm-norma-tag">Código de Obras Municipal</span></div>
+                            <div style="margin-top:var(--space-2);display:flex;gap:var(--space-3);align-items:center;">
+                                <span class="sm-gravidade alta"><i class="fas fa-exclamation-circle"></i> Alta</span>
+                                <span style="font-size:var(--fs-xs);color:var(--text-muted);">Responsável: Proprietário / Engenheiro responsável</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>O que é o habite-se e por que ele é obrigatório para galpões?</h3><span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>O Habite-se (ou Auto de Conclusão / Carta de Habitação, conforme o município) é o documento emitido pela prefeitura que atesta que a edificação foi construída conforme o projeto aprovado e está em condições de ser utilizada. É obrigatório para TODAS as edificações, incluindo galpões industriais e comerciais. Sem habite-se: (a) não é possível obter alvará de funcionamento definitivo; (b) o imóvel não pode ser financiado ou dado em garantia bancária; (c) a matrícula do imóvel fica irregular no Cartório de Registro de Imóveis; (d) o IPTU pode ser cobrado com alíquota majorada (muitos municípios aplicam alíquota progressiva para imóveis irregulares); (e) seguradoras podem recusar cobertura ou negar sinistros. Para galpões existentes sem habite-se, o processo de regularização requer laudo de estabilidade, projeto 'as built', PPCI aprovado pelo Corpo de Bombeiros e pagamento de taxas retroativas. A Lei nº 13.865/2019 facilitou a regularização de imóveis informais em alguns municípios.</p>
+                            <div class="sm-normas"><span class="sm-norma-tag">Código de Obras Municipal</span><span class="sm-norma-tag">Lei nº 6.015/1973 (Registros Públicos), art. 167, II, 13</span><span class="sm-norma-tag">Lei nº 13.865/2019</span></div>
+                            <div style="margin-top:var(--space-2);display:flex;gap:var(--space-3);align-items:center;">
+                                <span class="sm-gravidade alta"><i class="fas fa-exclamation-circle"></i> Alta</span>
+                                <span style="font-size:var(--fs-xs);color:var(--text-muted);">Responsável: Proprietário</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>Qual é o laudo de estabilidade estrutural exigido para regularizar um galpão?</h3><span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>O laudo de estabilidade estrutural é o documento técnico que atesta a segurança da estrutura do galpão, confirmando que ela suporta as cargas atuantes (peso próprio, sobrecarga, vento, sismo se aplicável). Deve ser elaborado por engenheiro habilitado com registro no CREA e emissão de ART. O conteúdo mínimo do laudo inclui: (1) Identificação da edificação — localização, proprietário, área construída, uso/ocupação; (2) Descrição do sistema estrutural — tipo (metálico, concreto, misto), dimensões, apoios, cobertura; (3) Inspeção visual detalhada — fissuras, corrosão, deformações, recalques; (4) Verificação de conformidade com as normas: NBR 8800:2008 (Estruturas de aço e mistas), NBR 6118:2014 (Concreto armado), NBR 6120:2019 (Ações para o cálculo de estruturas), NBR 6123:2023 (Forças devidas ao vento); (5) Ensaios complementares se necessário — esclerometria, ultrassom, prova de carga; (6) Conclusão — 'Apta' ou 'Inapta' para uso, com condições e ressalvas; (7) ART. Este laudo é requisito para habite-se retroativo e para emissão do AVCB.</p>
+                            <div class="sm-normas"><span class="sm-norma-tag">ABNT NBR 8800:2008</span><span class="sm-norma-tag">ABNT NBR 6118:2014</span><span class="sm-norma-tag">ABNT NBR 6120:2019</span><span class="sm-norma-tag">ABNT NBR 6123:2023</span><span class="sm-norma-tag">ABNT NBR 16747:2018</span><span class="sm-norma-tag">Lei nº 6.496/1977 (ART)</span></div>
+                            <div style="margin-top:var(--space-2);display:flex;gap:var(--space-3);align-items:center;">
+                                <span class="sm-gravidade alta"><i class="fas fa-exclamation-circle"></i> Alta</span>
+                                <span style="font-size:var(--fs-xs);color:var(--text-muted);">Responsável: Engenheiro (CREA + ART)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>Galpão industrial precisa de AVCB?</h3><span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>Sim. A Lei nº 13.425/2017 (Lei Kiss) tornou obrigatória a emissão do AVCB (Auto de Vistoria do Corpo de Bombeiros) para todas as edificações e áreas de risco, sem exceção de galpões industriais. A Lei se aplica a: 'edificações e áreas de reunião de público' e 'todas as edificações e áreas de risco em que sejam exercidas atividades definidas no regulamento do respectivo Corpo de Bombeiros' (art. 2º). Galpões industriais são classificados como ocupação industrial conforme a tabela de classificação do COSCIP estadual. Os requisitos mínimos de proteção contra incêndio incluem: extintores (NBR 12693), hidrantes ou mangotinhos (NBR 13714), sinalização de emergência (NBR 13434), iluminação de emergência (NBR 10898), saídas de emergência (NBR 9077), alarme de incêndio (NBR 17240 ou NBR 11836), e dependendo da área e carga de incêndio: sprinklers (NBR 10897), brigada de incêndio (NBR 14276). A ausência de AVCB sujeita o proprietário a multas, interdição e, em caso de sinistro, responsabilidade criminal por crime de perigo comum (Código Penal, art. 250 — incêndio).</p>
+                            <div class="sm-normas"><span class="sm-norma-tag">Lei nº 13.425/2017, art. 2º</span><span class="sm-norma-tag">COSCIP Estadual</span><span class="sm-norma-tag">ABNT NBR 12693, 13714, 13434, 10898, 9077, 17240, 10897, 14276</span><span class="sm-norma-tag">Código Penal, art. 250</span></div>
+                            <div style="margin-top:var(--space-2);display:flex;gap:var(--space-3);align-items:center;">
+                                <span class="sm-gravidade alta"><i class="fas fa-exclamation-circle"></i> Alta</span>
+                                <span style="font-size:var(--fs-xs);color:var(--text-muted);">Responsável: Proprietário / Responsável técnico</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>Quais são as etapas completas para regularizar um galpão do zero?</h3><span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>O processo completo de regularização de um galpão existente envolve as seguintes etapas sequenciais: (1) Contratação de engenheiro/arquiteto — profissional habilitado com registro no CREA/CAU para responsabilidade técnica; (2) Levantamento planialtimétrico e 'as built' — planta do terreno e da edificação como executada; (3) Laudo de estabilidade estrutural — conforme NBR 16747, NBR 8800/6118; (4) Projeto de prevenção e combate a incêndio (PPCI) — dimensionamento de extintores, hidrantes, saídas de emergência, sinalização; (5) Protocolo no Corpo de Bombeiros — aprovação do PPCI e vistoria para emissão de AVCB/CLCB; (6) Protocolo na Prefeitura — pedido de regularização/habite-se com: projeto 'as built', ART, AVCB, licenças ambientais (se aplicável), comprovante de ISS; (7) Licenciamento ambiental — se a atividade for potencialmente poluidora (CONAMA Resolução 237/1997); (8) Alvará de funcionamento — emitido pela prefeitura após aprovação de todos os documentos; (9) Averbação no Cartório de Registro de Imóveis — atualização da matrícula com a construção regularizada (Lei 6.015/73). Prazo total estimado: 3 a 12 meses dependendo do município. Custo: varia conforme área, complexidade e taxas municipais.</p>
+                            <div class="sm-normas"><span class="sm-norma-tag">ABNT NBR 16747:2018</span><span class="sm-norma-tag">Lei nº 13.425/2017</span><span class="sm-norma-tag">CONAMA Resolução 237/1997</span><span class="sm-norma-tag">Lei nº 6.015/1973</span><span class="sm-norma-tag">Código de Obras Municipal</span></div>
+                            <div style="margin-top:var(--space-2);display:flex;gap:var(--space-3);align-items:center;">
+                                <span class="sm-gravidade alta"><i class="fas fa-exclamation-circle"></i> Alta</span>
+                                <span style="font-size:var(--fs-xs);color:var(--text-muted);">Responsável: Proprietário / Engenheiro responsável</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>Quais são as consequências de manter um galpão irregular?</h3><span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>Manter um galpão sem regularização gera riscos em múltiplas esferas: (1) Administrativa/Fiscal — multa municipal por construção irregular, IPTU com alíquota progressiva, impossibilidade de obter alvará de funcionamento, auto de infração da prefeitura, risco de demolição compulsória em casos extremos (CTN, art. 142); (2) Civil — impossibilidade de vender ou financiar o imóvel, seguradora pode negar cobertura de sinistros (Código Civil, art. 762 — agravamento do risco), depreciação do valor do imóvel; (3) Trabalhista — se houver atividade com funcionários, a irregularidade do galpão agrava a responsabilidade em caso de acidente de trabalho. Auditores do MTE podem interditar a atividade por condições inseguras; (4) Criminal — em caso de sinistro com vítimas (incêndio, desabamento), o proprietário responde por crime culposo (CP art. 121 §3º / 256 — desabamento culposo, pena de 6 meses a 2 anos). A Lei 13.425/2017 estabeleceu responsabilidade criminal solidária para proprietários, gestores e responsáveis técnicos; (5) Ambiental — multas ambientais se a atividade não tiver licenciamento (Lei 9.605/1998, crimes ambientais).</p>
+                            <div class="sm-normas"><span class="sm-norma-tag">Código Civil, art. 762</span><span class="sm-norma-tag">Código Penal, arts. 121 §3º e 256</span><span class="sm-norma-tag">Lei nº 13.425/2017</span><span class="sm-norma-tag">Lei nº 9.605/1998</span><span class="sm-norma-tag">CTN, art. 142</span></div>
+                            <div style="margin-top:var(--space-2);display:flex;gap:var(--space-3);align-items:center;">
+                                <span class="sm-gravidade alta"><i class="fas fa-exclamation-circle"></i> Alta</span>
+                                <span style="font-size:var(--fs-xs);color:var(--text-muted);">Responsável: Proprietário</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    </div>
+                    <div class="saiba-mais-cta">
+                        <a href="../conhecimento-tecnico/" class="sm-link-servico"><i class="fas fa-book-open"></i> Base de Conhecimento Completa</a>
+                    <a href="https://api.whatsapp.com/send?phone=5516982203631&text=Olá, preciso de informações sobre Regularização de Galpões em Ibitinga!" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" style="font-size:var(--fs-sm);padding:var(--space-2) var(--space-4);"><i class="fab fa-whatsapp"></i> Ibitinga (16)</a>                    </div>
+                </div>
+            </details>
+        </div>
+    </section>
+<section class="section section-alt contact-section" id="contato">
         <div class="container">
             <div class="section-header reveal">
                 <span class="badge badge-green">Contato</span>

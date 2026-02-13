@@ -770,7 +770,148 @@
     </section>
 
     <!-- ========== CONTATO ========== -->
-    <section class="section contact-section" id="contato">
+    
+    <!-- SAIBA MAIS — Conteúdo Técnico Indexável -->
+    <section class="section saiba-mais-section">
+        <div class="container container-narrow">
+            <details class="saiba-mais-wrapper">
+                <summary class="saiba-mais-summary">
+                    <div class="sm-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <h2>Saiba Mais — <span>Elevadores e Análise de Vibração</span></h2>
+                    <i class="fas fa-chevron-down sm-chevron"></i>
+                </summary>
+                <div class="saiba-mais-content">
+                    <p style="color:var(--text-secondary);font-size:var(--fs-sm);margin-bottom:var(--space-6);">Dúvidas técnicas frequentes com fundamentação em normas ABNT, NRs e legislação brasileira. Conteúdo elaborado por engenheiros da Proton.</p>
+                    <div class="sm-faq-list">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>O que configura vício de instalação versus desgaste natural em elevadores?</h3><span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>Arranhões superficiais e marcas de impacto compatíveis com a rotina do condomínio (mudanças, carrinhos, uso diário) são responsabilidade do condomínio. Entretanto, riscos profundos com traços de montagem inadequada, ajustes forçados ou mau alinhamento têm origem na instalação. Esses vícios de execução nem sempre são identificados na vistoria inicial e se manifestam como vícios ocultos da fase construtiva, cobertos pela garantia de 1 ano. A construtora deve realizar avaliação técnica para separar o que é desgaste de uso dos danos de instalação e, confirmada a falha de montagem, executar a correção, independentemente da assinatura do termo de entrega.</p>
+                            <div class="sm-normas"><span class="sm-norma-tag">NBR 16042</span><span class="sm-norma-tag">Código de Defesa do Consumidor</span></div>
+                            <div style="margin-top:var(--space-2);display:flex;gap:var(--space-3);align-items:center;">
+                                <span class="sm-gravidade media"><i class="fas fa-exclamation-circle"></i> Média</span>
+                                <span style="font-size:var(--fs-xs);color:var(--text-muted);">Responsável: Mista - requer avaliação técnica</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>Cabos soltos no fosso são problema da conservadora ou da construtora?</h3><span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>A acomodação inadequada dos cabos no fosso, presos apenas com abraçadeiras e sem canaletas ou bandejamento projetado, caracteriza vício construtivo/instalação do sistema de transporte vertical. A responsabilidade permanece com a construtora, ainda que a execução tenha sido terceirizada (ex.: Atlas). Durante o período de garantia, cabe à construtora coordenar a correção junto à empresa responsável técnica pelos elevadores, garantindo atendimento às normas aplicáveis e à segurança operacional.</p>
+                            <div class="sm-normas"><span class="sm-norma-tag">NBR 16042</span><span class="sm-norma-tag">NBR NM 207</span></div>
+                            <div style="margin-top:var(--space-2);display:flex;gap:var(--space-3);align-items:center;">
+                                <span class="sm-gravidade alta"><i class="fas fa-exclamation-circle"></i> Alta</span>
+                                <span style="font-size:var(--fs-xs);color:var(--text-muted);">Responsável: Construtora</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>Ruído e vibração excessivos são sempre problema de manutenção?</h3><span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>Não. Os fabricantes de elevadores definem limites de vibração e ruído para operação aceitável (ex.: Schindler estabelece 62 dB(A) no fosso e movimentação lateral inferior a 25 mg). Ensaios que identificam níveis superiores ou vibrações coincidentes com ruídos em operação real configuram não conformidade técnica. Mesmo quando a construtora questiona os valores medidos, o registro audiovisual de vibração sincronizada com ruído caracteriza evidência física de anomalia. Cabe à construtora coordenar a análise e correção durante a garantia, acionando a empresa de manutenção para investigar rolamentos, contrapeso, guias e sistemas de amortecimento.</p>
+                            <div class="sm-normas"><span class="sm-norma-tag">NBR 16042</span><span class="sm-norma-tag">ISO 8041</span><span class="sm-norma-tag">Boletins técnicos de fabricantes</span></div>
+                            <div style="margin-top:var(--space-2);display:flex;gap:var(--space-3);align-items:center;">
+                                <span class="sm-gravidade alta"><i class="fas fa-exclamation-circle"></i> Alta</span>
+                                <span style="font-size:var(--fs-xs);color:var(--text-muted);">Responsável: Construtora</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>Qual o padrão aceitável para cartazes de alerta nos elevadores?</h3><span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>A Lei Estadual 20.518/2019 exige a afixação de cartaz informativo, de caráter de alerta, na parte externa dos elevadores, em local visível e em língua portuguesa. O termo "cartaz" pressupõe suporte de dimensões que garantam leitura rápida, com mensagem clara de advertência. Placas diminutas ou com tipografia ilegível não atendem à finalidade legal de alertar usuários. É responsabilidade da construtora entregar o sistema com sinalização visível e funcional, podendo o condomínio complementar apenas após a conformidade mínima ser atendida.</p>
+                            <div class="sm-normas"><span class="sm-norma-tag">Lei Estadual 20.518/2019 (GO)</span></div>
+                            <div style="margin-top:var(--space-2);display:flex;gap:var(--space-3);align-items:center;">
+                                <span class="sm-gravidade media"><i class="fas fa-exclamation-circle"></i> Média</span>
+                                <span style="font-size:var(--fs-xs);color:var(--text-muted);">Responsável: Construtora</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>Como tratar ruídos anormais em motores de tração?</h3><span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>Ruídos excessivos em motores de tração, percebidos em comparação direta com outras máquinas idênticas, são indícios de desbalanceamento, desgaste de rolamentos ou falhas de montagem. São fatos físicos observáveis que justificam intervenção corretiva, mesmo sem medição instrumental imediata. A construtora deve acionar a empresa instaladora para diagnóstico e correção antes da entrega, evitando agravamento do defeito e riscos operacionais. O condomínio só deve assumir o sistema após justificativa técnica formal ou correção.</p>
+                            <div class="sm-normas"><span class="sm-norma-tag">NBR 16042</span></div>
+                            <div style="margin-top:var(--space-2);display:flex;gap:var(--space-3);align-items:center;">
+                                <span class="sm-gravidade alta"><i class="fas fa-exclamation-circle"></i> Alta</span>
+                                <span style="font-size:var(--fs-xs);color:var(--text-muted);">Responsável: Construtora</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>A numeração provisória das casas de máquinas pode permanecer após a entrega?</h3><span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>Não é recomendável manter identificações provisórias ou ambíguas na casa de máquinas. A rastreabilidade operacional exige que a numeração de cabines, quadros de comando e registros de manutenção estejam alinhados. Incoerências geram risco em emergências e dificultam inspeções. A construtora deve padronizar a sinalização conforme a identificação oficial de cada equipamento antes da entrega. Caso não o faça, recomenda-se ao condomínio providenciar a padronização o quanto antes.</p>
+                            <div class="sm-normas"><span class="sm-norma-tag">Boas práticas de manutenção</span><span class="sm-norma-tag">NBR 5410 (organização de quadros elétricos)</span></div>
+                            <div style="margin-top:var(--space-2);display:flex;gap:var(--space-3);align-items:center;">
+                                <span class="sm-gravidade media"><i class="fas fa-exclamation-circle"></i> Média</span>
+                                <span style="font-size:var(--fs-xs);color:var(--text-muted);">Responsável: Construtora</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>Pintura do fosso é apenas questão estética?</h3><span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>Não. A NR 15 trata de ambientes insalubres e orienta eliminar agentes nocivos, como excesso de óleos lubrificantes. A pintura ajuda a identificar vazamentos futuros, facilita limpeza e permite aplicar sinalização obrigatória (NR 26) nas áreas de segurança. Marcas persistentes de óleo indicam que o problema não é apenas estético, mas afeta condições de trabalho e inspeção. A construtora deve corrigir a origem do vazamento, limpar e repintar a área para entrega em conformidade.</p>
+                            <div class="sm-normas"><span class="sm-norma-tag">NR 15</span><span class="sm-norma-tag">NR 26</span></div>
+                            <div style="margin-top:var(--space-2);display:flex;gap:var(--space-3);align-items:center;">
+                                <span class="sm-gravidade media"><i class="fas fa-exclamation-circle"></i> Média</span>
+                                <span style="font-size:var(--fs-xs);color:var(--text-muted);">Responsável: Construtora</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>Como proceder quando há evidência de contato com água em elevadores?</h3><span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>Contato de elevadores com água (alagamentos, infiltrações) compromete componentes elétricos, eletrônicos e mecânicos, reduzindo a vida útil por corrosão e aumentando o risco de falhas. Recomenda-se avaliação conjunta entre construtora, condomínio e empresa de manutenção para inspecionar poço, conectores, sensores e botoeiras antes da entrega ou reativação. Devem ser realizados testes específicos e, se necessário, desmontes seletivos para garantir que não haja oxidação ou contaminação que comprometa a segurança operacional.</p>
+                            <div class="sm-normas"><span class="sm-norma-tag">Boas práticas de manutenção</span><span class="sm-norma-tag">NBR NM 207</span></div>
+                            <div style="margin-top:var(--space-2);display:flex;gap:var(--space-3);align-items:center;">
+                                <span class="sm-gravidade alta"><i class="fas fa-exclamation-circle"></i> Alta</span>
+                                <span style="font-size:var(--fs-xs);color:var(--text-muted);">Responsável: Construtora</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    </div>
+                    <div class="saiba-mais-cta">
+                        <a href="../conhecimento-tecnico/" class="sm-link-servico"><i class="fas fa-book-open"></i> Base de Conhecimento Completa</a>
+                    <a href="https://api.whatsapp.com/send?phone=5516982203631&text=Olá, preciso de análise de vibração em elevadores!" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" style="font-size:var(--fs-sm);padding:var(--space-2) var(--space-4);"><i class="fab fa-whatsapp"></i> Porto Alegre (16)</a>                    </div>
+                </div>
+            </details>
+        </div>
+    </section>
+<section class="section contact-section" id="contato">
         <div class="container">
             <div class="section-header reveal">
                 <span class="badge badge-green">Contato</span>

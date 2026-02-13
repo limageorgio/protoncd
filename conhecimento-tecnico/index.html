@@ -1834,6 +1834,120 @@
             { nome: "CERCON Goiás", icone: "fas fa-file-alt", arquivo: "cercon-goias-detalhado.json", cor: "cat-green" }
         ];
 
+        // Mapeamento: arquivo JSON → página de serviço + WhatsApp por região
+        const catServicos = {
+            "hvac-climatizacao.json": {
+                link: "/inspecao-hvac-pmoc.html",
+                texto: "Inspeção HVAC e PMOC",
+                wa: [{ c: "Goiânia", n: "5562992852704" }, { c: "Ibitinga", n: "5516982203631" }]
+            },
+            "portas-cortafogo.json": {
+                link: "/inspecao-combate-incendio.html",
+                texto: "Inspeção de Combate a Incêndio",
+                wa: [{ c: "Goiânia", n: "5562992852704" }]
+            },
+            "elevadores.json": {
+                link: "/analise-vibracao-elevadores.html",
+                texto: "Análise de Vibração em Elevadores",
+                wa: [{ c: "Goiânia", n: "5562992852704" }]
+            },
+            "playgrounds.json": {
+                link: "/inspecao-playgrounds.html",
+                texto: "Inspeção de Playgrounds",
+                wa: [{ c: "Goiânia", n: "5562992852704" }, { c: "Ibitinga", n: "5516982203631" }]
+            },
+            "casas-maquinas.json": {
+                link: "/inspecao-sistemas-mecanicos.html",
+                texto: "Inspeção de Sistemas Mecânicos",
+                wa: [{ c: "Goiânia", n: "5562992852704" }]
+            },
+            "instalacoes-gas.json": {
+                link: "/inspecao-gas-predial.html",
+                texto: "Inspeção de Gás Predial",
+                wa: [{ c: "Goiânia", n: "5562992852704" }]
+            },
+            "pressurizacao.json": {
+                link: "/inspecao-pressurizacao-escadas.html",
+                texto: "Pressurização de Escadas",
+                wa: [{ c: "Goiânia", n: "5562992852704" }]
+            },
+            "impermeabilizacao.json": {
+                link: null,
+                texto: null,
+                wa: [{ c: "Goiânia", n: "5562992852704" }]
+            },
+            "estruturas-metalicas.json": {
+                link: null,
+                texto: null,
+                wa: [{ c: "Goiânia", n: "5562992852704" }]
+            },
+            "nr12-maquinas.json": {
+                link: "/ibitinga/nr12-ibitinga.html",
+                texto: "NR-12 — Segurança em Máquinas",
+                wa: [{ c: "Ibitinga", n: "5516982203631" }, { c: "Goiânia SST", n: "5562992346424" }]
+            },
+            "seguranca-trabalho.json": {
+                link: "/goiania/seguranca-trabalho-goiania.html",
+                texto: "Segurança do Trabalho",
+                wa: [{ c: "Goiânia SST", n: "5562992346424" }, { c: "Ibitinga", n: "5516982203631" }]
+            },
+            "nr17-ergonomia.json": {
+                link: null,
+                texto: null,
+                wa: [{ c: "Goiânia SST", n: "5562992346424" }]
+            },
+            "pericia-engenharia.json": {
+                link: "/laudo-pericial-engenharia.html",
+                texto: "Laudo Pericial de Engenharia",
+                wa: [{ c: "Goiânia", n: "5562992852704" }, { c: "Ibitinga", n: "5516982203631" }]
+            },
+            "incendio-avcb.json": {
+                link: "/inspecao-combate-incendio.html",
+                texto: "Combate a Incêndio, AVCB e CLCB",
+                wa: [{ c: "Goiânia", n: "5562992852704" }]
+            },
+            "nr35-altura-olhais.json": {
+                link: "/teste-arrancamento-olhais.html",
+                texto: "Teste de Arrancamento de Olhais (NR-35)",
+                wa: [{ c: "Goiânia", n: "5562992852704" }]
+            },
+            "casas-bombas.json": {
+                link: "/inspecao-casa-bombas.html",
+                texto: "Inspeção de Casa de Bombas",
+                wa: [{ c: "Goiânia", n: "5562992852704" }]
+            },
+            "treinamentos-nr.json": {
+                link: "/goiania/treinamentos-nr-goiania.html",
+                texto: "Treinamentos NR",
+                wa: [{ c: "Goiânia SST", n: "5562992346424" }]
+            },
+            "regularizacao-galpoes.json": {
+                link: "/ibitinga/regularizacao-galpoes-ibitinga.html",
+                texto: "Regularização de Galpões",
+                wa: [{ c: "Ibitinga", n: "5516982203631" }]
+            },
+            "nr13-caldeiras.json": {
+                link: null,
+                texto: null,
+                wa: [{ c: "Goiânia SST", n: "5562992346424" }]
+            },
+            "nr11-transporte.json": {
+                link: null,
+                texto: null,
+                wa: [{ c: "Goiânia SST", n: "5562992346424" }]
+            },
+            "projetos-estruturais.json": {
+                link: "/ibitinga/projetos-arquitetonicos-ibitinga.html",
+                texto: "Projetos Arquitetônicos e Estruturais",
+                wa: [{ c: "Ibitinga", n: "5516982203631" }]
+            },
+            "cercon-goias-detalhado.json": {
+                link: "/cercon-goias.html",
+                texto: "CERCON Goiás",
+                wa: [{ c: "Goiânia", n: "5562992852704" }]
+            }
+        };
+
         let todosOsFaqs = [];
         const descricaoCategorias = {};
         const dadosEmbedElemento = document.getElementById('dados-embed');
@@ -1920,6 +2034,25 @@
             html += '<h2 class="results-header"><span class="text-gradient">' + nomeCategoria + '</span></h2>';
             html += '<p class="results-desc">' + data.descricao + '</p>';
             data.faqs.forEach(faq => { html += criarCardFaq(faq); });
+
+            // CTA: link para página de serviço + WhatsApp por região
+            const catObj = categorias.find(c => c.nome === nomeCategoria);
+            if (catObj) {
+                const srv = catServicos[catObj.arquivo];
+                if (srv) {
+                    const msg = encodeURIComponent('Olá! Vi na base de conhecimento da Proton sobre ' + nomeCategoria + '. Gostaria de solicitar um orçamento.');
+                    html += '<div class="kb-cta-box">';
+                    html += '<p class="kb-cta-titulo"><i class="fas fa-headset"></i> Precisa deste serviço? Fale com um especialista:</p>';
+                    if (srv.link) {
+                        html += '<a href="' + srv.link + '" class="kb-servico-link"><i class="fas fa-arrow-right"></i> ' + srv.texto + '</a>';
+                    }
+                    srv.wa.forEach(function (w) {
+                        html += '<a href="https://wa.me/' + w.n + '?text=' + msg + '" target="_blank" rel="noopener" class="kb-wa-btn"><i class="fab fa-whatsapp"></i> ' + w.c + '</a>';
+                    });
+                    html += '</div>';
+                }
+            }
+
             container.innerHTML = html;
             window.scrollTo({ top: document.getElementById('faqs').offsetTop - 80, behavior: 'smooth' });
         }
