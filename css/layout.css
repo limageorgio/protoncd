@@ -332,9 +332,20 @@
 /* ===========================
    CLIENT LOGOS GRID
    =========================== */
+.clients-grid-wrapper {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: var(--radius-xl, 1.5rem);
+    padding: var(--space-6) var(--space-5);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: var(--space-4);
+    align-items: center;
+    justify-items: center;
+}
+
 .client-logo-item {
-    background: rgba(255, 255, 255, 0.92);
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: transparent;
+    border: none;
     border-radius: var(--radius-lg);
     padding: var(--space-3);
     display: flex;
@@ -345,12 +356,9 @@
 }
 
 .client-logo-item:hover {
-    background: rgba(255, 255, 255, 1);
-    border-color: var(--border-accent);
+    background: rgba(240, 248, 255, 0.6);
     transform: translateY(-4px);
-    box-shadow:
-        0 8px 24px rgba(59, 130, 246, 0.25),
-        0 0 40px rgba(96, 165, 250, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .client-logo-item img {
