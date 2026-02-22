@@ -1,0 +1,1422 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Relatório de Inspeção - Torre C1 - Elevador Social 3-4 - De Ocorrência</title>
+  <style>
+    @media print {
+      body { margin: 0; }
+      .no-print { display: none !important; }
+      .occurrence-card { break-inside: avoid; }
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f8fafc;
+      color: #1e293b;
+      line-height: 1.6;
+      padding: 20px;
+    }
+
+    .container { max-width: 900px; margin: 0 auto; }
+
+    .report-header {
+      background: linear-gradient(135deg, #1e3a5f, #2563eb);
+      color: white;
+      padding: 30px;
+      border-radius: 12px;
+      margin-bottom: 24px;
+    }
+    .report-header h1 { font-size: 22px; margin-bottom: 4px; }
+    .report-header .subtitle { font-size: 14px; opacity: 0.85; }
+    .report-header .mode-badge {
+      display: inline-block;
+      padding: 4px 12px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      margin-top: 10px;
+      letter-spacing: 0.5px;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    .info-card {
+      background: white;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 14px 18px;
+    }
+    .info-card .label { font-size: 11px; color: #64748b; text-transform: uppercase; letter-spacing: 0.5px; }
+    .info-card .value { font-size: 15px; font-weight: 700; color: #1e293b; margin-top: 2px; }
+
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+    .summary-item {
+      background: white;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 12px;
+      text-align: center;
+    }
+    .summary-item .count { font-size: 28px; font-weight: 800; }
+    .summary-item .label { font-size: 11px; color: #64748b; margin-top: 2px; }
+
+    .section-title { font-size: 18px; font-weight: 700; margin: 24px 0 12px; padding-bottom: 8px; border-bottom: 2px solid #e2e8f0; }
+
+    .occurrence-card {
+      background: white;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      margin-bottom: 16px;
+      overflow: hidden;
+    }
+    .occ-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 16px;
+      background: #f8fafc;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    .occ-number { display: flex; align-items: center; gap: 8px; font-size: 14px; }
+    .occ-icon { font-size: 18px; }
+    .occ-time { font-size: 13px; color: #3b82f6; font-weight: 600; }
+    
+    .yt-time-link {
+      color: #2563eb;
+      text-decoration: none;
+      transition: all 0.2s;
+      padding: 2px 6px;
+      border-radius: 4px;
+      display: inline-block;
+    }
+    .yt-time-link:hover {
+      background: #eff6ff;
+      color: #1d4ed8;
+      text-decoration: underline;
+    }
+
+    .status-badge, .severity-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    .occ-body { padding: 16px; }
+    .occ-field { margin-bottom: 12px; }
+    .occ-field:last-child { margin-bottom: 0; }
+    .field-label { font-size: 11px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.3px; }
+    .occ-field p { font-size: 14px; margin-top: 4px; }
+
+    .confirmed-field { background: #f0fdf4; padding: 10px; border-radius: 8px; border: 1px solid #bbf7d0; }
+    .discarded-field { background: #fef2f2; padding: 10px; border-radius: 8px; border: 1px solid #fecaca; }
+
+    .occ-meta {
+      display: flex;
+      gap: 8px;
+      font-size: 11px;
+      color: #94a3b8;
+      margin-top: 12px;
+      flex-wrap: wrap;
+    }
+
+    .photos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 10px;
+      margin-top: 12px;
+    }
+    .photo-item { text-align: center; }
+    .photo-item img {
+      width: 100%;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+    }
+    .photo-caption { font-size: 10px; color: #64748b; margin-top: 4px; display: block; }
+
+    .print-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #2563eb;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(37,99,235,0.4);
+      z-index: 100;
+    }
+    .print-btn:hover { background: #1d4ed8; }
+
+    footer { text-align: center; padding: 20px; color: #94a3b8; font-size: 12px; margin-top: 30px; }
+
+    /* YouTube / QR Code */
+    .youtube-block {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 16px;
+      align-items: center;
+      background: white;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 16px;
+      margin-bottom: 24px;
+    }
+    .youtube-qr img {
+      width: 220px;
+      height: 220px;
+      border-radius: 10px;
+      border: 1px solid #e2e8f0;
+      background: #fff;
+      display: block;
+    }
+    .youtube-label {
+      font-size: 12px;
+      color: #64748b;
+      margin-bottom: 6px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+    .youtube-url {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size: 12px;
+      color: #0f172a;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 10px;
+      word-break: break-all;
+      margin-bottom: 10px;
+    }
+    .youtube-link {
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 800;
+      color: #2563eb;
+      text-decoration: none;
+    }
+    .youtube-link:hover { text-decoration: underline; }
+
+    @media print {
+      .youtube-block { break-inside: avoid; }
+    }
+
+    
+    .yt-embed-section { margin-bottom: 20px; }
+    .yt-embed-wrapper {
+      position: relative; background: #000;
+      border-radius: 10px; overflow: hidden; aspect-ratio: 16 / 9;
+      margin-bottom: 10px;
+    }
+    /* Player div e iframe devem preencher 100% do wrapper */
+    .yt-embed-wrapper > div:not(.occ-video-overlay) {
+      position: absolute !important; top: 0 !important; left: 0 !important;
+      width: 100% !important; height: 100% !important;
+    }
+    .yt-embed-wrapper iframe {
+      position: absolute !important; top: 0 !important; left: 0 !important;
+      width: 100% !important; height: 100% !important; border: 0 !important;
+    }
+    .occ-video-overlay {
+      position: absolute; bottom: 70px; left: 12px;
+      background: rgba(10,17,35,0.92); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,0.15); border-radius: 10px;
+      padding: 10px 14px; max-width: 300px; color: #fff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.6);
+      pointer-events: none; opacity: 0; transition: opacity 0.3s ease;
+      z-index: 9999;
+    }
+    .occ-video-overlay.visible { opacity: 1; }
+    .occ-ov-header { display:flex; align-items:center; gap:6px; flex-wrap:wrap; margin-bottom:6px; }
+    .occ-ov-num { font-size:11px; font-weight:700; color:#94a3b8; white-space:nowrap; }
+    .occ-ov-badge { font-size:10px; font-weight:700; padding:2px 7px; border-radius:999px; border-width:1px; border-style:solid; }
+    .occ-ov-interval { font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:12px; color:#60a5fa; margin-bottom:5px; }
+    .occ-ov-cause { font-size:12px; color:#e2e8f0; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; line-height:1.45; margin-bottom:5px; }
+    .occ-ov-footer { font-size:10px; color:#94a3b8; }
+    /* Mobile: faixa horizontal fixa na borda inferior do vídeo */
+    @media (max-width: 640px) {
+      .occ-video-overlay {
+        bottom: 0; left: 0; right: 0;
+        max-width: 100%;
+        border-radius: 0;
+        border-left: none; border-right: none; border-bottom: none;
+        border-top: 1px solid rgba(255,255,255,0.18);
+        padding: 8px 12px;
+        box-shadow: none;
+      }
+      .occ-ov-cause { -webkit-line-clamp: 2; font-size: 11px; }
+      .occ-ov-interval { font-size: 11px; margin-bottom: 3px; }
+      .occ-ov-header { margin-bottom: 4px; }
+    }
+    .yt-capture-btn {
+      display: inline-flex; align-items: center; gap: 6px;
+      margin: 6px 0 0 0; padding: 5px 14px;
+      background: #1e293b; color: #94a3b8;
+      border: 1px solid #334155; border-radius: 6px;
+      font-size: 12px; font-weight: 600; cursor: pointer;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      transition: background 0.15s, color 0.15s, border-color 0.15s;
+    }
+    .yt-capture-btn:hover { background: #334155; color: #e2e8f0; border-color: #60a5fa; }
+    .yt-capture-btn:disabled { opacity: 0.5; cursor: wait; }
+    @media print { .yt-embed-section { display:none !important; } }
+  
+
+    /* Gráficos */
+    .chart-container {
+      background: white;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 16px;
+      margin-bottom: 16px;
+    }
+    .chart-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: #1e293b;
+      margin-bottom: 10px;
+    }
+    .chart-container svg { display: block; }
+    
+    /* Marcadores clicáveis nos gráficos */
+    .marker-clickable {
+      cursor: pointer;
+      transition: opacity 0.2s;
+    }
+    .marker-clickable:hover {
+      opacity: 0.8;
+    }
+
+    .marker-legend {
+      background: #fffbeb;
+      border: 1px solid #fde68a;
+      border-radius: 10px;
+      padding: 14px 18px;
+      margin-bottom: 24px;
+    }
+    .marker-legend-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: #92400e;
+      margin-bottom: 8px;
+    }
+    .marker-legend-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 4px 0;
+      font-size: 13px;
+      color: #1e293b;
+    }
+    .marker-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: #f59e0b;
+      color: #fff;
+      font-size: 11px;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .marker-desc { flex: 1; }
+
+    @media print {
+      .chart-container { break-inside: avoid; }
+      .marker-legend { break-inside: avoid; }
+    }
+  </style>
+  <script>
+(function(){
+  window._occYtCfgs=[{"divId":"yt-report-player","videoId":"ggfnSGwBna4","elevatorName":"Torre C1 - Elevador Social 3-4","occurrences":[{"number":1,"origin":"other","status":"confirmed","confirmedCause":"Conforme verificado preliminarmente, falta acabamentos da porta de inspeção e portas de correr ao longo do fosso.","preliminaryDescription":"Falta arremate da porta de inspeção na casa de máquinas e portas de correr ao longo do fosso.","severity":"none","intervals":[{"start":24,"end":null}]},{"number":2,"origin":"other","status":"confirmed","confirmedCause":"Conforme verificado preliminarmente não há proteções dos cabos e fios.","preliminaryDescription":"Fiação exposta sem proteção (canaletas ou dutos) próximos à casa de máquinas e extensão do fosso.","severity":"none","intervals":[{"start":24,"end":null}]},{"number":3,"origin":"other","status":"confirmed","confirmedCause":"Conforme identificado preliminarmente não há acabamento junto às passagens dos fios na casa de máquinas e na extensão do fosso.","preliminaryDescription":"Não há acabamento junto às passagens dos fios na casa de máquinas, nas bordas da porta de inspeção e na extensão do fosso, ao lado das portas de correr.","severity":"none","intervals":[{"start":24,"end":null}]},{"number":7,"origin":"noise","status":"confirmed","confirmedCause":"Foi confirmado a ocorrência conforme preliminar. Encontrado falta de fixação dos últimos elementos a qual conforme movimentação geram ruídos. Também foi encontrada sujeira encrostada (poeira e lubricante do trilho).","preliminaryDescription":"Passagem do contrapeso está gerado ruídos.","severity":"low","intervals":[{"start":58,"end":67},{"start":125,"end":130}]},{"number":8,"origin":"noise","status":"confirmed","confirmedCause":"O ruído é proveniente da corrente de compensação que encosta na cabine gerando forte ruído.","preliminaryDescription":"Estrondos sem movimentação dos eixos.","severity":"low","intervals":[{"start":86,"end":97}]},{"number":9,"origin":"noise","status":"confirmed","confirmedCause":"Rampa (alavanca do fim de curso) e corrente de compensação estão causando o ruído.","preliminaryDescription":"Ruído discreto","severity":"low","intervals":[{"start":96,"end":null}]},{"number":10,"origin":"other","status":"confirmed","confirmedCause":"Conforme verificado de forma preliminar, não há sensor de abertura de porta instalada na porta de inspeção.","preliminaryDescription":"Porta de inspeção que dá acesso ao fosso na casa de máquinas está sem a instalação do sensor de abertura, permitindo o funcionamento com a porta aberta.","severity":"high","intervals":[]},{"number":11,"origin":"visual","status":"confirmed","confirmedCause":"Não há placa de passagem de contrapeso conforme verificado preliminarmente.","preliminaryDescription":"Não há placa de aviso de passagem do contrapeso.","severity":"high","intervals":[]}]}];
+  /* _ytPlayers: { videoId -> { player, cfg, overlay } } */
+  window._ytPlayers=window._ytPlayers||{};
+
+  /* Extrai videoId de uma URL embed do YouTube (sem regex para evitar problemas de escaping) */
+  function _vidId(url){
+    try{
+      var e=url.indexOf('/embed/');
+      if(e>=0){var s=url.substring(e+7);return s.split('?')[0].split('&')[0].substring(0,11)||null;}
+      var y=url.indexOf('youtu.be/');
+      if(y>=0){var s2=url.substring(y+9);return s2.split('?')[0].split('&')[0].substring(0,11)||null;}
+      return null;
+    }catch(e2){return null;}
+  }
+
+  /* Extrai parâmetro de query string sem regex */
+  function _qp(url,key){
+    try{
+      var q=(url.split('?')[1]||'').split('&');
+      for(var i=0;i<q.length;i++){var p=q[i].split('=');if(p[0]===key)return p[1]||null;}
+      return null;
+    }catch(e){return null;}
+  }
+
+  /* Tenta fazer seek no player embedded correto; abre popup se não encontrar */
+  window.openYouTubePlayer=function(embedUrl,noteText){
+    var startStr=_qp(embedUrl,'start');
+    var start=startStr!==null?parseInt(startStr,10):null;
+    var vid=_vidId(embedUrl);
+    var entry=vid?window._ytPlayers[vid]:null;
+    if(entry&&start!==null&&typeof entry.player.seekTo==='function'){
+      try{
+        entry.player.seekTo(start,true);
+        /* Scroll suave até o player */
+        var wrap=document.getElementById(entry.cfg.divId);
+        if(wrap){var top=wrap.getBoundingClientRect().top+window.pageYOffset-60;window.scrollTo({top:top,behavior:'smooth'});}
+        /* Tentar playVideo; se não estiver tocando após breve delay, tentar novamente */
+        var _pe=entry.player;
+        try{_pe.playVideo();}catch(e){}
+        setTimeout(function(){
+          try{
+            var st=_pe.getPlayerState();
+            if(st!==1&&st!==3){_pe.playVideo();}
+          }catch(e){}
+        },300);
+        return;
+      }catch(e){}
+    }
+    /* Fallback: abrir nova janela com autoplay=1 */
+    var popupUrl=embedUrl.replace('autoplay=0','autoplay=1');
+    var html='<!DOCTYPE html><html><head><meta charset="UTF-8"><style>*{margin:0;padding:0;box-sizing:border-box}body{background:#000;display:flex;flex-direction:column;height:100vh}.pw{flex:1;position:relative}.pw iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}.note{background:#1e293b;color:#94a3b8;padding:10px 16px;font-family:sans-serif;font-size:12px;text-align:center}</style></head><body><div class="pw"><iframe src="'+popupUrl+'" allowfullscreen allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture"></iframe></div><div class="note">'+noteText+'</div></body></html>';
+    var w=window.open('','_blank','width=1280,height=800,menubar=no,toolbar=no,location=no');
+    if(w){w.document.write(html);w.document.close();}else{alert('Permita pop-ups para visualizar o vídeo.');}
+  };
+
+  /* Carregar YouTube IFrame API e inicializar players */
+  function _initAllPlayers(){
+    (window._occYtCfgs||[]).forEach(function(cfg){
+      var el=document.getElementById(cfg.divId);if(!el)return;
+      /* Evitar double-init */
+      if(window._ytPlayers[cfg.videoId])return;
+      new window.YT.Player(cfg.divId,{
+        videoId:cfg.videoId,
+        playerVars:{rel:0,modestbranding:1,controls:1,enablejsapi:1},
+        events:{onReady:function(e){
+          window._ytPlayers[cfg.videoId]={player:e.target,cfg:cfg};
+          _startOv(e.target,cfg);
+        }}
+      });
+    });
+  }
+
+  function _bootstrapYT(){
+    if(window.YT&&window.YT.Player){
+      _initAllPlayers();
+      return;
+    }
+    var prev=window.onYouTubeIframeAPIReady;
+    window.onYouTubeIframeAPIReady=function(){
+      if(typeof prev==='function')prev();
+      _initAllPlayers();
+    };
+    /* Carregar API apenas se ainda não foi carregada */
+    if(!document.querySelector('script[src*="youtube.com/iframe_api"]')){
+      var tag=document.createElement('script');
+      tag.src='https://www.youtube.com/iframe_api';
+      document.head.appendChild(tag);
+    }
+  }
+
+  if(document.readyState==='loading'){
+    document.addEventListener('DOMContentLoaded',_bootstrapYT);
+  } else {
+    _bootstrapYT();
+  }
+
+  /* Captura o frame atual do player YouTube e salva como PNG com banner de metadados.
+     Usa getDisplayMedia (Screen Capture API) — único método que funciona com iframes cross-origin. */
+  window.captureYouTubeFrame=async function(playerId){
+    var configs=window._occYtCfgs||[];
+    var elevName='',vidId='';
+    for(var i=0;i<configs.length;i++){
+      if(configs[i].divId===playerId){elevName=configs[i].elevatorName||'';vidId=configs[i].videoId;break;}
+    }
+    var curTime=0;
+    var ytEntry=vidId?window._ytPlayers[vidId]:null;
+    if(ytEntry){try{curTime=ytEntry.player.getCurrentTime()||0;}catch(e){}}
+    var mins=Math.floor(curTime/60);
+    var secs=Math.floor(curTime%60);
+    var timeStr=mins+':'+(secs<10?'0':'')+secs;
+    var playerEl=document.getElementById(playerId);
+    var iframe=playerEl?playerEl.querySelector('iframe'):null;
+    if(!iframe){alert('Player não carregado. Aguarde o vídeo aparecer.');return;}
+    iframe.scrollIntoView({behavior:'smooth',block:'center'});
+    await new Promise(function(r){setTimeout(r,700);});
+    var dpr=window.devicePixelRatio||1;
+    var btn=document.getElementById(playerId+'-capbtn');
+    if(btn){btn.textContent='⏳ Selecionando tela...';btn.disabled=true;}
+    try{
+      var stream=await navigator.mediaDevices.getDisplayMedia({video:{displaySurface:'browser',frameRate:1},audio:false});
+      var vEl=document.createElement('video');
+      vEl.srcObject=stream;vEl.muted=true;
+      await new Promise(function(resolve){
+        vEl.onloadedmetadata=function(){vEl.play();};
+        vEl.onplaying=resolve;
+        vEl.load();
+      });
+      await new Promise(function(r){setTimeout(r,250);});
+      var fullCanvas=document.createElement('canvas');
+      fullCanvas.width=vEl.videoWidth;fullCanvas.height=vEl.videoHeight;
+      var fctx=fullCanvas.getContext('2d');
+      fctx.drawImage(vEl,0,0);
+      stream.getTracks().forEach(function(t){t.stop();});
+      var rect2=iframe.getBoundingClientRect();
+      var cx=Math.round(rect2.left*dpr);
+      var cy=Math.round(rect2.top*dpr);
+      var cw=Math.round(rect2.width*dpr);
+      var ch=Math.round(rect2.height*dpr);
+      cx=Math.max(0,Math.min(cx,fullCanvas.width-2));
+      cy=Math.max(0,Math.min(cy,fullCanvas.height-2));
+      cw=Math.min(cw,fullCanvas.width-cx);
+      ch=Math.min(ch,fullCanvas.height-cy);
+      var BANNER=Math.round(52*dpr);
+      var outCv=document.createElement('canvas');
+      outCv.width=cw;outCv.height=ch+BANNER;
+      var ctx=outCv.getContext('2d');
+      /* Banner escuro */
+      ctx.fillStyle='#0f172a';
+      ctx.fillRect(0,0,cw,BANNER);
+      /* Linha separadora */
+      ctx.fillStyle='#1e40af';
+      ctx.fillRect(0,BANNER-Math.round(2*dpr),cw,Math.round(2*dpr));
+      /* Nome do elevador */
+      ctx.font='bold '+Math.round(15*dpr)+'px Arial,sans-serif';
+      ctx.fillStyle='#ffffff';
+      ctx.fillText(elevName||'Elevador',Math.round(12*dpr),Math.round(23*dpr));
+      /* Tempo atual */
+      ctx.font=Math.round(13*dpr)+'px Arial,sans-serif';
+      ctx.fillStyle='#60a5fa';
+      ctx.fillText('⏱ '+timeStr,Math.round(12*dpr),Math.round(42*dpr));
+      /* Data/hora (direita) */
+      var now=new Date();
+      var dateStr=now.toLocaleDateString('pt-BR')+' '+now.toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'});
+      ctx.font=Math.round(11*dpr)+'px Arial,sans-serif';
+      ctx.fillStyle='#94a3b8';
+      var tw=ctx.measureText(dateStr).width;
+      ctx.fillText(dateStr,cw-tw-Math.round(12*dpr),Math.round(33*dpr));
+      /* Frame do vídeo */
+      ctx.drawImage(fullCanvas,cx,cy,cw,ch,0,BANNER,cw,ch);
+      /* Download */
+      outCv.toBlob(function(blob){
+        if(!blob){alert('Erro ao gerar imagem.');return;}
+        var url=URL.createObjectURL(blob);
+        var a=document.createElement('a');
+        a.href=url;
+        /* Sanitiza nome do arquivo sem regex */
+        var raw=elevName||'elevador';
+        var eName='';
+        for(var k=0;k<raw.length;k++){
+          var ch2=raw[k];
+          if(ch2===' '){eName+='_';}
+          else if(ch2!=='/'&&ch2!==':'&&ch2!=='*'&&ch2!=='?'&&ch2!=='"'&&ch2!=='<'&&ch2!=='>'&&ch2!=='|'){eName+=ch2;}
+        }
+        if(!eName)eName='elevador';
+        a.download='captura_'+eName+'_'+timeStr.replace(':','m')+'s.png';
+        document.body.appendChild(a);a.click();document.body.removeChild(a);
+        setTimeout(function(){URL.revokeObjectURL(url);},2000);
+      },'image/png');
+    }catch(err){
+      if(err.name!=='AbortError'){alert('Captura não disponível: '+(err.message||'erro desconhecido'));}
+    }finally{
+      if(btn){btn.textContent='📸 Capturar Frame';btn.disabled=false;}
+    }
+  };
+
+  function _startOv(player,cfg){
+    var ov=document.getElementById(cfg.divId+'-overlay');if(!ov)return;
+    var MARGIN=2;
+    var OL={noise:'Ruído',vibration:'Vibração',both:'Ruído + Vibração',visual:'Visual',other:'Outro'};
+    var OC={noise:{bg:'rgba(249,115,22,.25)',bd:'#F97316',tx:'#FDBA74'},vibration:{bg:'rgba(139,92,246,.25)',bd:'#8B5CF6',tx:'#C4B5FD'},both:{bg:'rgba(239,68,68,.25)',bd:'#EF4444',tx:'#FCA5A5'},visual:{bg:'rgba(34,197,94,.25)',bd:'#22C55E',tx:'#86EFAC'},other:{bg:'rgba(100,116,139,.25)',bd:'#64748B',tx:'#CBD5E1'}};
+    var SL={none:'',low:'Baixa',medium:'Média',high:'Alta',critical:'Crítica'};
+    var SC={none:'#64748B',low:'#22C55E',medium:'#F59E0B',high:'#F97316',critical:'#EF4444'};
+    function fmt(s){var m=Math.floor(s/60);var ss=Math.floor(s%60);return m+':'+(ss<10?'0':'')+ss;}
+    function find(ct){
+      var occs=cfg.occurrences||[];
+      for(var i=0;i<occs.length;i++){
+        var occ=occs[i];var ivs=occ.intervals||[];
+        for(var j=0;j<ivs.length;j++){
+          var iv=ivs[j];
+          if(iv.end===null){if(ct>=iv.start-MARGIN&&ct<=iv.start+MARGIN)return{occ:occ,iv:iv};}
+          else{if(ct>=iv.start-MARGIN&&ct<=iv.end+MARGIN)return{occ:occ,iv:iv};}
+        }
+      }return null;
+    }
+    function renderOv(occ,iv){
+      var oc=OC[occ.origin]||OC.other,ol=OL[occ.origin]||'Outro';
+      var sl=SL[occ.severity]||'',sc=SC[occ.severity]||SC.none;
+      var interval=iv.end!==null?fmt(iv.start)+' → '+fmt(iv.end):fmt(iv.start);
+      var cfBadge=occ.status==='confirmed'
+        ?'<span class="occ-ov-badge" style="background:rgba(34,197,94,.2);border-color:#22C55E;color:#86EFAC;">✓ Confirmado</span>'
+        :'<span class="occ-ov-badge" style="background:rgba(245,158,11,.2);border-color:#F59E0B;color:#FCD34D;">Em análise</span>';
+      var cause=(occ.status==='confirmed'&&occ.confirmedCause)?occ.confirmedCause:(occ.preliminaryDescription||'');
+      ov.innerHTML=
+        '<div class="occ-ov-header">'+
+          '<span class="occ-ov-num">Ocorrência #'+occ.number+'</span>'+
+          '<span class="occ-ov-badge" style="background:'+oc.bg+';border-color:'+oc.bd+';color:'+oc.tx+';">'+ol+'</span>'+
+          cfBadge+
+        '</div>'+
+        '<div class="occ-ov-interval">🕐 '+interval+'</div>'+
+        (cause?'<div class="occ-ov-cause">'+cause+'</div>':'')+
+        (sl?'<div class="occ-ov-footer">Severidade: <span style="color:'+sc+';font-weight:700;">'+sl+'</span></div>':'');
+      ov.classList.add('visible');
+    }
+    /* — polling a cada 300ms — */
+    setInterval(function(){
+      var st;
+      try{st=player.getPlayerState();}catch(e){return;}
+      /* 1=playing 2=paused 3=buffering */
+      if(st!==1&&st!==2&&st!==3){ov.classList.remove('visible');return;}
+      var ct;
+      try{ct=player.getCurrentTime();}catch(e){return;}
+      var hit=find(ct);
+      if(!hit){ov.classList.remove('visible');return;}
+      renderOv(hit.occ,hit.iv);
+    },300);
+  }
+})();
+</script>
+</head>
+<body>
+  <div class="container">
+    <div class="report-header">
+      <h1>📋 Relatório de Inspeção de Elevador</h1>
+      <div class="subtitle">Elevator Inspektor — Sistema de Análise e Inspeção</div>
+      <div class="mode-badge">Relatório De Ocorrência</div>
+    </div>
+
+    <div class="info-grid">
+      <div class="info-card">
+        <div class="label">Cliente</div>
+        <div class="value">Europark Noronha</div>
+      </div>
+      <div class="info-card">
+        <div class="label">Elevador</div>
+        <div class="value">Torre C1 - Elevador Social 3-4</div>
+      </div>
+      <div class="info-card">
+        <div class="label">Nº Inspeção</div>
+        <div class="value">INS-2026-016</div>
+      </div>
+      <div class="info-card">
+        <div class="label">Inspetor</div>
+        <div class="value">N/A</div>
+      </div>
+      <div class="info-card">
+        <div class="label">Data</div>
+        <div class="value">28/12/2025</div>
+      </div>
+      <div class="info-card">
+        <div class="label">Gerado em</div>
+        <div class="value">22/02/2026 17:10:25</div>
+      </div>
+    </div>
+
+    
+  <div class="yt-embed-section no-print">
+    <div class="yt-embed-wrapper">
+      <div id="yt-report-player"></div>
+      <div class="occ-video-overlay" id="yt-report-player-overlay"></div>
+    </div>
+    <div style="display:flex;align-items:center;padding:4px 0 2px 0;">
+      <button id="yt-report-player-capbtn" class="yt-capture-btn" onclick="captureYouTubeFrame('yt-report-player')">
+        📸 Capturar Frame
+      </button>
+    </div>
+    <div style="display:flex;align-items:center;gap:12px;padding:10px 14px;background:#fff;border:1px solid #e2e8f0;border-radius:10px;">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAGcklEQVR4Aeyai3bjNgxEc/v//5ya2dAY8QFBD9NuFz1hNAIwAxpzyG7d/ec7//moCfzzlf981ATSkI+y4+srDfl0Q4AvuH+1nxvGPbQOrEbjHgbjwHH8Sm0Y70d75gnRaXwATkM+wATdgmvI48+DX1eWNmqx6ra5yDuMj/8ZXeWA6Xr7UM4ZPNN2DZmRMv66CaQhr5vtKeWwIWBHGeb4ZxeBX2AaeuTB4ioDFgc2V+msTuMt1p5t7ug7bPcG4/eIbtiQiFjWXJ9AGnJ9hrcqvM0QvTLAjrh+Oq3RuIeV02Llwbin1rwDv82Qd3zY/0LPNOTDXEpD0pB+AnrX99lxBMb/DoBxvFXRnmAcjbecFe95QlZM+UCPNOTAsFaUhg3Ro+zh6KbBrokI5/v7e/Nf57M9RLRKDVh/1Sq5o0v5Ho7ohg2JiGXN9QmkIddneKuCawjYsYbj+M6dwra/aoPl9MoAi8P8C8mZlsZbDFttOPbe6tV315BalM91E0hD1s061KkzRI/8nbjdjWqDHXetg3Fca1oMr+Ponu/E+hk6QzSZeP0E0pD1M3c7piHueNYnO0NgfAfDOO5tGYwDW+zxas67p8H0an15RjnPuu/vzTcARSOyYNy/5cK4DsbxzpBWMN/XTiANWTvv3W6uITA+Vq0qjOtm10KJq0Z5Hy0wXdhi5Uex9lAOmPYsDlYDaJmLtSfw/IvsM5JryIyU8ddNIA153WxPKXeG6BGbKYIdPWBTBjyPJRjeFD1ewHIwxo+y6Y/uUzGY1pT8SMB+neoW/KANf8C0YI6LRl1DoUewM+QRy583TiANeePwR607Q8COnBLqURs9tU6x1mq8YM0pLrnIgv19ejqRnmA9YP7/UzytWW4W7wzxPkTmwhM4XZiGnB7da4hhQ8COb3QrYByY44ieHvGCZxy41memW+Jg2mUPdZVcXTVWnzXePsG0NBc2REmJXzeBNOR1sz2lnIacGtvrSJ0h9e4rz2jbUnt0RbRVE+zOhXN/BAXTONq/7EU5cEyrcGGf0xlSiLneN4E05H2zH3buDAE7VuWY1qVssBpAU8MvFoEuXnXLEyyvYmDxUqcLLAeGld9i5be5+u7VaE4x3Ne/M6RuLJ/vmYBryHu29Hd37QyZHUWNR0emnBbD/jFXTttzloN93VZL32HOB8uB4dleVLfFM05nSEvM97UTSEPWznu3m2vI7Fjtqv4WgB3r39DwoX0Uw5wP45zyWzxsfjKo2mckYLx/15AzjZJzbQJpyLX53c5OQ24f6TXBWwwBuw/1blUMVgPbLwfBcvpxPL7WvQPDeM/tXsDqwHBbV99vMaSK5fP6BN5gyPVN/58VOkPAjhWMcXQgYPyWA+McWBwM6/XlYTCO1xPGdaoNVgNs5LROE8Dmi1StU6wcxZ0hmky8fgJpyPqZux07Q/RYKXZVJAl2ZD2+l6tyXg1Yn1pfnh7HyxVuWWC6Wl9wydcFVgeGS52uWt8+ZzWdIS0x39dOIA1ZO+/dbp0hYMcPDM+OWNtB68D4bV3kHY7zwTiwxZGeWgPH+TDngOW0j+LOEE0mXj+BNGT9zN2OnSF65ShWFY23OFoH+8dXtcDqYftdWKmrS/dTY3vPGUfjHvb0wfatGmBx5XeGaDLx+gmkIetn7nZMQ9zxrE92hoDdbXAfjn40vWeVo/GCYbw35bQYjFM06mrrZu9g/FlN1Rw9ZxyNd4ZoMvH6CaQh62fudnQNGR27IzGv80wH7FrQmlZrlgPj38FRjVlPrYnimZZrSFQ86+6bQBpy3yxvUQobAnYVwBzfsqtfEZj3Acv9lv889CpoMRgHDP8QB7/AamCOlQrbOs1FcNiQiFjWXJ9AGnJ9hrcqfIQhYMdcrxn9pBpvsdZFsWqc4UT5YJ8NDM96foQhs839jfE05MNcT0PSkD8TgP379E/l+DcYX+9zsHjL1DrNaVyx1kSx8lusGjDeZ54QndIH4DTkA0zQLYQNaY/f7F3FPax8r67mwI44UMM/T+D5F5w9XbC6H+LgF+zXFBpYnfYEiwOl9LlqXft8FjxA2JBHbf4smEAasmDIR1q4hgDPqwCOY28jYHpaBxbXo601HgbjwxbPeGB1WqP9C4ZxncfRnGIYa7mGqEDiNRNIQ9bMOdylM6QczVesdkeRHsqJ1B+piWhrTcEz/ZI7ulRLuZ0hmky8fgJpyPqZux3/BQAA////qeDXAAAABklEQVQDAKkibMDv5El0AAAAAElFTkSuQmCC" alt="QR Code YouTube" style="width:80px;height:80px;border-radius:6px;border:1px solid #e2e8f0;flex-shrink:0;">
+        <div>
+          <div style="font-size:10px;font-weight:700;color:#64748b;text-transform:uppercase;letter-spacing:0.4px;margin-bottom:4px;">Abrir no celular</div>
+          <div style="font-family:monospace;font-size:11px;color:#0f172a;background:#f8fafc;border:1px solid #e2e8f0;border-radius:6px;padding:5px 8px;word-break:break-all;margin-bottom:5px;">https://youtu.be/ggfnSGwBna4</div>
+          <a href="https://youtu.be/ggfnSGwBna4" target="_blank" rel="noopener noreferrer" style="font-size:12px;font-weight:800;color:#2563eb;text-decoration:none;">Abrir no YouTube ↗</a>
+        </div>
+      </div>
+  </div>
+
+    <h2 class="section-title">Resumo</h2>
+    <div class="summary-grid">
+      <div class="summary-item">
+        <div class="count">11</div>
+        <div class="label">Total de Ocorrências</div>
+      </div>
+      
+      
+      <div class="summary-item">
+        <div class="count" style="color: #22c55e">8</div>
+        <div class="label">✅ Confirmadas</div>
+      </div>
+      
+      <div class="summary-item">
+        <div class="count" style="color: #94a3b8">3</div>
+        <div class="label">❌ Descartadas</div>
+      </div>
+      
+      
+      <div class="summary-item">
+        <div class="count" style="color: #ef4444">2</div>
+        <div class="label">Severidade Alta</div>
+      </div>
+      
+      
+      <div class="summary-item">
+        <div class="count" style="color: #3b82f6">3</div>
+        <div class="label">Severidade Baixa</div>
+      </div>
+      
+      <div class="summary-item">
+        <div class="count" style="color: #94a3b8">6</div>
+        <div class="label">Severidade Nenhuma</div>
+      </div>
+    </div>
+
+    
+    <h2 class="section-title">Gráficos com Ocorrências</h2>
+    <div class="info-grid" style="margin-bottom: 16px;">
+                     <div class="info-card" style="border-left: 3px solid #2563EB;">
+                       <div class="label">ROI Início</div>
+                       <div class="value">0:24 (24.0s)</div>
+                     </div>
+                     <div class="info-card" style="border-left: 3px solid #2563EB;">
+                       <div class="label">ROI Fim</div>
+                       <div class="value">2:42 (162.0s)</div>
+                     </div>
+                     <div class="info-card" style="border-left: 3px solid #2563EB;">
+                       <div class="label">Duração ROI</div>
+                       <div class="value">2:18</div>
+                     </div>
+                     
+                     <div class="info-card" style="border-left: 3px solid #EF4444;">
+                       <div class="label">Pausa</div>
+                       <div class="value">1:30 → 1:36</div>
+                     </div>
+                   </div>
+    
+    
+    <div class="chart-container">
+      <h3 class="chart-title">📊 Gráfico de Ruído (dB)</h3>
+      <svg viewBox="0 0 820 200" width="100%" preserveAspectRatio="xMidYMid meet" style="background: #fff; border: 1px solid #e2e8f0; border-radius: 8px;">
+        <!-- Grid -->
+        <line x1="50" y1="165.0" x2="800" y2="165.0" stroke="#e2e8f0" stroke-width="0.5" /><text x="45" y="165.0" text-anchor="end" fill="#94a3b8" font-size="9" dy="3">56</text><line x1="50" y1="138.0" x2="800" y2="138.0" stroke="#e2e8f0" stroke-width="0.5" /><text x="45" y="138.0" text-anchor="end" fill="#94a3b8" font-size="9" dy="3">62</text><line x1="50" y1="111.0" x2="800" y2="111.0" stroke="#e2e8f0" stroke-width="0.5" /><text x="45" y="111.0" text-anchor="end" fill="#94a3b8" font-size="9" dy="3">67</text><line x1="50" y1="84.0" x2="800" y2="84.0" stroke="#e2e8f0" stroke-width="0.5" /><text x="45" y="84.0" text-anchor="end" fill="#94a3b8" font-size="9" dy="3">73</text><line x1="50" y1="57.0" x2="800" y2="57.0" stroke="#e2e8f0" stroke-width="0.5" /><text x="45" y="57.0" text-anchor="end" fill="#94a3b8" font-size="9" dy="3">79</text><line x1="50" y1="30.0" x2="800" y2="30.0" stroke="#e2e8f0" stroke-width="0.5" /><text x="45" y="30.0" text-anchor="end" fill="#94a3b8" font-size="9" dy="3">84</text>
+        <line x1="50.0" y1="30" x2="50.0" y2="165" stroke="#e2e8f0" stroke-width="0.5" /><text x="50.0" y="179" text-anchor="middle" fill="#94a3b8" font-size="9">0:00</text><line x1="175.7" y1="30" x2="175.7" y2="165" stroke="#e2e8f0" stroke-width="0.5" /><text x="175.7" y="179" text-anchor="middle" fill="#94a3b8" font-size="9">0:30</text><line x1="301.4" y1="30" x2="301.4" y2="165" stroke="#e2e8f0" stroke-width="0.5" /><text x="301.4" y="179" text-anchor="middle" fill="#94a3b8" font-size="9">1:00</text><line x1="427.1" y1="30" x2="427.1" y2="165" stroke="#e2e8f0" stroke-width="0.5" /><text x="427.1" y="179" text-anchor="middle" fill="#94a3b8" font-size="9">1:30</text><line x1="552.8" y1="30" x2="552.8" y2="165" stroke="#e2e8f0" stroke-width="0.5" /><text x="552.8" y="179" text-anchor="middle" fill="#94a3b8" font-size="9">2:00</text><line x1="678.5" y1="30" x2="678.5" y2="165" stroke="#e2e8f0" stroke-width="0.5" /><text x="678.5" y="179" text-anchor="middle" fill="#94a3b8" font-size="9">2:30</text>
+        <!-- Eixos -->
+        <line x1="50" y1="30" x2="50" y2="165" stroke="#64748b" stroke-width="1" />
+        <line x1="50" y1="165" x2="800" y2="165" stroke="#64748b" stroke-width="1" />
+        <!-- Label Y -->
+        <text x="12" y="97.5" text-anchor="middle" fill="#64748b" font-size="10" transform="rotate(-90, 12, 97.5)">dB</text>
+        <!-- Regiões ROI e Pausa -->
+        <rect x="50" y="30" width="100.6" height="135.0" fill="rgba(0,0,0,0.10)" /><rect x="728.8" y="30" width="71.2" height="135.0" fill="rgba(0,0,0,0.10)" /><rect x="150.6" y="30" width="578.2" height="135.0" fill="rgba(59,130,246,0.06)" /><line x1="150.6" y1="30" x2="150.6" y2="165" stroke="#2563EB" stroke-width="3" stroke-dasharray="8,4" /><line x1="728.8" y1="30" x2="728.8" y2="165" stroke="#2563EB" stroke-width="3" stroke-dasharray="8,4" /><rect x="149.6" y="29.0" width="52" height="15" rx="3" fill="#2563EB" /><text x="175.6" y="40.0" text-anchor="middle" fill="#fff" font-size="9" font-weight="bold">▶ 0:24</text><rect x="677.8" y="29.0" width="52" height="15" rx="3" fill="#2563EB" /><text x="703.8" y="40.0" text-anchor="middle" fill="#fff" font-size="9" font-weight="bold">2:42 ◀</text><rect x="149.6" y="166" width="48" height="14" rx="2" fill="#2563EB" opacity="0.9" /><text x="173.6" y="177" text-anchor="middle" fill="#fff" font-size="8" font-weight="bold">ROI 0:24</text><rect x="681.8" y="166" width="48" height="14" rx="2" fill="#2563EB" opacity="0.9" /><text x="705.8" y="177" text-anchor="middle" fill="#fff" font-size="8" font-weight="bold">ROI 2:42</text><rect x="427.1" y="30" width="25.1" height="135.0" fill="rgba(239,68,68,0.08)" stroke="#EF4444" stroke-width="1" stroke-dasharray="4,4" /><line x1="427.1" y1="30" x2="435.1" y2="165" stroke="#EF4444" stroke-width="0.5" opacity="0.2" /><line x1="435.1" y1="30" x2="443.1" y2="165" stroke="#EF4444" stroke-width="0.5" opacity="0.2" /><line x1="443.1" y1="30" x2="451.1" y2="165" stroke="#EF4444" stroke-width="0.5" opacity="0.2" /><line x1="451.1" y1="30" x2="452.2" y2="165" stroke="#EF4444" stroke-width="0.5" opacity="0.2" /><rect x="417.7" y="33.0" width="44" height="13" rx="2" fill="#EF4444" opacity="0.85" /><text x="439.7" y="43.0" text-anchor="middle" fill="#fff" font-size="8" font-weight="bold">PAUSA</text>
+        <!-- Dados -->
+        <polyline points="87.7,124.5 91.9,146.9 96.1,146.9 100.3,144.5 104.5,136.2 108.7,147.4 112.8,133.8 117.0,133.8 121.2,119.7 125.4,127.9 129.6,146.4 133.8,144.5 138.0,145.0 142.2,134.3 146.4,114.8 150.6,114.8 154.7,145.5 158.9,139.6 163.1,105.0 167.3,105.0 171.5,116.2 175.7,121.1 179.9,122.1 184.1,118.7 188.3,127.0 192.5,126.5 196.6,134.3 200.8,138.2 205.0,140.1 209.2,137.2 213.4,117.7 217.6,139.6 221.8,140.6 226.0,140.1 230.2,144.5 234.4,136.2 238.5,129.4 242.7,140.1 246.9,145.5 251.1,144.0 255.3,144.0 259.5,132.3 263.7,141.6 267.9,146.0 272.1,146.4 276.3,145.0 280.4,130.4 284.6,124.5 288.8,116.7 293.0,116.7 297.2,116.7 301.4,93.8 305.6,100.2 309.8,129.4 314.0,104.1 318.2,104.1 322.3,125.0 326.5,106.0 330.7,126.0 334.9,134.8 339.1,132.8 343.3,127.5 347.5,127.5 351.7,132.8 355.9,136.2 360.1,147.9 364.2,114.3 368.4,110.4 372.6,123.6 376.8,125.0 381.0,113.3 385.2,111.9 389.4,133.8 393.6,112.8 397.8,112.8 402.0,122.6 406.1,118.2 410.3,113.3 414.5,121.6 418.7,43.7 422.9,41.3 427.1,61.7 431.3,65.1 435.5,144.0 439.7,128.4 443.9,125.0 448.0,153.8 452.2,95.8 456.4,95.8 460.6,137.2 464.8,114.3 469.0,114.3 473.2,135.2 477.4,121.6 481.6,105.5 485.8,105.0 489.9,111.9 494.1,113.3 498.3,105.0 502.5,105.0 506.7,141.1 510.9,146.9 515.1,117.7 519.3,117.7 523.5,147.9 527.7,147.9 531.8,125.0 536.0,132.3 540.2,134.8 544.4,148.9 548.6,145.5 552.8,147.9 557.0,130.9 561.2,132.3 565.4,132.3 569.6,133.3 573.7,132.3 577.9,110.9 582.1,101.6 586.3,108.5 590.5,115.3 594.7,111.4 598.9,123.1 603.1,128.9 607.3,140.1 611.5,145.5 615.6,141.6 619.8,137.2 624.0,136.7 628.2,136.7 632.4,132.3 636.6,141.1 640.8,126.0 645.0,122.6 649.2,122.6 653.4,146.4 657.5,132.8 661.7,139.6 665.9,141.1 670.1,134.8 674.3,124.5 678.5,124.5 682.7,138.7 686.9,132.8 691.1,132.8 695.3,132.3 699.4,129.9 703.6,127.5 707.8,122.1 712.0,115.3 716.2,118.7 720.4,114.8 724.6,130.4 728.8,138.2 733.0,119.2 737.2,90.4 741.3,90.9 745.5,139.1 749.7,112.8 753.9,101.2 758.1,135.7 762.3,97.3 766.5,124.5 770.7,127.0 774.9,136.7 779.1,144.5 783.2,147.4" fill="none" stroke="#EF4444" stroke-width="1.5" stroke-linejoin="round" />
+        <!-- Limiar (threshold) -->
+        
+            <line x1="50" y1="123.1" x2="800" y2="123.1" stroke="#F59E0B" stroke-width="2" stroke-dasharray="10,5" />
+            <rect x="695" y="107.06818181818181" width="100" height="16" rx="3" fill="rgba(245,158,11,0.15)" />
+            <text x="700" y="119.06818181818181" fill="#D97706" font-size="9" font-weight="bold">65 dB (limiar)</text>
+        
+        <!-- Marcadores de ocorrências -->
+        <line x1="311.9" y1="30" x2="311.9" y2="165" stroke="#F97316" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.85" /><g onclick="openYouTubePlayer('https://www.youtube.com/embed/ggfnSGwBna4?start=56&end=69&autoplay=1&controls=1&rel=0', 'Reproduzindo o intervalo da ocorrência')" style="cursor:pointer;" class="marker-clickable"><circle cx="311.9" cy="20" r="10" fill="#F97316" stroke="#fff" stroke-width="1.5" /><text x="311.9" y="24" text-anchor="middle" fill="#fff" font-size="10" font-weight="bold">7</text><title>Clique para reproduzir no YouTube</title></g><line x1="584.2" y1="30" x2="584.2" y2="165" stroke="#F97316" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.85" /><g onclick="openYouTubePlayer('https://www.youtube.com/embed/ggfnSGwBna4?start=123&end=132&autoplay=1&controls=1&rel=0', 'Reproduzindo o intervalo da ocorrência')" style="cursor:pointer;" class="marker-clickable"><circle cx="584.2" cy="20" r="10" fill="#F97316" stroke="#fff" stroke-width="1.5" /><text x="584.2" y="24" text-anchor="middle" fill="#fff" font-size="10" font-weight="bold">7</text><title>Clique para reproduzir no YouTube</title></g><line x1="433.4" y1="30" x2="433.4" y2="165" stroke="#F97316" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.85" /><g onclick="openYouTubePlayer('https://www.youtube.com/embed/ggfnSGwBna4?start=84&end=99&autoplay=1&controls=1&rel=0', 'Reproduzindo o intervalo da ocorrência')" style="cursor:pointer;" class="marker-clickable"><circle cx="433.4" cy="20" r="10" fill="#F97316" stroke="#fff" stroke-width="1.5" /><text x="433.4" y="24" text-anchor="middle" fill="#fff" font-size="10" font-weight="bold">8</text><title>Clique para reproduzir no YouTube</title></g><line x1="452.2" y1="30" x2="452.2" y2="165" stroke="#F97316" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.85" /><g onclick="openYouTubePlayer('https://www.youtube.com/embed/ggfnSGwBna4?start=96&autoplay=1&controls=1&rel=0', 'Reproduzindo a partir do momento da ocorrência')" style="cursor:pointer;" class="marker-clickable"><circle cx="452.2" cy="20" r="10" fill="#F97316" stroke="#fff" stroke-width="1.5" /><text x="452.2" y="24" text-anchor="middle" fill="#fff" font-size="10" font-weight="bold">9</text><title>Clique para reproduzir no YouTube</title></g>
+      </svg>
+      
+      <div style="display:flex; justify-content:flex-end; margin-top:8px;">
+        <div style="background:rgba(255,255,255,0.94); border:1px solid #e2e8f0; border-radius:4px; padding:6px 8px; display:grid; gap:4px; min-width:172px;">
+          <div style="display:flex; align-items:center; gap:8px; font-size:10px; color:#334155;">
+            <span style="display:inline-block; width:20px; height:0; border-top:2px solid #F97316;"></span>
+            <span>Ruído</span>
+          </div>
+          <div style="display:flex; align-items:center; gap:8px; font-size:10px; color:#334155;">
+            <span style="display:inline-block; width:20px; height:0; border-top:2px solid #EF4444;"></span>
+            <span>Ruído + Vibração</span>
+          </div>
+        </div>
+      </div>
+    
+    </div>
+    
+    <div class="chart-container">
+      <h3 class="chart-title">📳 Gráfico de Vibração — Deslocamento (µm)</h3>
+      <svg viewBox="0 0 820 220" width="100%" preserveAspectRatio="xMidYMid meet" style="background: #fff; border: 1px solid #e2e8f0; border-radius: 8px;">
+        <line x1="50" y1="185.0" x2="800" y2="185.0" stroke="#e2e8f0" stroke-width="0.5" /><text x="45" y="185.0" text-anchor="end" fill="#94a3b8" font-size="9" dy="3">-27.2</text><line x1="50" y1="154.0" x2="800" y2="154.0" stroke="#e2e8f0" stroke-width="0.5" /><text x="45" y="154.0" text-anchor="end" fill="#94a3b8" font-size="9" dy="3">-16.3</text><line x1="50" y1="123.0" x2="800" y2="123.0" stroke="#e2e8f0" stroke-width="0.5" /><text x="45" y="123.0" text-anchor="end" fill="#94a3b8" font-size="9" dy="3">-5.4</text><line x1="50" y1="92.0" x2="800" y2="92.0" stroke="#e2e8f0" stroke-width="0.5" /><text x="45" y="92.0" text-anchor="end" fill="#94a3b8" font-size="9" dy="3">5.4</text><line x1="50" y1="61.0" x2="800" y2="61.0" stroke="#e2e8f0" stroke-width="0.5" /><text x="45" y="61.0" text-anchor="end" fill="#94a3b8" font-size="9" dy="3">16.3</text><line x1="50" y1="30.0" x2="800" y2="30.0" stroke="#e2e8f0" stroke-width="0.5" /><text x="45" y="30.0" text-anchor="end" fill="#94a3b8" font-size="9" dy="3">27.2</text>
+        <line x1="50.0" y1="30" x2="50.0" y2="185" stroke="#e2e8f0" stroke-width="0.5" /><text x="50.0" y="199" text-anchor="middle" fill="#94a3b8" font-size="9">0:00</text><line x1="175.7" y1="30" x2="175.7" y2="185" stroke="#e2e8f0" stroke-width="0.5" /><text x="175.7" y="199" text-anchor="middle" fill="#94a3b8" font-size="9">0:30</text><line x1="301.4" y1="30" x2="301.4" y2="185" stroke="#e2e8f0" stroke-width="0.5" /><text x="301.4" y="199" text-anchor="middle" fill="#94a3b8" font-size="9">1:00</text><line x1="427.1" y1="30" x2="427.1" y2="185" stroke="#e2e8f0" stroke-width="0.5" /><text x="427.1" y="199" text-anchor="middle" fill="#94a3b8" font-size="9">1:30</text><line x1="552.8" y1="30" x2="552.8" y2="185" stroke="#e2e8f0" stroke-width="0.5" /><text x="552.8" y="199" text-anchor="middle" fill="#94a3b8" font-size="9">2:00</text><line x1="678.5" y1="30" x2="678.5" y2="185" stroke="#e2e8f0" stroke-width="0.5" /><text x="678.5" y="199" text-anchor="middle" fill="#94a3b8" font-size="9">2:30</text>
+        <line x1="50" y1="30" x2="50" y2="185" stroke="#64748b" stroke-width="1" />
+        <line x1="50" y1="185" x2="800" y2="185" stroke="#64748b" stroke-width="1" />
+        <text x="12" y="107.5" text-anchor="middle" fill="#64748b" font-size="10" transform="rotate(-90, 12, 107.5)">µm</text>
+        <!-- Regiões ROI e Pausa -->
+        <rect x="50" y="30" width="100.6" height="155.0" fill="rgba(0,0,0,0.10)" /><rect x="728.8" y="30" width="71.2" height="155.0" fill="rgba(0,0,0,0.10)" /><rect x="150.6" y="30" width="578.2" height="155.0" fill="rgba(59,130,246,0.06)" /><line x1="150.6" y1="30" x2="150.6" y2="185" stroke="#2563EB" stroke-width="3" stroke-dasharray="8,4" /><line x1="728.8" y1="30" x2="728.8" y2="185" stroke="#2563EB" stroke-width="3" stroke-dasharray="8,4" /><rect x="149.6" y="29.0" width="52" height="15" rx="3" fill="#2563EB" /><text x="175.6" y="40.0" text-anchor="middle" fill="#fff" font-size="9" font-weight="bold">▶ 0:24</text><rect x="677.8" y="29.0" width="52" height="15" rx="3" fill="#2563EB" /><text x="703.8" y="40.0" text-anchor="middle" fill="#fff" font-size="9" font-weight="bold">2:42 ◀</text><rect x="149.6" y="186" width="48" height="14" rx="2" fill="#2563EB" opacity="0.9" /><text x="173.6" y="197" text-anchor="middle" fill="#fff" font-size="8" font-weight="bold">ROI 0:24</text><rect x="681.8" y="186" width="48" height="14" rx="2" fill="#2563EB" opacity="0.9" /><text x="705.8" y="197" text-anchor="middle" fill="#fff" font-size="8" font-weight="bold">ROI 2:42</text><rect x="427.1" y="30" width="25.1" height="155.0" fill="rgba(239,68,68,0.08)" stroke="#EF4444" stroke-width="1" stroke-dasharray="4,4" /><line x1="427.1" y1="30" x2="435.1" y2="185" stroke="#EF4444" stroke-width="0.5" opacity="0.2" /><line x1="435.1" y1="30" x2="443.1" y2="185" stroke="#EF4444" stroke-width="0.5" opacity="0.2" /><line x1="443.1" y1="30" x2="451.1" y2="185" stroke="#EF4444" stroke-width="0.5" opacity="0.2" /><line x1="451.1" y1="30" x2="452.2" y2="185" stroke="#EF4444" stroke-width="0.5" opacity="0.2" /><rect x="417.7" y="33.0" width="44" height="13" rx="2" fill="#EF4444" opacity="0.85" /><text x="439.7" y="43.0" text-anchor="middle" fill="#fff" font-size="8" font-weight="bold">PAUSA</text>
+        <polyline points="87.7,107.5 88.7,107.5 89.9,107.5 91.1,107.5 92.2,107.5 96.8,107.5 94.7,107.5 95.8,107.5 97.0,107.5 98.2,107.5 99.4,104.7 100.5,104.7 101.8,104.7 102.9,104.7 103.9,104.7 105.1,104.7 108.9,104.7 107.5,104.7 108.6,104.7 109.9,104.7 111.0,104.7 112.2,101.8 113.3,101.8 116.5,101.8 115.7,99.0 116.9,99.0 118.1,99.0 119.3,99.0 120.3,101.8 121.5,101.8 122.7,101.8 123.8,104.7 125.0,104.7 126.2,104.7 127.4,104.7 128.5,107.5 129.7,107.5 130.9,107.5 132.1,107.5 133.3,107.5 134.5,107.5 137.2,107.5 136.8,107.5 138.0,107.5 139.2,107.5 140.4,107.5 141.5,107.5 142.8,107.5 145.7,107.5 145.1,107.5 146.2,107.5 147.5,107.5 148.6,107.5 149.8,107.5 151.0,107.5 152.0,107.5 153.2,107.5 154.4,107.5 155.6,107.5 156.7,107.5 157.9,104.7 159.1,104.7 160.3,104.7 161.4,104.7 162.7,93.3 163.9,93.3 168.3,93.3 166.2,87.6 167.4,87.6 168.4,87.6 169.5,87.6 170.8,93.3 171.9,93.3 173.9,93.3 174.3,93.3 175.5,81.9 176.7,81.9 177.8,81.9 179.1,67.6 180.2,67.6 182.7,67.6 182.5,67.6 183.6,84.7 184.8,84.7 189.0,84.7 187.2,84.7 188.3,76.2 189.5,76.2 190.7,76.2 191.9,87.6 193.0,87.6 196.5,87.6 195.4,87.6 196.6,79.0 197.7,79.0 199.0,79.0 200.0,84.7 201.1,84.7 202.3,84.7 203.5,84.7 204.7,84.7 205.8,84.7 207.1,84.7 208.2,84.7 209.4,70.5 210.5,70.5 211.8,70.5 213.0,76.2 214.1,76.2 215.3,76.2 216.3,76.2 217.5,76.2 218.7,76.2 219.9,76.2 221.0,76.2 222.2,76.2 224.8,76.2 224.6,76.2 225.8,96.1 226.9,96.1 228.2,96.1 229.3,96.1 230.5,87.6 231.5,87.6 232.7,87.6 233.8,73.3 235.1,73.3 240.0,73.3 237.4,73.3 238.6,76.2 239.8,76.2 241.0,76.2 242.1,90.4 243.3,90.4 246.5,90.4 245.7,90.4 246.8,79.0 247.9,79.0 249.1,79.0 250.2,79.0 251.5,90.4 252.6,90.4 253.8,90.4 254.9,90.4 256.2,90.4 257.3,90.4 258.5,90.4 259.7,87.6 260.9,87.6 262.0,87.6 263.2,90.4 264.3,90.4 267.3,90.4 266.6,90.4 267.8,84.7 269.0,84.7 270.1,84.7 271.4,84.7 272.5,87.6 274.9,87.6 274.9,87.6 276.1,87.6 277.3,87.6 278.4,87.6 279.5,87.6 280.6,76.2 281.8,76.2 282.9,76.2 284.2,76.2 285.4,81.9 289.9,81.9 287.8,81.9 288.9,81.9 290.1,81.9 291.2,81.9 292.5,81.9 293.6,76.2 297.5,76.2 295.8,76.2 297.0,90.4 298.2,90.4 299.3,90.4 300.6,90.4 301.7,56.2 305.0,56.2 304.1,56.2 305.3,56.2 306.4,76.2 307.6,76.2 308.8,76.2 310.0,93.3 311.0,93.3 312.2,93.3 313.4,93.3 314.5,64.8 318.2,64.8 316.9,64.8 318.1,84.7 319.2,84.7 320.5,84.7 321.6,84.7 322.8,87.6 324.8,87.6 325.2,87.6 326.4,87.6 327.4,81.9 328.6,81.9 329.7,81.9 330.9,93.3 332.1,93.3 333.3,93.3 334.4,93.3 335.6,81.9 336.9,81.9 338.0,81.9 339.2,81.9 340.4,90.4 341.6,90.4 342.7,90.4 343.7,90.4 345.4,90.4 346.1,90.4 347.3,90.4 348.5,87.6 349.7,87.6 350.8,87.6 352.1,90.4 353.2,90.4 354.4,90.4 355.5,90.4 356.8,93.3 357.9,93.3 358.9,93.3 360.1,93.3 361.3,81.9 362.5,81.9 363.6,81.9 364.9,90.4 368.1,90.4 367.3,90.4 368.4,90.4 369.6,96.1 370.7,96.1 372.0,96.1 373.1,84.7 375.8,84.7 375.4,84.7 376.5,84.7 377.7,87.6 378.8,87.6 380.1,87.6 381.2,87.6 382.4,93.3 383.5,93.3 384.8,93.3 386.0,67.6 387.1,67.6 388.4,67.6 389.5,67.6 390.7,87.6 391.7,87.6 392.9,87.6 394.2,70.5 398.6,70.5 396.6,70.5 397.8,70.5 398.9,79.0 400.1,79.0 401.3,79.0 402.5,79.0 405.0,87.6 404.9,87.6 406.1,87.6 407.0,67.6 408.3,67.6 409.4,67.6 410.6,67.6 411.7,81.9 413.0,81.9 414.1,81.9 415.3,96.1 416.6,96.1 417.7,96.1 418.9,96.1 420.0,81.9 421.3,81.9 422.4,81.9 423.4,81.9 425.7,87.6 425.8,87.6 427.0,87.6 428.1,96.1 429.4,96.1 430.5,96.1 431.7,96.1 433.5,96.1 434.1,96.1 435.2,96.1 436.5,107.5 437.6,107.5 438.8,107.5 439.8,107.5 441.0,107.5 442.2,107.5 443.3,107.5 444.5,107.5 448.6,107.5 446.9,107.5 448.0,107.5 449.3,104.7 450.4,104.7 451.6,104.7 452.8,104.7 456.1,107.5 455.0,107.5 456.2,107.5 457.4,107.5 458.5,101.8 459.7,101.8 460.9,101.8 462.1,90.4 463.2,90.4 464.4,90.4 465.7,90.4 466.8,90.4 468.0,90.4 469.1,90.4 470.4,87.6 471.3,87.6 472.6,87.6 473.7,87.6 476.7,90.4 476.1,90.4 477.3,90.4 478.5,90.4 479.6,96.1 480.8,96.1 482.0,96.1 484.5,64.8 484.3,64.8 485.6,64.8 486.6,64.8 487.7,73.3 489.0,73.3 490.1,73.3 491.3,73.3 492.4,81.9 493.7,81.9 494.8,81.9 499.5,64.8 497.1,64.8 498.4,64.8 499.5,64.8 500.7,81.9 501.9,81.9 502.9,81.9 505.0,76.2 505.3,76.2 506.5,76.2 507.6,76.2 508.8,67.6 510.0,67.6 511.2,67.6 512.4,67.6 513.6,90.4 514.7,90.4 515.9,90.4 517.2,87.6 518.3,87.6 519.3,87.6 520.4,87.6 521.7,90.4 522.8,90.4 524.0,90.4 526.6,93.3 526.4,93.3 527.6,93.3 528.8,93.3 530.0,61.9 531.1,61.9 532.3,61.9 534.2,61.9 534.5,73.3 535.6,73.3 536.9,73.3 538.1,87.6 539.2,87.6 540.4,87.6 541.6,87.6 542.8,81.9 543.9,81.9 545.2,81.9 549.4,90.4 547.5,90.4 548.6,90.4 550.0,90.4 550.9,93.3 552.0,93.3 553.3,93.3 554.9,93.3 555.6,84.7 556.7,84.7 558.0,84.7 559.1,93.3 560.3,93.3 561.5,93.3 562.7,93.3 563.8,90.4 565.0,90.4 566.3,90.4 570.1,90.4 568.4,44.8 569.6,44.8 570.8,44.8 571.9,90.4 573.1,90.4 574.3,90.4 577.7,90.4 576.8,67.6 577.9,67.6 579.1,67.6 580.2,79.0 581.4,79.0 582.4,79.0 583.6,79.0 584.7,90.4 586.0,90.4 587.2,90.4 588.3,90.4 589.6,61.9 590.7,61.9 591.9,61.9 593.0,87.6 594.3,87.6 595.4,87.6 600.3,87.6 597.7,81.9 598.8,81.9 600.0,81.9 601.1,53.4 602.4,53.4 603.5,53.4 606.1,53.4 605.9,81.9 607.1,81.9 608.2,81.9 609.4,81.9 610.6,87.6 611.8,87.6 612.9,87.6 614.1,67.6 615.2,67.6 616.3,67.6 621.1,67.6 618.7,93.3 619.9,93.3 621.0,93.3 622.3,84.7 623.4,84.7 624.6,84.7 627.5,84.7 627.0,90.4 628.2,90.4 629.3,90.4 630.5,90.4 631.5,93.3 632.7,93.3 633.9,93.3 635.1,87.6 636.2,87.6 637.4,87.6 638.7,87.6 639.8,87.6 641.0,87.6 642.1,87.6 643.4,87.6 644.5,87.6 645.7,87.6 648.2,87.6 647.9,79.0 649.1,79.0 650.3,79.0 651.6,79.0 652.8,87.6 653.9,87.6 657.9,87.6 656.4,87.6 657.5,87.6 658.7,87.6 659.9,87.6 661.1,67.6 662.1,67.6 665.3,67.6 664.4,67.6 665.6,87.6 666.9,87.6 668.0,87.6 669.2,79.0 670.3,79.0 671.6,79.0 672.7,79.0 673.9,81.9 675.1,81.9 676.3,81.9 677.4,87.6 678.5,87.6 679.7,87.6 680.8,87.6 682.0,76.2 683.1,76.2 686.0,76.2 685.5,76.2 686.8,87.6 687.9,87.6 689.1,87.6 690.2,87.6 691.5,87.6 692.6,87.6 693.8,87.6 694.8,76.2 696.0,76.2 697.2,76.2 698.3,84.7 699.6,84.7 700.7,84.7 701.9,84.7 703.0,81.9 704.3,81.9 707.8,81.9 706.6,81.9 707.9,79.0 709.0,79.0 710.0,79.0 711.2,93.3 712.4,93.3 713.5,93.3 714.7,93.3 715.9,73.3 717.1,73.3 718.3,73.3 719.5,81.9 720.7,81.9 722.3,81.9 723.0,81.9 724.2,96.1 725.4,96.1 728.5,96.1 727.6,96.1 728.8,90.4 729.9,90.4 731.2,90.4 732.3,99.0 733.5,99.0 736.0,99.0 735.9,99.0 737.0,104.7 738.2,104.7 739.4,104.7 740.6,104.7 741.7,104.7 742.8,104.7 744.0,104.7 745.1,104.7 746.3,104.7 751.0,104.7 748.7,104.7 749.8,104.7 751.0,104.7 752.2,104.7 753.4,104.7 754.5,104.7 758.7,104.7 757.0,104.7 757.9,104.7 759.1,104.7 760.3,104.7 761.5,104.7 762.6,99.0 764.4,99.0 765.0,99.0 766.2,84.7 767.4,84.7 768.6,84.7 769.8,84.7 770.9,101.8 772.1,101.8 773.3,101.8 774.3,104.7 775.4,104.7 779.1,104.7 778.0,104.7 779.0,104.7 780.2,104.7 781.4,104.7 782.6,104.7 783.7,104.7 786.6,104.7 786.1,104.7 787.3,107.5 788.4,107.5 789.5,107.5" fill="none" stroke="#06B6D4" stroke-width="1.3" stroke-linejoin="round" opacity="0.85" /><polyline points="87.7,107.5 88.7,107.5 89.9,107.5 91.1,107.5 92.2,107.5 96.8,107.5 94.7,107.5 95.8,107.5 97.0,107.5 98.2,107.5 99.4,107.5 100.5,107.5 101.8,107.5 102.9,104.7 103.9,104.7 105.1,104.7 108.9,104.7 107.5,104.7 108.6,104.7 109.9,104.7 111.0,104.7 112.2,104.7 113.3,104.7 116.5,104.7 115.7,96.1 116.9,96.1 118.1,96.1 119.3,96.1 120.3,99.0 121.5,99.0 122.7,99.0 123.8,104.7 125.0,104.7 126.2,104.7 127.4,104.7 128.5,107.5 129.7,107.5 130.9,107.5 132.1,107.5 133.3,107.5 134.5,107.5 137.2,107.5 136.8,107.5 138.0,107.5 139.2,107.5 140.4,107.5 141.5,107.5 142.8,107.5 145.7,107.5 145.1,107.5 146.2,107.5 147.5,107.5 148.6,107.5 149.8,107.5 151.0,107.5 152.0,107.5 153.2,107.5 154.4,107.5 155.6,107.5 156.7,107.5 157.9,104.7 159.1,104.7 160.3,104.7 161.4,104.7 162.7,90.4 163.9,90.4 168.3,90.4 166.2,93.3 167.4,93.3 168.4,93.3 169.5,93.3 170.8,90.4 171.9,90.4 173.9,90.4 174.3,90.4 175.5,79.0 176.7,79.0 177.8,79.0 179.1,84.7 180.2,84.7 182.7,84.7 182.5,84.7 183.6,90.4 184.8,90.4 189.0,90.4 187.2,90.4 188.3,81.9 189.5,81.9 190.7,81.9 191.9,84.7 193.0,84.7 196.5,84.7 195.4,84.7 196.6,87.6 197.7,87.6 199.0,87.6 200.0,90.4 201.1,90.4 202.3,90.4 203.5,90.4 204.7,87.6 205.8,87.6 207.1,87.6 208.2,87.6 209.4,87.6 210.5,87.6 211.8,87.6 213.0,84.7 214.1,84.7 215.3,84.7 216.3,84.7 217.5,87.6 218.7,87.6 219.9,87.6 221.0,76.2 222.2,76.2 224.8,76.2 224.6,76.2 225.8,90.4 226.9,90.4 228.2,90.4 229.3,90.4 230.5,90.4 231.5,90.4 232.7,90.4 233.8,81.9 235.1,81.9 240.0,81.9 237.4,81.9 238.6,84.7 239.8,84.7 241.0,84.7 242.1,90.4 243.3,90.4 246.5,90.4 245.7,90.4 246.8,76.2 247.9,76.2 249.1,76.2 250.2,76.2 251.5,76.2 252.6,76.2 253.8,76.2 254.9,87.6 256.2,87.6 257.3,87.6 258.5,87.6 259.7,84.7 260.9,84.7 262.0,84.7 263.2,87.6 264.3,87.6 267.3,87.6 266.6,87.6 267.8,81.9 269.0,81.9 270.1,81.9 271.4,81.9 272.5,79.0 274.9,79.0 274.9,79.0 276.1,90.4 277.3,90.4 278.4,90.4 279.5,90.4 280.6,79.0 281.8,79.0 282.9,79.0 284.2,79.0 285.4,84.7 289.9,84.7 287.8,84.7 288.9,84.7 290.1,84.7 291.2,84.7 292.5,84.7 293.6,76.2 297.5,76.2 295.8,76.2 297.0,87.6 298.2,87.6 299.3,87.6 300.6,87.6 301.7,90.4 305.0,90.4 304.1,90.4 305.3,90.4 306.4,76.2 307.6,76.2 308.8,76.2 310.0,93.3 311.0,93.3 312.2,93.3 313.4,93.3 314.5,73.3 318.2,73.3 316.9,73.3 318.1,90.4 319.2,90.4 320.5,90.4 321.6,90.4 322.8,76.2 324.8,76.2 325.2,76.2 326.4,76.2 327.4,84.7 328.6,84.7 329.7,84.7 330.9,84.7 332.1,84.7 333.3,84.7 334.4,84.7 335.6,79.0 336.9,79.0 338.0,79.0 339.2,79.0 340.4,81.9 341.6,81.9 342.7,81.9 343.7,81.9 345.4,81.9 346.1,81.9 347.3,81.9 348.5,87.6 349.7,87.6 350.8,87.6 352.1,84.7 353.2,84.7 354.4,84.7 355.5,84.7 356.8,87.6 357.9,87.6 358.9,87.6 360.1,87.6 361.3,81.9 362.5,81.9 363.6,81.9 364.9,79.0 368.1,79.0 367.3,79.0 368.4,79.0 369.6,87.6 370.7,87.6 372.0,87.6 373.1,87.6 375.8,87.6 375.4,87.6 376.5,87.6 377.7,84.7 378.8,84.7 380.1,84.7 381.2,84.7 382.4,87.6 383.5,87.6 384.8,87.6 386.0,81.9 387.1,81.9 388.4,81.9 389.5,81.9 390.7,81.9 391.7,81.9 392.9,81.9 394.2,90.4 398.6,90.4 396.6,90.4 397.8,90.4 398.9,81.9 400.1,81.9 401.3,81.9 402.5,81.9 405.0,84.7 404.9,84.7 406.1,84.7 407.0,76.2 408.3,76.2 409.4,76.2 410.6,76.2 411.7,73.3 413.0,73.3 414.1,73.3 415.3,81.9 416.6,81.9 417.7,81.9 418.9,81.9 420.0,81.9 421.3,81.9 422.4,81.9 423.4,81.9 425.7,96.1 425.8,96.1 427.0,96.1 428.1,87.6 429.4,87.6 430.5,87.6 431.7,87.6 433.5,96.1 434.1,96.1 435.2,96.1 436.5,104.7 437.6,104.7 438.8,104.7 439.8,104.7 441.0,104.7 442.2,104.7 443.3,104.7 444.5,104.7 448.6,104.7 446.9,104.7 448.0,104.7 449.3,107.5 450.4,107.5 451.6,107.5 452.8,107.5 456.1,107.5 455.0,107.5 456.2,107.5 457.4,107.5 458.5,101.8 459.7,101.8 460.9,101.8 462.1,96.1 463.2,96.1 464.4,96.1 465.7,96.1 466.8,84.7 468.0,84.7 469.1,84.7 470.4,90.4 471.3,90.4 472.6,90.4 473.7,90.4 476.7,81.9 476.1,81.9 477.3,81.9 478.5,81.9 479.6,84.7 480.8,84.7 482.0,84.7 484.5,73.3 484.3,73.3 485.6,73.3 486.6,73.3 487.7,84.7 489.0,84.7 490.1,84.7 491.3,84.7 492.4,87.6 493.7,87.6 494.8,87.6 499.5,81.9 497.1,81.9 498.4,81.9 499.5,81.9 500.7,90.4 501.9,90.4 502.9,90.4 505.0,90.4 505.3,90.4 506.5,90.4 507.6,90.4 508.8,81.9 510.0,81.9 511.2,81.9 512.4,81.9 513.6,93.3 514.7,93.3 515.9,93.3 517.2,90.4 518.3,90.4 519.3,90.4 520.4,90.4 521.7,73.3 522.8,73.3 524.0,73.3 526.6,96.1 526.4,96.1 527.6,96.1 528.8,96.1 530.0,87.6 531.1,87.6 532.3,87.6 534.2,87.6 534.5,87.6 535.6,87.6 536.9,87.6 538.1,84.7 539.2,84.7 540.4,84.7 541.6,84.7 542.8,81.9 543.9,81.9 545.2,81.9 549.4,87.6 547.5,87.6 548.6,87.6 550.0,87.6 550.9,87.6 552.0,87.6 553.3,87.6 554.9,87.6 555.6,87.6 556.7,87.6 558.0,87.6 559.1,96.1 560.3,96.1 561.5,96.1 562.7,96.1 563.8,87.6 565.0,87.6 566.3,87.6 570.1,87.6 568.4,73.3 569.6,73.3 570.8,73.3 571.9,87.6 573.1,87.6 574.3,87.6 577.7,87.6 576.8,64.8 577.9,64.8 579.1,64.8 580.2,84.7 581.4,84.7 582.4,84.7 583.6,84.7 584.7,87.6 586.0,87.6 587.2,87.6 588.3,87.6 589.6,84.7 590.7,84.7 591.9,84.7 593.0,87.6 594.3,87.6 595.4,87.6 600.3,87.6 597.7,76.2 598.8,76.2 600.0,76.2 601.1,76.2 602.4,76.2 603.5,76.2 606.1,76.2 605.9,81.9 607.1,81.9 608.2,81.9 609.4,81.9 610.6,87.6 611.8,87.6 612.9,87.6 614.1,81.9 615.2,81.9 616.3,81.9 621.1,81.9 618.7,93.3 619.9,93.3 621.0,93.3 622.3,87.6 623.4,87.6 624.6,87.6 627.5,87.6 627.0,81.9 628.2,81.9 629.3,81.9 630.5,81.9 631.5,93.3 632.7,93.3 633.9,93.3 635.1,81.9 636.2,81.9 637.4,81.9 638.7,81.9 639.8,93.3 641.0,93.3 642.1,93.3 643.4,84.7 644.5,84.7 645.7,84.7 648.2,84.7 647.9,84.7 649.1,84.7 650.3,84.7 651.6,84.7 652.8,93.3 653.9,93.3 657.9,93.3 656.4,84.7 657.5,84.7 658.7,84.7 659.9,84.7 661.1,81.9 662.1,81.9 665.3,81.9 664.4,81.9 665.6,90.4 666.9,90.4 668.0,90.4 669.2,84.7 670.3,84.7 671.6,84.7 672.7,84.7 673.9,81.9 675.1,81.9 676.3,81.9 677.4,87.6 678.5,87.6 679.7,87.6 680.8,87.6 682.0,90.4 683.1,90.4 686.0,90.4 685.5,90.4 686.8,90.4 687.9,90.4 689.1,90.4 690.2,93.3 691.5,93.3 692.6,93.3 693.8,93.3 694.8,87.6 696.0,87.6 697.2,87.6 698.3,90.4 699.6,90.4 700.7,90.4 701.9,90.4 703.0,93.3 704.3,93.3 707.8,93.3 706.6,93.3 707.9,81.9 709.0,81.9 710.0,81.9 711.2,90.4 712.4,90.4 713.5,90.4 714.7,90.4 715.9,90.4 717.1,90.4 718.3,90.4 719.5,73.3 720.7,73.3 722.3,73.3 723.0,73.3 724.2,93.3 725.4,93.3 728.5,93.3 727.6,93.3 728.8,96.1 729.9,96.1 731.2,96.1 732.3,96.1 733.5,96.1 736.0,96.1 735.9,96.1 737.0,101.8 738.2,101.8 739.4,101.8 740.6,104.7 741.7,104.7 742.8,104.7 744.0,104.7 745.1,101.8 746.3,101.8 751.0,101.8 748.7,101.8 749.8,104.7 751.0,104.7 752.2,104.7 753.4,107.5 754.5,107.5 758.7,107.5 757.0,107.5 757.9,107.5 759.1,107.5 760.3,107.5 761.5,107.5 762.6,101.8 764.4,101.8 765.0,101.8 766.2,84.7 767.4,84.7 768.6,84.7 769.8,84.7 770.9,99.0 772.1,99.0 773.3,99.0 774.3,104.7 775.4,104.7 779.1,104.7 778.0,104.7 779.0,107.5 780.2,107.5 781.4,107.5 782.6,107.5 783.7,104.7 786.6,104.7 786.1,104.7 787.3,107.5 788.4,107.5 789.5,107.5" fill="none" stroke="#10B981" stroke-width="1.3" stroke-linejoin="round" opacity="0.85" /><polyline points="87.7,107.5 88.7,107.5 89.9,107.5 91.1,107.5 92.2,107.5 96.8,107.5 94.7,107.5 95.8,107.5 97.0,107.5 98.2,107.5 99.4,104.7 100.5,104.7 101.8,104.7 102.9,104.7 103.9,104.7 105.1,104.7 108.9,104.7 107.5,101.8 108.6,101.8 109.9,101.8 111.0,101.8 112.2,101.8 113.3,101.8 116.5,101.8 115.7,93.3 116.9,93.3 118.1,93.3 119.3,93.3 120.3,76.2 121.5,76.2 122.7,76.2 123.8,93.3 125.0,93.3 126.2,93.3 127.4,93.3 128.5,99.0 129.7,99.0 130.9,99.0 132.1,99.0 133.3,104.7 134.5,104.7 137.2,104.7 136.8,107.5 138.0,107.5 139.2,107.5 140.4,107.5 141.5,107.5 142.8,107.5 145.7,107.5 145.1,107.5 146.2,107.5 147.5,107.5 148.6,107.5 149.8,107.5 151.0,107.5 152.0,107.5 153.2,107.5 154.4,99.0 155.6,99.0 156.7,99.0 157.9,90.4 159.1,90.4 160.3,90.4 161.4,90.4 162.7,96.1 163.9,96.1 168.3,96.1 166.2,90.4 167.4,90.4 168.4,90.4 169.5,90.4 170.8,96.1 171.9,96.1 173.9,96.1 174.3,96.1 175.5,96.1 176.7,96.1 177.8,96.1 179.1,96.1 180.2,96.1 182.7,96.1 182.5,96.1 183.6,96.1 184.8,96.1 189.0,96.1 187.2,96.1 188.3,96.1 189.5,96.1 190.7,96.1 191.9,96.1 193.0,96.1 196.5,96.1 195.4,96.1 196.6,99.0 197.7,99.0 199.0,99.0 200.0,96.1 201.1,96.1 202.3,96.1 203.5,96.1 204.7,99.0 205.8,99.0 207.1,99.0 208.2,99.0 209.4,99.0 210.5,99.0 211.8,99.0 213.0,99.0 214.1,99.0 215.3,99.0 216.3,99.0 217.5,99.0 218.7,99.0 219.9,99.0 221.0,99.0 222.2,99.0 224.8,99.0 224.6,99.0 225.8,99.0 226.9,99.0 228.2,99.0 229.3,99.0 230.5,99.0 231.5,99.0 232.7,99.0 233.8,99.0 235.1,99.0 240.0,99.0 237.4,99.0 238.6,93.3 239.8,93.3 241.0,93.3 242.1,96.1 243.3,96.1 246.5,96.1 245.7,96.1 246.8,93.3 247.9,93.3 249.1,93.3 250.2,93.3 251.5,99.0 252.6,99.0 253.8,99.0 254.9,99.0 256.2,99.0 257.3,99.0 258.5,99.0 259.7,101.8 260.9,101.8 262.0,101.8 263.2,99.0 264.3,99.0 267.3,99.0 266.6,99.0 267.8,99.0 269.0,99.0 270.1,99.0 271.4,99.0 272.5,99.0 274.9,99.0 274.9,99.0 276.1,99.0 277.3,99.0 278.4,99.0 279.5,99.0 280.6,99.0 281.8,99.0 282.9,99.0 284.2,99.0 285.4,96.1 289.9,96.1 287.8,96.1 288.9,93.3 290.1,93.3 291.2,93.3 292.5,93.3 293.6,93.3 297.5,93.3 295.8,93.3 297.0,99.0 298.2,99.0 299.3,99.0 300.6,99.0 301.7,93.3 305.0,93.3 304.1,93.3 305.3,93.3 306.4,93.3 307.6,93.3 308.8,93.3 310.0,90.4 311.0,90.4 312.2,90.4 313.4,90.4 314.5,81.9 318.2,81.9 316.9,81.9 318.1,87.6 319.2,87.6 320.5,87.6 321.6,87.6 322.8,84.7 324.8,84.7 325.2,84.7 326.4,84.7 327.4,87.6 328.6,87.6 329.7,87.6 330.9,96.1 332.1,96.1 333.3,96.1 334.4,96.1 335.6,93.3 336.9,93.3 338.0,93.3 339.2,93.3 340.4,96.1 341.6,96.1 342.7,96.1 343.7,99.0 345.4,99.0 346.1,99.0 347.3,99.0 348.5,84.7 349.7,84.7 350.8,84.7 352.1,90.4 353.2,90.4 354.4,90.4 355.5,90.4 356.8,81.9 357.9,81.9 358.9,81.9 360.1,81.9 361.3,90.4 362.5,90.4 363.6,90.4 364.9,87.6 368.1,87.6 367.3,87.6 368.4,87.6 369.6,99.0 370.7,99.0 372.0,99.0 373.1,101.8 375.8,101.8 375.4,101.8 376.5,101.8 377.7,99.0 378.8,99.0 380.1,99.0 381.2,99.0 382.4,90.4 383.5,90.4 384.8,90.4 386.0,99.0 387.1,99.0 388.4,99.0 389.5,99.0 390.7,99.0 391.7,99.0 392.9,99.0 394.2,96.1 398.6,96.1 396.6,96.1 397.8,96.1 398.9,96.1 400.1,96.1 401.3,96.1 402.5,96.1 405.0,99.0 404.9,99.0 406.1,99.0 407.0,93.3 408.3,93.3 409.4,93.3 410.6,93.3 411.7,93.3 413.0,93.3 414.1,93.3 415.3,99.0 416.6,99.0 417.7,99.0 418.9,99.0 420.0,93.3 421.3,93.3 422.4,93.3 423.4,93.3 425.7,99.0 425.8,99.0 427.0,99.0 428.1,96.1 429.4,96.1 430.5,96.1 431.7,96.1 433.5,90.4 434.1,90.4 435.2,90.4 436.5,90.4 437.6,90.4 438.8,90.4 439.8,90.4 441.0,104.7 442.2,104.7 443.3,104.7 444.5,104.7 448.6,107.5 446.9,107.5 448.0,107.5 449.3,107.5 450.4,107.5 451.6,107.5 452.8,107.5 456.1,107.5 455.0,107.5 456.2,107.5 457.4,107.5 458.5,90.4 459.7,90.4 460.9,90.4 462.1,99.0 463.2,99.0 464.4,99.0 465.7,99.0 466.8,99.0 468.0,99.0 469.1,99.0 470.4,99.0 471.3,99.0 472.6,99.0 473.7,99.0 476.7,93.3 476.1,93.3 477.3,93.3 478.5,93.3 479.6,99.0 480.8,99.0 482.0,99.0 484.5,93.3 484.3,93.3 485.6,93.3 486.6,93.3 487.7,90.4 489.0,90.4 490.1,90.4 491.3,90.4 492.4,96.1 493.7,96.1 494.8,96.1 499.5,96.1 497.1,96.1 498.4,96.1 499.5,96.1 500.7,99.0 501.9,99.0 502.9,99.0 505.0,96.1 505.3,96.1 506.5,96.1 507.6,96.1 508.8,99.0 510.0,99.0 511.2,99.0 512.4,99.0 513.6,101.8 514.7,101.8 515.9,101.8 517.2,96.1 518.3,96.1 519.3,96.1 520.4,96.1 521.7,93.3 522.8,93.3 524.0,93.3 526.6,99.0 526.4,99.0 527.6,99.0 528.8,99.0 530.0,87.6 531.1,87.6 532.3,87.6 534.2,87.6 534.5,87.6 535.6,87.6 536.9,87.6 538.1,73.3 539.2,73.3 540.4,73.3 541.6,73.3 542.8,73.3 543.9,73.3 545.2,73.3 549.4,73.3 547.5,73.3 548.6,73.3 550.0,73.3 550.9,90.4 552.0,90.4 553.3,90.4 554.9,90.4 555.6,96.1 556.7,96.1 558.0,96.1 559.1,96.1 560.3,96.1 561.5,96.1 562.7,96.1 563.8,96.1 565.0,96.1 566.3,96.1 570.1,96.1 568.4,93.3 569.6,93.3 570.8,93.3 571.9,76.2 573.1,76.2 574.3,76.2 577.7,76.2 576.8,84.7 577.9,84.7 579.1,84.7 580.2,84.7 581.4,84.7 582.4,84.7 583.6,84.7 584.7,90.4 586.0,90.4 587.2,90.4 588.3,90.4 589.6,93.3 590.7,93.3 591.9,93.3 593.0,96.1 594.3,96.1 595.4,96.1 600.3,96.1 597.7,96.1 598.8,96.1 600.0,96.1 601.1,93.3 602.4,93.3 603.5,93.3 606.1,93.3 605.9,96.1 607.1,96.1 608.2,96.1 609.4,96.1 610.6,96.1 611.8,96.1 612.9,96.1 614.1,90.4 615.2,90.4 616.3,90.4 621.1,90.4 618.7,96.1 619.9,96.1 621.0,96.1 622.3,93.3 623.4,93.3 624.6,93.3 627.5,93.3 627.0,93.3 628.2,93.3 629.3,93.3 630.5,93.3 631.5,96.1 632.7,96.1 633.9,96.1 635.1,93.3 636.2,93.3 637.4,93.3 638.7,93.3 639.8,99.0 641.0,99.0 642.1,99.0 643.4,99.0 644.5,99.0 645.7,99.0 648.2,99.0 647.9,96.1 649.1,96.1 650.3,96.1 651.6,96.1 652.8,101.8 653.9,101.8 657.9,101.8 656.4,99.0 657.5,99.0 658.7,99.0 659.9,99.0 661.1,96.1 662.1,96.1 665.3,96.1 664.4,96.1 665.6,101.8 666.9,101.8 668.0,101.8 669.2,99.0 670.3,99.0 671.6,99.0 672.7,99.0 673.9,99.0 675.1,99.0 676.3,99.0 677.4,99.0 678.5,99.0 679.7,99.0 680.8,99.0 682.0,96.1 683.1,96.1 686.0,96.1 685.5,96.1 686.8,99.0 687.9,99.0 689.1,99.0 690.2,93.3 691.5,93.3 692.6,93.3 693.8,93.3 694.8,99.0 696.0,99.0 697.2,99.0 698.3,99.0 699.6,99.0 700.7,99.0 701.9,99.0 703.0,99.0 704.3,99.0 707.8,99.0 706.6,99.0 707.9,93.3 709.0,93.3 710.0,93.3 711.2,96.1 712.4,96.1 713.5,96.1 714.7,96.1 715.9,96.1 717.1,96.1 718.3,96.1 719.5,93.3 720.7,93.3 722.3,93.3 723.0,93.3 724.2,101.8 725.4,101.8 728.5,101.8 727.6,101.8 728.8,101.8 729.9,101.8 731.2,101.8 732.3,93.3 733.5,93.3 736.0,93.3 735.9,93.3 737.0,96.1 738.2,96.1 739.4,96.1 740.6,104.7 741.7,104.7 742.8,104.7 744.0,104.7 745.1,87.6 746.3,87.6 751.0,87.6 748.7,87.6 749.8,101.8 751.0,101.8 752.2,101.8 753.4,104.7 754.5,104.7 758.7,104.7 757.0,104.7 757.9,104.7 759.1,104.7 760.3,104.7 761.5,104.7 762.6,93.3 764.4,93.3 765.0,93.3 766.2,67.6 767.4,67.6 768.6,67.6 769.8,67.6 770.9,93.3 772.1,93.3 773.3,93.3 774.3,96.1 775.4,96.1 779.1,96.1 778.0,96.1 779.0,101.8 780.2,101.8 781.4,101.8 782.6,101.8 783.7,104.7 786.6,104.7 786.1,104.7 787.3,107.5 788.4,107.5 789.5,107.5" fill="none" stroke="#8B5CF6" stroke-width="1.3" stroke-linejoin="round" opacity="0.85" />
+        <!-- Limiar (threshold) -->
+        
+            <line x1="50" y1="36.3" x2="800" y2="36.3" stroke="#F59E0B" stroke-width="2" stroke-dasharray="10,5" />
+            <rect x="695" y="20.26838235294116" width="100" height="16" rx="3" fill="rgba(245,158,11,0.15)" />
+            <text x="700" y="32.26838235294116" fill="#D97706" font-size="9" font-weight="bold">25 µm (limiar)</text>
+        
+        
+            <line x1="50" y1="178.7" x2="800" y2="178.7" stroke="#F59E0B" stroke-width="2" stroke-dasharray="10,5" opacity="0.5" />
+        
+        
+      </svg>
+      
+      <div style="display:flex; justify-content:flex-end; margin-top:8px;">
+        <div style="background:rgba(255,255,255,0.94); border:1px solid #e2e8f0; border-radius:4px; padding:6px 8px; display:grid; gap:6px; min-width:190px;">
+          
+      <div style="display:flex; align-items:center; gap:8px; font-size:10px; color:#334155;">
+        <span style="display:inline-block; width:20px; height:0; border-top:2px solid #06B6D4;"></span>
+        <span>Eixo X (µm)</span>
+      </div>
+      <div style="display:flex; align-items:center; gap:8px; font-size:10px; color:#334155;">
+        <span style="display:inline-block; width:20px; height:0; border-top:2px solid #10B981;"></span>
+        <span>Eixo Y (µm)</span>
+      </div>
+      <div style="display:flex; align-items:center; gap:8px; font-size:10px; color:#334155;">
+        <span style="display:inline-block; width:20px; height:0; border-top:2px solid #8B5CF6;"></span>
+        <span>Eixo Z (µm)</span>
+      </div>
+    
+          <div style="height:1px; background:#e2e8f0;"></div>
+          
+      <div style="display:flex; align-items:center; gap:8px; font-size:10px; color:#334155;">
+        <span style="display:inline-block; width:20px; height:0; border-top:2px solid #8B5CF6;"></span>
+        <span>Vibração</span>
+      </div>
+      <div style="display:flex; align-items:center; gap:8px; font-size:10px; color:#334155;">
+        <span style="display:inline-block; width:20px; height:0; border-top:2px solid #EF4444;"></span>
+        <span>Ruído + Vibração</span>
+      </div>
+    
+        </div>
+      </div>
+    
+    </div>
+    
+    <div class="chart-container">
+      <h3 class="chart-title">🕒 Gráfico Temporal de Ocorrências</h3>
+      <svg viewBox="0 0 820 150" width="100%" preserveAspectRatio="xMidYMid meet" style="background: #fff; border: 1px solid #e2e8f0; border-radius: 8px;">
+        <line x1="50.0" y1="24" x2="50.0" y2="115" stroke="#e2e8f0" stroke-width="0.5" /><text x="50.0" y="129" text-anchor="middle" fill="#94a3b8" font-size="9">0:00</text><line x1="175.7" y1="24" x2="175.7" y2="115" stroke="#e2e8f0" stroke-width="0.5" /><text x="175.7" y="129" text-anchor="middle" fill="#94a3b8" font-size="9">0:30</text><line x1="301.4" y1="24" x2="301.4" y2="115" stroke="#e2e8f0" stroke-width="0.5" /><text x="301.4" y="129" text-anchor="middle" fill="#94a3b8" font-size="9">1:00</text><line x1="427.1" y1="24" x2="427.1" y2="115" stroke="#e2e8f0" stroke-width="0.5" /><text x="427.1" y="129" text-anchor="middle" fill="#94a3b8" font-size="9">1:30</text><line x1="552.8" y1="24" x2="552.8" y2="115" stroke="#e2e8f0" stroke-width="0.5" /><text x="552.8" y="129" text-anchor="middle" fill="#94a3b8" font-size="9">2:00</text><line x1="678.5" y1="24" x2="678.5" y2="115" stroke="#e2e8f0" stroke-width="0.5" /><text x="678.5" y="129" text-anchor="middle" fill="#94a3b8" font-size="9">2:30</text>
+        <line x1="50" y1="69.5" x2="800" y2="69.5" stroke="#64748b" stroke-width="1" />
+        <line x1="50" y1="24" x2="50" y2="115" stroke="#64748b" stroke-width="1" />
+        <rect x="50" y="24" width="100.6" height="91.0" fill="rgba(0,0,0,0.10)" /><rect x="728.8" y="24" width="71.2" height="91.0" fill="rgba(0,0,0,0.10)" /><rect x="150.6" y="24" width="578.2" height="91.0" fill="rgba(59,130,246,0.06)" /><line x1="150.6" y1="24" x2="150.6" y2="115" stroke="#2563EB" stroke-width="3" stroke-dasharray="8,4" /><line x1="728.8" y1="24" x2="728.8" y2="115" stroke="#2563EB" stroke-width="3" stroke-dasharray="8,4" /><rect x="149.6" y="23.0" width="52" height="15" rx="3" fill="#2563EB" /><text x="175.6" y="34.0" text-anchor="middle" fill="#fff" font-size="9" font-weight="bold">▶ 0:24</text><rect x="677.8" y="23.0" width="52" height="15" rx="3" fill="#2563EB" /><text x="703.8" y="34.0" text-anchor="middle" fill="#fff" font-size="9" font-weight="bold">2:42 ◀</text><rect x="149.6" y="116" width="48" height="14" rx="2" fill="#2563EB" opacity="0.9" /><text x="173.6" y="127" text-anchor="middle" fill="#fff" font-size="8" font-weight="bold">ROI 0:24</text><rect x="681.8" y="116" width="48" height="14" rx="2" fill="#2563EB" opacity="0.9" /><text x="705.8" y="127" text-anchor="middle" fill="#fff" font-size="8" font-weight="bold">ROI 2:42</text><rect x="427.1" y="24" width="25.1" height="91.0" fill="rgba(239,68,68,0.08)" stroke="#EF4444" stroke-width="1" stroke-dasharray="4,4" /><line x1="427.1" y1="24" x2="435.1" y2="115" stroke="#EF4444" stroke-width="0.5" opacity="0.2" /><line x1="435.1" y1="24" x2="443.1" y2="115" stroke="#EF4444" stroke-width="0.5" opacity="0.2" /><line x1="443.1" y1="24" x2="451.1" y2="115" stroke="#EF4444" stroke-width="0.5" opacity="0.2" /><line x1="451.1" y1="24" x2="452.2" y2="115" stroke="#EF4444" stroke-width="0.5" opacity="0.2" /><rect x="417.7" y="27.0" width="44" height="13" rx="2" fill="#EF4444" opacity="0.85" /><text x="439.7" y="37.0" text-anchor="middle" fill="#fff" font-size="8" font-weight="bold">PAUSA</text>
+        <line x1="150.6" y1="24" x2="150.6" y2="115" stroke="#6B7280" stroke-width="1.2" stroke-dasharray="3,3" opacity="0.55" /><line x1="150.6" y1="69.5" x2="150.6" y2="69.5" stroke="#6B7280" stroke-width="1" opacity="0.85" /><g onclick="openYouTubePlayer('https://www.youtube.com/embed/ggfnSGwBna4?start=24&autoplay=1&controls=1&rel=0', 'Reproduzindo a partir do momento da ocorrência')" style="cursor:pointer;" class="marker-clickable"><circle cx="150.6" cy="69.5" r="9" fill="#6B7280" stroke="#fff" stroke-width="1.5" /><text x="150.6" y="72.5" text-anchor="middle" fill="#fff" font-size="9" font-weight="bold">1</text><title>Clique para reproduzir no YouTube</title></g><line x1="150.6" y1="24" x2="150.6" y2="115" stroke="#6B7280" stroke-width="1.2" stroke-dasharray="3,3" opacity="0.55" /><line x1="150.6" y1="69.5" x2="150.6" y2="55.5" stroke="#6B7280" stroke-width="1" opacity="0.85" /><g onclick="openYouTubePlayer('https://www.youtube.com/embed/ggfnSGwBna4?start=24&autoplay=1&controls=1&rel=0', 'Reproduzindo a partir do momento da ocorrência')" style="cursor:pointer;" class="marker-clickable"><circle cx="150.6" cy="55.5" r="9" fill="#6B7280" stroke="#fff" stroke-width="1.5" /><text x="150.6" y="58.5" text-anchor="middle" fill="#fff" font-size="9" font-weight="bold">2</text><title>Clique para reproduzir no YouTube</title></g><line x1="150.6" y1="24" x2="150.6" y2="115" stroke="#6B7280" stroke-width="1.2" stroke-dasharray="3,3" opacity="0.55" /><line x1="150.6" y1="69.5" x2="150.6" y2="83.5" stroke="#6B7280" stroke-width="1" opacity="0.85" /><g onclick="openYouTubePlayer('https://www.youtube.com/embed/ggfnSGwBna4?start=24&autoplay=1&controls=1&rel=0', 'Reproduzindo a partir do momento da ocorrência')" style="cursor:pointer;" class="marker-clickable"><circle cx="150.6" cy="83.5" r="9" fill="#6B7280" stroke="#fff" stroke-width="1.5" /><text x="150.6" y="86.5" text-anchor="middle" fill="#fff" font-size="9" font-weight="bold">3</text><title>Clique para reproduzir no YouTube</title></g><line x1="311.9" y1="24" x2="311.9" y2="115" stroke="#F97316" stroke-width="1.2" stroke-dasharray="3,3" opacity="0.55" /><line x1="311.9" y1="69.5" x2="311.9" y2="69.5" stroke="#F97316" stroke-width="1" opacity="0.85" /><g onclick="openYouTubePlayer('https://www.youtube.com/embed/ggfnSGwBna4?start=56&end=69&autoplay=1&controls=1&rel=0', 'Reproduzindo o intervalo da ocorrência')" style="cursor:pointer;" class="marker-clickable"><circle cx="311.9" cy="69.5" r="9" fill="#F97316" stroke="#fff" stroke-width="1.5" /><text x="311.9" y="72.5" text-anchor="middle" fill="#fff" font-size="9" font-weight="bold">7</text><title>Clique para reproduzir no YouTube</title></g><line x1="433.4" y1="24" x2="433.4" y2="115" stroke="#F97316" stroke-width="1.2" stroke-dasharray="3,3" opacity="0.55" /><line x1="433.4" y1="69.5" x2="433.4" y2="69.5" stroke="#F97316" stroke-width="1" opacity="0.85" /><g onclick="openYouTubePlayer('https://www.youtube.com/embed/ggfnSGwBna4?start=84&end=99&autoplay=1&controls=1&rel=0', 'Reproduzindo o intervalo da ocorrência')" style="cursor:pointer;" class="marker-clickable"><circle cx="433.4" cy="69.5" r="9" fill="#F97316" stroke="#fff" stroke-width="1.5" /><text x="433.4" y="72.5" text-anchor="middle" fill="#fff" font-size="9" font-weight="bold">8</text><title>Clique para reproduzir no YouTube</title></g><line x1="452.2" y1="24" x2="452.2" y2="115" stroke="#F97316" stroke-width="1.2" stroke-dasharray="3,3" opacity="0.55" /><line x1="452.2" y1="69.5" x2="452.2" y2="69.5" stroke="#F97316" stroke-width="1" opacity="0.85" /><g onclick="openYouTubePlayer('https://www.youtube.com/embed/ggfnSGwBna4?start=96&autoplay=1&controls=1&rel=0', 'Reproduzindo a partir do momento da ocorrência')" style="cursor:pointer;" class="marker-clickable"><circle cx="452.2" cy="69.5" r="9" fill="#F97316" stroke="#fff" stroke-width="1.5" /><text x="452.2" y="72.5" text-anchor="middle" fill="#fff" font-size="9" font-weight="bold">9</text><title>Clique para reproduzir no YouTube</title></g><line x1="584.2" y1="24" x2="584.2" y2="115" stroke="#F97316" stroke-width="1.2" stroke-dasharray="3,3" opacity="0.55" /><line x1="584.2" y1="69.5" x2="584.2" y2="69.5" stroke="#F97316" stroke-width="1" opacity="0.85" /><g onclick="openYouTubePlayer('https://www.youtube.com/embed/ggfnSGwBna4?start=56&end=69&autoplay=1&controls=1&rel=0', 'Reproduzindo o intervalo da ocorrência')" style="cursor:pointer;" class="marker-clickable"><circle cx="584.2" cy="69.5" r="9" fill="#F97316" stroke="#fff" stroke-width="1.5" /><text x="584.2" y="72.5" text-anchor="middle" fill="#fff" font-size="9" font-weight="bold">7</text><title>Clique para reproduzir no YouTube</title></g>
+      </svg>
+      
+      <div style="display:flex; justify-content:flex-end; margin-top:8px;">
+        <div style="background:rgba(255,255,255,0.94); border:1px solid #e2e8f0; border-radius:4px; padding:6px 8px; display:grid; gap:4px; min-width:170px;">
+          
+            <div style="display:flex; align-items:center; gap:8px; font-size:10px; color:#334155;">
+              <span style="display:inline-block; width:20px; height:0; border-top:2px solid #F97316;"></span>
+              <span>Ruído</span>
+            </div>
+          
+            <div style="display:flex; align-items:center; gap:8px; font-size:10px; color:#334155;">
+              <span style="display:inline-block; width:20px; height:0; border-top:2px solid #EF4444;"></span>
+              <span>Ruído + Vibração</span>
+            </div>
+          
+            <div style="display:flex; align-items:center; gap:8px; font-size:10px; color:#334155;">
+              <span style="display:inline-block; width:20px; height:0; border-top:2px solid #8B5CF6;"></span>
+              <span>Vibração</span>
+            </div>
+          
+            <div style="display:flex; align-items:center; gap:8px; font-size:10px; color:#334155;">
+              <span style="display:inline-block; width:20px; height:0; border-top:2px solid #3B82F6;"></span>
+              <span>Visual</span>
+            </div>
+          
+            <div style="display:flex; align-items:center; gap:8px; font-size:10px; color:#334155;">
+              <span style="display:inline-block; width:20px; height:0; border-top:2px solid #6B7280;"></span>
+              <span>Outro</span>
+            </div>
+          
+        </div>
+      </div>
+    
+    </div>
+    
+    <div class="marker-legend">
+      <h4 class="marker-legend-title">🔢 Legenda dos Marcadores nos Gráficos</h4>
+      
+        <div class="marker-legend-item">
+          <span class="marker-num">1</span>
+          <span class="marker-desc">
+            0:24 — Falta arremate da porta de inspeção na casa de máquinas e po...
+            <span style="color: #94a3b8; font-size: 10px;">(Outro)</span>
+          </span>
+        </div>
+        <div class="marker-legend-item">
+          <span class="marker-num">2</span>
+          <span class="marker-desc">
+            0:24 — Fiação exposta sem proteção (canaletas ou dutos) próximos à ...
+            <span style="color: #94a3b8; font-size: 10px;">(Outro)</span>
+          </span>
+        </div>
+        <div class="marker-legend-item">
+          <span class="marker-num">3</span>
+          <span class="marker-desc">
+            0:24 — Não há acabamento junto às passagens dos fios na casa de máq...
+            <span style="color: #94a3b8; font-size: 10px;">(Outro)</span>
+          </span>
+        </div>
+        <div class="marker-legend-item">
+          <span class="marker-num">7</span>
+          <span class="marker-desc">
+            0:58 → 1:07 | 2:05 → 2:10 — Passagem do contrapeso está gerado ruídos.
+            <span style="color: #94a3b8; font-size: 10px;">(Ruído)</span>
+          </span>
+        </div>
+        <div class="marker-legend-item">
+          <span class="marker-num">8</span>
+          <span class="marker-desc">
+            1:26 → 1:37 — Estrondos sem movimentação dos eixos.
+            <span style="color: #94a3b8; font-size: 10px;">(Ruído)</span>
+          </span>
+        </div>
+        <div class="marker-legend-item">
+          <span class="marker-num">9</span>
+          <span class="marker-desc">
+            1:36 — Ruído discreto
+            <span style="color: #94a3b8; font-size: 10px;">(Ruído)</span>
+          </span>
+        </div>
+    </div>
+    
+
+    <h2 class="section-title">Ocorrências Detalhadas</h2>
+    
+      <div class="occurrence-card" style="border-left: 4px solid #22c55e">
+        <div class="occ-header">
+          <div class="occ-number">
+            <span class="occ-icon">📝</span>
+            <strong>#1</strong>
+            <span class="status-badge" style="background: #dcfce7; color: #166534; border: 1px solid #22c55e">
+              ✅ Confirmado
+            </span>
+            <span class="severity-badge" style="background: #f1f5f9; color: #475569; border: 1px solid #94a3b8">
+              Nenhuma
+            </span>
+          </div>
+          
+          <div class="occ-time">
+            🕐 <a href="#" onclick="openYouTubePlayer('https://www.youtube.com/embed/ggfnSGwBna4?start=24&autoplay=1&controls=1&rel=0', 'Reproduzindo a partir do momento da ocorrência'); return false;" class="yt-time-link" title="Reproduzir momento no YouTube (nova janela)">0:24 🔗</a>
+          </div>
+        </div>
+
+        <div class="occ-body">
+          <div class="occ-field">
+            <span class="field-label">Descrição Preliminar:</span>
+            <p>Falta arremate da porta de inspeção na casa de máquinas e portas de correr ao longo do fosso.</p>
+          </div>
+
+          
+          <div class="occ-field confirmed-field">
+            <span class="field-label">Causa Confirmada:</span>
+            <p>Conforme verificado preliminarmente, falta acabamentos da porta de inspeção e portas de correr ao longo do fosso.</p>
+          </div>
+
+          
+          <div class="occ-field">
+            <span class="field-label">Recomendação Técnica:</span>
+            <p>Deve ser tratado com engenheiro da disciplina correspondente.</p>
+          </div>
+
+          
+
+          <div class="occ-meta">
+            <span>Outro</span>
+            <span>•</span>
+            <span>Mecânico</span>
+            
+              <span>•</span>
+              <span>Ruído: 64.7 dB</span>
+              <span>VibX: 0.0 µm</span>
+              <span>VibY: 0.0 µm</span>
+              <span>VibZ: 0.0 µm</span>
+            
+          </div>
+
+          
+        </div>
+      </div>
+
+      <div class="occurrence-card" style="border-left: 4px solid #22c55e">
+        <div class="occ-header">
+          <div class="occ-number">
+            <span class="occ-icon">📝</span>
+            <strong>#2</strong>
+            <span class="status-badge" style="background: #dcfce7; color: #166534; border: 1px solid #22c55e">
+              ✅ Confirmado
+            </span>
+            <span class="severity-badge" style="background: #f1f5f9; color: #475569; border: 1px solid #94a3b8">
+              Nenhuma
+            </span>
+          </div>
+          
+          <div class="occ-time">
+            🕐 <a href="#" onclick="openYouTubePlayer('https://www.youtube.com/embed/ggfnSGwBna4?start=24&autoplay=1&controls=1&rel=0', 'Reproduzindo a partir do momento da ocorrência'); return false;" class="yt-time-link" title="Reproduzir momento no YouTube (nova janela)">0:24 🔗</a>
+          </div>
+        </div>
+
+        <div class="occ-body">
+          <div class="occ-field">
+            <span class="field-label">Descrição Preliminar:</span>
+            <p>Fiação exposta sem proteção (canaletas ou dutos) próximos à casa de máquinas e extensão do fosso.</p>
+          </div>
+
+          
+          <div class="occ-field confirmed-field">
+            <span class="field-label">Causa Confirmada:</span>
+            <p>Conforme verificado preliminarmente não há proteções dos cabos e fios.</p>
+          </div>
+
+          
+          <div class="occ-field">
+            <span class="field-label">Recomendação Técnica:</span>
+            <p>Deve ser tratado com engenheiro da disciplina correspondente.</p>
+          </div>
+
+          
+
+          <div class="occ-meta">
+            <span>Outro</span>
+            <span>•</span>
+            <span>Mecânico</span>
+            
+              <span>•</span>
+              <span>Ruído: 64.7 dB</span>
+              <span>VibX: 0.0 µm</span>
+              <span>VibY: 0.0 µm</span>
+              <span>VibZ: 0.0 µm</span>
+            
+          </div>
+
+          
+        </div>
+      </div>
+
+      <div class="occurrence-card" style="border-left: 4px solid #22c55e">
+        <div class="occ-header">
+          <div class="occ-number">
+            <span class="occ-icon">📝</span>
+            <strong>#3</strong>
+            <span class="status-badge" style="background: #dcfce7; color: #166534; border: 1px solid #22c55e">
+              ✅ Confirmado
+            </span>
+            <span class="severity-badge" style="background: #f1f5f9; color: #475569; border: 1px solid #94a3b8">
+              Nenhuma
+            </span>
+          </div>
+          
+          <div class="occ-time">
+            🕐 <a href="#" onclick="openYouTubePlayer('https://www.youtube.com/embed/ggfnSGwBna4?start=24&autoplay=1&controls=1&rel=0', 'Reproduzindo a partir do momento da ocorrência'); return false;" class="yt-time-link" title="Reproduzir momento no YouTube (nova janela)">0:24 🔗</a>
+          </div>
+        </div>
+
+        <div class="occ-body">
+          <div class="occ-field">
+            <span class="field-label">Descrição Preliminar:</span>
+            <p>Não há acabamento junto às passagens dos fios na casa de máquinas, nas bordas da porta de inspeção e na extensão do fosso, ao lado das portas de correr.</p>
+          </div>
+
+          
+          <div class="occ-field confirmed-field">
+            <span class="field-label">Causa Confirmada:</span>
+            <p>Conforme identificado preliminarmente não há acabamento junto às passagens dos fios na casa de máquinas e na extensão do fosso.</p>
+          </div>
+
+          
+          <div class="occ-field">
+            <span class="field-label">Recomendação Técnica:</span>
+            <p>Deve ser tratado com engenheiro da disciplina correspondente.</p>
+          </div>
+
+          
+
+          <div class="occ-meta">
+            <span>Outro</span>
+            <span>•</span>
+            <span>Mecânico</span>
+            
+              <span>•</span>
+              <span>Ruído: 64.7 dB</span>
+              <span>VibX: 0.0 µm</span>
+              <span>VibY: 0.0 µm</span>
+              <span>VibZ: 0.0 µm</span>
+            
+          </div>
+
+          
+        </div>
+      </div>
+
+      <div class="occurrence-card" style="border-left: 4px solid #22c55e">
+        <div class="occ-header">
+          <div class="occ-number">
+            <span class="occ-icon">🔊</span>
+            <strong>#7</strong>
+            <span class="status-badge" style="background: #dcfce7; color: #166534; border: 1px solid #22c55e">
+              ✅ Confirmado
+            </span>
+            <span class="severity-badge" style="background: #eff6ff; color: #1e40af; border: 1px solid #3b82f6">
+              Baixa
+            </span>
+          </div>
+          
+          <div class="occ-time">
+            🕐 <a href="#" onclick="openYouTubePlayer('https://www.youtube.com/embed/ggfnSGwBna4?start=56&end=69&autoplay=1&controls=1&rel=0', 'Reproduzindo o intervalo da ocorrência'); return false;" class="yt-time-link" title="Reproduzir intervalo no YouTube (nova janela)">0:58 → 1:07 🔗</a> | <a href="#" onclick="openYouTubePlayer('https://www.youtube.com/embed/ggfnSGwBna4?start=123&end=132&autoplay=1&controls=1&rel=0', 'Reproduzindo o intervalo da ocorrência'); return false;" class="yt-time-link" title="Reproduzir intervalo no YouTube (nova janela)">2:05 → 2:10 🔗</a>
+          </div>
+        </div>
+
+        <div class="occ-body">
+          <div class="occ-field">
+            <span class="field-label">Descrição Preliminar:</span>
+            <p>Passagem do contrapeso está gerado ruídos.</p>
+          </div>
+
+          
+          <div class="occ-field confirmed-field">
+            <span class="field-label">Causa Confirmada:</span>
+            <p>Foi confirmado a ocorrência conforme preliminar. Encontrado falta de fixação dos últimos elementos a qual conforme movimentação geram ruídos. Também foi encontrada sujeira encrostada (poeira e lubricante do trilho).</p>
+          </div>
+
+          
+          <div class="occ-field">
+            <span class="field-label">Recomendação Técnica:</span>
+            <p>Necessário fixar os elementos para evitar de provocar ruídos e realizar limpeza dos trilhos guia.</p>
+          </div>
+
+          
+
+          <div class="occ-meta">
+            <span>Ruído</span>
+            <span>•</span>
+            <span>Mecânico</span>
+            
+              <span>•</span>
+              <span>Ruído: 64.7 dB</span>
+              <span>VibX: 0.0 µm</span>
+              <span>VibY: 0.0 µm</span>
+              <span>VibZ: 0.0 µm</span>
+            
+          </div>
+
+          
+        </div>
+      </div>
+
+      <div class="occurrence-card" style="border-left: 4px solid #22c55e">
+        <div class="occ-header">
+          <div class="occ-number">
+            <span class="occ-icon">🔊</span>
+            <strong>#8</strong>
+            <span class="status-badge" style="background: #dcfce7; color: #166534; border: 1px solid #22c55e">
+              ✅ Confirmado
+            </span>
+            <span class="severity-badge" style="background: #eff6ff; color: #1e40af; border: 1px solid #3b82f6">
+              Baixa
+            </span>
+          </div>
+          
+          <div class="occ-time">
+            🕐 <a href="#" onclick="openYouTubePlayer('https://www.youtube.com/embed/ggfnSGwBna4?start=84&end=99&autoplay=1&controls=1&rel=0', 'Reproduzindo o intervalo da ocorrência'); return false;" class="yt-time-link" title="Reproduzir intervalo no YouTube (nova janela)">1:26 → 1:37 🔗</a>
+          </div>
+        </div>
+
+        <div class="occ-body">
+          <div class="occ-field">
+            <span class="field-label">Descrição Preliminar:</span>
+            <p>Estrondos sem movimentação dos eixos.</p>
+          </div>
+
+          
+          <div class="occ-field confirmed-field">
+            <span class="field-label">Causa Confirmada:</span>
+            <p>O ruído é proveniente da corrente de compensação que encosta na cabine gerando forte ruído.</p>
+          </div>
+
+          
+          <div class="occ-field">
+            <span class="field-label">Recomendação Técnica:</span>
+            <p>Correção e ajuste da carenagem no poço do elevador para que fique alinhada sem contato com a cabine.</p>
+          </div>
+
+          
+
+          <div class="occ-meta">
+            <span>Ruído</span>
+            <span>•</span>
+            <span>Mecânico</span>
+            
+              <span>•</span>
+              <span>Ruído: 64.7 dB</span>
+              <span>VibX: 0.0 µm</span>
+              <span>VibY: 0.0 µm</span>
+              <span>VibZ: 0.0 µm</span>
+            
+          </div>
+
+          
+        </div>
+      </div>
+
+      <div class="occurrence-card" style="border-left: 4px solid #22c55e">
+        <div class="occ-header">
+          <div class="occ-number">
+            <span class="occ-icon">🔊</span>
+            <strong>#9</strong>
+            <span class="status-badge" style="background: #dcfce7; color: #166534; border: 1px solid #22c55e">
+              ✅ Confirmado
+            </span>
+            <span class="severity-badge" style="background: #eff6ff; color: #1e40af; border: 1px solid #3b82f6">
+              Baixa
+            </span>
+          </div>
+          
+          <div class="occ-time">
+            🕐 <a href="#" onclick="openYouTubePlayer('https://www.youtube.com/embed/ggfnSGwBna4?start=96&autoplay=1&controls=1&rel=0', 'Reproduzindo a partir do momento da ocorrência'); return false;" class="yt-time-link" title="Reproduzir momento no YouTube (nova janela)">1:36 🔗</a>
+          </div>
+        </div>
+
+        <div class="occ-body">
+          <div class="occ-field">
+            <span class="field-label">Descrição Preliminar:</span>
+            <p>Ruído discreto</p>
+          </div>
+
+          
+          <div class="occ-field confirmed-field">
+            <span class="field-label">Causa Confirmada:</span>
+            <p>Rampa (alavanca do fim de curso) e corrente de compensação estão causando o ruído.</p>
+          </div>
+
+          
+          <div class="occ-field">
+            <span class="field-label">Recomendação Técnica:</span>
+            <p>Correção da carenagem da corrente de compensação. Ruído da rampa é esperado.</p>
+          </div>
+
+          
+
+          <div class="occ-meta">
+            <span>Ruído</span>
+            <span>•</span>
+            <span>Mecânico</span>
+            
+              <span>•</span>
+              <span>Ruído: 64.7 dB</span>
+              <span>VibX: 0.0 µm</span>
+              <span>VibY: 0.0 µm</span>
+              <span>VibZ: 0.0 µm</span>
+            
+          </div>
+
+          
+        </div>
+      </div>
+
+      <div class="occurrence-card" style="border-left: 4px solid #22c55e">
+        <div class="occ-header">
+          <div class="occ-number">
+            <span class="occ-icon">📝</span>
+            <strong>#10</strong>
+            <span class="status-badge" style="background: #dcfce7; color: #166534; border: 1px solid #22c55e">
+              ✅ Confirmado
+            </span>
+            <span class="severity-badge" style="background: #fef2f2; color: #b91c1c; border: 1px solid #ef4444">
+              Alta
+            </span>
+          </div>
+          
+        </div>
+
+        <div class="occ-body">
+          <div class="occ-field">
+            <span class="field-label">Descrição Preliminar:</span>
+            <p>Porta de inspeção que dá acesso ao fosso na casa de máquinas está sem a instalação do sensor de abertura, permitindo o funcionamento com a porta aberta.</p>
+          </div>
+
+          
+          <div class="occ-field confirmed-field">
+            <span class="field-label">Causa Confirmada:</span>
+            <p>Conforme verificado de forma preliminar, não há sensor de abertura de porta instalada na porta de inspeção.</p>
+          </div>
+
+          
+          <div class="occ-field">
+            <span class="field-label">Recomendação Técnica:</span>
+            <p>Instalar dispositivo para evitar o funcionamento com porta aberta.</p>
+          </div>
+
+          
+
+          <div class="occ-meta">
+            <span>Outro</span>
+            <span>•</span>
+            <span>Mecânico</span>
+            
+              <span>•</span>
+              <span>Ruído: 64.7 dB</span>
+              <span>VibX: 0.0 µm</span>
+              <span>VibY: 0.0 µm</span>
+              <span>VibZ: 0.0 µm</span>
+            
+          </div>
+
+          
+        </div>
+      </div>
+
+      <div class="occurrence-card" style="border-left: 4px solid #22c55e">
+        <div class="occ-header">
+          <div class="occ-number">
+            <span class="occ-icon">👁️</span>
+            <strong>#11</strong>
+            <span class="status-badge" style="background: #dcfce7; color: #166534; border: 1px solid #22c55e">
+              ✅ Confirmado
+            </span>
+            <span class="severity-badge" style="background: #fef2f2; color: #b91c1c; border: 1px solid #ef4444">
+              Alta
+            </span>
+          </div>
+          
+        </div>
+
+        <div class="occ-body">
+          <div class="occ-field">
+            <span class="field-label">Descrição Preliminar:</span>
+            <p>Não há placa de aviso de passagem do contrapeso.</p>
+          </div>
+
+          
+          <div class="occ-field confirmed-field">
+            <span class="field-label">Causa Confirmada:</span>
+            <p>Não há placa de passagem de contrapeso conforme verificado preliminarmente.</p>
+          </div>
+
+          
+          <div class="occ-field">
+            <span class="field-label">Recomendação Técnica:</span>
+            <p>Necessário instalar as placas de aviso conforme recomendação da norma.</p>
+          </div>
+
+          
+
+          <div class="occ-meta">
+            <span>Visual</span>
+            <span>•</span>
+            <span>Mecânico</span>
+            
+              <span>•</span>
+              <span>Ruído: 64.7 dB</span>
+              <span>VibX: 0.0 µm</span>
+              <span>VibY: 0.0 µm</span>
+              <span>VibZ: 0.0 µm</span>
+            
+          </div>
+
+          
+        </div>
+      </div>
+
+    
+        <h2 class="section-title" style="color: #dc2626;">❌ Ocorrências Descartadas (3)</h2>
+        <div style="background: #fef2f2; border: 1px solid #fecaca; border-radius: 10px; padding: 16px; margin-bottom: 24px;">
+          <p style="font-size: 13px; color: #991b1b; margin-bottom: 12px;">
+            As seguintes ocorrências foram verificadas e descartadas por não representarem problemas reais no elevador.
+          </p>
+          <table style="width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden;">
+            <thead>
+              <tr style="background: #fef2f220;">
+                <th style="padding: 8px 12px; text-align: center; font-size: 11px; color: #991b1b; text-transform: uppercase; letter-spacing: 0.5px; border-bottom: 2px solid #fecaca;">Nº</th>
+                <th style="padding: 8px 12px; text-align: left; font-size: 11px; color: #991b1b; text-transform: uppercase; letter-spacing: 0.5px; border-bottom: 2px solid #fecaca;">Momento</th>
+                <th style="padding: 8px 12px; text-align: left; font-size: 11px; color: #991b1b; text-transform: uppercase; letter-spacing: 0.5px; border-bottom: 2px solid #fecaca;">Descrição Original</th>
+                <th style="padding: 8px 12px; text-align: left; font-size: 11px; color: #991b1b; text-transform: uppercase; letter-spacing: 0.5px; border-bottom: 2px solid #fecaca;">Motivo do Descarte</th>
+              </tr>
+            </thead>
+            <tbody>
+              
+            <tr>
+              <td style="padding: 8px 12px; border-bottom: 1px solid #e2e8f0; text-align: center; font-weight: 700; color: #94a3b8;">
+                ⚠️ #4
+              </td>
+              <td style="padding: 8px 12px; border-bottom: 1px solid #e2e8f0; font-size: 13px; color: #94a3b8;">
+                0:32
+              </td>
+              <td style="padding: 8px 12px; border-bottom: 1px solid #e2e8f0; font-size: 13px; color: #94a3b8; text-decoration: line-through;">
+                Ruído e vibração dos eixos de forma discreta.
+              </td>
+              <td style="padding: 8px 12px; border-bottom: 1px solid #e2e8f0; font-size: 13px;">
+                <div style="background: #fef2f2; padding: 6px 10px; border-radius: 6px; border: 1px solid #fecaca;">
+                  <span style="font-size: 11px; font-weight: 600; color: #991b1b; display: block; margin-bottom: 2px;">Motivo:</span>
+                  <span style="font-size: 12px; color: #dc2626;">Descartada por estar dentro dos parâmetros e não foi possível detectar em baixa velocidade.</span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding: 8px 12px; border-bottom: 1px solid #e2e8f0; text-align: center; font-weight: 700; color: #94a3b8;">
+                ⚠️ #5
+              </td>
+              <td style="padding: 8px 12px; border-bottom: 1px solid #e2e8f0; font-size: 13px; color: #94a3b8;">
+                0:39
+              </td>
+              <td style="padding: 8px 12px; border-bottom: 1px solid #e2e8f0; font-size: 13px; color: #94a3b8; text-decoration: line-through;">
+                Ruído e vibração dos eixos de forma discreta.
+              </td>
+              <td style="padding: 8px 12px; border-bottom: 1px solid #e2e8f0; font-size: 13px;">
+                <div style="background: #fef2f2; padding: 6px 10px; border-radius: 6px; border: 1px solid #fecaca;">
+                  <span style="font-size: 11px; font-weight: 600; color: #991b1b; display: block; margin-bottom: 2px;">Motivo:</span>
+                  <span style="font-size: 12px; color: #dc2626;">Descartada por estar dentro dos parâmetros e não foi possível detectar em baixa velocidade.</span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding: 8px 12px; border-bottom: 1px solid #e2e8f0; text-align: center; font-weight: 700; color: #94a3b8;">
+                ⚠️ #6
+              </td>
+              <td style="padding: 8px 12px; border-bottom: 1px solid #e2e8f0; font-size: 13px; color: #94a3b8;">
+                0:45
+              </td>
+              <td style="padding: 8px 12px; border-bottom: 1px solid #e2e8f0; font-size: 13px; color: #94a3b8; text-decoration: line-through;">
+                Ruído e vibração dos eixos de forma discreta.
+              </td>
+              <td style="padding: 8px 12px; border-bottom: 1px solid #e2e8f0; font-size: 13px;">
+                <div style="background: #fef2f2; padding: 6px 10px; border-radius: 6px; border: 1px solid #fecaca;">
+                  <span style="font-size: 11px; font-weight: 600; color: #991b1b; display: block; margin-bottom: 2px;">Motivo:</span>
+                  <span style="font-size: 12px; color: #dc2626;">Descartada por estar dentro dos parâmetros e não foi possível detectar em baixa velocidade.</span>
+                </div>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+
+    <footer>
+      <p>Relatório gerado automaticamente pelo Elevator Inspektor</p>
+      <p>22/02/2026 às 17:10:25</p>
+    </footer>
+  </div>
+
+  <button class="print-btn no-print" onclick="window.print()">🖨️ Imprimir / PDF</button>
+</body>
+</html>
