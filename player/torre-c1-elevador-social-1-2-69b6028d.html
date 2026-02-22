@@ -1087,6 +1087,25 @@
         </div>
       </div>
     </section>
+
+    <!-- Seção de Ocorrências -->
+    
+    <section id="occurrences-section" class="panel section" style="margin-top: 12px;">
+      <div style="display: flex; align-items: center; justify-content: space-between; padding: 12px; background: rgba(255,159,28,0.08); border-radius: 6px; margin-bottom: 12px;">
+        <h2 style="font-size: 1rem; color: #f59e0b; margin: 0; display: flex; align-items: center; gap: 8px;">
+          ⚠️ Ocorrências da Inspeção (8)
+        </h2>
+        <div style="display: flex; gap: 6px;">
+          <select id="occDisplayMode" style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); color: #cbd5e1; padding: 4px 8px; border-radius: 6px; font-size: 12px; cursor: pointer;">
+            <option value="both">Todas</option>
+            <option value="preliminary">Preliminares</option>
+            <option value="confirmed">Confirmadas</option>
+          </select>
+        </div>
+      </div>
+      <div id="occurrencesList" style="max-height: 400px; overflow-y: auto;"></div>
+    </section>
+    
   </main>
 
   <!-- Tooltip para gráficos -->
@@ -1147,7 +1166,9 @@
         pauseEnd: 77,
         offsets: {"noise":8.1,"vibration":7.6720187634887695},
         thresholds: {"noiseThreshold":65,"vibrationThreshold":25}
-      }
+      },
+      occurrences: [{"id":"occ-1771701841946-tqdkne","number":1,"intervals":[{"start":19,"end":null}],"status":"confirmed","origin":"visual","severity":"high","category":"mechanical","preliminaryDescription":"Porta de inspeção que dá acesso ao fosso na casa de máquinas está sem a instalação do sensor de abertura, permitindo o funcionamento com a porta aberta.","photos":[],"createdAt":1771701841946,"updatedAt":1771764210495,"sensorValues":{"noiseDb":63.1,"vibrationX":1,"vibrationY":1,"vibrationZ":0},"confirmedCause":"Conforme verificado de forma preliminar, não há sensor de abertura de porta instalada na porta de inspeção.","recommendation":"Inserir dispositivo para evitar o funcionamento com porta aberta."},{"id":"occ-1771702862107-ba4uri","number":2,"intervals":[{"start":19,"end":null}],"status":"confirmed","origin":"visual","severity":"low","category":"mechanical","preliminaryDescription":"Fiação exposta sem proteção (canaletas ou dutos) próximos à casa de máquinas e extensão do fosso.","photos":[],"createdAt":1771702862107,"updatedAt":1771764343804,"sensorValues":{"noiseDb":63.1,"vibrationX":1,"vibrationY":1,"vibrationZ":0},"recommendation":"Deve ser tratado com algum engenheiro da disciplina correspondente.","confirmedCause":"Conforme verificado preliminarmente não há proteções dos cabos e fios."},{"id":"occ-1771702207769-aj2omp","number":3,"intervals":[{"start":50,"end":null}],"status":"confirmed","origin":"visual","severity":"high","category":"mechanical","preliminaryDescription":"Não há placa de aviso de passagem do contrapeso.","photos":[],"createdAt":1771702207769,"updatedAt":1771764241509,"sensorValues":{"noiseDb":63.1,"vibrationX":1,"vibrationY":1,"vibrationZ":0},"recommendation":"Deve ser instalado conforme norma técnica.","confirmedCause":"Não há placa de passagem de contrapeso conforme verificado preliminarmente."},{"id":"occ-1771702388305-m0ldn3","number":4,"intervals":[{"start":51,"end":52},{"start":132,"end":134}],"status":"confirmed","origin":"noise","severity":"medium","category":"mechanical","preliminaryDescription":"Passagem do contrapeso está gerado ruídos.","photos":[],"createdAt":1771702388305,"updatedAt":1771702388305,"sensorValues":{"noiseDb":63.1,"vibrationX":1,"vibrationY":1,"vibrationZ":0},"recommendation":"Necessário fixar os elementos para evitar de provocar ruídos.","confirmedCause":"Foi confirmado a ocorrência conforme preliminar. Encontrado falta de fixação dos últimos elementos a qual conforme movimentação geram ruídos."},{"id":"occ-1771761453851-0fvwhm","number":7,"intervals":[{"start":152,"end":null}],"status":"confirmed","origin":"noise","severity":"low","category":"mechanical","preliminaryDescription":"Ruído","photos":[],"createdAt":1771761453851,"updatedAt":1771761557859,"sensorValues":{},"confirmedCause":"Ruído com origem abaixo da cabine, persiste em 2:32, 2:35 e 2:46 sem identificação."},{"id":"occ-1771761489455-ph8hvw","number":8,"intervals":[{"start":155,"end":null}],"status":"confirmed","origin":"noise","severity":"low","category":"mechanical","preliminaryDescription":"Ruído","photos":[],"createdAt":1771761489455,"updatedAt":1771761565997,"sensorValues":{},"confirmedCause":"Ruído com origem abaixo da cabine, persiste em 2:32, 2:35 e 2:46 sem identificação."},{"id":"occ-1771761537444-d3u3z6","number":9,"intervals":[{"start":166,"end":null}],"status":"confirmed","origin":"noise","severity":"low","category":"mechanical","preliminaryDescription":"Ruído","photos":[],"createdAt":1771761537444,"updatedAt":1771761574641,"sensorValues":{},"confirmedCause":"Ruído com origem abaixo da cabine, persiste em 2:32, 2:35 e 2:46 sem identificação."},{"id":"occ-1771703030472-naj64d","number":10,"intervals":[],"status":"confirmed","origin":"noise","severity":"low","category":"mechanical","preliminaryDescription":"Falta arremate na passagem dos cabos da casa de máquinas para o fosso e e portas de correr ao longo do fosso.","photos":[],"createdAt":1771703030472,"updatedAt":1771764806060,"sensorValues":{"noiseDb":63.1,"vibrationX":1,"vibrationY":1,"vibrationZ":0},"recommendation":"Deve ser tratado com algum engenheiro da disciplina correspondente.","confirmedCause":"Conforme verificado preliminarmente, falta acabamentos."}],
+      occurrenceDisplayMode: 'both'
     };
 
     let currentTime = 0;
@@ -2262,6 +2283,105 @@
       updateTimelineDom(roiStart);
       updateCurrentValues(roiStart);
       renderCharts();
+
+      // ===== SISTEMA DE OCORRÊNCIAS =====
+      (function initOccurrences() {
+        const occs = state.occurrences || [];
+        if (!occs.length) return;
+
+        const listEl = document.getElementById('occurrencesList');
+        const modeSelect = document.getElementById('occDisplayMode');
+        if (!listEl) return;
+
+        const statusLabels = { preliminary: 'Preliminar', confirmed: 'Confirmado', discarded: 'Descartado' };
+        const statusColors = {
+          preliminary: { bg: 'rgba(245,158,11,0.12)', border: '#f59e0b', text: '#f59e0b', icon: '🔍' },
+          confirmed: { bg: 'rgba(34,197,94,0.12)', border: '#22c55e', text: '#22c55e', icon: '✅' },
+          discarded: { bg: 'rgba(148,163,184,0.12)', border: '#94a3b8', text: '#94a3b8', icon: '❌' },
+        };
+        const sevLabels = { low: 'Baixa', medium: 'Média', high: 'Alta', critical: 'Crítica' };
+        const sevColors = { low: '#3b82f6', medium: '#f97316', high: '#ef4444', critical: '#ec4899' };
+        const originIcons = { noise: '🔊', vibration: '📳', both: '⚠️', visual: '👁️', other: '📝' };
+        const originLabels = { noise: 'Ruído', vibration: 'Vibração', both: 'Ruído+Vibração', visual: 'Visual', other: 'Outro' };
+        const catLabels = { mechanical: 'Mecânico', electrical: 'Elétrico', civil: 'Civil', environmental: 'Ambiental', structural: 'Estrutural', other: 'Outro' };
+
+        function renderOccList() {
+          const mode = modeSelect ? modeSelect.value : 'both';
+          const filtered = occs.filter(function(o) {
+            if (mode === 'preliminary') return o.status === 'preliminary';
+            if (mode === 'confirmed') return o.status === 'confirmed';
+            return o.status !== 'discarded';
+          });
+
+          if (!filtered.length) {
+            listEl.innerHTML = '<div style="padding:20px;text-align:center;color:#64748b;font-size:13px;">Nenhuma ocorrência para o filtro selecionado.</div>';
+            return;
+          }
+
+          listEl.innerHTML = filtered.map(function(occ, idx) {
+            var sc = statusColors[occ.status] || statusColors.preliminary;
+            var intervals = occ.intervals || [];
+            var tsStr = intervals.length > 0 ? intervals.map(function(iv) { return iv.end != null ? formatTime(iv.start) + ' → ' + formatTime(iv.end) : formatTime(iv.start); }).join(' | ') : '--:--';
+            var ts = intervals.length > 0 ? intervals[0].start : null;
+            var description = occ.status === 'confirmed' && occ.confirmedCause ? occ.confirmedCause : occ.preliminaryDescription;
+            var photosHtml = '';
+            if (occ.photos && occ.photos.length > 0) {
+              photosHtml = '<div style="display:flex;gap:6px;margin-top:8px;flex-wrap:wrap;">' +
+                occ.photos.map(function(p) {
+                  return '<img src="' + p.dataUrl + '" alt="foto" style="width:60px;height:45px;object-fit:cover;border-radius:6px;border:1px solid rgba(255,255,255,0.1);cursor:pointer;" onclick="this.style.width=this.style.width===\'60px\'?\'300px\':\'60px\';this.style.height=this.style.width===\'60px\'?\'45px\':\'auto\'" />';
+                }).join('') +
+                '</div>';
+            }
+
+            return '<div data-occ-idx="' + idx + '" style="padding:10px 12px;margin-bottom:8px;border-radius:8px;border:1px solid ' + sc.border + '40;border-left:3px solid ' + sc.border + ';cursor:pointer;transition:background .15s;" ' +
+              'onmouseover="this.style.background=\'rgba(255,255,255,0.06)\'" onmouseout="this.style.background=\'transparent\'" ' +
+              'onclick="window._navigateOcc(' + idx + ')">' +
+              '<div style="display:flex;align-items:center;justify-content:space-between;">' +
+                '<div style="display:flex;align-items:center;gap:6px;">' +
+                  '<span style="font-size:16px;">' + (originIcons[occ.origin] || '📝') + '</span>' +
+                  '<strong style="color:#e2e8f0;font-size:13px;">#' + occ.number + '</strong>' +
+                  '<span style="padding:1px 6px;border-radius:999px;font-size:10px;font-weight:600;border:1px solid ' + sc.border + ';color:' + sc.text + ';background:' + sc.bg + '">' + sc.icon + ' ' + (statusLabels[occ.status] || occ.status) + '</span>' +
+                  '<span style="padding:1px 6px;border-radius:999px;font-size:10px;font-weight:600;border:1px solid ' + (sevColors[occ.severity] || '#64748b') + ';color:' + (sevColors[occ.severity] || '#64748b') + '">' + (sevLabels[occ.severity] || occ.severity) + '</span>' +
+                '</div>' +
+                (ts != null ? '<span style="color:#60a5fa;font-size:12px;font-weight:600;display:flex;align-items:center;gap:4px;">🕐 ' + tsStr + '</span>' : '') +
+              '</div>' +
+              '<p style="font-size:12px;color:#cbd5e1;margin:6px 0 0;line-height:1.4;">' + description + '</p>' +
+              (occ.recommendation ? '<p style="font-size:11px;color:#94a3b8;margin:4px 0 0;font-style:italic;">💡 ' + occ.recommendation + '</p>' : '') +
+              '<div style="display:flex;gap:8px;font-size:10px;color:#64748b;margin-top:6px;">' +
+                '<span>' + (originLabels[occ.origin] || occ.origin) + '</span>' +
+                '<span>•</span>' +
+                '<span>' + (catLabels[occ.category] || occ.category) + '</span>' +
+                (occ.photos && occ.photos.length > 0 ? '<span>• 📷 ' + occ.photos.length + ' foto' + (occ.photos.length > 1 ? 's' : '') + '</span>' : '') +
+              '</div>' +
+              photosHtml +
+            '</div>';
+          }).join('');
+        }
+
+        // Navegação: clique numa ocorrência para ir ao timestamp
+        window._navigateOcc = function(idx) {
+          var mode = modeSelect ? modeSelect.value : 'both';
+          var filtered = occs.filter(function(o) {
+            if (mode === 'preliminary') return o.status === 'preliminary';
+            if (mode === 'confirmed') return o.status === 'confirmed';
+            return o.status !== 'discarded';
+          });
+          var occ = filtered[idx];
+          if (!occ || !occ.intervals || occ.intervals.length === 0) return;
+          seekTo(occ.intervals[0].start, true);
+          var navStr = occ.intervals.map(function(iv) { return iv.end != null ? formatTime(iv.start) + ' → ' + formatTime(iv.end) : formatTime(iv.start); }).join(' | ');
+          console.log('📍 Navegando para ocorrência #' + occ.number + ': ' + navStr);
+        };
+
+        if (modeSelect) modeSelect.addEventListener('change', renderOccList);
+
+        // Set initial mode
+        if (modeSelect && state.occurrenceDisplayMode) {
+          modeSelect.value = state.occurrenceDisplayMode;
+        }
+
+        renderOccList();
+      })();
       
       // Inicializar overlays com valores padrão
       renderOverlayCharts();
