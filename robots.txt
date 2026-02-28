@@ -1,13 +1,17 @@
 User-agent: *
 Allow: /
 
-# Bloquear pastas não-indexáveis
+# Bloquear pastas não-indexáveis e caminhos de desenvolvimento
 Disallow: /old/
 Disallow: /v2-staging/
 Disallow: /player/admin.html
 Disallow: /css/
 Disallow: /js/
 Disallow: /webfonts/
+Disallow: /*.py$
+Disallow: /*.md$
+Disallow: /.git/
+Disallow: /.vscode/
 
 # Permitir explicitamente todas as páginas de serviço
 Allow: /analise-vibracao-elevadores.html
