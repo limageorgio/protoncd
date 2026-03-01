@@ -347,6 +347,18 @@
     border-color: rgba(255, 255, 255, 0.2);
 }
 
+.btn-outline {
+    background: transparent;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+.btn-outline:hover {
+    background: rgba(59, 130, 246, 0.08);
+    border-color: var(--accent-blue);
+    color: var(--accent-blue);
+}
+
 .btn-icon {
     width: 44px;
     height: 44px;
@@ -462,6 +474,7 @@
     color: var(--text-secondary);
     line-height: var(--lh-relaxed);
     margin-bottom: var(--space-4);
+    text-align: center;
 }
 
 .card-list {
