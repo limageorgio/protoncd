@@ -14,6 +14,7 @@ Disallow: /.git/
 Disallow: /.vscode/
 
 # Permitir explicitamente todas as páginas de serviço
+Allow: /laudo-elevadores-pericia-tecnica.html
 Allow: /analise-vibracao-elevadores.html
 Allow: /inspecao-hvac-pmoc.html
 Allow: /inspecao-sistemas-mecanicos.html
