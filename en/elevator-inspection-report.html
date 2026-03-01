@@ -653,7 +653,7 @@
                                             — ISO 18738 Limit</text>
                                     </svg>
                                     <div id="scrubber-1"
-                                        style="position: absolute; top:0; bottom:0; width:2px; background: #fff; left: 0%; box-shadow: 0 0 8px #fff; transition: left 0.3s linear; z-index: 10;">
+                                        style="position: absolute; top:0; bottom:0; width:2px; background: #fff; left: 0%; box-shadow: 0 0 8px #fff; z-index: 10;">
                                     </div>
                                 </div>
                             </div>
@@ -762,7 +762,7 @@
                                             stroke-dasharray="10,5" opacity="0.5" />
                                     </svg>
                                     <div id="scrubber-2"
-                                        style="position: absolute; top:0; bottom:0; width:2px; background: #fff; left: 0%; box-shadow: 0 0 8px #fff; transition: left 0.3s linear; z-index: 10;">
+                                        style="position: absolute; top:0; bottom:0; width:2px; background: #fff; left: 0%; box-shadow: 0 0 8px #fff; z-index: 10;">
                                     </div>
                                 </div>
                             </div>
@@ -859,10 +859,8 @@
                     list.innerHTML = html;
                 }
 
-                function onPlayerReady(event) {
-                    renderTimeline();
-                    setInterval(() => {
-                        if (!player || !player.getCurrentTime) return;
+                function rafTick() {
+                    if (player && player.getCurrentTime) {
                         let ct = player.getCurrentTime();
                         document.getElementById('video-timer').innerText = fmt(ct);
                         let mapX = 50 + (ct / 150.0) * (678.5 - 50);
@@ -891,7 +889,13 @@
                             ov.style.opacity = 0;
                             document.querySelectorAll('.timeline-item').forEach(el => el.classList.remove('timeline-active'));
                         }
-                    }, 300);
+                    }
+                    requestAnimationFrame(rafTick);
+                }
+
+                function onPlayerReady(event) {
+                    renderTimeline();
+                    rafTick();
                 }
 
                 function seekVideo(index, time) {
