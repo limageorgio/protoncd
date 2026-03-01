@@ -454,6 +454,7 @@
     font-weight: var(--fw-semibold);
     color: var(--text-primary);
     margin-bottom: var(--space-3);
+    text-align: center;
 }
 
 .card-text {
