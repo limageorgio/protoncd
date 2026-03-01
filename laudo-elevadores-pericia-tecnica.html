@@ -227,6 +227,30 @@
                 "@type": "Answer",
                 "text": "Atendemos todos os setores de Goiânia, incluindo Setor Bueno, Setor Marista, Jardim Goiás, Setor Sul, Setor Oeste, Setor Leste Universitário, Aldeota, além de Aparecida de Goiânia, Anápolis e toda a região metropolitana de Goiânia."
               }
+            },
+            {
+              "@type": "Question",
+              "name": "Qual a diferença entre a Opção A (Vistoria) e a Opção B — Inspeção N3?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A Opção A é a vistoria estrutural e funcional com avaliação normativa (ABNT, NR-12) e revisão documental, entregando Relatório de Vistoria + ART-CREA. A Opção B (N3) inclui tudo da Opção A com ensaios instrumentados de vibração, ruído e aceleração triaxial (ISO 18738), gravação 360° sincronizada do poço e relatório completo com diagnóstico de causa-raiz."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Em quanto tempo recebo o laudo de elevadores?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Para a Opção B (N3), o Relatório de Vistoria (Fase 1) é entregue em até 15 dias. Os ensaios instrumentados iniciam em até 10 dias após a Fase 1. O Relatório Final N3 completo é entregue em até 30 dias úteis após os ensaios. Para a Opção A, o prazo é definido individualmente com o engenheiro responsável."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "O que não está incluído no escopo da inspeção de elevadores?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Não estão incluídos no escopo: manutenção corretiva de qualquer natureza, fornecimento ou substituição de peças, ensaio de tração de cabos e testes de freio, paraquedas, governador ou sobrecarga — salvo quando houver justificativa técnica expressa e acordo prévio. A Proton atua exclusivamente como diagnóstico independente, sem interesse nas intervenções corretivas."
+              }
             }
           ]
         }
@@ -359,77 +383,210 @@
         </div>
     </section>
 
-    <!-- ========== METODOLOGIA INFOGRÁFICO ========== -->
+    <!-- ========== OPÇÕES DE INSPEÇÃO ========== -->
     <section class="section" id="metodologia">
         <div class="container">
             <div class="section-header reveal text-center">
-                <span class="badge badge-green">Nosso Processo de Excelência</span>
-                <h3>Metodologia Única no Brasil:</h3>
-                <h2><span class="text-gradient">Inspeção em Duas Etapas com Avaliação de Ruído e Vibração</span></h2>
+                <span class="badge badge-green">Escolha o Nível de Diagnóstico</span>
+                <h2><span class="text-gradient">Duas Opções de Inspeção para o seu Elevador</span></h2>
+                <p style="color: var(--text-muted); max-width: 680px; margin: 1rem auto 0; font-size: 1.05rem; line-height: 1.7;">
+                    A profundidade do diagnóstico é definida pela necessidade do cliente. Ambas as opções incluem <strong>ART-CREA</strong> e relatório técnico assinado por engenheiro responsável.
+                </p>
                 <div class="section-divider"></div>
             </div>
 
-            <!-- Infográfico HTML/CSS puro, otimizado para não depender de imagens grandes -->
             <div class="grid grid-2" style="margin-top: var(--space-8); gap: var(--space-6);">
 
-                <!-- Etapa 1 -->
+                <!-- OPÇÃO A -->
                 <div class="card reveal reveal-left"
                     style="border-top: 4px solid var(--primary-color); position: relative; padding-top: var(--space-8); overflow: visible;">
                     <div
-                        style="position: absolute; top: -25px; left: 20px; width: 50px; height: 50px; background: var(--primary-color); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; border: 4px solid var(--bg-color); box-shadow: var(--shadow-md);">
-                        1</div>
+                        style="position: absolute; top: -18px; left: 20px; background: var(--primary-color); color: white; border-radius: var(--radius-sm); padding: 0.3rem 0.9rem; font-weight: 700; font-size: 0.88rem; letter-spacing: 1px; box-shadow: var(--shadow-sm);">
+                        OPÇÃO A</div>
                     <div class="card-icon blue"
                         style="font-size: 2.5rem; color: var(--primary-color); margin-bottom: var(--space-4);"><i
                             class="fas fa-search"></i></div>
-                    <h3 class="card-title" style="font-size: 1.3rem; margin-bottom: var(--space-2);">Avaliação Normativa
-                        Integral</h3>
+                    <h3 class="card-title" style="font-size: 1.3rem; margin-bottom: var(--space-2);">Vistoria Estrutural
+                        e Funcional</h3>
                     <p class="card-text text-muted" style="margin-bottom: var(--space-4);">
-                        Auditoria focada nas normas da ABNT e compliance total do equipamento. Verificamos
-                        criteriosamente as condições estruturais e os componentes mecânicos e elétricos de segurança
-                        ativa e passiva.
+                        Auditoria técnica presencial focada em conformidade normativa (ABNT NBR 16083, NR-12). Avaliação
+                        visual e funcional de todos os componentes mecânicos, elétricos e de segurança, com revisão
+                        documental completa.
                     </p>
-                    <ul class="feature-list" style="list-style: none; padding: 0;">
-                        <li style="margin-bottom: 0.5rem;"><i class="fas fa-check-circle"
+                    <ul class="feature-list" style="list-style: none; padding: 0; margin-bottom: var(--space-4);">
+                        <li style="margin-bottom: 0.6rem;"><i class="fas fa-check-circle"
                                 style="color: var(--primary-color); margin-right: 0.5rem;"></i> Inspeção de casa de
                             máquinas, poço, cabine e corrediças</li>
-                        <li style="margin-bottom: 0.5rem;"><i class="fas fa-check-circle"
-                                style="color: var(--primary-color); margin-right: 0.5rem;"></i> Análise documental
-                            completa e histórico do livro de manutenção</li>
-                        <li style="margin-bottom: 0.5rem;"><i class="fas fa-check-circle"
-                                style="color: var(--primary-color); margin-right: 0.5rem;"></i> Avaliação da integridade
-                            dos freios, limitadores, cabos e polias</li>
+                        <li style="margin-bottom: 0.6rem;"><i class="fas fa-check-circle"
+                                style="color: var(--primary-color); margin-right: 0.5rem;"></i> Revisão do livro de
+                            manutenção e histórico documental completo</li>
+                        <li style="margin-bottom: 0.6rem;"><i class="fas fa-check-circle"
+                                style="color: var(--primary-color); margin-right: 0.5rem;"></i> Avaliação de freios,
+                            limitadores de velocidade, cabos e polias</li>
+                        <li style="margin-bottom: 0.6rem;"><i class="fas fa-check-circle"
+                                style="color: var(--primary-color); margin-right: 0.5rem;"></i> Verificação de
+                            mecanismos de segurança ativos e passivos</li>
                     </ul>
+                    <div
+                        style="background: var(--bg-surface); border-radius: var(--radius-sm); padding: var(--space-3); border: 1px solid var(--border-light);">
+                        <p
+                            style="font-size: 0.9rem; font-weight: 600; color: var(--text-color); margin-bottom: 0.3rem;">
+                            <i class="fas fa-file-alt"
+                                style="color: var(--primary-color); margin-right: 0.5rem;"></i>Documentos entregues:
+                        </p>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;">Relatório de Vistoria
+                            Técnica + ART-CREA</p>
+                    </div>
                 </div>
 
-                <!-- Etapa 2 -->
+                <!-- OPÇÃO B — N3 -->
                 <div class="card reveal reveal-right"
                     style="border-top: 4px solid var(--secondary-color); position: relative; padding-top: var(--space-8); overflow: visible;">
                     <div
-                        style="position: absolute; top: -25px; left: 20px; width: 50px; height: 50px; background: var(--secondary-color); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; border: 4px solid var(--bg-color); box-shadow: var(--shadow-md);">
-                        2</div>
+                        style="position: absolute; top: -18px; left: 20px; background: var(--secondary-color); color: white; border-radius: var(--radius-sm); padding: 0.3rem 0.9rem; font-weight: 700; font-size: 0.88rem; letter-spacing: 1px; box-shadow: var(--shadow-sm);">
+                        OPÇÃO B — N3</div>
                     <div class="card-icon green"
                         style="font-size: 2.5rem; color: var(--secondary-color); margin-bottom: var(--space-4);"><i
                             class="fas fa-wave-square"></i></div>
-                    <h3 class="card-title" style="font-size: 1.3rem; margin-bottom: var(--space-2);">Teste de Conforto
-                        Espectral e Vídeo 360°</h3>
+                    <h3 class="card-title" style="font-size: 1.3rem; margin-bottom: var(--space-2);">Inspeção
+                        Instrumentada Completa <span style="color: var(--secondary-color);">(N3)</span></h3>
                     <p class="card-text text-muted" style="margin-bottom: var(--space-4);">
-                        Captura minuciosa de microvibrações e arrastos invisíveis aos olhos, através de instrumentação
-                        laboratorial calibrada (RBC). É o diferencial que nos torna a <strong>melhor empresa de
-                            engenharia diagnóstica</strong>.
+                        Inclui tudo da Opção A + ensaios instrumentados de vibração e ruído (ISO 18738), gravação 360°
+                        sincronizada e relatório N3 com diagnóstico de causa-raiz. Indicado para condomínios com queixas
+                        recorrentes, laudos judiciais ou auditorias corporativas.
                     </p>
-                    <ul class="feature-list" style="list-style: none; padding: 0;">
-                        <li style="margin-bottom: 0.5rem;"><i class="fas fa-check-circle"
-                                style="color: var(--secondary-color); margin-right: 0.5rem;"></i> Acoplagem de sensores
-                            triaxiais ultra-sensíveis de Aceleração e Velocimetria</li>
-                        <li style="margin-bottom: 0.5rem;"><i class="fas fa-check-circle"
-                                style="color: var(--secondary-color); margin-right: 0.5rem;"></i> Gravação de vídeo
-                            sincronizada em 360 graus de todo poço</li>
-                        <li style="margin-bottom: 0.5rem;"><i class="fas fa-check-circle"
-                                style="color: var(--secondary-color); margin-right: 0.5rem;"></i> Geração de relatório
-                            com gráficos de desvios e FFT matematicamente exato</li>
-                    </ul>
+                    <ol style="list-style: none; padding: 0; margin-bottom: var(--space-4);">
+                        <li style="margin-bottom: 0.8rem; display: flex; gap: 0.8rem; align-items: flex-start;">
+                            <span
+                                style="background: var(--secondary-color); color: white; min-width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.82rem; flex-shrink: 0; margin-top: 1px;">1</span>
+                            <span style="font-size: 0.93rem; color: var(--text-muted);">Revisão documental de
+                                relatórios anteriores, notas de manutenção e livro do equipamento</span>
+                        </li>
+                        <li style="margin-bottom: 0.8rem; display: flex; gap: 0.8rem; align-items: flex-start;">
+                            <span
+                                style="background: var(--secondary-color); color: white; min-width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.82rem; flex-shrink: 0; margin-top: 1px;">2</span>
+                            <span style="font-size: 0.93rem; color: var(--text-muted);">Vistoria técnica detalhada
+                                in loco de todos os componentes mecânicos, elétricos e de segurança</span>
+                        </li>
+                        <li style="margin-bottom: 0.8rem; display: flex; gap: 0.8rem; align-items: flex-start;">
+                            <span
+                                style="background: var(--secondary-color); color: white; min-width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.82rem; flex-shrink: 0; margin-top: 1px;">3</span>
+                            <span style="font-size: 0.93rem; color: var(--text-muted);">Ensaios instrumentados de
+                                ruído, vibração e aceleração com sensores triaxiais + gravação 360° sincronizada</span>
+                        </li>
+                        <li style="margin-bottom: 0; display: flex; gap: 0.8rem; align-items: flex-start;">
+                            <span
+                                style="background: var(--secondary-color); color: white; min-width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.82rem; flex-shrink: 0; margin-top: 1px;">4</span>
+                            <span style="font-size: 0.93rem; color: var(--text-muted);">Relatório técnico completo
+                                com causa-raiz, diagnóstico e recomendações de intervenção prioritária</span>
+                        </li>
+                    </ol>
+                    <div
+                        style="background: var(--bg-surface); border-radius: var(--radius-sm); padding: var(--space-3); border: 1px solid var(--border-light);">
+                        <p
+                            style="font-size: 0.9rem; font-weight: 600; color: var(--text-color); margin-bottom: 0.3rem;">
+                            <i class="fas fa-file-alt"
+                                style="color: var(--secondary-color); margin-right: 0.5rem;"></i>Documentos entregues:
+                        </p>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;">Relatório de Análise de
+                            Vibração e Ruído + Relatório de Vistoria Técnica + ART-CREA</p>
+                    </div>
                 </div>
 
+            </div>
+
+            <!-- Cronograma de Prazos (Opção B) -->
+            <div class="reveal"
+                style="margin-top: var(--space-8); background: var(--bg-surface); border: 1px solid var(--border-light); border-radius: var(--radius-lg); padding: var(--space-6);">
+                <h3
+                    style="font-size: 1.05rem; margin-bottom: var(--space-5); display: flex; align-items: center; gap: 0.6rem;">
+                    <i class="fas fa-clock" style="color: var(--primary-color);"></i> Cronograma de Entrega — Opção B
+                    (N3)
+                </h3>
+                <div style="display: flex; flex-wrap: wrap; gap: var(--space-4);">
+                    <div
+                        style="flex: 1; min-width: 160px; text-align: center; background: var(--bg-color); border-radius: var(--radius-md); padding: var(--space-4); border: 1px solid var(--border-light);">
+                        <div style="font-size: 2rem; font-weight: 800; color: var(--primary-color);">≤ 15</div>
+                        <div style="font-size: 0.82rem; color: var(--text-muted); margin-top: 0.3rem; line-height: 1.4;">
+                            dias para entrega do<br><strong>Relatório de Vistoria</strong><br>(Fase 1)</div>
+                    </div>
+                    <div
+                        style="flex: 1; min-width: 160px; text-align: center; background: var(--bg-color); border-radius: var(--radius-md); padding: var(--space-4); border: 1px solid var(--border-light);">
+                        <div style="font-size: 2rem; font-weight: 800; color: var(--secondary-color);">≤ 10</div>
+                        <div style="font-size: 0.82rem; color: var(--text-muted); margin-top: 0.3rem; line-height: 1.4;">
+                            dias após a Fase 1 para<br>início dos <strong>Ensaios<br>Instrumentados</strong></div>
+                    </div>
+                    <div
+                        style="flex: 1; min-width: 160px; text-align: center; background: var(--bg-color); border-radius: var(--radius-md); padding: var(--space-4); border: 1px solid var(--border-light);">
+                        <div style="font-size: 2rem; font-weight: 800; color: #f39c12;">≤ 30</div>
+                        <div style="font-size: 0.82rem; color: var(--text-muted); margin-top: 0.3rem; line-height: 1.4;">
+                            dias úteis para o<br><strong>Relatório Final<br>Completo (N3)</strong></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tecnologia + Transparência -->
+            <div class="grid grid-2" style="margin-top: var(--space-5); gap: var(--space-4);">
+                <div class="reveal"
+                    style="background: var(--bg-surface); border: 1px solid var(--border-light); border-radius: var(--radius-lg); padding: var(--space-5);">
+                    <h4
+                        style="font-size: 0.98rem; margin-bottom: var(--space-3); display: flex; align-items: center; gap: 0.6rem; color: var(--text-color);">
+                        <i class="fas fa-microchip" style="color: var(--secondary-color);"></i> Instrumentação
+                        Utilizada
+                    </h4>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: 0.55rem; font-size: 0.9rem; color: var(--text-muted);"><i
+                                class="fas fa-dot-circle"
+                                style="color: var(--secondary-color); margin-right: 0.5rem; font-size: 0.7rem;"></i>
+                            Acelerômetros triaxiais de alta sensibilidade (calibração RBC)</li>
+                        <li style="margin-bottom: 0.55rem; font-size: 0.9rem; color: var(--text-muted);"><i
+                                class="fas fa-dot-circle"
+                                style="color: var(--secondary-color); margin-right: 0.5rem; font-size: 0.7rem;"></i>
+                            Sensores de velocimetria e análise espectral FFT</li>
+                        <li style="margin-bottom: 0.55rem; font-size: 0.9rem; color: var(--text-muted);"><i
+                                class="fas fa-dot-circle"
+                                style="color: var(--secondary-color); margin-right: 0.5rem; font-size: 0.7rem;"></i>
+                            Câmera 360° para gravação imersiva do poço sincronizada aos dados</li>
+                        <li style="margin-bottom: 0; font-size: 0.9rem; color: var(--text-muted);"><i
+                                class="fas fa-dot-circle"
+                                style="color: var(--secondary-color); margin-right: 0.5rem; font-size: 0.7rem;"></i>
+                            Software de análise com IA e limites ISO 18738</li>
+                        <li
+                            style="font-size: 0.82rem; color: var(--text-muted); margin-top: var(--space-3); padding-top: var(--space-3); border-top: 1px solid var(--border-light);">
+                            <i class="fas fa-info-circle" style="color: #888; margin-right: 0.4rem;"></i> Eventuais
+                            interferências externas (obras, vibrações de terceiros) são identificadas e documentadas no
+                            relatório.</li>
+                    </ul>
+                </div>
+                <div class="reveal"
+                    style="background: var(--bg-surface); border: 1px solid var(--border-light); border-radius: var(--radius-lg); padding: var(--space-5);">
+                    <h4
+                        style="font-size: 0.98rem; margin-bottom: var(--space-3); display: flex; align-items: center; gap: 0.6rem; color: var(--text-color);">
+                        <i class="fas fa-balance-scale" style="color: var(--primary-color);"></i> Transparência e
+                        Imparcialidade
+                    </h4>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: 0.55rem; font-size: 0.9rem; color: var(--text-muted);"><i
+                                class="fas fa-shield-alt"
+                                style="color: var(--primary-color); margin-right: 0.5rem;"></i>
+                            A Proton é 100% independente: não fornece manutenção corretiva nem vende peças</li>
+                        <li style="margin-bottom: 0.55rem; font-size: 0.9rem; color: var(--text-muted);"><i
+                                class="fas fa-shield-alt"
+                                style="color: var(--primary-color); margin-right: 0.5rem;"></i>
+                            Os resultados refletem a condição real do equipamento na data da inspeção</li>
+                        <li style="margin-bottom: 0; font-size: 0.9rem; color: var(--text-muted);"><i
+                                class="fas fa-shield-alt"
+                                style="color: var(--primary-color); margin-right: 0.5rem;"></i>
+                            Antes dos ensaios é realizada <strong>anamnese técnica</strong>: o contratante informa
+                            todos os problemas conhecidos do equipamento</li>
+                        <li
+                            style="font-size: 0.82rem; color: var(--text-muted); margin-top: var(--space-3); padding-top: var(--space-3); border-top: 1px solid var(--border-light);">
+                            <i class="fas fa-exclamation-triangle" style="color: #888; margin-right: 0.4rem;"></i>
+                            Não estão incluídos no escopo: manutenção corretiva, fornecimento de peças, ensaio de
+                            tração de cabos ou testes de freio/paraquedas/sobrecarga — salvo se tecnicamente
+                            justificados e acordados previamente.</li>
+                    </ul>
+                </div>
             </div>
 
             <div class="text-center reveal" style="margin-top: var(--space-6);">
@@ -1035,6 +1192,93 @@
                         capacidade sensorial humana.
                     </div>
                 </div>
+
+                <!-- FAQ 4 -->
+                <div class="accordion-item"
+                    style="border-radius: var(--radius-md); background: var(--bg-color); margin-bottom: 1rem; overflow: hidden; border: 1px solid var(--border-color); cursor: pointer;">
+                    <div class="accordion-header"
+                        style="padding: 1.5rem; font-weight: 600; display: flex; justify-content: space-between; align-items: center;"
+                        onclick="const content = this.nextElementSibling; const icon = this.querySelector('i'); content.style.display = content.style.display === 'block' ? 'none' : 'block'; icon.classList.toggle('fa-plus'); icon.classList.toggle('fa-minus');">
+                        <span>Qual a diferença entre a Opção A (Vistoria) e a Opção B — Inspeção N3?</span>
+                        <i class="fas fa-plus" style="color: var(--primary-color);"></i>
+                    </div>
+                    <div class="accordion-content"
+                        style="padding: 0 1.5rem 1.5rem 1.5rem; display: none; color: var(--text-muted); line-height: 1.6; border-top: 1px solid var(--border-light);">
+                        A <strong>Opção A</strong> é uma vistoria técnica presencial: avaliação visual estrutural e
+                        funcional dos componentes, revisão documental e verificação de conformidade normativa (ABNT,
+                        NR-12). Entrega um Relatório de Vistoria + ART-CREA. Indicada para condomínios que precisam
+                        regularizar documentação ou fazem sua primeira auditoria independente.<br><br>
+                        A <strong>Opção B — N3</strong> inclui tudo da Opção A, acrescida de ensaios instrumentados
+                        (vibração, ruído, aceleração triaxial) com equipamentos calibrados RBC, gravação 360°
+                        sincronizada do poço e relatório técnico nível N3 com diagnóstico de causa-raiz. É o nível mais
+                        completo e recomendado para queixas de conforto, laudos judiciais e auditorias corporativas.
+                    </div>
+                </div>
+
+                <!-- FAQ 5 -->
+                <div class="accordion-item"
+                    style="border-radius: var(--radius-md); background: var(--bg-color); margin-bottom: 1rem; overflow: hidden; border: 1px solid var(--border-color); cursor: pointer;">
+                    <div class="accordion-header"
+                        style="padding: 1.5rem; font-weight: 600; display: flex; justify-content: space-between; align-items: center;"
+                        onclick="const content = this.nextElementSibling; const icon = this.querySelector('i'); content.style.display = content.style.display === 'block' ? 'none' : 'block'; icon.classList.toggle('fa-plus'); icon.classList.toggle('fa-minus');">
+                        <span>Em quanto tempo recebo os relatórios?</span>
+                        <i class="fas fa-plus" style="color: var(--primary-color);"></i>
+                    </div>
+                    <div class="accordion-content"
+                        style="padding: 0 1.5rem 1.5rem 1.5rem; display: none; color: var(--text-muted); line-height: 1.6; border-top: 1px solid var(--border-light);">
+                        Para a <strong>Opção B (N3)</strong>, o processo é faseado: o Relatório de Vistoria (Fase 1) é
+                        entregue em até <strong>15 dias</strong> após a vistoria. Os ensaios instrumentados (Fase 2)
+                        iniciam em até <strong>10 dias</strong> após a entrega do relatório da Fase 1 e têm duração de
+                        1 a 3 dias. O Relatório Final Completo (N3) é entregue em até <strong>30 dias úteis</strong>
+                        após a conclusão dos ensaios.<br><br>
+                        Para a <strong>Opção A</strong>, o prazo é combinado individualmente com o engenheiro
+                        responsável, geralmente mais ágil por não incluir a etapa de ensaios instrumentados.
+                    </div>
+                </div>
+
+                <!-- FAQ 6 -->
+                <div class="accordion-item"
+                    style="border-radius: var(--radius-md); background: var(--bg-color); margin-bottom: 1rem; overflow: hidden; border: 1px solid var(--border-color); cursor: pointer;">
+                    <div class="accordion-header"
+                        style="padding: 1.5rem; font-weight: 600; display: flex; justify-content: space-between; align-items: center;"
+                        onclick="const content = this.nextElementSibling; const icon = this.querySelector('i'); content.style.display = content.style.display === 'block' ? 'none' : 'block'; icon.classList.toggle('fa-plus'); icon.classList.toggle('fa-minus');">
+                        <span>O que não está incluído no escopo da inspeção?</span>
+                        <i class="fas fa-plus" style="color: var(--primary-color);"></i>
+                    </div>
+                    <div class="accordion-content"
+                        style="padding: 0 1.5rem 1.5rem 1.5rem; display: none; color: var(--text-muted); line-height: 1.6; border-top: 1px solid var(--border-light);">
+                        Para garantir total transparência, é importante esclarecer que <strong>não estão incluídos</strong>
+                        no escopo de qualquer opção de inspeção: manutenção corretiva de qualquer natureza, fornecimento
+                        ou substituição de peças, ensaio de tração de cabos, e testes especiais de freio, paraquedas,
+                        governador ou sobrecarga — salvo quando houver justificativa técnica expressa e acordo prévio
+                        entre as partes.<br><br>
+                        Essa delimitação reforça a independência da Proton: nosso papel é exclusivamente o
+                        <strong>diagnóstico e o laudo pericial</strong>, sem qualquer interesse comercial nas
+                        intervenções corretivas decorrentes.
+                    </div>
+                </div>
+
+                <!-- FAQ 7 -->
+                <div class="accordion-item"
+                    style="border-radius: var(--radius-md); background: var(--bg-color); margin-bottom: 1rem; overflow: hidden; border: 1px solid var(--border-color); cursor: pointer;">
+                    <div class="accordion-header"
+                        style="padding: 1.5rem; font-weight: 600; display: flex; justify-content: space-between; align-items: center;"
+                        onclick="const content = this.nextElementSibling; const icon = this.querySelector('i'); content.style.display = content.style.display === 'block' ? 'none' : 'block'; icon.classList.toggle('fa-plus'); icon.classList.toggle('fa-minus');">
+                        <span>O que é anamnese técnica e por que devo informar os problemas antes da inspeção?</span>
+                        <i class="fas fa-plus" style="color: var(--primary-color);"></i>
+                    </div>
+                    <div class="accordion-content"
+                        style="padding: 0 1.5rem 1.5rem 1.5rem; display: none; color: var(--text-muted); line-height: 1.6; border-top: 1px solid var(--border-light);">
+                        Assim como na medicina, a <strong>anamnese técnica</strong> é a coleta prévia de informações
+                        sobre o "histórico clínico" do equipamento antes de qualquer intervenção diagnóstica. Antes do
+                        início dos ensaios, o contratante deve informar ao engenheiro responsável todos os sintomas,
+                        queixas, incidentes e irregularidades que já foram observados no elevador — mesmo que pareçam
+                        insignificantes.<br><br>
+                        Isso é fundamental porque direciona a atenção dos instrumentos e do perito para as faixas de
+                        frequência e componentes mais suspeitos, tornando o diagnóstico mais preciso e o relatório mais
+                        assertivo. Informações omitidas podem comprometer a completude do laudo.
+                    </div>
+                </div>
             </div>
 
             <div class="text-center" style="margin-top: var(--space-8);">
@@ -1048,6 +1292,76 @@
             </div>
         </div>
     </section>
+
+    <!-- ========== QUERO CONTRATAR ========== -->
+    <section class="section" style="background: linear-gradient(135deg, rgba(0,168,255,0.08) 0%, rgba(0,232,176,0.08) 100%); border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light);">
+        <div class="container" style="max-width: 760px; text-align: center;">
+            <div class="reveal">
+                <span class="badge badge-cyan" style="margin-bottom: var(--space-4); display: inline-block;"><i class="fas fa-calendar-alt"></i> Agendar Inspeção</span>
+                <h2 style="font-size: 2rem; margin-bottom: var(--space-3);">Contrate a Inspeção do <span class="text-gradient">Seu Elevador</span></h2>
+                <p style="color: var(--text-muted); font-size: 1.05rem; line-height: 1.7; max-width: 620px; margin: 0 auto var(--space-6);">
+                    Receba um orçamento sem compromisso. Atendemos condomínios, empresas e escritórios jurídicos em Goiânia, Brasília e região.
+                </p>
+                <div style="display: flex; flex-wrap: wrap; gap: var(--space-3); justify-content: center; align-items: center;">
+                    <a href="https://api.whatsapp.com/send?phone=5562992852704&text=Olá! Quero contratar a inspeção de elevadores pela Proton Engenharia. Pode me passar mais informações?"
+                        target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg pulse-glow">
+                        <i class="fab fa-whatsapp"></i> Falar pelo WhatsApp
+                    </a>
+                    <a href="mailto:lima.georgio.eng@gmail.com?subject=Solicitar orçamento — Inspeção de Elevadores&body=Olá, gostaria de solicitar um orçamento para inspeção de elevadores."
+                        class="btn btn-outline btn-lg">
+                        <i class="fas fa-envelope"></i> Enviar E-mail
+                    </a>
+                </div>
+                <p style="margin-top: var(--space-4); font-size: 0.85rem; color: var(--text-muted);">
+                    <i class="fas fa-lock" style="margin-right: 0.4rem;"></i> Sigilo garantido. Seus dados e os do equipamento são protegidos.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== OPORTUNIDADES DE PARCERIA ========== -->
+    <section class="section section-alt">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="badge badge-yellow">Crescimento</span>
+                <h2>Oportunidades de <span class="text-gradient">Parceria</span></h2>
+                <p style="color: var(--text-muted); max-width: 580px; margin-top: var(--space-3);">
+                    Expanda seus negócios com a Proton. Seja como engenheiro ou empresa parceira, temos o modelo certo para você.
+                </p>
+            </div>
+            <div class="grid grid-2" style="margin-top: var(--space-6);">
+                <a href="franquias.html"
+                    class="card card-featured hover-lift reveal reveal-delay-1"
+                    style="text-decoration: none; cursor: pointer; display: block;">
+                    <div class="card-icon" style="font-size: 2.5rem; margin-bottom: var(--space-4); color: var(--accent-color, #f39c12);">
+                        <i class="fas fa-hard-hat"></i>
+                    </div>
+                    <h3 class="card-title">Sou Engenheiro</h3>
+                    <p class="card-text text-muted" style="margin-bottom: var(--space-4);">
+                        Opere sob a marca Proton com metodologia, equipamentos e suporte técnico completo. Modelo de franquia com exclusividade territorial.
+                    </p>
+                    <span class="btn btn-outline" style="pointer-events: none;">
+                        <i class="fas fa-arrow-right"></i> Conhecer Franquia
+                    </span>
+                </a>
+                <a href="inspecao-sistemas-mecanicos.html#parcerias"
+                    class="card hover-lift reveal reveal-delay-2"
+                    style="text-decoration: none; cursor: pointer; display: block;">
+                    <div class="card-icon" style="font-size: 2.5rem; margin-bottom: var(--space-4); color: var(--primary-color);">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 class="card-title">Sou Empresa</h3>
+                    <p class="card-text text-muted" style="margin-bottom: var(--space-4);">
+                        Ofereça laudos técnicos de alto valor agregado aos seus clientes. Parceria B2B para administradoras, construtoras e empresas de facilities.
+                    </p>
+                    <span class="btn btn-outline" style="pointer-events: none;">
+                        <i class="fas fa-arrow-right"></i> Ver Parceria Empresarial
+                    </span>
+                </a>
+            </div>
+        </div>
+    </section>
+
     <!-- ========== FOOTER ========== -->
     <footer class="footer">
         <div class="container">
