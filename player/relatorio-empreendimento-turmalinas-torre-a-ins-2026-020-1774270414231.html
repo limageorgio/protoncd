@@ -1,0 +1,1473 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Relatório Geral de Ocorrências — Turmalinas Torre A — INS-2026-020</title>
+  <style>
+    @media print {
+      body { margin: 0; }
+      .no-print { display: none !important; }
+      .occ { break-inside: avoid; }
+      .chart-container { break-inside: avoid; }
+      .yt { break-inside: avoid; }
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f8fafc;
+      color: #0f172a;
+      line-height: 1.5;
+    }
+
+    .container { max-width: 1100px; margin: 0 auto; }
+
+    .hdr {
+      background: linear-gradient(135deg, #1e3a5f, #2563eb);
+      color: #fff;
+      padding: 26px;
+      border-radius: 12px;
+      margin-bottom: 18px;
+    }
+    .hdr h1 { margin: 0; font-size: 22px; }
+    .hdr .sub { margin-top: 6px; opacity: 0.9; font-size: 13px; }
+
+    .info {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+    .card {
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 12px 14px;
+    }
+    .card .k { font-size: 11px; text-transform: uppercase; letter-spacing: 0.4px; color: #64748b; font-weight: 800; }
+    .card .v { margin-top: 2px; font-weight: 900; }
+
+    /* Bloco de ROI/pausa (mesmo padrão do Relatório de Ocorrência) */
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    .info-card {
+      background: white;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 14px 18px;
+    }
+    .info-card .label { font-size: 11px; color: #64748b; text-transform: uppercase; letter-spacing: 0.5px; }
+    .info-card .value { font-size: 15px; font-weight: 700; color: #1e293b; margin-top: 2px; }
+
+    .kpi {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+    .kpi-box { background:#fff; border:1px solid #e2e8f0; border-radius: 12px; padding: 14px; }
+    .kpi-title { font-size: 14px; font-weight: 900; margin-bottom: 10px; }
+    .kpi-grid { display:grid; grid-template-columns: 180px 1fr; gap: 12px; align-items:center; }
+
+    .section { font-size: 16px; font-weight: 900; margin: 18px 0 10px; padding-bottom: 8px; border-bottom: 2px solid #e2e8f0; }
+    .section-title { font-size: 18px; font-weight: 700; margin: 24px 0 12px; padding-bottom: 8px; border-bottom: 2px solid #e2e8f0; }
+
+    .table-wrap { background:#fff; border:1px solid #e2e8f0; border-radius: 12px; overflow: hidden; }
+    .table { width: 100%; border-collapse: collapse; }
+    .th { background: #f1f5f9; font-size: 11px; text-transform: uppercase; letter-spacing: 0.4px; color: #334155; text-align:left; padding: 10px 12px; border-bottom: 1px solid #e2e8f0; }
+    .td { font-size: 12px; padding: 10px 12px; border-bottom: 1px solid #e2e8f0; vertical-align: top; }
+    .sub { font-size: 10px; color:#64748b; margin-top: 2px; }
+    
+    /* Links de timestamp do YouTube */
+    .yt-time-link {
+      color: #2563eb;
+      text-decoration: none;
+      transition: all 0.2s;
+      padding: 2px 6px;
+      border-radius: 4px;
+      display: inline-block;
+    }
+    .yt-time-link:hover {
+      background: #eff6ff;
+      color: #1d4ed8;
+      text-decoration: underline;
+    }
+
+    .elevator { margin-top: 18px; }
+    .elevator-title { margin: 0; font-size: 18px; }
+
+    .session { background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 14px; margin-top: 12px; }
+    .session-h { margin-bottom: 10px; }
+    .session-t { font-weight: 900; }
+    .session-m { color:#64748b; font-size: 12px; margin-top: 4px; }
+
+    .muted { color:#64748b; font-size: 12px; }
+
+    /* Gráficos (mesmo padrão do Relatório de Ocorrência) */
+    .chart-container {
+      background: white;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 16px;
+      margin-bottom: 16px;
+    }
+    .chart-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: #1e293b;
+      margin-bottom: 10px;
+    }
+    .chart-container svg { display: block; }
+    
+    /* Marcadores clicáveis nos gráficos */
+    .marker-clickable {
+      cursor: pointer;
+      transition: opacity 0.2s;
+    }
+    .marker-clickable:hover {
+      opacity: 0.8;
+    }
+
+    .marker-legend {
+      background: #fffbeb;
+      border: 1px solid #fde68a;
+      border-radius: 10px;
+      padding: 14px 18px;
+      margin-bottom: 24px;
+    }
+    .marker-legend-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: #92400e;
+      margin-bottom: 8px;
+    }
+    .marker-legend-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 4px 0;
+      font-size: 13px;
+      color: #1e293b;
+    }
+    .marker-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: #f59e0b;
+      color: #fff;
+      font-size: 11px;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .marker-desc { flex: 1; }
+
+    /* YouTube */
+    .yt { display:grid; grid-template-columns: 180px 1fr; gap: 12px; align-items:center; background:#f8fafc; border:1px dashed #cbd5e1; border-radius: 12px; padding: 12px; margin: 12px 0; }
+    .yt-qr img { width: 180px; height: 180px; border-radius: 10px; border:1px solid #e2e8f0; background:#fff; display:block; }
+    .yt-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.4px; color: #475569; font-weight: 900; margin-bottom: 6px; }
+    .yt-url { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace; font-size: 12px; background:#fff; border:1px solid #e2e8f0; border-radius: 10px; padding: 10px; word-break: break-all; margin-bottom: 8px; }
+    .yt-link { font-weight: 900; font-size: 13px; color:#2563eb; text-decoration:none; }
+    .yt-link:hover { text-decoration: underline; }
+
+    
+    .yt-embed-section { margin-bottom: 20px; }
+    .yt-embed-wrapper {
+      position: relative; background: #000;
+      border-radius: 10px; overflow: hidden; aspect-ratio: 16 / 9;
+      margin-bottom: 10px;
+    }
+    /* Player div e iframe devem preencher 100% do wrapper */
+    .yt-embed-wrapper > div:not(.occ-video-overlay) {
+      position: absolute !important; top: 0 !important; left: 0 !important;
+      width: 100% !important; height: 100% !important;
+    }
+    .yt-embed-wrapper iframe {
+      position: absolute !important; top: 0 !important; left: 0 !important;
+      width: 100% !important; height: 100% !important; border: 0 !important;
+    }
+    .occ-video-overlay {
+      position: absolute; bottom: 70px; left: 12px;
+      background: rgba(10,17,35,0.92); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,0.15); border-radius: 10px;
+      padding: 10px 14px; max-width: 300px; color: #fff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.6);
+      pointer-events: none; opacity: 0; transition: opacity 0.3s ease;
+      z-index: 9999;
+    }
+    .occ-video-overlay.visible { opacity: 1; }
+    .occ-ov-header { display:flex; align-items:center; gap:6px; flex-wrap:wrap; margin-bottom:6px; }
+    .occ-ov-num { font-size:11px; font-weight:700; color:#94a3b8; white-space:nowrap; }
+    .occ-ov-badge { font-size:10px; font-weight:700; padding:2px 7px; border-radius:999px; border-width:1px; border-style:solid; }
+    .occ-ov-interval { font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:12px; color:#60a5fa; margin-bottom:5px; }
+    .occ-ov-cause { font-size:12px; color:#e2e8f0; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; line-height:1.45; margin-bottom:5px; }
+    .occ-ov-footer { font-size:10px; color:#94a3b8; }
+    /* Mobile: faixa horizontal fixa na borda inferior do vídeo */
+    @media (max-width: 640px) {
+      .occ-video-overlay {
+        bottom: 0; left: 0; right: 0;
+        max-width: 100%;
+        border-radius: 0;
+        border-left: none; border-right: none; border-bottom: none;
+        border-top: 1px solid rgba(255,255,255,0.18);
+        padding: 8px 12px;
+        box-shadow: none;
+      }
+      .occ-ov-cause { -webkit-line-clamp: 2; font-size: 11px; }
+      .occ-ov-interval { font-size: 11px; margin-bottom: 3px; }
+      .occ-ov-header { margin-bottom: 4px; }
+    }
+    .yt-capture-btn {
+      display: inline-flex; align-items: center; gap: 6px;
+      margin: 6px 0 0 0; padding: 5px 14px;
+      background: #1e293b; color: #94a3b8;
+      border: 1px solid #334155; border-radius: 6px;
+      font-size: 12px; font-weight: 600; cursor: pointer;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      transition: background 0.15s, color 0.15s, border-color 0.15s;
+    }
+    .yt-capture-btn:hover { background: #334155; color: #e2e8f0; border-color: #60a5fa; }
+    .yt-capture-btn:disabled { opacity: 0.5; cursor: wait; }
+    @media print { .yt-embed-section { display:none !important; } }
+  
+
+    /* Occ cards */
+    .occ { background: #fff; border:1px solid #e2e8f0; border-radius: 12px; overflow:hidden; margin: 10px 0; }
+    .occ-h { display:flex; justify-content:space-between; align-items:center; padding: 10px 12px; background:#f8fafc; border-bottom:1px solid #e2e8f0; gap: 10px; }
+    .occ-n { display:flex; align-items:center; gap: 8px; flex-wrap: wrap; }
+    .occ-t { color:#3b82f6; font-weight: 800; font-size: 12px; white-space: nowrap; }
+    .occ-b { padding: 12px; }
+    .field { margin-bottom: 10px; }
+    .field .k { font-size: 11px; text-transform: uppercase; letter-spacing: 0.4px; color: #64748b; font-weight: 900; }
+    .field .v { margin-top: 4px; font-size: 13px; }
+    .field.ok { background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 10px; padding: 10px; }
+    .field.bad { background: #fef2f2; border: 1px solid #fecaca; border-radius: 10px; padding: 10px; }
+    .meta { display:flex; gap: 8px; flex-wrap: wrap; font-size: 11px; color:#94a3b8; margin-top: 10px; }
+
+    .photos { display:grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 10px; margin-top: 12px; }
+    .photo img { width: 100%; height: 100px; object-fit: cover; border-radius: 10px; border:1px solid #e2e8f0; }
+    .photo-cap { font-size: 10px; color:#64748b; margin-top: 4px; }
+
+    footer { text-align:center; color:#94a3b8; font-size: 12px; margin-top: 24px; }
+
+    .print-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #2563eb;
+      color: white;
+      border: none;
+      padding: 12px 22px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 900;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(37,99,235,0.35);
+      z-index: 100;
+    }
+    .print-btn:hover { background:#1d4ed8; }
+  </style>
+  <script>
+(function(){
+  window._occYtCfgs=[{"divId":"yt-ep-0","videoId":"t_gadgUt59U","elevatorName":"A Servico","startTime":187.775361,"occurrences":[{"number":1,"origin":"noise","status":"preliminary","confirmedCause":"","preliminaryDescription":"[Auto] Ruído acima do limiar em 4:18 — 68.0 dB | pico pontual na descida | ~7º andar - Passagem contrapeso","severity":"low","intervals":[{"start":258,"end":null}]}]},{"divId":"yt-ep-1","videoId":"i1KTWIWWKC0","elevatorName":"A Social","startTime":116.89388795040894,"occurrences":[{"number":1,"origin":"noise","status":"preliminary","confirmedCause":"","preliminaryDescription":"[Auto] Ruído acima do limiar em 1:56 — 69.9 dB | persistiu 4.0s de forma contínua (até 2:00) | do 14º ao 13º andar - Partida","severity":"low","intervals":[{"start":116,"end":null}]},{"number":2,"origin":"noise","status":"preliminary","confirmedCause":"","preliminaryDescription":"[Auto] Ruído acima do limiar em 2:16 — 77.3 dB | persistiu ~4.0s de forma irregular (2 picos, até 2:22) | do 8º ao 7º andar - Passagem contrapeso","severity":"low","intervals":[{"start":136,"end":null}]},{"number":3,"origin":"other","status":"preliminary","confirmedCause":"","preliminaryDescription":"Laje sem pintura","severity":"none","intervals":[]},{"number":4,"origin":"other","status":"preliminary","confirmedCause":"","preliminaryDescription":"Porta sem sensor de intertravamento","severity":"high","intervals":[]},{"number":5,"origin":"both","status":"preliminary","confirmedCause":"","preliminaryDescription":"Sem grade de proteção entre as caixas de corrida","severity":"medium","intervals":[]},{"number":6,"origin":"other","status":"preliminary","confirmedCause":"","preliminaryDescription":"Sinais de infiltração nas paredes","severity":"low","intervals":[]},{"number":7,"origin":"both","status":"preliminary","confirmedCause":"","preliminaryDescription":"Furos na parede (proliferação de insetos e geração de poeira)","severity":"medium","intervals":[]}]}];
+  /* _ytPlayers: { videoId -> { player, cfg, overlay } } */
+  window._ytPlayers=window._ytPlayers||{};
+
+  /* Extrai videoId de uma URL embed do YouTube (sem regex para evitar problemas de escaping) */
+  function _vidId(url){
+    try{
+      var e=url.indexOf('/embed/');
+      if(e>=0){var s=url.substring(e+7);return s.split('?')[0].split('&')[0].substring(0,11)||null;}
+      var y=url.indexOf('youtu.be/');
+      if(y>=0){var s2=url.substring(y+9);return s2.split('?')[0].split('&')[0].substring(0,11)||null;}
+      return null;
+    }catch(e2){return null;}
+  }
+
+  /* Extrai parâmetro de query string sem regex */
+  function _qp(url,key){
+    try{
+      var q=(url.split('?')[1]||'').split('&');
+      for(var i=0;i<q.length;i++){var p=q[i].split('=');if(p[0]===key)return p[1]||null;}
+      return null;
+    }catch(e){return null;}
+  }
+
+  /* Tenta fazer seek no player embedded correto; abre popup se não encontrar */
+  window.openYouTubePlayer=function(embedUrl,noteText){
+    var startStr=_qp(embedUrl,'start');
+    var start=startStr!==null?parseInt(startStr,10):null;
+    var vid=_vidId(embedUrl);
+    var entry=vid?window._ytPlayers[vid]:null;
+    if(entry&&start!==null&&typeof entry.player.seekTo==='function'){
+      try{
+        entry.player.seekTo(start,true);
+        /* Scroll suave até o player */
+        var wrap=document.getElementById(entry.cfg.divId);
+        if(wrap){var top=wrap.getBoundingClientRect().top+window.pageYOffset-60;window.scrollTo({top:top,behavior:'smooth'});}
+        /* Tentar playVideo; se não estiver tocando após breve delay, tentar novamente */
+        var _pe=entry.player;
+        try{_pe.playVideo();}catch(e){}
+        setTimeout(function(){
+          try{
+            var st=_pe.getPlayerState();
+            if(st!==1&&st!==3){_pe.playVideo();}
+          }catch(e){}
+        },300);
+        return;
+      }catch(e){}
+    }
+    /* Fallback: abrir nova janela com autoplay=1 */
+    var popupUrl=embedUrl.replace('autoplay=0','autoplay=1');
+    var html='<!DOCTYPE html><html><head><meta charset="UTF-8"><style>*{margin:0;padding:0;box-sizing:border-box}body{background:#000;display:flex;flex-direction:column;height:100vh}.pw{flex:1;position:relative}.pw iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}.note{background:#1e293b;color:#94a3b8;padding:10px 16px;font-family:sans-serif;font-size:12px;text-align:center}</style></head><body><div class="pw"><iframe src="'+popupUrl+'" allowfullscreen allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture"></iframe></div><div class="note">'+noteText+'</div></body></html>';
+    var w=window.open('','_blank','width=1280,height=800,menubar=no,toolbar=no,location=no');
+    if(w){w.document.write(html);w.document.close();}else{alert('Permita pop-ups para visualizar o vídeo.');}
+  };
+
+  /* Carregar YouTube IFrame API e inicializar players */
+  function _initAllPlayers(){
+    (window._occYtCfgs||[]).forEach(function(cfg){
+      var el=document.getElementById(cfg.divId);if(!el)return;
+      /* Evitar double-init */
+      if(window._ytPlayers[cfg.videoId])return;
+      new window.YT.Player(cfg.divId,{
+        videoId:cfg.videoId,
+        playerVars:{
+          rel:0,
+          controls:1,
+          enablejsapi:1,
+          playsinline:1,
+          start:cfg.startTime!=null?Math.floor(cfg.startTime):0,
+          /* origin acelera o handshake postMessage do IFrame API (essencial com enablejsapi) */
+          origin:window.location.origin||window.location.href.split('/').slice(0,3).join('/')
+        },
+        events:{onReady:function(e){
+          window._ytPlayers[cfg.videoId]={player:e.target,cfg:cfg};
+          _startOv(e.target,cfg);
+        }}
+      });
+    });
+  }
+
+  function _bootstrapYT(){
+    if(window.YT&&window.YT.Player){
+      _initAllPlayers();
+      return;
+    }
+    var prev=window.onYouTubeIframeAPIReady;
+    window.onYouTubeIframeAPIReady=function(){
+      if(typeof prev==='function')prev();
+      _initAllPlayers();
+    };
+    /* Carregar API apenas se ainda não foi carregada */
+    if(!document.querySelector('script[src*="youtube.com/iframe_api"]')){
+      var tag=document.createElement('script');
+      tag.src='https://www.youtube.com/iframe_api';
+      document.head.appendChild(tag);
+    }
+  }
+
+  if(document.readyState==='loading'){
+    document.addEventListener('DOMContentLoaded',_bootstrapYT);
+  } else {
+    _bootstrapYT();
+  }
+
+  /* Captura o frame atual do player YouTube e salva como PNG com banner de metadados.
+     Usa getDisplayMedia (Screen Capture API) — único método que funciona com iframes cross-origin. */
+  window.captureYouTubeFrame=async function(playerId){
+    var configs=window._occYtCfgs||[];
+    var elevName='',vidId='';
+    for(var i=0;i<configs.length;i++){
+      if(configs[i].divId===playerId){elevName=configs[i].elevatorName||'';vidId=configs[i].videoId;break;}
+    }
+    var curTime=0;
+    var ytEntry=vidId?window._ytPlayers[vidId]:null;
+    if(ytEntry){try{curTime=ytEntry.player.getCurrentTime()||0;}catch(e){}}
+    var mins=Math.floor(curTime/60);
+    var secs=Math.floor(curTime%60);
+    var timeStr=mins+':'+(secs<10?'0':'')+secs;
+    var playerEl=document.getElementById(playerId);
+    /* O YouTube IFrame API substitui o div original pelo próprio iframe com o mesmo id.
+       Se playerEl já for um iframe, usamos diretamente; caso contrário buscamos dentro. */
+    var iframe=null;
+    if(playerEl){
+      if(playerEl.tagName==='IFRAME'){iframe=playerEl;}
+      else{iframe=playerEl.querySelector('iframe');}
+    }
+    if(!iframe){alert('Player não carregado. Aguarde o vídeo aparecer e tente novamente.');return;}
+    iframe.scrollIntoView({behavior:'smooth',block:'center'});
+    await new Promise(function(r){setTimeout(r,700);});
+    var dpr=window.devicePixelRatio||1;
+    var btn=document.getElementById(playerId+'-capbtn');
+    if(btn){btn.textContent='⏳ Selecionando tela...';btn.disabled=true;}
+    try{
+      var stream=await navigator.mediaDevices.getDisplayMedia({video:{displaySurface:'browser',frameRate:1},audio:false});
+      var vEl=document.createElement('video');
+      vEl.srcObject=stream;vEl.muted=true;
+      await new Promise(function(resolve){
+        vEl.onloadedmetadata=function(){vEl.play();};
+        vEl.onplaying=resolve;
+        vEl.load();
+      });
+      await new Promise(function(r){setTimeout(r,250);});
+      var fullCanvas=document.createElement('canvas');
+      fullCanvas.width=vEl.videoWidth;fullCanvas.height=vEl.videoHeight;
+      var fctx=fullCanvas.getContext('2d');
+      fctx.drawImage(vEl,0,0);
+      stream.getTracks().forEach(function(t){t.stop();});
+      var rect2=iframe.getBoundingClientRect();
+      var cx=Math.round(rect2.left*dpr);
+      var cy=Math.round(rect2.top*dpr);
+      var cw=Math.round(rect2.width*dpr);
+      var ch=Math.round(rect2.height*dpr);
+      cx=Math.max(0,Math.min(cx,fullCanvas.width-2));
+      cy=Math.max(0,Math.min(cy,fullCanvas.height-2));
+      cw=Math.min(cw,fullCanvas.width-cx);
+      ch=Math.min(ch,fullCanvas.height-cy);
+      var BANNER=Math.round(52*dpr);
+      var outCv=document.createElement('canvas');
+      outCv.width=cw;outCv.height=ch+BANNER;
+      var ctx=outCv.getContext('2d');
+      /* Banner escuro */
+      ctx.fillStyle='#0f172a';
+      ctx.fillRect(0,0,cw,BANNER);
+      /* Linha separadora */
+      ctx.fillStyle='#1e40af';
+      ctx.fillRect(0,BANNER-Math.round(2*dpr),cw,Math.round(2*dpr));
+      /* Nome do elevador */
+      ctx.font='bold '+Math.round(15*dpr)+'px Arial,sans-serif';
+      ctx.fillStyle='#ffffff';
+      ctx.fillText(elevName||'Elevador',Math.round(12*dpr),Math.round(23*dpr));
+      /* Tempo atual */
+      ctx.font=Math.round(13*dpr)+'px Arial,sans-serif';
+      ctx.fillStyle='#60a5fa';
+      ctx.fillText('⏱ '+timeStr,Math.round(12*dpr),Math.round(42*dpr));
+      /* Data/hora (direita) */
+      var now=new Date();
+      var dateStr=now.toLocaleDateString('pt-BR')+' '+now.toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'});
+      ctx.font=Math.round(11*dpr)+'px Arial,sans-serif';
+      ctx.fillStyle='#94a3b8';
+      var tw=ctx.measureText(dateStr).width;
+      ctx.fillText(dateStr,cw-tw-Math.round(12*dpr),Math.round(33*dpr));
+      /* Frame do vídeo */
+      ctx.drawImage(fullCanvas,cx,cy,cw,ch,0,BANNER,cw,ch);
+      /* Download */
+      outCv.toBlob(function(blob){
+        if(!blob){alert('Erro ao gerar imagem.');return;}
+        var url=URL.createObjectURL(blob);
+        var a=document.createElement('a');
+        a.href=url;
+        /* Sanitiza nome do arquivo sem regex */
+        var raw=elevName||'elevador';
+        var eName='';
+        for(var k=0;k<raw.length;k++){
+          var ch2=raw[k];
+          if(ch2===' '){eName+='_';}
+          else if(ch2!=='/'&&ch2!==':'&&ch2!=='*'&&ch2!=='?'&&ch2!=='"'&&ch2!=='<'&&ch2!=='>'&&ch2!=='|'){eName+=ch2;}
+        }
+        if(!eName)eName='elevador';
+        a.download='captura_'+eName+'_'+timeStr.replace(':','m')+'s.png';
+        document.body.appendChild(a);a.click();document.body.removeChild(a);
+        setTimeout(function(){URL.revokeObjectURL(url);},2000);
+      },'image/png');
+    }catch(err){
+      if(err.name!=='AbortError'){alert('Captura não disponível: '+(err.message||'erro desconhecido'));}
+    }finally{
+      if(btn){btn.textContent='📸 Capturar Frame';btn.disabled=false;}
+    }
+  };
+
+  function _startOv(player,cfg){
+    var ov=document.getElementById(cfg.divId+'-overlay');if(!ov)return;
+    var MARGIN=2;
+    var OL={noise:'Ruído',vibration:'Vibração',both:'Ruído + Vibração',visual:'Visual',other:'Outro'};
+    var OC={noise:{bg:'rgba(249,115,22,.25)',bd:'#F97316',tx:'#FDBA74'},vibration:{bg:'rgba(139,92,246,.25)',bd:'#8B5CF6',tx:'#C4B5FD'},both:{bg:'rgba(239,68,68,.25)',bd:'#EF4444',tx:'#FCA5A5'},visual:{bg:'rgba(34,197,94,.25)',bd:'#22C55E',tx:'#86EFAC'},other:{bg:'rgba(100,116,139,.25)',bd:'#64748B',tx:'#CBD5E1'}};
+    var SL={none:'',low:'Baixa',medium:'Média',high:'Alta',critical:'Crítica'};
+    var SC={none:'#64748B',low:'#22C55E',medium:'#F59E0B',high:'#F97316',critical:'#EF4444'};
+    function fmt(s){var m=Math.floor(s/60);var ss=Math.floor(s%60);return m+':'+(ss<10?'0':'')+ss;}
+    function find(ct){
+      var occs=cfg.occurrences||[];
+      for(var i=0;i<occs.length;i++){
+        var occ=occs[i];var ivs=occ.intervals||[];
+        for(var j=0;j<ivs.length;j++){
+          var iv=ivs[j];
+          if(iv.end===null){if(ct>=iv.start-MARGIN&&ct<=iv.start+MARGIN)return{occ:occ,iv:iv};}
+          else{if(ct>=iv.start-MARGIN&&ct<=iv.end+MARGIN)return{occ:occ,iv:iv};}
+        }
+      }return null;
+    }
+    function renderOv(occ,iv){
+      var oc=OC[occ.origin]||OC.other,ol=OL[occ.origin]||'Outro';
+      var sl=SL[occ.severity]||'',sc=SC[occ.severity]||SC.none;
+      var interval=iv.end!==null?fmt(iv.start)+' → '+fmt(iv.end):fmt(iv.start);
+      var cfBadge=occ.status==='confirmed'
+        ?'<span class="occ-ov-badge" style="background:rgba(34,197,94,.2);border-color:#22C55E;color:#86EFAC;">✓ Confirmado</span>'
+        :'<span class="occ-ov-badge" style="background:rgba(245,158,11,.2);border-color:#F59E0B;color:#FCD34D;">Em análise</span>';
+      var cause=(occ.status==='confirmed'&&occ.confirmedCause)?occ.confirmedCause:(occ.preliminaryDescription||'');
+      ov.innerHTML=
+        '<div class="occ-ov-header">'+
+          '<span class="occ-ov-num">Ocorrência #'+occ.number+'</span>'+
+          '<span class="occ-ov-badge" style="background:'+oc.bg+';border-color:'+oc.bd+';color:'+oc.tx+';">'+ol+'</span>'+
+          cfBadge+
+        '</div>'+
+        '<div class="occ-ov-interval">🕐 '+interval+'</div>'+
+        (cause?'<div class="occ-ov-cause">'+cause+'</div>':'')+
+        (sl?'<div class="occ-ov-footer">Severidade: <span style="color:'+sc+';font-weight:700;">'+sl+'</span></div>':'');
+      ov.classList.add('visible');
+    }
+    /* — polling a cada 300ms — */
+    setInterval(function(){
+      var st;
+      try{st=player.getPlayerState();}catch(e){return;}
+      /* 1=playing 2=paused 3=buffering */
+      if(st!==1&&st!==2&&st!==3){ov.classList.remove('visible');return;}
+      var ct;
+      try{ct=player.getCurrentTime();}catch(e){return;}
+      var hit=find(ct);
+      if(!hit){ov.classList.remove('visible');return;}
+      renderOv(hit.occ,hit.iv);
+    },300);
+  }
+})();
+</script>
+</head>
+<body>
+  <div class="container">
+    <div class="hdr">
+      <h1>📊 Relatório Geral de Ocorrências</h1>
+      <div class="sub">Turmalinas Torre A • Inspeção INS-2026-020 • predictive • Inspetor(a): Georgio Lima</div>
+      <div class="sub">Gerado em 23/03/2026 às 09:53:34</div>
+    </div>
+
+    <div class="info">
+      <div class="card"><div class="k">Elevadores (com histórico)</div><div class="v">2</div></div>
+      <div class="card"><div class="k">Sessões ROI</div><div class="v">2</div></div>
+      <div class="card"><div class="k">Ocorrências (total)</div><div class="v">8</div></div>
+    </div>
+
+    <h2 class="section">KPIs</h2>
+    <div class="kpi">
+      <div class="kpi-box">
+        <div class="kpi-title">Status</div>
+        <div class="kpi-grid">
+          <svg width="180" height="180" viewBox="0 0 180 180"><path d="M 90 90 L 90.00 6.00 A 84 84 0 1 1 90.00 6.00 Z" fill="#f59e0b" stroke="#ffffff" stroke-width="1" /></svg>
+          <div style="display:flex;flex-direction:column;gap:6px;">
+      <div style="display:flex;align-items:center;gap:8px;font-size:12px;color:#0f172a;">
+        <span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:#f59e0b;border:1px solid rgba(0,0,0,0.08);"></span>
+        <span style="flex:1;">🔍 Preliminar</span>
+        <span style="font-weight:800;">8</span>
+      </div></div>
+        </div>
+      </div>
+      <div class="kpi-box">
+        <div class="kpi-title">Severidade</div>
+        <div class="kpi-grid">
+          <svg width="180" height="180" viewBox="0 0 180 180"><path d="M 90 90 L 90.00 6.00 A 84 84 0 0 1 149.40 30.60 Z" fill="#ef4444" stroke="#ffffff" stroke-width="1" /><path d="M 90 90 L 149.40 30.60 A 84 84 0 0 1 149.40 149.40 Z" fill="#f97316" stroke="#ffffff" stroke-width="1" /><path d="M 90 90 L 149.40 149.40 A 84 84 0 0 1 30.60 30.60 Z" fill="#3b82f6" stroke="#ffffff" stroke-width="1" /><path d="M 90 90 L 30.60 30.60 A 84 84 0 0 1 90.00 6.00 Z" fill="#94a3b8" stroke="#ffffff" stroke-width="1" /></svg>
+          <div style="display:flex;flex-direction:column;gap:6px;">
+      <div style="display:flex;align-items:center;gap:8px;font-size:12px;color:#0f172a;">
+        <span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:#ef4444;border:1px solid rgba(0,0,0,0.08);"></span>
+        <span style="flex:1;">Alta</span>
+        <span style="font-weight:800;">1</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:8px;font-size:12px;color:#0f172a;">
+        <span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:#f97316;border:1px solid rgba(0,0,0,0.08);"></span>
+        <span style="flex:1;">Média</span>
+        <span style="font-weight:800;">2</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:8px;font-size:12px;color:#0f172a;">
+        <span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:#3b82f6;border:1px solid rgba(0,0,0,0.08);"></span>
+        <span style="flex:1;">Baixa</span>
+        <span style="font-weight:800;">4</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:8px;font-size:12px;color:#0f172a;">
+        <span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:#94a3b8;border:1px solid rgba(0,0,0,0.08);"></span>
+        <span style="flex:1;">Nenhuma</span>
+        <span style="font-weight:800;">1</span>
+      </div></div>
+        </div>
+      </div>
+      <div class="kpi-box">
+        <div class="kpi-title">Origem</div>
+        <div class="kpi-grid">
+          <svg width="180" height="180" viewBox="0 0 180 180"><path d="M 90 90 L 90.00 6.00 A 84 84 0 0 1 149.40 149.40 Z" fill="#f97316" stroke="#ffffff" stroke-width="1" /><path d="M 90 90 L 149.40 149.40 A 84 84 0 0 1 30.60 149.40 Z" fill="#ef4444" stroke="#ffffff" stroke-width="1" /><path d="M 90 90 L 30.60 149.40 A 84 84 0 0 1 90.00 6.00 Z" fill="#6b7280" stroke="#ffffff" stroke-width="1" /></svg>
+          <div style="display:flex;flex-direction:column;gap:6px;">
+      <div style="display:flex;align-items:center;gap:8px;font-size:12px;color:#0f172a;">
+        <span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:#f97316;border:1px solid rgba(0,0,0,0.08);"></span>
+        <span style="flex:1;">🔊 Ruído</span>
+        <span style="font-weight:800;">3</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:8px;font-size:12px;color:#0f172a;">
+        <span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:#ef4444;border:1px solid rgba(0,0,0,0.08);"></span>
+        <span style="flex:1;">⚠️ Ruído + Vibração</span>
+        <span style="font-weight:800;">2</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:8px;font-size:12px;color:#0f172a;">
+        <span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:#6b7280;border:1px solid rgba(0,0,0,0.08);"></span>
+        <span style="flex:1;">📝 Outro</span>
+        <span style="font-weight:800;">3</span>
+      </div></div>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="section">Lista Simplificada — Todos os Problemas</h2>
+    
+  <div class="table-wrap">
+    <table class="table">
+      <thead>
+        <tr>
+          <th class="th">Elevador / Sessão</th>
+          <th class="th">#</th>
+          <th class="th">Status</th>
+          <th class="th">Severidade</th>
+          <th class="th">Origem</th>
+          <th class="th">Categoria</th>
+          <th class="th">Momento</th>
+          <th class="th">Descrição</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+      <tr>
+        <td class="td"><strong>A Social</strong><div class="sub">08/03/2026 09:32:00 • D7961CA0</div></td>
+        <td class="td" style="text-align:center;font-weight:900;">📝 #4</td>
+        <td class="td"><span style="display:inline-flex;align-items:center;gap:4px;padding:2px 8px;border-radius:999px;font-size:11px;font-weight:700;background:#fef3c7;color:#92400e;border:1px solid #f59e0b">Preliminar</span></td>
+        <td class="td"><span style="display:inline-flex;align-items:center;gap:4px;padding:2px 8px;border-radius:999px;font-size:11px;font-weight:700;background:#fef2f2;color:#b91c1c;border:1px solid #ef4444">Alta</span></td>
+        <td class="td">Outro</td>
+        <td class="td">Outro</td>
+        <td class="td">—</td>
+        <td class="td">Porta sem sensor de intertravamento</td>
+      </tr>
+      <tr>
+        <td class="td"><strong>A Social</strong><div class="sub">08/03/2026 09:32:00 • D7961CA0</div></td>
+        <td class="td" style="text-align:center;font-weight:900;">⚠️ #7</td>
+        <td class="td"><span style="display:inline-flex;align-items:center;gap:4px;padding:2px 8px;border-radius:999px;font-size:11px;font-weight:700;background:#fef3c7;color:#92400e;border:1px solid #f59e0b">Preliminar</span></td>
+        <td class="td"><span style="display:inline-flex;align-items:center;gap:4px;padding:2px 8px;border-radius:999px;font-size:11px;font-weight:700;background:#fff7ed;color:#c2410c;border:1px solid #f97316">Média</span></td>
+        <td class="td">Ruído + Vibração</td>
+        <td class="td">Mecânico</td>
+        <td class="td">—</td>
+        <td class="td">Furos na parede (proliferação de insetos e geração de poeira)</td>
+      </tr>
+      <tr>
+        <td class="td"><strong>A Social</strong><div class="sub">08/03/2026 09:32:00 • D7961CA0</div></td>
+        <td class="td" style="text-align:center;font-weight:900;">⚠️ #5</td>
+        <td class="td"><span style="display:inline-flex;align-items:center;gap:4px;padding:2px 8px;border-radius:999px;font-size:11px;font-weight:700;background:#fef3c7;color:#92400e;border:1px solid #f59e0b">Preliminar</span></td>
+        <td class="td"><span style="display:inline-flex;align-items:center;gap:4px;padding:2px 8px;border-radius:999px;font-size:11px;font-weight:700;background:#fff7ed;color:#c2410c;border:1px solid #f97316">Média</span></td>
+        <td class="td">Ruído + Vibração</td>
+        <td class="td">Mecânico</td>
+        <td class="td">—</td>
+        <td class="td">Sem grade de proteção entre as caixas de corrida</td>
+      </tr>
+      <tr>
+        <td class="td"><strong>A Social</strong><div class="sub">08/03/2026 09:32:00 • D7961CA0</div></td>
+        <td class="td" style="text-align:center;font-weight:900;">📝 #6</td>
+        <td class="td"><span style="display:inline-flex;align-items:center;gap:4px;padding:2px 8px;border-radius:999px;font-size:11px;font-weight:700;background:#fef3c7;color:#92400e;border:1px solid #f59e0b">Preliminar</span></td>
+        <td class="td"><span style="display:inline-flex;align-items:center;gap:4px;padding:2px 8px;border-radius:999px;font-size:11px;font-weight:700;background:#eff6ff;color:#1e40af;border:1px solid #3b82f6">Baixa</span></td>
+        <td class="td">Outro</td>
+        <td class="td">Civil/Acabamento</td>
+        <td class="td">—</td>
+        <td class="td">Sinais de infiltração nas paredes</td>
+      </tr>
+      <tr>
+        <td class="td"><strong>A Servico</strong><div class="sub">08/03/2026 09:45:00 • F2169615</div></td>
+        <td class="td" style="text-align:center;font-weight:900;">🔊 #1</td>
+        <td class="td"><span style="display:inline-flex;align-items:center;gap:4px;padding:2px 8px;border-radius:999px;font-size:11px;font-weight:700;background:#fef3c7;color:#92400e;border:1px solid #f59e0b">Preliminar</span></td>
+        <td class="td"><span style="display:inline-flex;align-items:center;gap:4px;padding:2px 8px;border-radius:999px;font-size:11px;font-weight:700;background:#eff6ff;color:#1e40af;border:1px solid #3b82f6">Baixa</span></td>
+        <td class="td">Ruído</td>
+        <td class="td">Mecânico</td>
+        <td class="td"><a href="#" onclick="openYouTubePlayer('https://www.youtube.com/embed/t_gadgUt59U?start=258&autoplay=1&controls=1&rel=0', 'Reproduzindo a partir do momento da ocorrência'); return false;" class="yt-time-link" title="Reproduzir momento no YouTube (nova janela)">4:18 🔗</a></td>
+        <td class="td">[Auto] Ruído acima do limiar em 4:18 — 68.0 dB | pico pontual na descida | ~7º andar - Passagem contrapeso</td>
+      </tr>
+      <tr>
+        <td class="td"><strong>A Social</strong><div class="sub">08/03/2026 09:32:00 • D7961CA0</div></td>
+        <td class="td" style="text-align:center;font-weight:900;">🔊 #1</td>
+        <td class="td"><span style="display:inline-flex;align-items:center;gap:4px;padding:2px 8px;border-radius:999px;font-size:11px;font-weight:700;background:#fef3c7;color:#92400e;border:1px solid #f59e0b">Preliminar</span></td>
+        <td class="td"><span style="display:inline-flex;align-items:center;gap:4px;padding:2px 8px;border-radius:999px;font-size:11px;font-weight:700;background:#eff6ff;color:#1e40af;border:1px solid #3b82f6">Baixa</span></td>
+        <td class="td">Ruído</td>
+        <td class="td">Mecânico</td>
+        <td class="td"><a href="#" onclick="openYouTubePlayer('https://www.youtube.com/embed/i1KTWIWWKC0?start=116&autoplay=1&controls=1&rel=0', 'Reproduzindo a partir do momento da ocorrência'); return false;" class="yt-time-link" title="Reproduzir momento no YouTube (nova janela)">1:56 🔗</a></td>
+        <td class="td">[Auto] Ruído acima do limiar em 1:56 — 69.9 dB | persistiu 4.0s de forma contínua (até 2:00) | do 14º ao 13º andar - Partida</td>
+      </tr>
+      <tr>
+        <td class="td"><strong>A Social</strong><div class="sub">08/03/2026 09:32:00 • D7961CA0</div></td>
+        <td class="td" style="text-align:center;font-weight:900;">🔊 #2</td>
+        <td class="td"><span style="display:inline-flex;align-items:center;gap:4px;padding:2px 8px;border-radius:999px;font-size:11px;font-weight:700;background:#fef3c7;color:#92400e;border:1px solid #f59e0b">Preliminar</span></td>
+        <td class="td"><span style="display:inline-flex;align-items:center;gap:4px;padding:2px 8px;border-radius:999px;font-size:11px;font-weight:700;background:#eff6ff;color:#1e40af;border:1px solid #3b82f6">Baixa</span></td>
+        <td class="td">Ruído</td>
+        <td class="td">Mecânico</td>
+        <td class="td"><a href="#" onclick="openYouTubePlayer('https://www.youtube.com/embed/i1KTWIWWKC0?start=136&autoplay=1&controls=1&rel=0', 'Reproduzindo a partir do momento da ocorrência'); return false;" class="yt-time-link" title="Reproduzir momento no YouTube (nova janela)">2:16 🔗</a></td>
+        <td class="td">[Auto] Ruído acima do limiar em 2:16 — 77.3 dB | persistiu ~4.0s de forma irregular (2 picos, até 2:22) | do 8º ao 7º andar - Passagem contrapeso</td>
+      </tr>
+      <tr>
+        <td class="td"><strong>A Social</strong><div class="sub">08/03/2026 09:32:00 • D7961CA0</div></td>
+        <td class="td" style="text-align:center;font-weight:900;">📝 #3</td>
+        <td class="td"><span style="display:inline-flex;align-items:center;gap:4px;padding:2px 8px;border-radius:999px;font-size:11px;font-weight:700;background:#fef3c7;color:#92400e;border:1px solid #f59e0b">Preliminar</span></td>
+        <td class="td"><span style="display:inline-flex;align-items:center;gap:4px;padding:2px 8px;border-radius:999px;font-size:11px;font-weight:700;background:#f1f5f9;color:#475569;border:1px solid #94a3b8">Nenhuma</span></td>
+        <td class="td">Outro</td>
+        <td class="td">Civil/Acabamento</td>
+        <td class="td">—</td>
+        <td class="td">Laje sem pintura</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+    <h2 class="section">Problemas por Elevador (com gráficos e pontuações)</h2>
+    
+      <div class="elevator">
+        <h2 class="elevator-title">A Servico</h2>
+        
+        <div class="session">
+          <div class="session-h">
+            <div class="session-t">08/03/2026 09:45:00</div>
+            <div class="session-m">ID F2169615 • ROI 3:07→4:42 • Duração 1:34 • Sensores: Ruído 376 pts, Vibração 9372 pts</div>
+          </div>
+
+          
+  <div class="yt-embed-section no-print">
+    <div class="yt-embed-wrapper">
+      <div id="yt-ep-0"></div>
+      <div class="occ-video-overlay" id="yt-ep-0-overlay"></div>
+    </div>
+    <div style="display:flex;align-items:center;padding:4px 0 2px 0;">
+      <button id="yt-ep-0-capbtn" class="yt-capture-btn" onclick="captureYouTubeFrame('yt-ep-0')">
+        📸 Capturar Frame
+      </button>
+    </div>
+    <div style="display:flex;align-items:center;gap:12px;padding:10px 14px;background:#fff;border:1px solid #e2e8f0;border-radius:10px;">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAGzUlEQVR4Aeyci5JjNwhEffb//zkxccm0HsjyfToJW8OoBQ3IdKRMZTf756/89VMT+PPIXz81gRTkp+R4PFKQXxcEeMDx1n5u8B4ag7FfOYbBeTDGxosMxjng/jYXPAbHYe2TN0Sn8QM4BfkBEfQIU0GePw8+9pg2WsXaD/xZmOVrjmLwfCAsoTkhqQlozhbclHtvp4K8WQkum0AKctmo1xotCwIs/fT1T9uFb3rNYVx7xtHYQrspBbz/lBgEwfMhxkF65V4WpMrKzWkTSEFOG+22wrcJAn61V46uT5RhzQGvBY6Np6Y56o+w8q/Ctwly1Qf8t/VJQX5MsRQkBXlNQN/tl6f/Dv7vA6hxz355tC7UOfB5/6py3/e8IffNftg5BRmO5T7nsiD6FMzwkR9F+zwej6o0+POjPHB/lfDcKO+5HX5BnD9MeDq17gw/qR+/lgX5WCkJh0wgBTlkjMcVmQoCfn3hezw7Jng9veazHI1pDhxXS3vMMHhP+B5HtaeCREnpP28CKch5s91UuRNEn4Ij8ex04Fdee2qO+g1HMfBayjEMcczin8z6nmHatxNEg4mvn0AKcv3Mpx1TkOl4rg92gsD4nQX3Q4312FDHYLzXtzjKj/xQ11SeYu1hWGNv/ATg9YxX7BmqvsB5VUA24BxAIo/wzyQ85FcniMQS3jCBFOSGoc9adoKU62rrLFFjwPs6qt9qRKa8vRjG/du6K2eBtVrgPHDc9tAzaEz9ijtBNJj4+gmkINfPfNqxEwT8+k0zJahXUTF4LaixpFdQ8zWgfsOzmMXNoO4J471xRwY1XzlRf/UbhroGvPZRrU4QK5J23wRSkPtmP+zcCRJdJc1WjmGNwetKAtX/W6Icw/CZB86BGlvfYlZvxQq/XTUXvI/6DUMcs/jI2l5lD+NanSCjoun7egKbE1KQzaM7J7ETBPwqgWNtD+6HGkc89RsuV9dW24/MYsVG8eKD+gzw2pfcssLLD/Va6thauLbaXs18xdSvGOra4HvllTq2qr8TRIOJr59ACnL9zKcdU5DpeK4PdoLYm1ZMj1N8n9bVHOVFGPz9bftGOcoDzweilPd/GIWao7UMA2+u7Ytp4eIrq8bA88GxcjpBNJj4+gmkINfPfNqxEwTGVwncDzXWDuWq2go1D3yvOYrhM8f44DzrVQzcbzy1wrFV/YrB86HGllcMPKb5e3EnyN6Cmb9vAlNB9pXO7C0T2CRIubZljRqX+GjVHBhff81TvmGNgeer33iRrfI0H7zPit84UZ/Iv0kQa5R2zgRSkHPmurlqJ0h0lbQD+NWFbVjrRRji2is5EWfmn31+jSnWelCfWWMruBNkJSk5500gBTlvtpsqpyCbxnZe0lSQ6J1Uv+HoeBYr1nLA39rCma1tfrTXGi0HvCc4Vh64X2sZXuEpxzB4Pdt/sqkgn5IzfvwEbhDk+A/xX6rYCQLjK2ZXtlg7gOJvV/BabUz34DytDWO/cWAcg7HfcrSn7YupXzF4LaDQp6vmG1ay7YupX3EniAYTXz+BFOT6mU87doKUK2WrZgLv375Uv2EYx6xGMeOpwTgHxn7NneHSb7TCd7XbGuD5GgP3z862EusEWUlKznkTSEHOm+2mylNB4PurCJ4DjtvT6ZXXmPpnWHMiDN4f4j/8DTUPxnvtA86J/ICGlvBUkKUKSTp0AinIoePcX2wqSPRktG0jnvrbHCD8qa1wIeZobcPFIM4pdW0tfFttPzKLrdgod+QDPxs4Vu5UECUmvmYCKcg1c17ukoIsj+oaYicI+NsGx+HZx9F3OuJBfRblgcfUr3UNg/PAsebMMHyfY32Lae3is1X9nSAaTHz9BFKQ62c+7TgVxK7THpt2DoLgz4L2bungvDYW7aN6kb+ts8pr88pe82F8/qkgpVCu100gBblu1kudlgUBv2IQ46WuT5Je3+f245fyVzHU5/zYpCFAnQ/jvaa1ZwPPUV6ElwWJCqT/2AmkIMfOc3e12wQBv8rgePcnkgLt8yGh6i/GAe+vOco3PItZ3Ay8FtS/BwMei2rdJogdPq2fQArSz+RWTwpy6/j75j8hiL6nivW44O8v1Fh5Mwx1Hrz22hNePqjff+NEtS0WGYzrgfu17k8Iogf6v+MU5Mf+CVgWJLqSrX/182ke+PWFMZ7Vhe9zZvW+jcG4P9TPHrx4UPu137IgmpT4vAmkIOfNdlPlqSDgVwy+x7MTgdeb8aKYPnkRjnJX/eBnBFbTdvGmguyqnMmbJpCCbBrbeUmdINH13+tvP8LR9dr6o33UU7kRx/yrPOMWi3LUr7gTRIOJr59ACnL9zKcd/wYAAP//hlb+EgAAAAZJREFUAwBM09LAwAVirwAAAABJRU5ErkJggg==" alt="QR Code YouTube" style="width:80px;height:80px;border-radius:6px;border:1px solid #e2e8f0;flex-shrink:0;">
+        <div>
+          <div style="font-size:10px;font-weight:700;color:#64748b;text-transform:uppercase;letter-spacing:0.4px;margin-bottom:4px;">Abrir no celular</div>
+          <div style="font-family:monospace;font-size:11px;color:#0f172a;background:#f8fafc;border:1px solid #e2e8f0;border-radius:6px;padding:5px 8px;word-break:break-all;margin-bottom:5px;">https://youtu.be/t_gadgUt59U</div>
+          <a href="https://youtu.be/t_gadgUt59U" target="_blank" rel="noopener noreferrer" style="font-size:12px;font-weight:800;color:#2563eb;text-decoration:none;">Abrir no YouTube ↗</a>
+        </div>
+      </div>
+  </div>
+
+          <div class="charts">
+            <h3 class="section-title">Gráficos com Ocorrências</h3>
+            <div class="info-grid" style="margin-bottom: 16px;">
+                     <div class="info-card" style="border-left: 3px solid #2563EB;">
+                       <div class="label">ROI Início</div>
+                       <div class="value">3:07 (187.8s)</div>
+                     </div>
+                     <div class="info-card" style="border-left: 3px solid #2563EB;">
+                       <div class="label">ROI Fim</div>
+                       <div class="value">4:42 (282.0s)</div>
+                     </div>
+                     <div class="info-card" style="border-left: 3px solid #2563EB;">
+                       <div class="label">Duração ROI</div>
+                       <div class="value">1:34</div>
+                     </div>
+                     
+                     <div class="info-card" style="border-left: 3px solid #EF4444;">
+                       <div class="label">Pausa</div>
+                       <div class="value">3:53 → 3:58</div>
+                     </div>
+                   </div>
+            
+            
+    <div class="chart-container">
+      <h3 class="chart-title">📊 Gráfico de Ruído (dB)</h3>
+      <svg viewBox="0 0 820 200" width="100%" preserveAspectRatio="xMidYMid meet" style="background: #fff; border: 1px solid #e2e8f0; border-radius: 8px;">
+        <!-- Grid -->
+        <line x1="50" y1="165.0" x2="800" y2="165.0" stroke="#e2e8f0" stroke-width="0.5" /><text x="45" y="165.0" text-anchor="end" fill="#94a3b8" font-size="9" dy="3">37</text><line x1="50" y1="138.0" x2="800" y2="138.0" stroke="#e2e8f0" stroke-width="0.5" /><text x="45" y="138.0" text-anchor="end" fill="#94a3b8" font-size="9" dy="3">48</text><line x1="50" y1="111.0" x2="800" y2="111.0" stroke="#e2e8f0" stroke-width="0.5" /><text x="45" y="111.0" text-anchor="end" fill="#94a3b8" font-size="9" dy="3">58</text><line x1="50" y1="84.0" x2="800" y2="84.0" stroke="#e2e8f0" stroke-width="0.5" /><text x="45" y="84.0" text-anchor="end" fill="#94a3b8" font-size="9" dy="3">69</text><line x1="50" y1="57.0" x2="800" y2="57.0" stroke="#e2e8f0" stroke-width="0.5" /><text x="45" y="57.0" text-anchor="end" fill="#94a3b8" font-size="9" dy="3">80</text><line x1="50" y1="30.0" x2="800" y2="30.0" stroke="#e2e8f0" stroke-width="0.5" /><text x="45" y="30.0" text-anchor="end" fill="#94a3b8" font-size="9" dy="3">90</text>
+        <line x1="50.0" y1="30" x2="50.0" y2="165" stroke="#e2e8f0" stroke-width="0.5" /><text x="50.0" y="179" text-anchor="middle" fill="#94a3b8" font-size="9">0:00</text><line x1="108.3" y1="30" x2="108.3" y2="165" stroke="#e2e8f0" stroke-width="0.5" /><text x="108.3" y="179" text-anchor="middle" fill="#94a3b8" font-size="9">0:30</text><line x1="166.6" y1="30" x2="166.6" y2="165" stroke="#e2e8f0" stroke-width="0.5" /><text x="166.6" y="179" text-anchor="middle" fill="#94a3b8" font-size="9">1:00</text><line x1="224.9" y1="30" x2="224.9" y2="165" stroke="#e2e8f0" stroke-width="0.5" /><text x="224.9" y="179" text-anchor="middle" fill="#94a3b8" font-size="9">1:30</text><line x1="283.2" y1="30" x2="283.2" y2="165" stroke="#e2e8f0" stroke-width="0.5" /><text x="283.2" y="179" text-anchor="middle" fill="#94a3b8" font-size="9">2:00</text><line x1="341.5" y1="30" x2="341.5" y2="165" stroke="#e2e8f0" stroke-width="0.5" /><text x="341.5" y="179" text-anchor="middle" fill="#94a3b8" font-size="9">2:30</text><line x1="399.7" y1="30" x2="399.7" y2="165" stroke="#e2e8f0" stroke-width="0.5" /><text x="399.7" y="179" text-anchor="middle" fill="#94a3b8" font-size="9">3:00</text><line x1="458.0" y1="30" x2="458.0" y2="165" stroke="#e2e8f0" stroke-width="0.5" /><text x="458.0" y="179" text-anchor="middle" fill="#94a3b8" font-size="9">3:30</text><line x1="516.3" y1="30" x2="516.3" y2="165" stroke="#e2e8f0" stroke-width="0.5" /><text x="516.3" y="179" text-anchor="middle" fill="#94a3b8" font-size="9">4:00</text><line x1="574.6" y1="30" x2="574.6" y2="165" stroke="#e2e8f0" stroke-width="0.5" /><text x="574.6" y="179" text-anchor="middle" fill="#94a3b8" font-size="9">4:30</text><line x1="632.9" y1="30" x2="632.9" y2="165" stroke="#e2e8f0" stroke-width="0.5" /><text x="632.9" y="179" text-anchor="middle" fill="#94a3b8" font-size="9">5:00</text><line x1="691.2" y1="30" x2="691.2" y2="165" stroke="#e2e8f0" stroke-width="0.5" /><text x="691.2" y="179" text-anchor="middle" fill="#94a3b8" font-size="9">5:30</text><line x1="749.5" y1="30" x2="749.5" y2="165" stroke="#e2e8f0" stroke-width="0.5" /><text x="749.5" y="179" text-anchor="middle" fill="#94a3b8" font-size="9">6:00</text>
+        <!-- Eixos -->
+        <line x1="50" y1="30" x2="50" y2="165" stroke="#64748b" stroke-width="1" />
+        <line x1="50" y1="165" x2="800" y2="165" stroke="#64748b" stroke-width="1" />
+        <!-- Label Y -->
+        <text x="12" y="97.5" text-anchor="middle" fill="#64748b" font-size="10" transform="rotate(-90, 12, 97.5)">dB</text>
+        <!-- Regiões ROI e Pausa -->
+        <rect x="50" y="30" width="364.8" height="135.0" fill="rgba(0,0,0,0.10)" /><rect x="598.0" y="30" width="202.0" height="135.0" fill="rgba(0,0,0,0.10)" /><rect x="414.8" y="30" width="183.2" height="135.0" fill="rgba(59,130,246,0.06)" /><line x1="414.8" y1="30" x2="414.8" y2="165" stroke="#2563EB" stroke-width="3" stroke-dasharray="8,4" /><line x1="598.0" y1="30" x2="598.0" y2="165" stroke="#2563EB" stroke-width="3" stroke-dasharray="8,4" /><rect x="413.8" y="29.0" width="52" height="15" rx="3" fill="#2563EB" /><text x="439.8" y="40.0" text-anchor="middle" fill="#fff" font-size="9" font-weight="bold">▶ 3:07</text><rect x="547.0" y="29.0" width="52" height="15" rx="3" fill="#2563EB" /><text x="573.0" y="40.0" text-anchor="middle" fill="#fff" font-size="9" font-weight="bold">4:42 ◀</text><rect x="413.8" y="166" width="48" height="14" rx="2" fill="#2563EB" opacity="0.9" /><text x="437.8" y="177" text-anchor="middle" fill="#fff" font-size="8" font-weight="bold">ROI 3:07</text><rect x="551.0" y="166" width="48" height="14" rx="2" fill="#2563EB" opacity="0.9" /><text x="575.0" y="177" text-anchor="middle" fill="#fff" font-size="8" font-weight="bold">ROI 4:42</text><rect x="503.4" y="30" width="9.3" height="135.0" fill="rgba(239,68,68,0.08)" stroke="#EF4444" stroke-width="1" stroke-dasharray="4,4" /><line x1="503.4" y1="30" x2="511.4" y2="165" stroke="#EF4444" stroke-width="0.5" opacity="0.2" /><line x1="511.4" y1="30" x2="512.7" y2="165" stroke="#EF4444" stroke-width="0.5" opacity="0.2" /><rect x="486.0" y="33.0" width="44" height="13" rx="2" fill="#EF4444" opacity="0.85" /><text x="508.0" y="43.0" text-anchor="middle" fill="#fff" font-size="8" font-weight="bold">PAUSA</text>
+        <!-- Dados -->
+        <polyline points="63.8,143.6 65.7,142.0 67.7,138.5 69.6,119.6 71.6,133.6 73.5,125.2 73.7,125.5 75.5,126.5 77.4,128.3 79.3,79.2 81.3,67.5 83.2,67.5 85.2,114.6 87.1,97.0 89.1,99.5 91.0,105.1 92.9,112.5 94.9,107.7 96.8,109.0 98.8,136.2 100.7,100.3 102.7,77.9 104.6,75.1 106.5,75.1 108.5,113.3 110.4,110.2 112.4,87.8 114.3,101.6 116.3,121.4 118.2,104.4 120.1,111.2 122.1,108.2 124.0,103.1 126.0,103.1 127.9,132.6 129.9,107.2 131.8,107.2 133.7,99.5 135.7,97.5 137.6,97.5 139.6,107.2 141.5,115.8 143.5,120.4 145.4,110.7 147.3,93.4 149.3,93.4 151.2,119.4 153.2,111.2 155.1,97.8 157.1,85.3 159.0,85.3 160.9,114.6 162.9,64.2 164.8,64.2 166.8,126.0 168.7,129.3 170.7,139.8 172.6,141.3 174.5,99.0 176.5,101.3 178.4,114.0 180.4,116.8 182.3,116.8 184.3,140.3 186.2,139.5 188.1,131.6 190.1,86.6 192.0,86.6 194.0,94.4 195.9,76.6 197.9,76.1 199.8,54.0 201.7,102.1 203.7,93.7 205.6,98.5 207.6,79.9 209.5,98.8 211.5,44.3 213.4,44.3 215.3,84.5 217.3,95.2 219.2,105.9 221.2,105.9 223.1,106.7 225.1,106.4 227.0,106.4 229.0,108.7 230.9,109.5 232.8,110.2 234.8,71.8 236.7,71.8 238.7,113.3 240.6,95.5 242.6,95.5 244.5,114.0 246.4,115.8 248.4,105.9 250.3,105.9 252.3,114.3 254.2,116.6 256.2,116.6 258.1,123.0 260.0,118.6 262.0,107.9 263.9,117.6 265.9,118.9 267.8,118.9 269.8,120.7 271.7,124.5 273.6,123.2 275.6,120.7 277.5,120.7 279.5,125.2 281.4,122.2 283.4,122.2 285.3,109.7 287.2,101.6 289.2,113.5 291.1,131.4 293.1,135.2 295.0,128.8 297.0,117.9 298.9,126.5 300.8,146.1 302.8,126.8 304.7,131.1 306.7,131.9 308.6,148.4 310.6,151.2 312.5,153.8 314.4,122.7 316.4,88.6 318.3,115.6 320.3,124.2 322.2,124.7 324.2,123.0 326.1,121.7 328.0,121.7 330.0,115.1 331.9,126.3 333.9,81.5 335.8,81.5 337.8,128.3 339.7,135.9 341.6,124.2 343.6,134.2 345.5,131.9 347.5,123.7 349.4,116.6 351.4,121.2 353.3,121.4 355.2,118.9 357.2,103.4 359.1,103.4 361.1,111.8 363.0,111.8 365.0,98.0 366.9,112.0 368.8,111.0 370.8,111.5 372.7,91.6 374.7,81.2 376.6,83.8 378.6,82.7 380.5,86.0 382.4,98.3 384.4,98.3 386.3,96.2 388.3,85.3 390.2,85.3 392.2,98.5 394.1,84.3 396.0,102.8 398.0,101.8 399.9,72.6 401.9,72.6 403.8,98.5 405.8,69.8 407.7,69.8 409.7,41.3 411.6,41.3 413.5,73.8 415.5,73.8 417.4,94.4 419.4,101.8 421.3,101.1 423.3,103.6 425.2,104.6 427.1,105.4 429.1,92.7 431.0,92.7 433.0,108.2 434.9,108.2 436.9,109.0 438.8,111.2 440.7,112.0 442.7,111.0 444.6,113.5 446.6,97.5 448.5,113.5 450.5,114.6 452.4,118.9 454.3,118.9 456.3,114.3 458.2,118.9 460.2,117.1 462.1,122.2 464.1,125.2 466.0,124.0 467.9,122.2 469.9,122.2 471.8,127.0 473.8,126.0 475.7,127.5 477.7,129.1 479.6,121.7 481.5,119.6 483.5,131.9 485.4,131.6 487.4,124.5 489.3,112.5 491.3,108.2 493.2,122.4 495.1,125.5 497.1,136.7 499.0,149.2 501.0,118.9 502.9,116.6 504.9,124.2 506.8,124.0 508.7,85.3 510.7,85.3 512.6,134.2 514.6,120.9 516.5,106.4 518.5,121.4 520.4,118.4 522.3,111.0 524.3,111.0 526.2,109.0 528.2,82.0 530.1,105.6 532.1,112.8 534.0,127.3 535.9,133.9 537.9,132.6 539.8,129.1 541.8,109.5 543.7,109.5 545.7,116.1 547.6,108.4 549.5,99.8 551.5,99.8 553.4,86.6 555.4,86.6 557.3,84.8 559.3,95.0 561.2,96.0 563.1,98.5 565.1,98.3 567.0,80.4 569.0,88.3 570.9,84.0 572.9,84.0 574.8,101.8 576.7,84.8 578.7,85.0 580.6,83.2 582.6,93.4 584.5,105.9 586.5,84.8 588.4,93.9 590.3,92.7 592.3,96.5 594.2,71.0 596.2,81.0 598.1,73.8 600.1,65.4 602.0,89.1 604.0,68.2 605.9,68.2 607.8,86.6 609.8,89.6 611.7,128.3 613.7,125.2 615.6,67.0 617.6,67.0 619.5,85.8 621.4,119.1 623.4,123.5 625.3,119.9 627.3,119.9 629.2,124.0 631.2,123.5 633.1,123.7 635.0,97.5 637.0,97.5 638.9,106.4 640.9,121.7 642.8,123.7 644.8,116.6 646.7,123.2 648.6,124.0 650.6,112.5 652.5,118.9 654.5,126.5 656.4,126.8 658.4,129.8 660.3,126.3 662.2,106.9 664.2,106.9 666.1,105.4 668.1,102.1 670.0,98.8 672.0,109.7 673.9,111.0 675.8,126.8 677.8,95.7 679.7,95.7 681.7,122.4 683.6,126.5 685.6,129.6 687.5,128.8 689.4,129.8 691.4,105.6 693.3,102.8 695.3,102.8 697.2,117.4 699.2,83.5 701.1,67.0 703.0,92.4 705.0,79.2 706.9,91.4 708.9,91.4 710.8,121.7 712.8,131.6 714.7,109.5 716.6,100.0 718.6,124.0 720.5,121.7 722.5,122.2 724.4,122.7 726.4,117.9 728.3,96.7 730.2,82.5 732.2,82.5 734.1,85.3 736.1,42.3 738.0,74.1 740.0,76.1 741.9,83.2 743.8,85.8 745.8,85.8 747.7,89.9 749.7,129.6 751.6,82.0 753.6,81.7 755.5,81.7 757.4,58.0 759.4,57.8 761.3,106.2 763.3,66.4 765.2,66.4 767.2,119.1 769.1,115.3 771.0,101.3 773.0,88.3 774.9,63.1 776.9,128.3 778.8,96.5 780.8,101.1 782.7,101.1 784.7,114.3 786.6,123.5 788.5,137.2 790.5,110.5" fill="none" stroke="#EF4444" stroke-width="1.5" stroke-linejoin="round" />
+        <!-- Limiar (threshold) -->
+        
+            <line x1="50" y1="94.2" x2="800" y2="94.2" stroke="#F59E0B" stroke-width="2" stroke-dasharray="10,5" />
+            <rect x="695" y="78.19117647058823" width="100" height="16" rx="3" fill="rgba(245,158,11,0.15)" />
+            <text x="700" y="90.19117647058823" fill="#D97706" font-size="9" font-weight="bold">65 dB (limiar)</text>
+        
+        <!-- Marcadores de ocorrências -->
+        
+      </svg>
+      
+      <div style="display:flex; justify-content:flex-end; margin-top:8px;">
+        <div style="background:rgba(255,255,255,0.94); border:1px solid #e2e8f0; border-radius:4px; padding:6px 8px; display:grid; gap:4px; min-width:172px;">
+          <div style="display:flex; align-items:center; gap:8px; font-size:10px; color:#334155;">
+            <span style="display:inline-block; width:20px; height:0; border-top:2px solid #F97316;"></span>
+            <span>Ruído</span>
+          </div>
+          <div style="display:flex; align-items:center; gap:8px; font-size:10px; color:#334155;">
+            <span style="display:inline-block; width:20px; height:0; border-top:2px solid #EF4444;"></span>
+            <span>Ruído + Vibração</span>
+          </div>
+        </div>
+      </div>
+    
+    </div>
+            
+    <div class="chart-container">
+      <h3 class="chart-title">📳 Gráfico de Vibração — Deslocamento (µm)</h3>
+      <svg viewBox="0 0 820 220" width="100%" preserveAspectRatio="xMidYMid meet" style="background: #fff; border: 1px solid #e2e8f0; border-radius: 8px;">
+        <line x1="50" y1="185.0" x2="800" y2="185.0" stroke="#e2e8f0" stroke-width="0.5" /><text x="45" y="185.0" text-anchor="end" fill="#94a3b8" font-size="9" dy="3">-33.3</text><line x1="50" y1="154.0" x2="800" y2="154.0" stroke="#e2e8f0" stroke-width="0.5" /><text x="45" y="154.0" text-anchor="end" fill="#94a3b8" font-size="9" dy="3">-8.4</text><line x1="50" y1="123.0" x2="800" y2="123.0" stroke="#e2e8f0" stroke-width="0.5" /><text x="45" y="123.0" text-anchor="end" fill="#94a3b8" font-size="9" dy="3">16.5</text><line x1="50" y1="92.0" x2="800" y2="92.0" stroke="#e2e8f0" stroke-width="0.5" /><text x="45" y="92.0" text-anchor="end" fill="#94a3b8" font-size="9" dy="3">41.5</text><line x1="50" y1="61.0" x2="800" y2="61.0" stroke="#e2e8f0" stroke-width="0.5" /><text x="45" y="61.0" text-anchor="end" fill="#94a3b8" font-size="9" dy="3">66.4</text><line x1="50" y1="30.0" x2="800" y2="30.0" stroke="#e2e8f0" stroke-width="0.5" /><text x="45" y="30.0" text-anchor="end" fill="#94a3b8" font-size="9" dy="3">91.3</text>
+        <line x1="50.0" y1="30" x2="50.0" y2="185" stroke="#e2e8f0" stroke-width="0.5" /><text x="50.0" y="199" text-anchor="middle" fill="#94a3b8" font-size="9">0:00</text><line x1="108.3" y1="30" x2="108.3" y2="185" stroke="#e2e8f0" stroke-width="0.5" /><text x="108.3" y="199" text-anchor="middle" fill="#94a3b8" font-size="9">0:30</text><line x1="166.6" y1="30" x2="166.6" y2="185" stroke="#e2e8f0" stroke-width="0.5" /><text x="166.6" y="199" text-anchor="middle" fill="#94a3b8" font-size="9">1:00</text><line x1="224.9" y1="30" x2="224.9" y2="185" stroke="#e2e8f0" stroke-width="0.5" /><text x="224.9" y="199" text-anchor="middle" fill="#94a3b8" font-size="9">1:30</text><line x1="283.2" y1="30" x2="283.2" y2="185" stroke="#e2e8f0" stroke-width="0.5" /><text x="283.2" y="199" text-anchor="middle" fill="#94a3b8" font-size="9">2:00</text><line x1="341.5" y1="30" x2="341.5" y2="185" stroke="#e2e8f0" stroke-width="0.5" /><text x="341.5" y="199" text-anchor="middle" fill="#94a3b8" font-size="9">2:30</text><line x1="399.7" y1="30" x2="399.7" y2="185" stroke="#e2e8f0" stroke-width="0.5" /><text x="399.7" y="199" text-anchor="middle" fill="#94a3b8" font-size="9">3:00</text><line x1="458.0" y1="30" x2="458.0" y2="185" stroke="#e2e8f0" stroke-width="0.5" /><text x="458.0" y="199" text-anchor="middle" fill="#94a3b8" font-size="9">3:30</text><line x1="516.3" y1="30" x2="516.3" y2="185" stroke="#e2e8f0" stroke-width="0.5" /><text x="516.3" y="199" text-anchor="middle" fill="#94a3b8" font-size="9">4:00</text><line x1="574.6" y1="30" x2="574.6" y2="185" stroke="#e2e8f0" stroke-width="0.5" /><text x="574.6" y="199" text-anchor="middle" fill="#94a3b8" font-size="9">4:30</text><line x1="632.9" y1="30" x2="632.9" y2="185" stroke="#e2e8f0" stroke-width="0.5" /><text x="632.9" y="199" text-anchor="middle" fill="#94a3b8" font-size="9">5:00</text><line x1="691.2" y1="30" x2="691.2" y2="185" stroke="#e2e8f0" stroke-width="0.5" /><text x="691.2" y="199" text-anchor="middle" fill="#94a3b8" font-size="9">5:30</text><line x1="749.5" y1="30" x2="749.5" y2="185" stroke="#e2e8f0" stroke-width="0.5" /><text x="749.5" y="199" text-anchor="middle" fill="#94a3b8" font-size="9">6:00</text>
+        <line x1="50" y1="30" x2="50" y2="185" stroke="#64748b" stroke-width="1" />
+        <line x1="50" y1="185" x2="800" y2="185" stroke="#64748b" stroke-width="1" />
+        <text x="12" y="107.5" text-anchor="middle" fill="#64748b" font-size="10" transform="rotate(-90, 12, 107.5)">µm</text>
+        <!-- Regiões ROI e Pausa -->
+        <rect x="50" y="30" width="364.8" height="155.0" fill="rgba(0,0,0,0.10)" /><rect x="598.0" y="30" width="202.0" height="155.0" fill="rgba(0,0,0,0.10)" /><rect x="414.8" y="30" width="183.2" height="155.0" fill="rgba(59,130,246,0.06)" /><line x1="414.8" y1="30" x2="414.8" y2="185" stroke="#2563EB" stroke-width="3" stroke-dasharray="8,4" /><line x1="598.0" y1="30" x2="598.0" y2="185" stroke="#2563EB" stroke-width="3" stroke-dasharray="8,4" /><rect x="413.8" y="29.0" width="52" height="15" rx="3" fill="#2563EB" /><text x="439.8" y="40.0" text-anchor="middle" fill="#fff" font-size="9" font-weight="bold">▶ 3:07</text><rect x="547.0" y="29.0" width="52" height="15" rx="3" fill="#2563EB" /><text x="573.0" y="40.0" text-anchor="middle" fill="#fff" font-size="9" font-weight="bold">4:42 ◀</text><rect x="413.8" y="186" width="48" height="14" rx="2" fill="#2563EB" opacity="0.9" /><text x="437.8" y="197" text-anchor="middle" fill="#fff" font-size="8" font-weight="bold">ROI 3:07</text><rect x="551.0" y="186" width="48" height="14" rx="2" fill="#2563EB" opacity="0.9" /><text x="575.0" y="197" text-anchor="middle" fill="#fff" font-size="8" font-weight="bold">ROI 4:42</text><rect x="503.4" y="30" width="9.3" height="155.0" fill="rgba(239,68,68,0.08)" stroke="#EF4444" stroke-width="1" stroke-dasharray="4,4" /><line x1="503.4" y1="30" x2="511.4" y2="185" stroke="#EF4444" stroke-width="0.5" opacity="0.2" /><line x1="511.4" y1="30" x2="512.7" y2="185" stroke="#EF4444" stroke-width="0.5" opacity="0.2" /><rect x="486.0" y="33.0" width="44" height="13" rx="2" fill="#EF4444" opacity="0.85" /><text x="508.0" y="43.0" text-anchor="middle" fill="#fff" font-size="8" font-weight="bold">PAUSA</text>
+        <polyline points="60.8,143.6 62.2,143.6 63.4,143.6 64.4,143.6 65.8,143.6 67.0,143.6 68.2,143.6 69.5,143.6 70.5,142.3 71.9,142.3 73.1,139.8 74.1,139.8 75.5,139.8 76.7,142.3 77.9,142.3 79.3,141.1 80.3,142.3 81.6,142.3 83.0,143.6 84.1,143.6 85.3,142.3 86.4,141.1 87.7,141.1 89.0,143.6 90.1,143.6 91.4,143.6 92.8,143.6 93.8,143.6 95.0,143.6 96.1,143.6 97.5,143.6 98.8,143.6 99.9,143.6 101.2,143.6 102.5,143.6 103.6,143.6 104.9,143.6 106.2,143.6 107.3,143.6 108.6,143.6 109.7,143.6 111.0,143.6 112.3,143.6 113.4,143.6 114.7,143.6 115.9,143.6 117.0,143.6 118.5,143.6 119.5,143.6 120.8,143.6 122.1,143.6 123.1,143.6 124.4,143.6 125.7,143.6 126.8,143.6 128.2,143.6 129.3,143.6 130.5,143.6 131.8,143.6 132.9,143.6 134.3,143.6 135.6,143.6 136.8,143.6 138.0,143.6 139.2,143.6 140.3,143.6 141.5,143.6 142.7,143.6 144.0,143.6 145.3,143.6 146.5,143.6 147.8,143.6 149.1,143.6 150.2,143.6 151.3,143.6 152.5,143.6 153.8,143.6 155.0,143.6 156.2,143.6 157.4,143.6 158.8,143.6 159.9,143.6 161.1,143.6 162.3,143.6 163.6,143.6 164.8,143.6 165.9,143.6 167.3,143.6 168.5,143.6 169.7,143.6 171.1,143.6 172.2,143.6 173.3,143.6 174.6,143.6 175.7,143.6 177.0,143.6 178.3,143.6 179.4,143.6 180.8,143.6 182.0,143.6 183.1,143.6 184.4,143.6 185.5,143.6 186.8,143.6 188.1,143.6 189.2,143.6 190.5,143.6 191.8,143.6 192.8,143.6 194.1,143.6 195.3,143.6 196.6,143.6 197.8,143.6 199.0,143.6 200.3,143.6 201.5,143.6 202.6,143.6 203.9,143.6 205.3,143.6 206.2,143.6 207.6,132.4 208.8,132.4 210.0,133.6 211.4,138.6 212.5,138.6 213.7,139.8 215.0,139.8 216.1,139.8 217.4,139.8 218.5,139.8 219.8,138.6 221.1,138.6 222.3,133.6 223.5,134.9 224.9,134.9 226.0,124.9 227.2,132.4 228.3,132.4 229.7,139.8 231.0,138.6 232.0,138.6 233.4,138.6 234.7,132.4 235.8,139.8 237.0,139.8 238.3,139.8 239.4,137.4 240.7,137.4 241.8,138.6 243.2,137.4 244.5,137.4 245.5,137.4 246.9,137.4 248.1,138.6 249.1,136.1 250.5,136.1 251.6,138.6 252.9,137.4 254.2,137.4 255.2,138.6 256.6,139.8 257.8,139.8 258.9,139.8 260.3,139.8 261.4,139.8 262.6,139.8 263.9,139.8 265.1,139.8 266.4,139.8 267.6,139.8 268.7,136.1 270.0,136.1 271.3,139.8 272.4,139.8 273.7,139.8 274.8,139.8 276.2,139.8 277.4,139.8 278.5,139.8 279.7,139.8 281.2,141.1 282.3,139.8 283.5,139.8 284.6,138.6 286.0,137.4 287.2,137.4 288.3,138.6 289.5,138.6 290.9,139.8 292.0,136.1 293.2,136.1 294.4,141.1 295.8,141.1 297.0,141.1 298.1,142.3 299.4,142.3 300.6,142.3 301.8,143.6 303.1,143.6 304.3,143.6 305.5,143.6 306.7,143.6 307.9,143.6 309.1,143.6 310.4,143.6 311.6,143.6 312.9,143.6 314.2,143.6 315.3,143.6 316.6,143.6 317.7,143.6 318.9,143.6 320.2,143.6 321.3,142.3 322.6,142.3 323.9,142.3 325.0,142.3 326.3,139.8 327.4,139.8 328.6,139.8 330.0,136.1 331.1,139.8 332.4,139.8 333.8,138.6 334.7,138.6 336.1,141.1 337.4,138.6 338.5,138.6 339.7,138.6 340.8,139.8 342.1,139.8 343.5,138.6 344.5,138.6 345.8,138.6 347.2,139.8 348.2,139.8 349.7,134.9 350.6,137.4 352.0,137.4 353.2,138.6 354.3,138.6 355.6,137.4 357.0,136.1 358.0,136.1 359.3,137.4 360.4,134.9 361.8,134.9 363.0,137.4 364.0,137.4 365.4,133.6 366.7,138.6 367.8,138.6 369.1,136.1 370.2,137.4 371.5,137.4 372.8,137.4 373.8,137.4 375.2,136.1 376.4,138.6 377.6,138.6 378.9,137.4 380.2,138.6 381.3,138.6 382.6,138.6 383.7,138.6 384.9,136.1 386.2,137.4 387.3,137.4 388.6,136.1 390.0,131.1 391.1,131.1 392.4,134.9 393.4,134.9 394.6,137.4 395.9,136.1 397.1,136.1 398.4,136.1 399.8,137.4 400.8,137.4 402.0,134.9 403.2,134.9 404.5,131.1 405.7,133.6 406.9,133.6 408.3,143.6 409.5,141.1 410.5,141.1 411.9,142.3 413.2,143.6 414.3,143.6 415.5,142.3 416.7,142.3 418.1,138.6 419.2,127.4 420.3,127.4 421.7,131.1 422.9,131.1 424.1,136.1 425.3,128.6 426.5,136.1 427.9,128.6 429.0,122.4 430.1,122.4 431.4,133.6 432.7,133.6 433.8,132.4 435.1,139.8 436.2,139.8 437.5,139.8 438.8,137.4 440.0,137.4 441.1,139.8 442.5,139.8 443.6,141.1 444.9,141.1 446.2,137.4 447.3,139.8 448.6,137.4 449.7,139.8 450.9,136.1 452.3,136.1 453.3,137.4 454.6,139.8 456.0,139.8 457.1,137.4 458.4,137.4 459.5,137.4 460.7,138.6 462.0,138.6 463.1,138.6 464.5,139.8 465.9,139.8 466.8,138.6 468.2,139.8 469.6,139.8 470.6,141.1 471.8,141.1 473.0,136.1 474.3,139.8 475.6,139.8 476.6,139.8 477.9,139.8 479.3,139.8 480.4,138.6 481.6,138.6 482.7,141.1 484.1,139.8 485.4,139.8 486.4,138.6 487.8,139.8 489.1,139.8 490.2,138.6 491.6,137.4 492.6,137.4 493.9,137.4 495.1,141.1 496.1,137.4 497.5,141.1 498.8,141.1 499.9,142.3 501.3,142.3 502.3,142.3 503.6,143.6 504.9,143.6 506.0,142.3 507.3,143.6 508.5,143.6 509.6,143.6 511.0,142.3 512.3,143.6 513.5,143.6 514.7,143.6 515.7,142.3 517.0,139.8 518.3,139.8 519.4,139.8 520.8,139.8 522.1,138.6 523.2,136.1 524.4,136.1 525.5,138.6 526.9,139.8 528.0,139.8 529.2,139.8 530.5,139.8 531.8,138.6 532.9,139.8 534.1,139.8 535.3,138.6 536.6,139.8 537.8,139.8 539.0,138.6 540.4,138.6 541.6,134.9 542.7,136.1 544.0,136.1 545.1,141.1 546.4,137.4 547.6,137.4 548.7,138.6 550.2,138.6 551.4,134.9 552.5,138.6 553.7,138.6 555.0,136.1 556.2,133.6 557.5,133.6 558.6,133.6 559.9,138.6 561.2,138.6 562.3,137.4 563.5,137.4 564.8,136.1 566.0,136.1 567.2,136.1 568.3,138.6 569.6,138.6 570.9,136.1 572.1,138.6 573.3,138.6 574.6,136.1 575.7,136.1 577.0,137.4 578.3,136.1 579.3,136.1 580.7,137.4 581.8,132.4 583.0,132.4 584.4,134.9 585.4,134.9 586.7,138.6 588.1,136.1 589.1,136.1 590.5,137.4 591.6,136.1 592.8,136.1 594.1,136.1 595.2,136.1 596.6,134.9 597.8,133.6 598.8,133.6 600.2,138.6 601.4,141.1 602.6,141.1 603.9,142.3 605.0,142.3 606.4,143.6 607.6,143.6 608.6,143.6 609.9,143.6 611.1,143.6 612.4,143.6 613.8,143.6 614.8,143.6 616.1,143.6 617.4,143.6 618.4,143.6 619.7,143.6 620.8,143.6 622.2,143.6 623.5,143.6 624.5,143.6 625.9,143.6 627.2,143.6 628.3,143.6 629.5,143.6 630.8,143.6 632.0,143.6 633.3,143.6 634.3,143.6 635.7,143.6 637.0,143.6 638.1,143.6 639.3,143.6 640.6,143.6 641.7,143.6 643.1,143.6 644.1,143.6 645.4,143.6 646.7,143.6 647.8,143.6 649.2,143.6 650.3,143.6 651.4,143.6 652.9,143.6 653.9,143.6 655.1,143.6 656.5,143.6 657.5,143.6 658.9,143.6 660.0,143.6 661.2,143.6 662.6,143.6 663.8,143.6 664.9,143.6 666.3,143.6 667.3,143.6 668.7,143.6 669.9,143.6 671.0,143.6 672.4,143.6 673.6,143.6 674.7,143.6 676.0,143.6 677.1,143.6 678.4,143.6 679.8,143.6 680.9,143.6 682.1,143.6 683.5,143.6 684.6,143.6 685.7,143.6 686.9,143.6 688.2,143.6 689.5,143.6 690.6,143.6 691.9,143.6 693.2,143.6 694.3,143.6 695.5,143.6 696.9,143.6 698.0,143.6 699.3,143.6 700.3,143.6 701.7,143.6 703.0,141.1 704.1,143.6 705.4,139.8 706.7,139.8 707.7,139.8 709.1,138.6 710.5,138.6 711.4,134.9 712.8,134.9 713.9,139.8 715.2,142.3 716.4,142.3 717.5,143.6 718.9,143.6 720.2,143.6 721.2,143.6 722.5,142.3 723.7,143.6 724.9,143.6 726.2,143.6 727.3,143.6 728.7,143.6 729.9,143.6 731.0,138.6 732.4,138.6 733.4,128.6 734.7,136.1 736.1,136.1 737.2,137.4 738.5,138.6 739.8,138.6 740.8,141.1 742.1,141.1 743.2,138.6 744.5,129.9 745.8,129.9 746.9,129.9 748.3,138.6 749.6,138.6 750.6,136.1 751.9,136.1 752.9,139.8 754.3,142.3 755.6,142.3 756.6,139.8 758.0,138.6 759.3,138.6 760.4,138.6 761.6,138.6 762.9,138.6 764.0,139.8 765.3,139.8 766.4,143.6 767.8,143.6 769.0,143.6 770.1,143.6 771.4,143.6 772.7,143.6 773.7,143.6 775.1,143.6 776.2,143.6 777.5,142.3 778.9,142.3 779.9,143.6 781.2,143.6 782.5,143.6 783.6,141.1 784.9,141.1 786.0,142.3 787.3,142.3 788.5,142.3 789.7,139.8 791.0,139.8 792.4,141.1 793.4,143.6 795.4,143.6" fill="none" stroke="#06B6D4" stroke-width="1.3" stroke-linejoin="round" opacity="0.85" /><polyline points="60.8,142.3 62.2,142.3 63.4,142.3 64.4,142.3 65.8,142.3 67.0,142.3 68.2,142.3 69.5,142.3 70.5,141.1 71.9,141.1 73.1,139.8 74.1,139.8 75.5,137.4 76.7,139.8 77.9,139.8 79.3,133.6 80.3,139.8 81.6,139.8 83.0,142.3 84.1,142.3 85.3,136.1 86.4,138.6 87.7,138.6 89.0,142.3 90.1,143.6 91.4,143.6 92.8,143.6 93.8,143.6 95.0,143.6 96.1,143.6 97.5,143.6 98.8,143.6 99.9,143.6 101.2,143.6 102.5,143.6 103.6,143.6 104.9,143.6 106.2,143.6 107.3,143.6 108.6,143.6 109.7,143.6 111.0,143.6 112.3,143.6 113.4,143.6 114.7,143.6 115.9,143.6 117.0,143.6 118.5,143.6 119.5,143.6 120.8,143.6 122.1,143.6 123.1,143.6 124.4,143.6 125.7,143.6 126.8,143.6 128.2,143.6 129.3,143.6 130.5,143.6 131.8,143.6 132.9,143.6 134.3,143.6 135.6,143.6 136.8,143.6 138.0,143.6 139.2,143.6 140.3,143.6 141.5,143.6 142.7,143.6 144.0,143.6 145.3,143.6 146.5,143.6 147.8,143.6 149.1,143.6 150.2,143.6 151.3,143.6 152.5,143.6 153.8,143.6 155.0,143.6 156.2,143.6 157.4,143.6 158.8,143.6 159.9,143.6 161.1,143.6 162.3,143.6 163.6,143.6 164.8,143.6 165.9,143.6 167.3,143.6 168.5,143.6 169.7,143.6 171.1,143.6 172.2,143.6 173.3,143.6 174.6,143.6 175.7,143.6 177.0,143.6 178.3,143.6 179.4,143.6 180.8,143.6 182.0,143.6 183.1,143.6 184.4,143.6 185.5,143.6 186.8,143.6 188.1,143.6 189.2,143.6 190.5,143.6 191.8,143.6 192.8,143.6 194.1,143.6 195.3,143.6 196.6,143.6 197.8,143.6 199.0,143.6 200.3,143.6 201.5,143.6 202.6,143.6 203.9,142.3 205.3,142.3 206.2,143.6 207.6,131.1 208.8,131.1 210.0,132.4 211.4,136.1 212.5,136.1 213.7,137.4 215.0,137.4 216.1,137.4 217.4,142.3 218.5,142.3 219.8,129.9 221.1,129.9 222.3,134.9 223.5,137.4 224.9,137.4 226.0,136.1 227.2,134.9 228.3,134.9 229.7,136.1 231.0,133.6 232.0,133.6 233.4,133.6 234.7,137.4 235.8,138.6 237.0,139.8 238.3,139.8 239.4,138.6 240.7,138.6 241.8,139.8 243.2,128.6 244.5,128.6 245.5,128.6 246.9,133.6 248.1,137.4 249.1,133.6 250.5,133.6 251.6,133.6 252.9,137.4 254.2,137.4 255.2,136.1 256.6,138.6 257.8,138.6 258.9,137.4 260.3,137.4 261.4,137.4 262.6,137.4 263.9,136.1 265.1,139.8 266.4,134.9 267.6,134.9 268.7,139.8 270.0,139.8 271.3,137.4 272.4,138.6 273.7,138.6 274.8,136.1 276.2,136.1 277.4,136.1 278.5,134.9 279.7,134.9 281.2,137.4 282.3,137.4 283.5,137.4 284.6,138.6 286.0,133.6 287.2,133.6 288.3,137.4 289.5,137.4 290.9,138.6 292.0,138.6 293.2,138.6 294.4,142.3 295.8,142.3 297.0,142.3 298.1,143.6 299.4,143.6 300.6,142.3 301.8,142.3 303.1,142.3 304.3,142.3 305.5,142.3 306.7,142.3 307.9,143.6 309.1,143.6 310.4,142.3 311.6,143.6 312.9,143.6 314.2,143.6 315.3,143.6 316.6,143.6 317.7,143.6 318.9,143.6 320.2,142.3 321.3,143.6 322.6,143.6 323.9,142.3 325.0,142.3 326.3,139.8 327.4,138.6 328.6,138.6 330.0,138.6 331.1,136.1 332.4,136.1 333.8,138.6 334.7,138.6 336.1,137.4 337.4,137.4 338.5,137.4 339.7,133.6 340.8,134.9 342.1,134.9 343.5,137.4 344.5,137.4 345.8,136.1 347.2,136.1 348.2,136.1 349.7,136.1 350.6,136.1 352.0,136.1 353.2,139.8 354.3,139.8 355.6,138.6 357.0,136.1 358.0,136.1 359.3,137.4 360.4,137.4 361.8,137.4 363.0,133.6 364.0,133.6 365.4,137.4 366.7,134.9 367.8,134.9 369.1,136.1 370.2,134.9 371.5,134.9 372.8,134.9 373.8,134.9 375.2,136.1 376.4,137.4 377.6,137.4 378.9,136.1 380.2,136.1 381.3,136.1 382.6,138.6 383.7,138.6 384.9,129.9 386.2,137.4 387.3,137.4 388.6,136.1 390.0,132.4 391.1,132.4 392.4,134.9 393.4,134.9 394.6,136.1 395.9,136.1 397.1,136.1 398.4,133.6 399.8,137.4 400.8,137.4 402.0,136.1 403.2,136.1 404.5,122.4 405.7,128.6 406.9,128.6 408.3,142.3 409.5,141.1 410.5,141.1 411.9,142.3 413.2,141.1 414.3,141.1 415.5,143.6 416.7,143.6 418.1,123.7 419.2,126.2 420.3,126.2 421.7,132.4 422.9,132.4 424.1,134.9 425.3,133.6 426.5,134.9 427.9,133.6 429.0,137.4 430.1,137.4 431.4,134.9 432.7,134.9 433.8,137.4 435.1,133.6 436.2,133.6 437.5,133.6 438.8,139.8 440.0,139.8 441.1,139.8 442.5,139.8 443.6,139.8 444.9,139.8 446.2,139.8 447.3,133.6 448.6,128.6 449.7,133.6 450.9,133.6 452.3,133.6 453.3,133.6 454.6,137.4 456.0,137.4 457.1,134.9 458.4,137.4 459.5,137.4 460.7,137.4 462.0,137.4 463.1,138.6 464.5,137.4 465.9,137.4 466.8,138.6 468.2,137.4 469.6,137.4 470.6,139.8 471.8,139.8 473.0,138.6 474.3,137.4 475.6,137.4 476.6,139.8 477.9,136.1 479.3,136.1 480.4,134.9 481.6,134.9 482.7,138.6 484.1,136.1 485.4,136.1 486.4,137.4 487.8,138.6 489.1,138.6 490.2,133.6 491.6,137.4 492.6,137.4 493.9,137.4 495.1,138.6 496.1,139.8 497.5,139.8 498.8,139.8 499.9,142.3 501.3,142.3 502.3,142.3 503.6,142.3 504.9,142.3 506.0,142.3 507.3,142.3 508.5,142.3 509.6,142.3 511.0,143.6 512.3,142.3 513.5,142.3 514.7,142.3 515.7,142.3 517.0,141.1 518.3,141.1 519.4,139.8 520.8,139.8 522.1,139.8 523.2,138.6 524.4,138.6 525.5,137.4 526.9,137.4 528.0,137.4 529.2,137.4 530.5,137.4 531.8,134.9 532.9,134.9 534.1,134.9 535.3,136.1 536.6,137.4 537.8,137.4 539.0,134.9 540.4,134.9 541.6,136.1 542.7,137.4 544.0,137.4 545.1,138.6 546.4,137.4 547.6,137.4 548.7,137.4 550.2,137.4 551.4,134.9 552.5,137.4 553.7,137.4 555.0,134.9 556.2,136.1 557.5,136.1 558.6,136.1 559.9,136.1 561.2,134.9 562.3,136.1 563.5,136.1 564.8,131.1 566.0,137.4 567.2,137.4 568.3,137.4 569.6,137.4 570.9,138.6 572.1,134.9 573.3,134.9 574.6,137.4 575.7,137.4 577.0,133.6 578.3,131.1 579.3,131.1 580.7,137.4 581.8,134.9 583.0,134.9 584.4,133.6 585.4,133.6 586.7,138.6 588.1,136.1 589.1,136.1 590.5,132.4 591.6,134.9 592.8,134.9 594.1,134.9 595.2,134.9 596.6,134.9 597.8,124.9 598.8,124.9 600.2,137.4 601.4,141.1 602.6,141.1 603.9,141.1 605.0,141.1 606.4,143.6 607.6,143.6 608.6,143.6 609.9,143.6 611.1,143.6 612.4,143.6 613.8,143.6 614.8,143.6 616.1,143.6 617.4,143.6 618.4,143.6 619.7,143.6 620.8,143.6 622.2,143.6 623.5,143.6 624.5,143.6 625.9,143.6 627.2,143.6 628.3,143.6 629.5,143.6 630.8,143.6 632.0,143.6 633.3,143.6 634.3,143.6 635.7,143.6 637.0,143.6 638.1,143.6 639.3,143.6 640.6,143.6 641.7,143.6 643.1,143.6 644.1,143.6 645.4,143.6 646.7,143.6 647.8,143.6 649.2,143.6 650.3,143.6 651.4,143.6 652.9,143.6 653.9,143.6 655.1,143.6 656.5,143.6 657.5,143.6 658.9,143.6 660.0,143.6 661.2,143.6 662.6,143.6 663.8,143.6 664.9,143.6 666.3,143.6 667.3,143.6 668.7,143.6 669.9,143.6 671.0,143.6 672.4,143.6 673.6,143.6 674.7,143.6 676.0,143.6 677.1,143.6 678.4,143.6 679.8,143.6 680.9,143.6 682.1,143.6 683.5,143.6 684.6,143.6 685.7,143.6 686.9,143.6 688.2,143.6 689.5,143.6 690.6,143.6 691.9,143.6 693.2,143.6 694.3,143.6 695.5,143.6 696.9,143.6 698.0,143.6 699.3,143.6 700.3,143.6 701.7,143.6 703.0,137.4 704.1,143.6 705.4,139.8 706.7,139.8 707.7,139.8 709.1,132.4 710.5,132.4 711.4,133.6 712.8,133.6 713.9,138.6 715.2,136.1 716.4,136.1 717.5,142.3 718.9,141.1 720.2,141.1 721.2,141.1 722.5,138.6 723.7,143.6 724.9,143.6 726.2,143.6 727.3,143.6 728.7,143.6 729.9,143.6 731.0,134.9 732.4,134.9 733.4,127.4 734.7,129.9 736.1,129.9 737.2,133.6 738.5,136.1 739.8,136.1 740.8,141.1 742.1,141.1 743.2,124.9 744.5,128.6 745.8,128.6 746.9,133.6 748.3,134.9 749.6,134.9 750.6,133.6 751.9,133.6 752.9,139.8 754.3,142.3 755.6,142.3 756.6,137.4 758.0,139.8 759.3,139.8 760.4,137.4 761.6,137.4 762.9,136.1 764.0,141.1 765.3,141.1 766.4,143.6 767.8,143.6 769.0,143.6 770.1,143.6 771.4,143.6 772.7,143.6 773.7,143.6 775.1,143.6 776.2,143.6 777.5,131.1 778.9,131.1 779.9,143.6 781.2,143.6 782.5,143.6 783.6,141.1 784.9,141.1 786.0,137.4 787.3,134.9 788.5,134.9 789.7,138.6 791.0,138.6 792.4,139.8 793.4,142.3 795.4,142.3" fill="none" stroke="#10B981" stroke-width="1.3" stroke-linejoin="round" opacity="0.85" /><polyline points="60.8,143.6 62.2,143.6 63.4,143.6 64.4,143.6 65.8,143.6 67.0,142.3 68.2,142.3 69.5,143.6 70.5,142.3 71.9,142.3 73.1,142.3 74.1,142.3 75.5,138.6 76.7,126.2 77.9,126.2 79.3,126.2 80.3,143.6 81.6,143.6 83.0,143.6 84.1,143.6 85.3,137.4 86.4,138.6 87.7,138.6 89.0,143.6 90.1,143.6 91.4,143.6 92.8,143.6 93.8,143.6 95.0,143.6 96.1,143.6 97.5,143.6 98.8,143.6 99.9,143.6 101.2,143.6 102.5,143.6 103.6,143.6 104.9,143.6 106.2,143.6 107.3,143.6 108.6,143.6 109.7,143.6 111.0,143.6 112.3,143.6 113.4,143.6 114.7,143.6 115.9,143.6 117.0,143.6 118.5,143.6 119.5,143.6 120.8,143.6 122.1,143.6 123.1,143.6 124.4,143.6 125.7,143.6 126.8,143.6 128.2,143.6 129.3,143.6 130.5,143.6 131.8,143.6 132.9,143.6 134.3,143.6 135.6,143.6 136.8,143.6 138.0,143.6 139.2,143.6 140.3,143.6 141.5,143.6 142.7,143.6 144.0,143.6 145.3,143.6 146.5,143.6 147.8,143.6 149.1,143.6 150.2,143.6 151.3,143.6 152.5,143.6 153.8,143.6 155.0,143.6 156.2,143.6 157.4,143.6 158.8,143.6 159.9,143.6 161.1,143.6 162.3,143.6 163.6,143.6 164.8,143.6 165.9,143.6 167.3,143.6 168.5,143.6 169.7,143.6 171.1,143.6 172.2,143.6 173.3,143.6 174.6,143.6 175.7,143.6 177.0,143.6 178.3,143.6 179.4,143.6 180.8,143.6 182.0,143.6 183.1,143.6 184.4,143.6 185.5,143.6 186.8,143.6 188.1,143.6 189.2,143.6 190.5,143.6 191.8,143.6 192.8,143.6 194.1,143.6 195.3,143.6 196.6,143.6 197.8,143.6 199.0,143.6 200.3,143.6 201.5,143.6 202.6,143.6 203.9,143.6 205.3,143.6 206.2,143.6 207.6,131.1 208.8,131.1 210.0,133.6 211.4,139.8 212.5,139.8 213.7,142.3 215.0,142.3 216.1,142.3 217.4,136.1 218.5,136.1 219.8,60.2 221.1,60.2 222.3,132.4 223.5,136.1 224.9,136.1 226.0,136.1 227.2,136.1 228.3,136.1 229.7,136.1 231.0,138.6 232.0,138.6 233.4,138.6 234.7,136.1 235.8,134.9 237.0,137.4 238.3,137.4 239.4,141.1 240.7,141.1 241.8,136.1 243.2,133.6 244.5,133.6 245.5,133.6 246.9,133.6 248.1,134.9 249.1,132.4 250.5,132.4 251.6,138.6 252.9,134.9 254.2,134.9 255.2,137.4 256.6,134.9 257.8,134.9 258.9,136.1 260.3,136.1 261.4,132.4 262.6,132.4 263.9,133.6 265.1,137.4 266.4,137.4 267.6,137.4 268.7,137.4 270.0,137.4 271.3,138.6 272.4,137.4 273.7,137.4 274.8,136.1 276.2,136.1 277.4,136.1 278.5,137.4 279.7,137.4 281.2,137.4 282.3,136.1 283.5,136.1 284.6,134.9 286.0,137.4 287.2,137.4 288.3,137.4 289.5,137.4 290.9,137.4 292.0,134.9 293.2,134.9 294.4,129.9 295.8,131.1 297.0,131.1 298.1,136.1 299.4,136.1 300.6,126.2 301.8,143.6 303.1,143.6 304.3,143.6 305.5,143.6 306.7,143.6 307.9,143.6 309.1,143.6 310.4,143.6 311.6,143.6 312.9,143.6 314.2,143.6 315.3,143.6 316.6,143.6 317.7,143.6 318.9,143.6 320.2,138.6 321.3,132.4 322.6,132.4 323.9,126.2 325.0,126.2 326.3,137.4 327.4,138.6 328.6,138.6 330.0,136.1 331.1,133.6 332.4,133.6 333.8,137.4 334.7,137.4 336.1,136.1 337.4,132.4 338.5,132.4 339.7,138.6 340.8,136.1 342.1,136.1 343.5,134.9 344.5,134.9 345.8,128.6 347.2,129.9 348.2,129.9 349.7,131.1 350.6,136.1 352.0,136.1 353.2,138.6 354.3,138.6 355.6,132.4 357.0,132.4 358.0,132.4 359.3,134.9 360.4,136.1 361.8,136.1 363.0,134.9 364.0,134.9 365.4,133.6 366.7,134.9 367.8,134.9 369.1,133.6 370.2,124.9 371.5,124.9 372.8,131.1 373.8,131.1 375.2,134.9 376.4,137.4 377.6,137.4 378.9,133.6 380.2,134.9 381.3,134.9 382.6,136.1 383.7,136.1 384.9,136.1 386.2,138.6 387.3,138.6 388.6,137.4 390.0,134.9 391.1,134.9 392.4,136.1 393.4,136.1 394.6,137.4 395.9,137.4 397.1,137.4 398.4,136.1 399.8,134.9 400.8,134.9 402.0,129.9 403.2,129.9 404.5,62.7 405.7,115.0 406.9,115.0 408.3,134.9 409.5,119.9 410.5,119.9 411.9,141.1 413.2,142.3 414.3,142.3 415.5,136.1 416.7,136.1 418.1,41.6 419.2,111.2 420.3,111.2 421.7,136.1 422.9,136.1 424.1,137.4 425.3,138.6 426.5,137.4 427.9,138.6 429.0,138.6 430.1,138.6 431.4,137.4 432.7,137.4 433.8,137.4 435.1,137.4 436.2,137.4 437.5,137.4 438.8,138.6 440.0,138.6 441.1,136.1 442.5,136.1 443.6,138.6 444.9,138.6 446.2,138.6 447.3,137.4 448.6,133.6 449.7,137.4 450.9,133.6 452.3,133.6 453.3,132.4 454.6,137.4 456.0,137.4 457.1,134.9 458.4,136.1 459.5,136.1 460.7,132.4 462.0,132.4 463.1,132.4 464.5,136.1 465.9,136.1 466.8,133.6 468.2,133.6 469.6,133.6 470.6,137.4 471.8,137.4 473.0,138.6 474.3,136.1 475.6,136.1 476.6,136.1 477.9,136.1 479.3,136.1 480.4,134.9 481.6,134.9 482.7,136.1 484.1,136.1 485.4,136.1 486.4,137.4 487.8,134.9 489.1,134.9 490.2,134.9 491.6,134.9 492.6,134.9 493.9,134.9 495.1,137.4 496.1,134.9 497.5,133.6 498.8,133.6 499.9,132.4 501.3,132.4 502.3,136.1 503.6,127.4 504.9,127.4 506.0,137.4 507.3,143.6 508.5,143.6 509.6,143.6 511.0,143.6 512.3,143.6 513.5,137.4 514.7,137.4 515.7,126.2 517.0,132.4 518.3,132.4 519.4,137.4 520.8,137.4 522.1,138.6 523.2,132.4 524.4,132.4 525.5,134.9 526.9,137.4 528.0,137.4 529.2,131.1 530.5,131.1 531.8,133.6 532.9,138.6 534.1,138.6 535.3,134.9 536.6,129.9 537.8,129.9 539.0,131.1 540.4,131.1 541.6,129.9 542.7,132.4 544.0,132.4 545.1,136.1 546.4,133.6 547.6,133.6 548.7,133.6 550.2,133.6 551.4,131.1 552.5,133.6 553.7,133.6 555.0,133.6 556.2,134.9 557.5,134.9 558.6,134.9 559.9,134.9 561.2,134.9 562.3,126.2 563.5,126.2 564.8,126.2 566.0,134.9 567.2,134.9 568.3,138.6 569.6,138.6 570.9,134.9 572.1,133.6 573.3,133.6 574.6,134.9 575.7,134.9 577.0,136.1 578.3,134.9 579.3,134.9 580.7,137.4 581.8,138.6 583.0,138.6 584.4,133.6 585.4,133.6 586.7,138.6 588.1,136.1 589.1,136.1 590.5,137.4 591.6,134.9 592.8,134.9 594.1,136.1 595.2,136.1 596.6,93.8 597.8,55.3 598.8,55.3 600.2,136.1 601.4,119.9 602.6,119.9 603.9,118.7 605.0,118.7 606.4,143.6 607.6,143.6 608.6,143.6 609.9,143.6 611.1,143.6 612.4,143.6 613.8,143.6 614.8,143.6 616.1,143.6 617.4,143.6 618.4,143.6 619.7,143.6 620.8,143.6 622.2,143.6 623.5,143.6 624.5,143.6 625.9,143.6 627.2,143.6 628.3,143.6 629.5,143.6 630.8,143.6 632.0,143.6 633.3,143.6 634.3,143.6 635.7,143.6 637.0,143.6 638.1,143.6 639.3,143.6 640.6,143.6 641.7,143.6 643.1,143.6 644.1,143.6 645.4,143.6 646.7,143.6 647.8,143.6 649.2,143.6 650.3,143.6 651.4,143.6 652.9,143.6 653.9,143.6 655.1,143.6 656.5,143.6 657.5,143.6 658.9,143.6 660.0,143.6 661.2,143.6 662.6,143.6 663.8,143.6 664.9,143.6 666.3,143.6 667.3,143.6 668.7,143.6 669.9,143.6 671.0,143.6 672.4,143.6 673.6,143.6 674.7,143.6 676.0,143.6 677.1,143.6 678.4,143.6 679.8,143.6 680.9,143.6 682.1,143.6 683.5,143.6 684.6,143.6 685.7,143.6 686.9,143.6 688.2,143.6 689.5,143.6 690.6,143.6 691.9,143.6 693.2,143.6 694.3,143.6 695.5,143.6 696.9,143.6 698.0,143.6 699.3,143.6 700.3,143.6 701.7,143.6 703.0,142.3 704.1,143.6 705.4,141.1 706.7,141.1 707.7,141.1 709.1,128.6 710.5,128.6 711.4,136.1 712.8,136.1 713.9,132.4 715.2,132.4 716.4,132.4 717.5,143.6 718.9,143.6 720.2,143.6 721.2,143.6 722.5,136.1 723.7,143.6 724.9,143.6 726.2,143.6 727.3,143.6 728.7,143.6 729.9,143.6 731.0,139.8 732.4,139.8 733.4,127.4 734.7,134.9 736.1,134.9 737.2,139.8 738.5,142.3 739.8,142.3 740.8,132.4 742.1,132.4 743.2,40.3 744.5,112.5 745.8,112.5 746.9,136.1 748.3,127.4 749.6,127.4 750.6,91.3 751.9,91.3 752.9,124.9 754.3,118.7 755.6,118.7 756.6,117.5 758.0,139.8 759.3,139.8 760.4,134.9 761.6,134.9 762.9,134.9 764.0,143.6 765.3,143.6 766.4,143.6 767.8,143.6 769.0,143.6 770.1,143.6 771.4,143.6 772.7,143.6 773.7,143.6 775.1,143.6 776.2,143.6 777.5,134.9 778.9,134.9 779.9,143.6 781.2,143.6 782.5,143.6 783.6,143.6 784.9,143.6 786.0,142.3 787.3,142.3 788.5,142.3 789.7,137.4 791.0,137.4 792.4,142.3 793.4,143.6 795.4,143.6" fill="none" stroke="#8B5CF6" stroke-width="1.3" stroke-linejoin="round" opacity="0.85" />
+        <!-- Limiar (threshold) -->
+        
+            <line x1="50" y1="112.5" x2="800" y2="112.5" stroke="#F59E0B" stroke-width="2" stroke-dasharray="10,5" />
+            <rect x="695" y="96.47592295345105" width="100" height="16" rx="3" fill="rgba(245,158,11,0.15)" />
+            <text x="700" y="108.47592295345105" fill="#D97706" font-size="9" font-weight="bold">25 µm (limiar)</text>
+        
+        
+            <line x1="50" y1="174.7" x2="800" y2="174.7" stroke="#F59E0B" stroke-width="2" stroke-dasharray="10,5" opacity="0.5" />
+        
+        
+      </svg>
+      
+      <div style="display:flex; justify-content:flex-end; margin-top:8px;">
+        <div style="background:rgba(255,255,255,0.94); border:1px solid #e2e8f0; border-radius:4px; padding:6px 8px; display:grid; gap:6px; min-width:190px;">
+          
+      <div style="display:flex; align-items:center; gap:8px; font-size:10px; color:#334155;">
+        <span style="display:inline-block; width:20px; height:0; border-top:2px solid #06B6D4;"></span>
+        <span>Eixo X (µm)</span>
+      </div>
+      <div style="display:flex; align-items:center; gap:8px; font-size:10px; color:#334155;">
+        <span style="display:inline-block; width:20px; height:0; border-top:2px solid #10B981;"></span>
+        <span>Eixo Y (µm)</span>
+      </div>
+      <div style="display:flex; align-items:center; gap:8px; font-size:10px; color:#334155;">
+        <span style="display:inline-block; width:20px; height:0; border-top:2px solid #8B5CF6;"></span>
+        <span>Eixo Z (µm)</span>
+      </div>
+    
+          <div style="height:1px; background:#e2e8f0;"></div>
+          
+      <div style="display:flex; align-items:center; gap:8px; font-size:10px; color:#334155;">
+        <span style="display:inline-block; width:20px; height:0; border-top:2px solid #8B5CF6;"></span>
+        <span>Vibração</span>
+      </div>
+      <div style="display:flex; align-items:center; gap:8px; font-size:10px; color:#334155;">
+        <span style="display:inline-block; width:20px; height:0; border-top:2px solid #EF4444;"></span>
+        <span>Ruído + Vibração</span>
+      </div>
+    
+        </div>
+      </div>
+    
+    </div>
+            
+            
+            
+    <div class="chart-container">
+      <h3 class="chart-title">⏳ Gráfico Temporal de Ocorrências Preliminares</h3>
+      <svg viewBox="0 0 820 150" width="100%" preserveAspectRatio="xMidYMid meet" style="background: #fff; border: 1px solid #e2e8f0; border-radius: 8px;">
+        <line x1="50.0" y1="24" x2="50.0" y2="115" stroke="#e2e8f0" stroke-width="0.5" /><text x="50.0" y="129" text-anchor="middle" fill="#94a3b8" font-size="9">0:00</text><line x1="108.3" y1="24" x2="108.3" y2="115" stroke="#e2e8f0" stroke-width="0.5" /><text x="108.3" y="129" text-anchor="middle" fill="#94a3b8" font-size="9">0:30</text><line x1="166.6" y1="24" x2="166.6" y2="115" stroke="#e2e8f0" stroke-width="0.5" /><text x="166.6" y="129" text-anchor="middle" fill="#94a3b8" font-size="9">1:00</text><line x1="224.9" y1="24" x2="224.9" y2="115" stroke="#e2e8f0" stroke-width="0.5" /><text x="224.9" y="129" text-anchor="middle" fill="#94a3b8" font-size="9">1:30</text><line x1="283.2" y1="24" x2="283.2" y2="115" stroke="#e2e8f0" stroke-width="0.5" /><text x="283.2" y="129" text-anchor="middle" fill="#94a3b8" font-size="9">2:00</text><line x1="341.5" y1="24" x2="341.5" y2="115" stroke="#e2e8f0" stroke-width="0.5" /><text x="341.5" y="129" text-anchor="middle" fill="#94a3b8" font-size="9">2:30</text><line x1="399.7" y1="24" x2="399.7" y2="115" stroke="#e2e8f0" stroke-width="0.5" /><text x="399.7" y="129" text-anchor="middle" fill="#94a3b8" font-size="9">3:00</text><line x1="458.0" y1="24" x2="458.0" y2="115" stroke="#e2e8f0" stroke-width="0.5" /><text x="458.0" y="129" text-anchor="middle" fill="#94a3b8" font-size="9">3:30</text><line x1="516.3" y1="24" x2="516.3" y2="115" stroke="#e2e8f0" stroke-width="0.5" /><text x="516.3" y="129" text-anchor="middle" fill="#94a3b8" font-size="9">4:00</text><line x1="574.6" y1="24" x2="574.6" y2="115" stroke="#e2e8f0" stroke-width="0.5" /><text x="574.6" y="129" text-anchor="middle" fill="#94a3b8" font-size="9">4:30</text><line x1="632.9" y1="24" x2="632.9" y2="115" stroke="#e2e8f0" stroke-width="0.5" /><text x="632.9" y="129" text-anchor="middle" fill="#94a3b8" font-size="9">5:00</text><line x1="691.2" y1="24" x2="691.2" y2="115" stroke="#e2e8f0" stroke-width="0.5" /><text x="691.2" y="129" text-anchor="middle" fill="#94a3b8" font-size="9">5:30</text><line x1="749.5" y1="24" x2="749.5" y2="115" stroke="#e2e8f0" stroke-width="0.5" /><text x="749.5" y="129" text-anchor="middle" fill="#94a3b8" font-size="9">6:00</text>
+        <line x1="50" y1="69.5" x2="800" y2="69.5" stroke="#64748b" stroke-width="1" />
+        <line x1="50" y1="24" x2="50" y2="115" stroke="#64748b" stroke-width="1" />
+        <rect x="50" y="24" width="364.8" height="91.0" fill="rgba(0,0,0,0.10)" /><rect x="598.0" y="24" width="202.0" height="91.0" fill="rgba(0,0,0,0.10)" /><rect x="414.8" y="24" width="183.2" height="91.0" fill="rgba(59,130,246,0.06)" /><line x1="414.8" y1="24" x2="414.8" y2="115" stroke="#2563EB" stroke-width="3" stroke-dasharray="8,4" /><line x1="598.0" y1="24" x2="598.0" y2="115" stroke="#2563EB" stroke-width="3" stroke-dasharray="8,4" /><rect x="413.8" y="23.0" width="52" height="15" rx="3" fill="#2563EB" /><text x="439.8" y="34.0" text-anchor="middle" fill="#fff" font-size="9" font-weight="bold">▶ 3:07</text><rect x="547.0" y="23.0" width="52" height="15" rx="3" fill="#2563EB" /><text x="573.0" y="34.0" text-anchor="middle" fill="#fff" font-size="9" font-weight="bold">4:42 ◀</text><rect x="413.8" y="116" width="48" height="14" rx="2" fill="#2563EB" opacity="0.9" /><text x="437.8" y="127" text-anchor="middle" fill="#fff" font-size="8" font-weight="bold">ROI 3:07</text><rect x="551.0" y="116" width="48" height="14" rx="2" fill="#2563EB" opacity="0.9" /><text x="575.0" y="127" text-anchor="middle" fill="#fff" font-size="8" font-weight="bold">ROI 4:42</text><rect x="503.4" y="24" width="9.3" height="91.0" fill="rgba(239,68,68,0.08)" stroke="#EF4444" stroke-width="1" stroke-dasharray="4,4" /><line x1="503.4" y1="24" x2="511.4" y2="115" stroke="#EF4444" stroke-width="0.5" opacity="0.2" /><line x1="511.4" y1="24" x2="512.7" y2="115" stroke="#EF4444" stroke-width="0.5" opacity="0.2" /><rect x="486.0" y="27.0" width="44" height="13" rx="2" fill="#EF4444" opacity="0.85" /><text x="508.0" y="37.0" text-anchor="middle" fill="#fff" font-size="8" font-weight="bold">PAUSA</text>
+        <line x1="551.3" y1="24" x2="551.3" y2="115" stroke="#F97316" stroke-width="1.2" stroke-dasharray="3,3" opacity="0.55" /><line x1="551.3" y1="69.5" x2="551.3" y2="69.5" stroke="#F97316" stroke-width="1" opacity="0.85" /><g onclick="openYouTubePlayer('https://www.youtube.com/embed/t_gadgUt59U?start=258&autoplay=1&controls=1&rel=0', 'Reproduzindo a partir do momento da ocorrência')" style="cursor:pointer;" class="marker-clickable"><circle cx="551.3" cy="69.5" r="9" fill="#F97316" stroke="#fff" stroke-width="1.5" /><text x="551.3" y="72.5" text-anchor="middle" fill="#fff" font-size="9" font-weight="bold">1</text><title>Clique para reproduzir no YouTube</title></g>
+      </svg>
+      
+      <div style="display:flex; justify-content:flex-end; margin-top:8px;">
+        <div style="background:rgba(255,255,255,0.94); border:1px solid #e2e8f0; border-radius:4px; padding:6px 8px; display:grid; gap:4px; min-width:170px;">
+          
+            <div style="display:flex; align-items:center; gap:8px; font-size:10px; color:#334155;">
+              <span style="display:inline-block; width:20px; height:0; border-top:2px solid #F97316;"></span>
+              <span>Ruído</span>
+            </div>
+          
+            <div style="display:flex; align-items:center; gap:8px; font-size:10px; color:#334155;">
+              <span style="display:inline-block; width:20px; height:0; border-top:2px solid #EF4444;"></span>
+              <span>Ruído + Vibração</span>
+            </div>
+          
+            <div style="display:flex; align-items:center; gap:8px; font-size:10px; color:#334155;">
+              <span style="display:inline-block; width:20px; height:0; border-top:2px solid #8B5CF6;"></span>
+              <span>Vibração</span>
+            </div>
+          
+            <div style="display:flex; align-items:center; gap:8px; font-size:10px; color:#334155;">
+              <span style="display:inline-block; width:20px; height:0; border-top:2px solid #3B82F6;"></span>
+              <span>Visual</span>
+            </div>
+          
+            <div style="display:flex; align-items:center; gap:8px; font-size:10px; color:#334155;">
+              <span style="display:inline-block; width:20px; height:0; border-top:2px solid #6B7280;"></span>
+              <span>Outro</span>
+            </div>
+          
+        </div>
+      </div>
+    
+    </div>
+            
+    <div class="marker-legend">
+      <h4 class="marker-legend-title">🔢 Legenda dos Marcadores nos Gráficos</h4>
+      
+        <div class="marker-legend-item">
+          <span class="marker-num">1</span>
+          <span class="marker-desc">
+            4:18 — [Auto] Ruído acima do limiar em 4:18 — 68.0 dB | pico pontua...
+            <span style="color: #94a3b8; font-size: 10px;">(Ruído)</span>
+          </span>
+        </div>
+    </div>
+          </div>
+
+          <h3 class="section">Ocorrências (Ativas)</h3>
+          
+      <div class="occ" style="border-left: 4px solid #f59e0b">
+        <div class="occ-h">
+          <div class="occ-n">
+            <span style="font-size:18px;">🔊</span>
+            <strong>#1</strong>
+            <span style="display:inline-flex;align-items:center;gap:4px;padding:2px 8px;border-radius:999px;font-size:11px;font-weight:700;background:#fef3c7;color:#92400e;border:1px solid #f59e0b">🔍 Preliminar</span>
+            <span style="display:inline-flex;align-items:center;gap:4px;padding:2px 8px;border-radius:999px;font-size:11px;font-weight:700;background:#eff6ff;color:#1e40af;border:1px solid #3b82f6">Baixa</span>
+          </div>
+          <div class="occ-t">🕐 <a href="#" onclick="openYouTubePlayer('https://www.youtube.com/embed/t_gadgUt59U?start=258&autoplay=1&controls=1&rel=0', 'Reproduzindo a partir do momento da ocorrência'); return false;" class="yt-time-link" title="Reproduzir momento no YouTube (nova janela)">4:18 🔗</a></div>
+        </div>
+        <div class="occ-b">
+          <div class="field">
+            <div class="k">Descrição Preliminar</div>
+            <div class="v">[Auto] Ruído acima do limiar em 4:18 — 68.0 dB | pico pontual na descida | ~7º andar - Passagem contrapeso</div>
+          </div>
+
+          
+
+          
+
+          
+
+          <div class="meta">
+            <span>Ruído</span>
+            <span>•</span>
+            <span>Mecânico</span>
+            
+              <span>•</span>
+              <span>Ruído: 68.0 dB</span>
+              <span>VibX: 7.0 µm</span>
+              <span>VibY: 7.0 µm</span>
+              
+            
+          </div>
+
+          
+        </div>
+      </div>
+
+          <h3 class="section" style="color:#64748b;">Ocorrências Descartadas</h3>
+          <p class="muted">Sem descartadas.</p>
+        </div>
+      </div>
+      <div class="elevator">
+        <h2 class="elevator-title">A Social</h2>
+        
+        <div class="session">
+          <div class="session-h">
+            <div class="session-t">08/03/2026 09:32:00</div>
+            <div class="session-m">ID D7961CA0 • ROI 1:56→3:39 • Duração 1:42 • Sensores: Ruído 388 pts, Vibração 9666 pts</div>
+          </div>
+
+          
+  <div class="yt-embed-section no-print">
+    <div class="yt-embed-wrapper">
+      <div id="yt-ep-1"></div>
+      <div class="occ-video-overlay" id="yt-ep-1-overlay"></div>
+    </div>
+    <div style="display:flex;align-items:center;padding:4px 0 2px 0;">
+      <button id="yt-ep-1-capbtn" class="yt-capture-btn" onclick="captureYouTubeFrame('yt-ep-1')">
+        📸 Capturar Frame
+      </button>
+    </div>
+    <div style="display:flex;align-items:center;gap:12px;padding:10px 14px;background:#fff;border:1px solid #e2e8f0;border-radius:10px;">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAFh0lEQVR4Aeya287bOAyE8/X933m3vMivIW1TViwrbssCQkgNT5qB2UWxv/6rP49i4Ner/jyKgRLkUXK8XiXI0wUBXnD/6fEAbYYYCw2Dz+1YN/rweW04n6t96wtRNh5glyAPEEFHKEGUjQfYXUF+/0f6a8bpvRX8ztWe4LFeLcW1jtmKwVhdy59xdIZodwWJCeXfy8A9gtw7819dvQR5mLzDgoDfu3Dsj7w17mZodSM24mczxDpZbMSgzQe5HXMzf1iQrFhh1xkoQa5zOLXCYwXRdQJ+JUQGoOERi77WjdgT/McK8gRyvjFDCfIN1pOeJUhCzjegxwgC7e8B8LbufbNHiAJfC479kbp3xT5GkBMP/CdCSpCHyVyC/OmC2A4/e0bemtUEv/ezuuBjY90sdwSLdTN/pG59ISNsLYgtQRaQPNKiKwj4FQCf+b2hwNftxR/hcXWAr6v4UY2je/C14DP/qL7ddwWxoDrrGChB1nF9qlMJcoqmdUEbQXTH3mnHJ8Ze0PZzjIWGAQ4G3P952a3rsr0Tc+/ytetGEAXLXs9ACbKe87RjCZLSsx7cCAJ+B8eRoOEZBjgYcLvdgTvOrH0dS2vdiI34cP49cD52I8jIUBU7n4ESZD6nlyqWIJfom5/cFQSO9x94TPez2dBw8/VAw4DNy4Cfv3M2YLiAFgu5HVKdC+dz9S1mu0LBMVwP+D4a3hVEg8u+n4ES5B6OP646LIh+erErHH+KcIzFOqO+zhTt0VoaH2uBfwM0X/PMhoaBtw0/OsOCHBWq+zkMlCBzeJxWpQSZRuWcQsOCQNuHccdGX0fMMI3bs6H1hDE76xux6IPvtTfb0Z3WijGKma34sCCaXPZ8BkqQ+ZxeqliCXKJvfvJGENtp2dERwO9Y8L7WAY9pHbPB45pruB7FzD6LaZzZ4HuC9y3m6FhfPXA+F45jN4IcDVD3axhIBVkzQnVRBrqCwPHnpZ/sng0tdw/P7qDl6sBmQ8MAu/o5wM+/EgM/92eMOE/MUTxima95ZmexXUGy5MLmM1CCzOf0UsUS5BJ985M3ggBuB9vOOzrgY7Px4HxsVmcPO5rP7uF8X8hjoeFxDuulB1oseDvmqr8RRMGy1zNQgqznPO1YgqT0rAc3gugeNBuO95/hesDHKhZt8LHZ02NuFnsFi30yH/L5NTfOpJjZim8EUfAeu6pmDJQgGTtfwDaCgP8U7ZPSAx6H5muc2dAw8PaVt1ptPeBrQ/NjHziHQYuDrZ3VBRyss5rtwOBsBAl4uYsZKEEWE95rV4L0GFqMbwSxHacnzqNYtEdiYy5w+E824LGsT4ZZz4irb/jZo3k9G/z84H3N3wiiYNnrGShB1nOedixBUnrWgxtBwO83uMePT427W/EMszjg9T7mzzrvmu/fWXWzOhtBsuDC7megBLmf46EOJcgQXfcHdwWJ+/tTf/Qp771tv71cnSnGWr6eiGe+1jU7i52FdQWZ1ajqnGOgBDnH07KoYUH08+/ZI6+ItTQ3YtHX2J5tq+d9Ymysm/kxN/Pf/d6/WeywIFmxwq4zUIJc53BqhRIkpXM9+BhB3vt177dHi+76vXy901p6f8bW3J6tM8XY2EvxxwiiQ/3LdgnyMPVLkBJknwHduWbvR12/tdpnT+ymuz/DNM7sGBv7K15fiLLxALsEeYAIOsKwIPYJnj3aqGfHmvpZx9wYq77m7dka26sb8cyPvTQ2YjqD2Ro7LIgmlz2fgRJkPqfdillACZKx8wWsK0jcf5/6vbfFuhpve1ZPjFVf8/bsT2M1z2ydZ8/e6/2+s3w973v77QpiQXXWMVCCrOP6VKcS5BRN64I2guztwzvu4hOzHiOxWZ0eNtInxmb+SN+NIFnhwu5noAS5n+OhDv8DAAD//+wI5TEAAAAGSURBVAMA8XDisQxnYIgAAAAASUVORK5CYII=" alt="QR Code YouTube" style="width:80px;height:80px;border-radius:6px;border:1px solid #e2e8f0;flex-shrink:0;">
+        <div>
+          <div style="font-size:10px;font-weight:700;color:#64748b;text-transform:uppercase;letter-spacing:0.4px;margin-bottom:4px;">Abrir no celular</div>
+          <div style="font-family:monospace;font-size:11px;color:#0f172a;background:#f8fafc;border:1px solid #e2e8f0;border-radius:6px;padding:5px 8px;word-break:break-all;margin-bottom:5px;">https://youtu.be/i1KTWIWWKC0</div>
+          <a href="https://youtu.be/i1KTWIWWKC0" target="_blank" rel="noopener noreferrer" style="font-size:12px;font-weight:800;color:#2563eb;text-decoration:none;">Abrir no YouTube ↗</a>
+        </div>
+      </div>
+  </div>
+
+          <div class="charts">
+            <h3 class="section-title">Gráficos com Ocorrências</h3>
+            <div class="info-grid" style="margin-bottom: 16px;">
+                     <div class="info-card" style="border-left: 3px solid #2563EB;">
+                       <div class="label">ROI Início</div>
+                       <div class="value">1:56 (116.9s)</div>
+                     </div>
+                     <div class="info-card" style="border-left: 3px solid #2563EB;">
+                       <div class="label">ROI Fim</div>
+                       <div class="value">3:39 (219.5s)</div>
+                     </div>
+                     <div class="info-card" style="border-left: 3px solid #2563EB;">
+                       <div class="label">Duração ROI</div>
+                       <div class="value">1:42</div>
+                     </div>
+                     
+                     <div class="info-card" style="border-left: 3px solid #EF4444;">
+                       <div class="label">Pausa</div>
+                       <div class="value">2:42 → 2:45</div>
+                     </div>
+                   </div>
+            
+            
+    <div class="chart-container">
+      <h3 class="chart-title">📊 Gráfico de Ruído (dB)</h3>
+      <svg viewBox="0 0 820 200" width="100%" preserveAspectRatio="xMidYMid meet" style="background: #fff; border: 1px solid #e2e8f0; border-radius: 8px;">
+        <!-- Grid -->
+        <line x1="50" y1="165.0" x2="800" y2="165.0" stroke="#e2e8f0" stroke-width="0.5" /><text x="45" y="165.0" text-anchor="end" fill="#94a3b8" font-size="9" dy="3">40</text><line x1="50" y1="138.0" x2="800" y2="138.0" stroke="#e2e8f0" stroke-width="0.5" /><text x="45" y="138.0" text-anchor="end" fill="#94a3b8" font-size="9" dy="3">50</text><line x1="50" y1="111.0" x2="800" y2="111.0" stroke="#e2e8f0" stroke-width="0.5" /><text x="45" y="111.0" text-anchor="end" fill="#94a3b8" font-size="9" dy="3">60</text><line x1="50" y1="84.0" x2="800" y2="84.0" stroke="#e2e8f0" stroke-width="0.5" /><text x="45" y="84.0" text-anchor="end" fill="#94a3b8" font-size="9" dy="3">70</text><line x1="50" y1="57.0" x2="800" y2="57.0" stroke="#e2e8f0" stroke-width="0.5" /><text x="45" y="57.0" text-anchor="end" fill="#94a3b8" font-size="9" dy="3">80</text><line x1="50" y1="30.0" x2="800" y2="30.0" stroke="#e2e8f0" stroke-width="0.5" /><text x="45" y="30.0" text-anchor="end" fill="#94a3b8" font-size="9" dy="3">90</text>
+        <line x1="50.0" y1="30" x2="50.0" y2="165" stroke="#e2e8f0" stroke-width="0.5" /><text x="50.0" y="179" text-anchor="middle" fill="#94a3b8" font-size="9">0:00</text><line x1="77.4" y1="30" x2="77.4" y2="165" stroke="#e2e8f0" stroke-width="0.5" /><text x="77.4" y="179" text-anchor="middle" fill="#94a3b8" font-size="9">0:30</text><line x1="104.7" y1="30" x2="104.7" y2="165" stroke="#e2e8f0" stroke-width="0.5" /><text x="104.7" y="179" text-anchor="middle" fill="#94a3b8" font-size="9">1:00</text><line x1="132.1" y1="30" x2="132.1" y2="165" stroke="#e2e8f0" stroke-width="0.5" /><text x="132.1" y="179" text-anchor="middle" fill="#94a3b8" font-size="9">1:30</text><line x1="159.5" y1="30" x2="159.5" y2="165" stroke="#e2e8f0" stroke-width="0.5" /><text x="159.5" y="179" text-anchor="middle" fill="#94a3b8" font-size="9">2:00</text><line x1="186.9" y1="30" x2="186.9" y2="165" stroke="#e2e8f0" stroke-width="0.5" /><text x="186.9" y="179" text-anchor="middle" fill="#94a3b8" font-size="9">2:30</text><line x1="214.2" y1="30" x2="214.2" y2="165" stroke="#e2e8f0" stroke-width="0.5" /><text x="214.2" y="179" text-anchor="middle" fill="#94a3b8" font-size="9">3:00</text><line x1="241.6" y1="30" x2="241.6" y2="165" stroke="#e2e8f0" stroke-width="0.5" /><text x="241.6" y="179" text-anchor="middle" fill="#94a3b8" font-size="9">3:30</text><line x1="269.0" y1="30" x2="269.0" y2="165" stroke="#e2e8f0" stroke-width="0.5" /><text x="269.0" y="179" text-anchor="middle" fill="#94a3b8" font-size="9">4:00</text><line x1="296.4" y1="30" x2="296.4" y2="165" stroke="#e2e8f0" stroke-width="0.5" /><text x="296.4" y="179" text-anchor="middle" fill="#94a3b8" font-size="9">4:30</text><line x1="323.7" y1="30" x2="323.7" y2="165" stroke="#e2e8f0" stroke-width="0.5" /><text x="323.7" y="179" text-anchor="middle" fill="#94a3b8" font-size="9">5:00</text><line x1="351.1" y1="30" x2="351.1" y2="165" stroke="#e2e8f0" stroke-width="0.5" /><text x="351.1" y="179" text-anchor="middle" fill="#94a3b8" font-size="9">5:30</text><line x1="378.5" y1="30" x2="378.5" y2="165" stroke="#e2e8f0" stroke-width="0.5" /><text x="378.5" y="179" text-anchor="middle" fill="#94a3b8" font-size="9">6:00</text><line x1="405.8" y1="30" x2="405.8" y2="165" stroke="#e2e8f0" stroke-width="0.5" /><text x="405.8" y="179" text-anchor="middle" fill="#94a3b8" font-size="9">6:30</text><line x1="433.2" y1="30" x2="433.2" y2="165" stroke="#e2e8f0" stroke-width="0.5" /><text x="433.2" y="179" text-anchor="middle" fill="#94a3b8" font-size="9">7:00</text><line x1="460.6" y1="30" x2="460.6" y2="165" stroke="#e2e8f0" stroke-width="0.5" /><text x="460.6" y="179" text-anchor="middle" fill="#94a3b8" font-size="9">7:30</text><line x1="488.0" y1="30" x2="488.0" y2="165" stroke="#e2e8f0" stroke-width="0.5" /><text x="488.0" y="179" text-anchor="middle" fill="#94a3b8" font-size="9">8:00</text><line x1="515.3" y1="30" x2="515.3" y2="165" stroke="#e2e8f0" stroke-width="0.5" /><text x="515.3" y="179" text-anchor="middle" fill="#94a3b8" font-size="9">8:30</text><line x1="542.7" y1="30" x2="542.7" y2="165" stroke="#e2e8f0" stroke-width="0.5" /><text x="542.7" y="179" text-anchor="middle" fill="#94a3b8" font-size="9">9:00</text><line x1="570.1" y1="30" x2="570.1" y2="165" stroke="#e2e8f0" stroke-width="0.5" /><text x="570.1" y="179" text-anchor="middle" fill="#94a3b8" font-size="9">9:30</text><line x1="597.4" y1="30" x2="597.4" y2="165" stroke="#e2e8f0" stroke-width="0.5" /><text x="597.4" y="179" text-anchor="middle" fill="#94a3b8" font-size="9">10:00</text><line x1="624.8" y1="30" x2="624.8" y2="165" stroke="#e2e8f0" stroke-width="0.5" /><text x="624.8" y="179" text-anchor="middle" fill="#94a3b8" font-size="9">10:30</text><line x1="652.2" y1="30" x2="652.2" y2="165" stroke="#e2e8f0" stroke-width="0.5" /><text x="652.2" y="179" text-anchor="middle" fill="#94a3b8" font-size="9">11:00</text><line x1="679.6" y1="30" x2="679.6" y2="165" stroke="#e2e8f0" stroke-width="0.5" /><text x="679.6" y="179" text-anchor="middle" fill="#94a3b8" font-size="9">11:30</text><line x1="706.9" y1="30" x2="706.9" y2="165" stroke="#e2e8f0" stroke-width="0.5" /><text x="706.9" y="179" text-anchor="middle" fill="#94a3b8" font-size="9">12:00</text><line x1="734.3" y1="30" x2="734.3" y2="165" stroke="#e2e8f0" stroke-width="0.5" /><text x="734.3" y="179" text-anchor="middle" fill="#94a3b8" font-size="9">12:30</text><line x1="761.7" y1="30" x2="761.7" y2="165" stroke="#e2e8f0" stroke-width="0.5" /><text x="761.7" y="179" text-anchor="middle" fill="#94a3b8" font-size="9">13:00</text><line x1="789.1" y1="30" x2="789.1" y2="165" stroke="#e2e8f0" stroke-width="0.5" /><text x="789.1" y="179" text-anchor="middle" fill="#94a3b8" font-size="9">13:30</text>
+        <!-- Eixos -->
+        <line x1="50" y1="30" x2="50" y2="165" stroke="#64748b" stroke-width="1" />
+        <line x1="50" y1="165" x2="800" y2="165" stroke="#64748b" stroke-width="1" />
+        <!-- Label Y -->
+        <text x="12" y="97.5" text-anchor="middle" fill="#64748b" font-size="10" transform="rotate(-90, 12, 97.5)">dB</text>
+        <!-- Regiões ROI e Pausa -->
+        <rect x="50" y="30" width="106.7" height="135.0" fill="rgba(0,0,0,0.10)" /><rect x="250.3" y="30" width="549.7" height="135.0" fill="rgba(0,0,0,0.10)" /><rect x="156.7" y="30" width="93.6" height="135.0" fill="rgba(59,130,246,0.06)" /><line x1="156.7" y1="30" x2="156.7" y2="165" stroke="#2563EB" stroke-width="3" stroke-dasharray="8,4" /><line x1="250.3" y1="30" x2="250.3" y2="165" stroke="#2563EB" stroke-width="3" stroke-dasharray="8,4" /><rect x="155.7" y="29.0" width="52" height="15" rx="3" fill="#2563EB" /><text x="181.7" y="40.0" text-anchor="middle" fill="#fff" font-size="9" font-weight="bold">▶ 1:56</text><rect x="199.3" y="29.0" width="52" height="15" rx="3" fill="#2563EB" /><text x="225.3" y="40.0" text-anchor="middle" fill="#fff" font-size="9" font-weight="bold">3:39 ◀</text><rect x="155.7" y="166" width="48" height="14" rx="2" fill="#2563EB" opacity="0.9" /><text x="179.7" y="177" text-anchor="middle" fill="#fff" font-size="8" font-weight="bold">ROI 1:56</text><rect x="203.3" y="166" width="48" height="14" rx="2" fill="#2563EB" opacity="0.9" /><text x="227.3" y="177" text-anchor="middle" fill="#fff" font-size="8" font-weight="bold">ROI 3:39</text><rect x="198.0" y="30" width="3.5" height="135.0" fill="rgba(239,68,68,0.08)" stroke="#EF4444" stroke-width="1" stroke-dasharray="4,4" /><line x1="198.0" y1="30" x2="201.4" y2="165" stroke="#EF4444" stroke-width="0.5" opacity="0.2" /><rect x="177.7" y="33.0" width="44" height="13" rx="2" fill="#EF4444" opacity="0.85" /><text x="199.7" y="43.0" text-anchor="middle" fill="#fff" font-size="8" font-weight="bold">PAUSA</text>
+        <!-- Dados -->
+        <polyline points="60.9,111.5 61.9,111.2 62.8,108.8 63.7,105.2 64.6,96.8 65.5,106.3 66.4,103.3 67.3,103.3 68.2,106.9 69.2,107.4 70.1,101.7 71.0,107.7 71.9,100.3 72.8,102.5 73.7,102.5 74.6,98.4 75.5,101.7 76.5,75.1 77.4,75.1 78.3,100.1 79.2,107.7 80.1,102.2 81.0,105.0 81.9,103.6 82.8,112.8 83.8,114.2 84.7,114.2 85.6,74.1 86.5,115.5 87.4,115.5 88.3,72.7 89.2,74.9 90.1,71.3 91.1,54.8 92.0,66.2 92.9,55.9 93.8,55.9 94.7,64.8 95.6,64.8 96.5,91.7 97.4,104.4 98.4,67.3 99.3,68.1 100.2,62.9 101.1,81.6 102.0,61.9 102.9,61.9 103.8,80.6 104.7,143.2 105.7,110.9 106.6,89.0 107.5,143.2 108.4,41.3 109.3,55.1 110.2,83.3 111.1,135.6 112.0,71.6 113.0,77.6 113.9,94.1 114.8,117.2 115.7,103.3 116.6,90.0 117.5,122.3 118.4,103.1 119.3,86.0 120.3,112.8 121.2,93.3 122.1,93.3 123.0,107.7 123.9,107.7 124.8,109.0 125.7,126.4 126.6,144.5 127.6,121.2 128.5,89.2 129.4,98.7 130.3,108.5 131.2,139.9 132.1,147.5 133.0,133.7 133.9,133.7 134.9,136.9 135.8,138.3 136.7,131.8 137.6,120.1 138.5,113.9 139.4,73.8 140.3,86.0 141.2,68.4 142.2,81.4 143.1,97.1 144.0,46.9 144.9,91.1 145.8,90.6 146.7,77.3 147.6,99.3 148.5,99.3 149.5,89.8 150.4,89.8 151.3,91.4 152.2,92.2 153.1,74.9 154.0,70.3 154.9,77.0 155.8,71.3 156.8,84.1 157.7,94.1 158.6,80.6 159.5,80.6 160.4,98.2 161.3,100.9 162.2,102.0 163.1,90.9 164.1,107.4 165.0,110.4 165.9,98.7 166.8,98.7 167.7,112.0 168.6,112.3 169.5,115.0 170.4,115.3 171.4,112.8 172.3,110.1 173.2,104.4 174.1,105.8 175.0,64.0 175.9,64.0 176.8,116.9 177.7,100.3 178.6,77.3 179.6,77.3 180.5,122.3 181.4,100.9 182.3,100.9 183.2,122.8 184.1,119.6 185.0,119.1 185.9,119.1 186.9,126.1 187.8,125.6 188.7,123.4 189.6,117.2 190.5,126.1 191.4,129.6 192.3,131.5 193.2,133.1 194.2,120.7 195.1,118.8 196.0,125.6 196.9,127.2 197.8,128.5 198.7,121.5 199.6,136.7 200.5,134.2 201.5,121.8 202.4,131.5 203.3,137.5 204.2,122.6 205.1,122.6 206.0,132.6 206.9,133.1 207.8,127.2 208.8,127.2 209.7,131.0 210.6,129.1 211.5,130.4 212.4,130.2 213.3,129.9 214.2,121.5 215.1,121.5 216.1,126.1 217.0,127.5 217.9,124.7 218.8,125.8 219.7,124.2 220.6,122.8 221.5,120.1 222.4,122.6 223.4,122.3 224.3,119.9 225.2,113.6 226.1,111.5 227.0,115.0 227.9,116.6 228.8,116.3 229.7,106.0 230.7,106.0 231.6,104.4 232.5,103.9 233.4,108.5 234.3,108.5 235.2,105.5 236.1,103.6 237.0,102.8 238.0,99.5 238.9,97.6 239.8,99.3 240.7,119.9 241.6,141.8 242.5,142.1 243.4,136.9 244.3,137.8 245.3,137.8 246.2,138.8 247.1,134.5 248.0,135.3 248.9,135.3 249.8,134.2 250.7,68.6 251.6,68.6 252.6,68.6 253.5,68.6 254.4,100.6 255.3,100.6 256.2,91.1 257.1,97.4 258.0,97.6 258.9,103.3 259.9,103.1 260.8,103.6 261.7,103.6 262.6,109.3 263.5,99.0 264.4,112.0 265.3,113.1 266.2,113.9 267.2,114.7 268.1,115.3 269.0,103.9 269.9,111.5 270.8,118.8 271.7,118.8 272.6,121.2 273.5,120.1 274.5,120.1 275.4,118.0 276.3,122.0 277.2,123.9 278.1,124.5 279.0,123.9 279.9,126.4 280.8,122.8 281.8,128.3 282.7,126.4 283.6,126.4 284.5,124.2 285.4,124.2 286.3,121.8 287.2,121.8 288.1,130.2 289.1,126.6 290.0,126.6 290.9,132.3 291.8,132.3 292.7,139.9 293.6,140.5 294.5,125.6 295.4,113.9 296.4,113.9 297.3,132.3 298.2,134.2 299.1,134.2 300.0,145.3 300.9,116.3 301.8,116.3 302.7,117.4 303.6,144.0 304.6,153.8 305.5,147.2 306.4,138.6 307.3,148.1 308.2,152.1 309.1,129.9 310.0,125.0 310.9,140.5 311.9,134.8 312.8,134.8 313.7,122.6 314.6,130.4 315.5,130.4 316.4,131.3 317.3,129.6 318.2,129.6 319.2,131.5 320.1,132.1 321.0,130.7 321.9,130.7 322.8,122.8 323.7,122.8 324.6,129.1 325.5,120.4 326.5,127.5 327.4,123.9 328.3,123.9 329.2,125.3 330.1,106.9 331.0,113.1 331.9,121.2 332.8,121.5 333.8,116.6 334.7,111.7 335.6,118.8 336.5,116.1 337.4,116.1 338.3,116.3 339.2,115.3 340.1,103.6 341.1,103.6 342.0,108.8 342.9,108.8 343.8,109.0 344.7,107.7 345.6,104.7 346.5,101.7 347.4,101.2 348.4,102.5 349.3,126.6 350.2,135.3 351.1,133.7 352.0,133.7 352.9,129.9 353.8,129.9 354.7,137.5 355.7,136.7 356.6,136.7 357.5,127.7 358.4,127.7 359.3,71.9 360.2,51.3 361.1,51.3 362.0,54.8 363.0,54.8 363.9,122.8 364.8,109.0 365.7,110.6 366.6,115.8 367.5,102.2 368.4,117.2 369.3,117.2 370.3,84.1 371.2,41.5 372.1,73.5 373.0,97.4 373.9,97.4 374.8,86.8 375.7,86.8 376.6,81.6 377.6,86.0 378.5,88.4 379.4,96.3 380.3,100.1 381.2,57.0 382.1,57.0 383.0,105.8 383.9,97.1 384.9,90.6 385.8,102.5 386.7,90.0 387.6,99.0 388.5,72.4 389.4,75.9 390.3,75.9 391.2,93.6 392.2,95.2 393.1,96.6 394.0,103.3 394.9,107.9 395.8,85.2 396.7,78.9 397.6,60.8 398.5,60.8 399.5,97.1 400.4,49.7 401.3,49.7 402.2,77.0 403.1,48.3 404.0,57.0 404.9,57.0 405.8,91.1 406.8,91.1 407.7,87.1 408.6,86.3 409.5,88.4 410.4,95.7 411.3,84.6 412.2,86.5 413.1,100.1 800.0,120.9" fill="none" stroke="#EF4444" stroke-width="1.5" stroke-linejoin="round" />
+        <!-- Limiar (threshold) -->
+        
+            <line x1="50" y1="97.4" x2="800" y2="97.4" stroke="#F59E0B" stroke-width="2" stroke-dasharray="10,5" />
+            <rect x="695" y="81.36445783132531" width="100" height="16" rx="3" fill="rgba(245,158,11,0.15)" />
+            <text x="700" y="93.36445783132531" fill="#D97706" font-size="9" font-weight="bold">65 dB (limiar)</text>
+        
+        <!-- Marcadores de ocorrências -->
+        
+      </svg>
+      
+      <div style="display:flex; justify-content:flex-end; margin-top:8px;">
+        <div style="background:rgba(255,255,255,0.94); border:1px solid #e2e8f0; border-radius:4px; padding:6px 8px; display:grid; gap:4px; min-width:172px;">
+          <div style="display:flex; align-items:center; gap:8px; font-size:10px; color:#334155;">
+            <span style="display:inline-block; width:20px; height:0; border-top:2px solid #F97316;"></span>
+            <span>Ruído</span>
+          </div>
+          <div style="display:flex; align-items:center; gap:8px; font-size:10px; color:#334155;">
+            <span style="display:inline-block; width:20px; height:0; border-top:2px solid #EF4444;"></span>
+            <span>Ruído + Vibração</span>
+          </div>
+        </div>
+      </div>
+    
+    </div>
+            
+    <div class="chart-container">
+      <h3 class="chart-title">📳 Gráfico de Vibração — Deslocamento (µm)</h3>
+      <svg viewBox="0 0 820 220" width="100%" preserveAspectRatio="xMidYMid meet" style="background: #fff; border: 1px solid #e2e8f0; border-radius: 8px;">
+        <line x1="50" y1="185.0" x2="800" y2="185.0" stroke="#e2e8f0" stroke-width="0.5" /><text x="45" y="185.0" text-anchor="end" fill="#94a3b8" font-size="9" dy="3">-28.7</text><line x1="50" y1="154.0" x2="800" y2="154.0" stroke="#e2e8f0" stroke-width="0.5" /><text x="45" y="154.0" text-anchor="end" fill="#94a3b8" font-size="9" dy="3">-14.8</text><line x1="50" y1="123.0" x2="800" y2="123.0" stroke="#e2e8f0" stroke-width="0.5" /><text x="45" y="123.0" text-anchor="end" fill="#94a3b8" font-size="9" dy="3">-0.9</text><line x1="50" y1="92.0" x2="800" y2="92.0" stroke="#e2e8f0" stroke-width="0.5" /><text x="45" y="92.0" text-anchor="end" fill="#94a3b8" font-size="9" dy="3">12.9</text><line x1="50" y1="61.0" x2="800" y2="61.0" stroke="#e2e8f0" stroke-width="0.5" /><text x="45" y="61.0" text-anchor="end" fill="#94a3b8" font-size="9" dy="3">26.8</text><line x1="50" y1="30.0" x2="800" y2="30.0" stroke="#e2e8f0" stroke-width="0.5" /><text x="45" y="30.0" text-anchor="end" fill="#94a3b8" font-size="9" dy="3">40.7</text>
+        <line x1="50.0" y1="30" x2="50.0" y2="185" stroke="#e2e8f0" stroke-width="0.5" /><text x="50.0" y="199" text-anchor="middle" fill="#94a3b8" font-size="9">0:00</text><line x1="77.8" y1="30" x2="77.8" y2="185" stroke="#e2e8f0" stroke-width="0.5" /><text x="77.8" y="199" text-anchor="middle" fill="#94a3b8" font-size="9">0:30</text><line x1="105.5" y1="30" x2="105.5" y2="185" stroke="#e2e8f0" stroke-width="0.5" /><text x="105.5" y="199" text-anchor="middle" fill="#94a3b8" font-size="9">1:00</text><line x1="133.3" y1="30" x2="133.3" y2="185" stroke="#e2e8f0" stroke-width="0.5" /><text x="133.3" y="199" text-anchor="middle" fill="#94a3b8" font-size="9">1:30</text><line x1="161.0" y1="30" x2="161.0" y2="185" stroke="#e2e8f0" stroke-width="0.5" /><text x="161.0" y="199" text-anchor="middle" fill="#94a3b8" font-size="9">2:00</text><line x1="188.8" y1="30" x2="188.8" y2="185" stroke="#e2e8f0" stroke-width="0.5" /><text x="188.8" y="199" text-anchor="middle" fill="#94a3b8" font-size="9">2:30</text><line x1="216.6" y1="30" x2="216.6" y2="185" stroke="#e2e8f0" stroke-width="0.5" /><text x="216.6" y="199" text-anchor="middle" fill="#94a3b8" font-size="9">3:00</text><line x1="244.3" y1="30" x2="244.3" y2="185" stroke="#e2e8f0" stroke-width="0.5" /><text x="244.3" y="199" text-anchor="middle" fill="#94a3b8" font-size="9">3:30</text><line x1="272.1" y1="30" x2="272.1" y2="185" stroke="#e2e8f0" stroke-width="0.5" /><text x="272.1" y="199" text-anchor="middle" fill="#94a3b8" font-size="9">4:00</text><line x1="299.8" y1="30" x2="299.8" y2="185" stroke="#e2e8f0" stroke-width="0.5" /><text x="299.8" y="199" text-anchor="middle" fill="#94a3b8" font-size="9">4:30</text><line x1="327.6" y1="30" x2="327.6" y2="185" stroke="#e2e8f0" stroke-width="0.5" /><text x="327.6" y="199" text-anchor="middle" fill="#94a3b8" font-size="9">5:00</text><line x1="355.4" y1="30" x2="355.4" y2="185" stroke="#e2e8f0" stroke-width="0.5" /><text x="355.4" y="199" text-anchor="middle" fill="#94a3b8" font-size="9">5:30</text><line x1="383.1" y1="30" x2="383.1" y2="185" stroke="#e2e8f0" stroke-width="0.5" /><text x="383.1" y="199" text-anchor="middle" fill="#94a3b8" font-size="9">6:00</text><line x1="410.9" y1="30" x2="410.9" y2="185" stroke="#e2e8f0" stroke-width="0.5" /><text x="410.9" y="199" text-anchor="middle" fill="#94a3b8" font-size="9">6:30</text><line x1="438.6" y1="30" x2="438.6" y2="185" stroke="#e2e8f0" stroke-width="0.5" /><text x="438.6" y="199" text-anchor="middle" fill="#94a3b8" font-size="9">7:00</text><line x1="466.4" y1="30" x2="466.4" y2="185" stroke="#e2e8f0" stroke-width="0.5" /><text x="466.4" y="199" text-anchor="middle" fill="#94a3b8" font-size="9">7:30</text><line x1="494.1" y1="30" x2="494.1" y2="185" stroke="#e2e8f0" stroke-width="0.5" /><text x="494.1" y="199" text-anchor="middle" fill="#94a3b8" font-size="9">8:00</text><line x1="521.9" y1="30" x2="521.9" y2="185" stroke="#e2e8f0" stroke-width="0.5" /><text x="521.9" y="199" text-anchor="middle" fill="#94a3b8" font-size="9">8:30</text><line x1="549.7" y1="30" x2="549.7" y2="185" stroke="#e2e8f0" stroke-width="0.5" /><text x="549.7" y="199" text-anchor="middle" fill="#94a3b8" font-size="9">9:00</text><line x1="577.4" y1="30" x2="577.4" y2="185" stroke="#e2e8f0" stroke-width="0.5" /><text x="577.4" y="199" text-anchor="middle" fill="#94a3b8" font-size="9">9:30</text><line x1="605.2" y1="30" x2="605.2" y2="185" stroke="#e2e8f0" stroke-width="0.5" /><text x="605.2" y="199" text-anchor="middle" fill="#94a3b8" font-size="9">10:00</text><line x1="632.9" y1="30" x2="632.9" y2="185" stroke="#e2e8f0" stroke-width="0.5" /><text x="632.9" y="199" text-anchor="middle" fill="#94a3b8" font-size="9">10:30</text><line x1="660.7" y1="30" x2="660.7" y2="185" stroke="#e2e8f0" stroke-width="0.5" /><text x="660.7" y="199" text-anchor="middle" fill="#94a3b8" font-size="9">11:00</text><line x1="688.5" y1="30" x2="688.5" y2="185" stroke="#e2e8f0" stroke-width="0.5" /><text x="688.5" y="199" text-anchor="middle" fill="#94a3b8" font-size="9">11:30</text><line x1="716.2" y1="30" x2="716.2" y2="185" stroke="#e2e8f0" stroke-width="0.5" /><text x="716.2" y="199" text-anchor="middle" fill="#94a3b8" font-size="9">12:00</text><line x1="744.0" y1="30" x2="744.0" y2="185" stroke="#e2e8f0" stroke-width="0.5" /><text x="744.0" y="199" text-anchor="middle" fill="#94a3b8" font-size="9">12:30</text><line x1="771.7" y1="30" x2="771.7" y2="185" stroke="#e2e8f0" stroke-width="0.5" /><text x="771.7" y="199" text-anchor="middle" fill="#94a3b8" font-size="9">13:00</text><line x1="799.5" y1="30" x2="799.5" y2="185" stroke="#e2e8f0" stroke-width="0.5" /><text x="799.5" y="199" text-anchor="middle" fill="#94a3b8" font-size="9">13:30</text>
+        <line x1="50" y1="30" x2="50" y2="185" stroke="#64748b" stroke-width="1" />
+        <line x1="50" y1="185" x2="800" y2="185" stroke="#64748b" stroke-width="1" />
+        <text x="12" y="107.5" text-anchor="middle" fill="#64748b" font-size="10" transform="rotate(-90, 12, 107.5)">µm</text>
+        <!-- Regiões ROI e Pausa -->
+        <rect x="50" y="30" width="108.2" height="155.0" fill="rgba(0,0,0,0.10)" /><rect x="253.1" y="30" width="546.9" height="155.0" fill="rgba(0,0,0,0.10)" /><rect x="158.2" y="30" width="94.9" height="155.0" fill="rgba(59,130,246,0.06)" /><line x1="158.2" y1="30" x2="158.2" y2="185" stroke="#2563EB" stroke-width="3" stroke-dasharray="8,4" /><line x1="253.1" y1="30" x2="253.1" y2="185" stroke="#2563EB" stroke-width="3" stroke-dasharray="8,4" /><rect x="157.2" y="29.0" width="52" height="15" rx="3" fill="#2563EB" /><text x="183.2" y="40.0" text-anchor="middle" fill="#fff" font-size="9" font-weight="bold">▶ 1:56</text><rect x="202.1" y="29.0" width="52" height="15" rx="3" fill="#2563EB" /><text x="228.1" y="40.0" text-anchor="middle" fill="#fff" font-size="9" font-weight="bold">3:39 ◀</text><rect x="157.2" y="186" width="48" height="14" rx="2" fill="#2563EB" opacity="0.9" /><text x="181.2" y="197" text-anchor="middle" fill="#fff" font-size="8" font-weight="bold">ROI 1:56</text><rect x="206.1" y="186" width="48" height="14" rx="2" fill="#2563EB" opacity="0.9" /><text x="230.1" y="197" text-anchor="middle" fill="#fff" font-size="8" font-weight="bold">ROI 3:39</text><rect x="200.1" y="30" width="3.5" height="155.0" fill="rgba(239,68,68,0.08)" stroke="#EF4444" stroke-width="1" stroke-dasharray="4,4" /><line x1="200.1" y1="30" x2="203.6" y2="185" stroke="#EF4444" stroke-width="0.5" opacity="0.2" /><rect x="179.8" y="33.0" width="44" height="13" rx="2" fill="#EF4444" opacity="0.85" /><text x="201.8" y="43.0" text-anchor="middle" fill="#fff" font-size="8" font-weight="bold">PAUSA</text>
+        <polyline points="58.8,120.9 59.5,120.9 60.0,120.9 60.7,120.9 61.3,120.9 61.8,118.7 62.4,116.4 63.1,116.4 63.6,118.7 64.2,118.7 64.9,116.4 65.5,118.7 66.1,118.7 66.7,120.9 67.2,120.9 67.9,120.9 68.4,120.9 69.1,120.9 69.7,120.9 70.2,120.9 70.8,120.9 71.4,120.9 72.0,120.9 72.7,120.9 73.3,120.9 73.8,120.9 74.5,120.9 75.1,120.9 75.7,120.9 76.3,120.9 76.9,120.9 77.4,120.9 78.1,120.9 78.6,120.9 79.3,120.9 79.9,120.9 80.4,120.9 81.1,120.9 81.7,120.9 82.2,120.9 82.9,120.9 83.5,120.9 84.0,120.9 84.7,120.9 85.4,120.9 85.9,120.9 86.5,120.9 87.2,120.9 87.7,120.9 88.3,120.9 88.9,120.9 89.5,120.9 90.1,120.9 90.6,120.9 91.2,120.9 92.0,120.9 92.5,120.9 93.1,120.9 93.7,120.9 94.3,120.9 94.9,120.9 95.5,118.7 96.1,118.7 96.7,118.7 97.3,120.9 97.9,120.9 98.5,120.9 99.1,120.9 99.7,120.9 100.3,120.9 101.0,120.9 101.5,120.9 102.1,120.9 102.7,120.9 103.3,120.9 103.9,120.9 104.5,120.9 105.1,120.9 105.7,120.9 106.3,120.9 106.9,120.9 107.5,120.9 108.1,120.9 108.7,120.9 109.4,120.9 109.9,120.9 110.6,120.9 111.2,120.9 111.7,120.9 112.4,120.9 112.9,120.9 113.5,120.9 114.1,120.9 114.7,120.9 115.3,120.9 116.0,120.9 116.5,120.9 117.1,120.9 117.7,120.9 118.3,120.9 118.9,120.9 119.6,120.9 120.1,120.9 120.7,120.9 121.4,120.9 121.9,120.9 122.5,120.9 123.2,120.9 123.7,120.9 124.3,120.9 124.9,120.9 125.5,120.9 126.2,120.9 126.7,120.9 127.3,120.9 128.0,120.9 128.5,120.9 129.1,120.9 129.7,120.9 130.3,120.9 131.0,120.9 131.6,120.9 132.1,120.9 132.7,120.9 133.4,120.9 133.9,120.9 134.5,120.9 135.1,120.9 135.7,120.9 136.4,120.9 136.9,120.9 137.5,120.9 138.2,120.9 138.7,120.9 139.3,120.9 140.0,120.9 140.5,120.9 141.2,120.9 141.8,120.9 142.3,120.9 143.0,120.9 143.6,120.9 144.1,120.9 144.8,103.0 145.4,85.2 146.0,85.2 146.7,85.2 147.2,103.0 147.8,107.5 148.4,114.2 149.0,107.5 149.5,114.2 150.2,114.2 150.7,114.2 151.4,112.0 152.0,112.0 152.6,114.2 153.2,114.2 153.8,109.7 154.4,109.7 155.0,118.7 155.6,118.7 156.1,118.7 156.8,118.7 157.4,118.7 158.0,120.9 158.6,118.7 159.3,118.7 159.8,105.3 160.4,100.8 161.0,100.8 161.6,112.0 162.2,109.7 162.8,109.7 163.5,105.3 164.0,105.3 164.6,105.3 165.2,114.2 165.8,114.2 166.3,116.4 167.0,105.3 167.6,105.3 168.2,114.2 168.9,114.2 169.5,109.7 170.0,112.0 170.6,114.2 171.2,114.2 171.8,107.5 172.4,107.5 172.9,109.7 173.7,109.7 174.3,109.7 174.8,109.7 175.4,112.0 176.0,112.0 176.6,116.4 177.2,114.2 177.8,114.2 178.4,114.2 179.0,112.0 179.7,112.0 180.2,109.7 180.8,109.7 181.5,98.6 182.0,98.6 182.6,112.0 183.2,112.0 183.8,109.7 184.4,109.7 185.0,116.4 185.6,116.4 186.3,114.2 186.8,109.7 187.4,114.2 188.0,114.2 188.6,116.4 189.2,116.4 189.8,112.0 190.4,109.7 191.0,109.7 191.6,103.0 192.2,107.5 192.8,107.5 193.4,112.0 194.0,112.0 194.6,112.0 195.2,112.0 195.8,109.7 196.5,109.7 197.0,112.0 197.6,112.0 198.3,109.7 198.8,114.2 199.5,114.2 200.1,118.7 200.6,118.7 201.3,118.7 201.9,118.7 202.4,120.9 203.1,120.9 203.7,120.9 204.3,120.9 204.9,120.9 205.4,118.7 206.1,112.0 206.7,112.0 207.2,112.0 207.9,112.0 208.5,109.7 209.1,103.0 209.7,103.0 210.3,103.0 210.8,114.2 211.4,114.2 212.1,109.7 212.7,109.7 213.3,109.7 213.9,112.0 214.4,109.7 215.1,109.7 215.7,109.7 216.3,109.7 216.9,105.3 217.6,109.7 218.1,109.7 218.7,109.7 219.3,114.2 219.9,114.2 220.5,109.7 221.0,109.7 221.7,109.7 222.3,107.5 222.9,107.5 223.5,105.3 224.1,98.6 224.6,98.6 225.3,98.6 225.9,105.3 226.5,105.3 227.1,107.5 227.7,114.2 228.3,114.2 228.9,109.7 229.5,105.3 230.1,105.3 230.7,109.7 231.2,87.4 231.9,87.4 232.5,100.8 233.1,100.8 233.7,109.7 234.3,107.5 234.9,107.5 235.5,109.7 236.2,94.1 236.7,94.1 237.3,103.0 237.9,109.7 238.5,109.7 239.1,112.0 239.8,87.4 240.3,87.4 240.9,105.3 241.5,105.3 242.1,100.8 242.8,107.5 243.3,107.5 243.9,114.2 244.5,120.9 245.1,120.9 245.7,120.9 246.3,120.9 246.9,120.9 247.5,120.9 248.1,120.9 248.7,120.9 249.3,120.9 249.9,120.9 250.5,120.9 251.1,120.9 251.7,120.9 252.3,120.9 252.9,120.9 253.5,120.9 254.1,118.7 254.7,118.7 255.3,118.7 255.9,118.7 256.6,120.9 257.1,120.9 257.7,114.2 258.4,116.4 258.9,116.4 259.5,107.5 260.1,109.7 260.7,109.7 261.4,103.0 262.0,94.1 262.5,94.1 263.2,112.0 263.7,112.0 264.3,114.2 265.0,105.3 265.5,105.3 266.1,114.2 266.8,114.2 267.4,109.7 267.9,112.0 268.6,114.2 269.1,114.2 269.7,107.5 270.4,107.5 270.9,107.5 271.6,107.5 272.2,107.5 272.7,112.0 273.4,112.0 274.0,112.0 274.5,116.4 275.2,116.4 275.7,116.4 276.3,114.2 277.0,112.0 277.5,112.0 278.2,109.7 278.8,98.6 279.3,98.6 280.0,112.0 280.6,112.0 281.1,112.0 281.7,112.0 282.4,109.7 282.9,116.4 283.6,114.2 284.2,114.2 284.7,107.5 285.4,114.2 285.9,114.2 286.6,114.2 287.1,114.2 287.7,112.0 288.4,109.7 289.0,109.7 289.5,105.3 290.2,109.7 290.8,109.7 291.3,109.7 292.0,114.2 292.6,114.2 293.2,109.7 293.8,109.7 294.4,109.7 295.0,112.0 295.6,112.0 296.2,112.0 296.8,114.2 297.4,114.2 297.9,118.7 298.5,118.7 299.2,118.7 299.8,116.4 300.4,120.9 301.0,120.9 301.6,120.9 302.2,120.9 302.8,120.9 303.4,120.9 304.0,120.9 304.6,120.9 305.2,120.9 305.8,120.9 306.5,120.9 306.9,120.9 307.6,120.9 308.2,120.9 308.8,120.9 309.4,120.9 309.9,120.9 310.6,120.9 311.2,120.9 311.8,120.9 312.4,120.9 313.0,120.9 313.6,120.9 314.2,120.9 314.9,120.9 315.4,118.7 316.0,118.7 316.6,114.2 317.2,114.2 317.8,114.2 318.4,112.0 319.0,105.3 319.6,105.3 320.1,105.3 320.7,105.3 321.4,114.2 322.0,107.5 322.6,107.5 323.2,112.0 323.8,112.0 324.4,112.0 325.0,109.7 325.5,109.7 326.2,109.7 326.9,105.3 327.4,107.5 328.0,107.5 328.6,112.0 329.2,112.0 329.8,112.0 330.4,109.7 330.9,109.7 331.6,109.7 332.2,107.5 332.8,107.5 333.4,100.8 334.0,100.8 334.6,100.8 335.2,100.8 335.8,107.5 336.4,107.5 337.0,107.5 337.6,112.0 338.2,112.0 338.9,109.7 339.4,98.6 340.0,98.6 340.6,107.5 341.2,107.5 341.8,94.1 342.4,103.0 343.0,103.0 343.6,112.0 344.2,103.0 344.8,103.0 345.4,105.3 346.0,100.8 346.6,100.8 347.2,105.3 347.7,105.3 348.4,107.5 349.1,109.7 349.6,109.7 350.2,87.4 350.9,105.3 351.4,105.3 352.0,100.8 352.7,109.7 353.2,109.7 353.8,116.4 354.5,120.9 355.0,120.9 355.7,120.9 356.2,120.9 356.8,120.9 357.4,120.9 358.0,120.9 358.6,120.9 359.3,120.9 359.8,120.9 360.5,120.9 361.1,120.9 361.6,120.9 362.2,120.9 362.8,120.9 363.4,120.9 364.0,118.7 364.7,118.7 365.3,118.7 365.9,96.3 366.4,96.3 367.1,96.3 367.6,98.6 368.2,98.6 368.9,112.0 369.5,116.4 370.0,116.4 370.7,120.9 371.4,120.9 371.9,120.9 372.5,116.4 373.1,118.7 373.7,118.7 374.2,120.9 374.9,118.7 375.5,120.9 376.1,118.7 376.7,118.7 377.2,100.8 377.9,91.9 378.4,91.9 379.0,105.3 379.7,116.4 380.2,116.4 380.8,116.4 381.6,107.5 382.1,107.5 382.7,103.0 383.3,100.8 383.8,100.8 384.5,112.0 385.1,112.0 385.7,112.0 386.3,120.9 386.9,120.9 387.5,120.9 388.1,120.9 388.7,120.9 389.2,116.4 389.9,100.8 390.4,100.8 391.1,96.3 391.7,100.8 392.3,100.8 392.9,107.5 393.5,107.5 394.0,116.4 394.7,116.4 395.3,116.4 395.9,116.4 396.5,116.4 397.1,116.4 397.7,109.7 398.3,114.2 398.9,114.2 399.5,112.0 400.1,118.7 400.7,118.7 401.2,118.7 401.9,118.7 402.4,118.7 403.1,94.1 403.7,94.1 404.2,38.3 404.9,105.3 405.5,105.3 406.0,109.7 406.7,118.7 407.3,118.7 407.9,120.9 408.5,120.9 409.2,120.9 409.7,120.9 410.3,120.9 411.0,120.9 411.5,120.9 412.1,120.9 412.6,120.9 413.3,120.9 414.0,120.9 414.5,120.9 415.1,120.9 415.7,120.9 416.3,116.4 416.9,118.7 417.5,118.7 418.1,120.9 418.8,120.9 800.0,120.9" fill="none" stroke="#06B6D4" stroke-width="1.3" stroke-linejoin="round" opacity="0.85" /><polyline points="58.8,120.9 59.5,120.9 60.0,118.7 60.7,118.7 61.3,118.7 61.8,107.5 62.4,98.6 63.1,98.6 63.6,114.2 64.2,114.2 64.9,116.4 65.5,118.7 66.1,118.7 66.7,120.9 67.2,120.9 67.9,120.9 68.4,120.9 69.1,120.9 69.7,120.9 70.2,120.9 70.8,120.9 71.4,120.9 72.0,120.9 72.7,120.9 73.3,120.9 73.8,120.9 74.5,120.9 75.1,120.9 75.7,120.9 76.3,120.9 76.9,120.9 77.4,120.9 78.1,120.9 78.6,120.9 79.3,120.9 79.9,120.9 80.4,120.9 81.1,120.9 81.7,120.9 82.2,120.9 82.9,120.9 83.5,120.9 84.0,120.9 84.7,120.9 85.4,120.9 85.9,120.9 86.5,120.9 87.2,120.9 87.7,120.9 88.3,120.9 88.9,120.9 89.5,120.9 90.1,120.9 90.6,120.9 91.2,120.9 92.0,120.9 92.5,120.9 93.1,120.9 93.7,120.9 94.3,118.7 94.9,118.7 95.5,116.4 96.1,109.7 96.7,109.7 97.3,118.7 97.9,120.9 98.5,120.9 99.1,120.9 99.7,120.9 100.3,120.9 101.0,120.9 101.5,120.9 102.1,120.9 102.7,120.9 103.3,120.9 103.9,120.9 104.5,120.9 105.1,120.9 105.7,120.9 106.3,120.9 106.9,120.9 107.5,120.9 108.1,120.9 108.7,120.9 109.4,120.9 109.9,120.9 110.6,120.9 111.2,120.9 111.7,120.9 112.4,120.9 112.9,120.9 113.5,120.9 114.1,120.9 114.7,120.9 115.3,120.9 116.0,120.9 116.5,120.9 117.1,120.9 117.7,120.9 118.3,120.9 118.9,120.9 119.6,120.9 120.1,120.9 120.7,120.9 121.4,120.9 121.9,120.9 122.5,120.9 123.2,120.9 123.7,120.9 124.3,120.9 124.9,120.9 125.5,120.9 126.2,120.9 126.7,120.9 127.3,120.9 128.0,120.9 128.5,120.9 129.1,120.9 129.7,120.9 130.3,120.9 131.0,120.9 131.6,120.9 132.1,120.9 132.7,120.9 133.4,120.9 133.9,120.9 134.5,120.9 135.1,120.9 135.7,120.9 136.4,120.9 136.9,120.9 137.5,120.9 138.2,120.9 138.7,120.9 139.3,120.9 140.0,120.9 140.5,120.9 141.2,120.9 141.8,120.9 142.3,120.9 143.0,120.9 143.6,120.9 144.1,120.9 144.8,114.2 145.4,103.0 146.0,103.0 146.7,103.0 147.2,107.5 147.8,114.2 148.4,116.4 149.0,114.2 149.5,116.4 150.2,118.7 150.7,118.7 151.4,114.2 152.0,114.2 152.6,109.7 153.2,109.7 153.8,114.2 154.4,114.2 155.0,118.7 155.6,118.7 156.1,118.7 156.8,118.7 157.4,118.7 158.0,120.9 158.6,118.7 159.3,118.7 159.8,118.7 160.4,114.2 161.0,114.2 161.6,109.7 162.2,114.2 162.8,114.2 163.5,109.7 164.0,109.7 164.6,109.7 165.2,107.5 165.8,107.5 166.3,109.7 167.0,103.0 167.6,103.0 168.2,105.3 168.9,105.3 169.5,109.7 170.0,109.7 170.6,114.2 171.2,114.2 171.8,112.0 172.4,112.0 172.9,105.3 173.7,105.3 174.3,105.3 174.8,109.7 175.4,105.3 176.0,105.3 176.6,112.0 177.2,114.2 177.8,114.2 178.4,114.2 179.0,112.0 179.7,112.0 180.2,109.7 180.8,109.7 181.5,116.4 182.0,116.4 182.6,114.2 183.2,109.7 183.8,112.0 184.4,112.0 185.0,114.2 185.6,114.2 186.3,107.5 186.8,109.7 187.4,105.3 188.0,105.3 188.6,107.5 189.2,107.5 189.8,98.6 190.4,112.0 191.0,112.0 191.6,112.0 192.2,112.0 192.8,112.0 193.4,109.7 194.0,112.0 194.6,112.0 195.2,112.0 195.8,109.7 196.5,109.7 197.0,116.4 197.6,116.4 198.3,116.4 198.8,118.7 199.5,118.7 200.1,118.7 200.6,118.7 201.3,118.7 201.9,118.7 202.4,120.9 203.1,120.9 203.7,118.7 204.3,118.7 204.9,118.7 205.4,118.7 206.1,118.7 206.7,118.7 207.2,118.7 207.9,114.2 208.5,112.0 209.1,112.0 209.7,112.0 210.3,107.5 210.8,109.7 211.4,109.7 212.1,109.7 212.7,112.0 213.3,112.0 213.9,109.7 214.4,105.3 215.1,105.3 215.7,107.5 216.3,107.5 216.9,105.3 217.6,100.8 218.1,100.8 218.7,109.7 219.3,112.0 219.9,112.0 220.5,109.7 221.0,109.7 221.7,109.7 222.3,107.5 222.9,107.5 223.5,112.0 224.1,112.0 224.6,112.0 225.3,112.0 225.9,112.0 226.5,112.0 227.1,109.7 227.7,109.7 228.3,109.7 228.9,103.0 229.5,107.5 230.1,107.5 230.7,109.7 231.2,103.0 231.9,103.0 232.5,103.0 233.1,103.0 233.7,109.7 234.3,107.5 234.9,107.5 235.5,107.5 236.2,109.7 236.7,109.7 237.3,103.0 237.9,98.6 238.5,98.6 239.1,96.3 239.8,103.0 240.3,103.0 240.9,103.0 241.5,103.0 242.1,107.5 242.8,107.5 243.3,107.5 243.9,112.0 244.5,116.4 245.1,116.4 245.7,120.9 246.3,120.9 246.9,120.9 247.5,120.9 248.1,120.9 248.7,120.9 249.3,120.9 249.9,120.9 250.5,120.9 251.1,120.9 251.7,120.9 252.3,120.9 252.9,120.9 253.5,120.9 254.1,118.7 254.7,118.7 255.3,118.7 255.9,118.7 256.6,118.7 257.1,118.7 257.7,120.9 258.4,116.4 258.9,116.4 259.5,107.5 260.1,114.2 260.7,114.2 261.4,109.7 262.0,105.3 262.5,105.3 263.2,107.5 263.7,107.5 264.3,107.5 265.0,103.0 265.5,103.0 266.1,105.3 266.8,105.3 267.4,109.7 267.9,109.7 268.6,114.2 269.1,114.2 269.7,112.0 270.4,105.3 270.9,112.0 271.6,107.5 272.2,107.5 272.7,112.0 273.4,105.3 274.0,105.3 274.5,112.0 275.2,114.2 275.7,114.2 276.3,114.2 277.0,109.7 277.5,109.7 278.2,112.0 278.8,116.4 279.3,116.4 280.0,112.0 280.6,112.0 281.1,112.0 281.7,112.0 282.4,112.0 282.9,114.2 283.6,107.5 284.2,107.5 284.7,109.7 285.4,105.3 285.9,105.3 286.6,107.5 287.1,107.5 287.7,100.8 288.4,109.7 289.0,109.7 289.5,109.7 290.2,109.7 290.8,109.7 291.3,109.7 292.0,114.2 292.6,114.2 293.2,109.7 293.8,109.7 294.4,109.7 295.0,116.4 295.6,116.4 296.2,116.4 296.8,118.7 297.4,118.7 297.9,118.7 298.5,118.7 299.2,118.7 299.8,120.9 300.4,120.9 301.0,120.9 301.6,120.9 302.2,118.7 302.8,118.7 303.4,118.7 304.0,120.9 304.6,120.9 305.2,120.9 305.8,120.9 306.5,118.7 306.9,118.7 307.6,120.9 308.2,120.9 308.8,120.9 309.4,120.9 309.9,120.9 310.6,120.9 311.2,120.9 311.8,120.9 312.4,120.9 313.0,120.9 313.6,120.9 314.2,120.9 314.9,116.4 315.4,118.7 316.0,118.7 316.6,118.7 317.2,114.2 317.8,114.2 318.4,114.2 319.0,112.0 319.6,112.0 320.1,109.7 320.7,109.7 321.4,109.7 322.0,112.0 322.6,112.0 323.2,109.7 323.8,109.7 324.4,109.7 325.0,105.3 325.5,105.3 326.2,105.3 326.9,105.3 327.4,100.8 328.0,100.8 328.6,112.0 329.2,112.0 329.8,112.0 330.4,109.7 330.9,109.7 331.6,109.7 332.2,107.5 332.8,107.5 333.4,112.0 334.0,112.0 334.6,112.0 335.2,114.2 335.8,112.0 336.4,112.0 337.0,112.0 337.6,107.5 338.2,107.5 338.9,103.0 339.4,105.3 340.0,105.3 340.6,107.5 341.2,107.5 341.8,100.8 342.4,100.8 343.0,100.8 343.6,107.5 344.2,105.3 344.8,105.3 345.4,109.7 346.0,105.3 346.6,105.3 347.2,100.8 347.7,100.8 348.4,100.8 349.1,107.5 349.6,107.5 350.2,103.0 350.9,103.0 351.4,103.0 352.0,107.5 352.7,109.7 353.2,109.7 353.8,109.7 354.5,118.7 355.0,118.7 355.7,118.7 356.2,118.7 356.8,120.9 357.4,120.9 358.0,120.9 358.6,120.9 359.3,120.9 359.8,120.9 360.5,120.9 361.1,120.9 361.6,120.9 362.2,120.9 362.8,120.9 363.4,120.9 364.0,118.7 364.7,116.4 365.3,116.4 365.9,109.7 366.4,109.7 367.1,109.7 367.6,112.0 368.2,112.0 368.9,114.2 369.5,98.6 370.0,98.6 370.7,118.7 371.4,114.2 371.9,114.2 372.5,109.7 373.1,112.0 373.7,112.0 374.2,120.9 374.9,116.4 375.5,120.9 376.1,118.7 376.7,118.7 377.2,109.7 377.9,109.7 378.4,109.7 379.0,112.0 379.7,116.4 380.2,116.4 380.8,114.2 381.6,114.2 382.1,114.2 382.7,109.7 383.3,109.7 383.8,109.7 384.5,116.4 385.1,116.4 385.7,116.4 386.3,118.7 386.9,118.7 387.5,118.7 388.1,120.9 388.7,120.9 389.2,116.4 389.9,114.2 390.4,114.2 391.1,109.7 391.7,112.0 392.3,112.0 392.9,109.7 393.5,109.7 394.0,118.7 394.7,118.7 395.3,118.7 395.9,118.7 396.5,114.2 397.1,114.2 397.7,112.0 398.3,112.0 398.9,112.0 399.5,116.4 400.1,118.7 400.7,118.7 401.2,118.7 401.9,118.7 402.4,116.4 403.1,100.8 403.7,100.8 404.2,78.5 404.9,112.0 405.5,112.0 406.0,114.2 406.7,118.7 407.3,118.7 407.9,118.7 408.5,118.7 409.2,118.7 409.7,120.9 410.3,120.9 411.0,120.9 411.5,120.9 412.1,120.9 412.6,120.9 413.3,120.9 414.0,120.9 414.5,120.9 415.1,120.9 415.7,120.9 416.3,107.5 416.9,116.4 417.5,116.4 418.1,116.4 418.8,118.7 800.0,120.9" fill="none" stroke="#10B981" stroke-width="1.3" stroke-linejoin="round" opacity="0.85" /><polyline points="58.8,120.9 59.5,120.9 60.0,120.9 60.7,120.9 61.3,120.9 61.8,118.7 62.4,118.7 63.1,118.7 63.6,118.7 64.2,118.7 64.9,118.7 65.5,120.9 66.1,120.9 66.7,120.9 67.2,120.9 67.9,120.9 68.4,120.9 69.1,120.9 69.7,120.9 70.2,120.9 70.8,120.9 71.4,120.9 72.0,120.9 72.7,120.9 73.3,120.9 73.8,120.9 74.5,120.9 75.1,120.9 75.7,120.9 76.3,120.9 76.9,120.9 77.4,120.9 78.1,120.9 78.6,120.9 79.3,120.9 79.9,120.9 80.4,120.9 81.1,120.9 81.7,120.9 82.2,120.9 82.9,120.9 83.5,120.9 84.0,120.9 84.7,120.9 85.4,120.9 85.9,120.9 86.5,120.9 87.2,120.9 87.7,120.9 88.3,120.9 88.9,120.9 89.5,118.7 90.1,118.7 90.6,120.9 91.2,120.9 92.0,120.9 92.5,120.9 93.1,120.9 93.7,120.9 94.3,116.4 94.9,116.4 95.5,114.2 96.1,98.6 96.7,98.6 97.3,120.9 97.9,120.9 98.5,120.9 99.1,120.9 99.7,120.9 100.3,120.9 101.0,120.9 101.5,120.9 102.1,120.9 102.7,120.9 103.3,120.9 103.9,120.9 104.5,120.9 105.1,120.9 105.7,120.9 106.3,120.9 106.9,120.9 107.5,120.9 108.1,120.9 108.7,120.9 109.4,120.9 109.9,120.9 110.6,120.9 111.2,120.9 111.7,120.9 112.4,120.9 112.9,120.9 113.5,120.9 114.1,120.9 114.7,120.9 115.3,120.9 116.0,120.9 116.5,120.9 117.1,120.9 117.7,120.9 118.3,120.9 118.9,120.9 119.6,120.9 120.1,120.9 120.7,120.9 121.4,120.9 121.9,120.9 122.5,120.9 123.2,120.9 123.7,120.9 124.3,120.9 124.9,120.9 125.5,120.9 126.2,120.9 126.7,120.9 127.3,120.9 128.0,120.9 128.5,120.9 129.1,120.9 129.7,120.9 130.3,120.9 131.0,120.9 131.6,120.9 132.1,120.9 132.7,120.9 133.4,120.9 133.9,120.9 134.5,120.9 135.1,120.9 135.7,120.9 136.4,120.9 136.9,120.9 137.5,120.9 138.2,120.9 138.7,120.9 139.3,120.9 140.0,120.9 140.5,120.9 141.2,120.9 141.8,120.9 142.3,120.9 143.0,120.9 143.6,120.9 144.1,120.9 144.8,114.2 145.4,103.0 146.0,103.0 146.7,103.0 147.2,107.5 147.8,114.2 148.4,118.7 149.0,114.2 149.5,118.7 150.2,87.4 150.7,87.4 151.4,87.4 152.0,87.4 152.6,105.3 153.2,105.3 153.8,60.6 154.4,60.6 155.0,94.1 155.6,94.1 156.1,94.1 156.8,118.7 157.4,118.7 158.0,120.9 158.6,109.7 159.3,109.7 159.8,109.7 160.4,85.2 161.0,85.2 161.6,109.7 162.2,109.7 162.8,109.7 163.5,103.0 164.0,103.0 164.6,103.0 165.2,107.5 165.8,107.5 166.3,107.5 167.0,109.7 167.6,109.7 168.2,105.3 168.9,105.3 169.5,107.5 170.0,107.5 170.6,114.2 171.2,114.2 171.8,112.0 172.4,112.0 172.9,109.7 173.7,112.0 174.3,112.0 174.8,105.3 175.4,103.0 176.0,103.0 176.6,112.0 177.2,112.0 177.8,112.0 178.4,105.3 179.0,109.7 179.7,109.7 180.2,100.8 180.8,100.8 181.5,107.5 182.0,107.5 182.6,107.5 183.2,98.6 183.8,105.3 184.4,105.3 185.0,107.5 185.6,107.5 186.3,107.5 186.8,112.0 187.4,107.5 188.0,107.5 188.6,105.3 189.2,105.3 189.8,105.3 190.4,112.0 191.0,112.0 191.6,109.7 192.2,105.3 192.8,105.3 193.4,103.0 194.0,107.5 194.6,107.5 195.2,107.5 195.8,107.5 196.5,107.5 197.0,107.5 197.6,107.5 198.3,105.3 198.8,105.3 199.5,105.3 200.1,114.2 200.6,114.2 201.3,109.7 201.9,96.3 202.4,120.9 203.1,120.9 203.7,120.9 204.3,107.5 204.9,107.5 205.4,112.0 206.1,114.2 206.7,114.2 207.2,114.2 207.9,109.7 208.5,109.7 209.1,98.6 209.7,98.6 210.3,103.0 210.8,109.7 211.4,109.7 212.1,112.0 212.7,109.7 213.3,109.7 213.9,100.8 214.4,112.0 215.1,112.0 215.7,109.7 216.3,109.7 216.9,105.3 217.6,103.0 218.1,103.0 218.7,105.3 219.3,103.0 219.9,103.0 220.5,112.0 221.0,112.0 221.7,112.0 222.3,107.5 222.9,107.5 223.5,109.7 224.1,103.0 224.6,103.0 225.3,105.3 225.9,103.0 226.5,103.0 227.1,105.3 227.7,112.0 228.3,112.0 228.9,105.3 229.5,98.6 230.1,98.6 230.7,109.7 231.2,105.3 231.9,105.3 232.5,107.5 233.1,107.5 233.7,107.5 234.3,114.2 234.9,114.2 235.5,107.5 236.2,112.0 236.7,112.0 237.3,112.0 237.9,109.7 238.5,109.7 239.1,103.0 239.8,103.0 240.3,103.0 240.9,114.2 241.5,114.2 242.1,103.0 242.8,96.3 243.3,96.3 243.9,65.1 244.5,114.2 245.1,114.2 245.7,116.4 246.3,116.4 246.9,116.4 247.5,116.4 248.1,118.7 248.7,118.7 249.3,116.4 249.9,116.4 250.5,116.4 251.1,116.4 251.7,116.4 252.3,116.4 252.9,109.7 253.5,109.7 254.1,94.1 254.7,116.4 255.3,116.4 255.9,116.4 256.6,107.5 257.1,107.5 257.7,112.0 258.4,80.7 258.9,80.7 259.5,109.7 260.1,109.7 260.7,109.7 261.4,107.5 262.0,114.2 262.5,114.2 263.2,107.5 263.7,107.5 264.3,105.3 265.0,109.7 265.5,109.7 266.1,105.3 266.8,105.3 267.4,109.7 267.9,107.5 268.6,114.2 269.1,114.2 269.7,107.5 270.4,107.5 270.9,107.5 271.6,109.7 272.2,109.7 272.7,103.0 273.4,105.3 274.0,105.3 274.5,109.7 275.2,107.5 275.7,107.5 276.3,107.5 277.0,105.3 277.5,105.3 278.2,96.3 278.8,103.0 279.3,103.0 280.0,109.7 280.6,109.7 281.1,109.7 281.7,100.8 282.4,107.5 282.9,109.7 283.6,105.3 284.2,105.3 284.7,107.5 285.4,105.3 285.9,105.3 286.6,103.0 287.1,103.0 287.7,105.3 288.4,109.7 289.0,109.7 289.5,109.7 290.2,107.5 290.8,107.5 291.3,107.5 292.0,107.5 292.6,107.5 293.2,98.6 293.8,107.5 294.4,107.5 295.0,105.3 295.6,107.5 296.2,107.5 296.8,107.5 297.4,107.5 297.9,114.2 298.5,114.2 299.2,114.2 299.8,100.8 300.4,118.7 301.0,118.7 301.6,118.7 302.2,120.9 302.8,120.9 303.4,120.9 304.0,120.9 304.6,120.9 305.2,120.9 305.8,120.9 306.5,120.9 306.9,120.9 307.6,120.9 308.2,120.9 308.8,120.9 309.4,120.9 309.9,120.9 310.6,120.9 311.2,120.9 311.8,120.9 312.4,120.9 313.0,120.9 313.6,120.9 314.2,120.9 314.9,109.7 315.4,112.0 316.0,112.0 316.6,112.0 317.2,112.0 317.8,112.0 318.4,109.7 319.0,98.6 319.6,98.6 320.1,105.3 320.7,105.3 321.4,112.0 322.0,109.7 322.6,109.7 323.2,107.5 323.8,98.6 324.4,98.6 325.0,112.0 325.5,109.7 326.2,109.7 326.9,105.3 327.4,103.0 328.0,103.0 328.6,107.5 329.2,107.5 329.8,107.5 330.4,112.0 330.9,112.0 331.6,109.7 332.2,109.7 332.8,109.7 333.4,109.7 334.0,105.3 334.6,105.3 335.2,107.5 335.8,107.5 336.4,107.5 337.0,112.0 337.6,107.5 338.2,107.5 338.9,105.3 339.4,98.6 340.0,98.6 340.6,107.5 341.2,107.5 341.8,107.5 342.4,109.7 343.0,109.7 343.6,112.0 344.2,114.2 344.8,114.2 345.4,112.0 346.0,109.7 346.6,109.7 347.2,109.7 347.7,109.7 348.4,112.0 349.1,105.3 349.6,105.3 350.2,112.0 350.9,112.0 351.4,112.0 352.0,105.3 352.7,100.8 353.2,100.8 353.8,74.0 354.5,116.4 355.0,116.4 355.7,116.4 356.2,116.4 356.8,116.4 357.4,116.4 358.0,116.4 358.6,116.4 359.3,116.4 359.8,116.4 360.5,116.4 361.1,114.2 361.6,114.2 362.2,114.2 362.8,109.7 363.4,109.7 364.0,91.9 364.7,118.7 365.3,118.7 365.9,112.0 366.4,112.0 367.1,112.0 367.6,109.7 368.2,109.7 368.9,116.4 369.5,112.0 370.0,112.0 370.7,120.9 371.4,118.7 371.9,118.7 372.5,114.2 373.1,120.9 373.7,120.9 374.2,120.9 374.9,120.9 375.5,120.9 376.1,118.7 376.7,118.7 377.2,105.3 377.9,107.5 378.4,107.5 379.0,109.7 379.7,118.7 380.2,118.7 380.8,120.9 381.6,114.2 382.1,114.2 382.7,107.5 383.3,107.5 383.8,107.5 384.5,120.9 385.1,120.9 385.7,120.9 386.3,120.9 386.9,120.9 387.5,120.9 388.1,120.9 388.7,120.9 389.2,120.9 389.9,120.9 390.4,120.9 391.1,107.5 391.7,107.5 392.3,107.5 392.9,112.0 393.5,112.0 394.0,120.9 394.7,105.3 395.3,105.3 395.9,105.3 396.5,78.5 397.1,78.5 397.7,107.5 398.3,112.0 398.9,112.0 399.5,94.1 400.1,103.0 400.7,103.0 401.2,103.0 401.9,94.1 402.4,109.7 403.1,107.5 403.7,107.5 404.2,100.8 404.9,107.5 405.5,107.5 406.0,112.0 406.7,120.9 407.3,120.9 407.9,120.9 408.5,120.9 409.2,120.9 409.7,120.9 410.3,120.9 411.0,120.9 411.5,120.9 412.1,120.9 412.6,120.9 413.3,120.9 414.0,120.9 414.5,120.9 415.1,120.9 415.7,120.9 416.3,118.7 416.9,118.7 417.5,118.7 418.1,120.9 418.8,120.9 800.0,120.9" fill="none" stroke="#8B5CF6" stroke-width="1.3" stroke-linejoin="round" opacity="0.85" />
+        <!-- Limiar (threshold) -->
+        
+            <line x1="50" y1="65.1" x2="800" y2="65.1" stroke="#F59E0B" stroke-width="2" stroke-dasharray="10,5" />
+            <rect x="695" y="49.064841498559076" width="100" height="16" rx="3" fill="rgba(245,158,11,0.15)" />
+            <text x="700" y="61.064841498559076" fill="#D97706" font-size="9" font-weight="bold">25 µm (limiar)</text>
+        
+        
+            <line x1="50" y1="176.7" x2="800" y2="176.7" stroke="#F59E0B" stroke-width="2" stroke-dasharray="10,5" opacity="0.5" />
+        
+        
+      </svg>
+      
+      <div style="display:flex; justify-content:flex-end; margin-top:8px;">
+        <div style="background:rgba(255,255,255,0.94); border:1px solid #e2e8f0; border-radius:4px; padding:6px 8px; display:grid; gap:6px; min-width:190px;">
+          
+      <div style="display:flex; align-items:center; gap:8px; font-size:10px; color:#334155;">
+        <span style="display:inline-block; width:20px; height:0; border-top:2px solid #06B6D4;"></span>
+        <span>Eixo X (µm)</span>
+      </div>
+      <div style="display:flex; align-items:center; gap:8px; font-size:10px; color:#334155;">
+        <span style="display:inline-block; width:20px; height:0; border-top:2px solid #10B981;"></span>
+        <span>Eixo Y (µm)</span>
+      </div>
+      <div style="display:flex; align-items:center; gap:8px; font-size:10px; color:#334155;">
+        <span style="display:inline-block; width:20px; height:0; border-top:2px solid #8B5CF6;"></span>
+        <span>Eixo Z (µm)</span>
+      </div>
+    
+          <div style="height:1px; background:#e2e8f0;"></div>
+          
+      <div style="display:flex; align-items:center; gap:8px; font-size:10px; color:#334155;">
+        <span style="display:inline-block; width:20px; height:0; border-top:2px solid #8B5CF6;"></span>
+        <span>Vibração</span>
+      </div>
+      <div style="display:flex; align-items:center; gap:8px; font-size:10px; color:#334155;">
+        <span style="display:inline-block; width:20px; height:0; border-top:2px solid #EF4444;"></span>
+        <span>Ruído + Vibração</span>
+      </div>
+    
+        </div>
+      </div>
+    
+    </div>
+            
+            
+            
+    <div class="chart-container">
+      <h3 class="chart-title">⏳ Gráfico Temporal de Ocorrências Preliminares</h3>
+      <svg viewBox="0 0 820 150" width="100%" preserveAspectRatio="xMidYMid meet" style="background: #fff; border: 1px solid #e2e8f0; border-radius: 8px;">
+        <line x1="50.0" y1="24" x2="50.0" y2="115" stroke="#e2e8f0" stroke-width="0.5" /><text x="50.0" y="129" text-anchor="middle" fill="#94a3b8" font-size="9">0:00</text><line x1="106.1" y1="24" x2="106.1" y2="115" stroke="#e2e8f0" stroke-width="0.5" /><text x="106.1" y="129" text-anchor="middle" fill="#94a3b8" font-size="9">0:30</text><line x1="162.2" y1="24" x2="162.2" y2="115" stroke="#e2e8f0" stroke-width="0.5" /><text x="162.2" y="129" text-anchor="middle" fill="#94a3b8" font-size="9">1:00</text><line x1="218.3" y1="24" x2="218.3" y2="115" stroke="#e2e8f0" stroke-width="0.5" /><text x="218.3" y="129" text-anchor="middle" fill="#94a3b8" font-size="9">1:30</text><line x1="274.4" y1="24" x2="274.4" y2="115" stroke="#e2e8f0" stroke-width="0.5" /><text x="274.4" y="129" text-anchor="middle" fill="#94a3b8" font-size="9">2:00</text><line x1="330.5" y1="24" x2="330.5" y2="115" stroke="#e2e8f0" stroke-width="0.5" /><text x="330.5" y="129" text-anchor="middle" fill="#94a3b8" font-size="9">2:30</text><line x1="386.7" y1="24" x2="386.7" y2="115" stroke="#e2e8f0" stroke-width="0.5" /><text x="386.7" y="129" text-anchor="middle" fill="#94a3b8" font-size="9">3:00</text><line x1="442.8" y1="24" x2="442.8" y2="115" stroke="#e2e8f0" stroke-width="0.5" /><text x="442.8" y="129" text-anchor="middle" fill="#94a3b8" font-size="9">3:30</text><line x1="498.9" y1="24" x2="498.9" y2="115" stroke="#e2e8f0" stroke-width="0.5" /><text x="498.9" y="129" text-anchor="middle" fill="#94a3b8" font-size="9">4:00</text><line x1="555.0" y1="24" x2="555.0" y2="115" stroke="#e2e8f0" stroke-width="0.5" /><text x="555.0" y="129" text-anchor="middle" fill="#94a3b8" font-size="9">4:30</text><line x1="611.1" y1="24" x2="611.1" y2="115" stroke="#e2e8f0" stroke-width="0.5" /><text x="611.1" y="129" text-anchor="middle" fill="#94a3b8" font-size="9">5:00</text><line x1="667.2" y1="24" x2="667.2" y2="115" stroke="#e2e8f0" stroke-width="0.5" /><text x="667.2" y="129" text-anchor="middle" fill="#94a3b8" font-size="9">5:30</text><line x1="723.3" y1="24" x2="723.3" y2="115" stroke="#e2e8f0" stroke-width="0.5" /><text x="723.3" y="129" text-anchor="middle" fill="#94a3b8" font-size="9">6:00</text><line x1="779.4" y1="24" x2="779.4" y2="115" stroke="#e2e8f0" stroke-width="0.5" /><text x="779.4" y="129" text-anchor="middle" fill="#94a3b8" font-size="9">6:30</text>
+        <line x1="50" y1="69.5" x2="800" y2="69.5" stroke="#64748b" stroke-width="1" />
+        <line x1="50" y1="24" x2="50" y2="115" stroke="#64748b" stroke-width="1" />
+        <rect x="50" y="24" width="218.6" height="91.0" fill="rgba(0,0,0,0.10)" /><rect x="460.5" y="24" width="339.5" height="91.0" fill="rgba(0,0,0,0.10)" /><rect x="268.6" y="24" width="191.9" height="91.0" fill="rgba(59,130,246,0.06)" /><line x1="268.6" y1="24" x2="268.6" y2="115" stroke="#2563EB" stroke-width="3" stroke-dasharray="8,4" /><line x1="460.5" y1="24" x2="460.5" y2="115" stroke="#2563EB" stroke-width="3" stroke-dasharray="8,4" /><rect x="267.6" y="23.0" width="52" height="15" rx="3" fill="#2563EB" /><text x="293.6" y="34.0" text-anchor="middle" fill="#fff" font-size="9" font-weight="bold">▶ 1:56</text><rect x="409.5" y="23.0" width="52" height="15" rx="3" fill="#2563EB" /><text x="435.5" y="34.0" text-anchor="middle" fill="#fff" font-size="9" font-weight="bold">3:39 ◀</text><rect x="267.6" y="116" width="48" height="14" rx="2" fill="#2563EB" opacity="0.9" /><text x="291.6" y="127" text-anchor="middle" fill="#fff" font-size="8" font-weight="bold">ROI 1:56</text><rect x="413.5" y="116" width="48" height="14" rx="2" fill="#2563EB" opacity="0.9" /><text x="437.5" y="127" text-anchor="middle" fill="#fff" font-size="8" font-weight="bold">ROI 3:39</text><rect x="353.3" y="24" width="7.1" height="91.0" fill="rgba(239,68,68,0.08)" stroke="#EF4444" stroke-width="1" stroke-dasharray="4,4" /><line x1="353.3" y1="24" x2="360.4" y2="115" stroke="#EF4444" stroke-width="0.5" opacity="0.2" /><rect x="334.9" y="27.0" width="44" height="13" rx="2" fill="#EF4444" opacity="0.85" /><text x="356.9" y="37.0" text-anchor="middle" fill="#fff" font-size="8" font-weight="bold">PAUSA</text>
+        <line x1="267.0" y1="24" x2="267.0" y2="115" stroke="#F97316" stroke-width="1.2" stroke-dasharray="3,3" opacity="0.55" /><line x1="267.0" y1="69.5" x2="267.0" y2="69.5" stroke="#F97316" stroke-width="1" opacity="0.85" /><g onclick="openYouTubePlayer('https://www.youtube.com/embed/i1KTWIWWKC0?start=116&autoplay=1&controls=1&rel=0', 'Reproduzindo a partir do momento da ocorrência')" style="cursor:pointer;" class="marker-clickable"><circle cx="267.0" cy="69.5" r="9" fill="#F97316" stroke="#fff" stroke-width="1.5" /><text x="267.0" y="72.5" text-anchor="middle" fill="#fff" font-size="9" font-weight="bold">1</text><title>Clique para reproduzir no YouTube</title></g><line x1="304.4" y1="24" x2="304.4" y2="115" stroke="#F97316" stroke-width="1.2" stroke-dasharray="3,3" opacity="0.55" /><line x1="304.4" y1="69.5" x2="304.4" y2="69.5" stroke="#F97316" stroke-width="1" opacity="0.85" /><g onclick="openYouTubePlayer('https://www.youtube.com/embed/i1KTWIWWKC0?start=136&autoplay=1&controls=1&rel=0', 'Reproduzindo a partir do momento da ocorrência')" style="cursor:pointer;" class="marker-clickable"><circle cx="304.4" cy="69.5" r="9" fill="#F97316" stroke="#fff" stroke-width="1.5" /><text x="304.4" y="72.5" text-anchor="middle" fill="#fff" font-size="9" font-weight="bold">2</text><title>Clique para reproduzir no YouTube</title></g>
+      </svg>
+      
+      <div style="display:flex; justify-content:flex-end; margin-top:8px;">
+        <div style="background:rgba(255,255,255,0.94); border:1px solid #e2e8f0; border-radius:4px; padding:6px 8px; display:grid; gap:4px; min-width:170px;">
+          
+            <div style="display:flex; align-items:center; gap:8px; font-size:10px; color:#334155;">
+              <span style="display:inline-block; width:20px; height:0; border-top:2px solid #F97316;"></span>
+              <span>Ruído</span>
+            </div>
+          
+            <div style="display:flex; align-items:center; gap:8px; font-size:10px; color:#334155;">
+              <span style="display:inline-block; width:20px; height:0; border-top:2px solid #EF4444;"></span>
+              <span>Ruído + Vibração</span>
+            </div>
+          
+            <div style="display:flex; align-items:center; gap:8px; font-size:10px; color:#334155;">
+              <span style="display:inline-block; width:20px; height:0; border-top:2px solid #8B5CF6;"></span>
+              <span>Vibração</span>
+            </div>
+          
+            <div style="display:flex; align-items:center; gap:8px; font-size:10px; color:#334155;">
+              <span style="display:inline-block; width:20px; height:0; border-top:2px solid #3B82F6;"></span>
+              <span>Visual</span>
+            </div>
+          
+            <div style="display:flex; align-items:center; gap:8px; font-size:10px; color:#334155;">
+              <span style="display:inline-block; width:20px; height:0; border-top:2px solid #6B7280;"></span>
+              <span>Outro</span>
+            </div>
+          
+        </div>
+      </div>
+    
+    </div>
+            
+    <div class="marker-legend">
+      <h4 class="marker-legend-title">🔢 Legenda dos Marcadores nos Gráficos</h4>
+      
+        <div class="marker-legend-item">
+          <span class="marker-num">1</span>
+          <span class="marker-desc">
+            1:56 — [Auto] Ruído acima do limiar em 1:56 — 69.9 dB | persistiu 4...
+            <span style="color: #94a3b8; font-size: 10px;">(Ruído)</span>
+          </span>
+        </div>
+        <div class="marker-legend-item">
+          <span class="marker-num">2</span>
+          <span class="marker-desc">
+            2:16 — [Auto] Ruído acima do limiar em 2:16 — 77.3 dB | persistiu ~...
+            <span style="color: #94a3b8; font-size: 10px;">(Ruído)</span>
+          </span>
+        </div>
+    </div>
+          </div>
+
+          <h3 class="section">Ocorrências (Ativas)</h3>
+          
+      <div class="occ" style="border-left: 4px solid #f59e0b">
+        <div class="occ-h">
+          <div class="occ-n">
+            <span style="font-size:18px;">🔊</span>
+            <strong>#1</strong>
+            <span style="display:inline-flex;align-items:center;gap:4px;padding:2px 8px;border-radius:999px;font-size:11px;font-weight:700;background:#fef3c7;color:#92400e;border:1px solid #f59e0b">🔍 Preliminar</span>
+            <span style="display:inline-flex;align-items:center;gap:4px;padding:2px 8px;border-radius:999px;font-size:11px;font-weight:700;background:#eff6ff;color:#1e40af;border:1px solid #3b82f6">Baixa</span>
+          </div>
+          <div class="occ-t">🕐 <a href="#" onclick="openYouTubePlayer('https://www.youtube.com/embed/i1KTWIWWKC0?start=116&autoplay=1&controls=1&rel=0', 'Reproduzindo a partir do momento da ocorrência'); return false;" class="yt-time-link" title="Reproduzir momento no YouTube (nova janela)">1:56 🔗</a></div>
+        </div>
+        <div class="occ-b">
+          <div class="field">
+            <div class="k">Descrição Preliminar</div>
+            <div class="v">[Auto] Ruído acima do limiar em 1:56 — 69.9 dB | persistiu 4.0s de forma contínua (até 2:00) | do 14º ao 13º andar - Partida</div>
+          </div>
+
+          
+
+          
+
+          
+
+          <div class="meta">
+            <span>Ruído</span>
+            <span>•</span>
+            <span>Mecânico</span>
+            
+              <span>•</span>
+              <span>Ruído: 69.9 dB</span>
+              <span>VibX: 1.0 µm</span>
+              <span>VibY: 1.0 µm</span>
+              
+            
+          </div>
+
+          
+        </div>
+      </div>
+      <div class="occ" style="border-left: 4px solid #f59e0b">
+        <div class="occ-h">
+          <div class="occ-n">
+            <span style="font-size:18px;">🔊</span>
+            <strong>#2</strong>
+            <span style="display:inline-flex;align-items:center;gap:4px;padding:2px 8px;border-radius:999px;font-size:11px;font-weight:700;background:#fef3c7;color:#92400e;border:1px solid #f59e0b">🔍 Preliminar</span>
+            <span style="display:inline-flex;align-items:center;gap:4px;padding:2px 8px;border-radius:999px;font-size:11px;font-weight:700;background:#eff6ff;color:#1e40af;border:1px solid #3b82f6">Baixa</span>
+          </div>
+          <div class="occ-t">🕐 <a href="#" onclick="openYouTubePlayer('https://www.youtube.com/embed/i1KTWIWWKC0?start=136&autoplay=1&controls=1&rel=0', 'Reproduzindo a partir do momento da ocorrência'); return false;" class="yt-time-link" title="Reproduzir momento no YouTube (nova janela)">2:16 🔗</a></div>
+        </div>
+        <div class="occ-b">
+          <div class="field">
+            <div class="k">Descrição Preliminar</div>
+            <div class="v">[Auto] Ruído acima do limiar em 2:16 — 77.3 dB | persistiu ~4.0s de forma irregular (2 picos, até 2:22) | do 8º ao 7º andar - Passagem contrapeso</div>
+          </div>
+
+          
+
+          
+
+          
+
+          <div class="meta">
+            <span>Ruído</span>
+            <span>•</span>
+            <span>Mecânico</span>
+            
+              <span>•</span>
+              <span>Ruído: 77.3 dB</span>
+              <span>VibX: 4.0 µm</span>
+              <span>VibY: 7.0 µm</span>
+              
+            
+          </div>
+
+          
+        </div>
+      </div>
+      <div class="occ" style="border-left: 4px solid #f59e0b">
+        <div class="occ-h">
+          <div class="occ-n">
+            <span style="font-size:18px;">📝</span>
+            <strong>#3</strong>
+            <span style="display:inline-flex;align-items:center;gap:4px;padding:2px 8px;border-radius:999px;font-size:11px;font-weight:700;background:#fef3c7;color:#92400e;border:1px solid #f59e0b">🔍 Preliminar</span>
+            <span style="display:inline-flex;align-items:center;gap:4px;padding:2px 8px;border-radius:999px;font-size:11px;font-weight:700;background:#f1f5f9;color:#475569;border:1px solid #94a3b8">Nenhuma</span>
+          </div>
+          <div class="occ-t">🕐 —</div>
+        </div>
+        <div class="occ-b">
+          <div class="field">
+            <div class="k">Descrição Preliminar</div>
+            <div class="v">Laje sem pintura</div>
+          </div>
+
+          
+
+          
+
+          
+
+          <div class="meta">
+            <span>Outro</span>
+            <span>•</span>
+            <span>Civil/Acabamento</span>
+            
+              <span>•</span>
+              <span>Ruído: 63.3 dB</span>
+              <span>VibX: 4.0 µm</span>
+              <span>VibY: 5.0 µm</span>
+              <span>VibZ: 5.0 µm</span>
+            
+          </div>
+
+          
+        </div>
+      </div>
+      <div class="occ" style="border-left: 4px solid #f59e0b">
+        <div class="occ-h">
+          <div class="occ-n">
+            <span style="font-size:18px;">📝</span>
+            <strong>#4</strong>
+            <span style="display:inline-flex;align-items:center;gap:4px;padding:2px 8px;border-radius:999px;font-size:11px;font-weight:700;background:#fef3c7;color:#92400e;border:1px solid #f59e0b">🔍 Preliminar</span>
+            <span style="display:inline-flex;align-items:center;gap:4px;padding:2px 8px;border-radius:999px;font-size:11px;font-weight:700;background:#fef2f2;color:#b91c1c;border:1px solid #ef4444">Alta</span>
+          </div>
+          <div class="occ-t">🕐 —</div>
+        </div>
+        <div class="occ-b">
+          <div class="field">
+            <div class="k">Descrição Preliminar</div>
+            <div class="v">Porta sem sensor de intertravamento</div>
+          </div>
+
+          
+
+          
+
+          
+
+          <div class="meta">
+            <span>Outro</span>
+            <span>•</span>
+            <span>Outro</span>
+            
+              <span>•</span>
+              <span>Ruído: 63.3 dB</span>
+              <span>VibX: 4.0 µm</span>
+              <span>VibY: 5.0 µm</span>
+              <span>VibZ: 5.0 µm</span>
+            
+          </div>
+
+          
+        </div>
+      </div>
+      <div class="occ" style="border-left: 4px solid #f59e0b">
+        <div class="occ-h">
+          <div class="occ-n">
+            <span style="font-size:18px;">⚠️</span>
+            <strong>#5</strong>
+            <span style="display:inline-flex;align-items:center;gap:4px;padding:2px 8px;border-radius:999px;font-size:11px;font-weight:700;background:#fef3c7;color:#92400e;border:1px solid #f59e0b">🔍 Preliminar</span>
+            <span style="display:inline-flex;align-items:center;gap:4px;padding:2px 8px;border-radius:999px;font-size:11px;font-weight:700;background:#fff7ed;color:#c2410c;border:1px solid #f97316">Média</span>
+          </div>
+          <div class="occ-t">🕐 —</div>
+        </div>
+        <div class="occ-b">
+          <div class="field">
+            <div class="k">Descrição Preliminar</div>
+            <div class="v">Sem grade de proteção entre as caixas de corrida</div>
+          </div>
+
+          
+
+          
+
+          
+
+          <div class="meta">
+            <span>Ruído + Vibração</span>
+            <span>•</span>
+            <span>Mecânico</span>
+            
+              <span>•</span>
+              <span>Ruído: 63.3 dB</span>
+              <span>VibX: 4.0 µm</span>
+              <span>VibY: 5.0 µm</span>
+              <span>VibZ: 5.0 µm</span>
+            
+          </div>
+
+          
+        </div>
+      </div>
+      <div class="occ" style="border-left: 4px solid #f59e0b">
+        <div class="occ-h">
+          <div class="occ-n">
+            <span style="font-size:18px;">📝</span>
+            <strong>#6</strong>
+            <span style="display:inline-flex;align-items:center;gap:4px;padding:2px 8px;border-radius:999px;font-size:11px;font-weight:700;background:#fef3c7;color:#92400e;border:1px solid #f59e0b">🔍 Preliminar</span>
+            <span style="display:inline-flex;align-items:center;gap:4px;padding:2px 8px;border-radius:999px;font-size:11px;font-weight:700;background:#eff6ff;color:#1e40af;border:1px solid #3b82f6">Baixa</span>
+          </div>
+          <div class="occ-t">🕐 —</div>
+        </div>
+        <div class="occ-b">
+          <div class="field">
+            <div class="k">Descrição Preliminar</div>
+            <div class="v">Sinais de infiltração nas paredes</div>
+          </div>
+
+          
+
+          
+
+          
+
+          <div class="meta">
+            <span>Outro</span>
+            <span>•</span>
+            <span>Civil/Acabamento</span>
+            
+              <span>•</span>
+              <span>Ruído: 63.3 dB</span>
+              <span>VibX: 4.0 µm</span>
+              <span>VibY: 5.0 µm</span>
+              <span>VibZ: 5.0 µm</span>
+            
+          </div>
+
+          
+        </div>
+      </div>
+      <div class="occ" style="border-left: 4px solid #f59e0b">
+        <div class="occ-h">
+          <div class="occ-n">
+            <span style="font-size:18px;">⚠️</span>
+            <strong>#7</strong>
+            <span style="display:inline-flex;align-items:center;gap:4px;padding:2px 8px;border-radius:999px;font-size:11px;font-weight:700;background:#fef3c7;color:#92400e;border:1px solid #f59e0b">🔍 Preliminar</span>
+            <span style="display:inline-flex;align-items:center;gap:4px;padding:2px 8px;border-radius:999px;font-size:11px;font-weight:700;background:#fff7ed;color:#c2410c;border:1px solid #f97316">Média</span>
+          </div>
+          <div class="occ-t">🕐 —</div>
+        </div>
+        <div class="occ-b">
+          <div class="field">
+            <div class="k">Descrição Preliminar</div>
+            <div class="v">Furos na parede (proliferação de insetos e geração de poeira)</div>
+          </div>
+
+          
+
+          
+
+          
+
+          <div class="meta">
+            <span>Ruído + Vibração</span>
+            <span>•</span>
+            <span>Mecânico</span>
+            
+              <span>•</span>
+              <span>Ruído: 72.4 dB</span>
+              <span>VibX: 3.0 µm</span>
+              <span>VibY: 3.0 µm</span>
+              <span>VibZ: 7.0 µm</span>
+            
+          </div>
+
+          
+        </div>
+      </div>
+
+          <h3 class="section" style="color:#64748b;">Ocorrências Descartadas</h3>
+          <p class="muted">Sem descartadas.</p>
+        </div>
+      </div>
+
+    <footer>
+      <p>Relatório gerado automaticamente pelo Elevator Inspektor</p>
+    </footer>
+  </div>
+
+  <button class="print-btn no-print" onclick="window.print()">🖨️ Imprimir / PDF</button>
+</body>
+</html>
