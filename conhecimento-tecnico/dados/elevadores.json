@@ -94,6 +94,1224 @@
             ],
             "responsabilidade": "Construtora",
             "gravidade": "Alta"
+        },
+        {
+            "id": "elev-009",
+            "pergunta": "Por que a distância entre a porta e o piso do andar é tão importante no elevador?",
+            "resposta": "A folga (distância) entre a soleira da cabina e o piso do pavimento não é apenas um detalhe construtivo — ela é crítica para acessibilidade e segurança. Uma folga excessiva (acima de 25 mm) aumenta o risco de aprisionamento de pés ao embarque e desembarque, favorece queda de objetos dentro do poço e compromete a experiência de usuários com cadeiras de rodas ou idosos com mobilidade reduzida. A medição deve ser feita em TODOS os pavimentos com a porta totalmente aberta e a cabina devidamente nivelada. A norma ABNT NBR 12892 estabelece limites máximos rigorosos para garantir segurança e conformidade legal.",
+            "normas": [
+                "ABNT NBR 12892:2009, 11.2.2"
+            ],
+            "responsabilidade": "Mista - requer avaliação técnica",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "elev-010",
+            "pergunta": "O elevador desnível (entra em um nível diferente do piso)? Isso é normal ou problema?",
+            "resposta": "Se o elevador não para no nível exato do piso do andar, criando um degrau ou diferença de altura, isso é um problema sério — não apenas desconforto. O desnivelamento cria risco real de tropeço, queda (especialmente para idosos e crianças) e dificuldade severa para pessoas em cadeiras de rodas ou com limitações de mobilidade. Além disso, é uma não conformidade que pode impedir aprovação de auditoria técnica de segurança. A solução exige ensaio de parada em TODOS os andares para identificar se o problema é recorrente e qual componente está causando (manutenção da plataforma, sistema de nivelamento, amortecedores, etc.). O condomínio deve comunicar qualquer desnivelamento à conservadora de imediato.",
+            "normas": [
+                "ABNT NBR 16858-7, Tabela A.1",
+                "ABNT NBR 12892, 3.23"
+            ],
+            "responsabilidade": "Condomínio",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "elev-011",
+            "pergunta": "Os botões da cabina precisam de texturas e marcações especiais? Por quê?",
+            "resposta": "Sim. As botoeiras (botões de comando) do elevador precisam ser muito mais que simples botões — devem ser acessíveis e seguras para TODOS os usuários, incluindo pessoas com deficiência visual ou baixa visão. A norma exige que cada botão possua: (1) Braille — marcação em relevo para leitura tátil de cegos; (2) Símbolo em relevo — indicação tátil do andar ou função; (3) Contraste visual elevado — diferença de cor clara entre o botão e o painel, para pessoas com baixa visão. Sem esses elementos, pessoas cegas não conseguem operar o elevador de forma autônoma, violando direitos básicos de acessibilidade. Além disso, a ausência aumenta risco de comando incorreto em situações de emergência ou pânico. A falta de conformidade pode reprovar o elevador na inspeção de segurança.",
+            "normas": [
+                "ABNT NBR 16858-3:2022, Tabela 4 e Tabela 5"
+            ],
+            "responsabilidade": "Construtora",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "elev-012",
+            "pergunta": "Por que os botões do elevador não podem ser muito pequenos?",
+            "resposta": "Botões muito pequenos ou com área de acionamento insuficiente criam barreira de acesso para idosos com artrite ou pessoas com limitação motora fina (tremor, paralisia parcial). A norma estabelece dimensões mínimas e área ativa mínima (12mm de diâmetro aproximadamente) para garantir que qualquer pessoa consegua acionar o botão sem dificuldade excessiva. Além disso, botões pequenos favorecem acionamentos acidentais ou imprecisos. Inspecionadores técnicos medem a área ativa e o diâmetro dos botões durante auditorias de conformidade, e fora da geometria normativa, o elevador pode ser reprovado. Isso não é apenas questão de conforto — é de inclusão social e conformidade legal.",
+            "normas": [
+                "ABNT NBR 16858-3:2022, Tabela 4"
+            ],
+            "responsabilidade": "Construtora",
+            "gravidade": "Média"
+        },
+        {
+            "id": "elev-013",
+            "pergunta": "Qual é a força adequada para apertar um botão de elevador?",
+            "resposta": "A força necessária para acionar o botão é regulada por norma — não pode ser nem muito alta (afastando idosos e pessoas enfraquecidas) nem muito baixa (causando acionamentos acidentais). A norma estabelece uma faixa ideal (aproximadamente 20-30 Newtons) que pode ser medida com dinamômetro. Uma força excessiva causa fadiga muscular ao usar o elevador repetidamente e pode ser impossível para pessoas com capacidade motora reduzida. Uma força muito baixa gera acionamentos involuntários — alguém encostando no botão ativa o andar. Esta conformidade é verificada durante inspeções técnicas com equipamento apropriado. Fora da faixa aceitável, o elevador requer ajuste do mecanismo de contato.",
+            "normas": [
+                "ABNT NBR 16858-3:2022, Tabela 4"
+            ],
+            "responsabilidade": "Mista - requer avaliação técnica",
+            "gravidade": "Média"
+        },
+        {
+            "id": "elev-014",
+            "pergunta": "O que é uma cortina de luz na porta do elevador e por que ela é importante?",
+            "resposta": "A cortina de luz (optical safety device) é um sensor de segurança que fica no batente da porta e cria um \"muro invisível\" de feixes de luz infravermelha cruzados. Se qualquer objeto ou pessoa atravessa esse muro enquanto a porta está fechando, a cortina detecta e comanda a reabertura imediata. Sem ela, a porta pode fechar e esmagar membro, material ou pior — uma criança. É exigida por norma em elevadores modernos de acesso público. Uma cortina inoperante significa que o elevador perdeu uma proteção crítica contra esmagamento. Este é considerado um problema CRÍTICO que invalida a segurança do equipamento. Um elevador sem cortina de luz funcional não deve ser usado até a reparação, pois expõe passageiros a risco de lesão grave.",
+            "normas": [
+                "ABNT NBR 16858-7, Tabela A.1 (itens 4.9 e 4.10)",
+                "ABNT NBR 12892:2022, 7.6"
+            ],
+            "responsabilidade": "Condomínio",
+            "gravidade": "Crítica"
+        },
+        {
+            "id": "elev-015",
+            "pergunta": "Quando a porta do elevador fecha muito forte, pode ser perigoso?",
+            "resposta": "Sim. A força de fechamento da porta é controlada por válvulas e amortecedores que devem limitar a energia do movimento. Se a porta fecha com força excessiva, even que a cortina de luz tente reabrir, ela pode causar lesão antes de se abrir completamente. Legislação de consumo (Código de Defesa do Consumidor) e normas técnicas (ABNT NBR 12892) determinam que a porta deve fechar com movimento suave e controlado. Uma força excessiva de fechamento é evidência de falta de manutenção ou componentes gastos (válvulas desgastadas, amortecedores perdendo eficiência). Isso cria potencial responsabilidade civil do condomínio e da conservadora em caso de acidente — se alguém é machucado e prova que a força de fechamento era excessiva, podem processar por negligência.",
+            "normas": [
+                "ABNT NBR 12892:2022, 7.6"
+            ],
+            "responsabilidade": "Condomínio",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "elev-016",
+            "pergunta": "Quando os cabos de aço do elevador ficam enferrujados ou com arames soltos, qual é o risco?",
+            "resposta": "Os cabos de aço do elevador são a \"espinha dorsal\" do sistema de suspensão — eles sustentam toda a cabina e o contrapeso. Cada cabo é projetado para ter uma margem de segurança múltipla (fator de segurança de 10:1 ou mais). Quando a corrosão (ferrugem) ou ruptura de arames reduz a seção efetiva do cabo, o fator de segurança diminui perigosamente. Se arames individuais se partem (\"soltos\"), o cabo enfraquece progressivamente. A norma ABNT NBR 12892 estabelece critérios rigorosos: qualquer cabo com mais de 6 arames rompidos em um passo deve ser substituído. A corrosão superficial é menos crítica, mas corrosão profunda (pitting) compromete durabilidade. Um cabo corroído ou com arames rompidos pode, teoricamente, romper de forma catastrófica, causando queda da cabina. Por isso, inspeção visual periódica de cabos é obrigatória, e qualquer deterioração deve resultar em substituição imediata.",
+            "normas": [
+                "ABNT NBR 12892:2022, 9.1 e 9.4"
+            ],
+            "responsabilidade": "Condomínio",
+            "gravidade": "Crítica"
+        },
+        {
+            "id": "elev-017",
+            "pergunta": "O que é o limitador de velocidade do elevador e por que a manutenção dele é crítica?",
+            "resposta": "O limitador de velocidade é um mecanismo de segurança crítico que atua como \"última linha de defesa\" contra velocidade excessiva. Se por algum motivo (falha do motor, ruptura de cabo, defeito nos freios) a cabina acelera além da velocidade normal de operação, o limitador a trava mecanicamente ao trilho guia, impedindo queda livre. É literalmente o que salva vidas em caso de falha de múltiplos sistemas. O limitador possui um cabo conectado ao teto da cabina — se esse cabo solta, estica ou muda de comprimento, o dispositivo não funciona quando acionado. Além disso, sujeira, oxidação ou travamento mecânico podem impedir o funcionamento. A norma exige que o limitador seja lacrado (selado) após ajuste — se o lacre está violado ou ausente, isso é sinal de que o dispositivo foi mexido e requer reinspecção imediata. Um limitador inoperante significa que o elevador está potencialmente fatalmente perigoso.",
+            "normas": [
+                "ABNT NBR 16858-1, 5.6.2.2",
+                "ABNT NBR 12892, 9.8"
+            ],
+            "responsabilidade": "Condomínio",
+            "gravidade": "Crítica"
+        },
+        {
+            "id": "elev-018",
+            "pergunta": "Por que é perigoso burlar o sensor de sobrecarga de um elevador?",
+            "resposta": "O sensor de sobrecarga é um dispositivo de proteção que impede o elevador de partir se o peso total dentro da cabina excede a capacidade nominal. Cada elevador tem uma placa de capacidade (ex: \"1275 kg — 17 pessoas\") que não é apenas sugestão — é limite técnico baseado em análise de resistência. Se alguém tenta \"burlar\" o sensor (desligando-o, desconectando-o, ou colocando pesos para enganá-lo), a cabina pode partir acima do peso seguro. Isso causa: (1) Perda de tração — o motor não consegue puxar o peso, causando deslizamento e queda; (2) Sobreaquecimento — o sistema de frenagem trabalha além da capacidade, falhando; (3) Ruptura de cabos — tensão excessiva rompe os cabos de suspensão. Burlar intencionalmente o sensor é crime (violação de segurança predial) e expõe o proprietário/administrador a ações cíveis e penais em caso de acidente. O sensor deve ser verificado durante inspeções técnicas periodicamente.",
+            "normas": [
+                "ABNT NBR 16858-1, 5.12.1.2"
+            ],
+            "responsabilidade": "Condomínio",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "elev-019",
+            "pergunta": "O que é \"slack rope\" (cabo frouxo) e por que o sensor dele é crítico?",
+            "resposta": "\"Slack rope\" ou cabo frouxo é uma condição onde o cabo de suspensão perde tensão — fica mole, sem pressão. Isso pode ocorrer por: envelhecimento do cabo (alongamento), corrosão, falha de amortecedores, ou desgaste no sistema de compensação. O perigo? Se o cabo fica frouxo mas o elevador continua operando, a cabina pode sofrer impactos e vibrações excessivas ao parar. O sensor de \"slack rope\" monitora essa condição e deve bloquear o operação do elevador até que o cabo seja retensado. Um sensor inoperante significa que o elevador pode estar operando com cabos frouxos sem aviso — aumentando risco de queda abrupta ou travamento. Este é um sistema de proteção redundante que garante segurança em redundância. A desativação ou falha deste sensor é classificada como crítica pela norma.",
+            "normas": [
+                "ABNT NBR 12892:2022, 12.3.12",
+                "Tabela A.1 (14.2.6)"
+            ],
+            "responsabilidade": "Condomínio",
+            "gravidade": "Crítica"
+        },
+        {
+            "id": "elev-020",
+            "pergunta": "Qual é a importância do botão STOP na manutenção do elevador?",
+            "resposta": "O botão STOP (biestável — tem dois estados: ligado/desligado) no teto da cabina é a \"chave de emergência\" do técnico de manutenção. Durante trabalhos de inspeção, limpeza ou reparação DENTRO do poço ou teto, o técnico precisa poder parar o elevador instantaneamente se algo der errado — se ele cair, se algum objeto cair sobre ele, se ele grita de alerta. Sem um STOP funcional, o técnico está desprotegido — a cabina pode começar a se mover enquanto ele está em risco de esmagamento letal. A norma ABNT NBR 12892 é absolutamente clara: o STOP deve estar presente, acessível e funcional. Um STOP quebrado, solto, ou inoperante é uma violação crítica de segurança. Qualquer trabalho em poço ou teto SEM STOP funcional é extremamente perigoso e viola normas de segurança ocupacional.",
+            "normas": [
+                "ABNT NBR 12892:2009, 8.14 b e 14.3.1.10.1"
+            ],
+            "responsabilidade": "Condomínio",
+            "gravidade": "Crítica"
+        },
+        {
+            "id": "elev-021",
+            "pergunta": "Por que os cabos elétricos no quadro de comando do elevador precisam de proteção especial?",
+            "resposta": "Os cabos elétricos que carregam corrente de alta tensão (energia) e sinais de controle no quadro de comando do elevador não podem ficar expostos — sem proteção mecânica em forma de eletroduto ou canaleta. Por quê? Porque fiação exposta fica vulnerável a: (1) Abrasão — movimento, vibração, ou contato com ferramentas riscam o isolamento, criando risco de curto-circuito; (2) Contato incidental — um técnico de manutenção pode encostar ou pisar em fio exposto, causando eletrochoque grave ou fatal; (3) Incêndio — curto-circuito em fio desprotegido causa chamas. A canaleta ou eletroduto protege mecanicamente e também organiza os cabos de forma segura e profissional. A norma ABNT exige proteção contínua em todo o caminho dos cabos. Fio exposto em quadro de comando é considerado não conformidade grave durante inspeção técnica.",
+            "normas": [
+                "ABNT NBR 12892:2009, 13.5.1.1"
+            ],
+            "responsabilidade": "Condomínio",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "elev-022",
+            "pergunta": "Por que é importante que componentes do painel elétrico estejam etiquetados com nomes?",
+            "resposta": "O painel elétrico (quadro de força) do elevador contém dezenas de componentes: fusíveis, relés, contatores, bornes, transformadores, etc. Cada um tem uma função específica. Se nenhum está identificado com etiqueta clara indicando sua função (ex: \"Fusível Ar Aux\", \"Relé Sobrequeda\", \"Contator Principal\"), então em situação de emergência ou manutenção, o técnico não sabe qual desligar. Ele pode: (1) Desligar o componente errado, piorando a situação; (2) Gastar tempo crítico procurando o componente certo enquanto o elevador está parado com pessoas dentro; (3) Sofrer eletrochoque ao mexer na peça errada. Durante inspeções técnicas ou auditorias de segurança, a ausência de identificação é registrada como não conformidade. A solução é simples: etiquetar cada componente claramente. Isso é parte básica de boas práticas de engenharia e segurança.",
+            "normas": [
+                "ABNT NBR 12892:2009, 15.9",
+                "ABNT NBR 16858-1, 5.10.10"
+            ],
+            "responsabilidade": "Condomínio",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "elev-023",
+            "pergunta": "Por que as chaves seccionadoras do elevador precisam de identificação clara?",
+            "resposta": "A chave seccionadora (ou disjuntor) é o dispositivo que desliga completamente a energia de um ou mais elevadores. No caso de manutenção de emergência, incêndio, ou acidente, a equipe precisa RAPIDAMENTE encontrar e ativar a chave correta para cortar energia. Se as chaves não estão identificadas por elevador e função (ex: \"Elevador 1\", \"Elevador 2\", \"Elevador 3\"), pode ocorrer: (1) Desligamento do elevador errado — deixando o elevador com pane ligado; (2) Perda de tempo crítico procurando a chave certa enquanto há pessoas presas; (3) Trabalho em circuito vivo — técnico mexendo em equipamento que deveria estar desligado, resultando em eletrochoque fatal. A norma é cristalinha: cada seccionadora deve ter etiqueta permanente, legível, indicando claramente qual elevador controla. Esta é uma exigência de conformidade básica verificada em toda inspeção técnica.",
+            "normas": [
+                "ABNT NBR 12892, 6.2.1 e 13.6.3.5",
+                "ABNT NBR 16858-1, 5.10.1"
+            ],
+            "responsabilidade": "Condomínio",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "elev-024",
+            "pergunta": "Por que o fosso e o teto da cabina do elevador precisam ter tomadas de energia próprias?",
+            "resposta": "Durante manutenção, inspeção e limpeza, os técnicos precisam usar ferramentas elétricas dentro do fosso (piso do poço) e no teto da cabina — fresadoras, parafusadeiras, lanternas, etc. Se não houver uma tomada de energia DEDICADA e segura nesses locais, o técnico faz o que ninguém deveria: conecta a ferramenta em circuitos de comando ou força usando adaptadores improvisados. Isto causa: (1) Sobrecarga — circuito foi dimensionado para controle, não para alta potência; (2) Curto-circuito — conexão improvisada sem proteção; (3) Risco de eletrochoque — especialmente em fosso úmido. A solução é instalar tomadas de serviço (110-220V com tomadas de 3 pinos, com DR 30mA próprio) no fosso e teto durante construção. Falta dessas tomadas força improvisações perigosas. A norma exige tomadas dedicadas para evitar improviso.",
+            "normas": [
+                "ABNT NBR 12892, 13.6.2 e 13.7.1",
+                "ABNT NBR 16858-1, 5.10.7"
+            ],
+            "responsabilidade": "Condomínio",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "elev-025",
+            "pergunta": "Qual é a função do DR (dispositivo diferencial residual) nos circuitos de manutenção do elevador?",
+            "resposta": "O DR 30 mA (dispara em 30 miliamperes de corrente desbalanceada) é um protetor contra eletrochoque que deve estar em TODOS os circuitos de tomada e iluminação usados durante manutenção do elevador. A função? Se um técnico encosta em fio desencapado, ferrão de ferramenta quebrada, ou qualquer ponto com energia enquanto está em contato com terra úmida (piso molhado do fosso), o DR detecta a corrente de fuga através do corpo da pessoa e DESLIGA instantaneamente em 30 milissegundos — tempo suficiente para evitar fibrilação ventricular (parada cardíaca). Sem o DR, essa corrente de fuga pode passar por 100+ miliamperes, matando a pessoa. O fosso do elevador é ambiente ÚMIDO — risco de choque é máximo. A norma é clara: toda tomada de manutenção deve ter DR próprio, independente. Sua ausência é não conformidade crítica.",
+            "normas": [
+                "ABNT NBR 12892:2022, 13.1.2.3",
+                "ABNT NBR 16858-1:2020, 5.10.1.2.3"
+            ],
+            "responsabilidade": "Condomínio",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "elev-026",
+            "pergunta": "Por que a porta da casa de máquinas do elevador deve ter aviso de \"Acesso Restrito\"?",
+            "resposta": "A casa de máquinas (sala do motor) do elevador contém equipamentos operando em alta velocidade (motor girando, correntes em movimento, cabos tensionados) e alta tensão elétrica (440V típico). É ambiente perigoso. Se qualquer pessoa — criança exploratória, funcionário desorientado, ou visitante curioso — entra sem autorização, corre risco de morte: (1) Esmagamento por motor/correia em movimento; (2) Eletrochoque por contato com cabos de alta tensão; (3) Queda de altura (muitas casas têm acesso por escada ou espaço elevado). A placa de \"Acesso Restrito\" sob Lei (NR 26, Lei 13.425) é OBRIGATÓRIA e serve como aviso legal. E Se alguém entra, se machuca e processa o condomínio, falta dessa sinalização agrava a responsabilidade legal. A placa deve ser permanente, visível, em local claro da porta. Sua ausência é não conformidade grave.",
+            "normas": [
+                "ABNT NBR 16858-1:2020, 5.2.4.1",
+                "ABNT NBR 12892:2009, 15.4.1"
+            ],
+            "responsabilidade": "Condomínio",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "elev-027",
+            "pergunta": "Como o acesso difícil à casa de máquinas do elevador afeta resposta a emergências?",
+            "resposta": "Imagine que há um incêndio no elevador, ou alguém preso relatando que ficou enclausurado. A equipe de resgate PRECISA acessar a casa de máquinas rapidamente para: desligar o motor, liberar o elevador manualmente, ou executar resgate. Se o acesso é escuro (sem iluminação), obstruído por entulho/móveis, requer passar por área privada (apartamento), ou a escada é improvisada e insegura, isso ATRASA significativamente o resgate. A cada segundo de atraso em resgate de pessoa aprisionada em elevador, o risco de lesão por calor (no verão), estresse, ou complicações de saúde aumenta. A ABNT NBR 16858 exige que a rota de acesso à casa de máquinas seja: permanentemente clara, bem iluminada (mínimo 200 lux), via área comum (não privada), e segura (escada fixa, não improvisada). Acesso obstruído ou inseguro é não conformidade detectada em auditoria técnica.",
+            "normas": [
+                "ABNT NBR 16858-1:2020, 0.4.17 e 5.2.2",
+                "ABNT NBR 12892:2022, 6.2"
+            ],
+            "responsabilidade": "Condomínio",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "elev-028",
+            "pergunta": "Quando há água, óleo e resíduos acumulados no poço do elevador, qual é problema real?",
+            "resposta": "O poço é o espaço vazio sob o elevador — teoricamente sempre limpo e seco. Na realidade, muitas vezes acumula água (infiltração, vazamentos de encanamentos acima), óleo (vazamentos do motor ou cilindro de amortecedor), detritos de obra, e mofo. Este ambiente contaminado causa: (1) Corrosão acelerada — ferro e cobre corroem rapidamente em água salgada/suja, comprometendo cabos e estrutura; (2) Falha de amortecedores — água dentro do cilindro causa dysfunção e perda de eficiência; (3) Risco de curto-circuito — conexões elétricas em ambiente úmido e sujo são perigosas; (4) Riscos químicos — alguns óleos e resíduos são tóxicos; (5) Incêndio — acúmulo de óleo + energia elétrica = possível ignição. Um poço contaminado é considerado CRÍTICO durante inspeção. A solução: limpeza periódica, drenagem (as vezes requer bomba), e eliminação de fonte de vazamento. Poço contaminado não é só desconforto — é problema de segurança estrutural.",
+            "normas": [
+                "ABNT NBR 12892:2009, 5.6.5.1",
+                "ABNT NBR 16858-1:2020, 5.2.1.9"
+            ],
+            "responsabilidade": "Condomínio",
+            "gravidade": "Crítica"
+        },
+        {
+            "id": "elev-029",
+            "pergunta": "Como se acessa com segurança o fundo do poço do elevador para inspeção ou resgate?",
+            "resposta": "O fundo do poço é um espaço confinado que às vezes técnicos precisam acessar para resgate de pessoas presas, resgate de objetos, inspeção de estrutura, ou limpeza. Para entrar com segurança, é OBRIGATÓRIO ter acesso seguro — escada FIXA permanentemente instalada, com degraus antiderrapantes, corrimão, certificada, não degrada com tempo. Uma escada improvisada (corda, escada móvel, degraus soltos) em espaço confinado e úmido é potencial morte — queda fatal. A norma ABNT NBR 16858-7 e NBR 12892 são expressas: escada fixa é obrigatória. A falta disso coloca em risco CRÍTICO qualquer tentativa de resgate ou manutenção dentro do poço. Prédios onde a escada está em desgaste avançado ou removida (\"não havia espaço\") criam cenário catastrófico onde resgate seria impossível. Inspeção técnica classifica ausência de escada como CRÍTICA.",
+            "normas": [
+                "ABNT NBR 16858-7:2022, Tabela A.1 (item 2.13)",
+                "ABNT NBR 12892:2022, 7.9.3.5"
+            ],
+            "responsabilidade": "Condomínio",
+            "gravidade": "Crítica"
+        },
+        {
+            "id": "elev-030",
+            "pergunta": "O que são \"espaços de refúgio\" no elevador e por que não podem ser invadidos ou bloqueados?",
+            "resposta": "Se, por algum motivo catastrófico, o elevador cai ou há falha múltipla de sistemas, um técnico ou passageiro dentro do carro pode precisar se proteger em pequeninos de espaço seguro no teto ou no piso para survival até resgate. O teto da cabina (altura típica 2,4-2,7m) deve ter espaço LIVRE de obstáculos onde uma pessoa cabe sem ser esmagada. Igualmente, o fundo tem pequeno volume de segurança. Se tubulações, entulho, suportes improvisados, ou materiais de reforma INVADEM esse volume crítico, não há espaço de refúgio — uma pessoa enclausurada tern nenhum lugar seguro, aumentando risco de morte por esmagamento. A norma ABNT NBR 12892 especifica dimensões mínimas de espaço de refúgio. Invasão desses volumes é violação crítica detectada em inspeção profissional.",
+            "normas": [
+                "ABNT NBR 12892:2022, 5.6.2",
+                "Tabelas 2 e 3"
+            ],
+            "responsabilidade": "Mista - requer avaliação técnica",
+            "gravidade": "Crítica"
+        },
+        {
+            "id": "elev-031",
+            "pergunta": "Quando os trilhos guia do elevador ficam sujos, enferrujados ou fora de posição, qual é o risco?",
+            "resposta": "Os trilhos guia (4 trilhos — 2 para cabina, 2 para contrapeso) são responsáveis por manter a trajetória reta e suave do elevador durante movimento. Se estão oxidados (ferrugem), desalinhados (fora da vertical), ou com fixadores soltos, ocorre: (1) Vibração excessiva — corridas incômodas e desnecessárias; (2) Desgaste acelerado de rolos/rolamentos — aumenta custos de manutenção; (3) Perda de estabilidade direcional — cabina pode oscilar em movimento, principalmente em velocidade alta ou com sobrecarga; (4) Falha de segurança guiada — se a cabina se move fora do trilho, sistemas de segurança por contato (sapatilhas) podem falhar. Inspeção profissional envolve verificar: oxidação (que requer limpeza + pintura), linearidade de trilhos (com gabarito), tightness de fixadores. Desvios superiores a 3-5 mm exigem correção. Trilhos negligenciados não apenas causam desconforto — comprometem a segurança direcional.",
+            "normas": [
+                "ABNT NBR 16858-1, 5.7.1",
+                "ABNT NBR 12892, 10.1"
+            ],
+            "responsabilidade": "Condomínio",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "elev-032",
+            "pergunta": "Como sei se a fundação dos trilhos foi construída corretamente?",
+            "resposta": "Os trilhos guia devem ser instalados sobre base estrutural com rigidez suficiente — tipicamente na estrutura de concreto armado do prédio com fixadores (buchas + parafusos) certificados. Se a base é frágil, deformável, ou o concreto não foi executado corretamente (segregação, bichagem, insuficiente cobrimento de armadura), então os trilhos se movem, deformam sob carga, e comprometem todo o sistema de guiamento. A verificação envolve: (1) inspeção visual da base, (2) teste de rigidez (vibração / medição de deflexão), (3) análise de projeto estrutural original, (4) ensaio de ultrassom se concreto está íntegro. Deformação excessiva da base é considerada VÍCIO CONSTRUTIVO — responsabilidade da construtora corrigi-la durante período de garantia (5 anos, CC art. 618). Prédios onde trilhos foram instalados em laje fraca ou sem reforço adequado podem ter problema estrutural grave que não é óbvio até inspeção técnica detalhada.",
+            "normas": [
+                "ABNT NBR 16858-1:2020, Anexo E",
+                "ABNT NBR 12892:2022, Anexo E"
+            ],
+            "responsabilidade": "Construtora",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "elev-033",
+            "pergunta": "Por que os cabos de controle (chicotes) dentro do poço precisam de proteção e inspeção?",
+            "resposta": "Os \"chicotes\" (bundles de cabos de controle e força) transportam energia e sinais entre o comando e os sistemas de freio, motor, sensores, etc. Esses cabos roçam contra estrutura, passam pelo fosso em movimento, e estão sujeitos a abrasão. Se a capa (isolamento) de qualquer cabo é esfolada ou danificada, expõe condutores de cobre nú. Consequências: (1) Curto-circuito direto — corrente salta de um fio para outro, causando falha de componente ou incêndio; (2) Fuga de corrente — risco de eletrochoque se alguém encostar; (3) Nós ou torções no chicote — podem atrasar sinais elétricos ou romper o cabo com movimento; (4) Desconexão — cabos podem sair de bornes se não fixos adequadamente. A norma exige inspeção visual de chicotes, proteção com canaleta onde necessário, e clip/amarração apropriada. Chicotes danificados devem ser substituídos imediatamente, não reparados com fita isolante.",
+            "normas": [
+                "ABNT NBR 12892:2022, 13.5.1.3"
+            ],
+            "responsabilidade": "Condomínio",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "elev-034",
+            "pergunta": "Qual é a importância da placa de capacidade do elevador e onde ela fica?",
+            "resposta": "A placa de capacidade (normalmente localizada DENTRO da cabina, no piso ou parede) indica: peso máximo (ex: 1275 kg), número de pessoas (ex: 17 pessoas), e identificação do elevador. Essas informações não são floreados — são LIMITES técnicos. Se a placa está suja, ilegível, ou ausente, usuários não sabem o limite e pode haver sobrecarga involuntária. Além disso, durante inspeção técnica, a equipe PRECISA da placa para validar especificações (capacidade nominal do projeto vs. real). Ausência ou ilegibilidade da placa é não conformidade grave. A ilegibilidade também prejudica rastreabilidade — não sabem identificar qual elevador é qual em caso de emergência. A solução? Limpar a placa (usar álcool e pano macio), restaurar se danificada, ou substituir se impossível ler. Placa ilegível deve ser substituída imediatamente durante manutenção periódica.",
+            "normas": [
+                "ABNT NBR 16858-1:2020, 5.4.2.3.2",
+                "ABNT NBR 12892:2022, 15.2"
+            ],
+            "responsabilidade": "Mista - requer avaliação técnica",
+            "gravidade": "Média"
+        },
+        {
+            "id": "elev-035",
+            "pergunta": "Para que serve a ventilação na cabina do elevador?",
+            "resposta": "Os respiros de ventilação no teto ou paredes da cabina permitem circulação de ar, reduzindo umidade e mantendo temperatura interna controlada. Em caso de emergência onde pessoas ficam aprisionadas, ventilação adequada = ar circulando sem acúmulo de dióxido de carbono. Se respiros ficam obstruídos por sujeira, teias de aranha, ou objetos, reduz dramaticamente a qualidade do ar e a dissipação de calor. Em clima quente (verão, São Paulo), cabina sem ventilação ativa se torna perigosamente quente — risco de desmaio, lesão por calor. A norma exige respiros funcionais. Normas não especificam que devem estar sempre 100% abertos (uma tela de proteção é normalmente permitida), mas não devem estar totalmente bloqueados. Manutenção periódica inclui limpeza de respiros.",
+            "normas": [
+                "ABNT NBR 12892:2009, 8.3.1 b"
+            ],
+            "responsabilidade": "Condomínio",
+            "gravidade": "Média"
+        },
+        {
+            "id": "elev-036",
+            "pergunta": "Como usar com segurança a chave triangular de destravamento de emergência?",
+            "resposta": "A chave triangular é um dispositivo mecânico que permite DESTRAVAÇÃO MANUAL da porta em caso de emergência (pane de energia, falha de comando) quando pessoas estão presas. Ela abre a porta manualmente de fora, permitindo que pessoas saiam. Porém, é PERIGOSA se usada incorretamente — pode danificar o mecanismo de retravamento automático, deixando a porta sem função de segurança. Por isso, a chave deve estar: (1) Protegida — em caixa de vidro com inscrição \"QUEBRE O VIDRO\" ou similar, não livremente acessível; (2) Etiquetada — com instruções de uso (\"Girar 90 graus no sentido horário\") e advertência (\"USO APENAS EM EMERGÊNCIA\"); (3) Localização conhecida — guardas de segurança, síndicos, e equipes de emergência devem saber onde está. Sem etiqueta clara, alguém pode usar incorretamente, danificando o mecanismo. A chave deve ser inspecionada periodicamente para garantir que ainda funciona após meses de desuso.",
+            "normas": [
+                "ABNT NBR 16858-1:2020, 7.2.2 h",
+                "ABNT NBR 12892:2022, 15.10"
+            ],
+            "responsabilidade": "Condomínio",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "elev-037",
+            "pergunta": "Os vidros e espelhos utilizados dentro da cabina devem ser especiais? Qual é o padrão?",
+            "resposta": "Completamente SIM. Espelhos e vidros de visor na cabina do elevador não são vidro comum — devem ser TEMPERADOS (tratado termicamente para ser mais resistente) ou LAMINADO (camadas de vidro + película, que não esfarela se quebra). A razão? Se um vidro comum quebra dentro de uma cabina em movimento, esfarela em fragmentos pequenos perigosos de cortes — especialmente ruim em cabina de elevador onde nem ao menos tem espaço para se proteger. Além disso, vidros/espelhos devem ser marcados permanentemente (gravura que não sai) com: tipo de vidro (ex: TEMPERADO), espessura (mm), e identificação do fornecedor. Sem essa marcação, não há comprovação de que é vidro seguro certificado — pode ser vidro comum pintado de espelho. A norma exige que TODOS os vidros/espelhos tenham marcação permanente legível. Inspecionadores medem (com luz especial ou observação cuidadosa) para verificar se tem marcação. Falta de marcação é não conformidade que pode resultar em reprovação durante auditoria.",
+            "normas": [
+                "ABNT NBR 12892:2022, 7.2.3.5 e 7.2.3.6"
+            ],
+            "responsabilidade": "Construtora",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "elev-038",
+            "pergunta": "É exigida por norma a instalação de interfone de emergência dentro da cabina do elevador?",
+            "resposta": "SIM, absolutamente. O interfone (sistema de comunicação bidirecional por voz) é uma proteção CRÍTICA para pessoas que ficam aprisionadas. Se o elevador falha e para entre andares, ocupantes precisam comunicar com equipe de resgate / recepção para chamar ajuda, relatar situação médica (se idoso com pressão alta, gestante em trabalho de parto), e receber instruções de que estão em segurança e que resgate está a caminho. Sem interfone, pessoa fica isolada, com pânico, sem como avisar ninguém. O interfone deve ter: (1) Alimentação de emergência (bateria de backup) — não depende de energia normal; (2) Bidirecionalidade clara — pode ouvir e falar, não apenas chamada muda; (3) Botão de chamada visível e identificado. A norma ABNT NBR 16858-7 (Tabela A.1) é explícita: interfone de emergência é MANDATÓRIO em edifícios acima de 12 andares ou em elevadores com ocupância elevada. Falta ou mau funcionamento é não conformidade CRÍTICA. Um interfone inoperante classifica o elevador como potencialmente perigoso para ocupação em pane.",
+            "normas": [
+                "ABNT NBR 16858-7:2022, Tabela A.1 (item 5.11)"
+            ],
+            "responsabilidade": "Condomínio",
+            "gravidade": "Crítica"
+        },
+        {
+            "id": "elev-039",
+            "pergunta": "O que é a saia de proteção (avental) da cabina e por que ela não pode faltar?",
+            "resposta": "A saia de proteção é a chapa instalada na parte inferior da cabina, atrás da soleira da porta. Ela reduz o risco de queda de objetos e, principalmente, evita que alguém tenha acesso perigoso ao vão do poço quando a cabina está desalinhada entre andares. Quando o avental está ausente, curto ou danificado, aumenta o risco de esmagamento e aprisionamento em situações de emergência ou manobra indevida de porta. Em termos práticos, não é um acabamento: é um componente de segurança. A inspeção deve verificar comprimento útil, fixação mecânica e integridade da peça. Se houver deformação, corrosão ou ausência, a correção deve ser imediata.",
+            "normas": [
+                "ABNT NBR 12892:2009, 8.4.2"
+            ],
+            "responsabilidade": "Condomínio",
+            "gravidade": "Crítica"
+        },
+        {
+            "id": "elev-040",
+            "pergunta": "Se o elevador não tem proteção antissalto nos cabos/polias, qual é o risco real?",
+            "resposta": "A proteção antissalto impede que cabos saiam da posição correta nas polias em eventos anormais, como vibração extrema, choque mecânico ou falha de ajuste. Sem esse recurso, o sistema de tração pode trabalhar fora da geometria prevista, acelerando desgaste e aumentando risco de falha grave. Em linguagem simples: é uma proteção que evita que o conjunto 'escape' do caminho seguro. A vistoria precisa conferir presença física, estado da proteção e alinhamento do conjunto. Também é importante revisar histórico de manutenção para identificar sinais de desgaste prematuro nos cabos. Ausência ou dano relevante exige intervenção técnica antes de manter operação regular.",
+            "normas": [
+                "ABNT NBR 16858-1, 5.12.2",
+                "ABNT NBR 16858-2, 5.12.2"
+            ],
+            "responsabilidade": "Condomínio",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "elev-041",
+            "pergunta": "Por que o fim de curso (limitador final) do elevador é tão importante?",
+            "resposta": "O fim de curso é um dispositivo de segurança que corta a movimentação da máquina nos extremos da corrida (topo e fundo), caso sistemas normais de parada falhem. Ele funciona como proteção de última barreira para evitar impacto da cabina contra limites físicos do poço. Se o fim de curso estiver ausente, burlado ou inoperante, o elevador pode ultrapassar zona segura de deslocamento, gerando risco severo de colisão e danos estruturais. O teste deve ser funcional, com técnico habilitado e procedimento controlado. Falha nesse item não é detalhe: caracteriza não conformidade crítica e exige bloqueio para correção.",
+            "normas": [
+                "ABNT NBR 12892:2022, 10.5.1",
+                "ABNT NBR 12892:2022, 14.3.2"
+            ],
+            "responsabilidade": "Condomínio",
+            "gravidade": "Crítica"
+        },
+        {
+            "id": "elev-042",
+            "pergunta": "O que acontece quando a chave triangular de resgate está sem aviso de segurança?",
+            "resposta": "A chave triangular permite abertura técnica da porta em emergência, mas seu uso incorreto pode causar acidente grave. Por isso, além da chave existir, deve haver aviso claro com orientação e restrição de uso. Quando a sinalização está ausente, qualquer pessoa pode tentar abrir porta sem controle, inclusive com cabina fora do nível, criando risco de queda no poço. A recomendação é manter a chave protegida, com identificação visível e instrução objetiva para uso exclusivo por equipe autorizada. Ausência de advertência eleva risco operacional e responsabilidade civil em caso de ocorrência.",
+            "normas": [
+                "ABNT NBR 16858-7, Tabela A.1 (item 4.15)",
+                "ABNT NBR 12892:2022, 15.10"
+            ],
+            "responsabilidade": "Condomínio",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "elev-043",
+            "pergunta": "Cabos de manobra (chicote) com nós ou abrasão realmente podem parar o elevador?",
+            "resposta": "Sim. O chicote flexível leva energia e sinais de comando entre cabina e painel. Quando há abrasão, torção excessiva ou nós, o isolamento pode romper e gerar curto, falha intermitente de comando, parada inesperada e até risco de choque. Em operação diária, o defeito pode aparecer primeiro como falha 'aleatória', e depois evoluir para pane total. Em inspeção, deve-se observar todo o percurso do cabo, pontos de atrito, fixação e raio de curvatura. Em caso de dano significativo, a prática correta é substituir o trecho comprometido ou o conjunto, nunca apenas improvisar com fita.",
+            "normas": [
+                "ABNT NBR 12892:2022, 13.5.1.3"
+            ],
+            "responsabilidade": "Condomínio",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "elev-044",
+            "pergunta": "Aberturas de ventilação da cabina obstruídas são só desconforto ou falha de segurança?",
+            "resposta": "Não é apenas desconforto. Quando as aberturas de ventilação estão obstruídas, a troca de ar fica comprometida, aumentando calor, umidade e estresse de ocupantes em caso de aprisionamento. Em evento de pane prolongada, qualidade de ar insuficiente agrava risco para idosos, crianças e pessoas com condição respiratória. A manutenção deve incluir limpeza periódica e inspeção para garantir que acabamentos ou objetos não bloqueiem os respiros. O critério técnico é simples: ventilação precisa ser funcional e permanente conforme projeto.",
+            "normas": [
+                "ABNT NBR 12892:2009, 8.3.1 b"
+            ],
+            "responsabilidade": "Condomínio",
+            "gravidade": "Média"
+        },
+        {
+            "id": "elev-045",
+            "pergunta": "Sem sinalização de 'carro aqui' em porta manual, qual problema isso causa?",
+            "resposta": "Em elevadores com porta manual sem visor integral, o usuário pode tentar abrir a porta acreditando que a cabina está no andar, quando ainda não está nivelada. A sinalização de 'carro aqui' reduz esse erro humano e evita abertura indevida com risco de queda no vão. Quando ausente ou inoperante, aumenta a chance de acidente, especialmente em momentos de pressa ou baixa visibilidade. A vistoria deve verificar se o sinal é claramente perceptível no momento correto da parada. Se não houver indicação confiável, a operação deve ser corrigida para atender requisito de segurança.",
+            "normas": [
+                "ABNT NBR 12892:2009, 7.7.2.1 b)",
+                "ABNT NBR 16858-7:2022, Anexo B.2"
+            ],
+            "responsabilidade": "Condomínio",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "elev-046",
+            "pergunta": "Por que o interruptor principal do elevador precisa permitir bloqueio por cadeado (LOTO)?",
+            "resposta": "Durante manutenção, é obrigatório garantir que ninguém religue o sistema por engano. O bloqueio por cadeado (LOTO) cumpre exatamente essa função: manter o equipamento isolado até o término seguro do serviço. Quando o interruptor principal não permite bloqueio físico, existe risco real de religamento acidental, com possibilidade de choque elétrico e movimento inesperado da cabina. Esse é um ponto crítico de segurança ocupacional e deve ser tratado com prioridade. A adequação envolve dispositivo compatível com trava mecânica e procedimento formal de bloqueio e etiquetagem.",
+            "normas": [
+                "ABNT NBR 12892:2009, 13.4.2",
+                "ABNT NBR 16858-1:2020, 5.10.5.2"
+            ],
+            "responsabilidade": "Condomínio",
+            "gravidade": "Crítica"
+        },
+        {
+            "id": "elev-047",
+            "pergunta": "Painel técnico sem rótulos claros pode realmente provocar acidente?",
+            "resposta": "Pode, e com frequência. Em painéis de comando, identificação ruim ou inexistente aumenta chance de manobra errada durante falha, manutenção ou resgate. O técnico pode desligar circuito incorreto, atrasar resposta de emergência ou intervir em parte energizada sem necessidade. A rotulagem clara reduz erro humano e melhora rastreabilidade das intervenções. Por isso, não é somente organização: é requisito de segurança operacional. A auditoria deve conferir legibilidade, permanência das etiquetas e coerência com diagramas elétricos disponíveis.",
+            "normas": [
+                "ABNT NBR 12892:2009, 15.9",
+                "ABNT NBR 16858-1:2020, 5.10.10"
+            ],
+            "responsabilidade": "Condomínio",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "elev-048",
+            "pergunta": "Porta da casa de máquinas abrindo para dentro ou sem fechadura segura é grave?",
+            "resposta": "Sim. A casa de máquinas concentra riscos elétricos e mecânicos, então o acesso precisa ser controlado e seguro. Porta inadequada, sem fechamento confiável ou com sentido de abertura inseguro, dificulta evacuação em emergência e facilita entrada de pessoas não autorizadas. Isso aumenta risco de acidente e de intervenção indevida no equipamento. A adequação deve considerar ferragem segura, fechamento efetivo, sinalização e condição de abertura compatível com requisitos técnicos do ambiente. Em inspeções, esse item é tratado como não conformidade relevante de segurança.",
+            "normas": [
+                "ABNT NBR 16858-1:2020, 5.2.4.1",
+                "ABNT NBR 12892:2009, 15.4.1"
+            ],
+            "responsabilidade": "Condomínio",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "elev-049",
+            "pergunta": "Por que o livro de registro de manutenção do elevador é tão importante?",
+            "resposta": "O livro de registro é a memória técnica do elevador. É nele que devem constar manutenções, falhas recorrentes, trocas de peças, testes de segurança e ocorrências de resgate. Sem esse histórico, fica difícil provar que o equipamento recebeu manutenção adequada e quase impossível identificar padrões de falha antes de um acidente. Em auditorias, a ausência ou desatualização do registro costuma ser apontada como não conformidade porque compromete rastreabilidade e tomada de decisão. Em termos práticos: sem registro, o condomínio perde controle técnico e jurídico sobre o estado real do equipamento.",
+            "normas": [
+                "ABNT NBR 12892:2022, 17.3",
+                "ABNT NBR 16858-1:2020, 7.2.4"
+            ],
+            "responsabilidade": "Condomínio",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "elev-050",
+            "pergunta": "Esquema elétrico e hidráulico do elevador precisam ficar disponíveis no prédio?",
+            "resposta": "Sim. Os esquemas técnicos são essenciais para manutenção segura e rápida. Sem eles, o técnico pode perder tempo crítico em pane, executar diagnóstico incompleto e até intervir no ponto errado do circuito. Em situação de emergência, documentação indisponível aumenta risco de erro humano e de prolongamento da indisponibilidade do elevador. Por isso, os documentos devem estar atualizados, legíveis e acessíveis para equipe autorizada. Não é burocracia: é requisito básico para segurança operacional e para qualidade do serviço de manutenção.",
+            "normas": [
+                "ABNT NBR 12892:2022, 17.1",
+                "ABNT NBR 16858-1:2020, 7.2"
+            ],
+            "responsabilidade": "Condomínio",
+            "gravidade": "Média"
+        },
+        {
+            "id": "elev-051",
+            "pergunta": "Bypass em proteção térmica do motor (termistor) é perigoso de verdade?",
+            "resposta": "É perigoso e pode causar dano sério. O termistor monitora temperatura do motor e ajuda a evitar superaquecimento. Quando alguém faz bypass (ponte) para 'não parar', o motor opera sem proteção adequada, podendo queimar enrolamento, reduzir vida útil e criar risco elétrico. Além do prejuízo técnico, essa prática viola requisitos de segurança e pode gerar responsabilização em caso de acidente. Se há disparo frequente de proteção, a solução correta é diagnosticar causa real (sobrecarga, ventilação inadequada, falha de comando), nunca desativar a proteção.",
+            "normas": [
+                "ABNT NBR 16858-1:2020, 5.10",
+                "ABNT NBR 12892:2022, 13"
+            ],
+            "responsabilidade": "Condomínio",
+            "gravidade": "Crítica"
+        },
+        {
+            "id": "elev-052",
+            "pergunta": "Modificar software de segurança do elevador sem autorização pode gerar risco real?",
+            "resposta": "Pode gerar risco crítico. Sistemas eletrônicos de segurança (PESSRAL) controlam funções como bloqueio com porta aberta, monitoramento de velocidade e respostas de falha. Alterações não autorizadas no software podem desativar proteções sem que isso seja perceptível no uso comum. O resultado pode ser comportamento inseguro em condição de falha. Por isso, qualquer atualização deve seguir procedimento formal, com rastreabilidade, validação e responsável técnico. Ajuste improvisado ou sem registro é prática de alto risco operacional e jurídico.",
+            "normas": [
+                "ABNT NBR 16858-1:2020, 5.11.2.6",
+                "ABNT NBR 16858-2, Tabela B.1"
+            ],
+            "responsabilidade": "Mista - requer avaliação técnica",
+            "gravidade": "Crítica"
+        },
+        {
+            "id": "elev-053",
+            "pergunta": "Avisos críticos do painel podem ficar só em idioma estrangeiro?",
+            "resposta": "Não é recomendável e, em contexto de segurança, pode ser não conformidade. Em manutenção e resgate, comandos e avisos precisam ser compreendidos rapidamente por quem atua no local. Se os avisos essenciais estiverem apenas em idioma estrangeiro, aumenta a chance de manobra errada e atraso em resposta de emergência. O ideal é que informações críticas estejam em português claro e, quando aplicável, com simbologia padronizada. Isso reduz erro humano e melhora segurança operacional.",
+            "normas": [
+                "ABNT NBR 12892:2022, 15.1",
+                "ABNT NBR 12892:2022, 14.3.1.4.2.4"
+            ],
+            "responsabilidade": "Condomínio",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "elev-054",
+            "pergunta": "Ganchos e vigas da casa de máquinas sem indicação de carga máxima são um problema sério?",
+            "resposta": "Sim. Em manutenção pesada, ganchos e vigas são usados para içamento de motor, polias e outros componentes com grande massa. Sem indicação clara de carga máxima segura (SWL), aumenta o risco de sobrecarga estrutural, queda de peça e acidente grave com a equipe. A identificação visível permite planejar o içamento corretamente e escolher equipamento compatível. Falta de marcação é falha importante de segurança do trabalho e deve ser corrigida com identificação permanente e validação técnica da capacidade.",
+            "normas": [
+                "ABNT NBR 16858-1:2020, Tabela 17 (3.4)",
+                "ABNT NBR 12892:2009, 15.4.4"
+            ],
+            "responsabilidade": "Condomínio",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "elev-055",
+            "pergunta": "Se o poço do elevador fica sobre área acessível, precisa de proteção extra?",
+            "resposta": "Precisa. Quando existe área ocupável abaixo do poço, o projeto deve prever solução de proteção para cenário extremo de queda de contrapeso. Sem essa proteção, um evento de falha grave pode atingir laje inferior e gerar risco severo para pessoas no ambiente abaixo. Esse tipo de verificação envolve análise de engenharia civil e compatibilização com arranjo do elevador. Se não houver comprovação de proteção adequada, o caso deve ser tratado como não conformidade crítica.",
+            "normas": [
+                "ABNT NBR 16858-7:2022, Tabela A.1 (item 2.7)"
+            ],
+            "responsabilidade": "Mista - requer avaliação técnica",
+            "gravidade": "Crítica"
+        },
+        {
+            "id": "elev-056",
+            "pergunta": "Vidros do elevador sem marcação técnica podem reprovar inspeção?",
+            "resposta": "Sim. Vidros de cabina e visores devem ter marcação técnica permanente para comprovar tipo e conformidade. Sem essa identificação, não há evidência objetiva de que o material atende ao desempenho de segurança exigido. Em caso de impacto ou quebra, vidro inadequado pode aumentar risco de ferimentos. Por isso, a inspeção normalmente verifica presença da marcação e condição de fixação. Ausência de identificação pode levar à exigência de substituição ou comprovação documental complementar.",
+            "normas": [
+                "ABNT NBR 12892:2022, 7.2.3.5",
+                "ABNT NBR 12892:2022, 7.2.3.6"
+            ],
+            "responsabilidade": "Construtora",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "elev-057",
+            "pergunta": "O que é proteção contra movimento não intencional (UCMP) e por que ela importa?",
+            "resposta": "UCMP é um sistema que evita deslocamento indevido da cabina com portas abertas na zona de desembarque. Em falhas específicas de freio/tração, a cabina pode se mover lentamente sem comando, criando risco de queda no embarque e desembarque. A proteção UCMP detecta essa condição e aciona bloqueio de segurança. Quando ausente ou inoperante, o risco ao passageiro aumenta de forma relevante. Em elevadores que exigem esse recurso, sua falha é tratada como não conformidade crítica e demanda correção imediata.",
+            "normas": [
+                "ABNT NBR 16858-1, 5.6"
+            ],
+            "responsabilidade": "Condomínio",
+            "gravidade": "Crítica"
+        },
+        {
+            "id": "elev-058",
+            "pergunta": "Elevador hidráulico sem válvula de queda ajustada corretamente pode operar?",
+            "resposta": "Não deve operar sem validação. A válvula de queda é componente crítico para limitar descida em caso de perda de estanqueidade no circuito hidráulico. Se estiver inexistente, mal ajustada ou sem ensaio adequado, a cabina pode apresentar comportamento inseguro em falha, com desaceleração inadequada e risco aos ocupantes. Além disso, vazamentos e ajustes incorretos aumentam desgaste e indisponibilidade. A inspeção deve verificar presença, regulagem, evidência de teste e conformidade com critérios normativos aplicáveis.",
+            "normas": [
+                "ABNT NBR 12892:2022, 12.3.4.5",
+                "ABNT NBR 12892:2022, 15.17"
+            ],
+            "responsabilidade": "Condomínio",
+            "gravidade": "Crítica"
+        },
+        {
+            "id": "elev-059",
+            "pergunta": "A cabina pode operar sem porta interna depois de uma modernização?",
+            "resposta": "Em regra, não deve operar sem a proteção prevista no projeto e nas normas aplicáveis. Em modernizações, alguns prédios tentam manter configurações antigas para reduzir custo, mas retirar ou desativar porta interna pode aumentar risco de contato com partes perigosas e comprometer desempenho de segurança de portas. Além do risco físico, isso costuma gerar pendência em auditoria e dificuldade para comprovação de conformidade. A avaliação precisa considerar tipo de elevador, arranjo construtivo e requisitos normativos vigentes para aquela intervenção. Se a solução instalada não garante o mesmo nível de segurança, deve ser corrigida antes de liberar operação regular.",
+            "normas": [
+                "ABNT NBR 16858-1:2020, 5.3",
+                "ABNT NBR 12892:2022, 7"
+            ],
+            "responsabilidade": "Mista - requer avaliação técnica",
+            "gravidade": "Crítica"
+        },
+        {
+            "id": "elev-060",
+            "pergunta": "Força de operação dos botões muito alta ou muito baixa pode reprovar?",
+            "resposta": "Sim. Se a força necessária para acionar botão estiver fora da faixa adequada, o uso fica inseguro e pouco acessível. Força alta dificulta para idosos e pessoas com limitação motora. Força baixa aumenta acionamento involuntário e erros de comando. Em inspeções, esse ponto costuma ser verificado com critério funcional e, quando necessário, medição objetiva. Ajuste correto melhora acessibilidade, reduz falhas de uso e ajuda na conformidade técnica do sistema de comando da cabina e pavimentos.",
+            "normas": [
+                "ABNT NBR 16858-3:2022, Tabela 4"
+            ],
+            "responsabilidade": "Condomínio",
+            "gravidade": "Média"
+        },
+        {
+            "id": "elev-061",
+            "pergunta": "Placas de identificação dos pavimentos apagadas dentro da cabina são um risco real?",
+            "resposta": "São, principalmente para usuários com baixa visão, visitantes e em situação de emergência. Se a identificação dos andares estiver apagada ou ilegível, pessoas podem desembarcar no pavimento errado, atrasar evacuação e aumentar risco em cenários críticos. A sinalização clara de pavimento é parte da experiência segura de uso, não apenas estética. Em auditorias, a legibilidade e o contraste da indicação costumam ser verificados como item de conformidade funcional. A correção normalmente é simples (substituição ou restauração), mas não deve ser negligenciada.",
+            "normas": [
+                "ABNT NBR 12892:2009, 15.8",
+                "ABNT NBR 16858-3:2022, 5.4"
+            ],
+            "responsabilidade": "Condomínio",
+            "gravidade": "Média"
+        },
+        {
+            "id": "elev-062",
+            "pergunta": "Ausência de sinal sonoro e anúncio de voz afeta segurança ou só acessibilidade?",
+            "resposta": "Afeta os dois. O anúncio sonoro e de voz ajuda usuários com deficiência visual a entender posição da cabina, sentido de viagem e momento de desembarque. Sem esse recurso, aumenta erro de uso e perda de autonomia. Em fluxo intenso, a falta de aviso também causa embarque/desembarque desorganizado. Em muitos contextos, é requisito normativo de acessibilidade e segurança de uso público. A solução envolve verificar hardware, volume, clareza do anúncio e integração com comandos de parada.",
+            "normas": [
+                "ABNT NBR 16858-3:2022, 5.4.2.4.2",
+                "ABNT NBR 16858-3:2022, 5.4.2.5.2"
+            ],
+            "responsabilidade": "Condomínio",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "elev-063",
+            "pergunta": "Portas de pavimento com visor de vidro inadequado podem ser mantidas em uso?",
+            "resposta": "Não é recomendável manter em uso sem avaliação e correção. O visor de vidro em porta de pavimento deve atender requisitos de resistência e fixação para reduzir risco de quebra perigosa. Se houver vidro inadequado, sem comprovação técnica, com fixação ruim ou danos, há risco de acidente por impacto e estilhaçamento. Em inspeção, isso costuma ser tratado como não conformidade relevante e pode exigir substituição por componente certificado. A segurança do conjunto porta/visor é essencial para uso diário seguro.",
+            "normas": [
+                "ABNT NBR 12892, 7.5.3.5"
+            ],
+            "responsabilidade": "Mista - requer avaliação técnica",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "elev-064",
+            "pergunta": "Cabina com piso muito liso realmente aumenta risco de acidente?",
+            "resposta": "Sim. Piso muito liso reduz aderência, especialmente com calçado molhado, e aumenta risco de escorregamento no embarque e desembarque. O problema se agrava para idosos, crianças e pessoas com mobilidade reduzida. Em termos simples, o piso da cabina precisa ser seguro em condição real de uso, não apenas bonito. A inspeção avalia textura, estado do revestimento e presença de elementos soltos. Se o acabamento for inadequado, a correção deve priorizar material antiderrapante compatível com o ambiente.",
+            "normas": [
+                "ABNT NBR 16858-3:2022, 5.3.2.4"
+            ],
+            "responsabilidade": "Condomínio",
+            "gravidade": "Média"
+        },
+        {
+            "id": "elev-065",
+            "pergunta": "Elevador com para-choques do poço ressecados ou deteriorados pode continuar operando?",
+            "resposta": "É uma condição de risco e deve ser corrigida rapidamente. Os para-choques (buffers) no fundo do poço absorvem energia em situações extremas de fim de curso. Quando estão ressecados, vazando ou deteriorados, perdem capacidade de amortecimento e deixam o sistema mais vulnerável em evento anormal. A manutenção deve inspecionar integridade física, fixação e condição funcional desses componentes. Se houver degradação relevante, a troca é o caminho seguro para restabelecer proteção adequada.",
+            "normas": [
+                "ABNT NBR 12892:2022, 10",
+                "ABNT NBR 16858-1:2020, 5.7"
+            ],
+            "responsabilidade": "Condomínio",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "elev-066",
+            "pergunta": "Corrimão da cabina fora de altura/padrão é só detalhe estético?",
+            "resposta": "Não. Corrimão é elemento de apoio para estabilidade durante aceleração, frenagem e movimentação da cabina. Quando está em altura inadequada, mal fixado ou com geometria ruim, perde função de segurança e acessibilidade. Isso impacta principalmente idosos, gestantes e pessoas com redução de equilíbrio. Em auditoria, corrimão fora de padrão pode ser apontado como não conformidade. O ajuste correto melhora segurança de uso sem depender de grande intervenção estrutural.",
+            "normas": [
+                "ABNT NBR 16858-3:2022, 5.3",
+                "ABNT NBR 12892:2022, 8"
+            ],
+            "responsabilidade": "Construtora",
+            "gravidade": "Média"
+        },
+        {
+            "id": "elev-067",
+            "pergunta": "Assento basculante de acessibilidade fora do padrão pode gerar reprovação?",
+            "resposta": "Pode, porque o assento basculante faz parte dos recursos de acessibilidade em cenários específicos. Se está fora de posição, sem estabilidade, em dimensão inadequada ou com risco de travamento, deixa de cumprir função e pode criar obstáculo adicional na cabina. A avaliação deve considerar projeto do elevador, espaço útil e critérios normativos de acessibilidade. Quando não conforme, a recomendação é ajuste ou substituição por modelo compatível, com verificação de uso seguro.",
+            "normas": [
+                "ABNT NBR 16858-3:2022",
+                "ABNT NBR 9050"
+            ],
+            "responsabilidade": "Mista - requer avaliação técnica",
+            "gravidade": "Média"
+        },
+        {
+            "id": "elev-068",
+            "pergunta": "Falta de iluminação de emergência dentro da cabina é falha crítica?",
+            "resposta": "Sim, é falha crítica de segurança. Em queda de energia, a iluminação de emergência permite orientação mínima para evitar pânico, quedas e acidentes durante aprisionamento. Sem ela, usuários ficam no escuro total, o que piora risco para crianças, idosos e pessoas com condição clínica sensível. A manutenção deve testar autonomia de bateria, acionamento automático e nível de iluminação funcional. Se não houver funcionamento confiável, a correção deve ser imediata antes de manter o equipamento em operação normal.",
+            "normas": [
+                "ABNT NBR 16858-1:2020, 5.4",
+                "ABNT NBR 12892:2022, 8"
+            ],
+            "responsabilidade": "Condomínio",
+            "gravidade": "Crítica"
+        },
+        {
+            "id": "elev-069",
+            "pergunta": "Sensor da porta que não detecta pessoa no fechamento é falha grave?",
+            "resposta": "Sim. Se o sistema de detecção de presença falha, a porta pode fechar sobre o usuário antes de reabrir, aumentando risco de impacto e esmagamento, principalmente com crianças e idosos. O comportamento correto é detectar aproximação e inverter o fechamento com rapidez. Quando isso não acontece, o elevador perde uma camada essencial de proteção. A manutenção deve avaliar sensores, alinhamento, tempo de resposta e integração com o comando da porta. Enquanto não houver correção confiável, o risco permanece elevado para todos os passageiros.",
+            "normas": [
+                "ABNT NBR 16858-7:2022, Tabela A.1",
+                "ABNT NBR 12892:2022, 7.6"
+            ],
+            "responsabilidade": "Condomínio",
+            "gravidade": "Crítica"
+        },
+        {
+            "id": "elev-070",
+            "pergunta": "Elevador com vibração lateral excessiva pode ser apenas desconforto?",
+            "resposta": "Não. Vibração lateral acima do normal pode indicar desalinhamento de trilhos, desgaste de roletes, problemas no contrapeso ou falhas de fixação. Além do desconforto, ela acelera desgaste mecânico e pode evoluir para pane mais séria se não tratada. O ideal é investigar causa com inspeção técnica, medição e correção do componente crítico. Ignorar vibração recorrente geralmente aumenta custo de manutenção futura e tempo de indisponibilidade.",
+            "normas": [
+                "ABNT NBR 16858-1:2020, 5.7",
+                "ABNT NBR 12892:2022, 10"
+            ],
+            "responsabilidade": "Condomínio",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "elev-071",
+            "pergunta": "Fios e conectores expostos no quadro de comando podem causar interdição?",
+            "resposta": "Podem, porque representam risco direto de choque elétrico, curto-circuito e incêndio. Em ambiente técnico, fiação precisa estar protegida e organizada para evitar contato acidental e abrasão por vibração. Quando há conectores expostos ou isolamento danificado, a confiabilidade do sistema cai e o perigo para manutenção aumenta. Em auditorias de segurança, isso é apontado como não conformidade grave e requer correção imediata com proteção mecânica adequada e revisão elétrica completa.",
+            "normas": [
+                "ABNT NBR 12892:2009, 13.5.1.1"
+            ],
+            "responsabilidade": "Condomínio",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "elev-072",
+            "pergunta": "A ausência de aterramento adequado no elevador oferece risco aos usuários?",
+            "resposta": "Sim. O aterramento é fundamental para desviar correntes de falha e reduzir risco de choque em carcaças metálicas e painéis. Sem aterramento confiável, uma falha elétrica pode energizar partes acessíveis e colocar usuários e técnicos em perigo. O problema nem sempre é visível no uso diário, por isso deve ser verificado em manutenção com testes específicos. Se houver não conformidade, a correção elétrica precisa ser prioritária antes de manter operação normal.",
+            "normas": [
+                "ABNT NBR 5410",
+                "ABNT NBR 12892:2022, 13"
+            ],
+            "responsabilidade": "Condomínio",
+            "gravidade": "Crítica"
+        },
+        {
+            "id": "elev-073",
+            "pergunta": "Cabina com excesso de material combustível no interior é irregularidade?",
+            "resposta": "Sim. Materiais combustíveis em excesso dentro da cabina podem agravar propagação de fogo e emissão de fumaça em situação de incêndio. Revestimentos, colas e elementos decorativos devem respeitar critérios de segurança e reação ao fogo aplicáveis ao uso do elevador. Além do risco, esse excesso pode comprometer conformidade em inspeções e dificultar resposta de emergência. A recomendação é revisar materiais usados no acabamento interno e remover componentes inadequados.",
+            "normas": [
+                "ABNT NBR 16858-1:2020, 5.4",
+                "CBMGO NT-11"
+            ],
+            "responsabilidade": "Mista - requer avaliação técnica",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "elev-074",
+            "pergunta": "Ventilação insuficiente no topo do poço pode comprometer operação de emergência?",
+            "resposta": "Pode, especialmente em cenários de calor, fumaça ou incêndio. A ventilação do poço ajuda a controlar acúmulo de calor e gases, melhorando condições para funcionamento seguro e acesso técnico. Quando a ventilação permanente está ausente ou bloqueada, aumenta risco para equipe de resgate e para continuidade operacional em emergência. Esse item deve ser verificado no contexto do tipo de elevador e exigências locais de segurança contra incêndio.",
+            "normas": [
+                "CBMGO NT-11, 5.9.2.4"
+            ],
+            "responsabilidade": "Mista - requer avaliação técnica",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "elev-075",
+            "pergunta": "Elevador com ruído recorrente na partida deve ser tratado como falha técnica?",
+            "resposta": "Sim, quando o ruído é recorrente e acima do comportamento esperado. Ruído na partida pode indicar problema em freio, acoplamento, roletes, guias ou outros componentes de tração. Mesmo que o elevador ainda opere, o sintoma costuma ser sinal precoce de desgaste e deve ser investigado para evitar agravamento. Tratar cedo reduz risco de pane e custo de correção. A manutenção deve registrar ocorrência, medir condição e atuar na causa, não apenas no sintoma.",
+            "normas": [
+                "ABNT NBR 12892:2022",
+                "ISO 8041"
+            ],
+            "responsabilidade": "Condomínio",
+            "gravidade": "Média"
+        },
+        {
+            "id": "elev-076",
+            "pergunta": "Ausência de proteção contra violação em módulos eletrônicos de segurança é grave?",
+            "resposta": "É grave, porque módulos de segurança sem proteção contra violação ficam vulneráveis a alterações indevidas de parâmetros críticos. Isso pode desabilitar funções de proteção sem evidência imediata para o usuário comum. Em sistemas eletrônicos de segurança, integridade e rastreabilidade são fundamentais. A inspeção deve verificar lacres, controle de acesso, registros de alteração e política de manutenção autorizada. Falha nesse controle aumenta risco técnico e jurídico.",
+            "normas": [
+                "ABNT NBR 16858-1:2020, 5.11.2.6",
+                "ABNT NBR 16858-2"
+            ],
+            "responsabilidade": "Mista - requer avaliação técnica",
+            "gravidade": "Crítica"
+        },
+        {
+            "id": "elev-077",
+            "pergunta": "Falta de identificação clara da chave geral do elevador atrapalha emergência?",
+            "resposta": "Sim. Em emergência, cada segundo importa. Se a chave geral não estiver claramente identificada, a equipe pode desligar circuito errado, atrasar resgate e manter risco elétrico ativo por mais tempo. A identificação deve ser permanente, legível e compatível com a nomenclatura do equipamento. Esse ajuste simples melhora segurança da operação e reduz erro humano em intervenção crítica.",
+            "normas": [
+                "ABNT NBR 12892:2022, 15.9",
+                "ABNT NBR 16858-1:2020, 5.10.1"
+            ],
+            "responsabilidade": "Condomínio",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "elev-078",
+            "pergunta": "Se o elevador de emergência não tiver alimentação dedicada, qual é o risco?",
+            "resposta": "O risco principal é perder operação justamente quando mais se precisa: em incêndio ou queda de energia. Elevador de emergência deve ter alimentação protegida e arranjo de contingência (incluindo gerador, quando exigido) para manter função de resgate. Sem isso, há atraso de socorro, aprisionamento e piora do cenário de evacuação. Esse item é crítico e precisa de verificação técnica completa de circuito, chaveamento e autonomia do sistema de energia de emergência.",
+            "normas": [
+                "CBMGO NT-11, 5.9.2.1 c) e d)"
+            ],
+            "responsabilidade": "Mista - requer avaliação técnica",
+            "gravidade": "Crítica"
+        },
+        {
+            "id": "elev-079",
+            "pergunta": "A porta da casa de máquinas precisa sempre ficar trancada e sinalizada?",
+            "resposta": "Sim. A casa de máquinas reúne painéis energizados e componentes com risco mecânico, então o acesso deve ser restrito a pessoal autorizado. Porta sem controle adequado facilita entrada indevida, aumenta risco de acidente e compromete integridade do equipamento. A sinalização deve ser clara e permanente, e o sistema de fechamento precisa funcionar corretamente. Em auditorias, falhas nesse item costumam ser classificadas como não conformidade de segurança relevante.",
+            "normas": [
+                "ABNT NBR 12892:2009, 15.4.1",
+                "ABNT NBR 16858-1:2020, 5.2.4.1"
+            ],
+            "responsabilidade": "Condomínio",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "elev-080",
+            "pergunta": "Pode operar elevador com indícios de infiltração na casa de máquinas?",
+            "resposta": "Não é recomendável manter operação sem avaliação imediata. Umidade e infiltração em ambiente elétrico elevam risco de curto-circuito, oxidação acelerada e falha de componentes críticos. Mesmo sem pane instantânea, a degradação pode evoluir rapidamente e aumentar indisponibilidade do sistema. A ação correta é identificar a origem da infiltração, corrigir vedação e revisar os componentes afetados antes da normalização completa.",
+            "normas": [
+                "ABNT NBR 12892:2022, 6",
+                "ABNT NBR 5410"
+            ],
+            "responsabilidade": "Mista - requer avaliação técnica",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "elev-081",
+            "pergunta": "Sem limpeza periódica no poço, quais riscos práticos aparecem?",
+            "resposta": "A falta de limpeza favorece acúmulo de poeira, óleo e resíduos que aceleram corrosão, dificultam inspeção e elevam risco elétrico em presença de umidade. Também pode prejudicar funcionamento de sensores e amortecedores, aumentando chance de falhas operacionais. Em resumo, poço sujo não é questão estética: é condição que reduz confiabilidade e segurança do elevador. A manutenção preventiva deve incluir limpeza e eliminação da causa de vazamentos.",
+            "normas": [
+                "ABNT NBR 12892:2009, 5.6.5.1"
+            ],
+            "responsabilidade": "Condomínio",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "elev-082",
+            "pergunta": "Falta de dispositivo de resgate manual funcional pode impedir atendimento de emergência?",
+            "resposta": "Sim. Em falha de energia ou pane de comando, o resgate manual permite posicionar a cabina com segurança para retirada de passageiros. Se o dispositivo estiver ausente, travado ou sem instrução de uso, o tempo de aprisionamento aumenta e o risco humano também. Por isso, além de existir, o recurso deve ser testado periodicamente e operado por equipe treinada. É item crítico para resposta rápida e segura.",
+            "normas": [
+                "ABNT NBR 12892:2022, 15.10",
+                "ABNT NBR 16858-1:2020, 7.2.2"
+            ],
+            "responsabilidade": "Condomínio",
+            "gravidade": "Crítica"
+        },
+        {
+            "id": "elev-083",
+            "pergunta": "Comando de inspeção no teto da cabina sem botão STOP adequado é aceitável?",
+            "resposta": "Não. O comando de inspeção no teto deve incluir parada de emergência efetiva para proteger o técnico durante manutenção na caixa. Sem STOP adequado, há risco de movimento inesperado com potencial de esmagamento. Esse item é um dos pilares de segurança ocupacional em elevadores e não pode ser tratado como detalhe. Se houver deficiência, a operação de inspeção deve ser interrompida até regularização.",
+            "normas": [
+                "ABNT NBR 12892, 14.3.1.4.1.1",
+                "ABNT NBR 12892, 14.3.1.3"
+            ],
+            "responsabilidade": "Condomínio",
+            "gravidade": "Crítica"
+        },
+        {
+            "id": "elev-084",
+            "pergunta": "Elevador com deslizamento na tração das polias precisa parar imediatamente?",
+            "resposta": "Deslizamento de tração é sinal sério e requer ação imediata. Ele indica perda de aderência entre cabos e polias, o que pode comprometer aceleração, frenagem e nivelamento. Se persistir, aumenta desgaste dos cabos e pode evoluir para falha grave. A resposta técnica inclui inspeção de ranhuras, tensão de cabos, limpeza e ajuste do conjunto de tração. Dependendo da severidade, o equipamento deve ficar fora de operação até correção segura.",
+            "normas": [
+                "ABNT NBR 16858-1, 5.12",
+                "ABNT NBR 16858-2, 5.12"
+            ],
+            "responsabilidade": "Condomínio",
+            "gravidade": "Crítica"
+        },
+        {
+            "id": "elev-085",
+            "pergunta": "Freio de segurança com retardamento fora da faixa pode causar lesão?",
+            "resposta": "Pode. Em evento de acionamento de segurança, desaceleração muito brusca ou mal calibrada pode gerar pico de força acima do tolerável para ocupantes, com risco de lesão. Já uma atuação lenta demais pode não proteger adequadamente. Por isso, freio de segurança exige calibração correta e ensaio técnico periódico. Fora da faixa esperada, o sistema precisa de ajuste antes de operação segura.",
+            "normas": [
+                "ABNT NBR 16858-2, 5.3.3.3",
+                "ABNT NBR 16858-2, 5.5.3.2.6"
+            ],
+            "responsabilidade": "Mista - requer avaliação técnica",
+            "gravidade": "Crítica"
+        },
+        {
+            "id": "elev-086",
+            "pergunta": "Guias com deformação ou fixação comprometida podem afetar frenagem de emergência?",
+            "resposta": "Sim. As guias e seus suportes são referência estrutural para movimento e para atuação correta de dispositivos de segurança. Se houver flambagem, deformação ou ancoragem frágil, a cabina pode perder estabilidade e a frenagem de emergência ficar comprometida. Esse é um problema estrutural que exige avaliação técnica detalhada, incluindo base civil e fixadores. Não conformidades relevantes devem ser corrigidas antes da continuidade de operação normal.",
+            "normas": [
+                "ABNT NBR 16858-1:2020, Anexo E",
+                "ABNT NBR 12892:2022, Anexo E"
+            ],
+            "responsabilidade": "Mista - requer avaliação técnica",
+            "gravidade": "Crítica"
+        },
+        {
+            "id": "elev-087",
+            "pergunta": "Elevador hidráulico com vazamento contínuo no circuito pode seguir em uso?",
+            "resposta": "Não deve seguir em uso sem correção. Vazamento contínuo no circuito hidráulico reduz confiabilidade da descida controlada, aumenta risco ambiental no poço e acelera falhas de vedação e componentes. Mesmo quando o defeito parece pequeno, a tendência é piorar com operação. A manutenção deve localizar origem, substituir componentes comprometidos e validar funcionamento da válvula de segurança após reparo.",
+            "normas": [
+                "ABNT NBR 12892, 12.3.2.1",
+                "ABNT NBR 12892, 12.3.8"
+            ],
+            "responsabilidade": "Condomínio",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "elev-088",
+            "pergunta": "Falha no monitoramento watchdog do sistema eletrônico de segurança é crítica?",
+            "resposta": "Sim, é crítica. O watchdog verifica se o sistema de segurança eletrônico continua operando corretamente e reage quando há travamento ou comportamento anômalo. Sem esse monitoramento funcional, falhas latentes podem passar despercebidas e comprometer funções essenciais de proteção. Em sistemas de segurança, ausência de supervisão confiável aumenta risco de evento grave sem aviso. A correção exige diagnóstico técnico especializado e validação completa do circuito de segurança.",
+            "normas": [
+                "ABNT NBR 16858-2, Tabelas B.4 e B.7"
+            ],
+            "responsabilidade": "Mista - requer avaliação técnica",
+            "gravidade": "Crítica"
+        },
+        {
+            "id": "elev-089",
+            "pergunta": "Pode manter o elevador em uso com alarme de sobretemperatura recorrente?",
+            "resposta": "Não é recomendado. Alarme recorrente de temperatura indica que algum componente está operando fora da condição esperada, como motor, inversor ou freio. Mesmo quando o elevador volta a funcionar, a repetição do evento sugere degradação progressiva e risco de pane súbita. A manutenção deve identificar causa raiz, corrigir e testar em carga antes de liberar uso contínuo.",
+            "normas": [
+                "ABNT NBR 12892:2022, 13",
+                "ABNT NBR 16858-1:2020, 5.10"
+            ],
+            "responsabilidade": "Condomínio",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "elev-090",
+            "pergunta": "A cabina pode apresentar oscilação na parada sem ser considerada falha?",
+            "resposta": "Pequenas variações podem ocorrer, mas oscilação perceptível e recorrente na parada indica problema de ajuste, amortecimento ou guiamento. Isso afeta conforto, acessibilidade e pode evoluir para desgaste acelerado de componentes. O correto é inspecionar sistema de nivelamento, roletes e condições de trilhos para eliminar a causa.",
+            "normas": [
+                "ABNT NBR 12892:2022, 3.23",
+                "ABNT NBR 16858-7:2022, Tabela A.1"
+            ],
+            "responsabilidade": "Condomínio",
+            "gravidade": "Média"
+        },
+        {
+            "id": "elev-091",
+            "pergunta": "Falta de contraste visual em botoeiras de pavimento compromete acessibilidade?",
+            "resposta": "Sim. Contraste adequado facilita leitura e uso por pessoas com baixa visão. Sem contraste, aumenta erro de acionamento e perda de autonomia do usuário. A correção geralmente é simples, mas indispensável para conformidade e uso inclusivo em ambiente coletivo.",
+            "normas": [
+                "ABNT NBR 16858-3:2022, Tabela 5"
+            ],
+            "responsabilidade": "Construtora",
+            "gravidade": "Média"
+        },
+        {
+            "id": "elev-092",
+            "pergunta": "Intermitência no interfone de emergência já caracteriza não conformidade?",
+            "resposta": "Sim, porque comunicação de emergência precisa ser confiável no momento crítico. Se há cortes de áudio, ruído excessivo ou falha de chamada, o sistema não atende sua função principal. Deve-se testar alimentação de backup, fiação, módulo de voz e ponto remoto de atendimento até garantir comunicação estável.",
+            "normas": [
+                "ABNT NBR 16858-7:2022, Tabela A.1 (item 5.11)"
+            ],
+            "responsabilidade": "Condomínio",
+            "gravidade": "Crítica"
+        },
+        {
+            "id": "elev-093",
+            "pergunta": "Porta de pavimento com fechamento lento demais oferece risco?",
+            "resposta": "Pode oferecer risco operacional e de segurança patrimonial. Fechamento excessivamente lento aumenta tempo de exposição da abertura, favorece uso indevido e compromete fluxo seguro de passageiros. Além disso, pode indicar falha de regulagem no conjunto de porta. Ajustes devem ser feitos dentro dos limites técnicos do fabricante e das normas aplicáveis.",
+            "normas": [
+                "ABNT NBR 12892:2022, 7.6"
+            ],
+            "responsabilidade": "Condomínio",
+            "gravidade": "Média"
+        },
+        {
+            "id": "elev-094",
+            "pergunta": "Ausência de inspeção periódica documentada pode gerar responsabilização do condomínio?",
+            "resposta": "Pode, porque sem registro periódico o condomínio perde evidência de diligência técnica na gestão do equipamento. Em caso de incidente, a falta de documentação fragiliza defesa jurídica e pode indicar negligência de manutenção. O ideal é manter cronograma, laudos e registros assinados por responsável técnico.",
+            "normas": [
+                "ABNT NBR 5674",
+                "ABNT NBR 12892:2022, 17"
+            ],
+            "responsabilidade": "Condomínio",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "elev-095",
+            "pergunta": "Cabos com diferença de tensão entre si podem causar falha no sistema?",
+            "resposta": "Sim. Desequilíbrio de tensão entre cabos gera distribuição irregular de carga, acelera desgaste e pode afetar nivelamento e tração. O ajuste técnico da equalização é essencial para manter estabilidade e vida útil do conjunto. Ignorar o problema aumenta risco de falha mecânica progressiva.",
+            "normas": [
+                "ABNT NBR 12892:2022, 9"
+            ],
+            "responsabilidade": "Condomínio",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "elev-096",
+            "pergunta": "Falta de proteção IP adequada em componentes eletrônicos da casa de máquinas é grave?",
+            "resposta": "É relevante porque poeira e umidade reduzem confiabilidade dos módulos eletrônicos e podem provocar curto ou falha intermitente. Componentes sem proteção compatível com o ambiente ficam mais vulneráveis e exigem intervenção corretiva. A solução envolve adequação de invólucros, vedação e organização do ambiente técnico.",
+            "normas": [
+                "ABNT NBR 16858-1:2020, 5.10",
+                "ABNT NBR 5410"
+            ],
+            "responsabilidade": "Condomínio",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "elev-097",
+            "pergunta": "Quando o elevador 'trava entre andares' com frequência, isso pode ser sintoma de segurança comprometida?",
+            "resposta": "Sim. Paradas entre andares recorrentes indicam falha de comando, sensor, alimentação ou tração e não devem ser tratadas como evento normal. Além do desconforto, há risco de pânico e aprisionamento, principalmente sem resposta de manutenção imediata. O correto é bloquear para diagnóstico estruturado quando o problema se repete.",
+            "normas": [
+                "ABNT NBR 12892:2022, 14",
+                "ABNT NBR 16858-1:2020, 5.6"
+            ],
+            "responsabilidade": "Condomínio",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "elev-098",
+            "pergunta": "Sinal luminoso de pavimento inoperante é apenas falha de conforto?",
+            "resposta": "Não. A indicação de pavimento auxilia navegação segura, reduz embarque indevido e melhora acessibilidade cognitiva. Sem esse recurso, usuários podem se confundir sobre localização e sentido da viagem, elevando risco de erro operacional. A manutenção deve restaurar indicação visual funcional e legível.",
+            "normas": [
+                "ABNT NBR 16858-3:2022, 5.4.2"
+            ],
+            "responsabilidade": "Condomínio",
+            "gravidade": "Média"
+        },
+        {
+            "id": "elev-099",
+            "pergunta": "Acesso ao quadro de comando sem barreira física para leigos é permitido?",
+            "resposta": "Não deve ser permitido. Quadro de comando contém circuitos críticos e tensão perigosa. Falta de barreira ou fechamento adequado expõe usuários não autorizados a risco de choque e manipulação indevida. O acesso deve ser restrito, com controle físico e sinalização apropriada.",
+            "normas": [
+                "ABNT NBR 12892:2022, 15.4",
+                "ABNT NBR 5410"
+            ],
+            "responsabilidade": "Condomínio",
+            "gravidade": "Crítica"
+        },
+        {
+            "id": "elev-100",
+            "pergunta": "Folga anormal em portas de pavimento aumenta risco de aprisionamento?",
+            "resposta": "Sim. Folgas anormais podem permitir entrada de dedos ou objetos em zona perigosa e aumentar risco de travamento da porta. Além disso, prejudicam confiabilidade do fechamento e podem levar a falhas de operação. Deve-se medir folgas, revisar regulagem e restaurar condição segura conforme limites normativos.",
+            "normas": [
+                "ABNT NBR 12892:2022, 7.5",
+                "ABNT NBR 16858-7:2022, Tabela A.1"
+            ],
+            "responsabilidade": "Condomínio",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "elev-101",
+            "pergunta": "Ruído de rolamento na porta da cabina deve ser tratado de imediato?",
+            "resposta": "Sim. Rolamento ruidoso normalmente indica desgaste e pode evoluir para travamento ou fechamento irregular da porta. Como o conjunto de portas é crítico para segurança do passageiro, a manutenção corretiva deve ser programada sem demora, com substituição do componente comprometido e novo ajuste de operação.",
+            "normas": [
+                "ABNT NBR 12892:2022, 7.6"
+            ],
+            "responsabilidade": "Condomínio",
+            "gravidade": "Média"
+        },
+        {
+            "id": "elev-102",
+            "pergunta": "A falta de teste funcional do freio de máquina compromete a segurança?",
+            "resposta": "Compromete sim. O freio da máquina precisa ser testado periodicamente para confirmar capacidade de parada e retenção em condição segura. Sem ensaio funcional, falhas podem passar despercebidas até um evento crítico. A prática correta inclui teste documentado, ajuste quando necessário e rastreabilidade dos resultados.",
+            "normas": [
+                "ABNT NBR 12892:2022, 9.7",
+                "ABNT NBR 12892:2022, 9.8"
+            ],
+            "responsabilidade": "Condomínio",
+            "gravidade": "Crítica"
+        },
+        {
+            "id": "elev-103",
+            "pergunta": "Comando de inspeção sem codificação clara de cores e rótulos é perigoso?",
+            "resposta": "Sim. Sem identificação clara de comandos, o risco de erro humano aumenta muito durante manutenção em área de alto risco. A codificação e rotulagem reduzem ambiguidade e melhoram resposta em condição crítica. Painel sem padrão visual adequado deve ser corrigido como prioridade de segurança ocupacional.",
+            "normas": [
+                "ABNT NBR 12892:2009, 15.7",
+                "ABNT NBR 16858-1:2020, 15.3"
+            ],
+            "responsabilidade": "Condomínio",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "elev-104",
+            "pergunta": "Elevador de emergência sem painel de controle no pavimento de descarga está irregular?",
+            "resposta": "Sim. O painel dedicado no pavimento de descarga é essencial para que equipe de emergência assuma o controle do elevador durante incêndio e bloqueie chamadas indevidas. Sem esse recurso, a resposta de resgate perde eficiência e segurança. É item normativo crítico para operação de bombeiros.",
+            "normas": [
+                "CBMGO NT-11, 5.9.2.2"
+            ],
+            "responsabilidade": "Mista - requer avaliação técnica",
+            "gravidade": "Crítica"
+        },
+        {
+            "id": "elev-105",
+            "pergunta": "Caixa do elevador de emergência sem compartimentação corta-fogo é falha grave?",
+            "resposta": "É grave. Sem compartimentação adequada, fumaça e fogo podem invadir a caixa e comprometer a função de resgate do elevador de emergência. Isso coloca em risco vítimas e equipes de socorro. A adequação deve ser tratada como prioridade em segurança contra incêndio do edifício.",
+            "normas": [
+                "CBMGO NT-11, 5.9.2.1 a) e b)",
+                "CBMGO NT-11, 5.9.2.4"
+            ],
+            "responsabilidade": "Mista - requer avaliação técnica",
+            "gravidade": "Crítica"
+        },
+        {
+            "id": "elev-106",
+            "pergunta": "Velocidade insuficiente do elevador de emergência em prédio alto é não conformidade?",
+            "resposta": "Pode ser. Em edificações altas, desempenho do elevador de emergência deve atender parâmetros mínimos para garantir tempo de resposta adequado. Se velocidade real estiver abaixo do exigido, o resgate fica mais lento e menos eficiente. É necessário ensaio de desempenho e ajuste técnico para conformidade.",
+            "normas": [
+                "CBMGO NT-11, 5.9.2.6",
+                "CBMGO NT-11, 5.9.2.7"
+            ],
+            "responsabilidade": "Mista - requer avaliação técnica",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "elev-107",
+            "pergunta": "Sinalização de capacidade (kg/pessoas) divergente da realidade do elevador é perigosa?",
+            "resposta": "Sim. Informação divergente induz sobrecarga e uso indevido, com impacto direto em tração, frenagem e vida útil do sistema. A placa deve refletir precisamente a capacidade nominal homologada. Quando há divergência, o condomínio deve corrigir de imediato para evitar risco técnico e responsabilidade civil.",
+            "normas": [
+                "ABNT NBR 12892:2022, 15.2"
+            ],
+            "responsabilidade": "Mista - requer avaliação técnica",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "elev-108",
+            "pergunta": "Ausência de checklist formal após manutenção corretiva é aceitável?",
+            "resposta": "Não é aceitável como boa prática de segurança. Sem checklist pós-intervenção, falhas de montagem, ajuste e teste podem passar despercebidas. O procedimento formal reduz erro humano e comprova que o sistema voltou a operar dentro dos parâmetros seguros. Em condomínios, isso também melhora governança e rastreabilidade técnica.",
+            "normas": [
+                "ABNT NBR 5674",
+                "ABNT NBR 12892:2022, 17"
+            ],
+            "responsabilidade": "Condomínio",
+            "gravidade": "Média"
+        },
+        {
+            "id": "elev-109",
+            "pergunta": "Folga crítica entre cabina e contrapeso no poço pode ser ignorada se o elevador está funcionando?",
+            "resposta": "Não. Funcionamento aparente não elimina risco estrutural e dinâmico. Folga crítica insuficiente pode causar contato indevido em regime anormal, vibração elevada e risco de dano em componentes de segurança. A verificação deve seguir critérios de projeto e norma para garantir volume seguro de operação.",
+            "normas": [
+                "ABNT NBR 12892:2022, 5.6",
+                "ABNT NBR 16858-1:2020, 5.2"
+            ],
+            "responsabilidade": "Mista - requer avaliação técnica",
+            "gravidade": "Crítica"
+        },
+        {
+            "id": "elev-110",
+            "pergunta": "Dispositivo de abertura de porta de emergência sem instrução pode causar acidente?",
+            "resposta": "Pode. Em pânico, uso incorreto de dispositivo de abertura aumenta risco de queda no poço e dano ao mecanismo de segurança. A orientação clara e a proteção de acesso evitam acionamento indevido por pessoas não treinadas. Sem isso, a probabilidade de incidente em resgate cresce significativamente.",
+            "normas": [
+                "ABNT NBR 12892:2022, 15.10",
+                "ABNT NBR 16858-7:2022, Tabela A.1"
+            ],
+            "responsabilidade": "Condomínio",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "elev-111",
+            "pergunta": "Cabina com acabamento solto em painéis internos representa risco técnico?",
+            "resposta": "Sim. Painéis e acabamentos soltos podem se desprender com vibração e causar lesão aos usuários, além de interferir em portas e componentes internos. O problema também indica possível deficiência de montagem ou manutenção. A correção deve incluir fixação adequada e inspeção de todo o conjunto interno.",
+            "normas": [
+                "ABNT NBR 12892:2022, 7",
+                "ABNT NBR 16858-1:2020, 5.4"
+            ],
+            "responsabilidade": "Mista - requer avaliação técnica",
+            "gravidade": "Média"
+        },
+        {
+            "id": "elev-112",
+            "pergunta": "Excesso de vibração no contrapeso pode comprometer segurança da corrida?",
+            "resposta": "Pode. Vibração excessiva no contrapeso costuma indicar desalinhamento, fixação insuficiente ou desgaste em componentes de guiamento. Isso impacta estabilidade geral e acelera degradação do sistema. É necessário inspeção técnica com foco em trilhos, fixadores e condição dinâmica do conjunto.",
+            "normas": [
+                "ABNT NBR 16858-1:2020, 5.7",
+                "ABNT NBR 12892:2022, 10.1"
+            ],
+            "responsabilidade": "Condomínio",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "elev-113",
+            "pergunta": "Pode haver operação com sensor de porta em bypass temporário?",
+            "resposta": "Não deve. Bypass em sensor de porta remove proteção essencial contra fechamento inseguro e eleva risco imediato ao passageiro. Mesmo que a intenção seja 'manter funcionamento', o efeito é reduzir segurança operacional. O procedimento correto é retirar o elevador de serviço até reparar e validar o sensor.",
+            "normas": [
+                "ABNT NBR 16858-7:2022, Tabela A.1",
+                "ABNT NBR 12892:2022, 7.6"
+            ],
+            "responsabilidade": "Condomínio",
+            "gravidade": "Crítica"
+        },
+        {
+            "id": "elev-114",
+            "pergunta": "Comando de prioridade de bombeiro inoperante torna o elevador de emergência inadequado?",
+            "resposta": "Sim. Sem comando de prioridade funcional, o elevador não atende plenamente ao uso de resgate em incêndio. O recurso deve permitir tomada de controle no pavimento de descarga e bloqueio de chamadas comuns conforme regra técnica. Falha nesse ponto compromete estratégia de emergência do prédio.",
+            "normas": [
+                "CBMGO NT-11, 5.9.2.2"
+            ],
+            "responsabilidade": "Mista - requer avaliação técnica",
+            "gravidade": "Crítica"
+        },
+        {
+            "id": "elev-115",
+            "pergunta": "Sem redundância mínima em circuitos críticos de segurança, o risco aumenta?",
+            "resposta": "Aumenta, porque sistemas críticos precisam tolerar falhas e entrar em estado seguro. Ausência de redundância e monitoramento adequado pode permitir que um defeito único evolua para condição perigosa. A engenharia de segurança exige arquitetura com detecção e resposta de falha compatíveis com o nível de risco.",
+            "normas": [
+                "ABNT NBR 16858-2",
+                "ABNT NBR 16858-1"
+            ],
+            "responsabilidade": "Mista - requer avaliação técnica",
+            "gravidade": "Crítica"
+        },
+        {
+            "id": "elev-116",
+            "pergunta": "Elevador com falha recorrente em nivelamento deve ser interditado imediatamente?",
+            "resposta": "Depende da severidade, mas recorrência exige ação imediata. Se houver degrau significativo, risco de queda ou impacto direto na acessibilidade, a operação deve ser restringida até correção. Nivelamento é requisito básico de segurança de embarque e desembarque e não pode ficar fora de controle por períodos prolongados.",
+            "normas": [
+                "ABNT NBR 12892, 3.23",
+                "ABNT NBR 16858-7, Tabela A.1"
+            ],
+            "responsabilidade": "Condomínio",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "elev-117",
+            "pergunta": "Bateria de emergência sem autonomia comprovada invalida plano de segurança?",
+            "resposta": "Sim, porque sem autonomia real não há garantia de iluminação e comunicação mínimas durante pane. A bateria deve ser testada e registrada periodicamente. Falta de comprovação técnica fragiliza a segurança do usuário e a conformidade do equipamento.",
+            "normas": [
+                "ABNT NBR 16858-1:2020, 5.4",
+                "ABNT NBR 12892:2022, 8"
+            ],
+            "responsabilidade": "Condomínio",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "elev-118",
+            "pergunta": "Ruído acima do padrão em múltiplos pavimentos pode indicar falha sistêmica?",
+            "resposta": "Pode. Quando o ruído ocorre em vários trechos da corrida, geralmente há causa sistêmica no conjunto de tração, guiamento ou portas, e não problema isolado. O diagnóstico deve considerar padrão de ocorrência, medição e correlação com vibração para definir correção efetiva.",
+            "normas": [
+                "ISO 8041",
+                "ABNT NBR 12892:2022"
+            ],
+            "responsabilidade": "Condomínio",
+            "gravidade": "Média"
+        },
+        {
+            "id": "elev-119",
+            "pergunta": "Falta de trava elétrica em acesso técnico ao poço é crítica?",
+            "resposta": "É crítica, pois acesso técnico sem intertravamento pode permitir operação do elevador com abertura em condição insegura. Isso eleva risco de acidente grave com equipe de manutenção. O intertravamento deve impedir movimento indevido até restabelecimento de condição segura.",
+            "normas": [
+                "ABNT NBR 12892:2022, 14",
+                "ABNT NBR 16858-1:2020, 5.6"
+            ],
+            "responsabilidade": "Condomínio",
+            "gravidade": "Crítica"
+        },
+        {
+            "id": "elev-120",
+            "pergunta": "Sem plano de manutenção preventiva formal o elevador ainda está em conformidade?",
+            "resposta": "Normalmente não. A manutenção preventiva formal é essencial para antecipar falhas, registrar intervenções e manter segurança do equipamento ao longo do tempo. Sem plano, aumenta a atuação apenas reativa, com maior risco de pane e custo elevado. A conformidade depende de rotina técnica documentada e executada por empresa habilitada.",
+            "normas": [
+                "ABNT NBR 5674",
+                "ABNT NBR 12892:2022, 17"
+            ],
+            "responsabilidade": "Condomínio",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "elev-121",
+            "pergunta": "Controle de sobrecarga sem teste periódico pode falhar sem aviso?",
+            "resposta": "Pode. O sistema de sobrecarga pode degradar com uso e, sem teste periódico, falhas passam despercebidas até ocorrência real. Isso abre espaço para operação acima do limite nominal, aumentando risco de deslizamento, aquecimento e desgaste excessivo. Teste funcional documentado deve fazer parte da rotina de manutenção.",
+            "normas": [
+                "ABNT NBR 16858-1, 5.12.1.2"
+            ],
+            "responsabilidade": "Condomínio",
+            "gravidade": "Alta"
+        },
+        {
+            "id": "elev-122",
+            "pergunta": "Após modernização, é obrigatório validar novamente os itens críticos de segurança?",
+            "resposta": "Sim. Toda modernização relevante altera comportamento do sistema e exige revalidação técnica dos itens críticos, como portas, frenagem, nivelamento, comunicação de emergência e controles de segurança. Sem comissionamento completo pós-obra, defeitos de integração podem permanecer ocultos. A validação final documentada é indispensável para liberar operação com segurança.",
+            "normas": [
+                "ABNT NBR 12892:2022",
+                "ABNT NBR 16858-1:2020"
+            ],
+            "responsabilidade": "Mista - requer avaliação técnica",
+            "gravidade": "Crítica"
         }
     ]
 }

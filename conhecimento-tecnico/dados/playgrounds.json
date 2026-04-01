@@ -1,93 +1,1266 @@
 {
-    "categoria": "Playgrounds e Áreas Recreativas",
-    "descricao": "Conformidade e segurança em playgrounds conforme NBR 16071",
-    "faqs": [
-        {
-            "id": "play-001",
-            "pergunta": "O modelo do playground 'não exige fixação' dispensa os requisitos de segurança?",
-            "resposta": "Improcedente. A ABNT NBR 16071-2 (Requisitos de segurança) estabelece que o equipamento deve ser projetado e instalado de forma a não criar aberturas ou folgas onde cabeça, tronco, pernas, pés, mãos ou dedos possam ficar presos, inclusive aberturas que surgem pela movimentação ou deformação durante uso normal. Se o escorregador possui folga que permite ser levantado a ponto de criar vão acessível a partes do corpo de uma criança, trata-se de irregularidade normativa. A construtora deve promover correção da fixação/ancoragem ou travamento para eliminar possibilidade de criação desse espaço de aprisionamento.",
-            "normas": [
-                "NBR 16071-2",
-                "NBR 16071-4"
-            ],
-            "responsabilidade": "Construtora",
-            "gravidade": "Crítica"
-        },
-        {
-            "id": "play-002",
-            "pergunta": "Falta de barreira no topo do escorregador é problema?",
-            "resposta": "Sim. A NBR 16071-2 exige que, em plataformas de acesso a escorregadores, haja proteção contra queda por meio de barreira ou guarda-corpo, conforme altura e faixa etária. A existência de espaço aberto acima do início do escorregador, sem barra de contenção/apoio, permite que a criança perca o equilíbrio e caia diretamente sobre o plano inclinado, configurando falta de barreira/guarda-corpo e risco de queda não controlada. O acréscimo de barras não é 'melhoria opcional do condomínio', mas sim correção de não conformidade normativa sob responsabilidade da construtora.",
-            "normas": [
-                "NBR 16071-2"
-            ],
-            "responsabilidade": "Construtora",
-            "gravidade": "Crítica"
-        },
-        {
-            "id": "play-003",
-            "pergunta": "O projeto arquitetônico aprovado garante conformidade do playground?",
-            "resposta": "Não necessariamente. Em várias inspeções identificamos que o playground executado possui dimensões diferentes do projeto aprovado, resultando em redução das distâncias laterais de segurança. A alteração prática do tamanho útil da área compromete as faixas de segurança da NBR 16071, aumentando risco de colisões, quedas sobre elementos rígidos e interferência entre trajetórias de uso. Cabe à construtora corrigir a não conformidade, adequando o dimensionamento/posicionamento à área prevista em projeto e às distâncias mínimas normativas.",
-            "normas": [
-                "NBR 16071-1",
-                "NBR 16071-2"
-            ],
-            "responsabilidade": "Construtora",
-            "gravidade": "Alta"
-        },
-        {
-            "id": "play-004",
-            "pergunta": "Qual norma define os pisos amortecedores de impacto em playgrounds?",
-            "resposta": "A ABNT NBR 16071-3:2012 (Parte 3 — Requisitos de segurança para pisos absorventes de impacto) especifica que toda área sob e ao redor de equipamentos de playground com altura de queda livre superior a 600 mm deve possuir piso absorvente de impacto (amortecedor). O piso deve atender ao valor máximo de HIC (Head Injury Criterion) de 1.000, testado conforme EN 1177 (método de queda de cabeça). Os tipos aceitos: grama sintética com base amortecedora, borracha reciclada (SBR) moldada ou em placas, borracha EPDM colorida, areia lavada (espessura mínima 300 mm), cascalho de madeira certificado. Piso de concreto, pedra, cerâmica ou asfalto sob equipamentos de playground é PROIBIDO pela norma. A zona amortecedora deve se estender por no mínimo 1,80 m além da projeção do equipamento (zona de queda). O não atendimento a esta norma configura risco crítico e expõe a construtora/condomínio a responsabilidade civil objetiva em caso de acidente (CDC art. 14 — defeito na prestação de serviço; CC art. 927, parágrafo único — responsabilidade independente de culpa por atividade de risco).",
-            "normas": [
-                "ABNT NBR 16071-3:2012",
-                "EN 1177 (Teste de impacto)",
-                "CDC, art. 14",
-                "Código Civil, art. 927, parágrafo único"
-            ],
-            "referencias": [],
-            "responsabilidade": "Construtora / Condomínio",
-            "gravidade": "Crítica"
-        },
-        {
-            "id": "play-005",
-            "pergunta": "Playground com selo do INMETRO garante total conformidade?",
-            "resposta": "Parcialmente. O selo do INMETRO garante que o equipamento foi certificado conforme a NBR 16071 no momento da fabricação — porém NÃO garante conformidade da INSTALAÇÃO. Os problemas mais frequentes encontrados em inspeções, mesmo em equipamentos certificados: (1) instalação com espaçamento inadequado entre equipamentos (NBR 16071-1 exige zona de segurança mínima de 2,50 m entre equipamentos); (2) fundações inadequadas ou superficiais; (3) piso amortecedor inexistente ou insuficiente sob o equipamento certificado; (4) alterações pós-instalação (soldas, cortes, adição de peças não certificadas); (5) supressão de peças durante montagem (parafusos, tampas, protetores). Além disso, a certificação INMETRO é para o produto — a responsabilidade pela correta instalação é do instalador e da construtora. A NBR 16071-4 (Métodos de ensaio) define os testes que devem ser feitos na posição instalada. A inspeção periódica por profissional habilitado é complementar e indispensável para verificar a condição real de uso.",
-            "normas": [
-                "ABNT NBR 16071-1 a 16071-7",
-                "Portaria INMETRO nº 563/2016",
-                "ABNT NBR 16071-4 (Métodos de ensaio)"
-            ],
-            "referencias": [],
-            "responsabilidade": "Construtora / Instalador",
-            "gravidade": "Alta"
-        },
-        {
-            "id": "play-006",
-            "pergunta": "Quais são as zonas de segurança exigidas ao redor dos equipamentos de playground?",
-            "resposta": "A ABNT NBR 16071-1 define zonas de segurança que devem ser livres de obstáculos: (1) Zona de queda livre — área diretamente sob e ao redor do equipamento onde o usuário pode cair. Deve ter piso amortecedor conforme NBR 16071-3; (2) Zona de segurança lateral — distância mínima de 1,80 m a partir da projeção máxima do equipamento em todas as direções (para balanços, a zona se estende a 2,20 m à frente e atrás do arco de balanço); (3) Zona entre equipamentos — mínimo de 2,50 m entre dois equipamentos adjacentes; (4) Zona livre de obstáculos aéreos — nenhuma obstrução (galhos, telhados, cabos) a menos de 2,50 m acima da plataforma mais alta; (5) Para escorregadores — a zona de chegada se estende a 2,00 m além do final do escorrego. Obstáculos dentro dessas zonas (muros, pilares, árvores, outros equipamentos, bancos) representam risco grave. Em condomínios novos, a construtora é responsável pelo dimensionamento; em condomínios existentes que instalam novos equipamentos, a responsabilidade é do síndico/administradora. A NBR 16071-7 define periodicidade de inspeção: operacional (visual diária), funcional (mensal) e principal (anual por profissional habilitado).",
-            "normas": [
-                "ABNT NBR 16071-1:2012",
-                "ABNT NBR 16071-3:2012",
-                "ABNT NBR 16071-7:2012"
-            ],
-            "referencias": [],
-            "responsabilidade": "Construtora / Condomínio",
-            "gravidade": "Alta"
-        },
-        {
-            "id": "play-007",
-            "pergunta": "Quem responde legalmente se uma criança se acidenta no playground do condomínio?",
-            "resposta": "A responsabilidade depende da causa do acidente: (1) Se o acidente decorre de vício do equipamento (defeito de fabricação, peça quebrada, falha estrutural) — responde o fabricante e a construtora que instalou (CDC art. 12 — responsabilidade pelo fato do produto, objetiva e solidária); (2) Se o acidente decorre de falha de manutenção (peça solta por falta de aperto, piso amortecedor degradado não substituído, corrosão não tratada) — responde o condomínio/síndico por negligência na manutenção (CC art. 1.348, V e art. 927); (3) Se o acidente decorre de não conformidade normativa da instalação (espaçamentos inadequados, zona de queda sobre piso duro) — responde a construtora (dentro da garantia) ou o condomínio (fora da garantia, se não providenciou adequação). O STJ tem jurisprudência consolidada: condomínios respondem objetivamente por acidentes em áreas comuns (REsp 1.535.727/SC). A idade da criança e a presença/ausência de supervisão são analisadas, mas NÃO excluem a responsabilidade por defeito do equipamento ou da instalação. Recomenda-se: inspeção periódica documentada (NBR 16071-7), seguro de responsabilidade civil e placas com faixa etária e regras de uso.",
-            "normas": [
-                "CDC, arts. 12 e 14",
-                "Código Civil, arts. 927, 932 e 1.348",
-                "ABNT NBR 16071 (Partes 1 a 7)"
-            ],
-            "referencias": [
-                "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm"
-            ],
-            "responsabilidade": "Fabricante / Construtora / Condomínio",
-            "gravidade": "Alta"
-        }
-    ]
+    "categoria":  "Playgrounds e Áreas Recreativas",
+    "descricao":  "Irregularidades técnicas em playgrounds com base no catálogo PlaygroundScan e ABNT NBR 16071",
+    "faqs":  [
+                 {
+                     "id":  "play-001",
+                     "pergunta":  "Brinquedo com \u0027Falta de revestimento ou presença de ferrugem\u0027 pode machucar as crianças?",
+                     "resposta":  "A irregularidade \u0027Falta de revestimento ou presença de ferrugem\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 2 e Parte 7. Citação técnica: Parte 2, item 4.3 e 6.2 / Parte 7, item 4.2-b.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-2"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Mista - requer avaliação técnica",
+                     "gravidade":  "Média"
+                 },
+                 {
+                     "id":  "play-002",
+                     "pergunta":  "Essa situação de \u0027Abertura Piso Correr Larga\u0027 pode prender dedo, cabeça ou roupa da criança?",
+                     "resposta":  "A irregularidade \u0027Abertura Piso Correr Larga\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 2. Citação técnica: Parte 2, item 6.4.5.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-2"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Mista - requer avaliação técnica",
+                     "gravidade":  "Média"
+                 },
+                 {
+                     "id":  "play-003",
+                     "pergunta":  "Quando há \u0027Assento pesado (aceleração impacto \u003e 50g)\u0027, o impacto do brinquedo pode ficar acima do seguro?",
+                     "resposta":  "A irregularidade \u0027Assento pesado (aceleração impacto \u003e 50g)\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 2. Citação técnica: Parte 2, Anexo A.3.7.1.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-2"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Mista - requer avaliação técnica",
+                     "gravidade":  "Crítica"
+                 },
+                 {
+                     "id":  "play-004",
+                     "pergunta":  "\u0027Acúmulo de água em tubos, pneus ou túneis\u0027 no playground é só detalhe ou é um problema de segurança que precisa corrigir?",
+                     "resposta":  "A irregularidade \u0027Acúmulo de água em tubos, pneus ou túneis\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 2. Citação técnica: Parte 2, itens 4.1 e 5.1.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-2"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Mista - requer avaliação técnica",
+                     "gravidade":  "Média"
+                 },
+                 {
+                     "id":  "play-005",
+                     "pergunta":  "\u0027Agarras Frouxas\u0027 no playground é só detalhe ou é um problema de segurança que precisa corrigir?",
+                     "resposta":  "A irregularidade \u0027Agarras Frouxas\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 2 e Parte 7. Citação técnica: Parte 2, item 6.1.5 / Parte 7, item 4.2-c.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-2"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Mista - requer avaliação técnica",
+                     "gravidade":  "Média"
+                 },
+                 {
+                     "id":  "play-006",
+                     "pergunta":  "\u0027Alcas Suspensas Desgastadas\u0027 no playground é só detalhe ou é um problema de segurança que precisa corrigir?",
+                     "resposta":  "A irregularidade \u0027Alcas Suspensas Desgastadas\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 2 e Parte 7. Citação técnica: Parte 2, Anexo C.3.8 e D.3.7 / Parte 7, item 4.2-c.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-2"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Mista - requer avaliação técnica",
+                     "gravidade":  "Média"
+                 },
+                 {
+                     "id":  "play-007",
+                     "pergunta":  "Brinquedo com \u0027Corda com alma exposta ou fios metálicos rompidos\u0027 pode machucar as crianças?",
+                     "resposta":  "A irregularidade \u0027Corda com alma exposta ou fios metálicos rompidos\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 2. Citação técnica: Parte 2, item 4.6.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-2"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Mista - requer avaliação técnica",
+                     "gravidade":  "Média"
+                 },
+                 {
+                     "id":  "play-008",
+                     "pergunta":  "\u0027Altura Acesso Cadeirante Inadequada\u0027 significa que o playground não está acessível para todas as crianças?",
+                     "resposta":  "A irregularidade \u0027Altura Acesso Cadeirante Inadequada\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 8. Citação técnica: Parte 8, item 4.2.2.5.1.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-8"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Construtora",
+                     "gravidade":  "Média"
+                 },
+                 {
+                     "id":  "play-009",
+                     "pergunta":  "\u0027Altura Assento Movimento Alta\u0027 no playground é só detalhe ou é um problema de segurança que precisa corrigir?",
+                     "resposta":  "A irregularidade \u0027Altura Assento Movimento Alta\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 2. Citação técnica: Parte 2, Anexo E.1.3 e Tabela E.1.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-2"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Mista - requer avaliação técnica",
+                     "gravidade":  "Média"
+                 },
+                 {
+                     "id":  "play-010",
+                     "pergunta":  "Com \u0027Incompatibilidade do piso com a altura de queda livre (AQL)\u0027, o piso do playground fica inseguro para quedas?",
+                     "resposta":  "A irregularidade \u0027Incompatibilidade do piso com a altura de queda livre (AQL)\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 2 e Parte 3. Citação técnica: Parte 2, item 6.5.3 / Parte 3, item 4.2.2 e Tabela A.1.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-2"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Mista - requer avaliação técnica",
+                     "gravidade":  "Crítica"
+                 },
+                 {
+                     "id":  "play-011",
+                     "pergunta":  "Com \u0027Borda de saída do escorregador máx 200/350 mm\u0027, existe risco real de queda no brinquedo?",
+                     "resposta":  "A irregularidade \u0027Borda de saída do escorregador máx 200/350 mm\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 2. Citação técnica: Parte 2, Anexo B.2.5.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-2"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Mista - requer avaliação técnica",
+                     "gravidade":  "Média"
+                 },
+                 {
+                     "id":  "play-012",
+                     "pergunta":  "Quando há \u0027Amortecedor Curso Ausente\u0027, o impacto do brinquedo pode ficar acima do seguro?",
+                     "resposta":  "A irregularidade \u0027Amortecedor Curso Ausente\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 2. Citação técnica: Parte 2, Anexo C.3.4 e Anexo E.1.6.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-2"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Mista - requer avaliação técnica",
+                     "gravidade":  "Alta"
+                 },
+                 {
+                     "id":  "play-013",
+                     "pergunta":  "Quando há \u0027Mecanismo de gangorra/oscilante sem amortecimento\u0027, o impacto do brinquedo pode ficar acima do seguro?",
+                     "resposta":  "A irregularidade \u0027Mecanismo de gangorra/oscilante sem amortecimento\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 2. Citação técnica: Parte 2, Anexo E.1.6 e E.2.1.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-2"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Mista - requer avaliação técnica",
+                     "gravidade":  "Alta"
+                 },
+                 {
+                     "id":  "play-014",
+                     "pergunta":  "\u0027Apoios Frouxos\u0027 no playground é só detalhe ou é um problema de segurança que precisa corrigir?",
+                     "resposta":  "A irregularidade \u0027Apoios Frouxos\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 2 e Parte 7. Citação técnica: Parte 2, Anexo E.1.7 e E.1.8 / Parte 7, item 4.2-c.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-2"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Mista - requer avaliação técnica",
+                     "gravidade":  "Média"
+                 },
+                 {
+                     "id":  "play-015",
+                     "pergunta":  "\u0027Apoios de mãos ou pés com folga ou frouxos\u0027 no playground é só detalhe ou é um problema de segurança que precisa corrigir?",
+                     "resposta":  "A irregularidade \u0027Apoios de mãos ou pés com folga ou frouxos\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 2. Citação técnica: Parte 2, Anexo E.1.7 e E.1.8.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-2"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Mista - requer avaliação técnica",
+                     "gravidade":  "Média"
+                 },
+                 {
+                     "id":  "play-016",
+                     "pergunta":  "Essa situação de \u0027Aprisionamento Dedo\u0027 pode prender dedo, cabeça ou roupa da criança?",
+                     "resposta":  "A irregularidade \u0027Aprisionamento Dedo\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 2. Citação técnica: Parte 2, item 6.4.6.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-2"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Mista - requer avaliação técnica",
+                     "gravidade":  "Crítica"
+                 },
+                 {
+                     "id":  "play-017",
+                     "pergunta":  "Essa situação de \u0027Abertura rígida entre 130mm e 230mm\u0027 pode prender dedo, cabeça ou roupa da criança?",
+                     "resposta":  "A irregularidade \u0027Abertura rígida entre 130mm e 230mm\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 2. Citação técnica: Parte 2, item 6.4.2.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-2"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Mista - requer avaliação técnica",
+                     "gravidade":  "Crítica"
+                 },
+                 {
+                     "id":  "play-018",
+                     "pergunta":  "\u0027Túneis com dimensão interna \u003c 600 mm livre\u0027 no playground é só detalhe ou é um problema de segurança que precisa corrigir?",
+                     "resposta":  "A irregularidade \u0027Túneis com dimensão interna \u003c 600 mm livre\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 2. Citação técnica: Parte 2, item 6.4.4 e Tabela 6.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-2"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Mista - requer avaliação técnica",
+                     "gravidade":  "Crítica"
+                 },
+                 {
+                     "id":  "play-019",
+                     "pergunta":  "Essa situação de \u0027Buraco ou fresta entre 8mm e 25mm\u0027 pode prender dedo, cabeça ou roupa da criança?",
+                     "resposta":  "A irregularidade \u0027Buraco ou fresta entre 8mm e 25mm\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 2. Citação técnica: Parte 2, item 6.4.6.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-2"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Mista - requer avaliação técnica",
+                     "gravidade":  "Crítica"
+                 },
+                 {
+                     "id":  "play-020",
+                     "pergunta":  "Essa situação de \u0027Abertura no piso \u003e 15mm\u0027 pode prender dedo, cabeça ou roupa da criança?",
+                     "resposta":  "A irregularidade \u0027Abertura no piso \u003e 15mm\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 2. Citação técnica: Parte 2, item 6.4.5.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-2"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Mista - requer avaliação técnica",
+                     "gravidade":  "Crítica"
+                 },
+                 {
+                     "id":  "play-021",
+                     "pergunta":  "Essa situação de \u0027Frestas em V ou eixos sem proteção (enrosco)\u0027 pode prender dedo, cabeça ou roupa da criança?",
+                     "resposta":  "A irregularidade \u0027Frestas em V ou eixos sem proteção (enrosco)\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 2. Citação técnica: Parte 2, item 6.4.3.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-2"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Mista - requer avaliação técnica",
+                     "gravidade":  "Crítica"
+                 },
+                 {
+                     "id":  "play-022",
+                     "pergunta":  "Com \u0027Rotas de acesso obstruídas ou irregulares\u0027, o espaço do playground fica perigoso em uso e emergência?",
+                     "resposta":  "A irregularidade \u0027Rotas de acesso obstruídas ou irregulares\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 5. Citação técnica: Parte 5, item 4.1 e 4.5.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-5"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Condomínio",
+                     "gravidade":  "Média"
+                 },
+                 {
+                     "id":  "play-023",
+                     "pergunta":  "\u0027Rotas de acesso livres e niveladas\u0027 no playground é só detalhe ou é um problema de segurança que precisa corrigir?",
+                     "resposta":  "A irregularidade \u0027Rotas de acesso livres e niveladas\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 5. Citação técnica: Parte 5, item 4.1 e 4.5.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-5"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Condomínio",
+                     "gravidade":  "Média"
+                 },
+                 {
+                     "id":  "play-024",
+                     "pergunta":  "Parafusos, pontas ou peças com \u0027Arestas Vivas\u0027 são considerados perigosos pela norma?",
+                     "resposta":  "A irregularidade \u0027Arestas Vivas\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 2 e Parte 7. Citação técnica: Parte 2, item 6.2 / Parte 7, item 4.2-d.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-2"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Mista - requer avaliação técnica",
+                     "gravidade":  "Média"
+                 },
+                 {
+                     "id":  "play-025",
+                     "pergunta":  "Parafusos, pontas ou peças com \u0027Protuberâncias afiadas ou curvatura \u003c 3mm\u0027 são considerados perigosos pela norma?",
+                     "resposta":  "A irregularidade \u0027Protuberâncias afiadas ou curvatura \u003c 3mm\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 2. Citação técnica: Parte 2, item 6.2.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-2"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Mista - requer avaliação técnica",
+                     "gravidade":  "Média"
+                 },
+                 {
+                     "id":  "play-026",
+                     "pergunta":  "\u0027Conexoes Frouxas\u0027 no playground é só detalhe ou é um problema de segurança que precisa corrigir?",
+                     "resposta":  "A irregularidade \u0027Conexoes Frouxas\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 2 e Parte 7. Citação técnica: Parte 2, item 6.7 / Parte 7, itens 4.2-a e 4.2-c.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-2"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Mista - requer avaliação técnica",
+                     "gravidade":  "Média"
+                 },
+                 {
+                     "id":  "play-027",
+                     "pergunta":  "\u0027Concreto com armadura metálica exposta\u0027 no playground é só detalhe ou é um problema de segurança que precisa corrigir?",
+                     "resposta":  "A irregularidade \u0027Concreto com armadura metálica exposta\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 2. Citação técnica: Parte 2, item 4.9.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-2"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Mista - requer avaliação técnica",
+                     "gravidade":  "Média"
+                 },
+                 {
+                     "id":  "play-028",
+                     "pergunta":  "Brinquedo com \u0027Cordas com rompimento de fios ou desgaste excessivo\u0027 pode machucar as crianças?",
+                     "resposta":  "A irregularidade \u0027Cordas com rompimento de fios ou desgaste excessivo\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 2 e Parte 7. Citação técnica: Parte 2, item 4.6 / Parte 7, item 4.2-c.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-2"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Mista - requer avaliação técnica",
+                     "gravidade":  "Média"
+                 },
+                 {
+                     "id":  "play-029",
+                     "pergunta":  "Essa situação de \u0027Abertura máxima dos elos de 8,6 mm (evitar dedos)\u0027 pode prender dedo, cabeça ou roupa da criança?",
+                     "resposta":  "A irregularidade \u0027Abertura máxima dos elos de 8,6 mm (evitar dedos)\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 2. Citação técnica: Parte 2, item 6.10.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-2"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Mista - requer avaliação técnica",
+                     "gravidade":  "Média"
+                 },
+                 {
+                     "id":  "play-030",
+                     "pergunta":  "Com \u0027Corrimão ausente ou fora da altura (600-850mm)\u0027, existe risco real de queda no brinquedo?",
+                     "resposta":  "A irregularidade \u0027Corrimão ausente ou fora da altura (600-850mm)\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 2. Citação técnica: Parte 2, item 6.1.1.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-2"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Mista - requer avaliação técnica",
+                     "gravidade":  "Alta"
+                 },
+                 {
+                     "id":  "play-031",
+                     "pergunta":  "Brinquedo com \u0027Deformações ou quebras estruturais\u0027 pode machucar as crianças?",
+                     "resposta":  "A irregularidade \u0027Deformações ou quebras estruturais\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 2 e Parte 7. Citação técnica: Parte 2, item 5.2 / Parte 7, item 4.2-a.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-2"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Mista - requer avaliação técnica",
+                     "gravidade":  "Alta"
+                 },
+                 {
+                     "id":  "play-032",
+                     "pergunta":  "Com \u0027Degraus com profundidade \u003c 140mm ou desalinhados\u0027, existe risco real de queda no brinquedo?",
+                     "resposta":  "A irregularidade \u0027Degraus com profundidade \u003c 140mm ou desalinhados\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 2. Citação técnica: Parte 2, item 6.6.2.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-2"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Mista - requer avaliação técnica",
+                     "gravidade":  "Média"
+                 },
+                 {
+                     "id":  "play-033",
+                     "pergunta":  "Com \u0027Assento de balanço \u003c 350mm do piso\u0027, o piso do playground fica inseguro para quedas?",
+                     "resposta":  "A irregularidade \u0027Assento de balanço \u003c 350mm do piso\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 2. Citação técnica: Parte 2, Anexo A.3.2.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-2"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Mista - requer avaliação técnica",
+                     "gravidade":  "Média"
+                 },
+                 {
+                     "id":  "play-034",
+                     "pergunta":  "\u0027Distância entre assentos de balanço \u003c 450mm\u0027 no playground é só detalhe ou é um problema de segurança que precisa corrigir?",
+                     "resposta":  "A irregularidade \u0027Distância entre assentos de balanço \u003c 450mm\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 2. Citação técnica: Parte 2, Anexo A.3.5.1.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-2"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Mista - requer avaliação técnica",
+                     "gravidade":  "Média"
+                 },
+                 {
+                     "id":  "play-035",
+                     "pergunta":  "Com \u0027Distanciamento livre \u003c 1,50m entre equipamentos\u0027, o espaço do playground fica perigoso em uso e emergência?",
+                     "resposta":  "A irregularidade \u0027Distanciamento livre \u003c 1,50m entre equipamentos\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 5. Citação técnica: Parte 5, item 4.7.5.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-5"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Mista - requer avaliação técnica",
+                     "gravidade":  "Média"
+                 },
+                 {
+                     "id":  "play-036",
+                     "pergunta":  "Com \u0027Base do piso não permite escoamento rápido da água\u0027, o piso do playground fica inseguro para quedas?",
+                     "resposta":  "A irregularidade \u0027Base do piso não permite escoamento rápido da água\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 5 e Parte 7. Citação técnica: Parte 5, item 4.3.1 / Parte 7, item 4.2-l.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-5"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Condomínio",
+                     "gravidade":  "Alta"
+                 },
+                 {
+                     "id":  "play-037",
+                     "pergunta":  "Com \u0027Acúmulo de lama ou poças na área do playground\u0027, o piso do playground fica inseguro para quedas?",
+                     "resposta":  "A irregularidade \u0027Acúmulo de lama ou poças na área do playground\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 5. Citação técnica: Parte 5, item 4.3.1.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-5"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Condomínio",
+                     "gravidade":  "Alta"
+                 },
+                 {
+                     "id":  "play-038",
+                     "pergunta":  "\u0027Molas sem limitadores que impeçam contato com solo\u0027 pode causar risco de queimadura, alergia ou intoxicação em criança?",
+                     "resposta":  "A irregularidade \u0027Molas sem limitadores que impeçam contato com solo\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 2. Citação técnica: Parte 2, Anexo E.1.6 e E.2.1.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-2"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Mista - requer avaliação técnica",
+                     "gravidade":  "Média"
+                 },
+                 {
+                     "id":  "play-039",
+                     "pergunta":  "Com \u0027Inclinação máxima do escorregador acima de 60°\u0027, existe risco real de queda no brinquedo?",
+                     "resposta":  "A irregularidade \u0027Inclinação máxima do escorregador acima de 60°\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 2. Citação técnica: Parte 2, Anexo B.2.4.1.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-2"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Mista - requer avaliação técnica",
+                     "gravidade":  "Média"
+                 },
+                 {
+                     "id":  "play-040",
+                     "pergunta":  "Com \u0027Vão mín 230 mm do assento ao piso (horizontal)\u0027, o piso do playground fica inseguro para quedas?",
+                     "resposta":  "A irregularidade \u0027Vão mín 230 mm do assento ao piso (horizontal)\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 2. Citação técnica: Parte 2, Anexo E.1.2 e Tabela E.1.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-2"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Mista - requer avaliação técnica",
+                     "gravidade":  "Média"
+                 },
+                 {
+                     "id":  "play-041",
+                     "pergunta":  "\u0027Ambiente não adaptado para crianças com deficiência\u0027 no playground é só detalhe ou é um problema de segurança que precisa corrigir?",
+                     "resposta":  "A irregularidade \u0027Ambiente não adaptado para crianças com deficiência\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 8. Citação técnica: Parte 8, itens 4.1 e 4.2.1.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-8"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Construtora",
+                     "gravidade":  "Alta"
+                 },
+                 {
+                     "id":  "play-042",
+                     "pergunta":  "\u0027Seção de entrada deve ter barra para forçar a sentar\u0027 no playground é só detalhe ou é um problema de segurança que precisa corrigir?",
+                     "resposta":  "A irregularidade \u0027Seção de entrada deve ter barra para forçar a sentar\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 2. Citação técnica: Parte 2, Anexo B.2.3.5.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-2"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Mista - requer avaliação técnica",
+                     "gravidade":  "Média"
+                 },
+                 {
+                     "id":  "play-043",
+                     "pergunta":  "Com \u0027H \u003e= 600 mm exige barreira fechada (mín. 900 mm) para \u003c 3 anos\u0027, existe risco real de queda no brinquedo?",
+                     "resposta":  "A irregularidade \u0027H \u003e= 600 mm exige barreira fechada (mín. 900 mm) para \u003c 3 anos\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 2. Citação técnica: Parte 2, item 6.1.3 e Tabela 5.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-2"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Construtora",
+                     "gravidade":  "Crítica"
+                 },
+                 {
+                     "id":  "play-044",
+                     "pergunta":  "Com \u0027Ausência de guarda-corpo ou barreira lateral (H \u003e= 600mm)\u0027, existe risco real de queda no brinquedo?",
+                     "resposta":  "A irregularidade \u0027Ausência de guarda-corpo ou barreira lateral (H \u003e= 600mm)\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 2. Citação técnica: Parte 2, item 6.1.2 e Tabela 5.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-2"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Construtora",
+                     "gravidade":  "Crítica"
+                 },
+                 {
+                     "id":  "play-045",
+                     "pergunta":  "Se houver \u0027Placa visível com fabricante, data, norma e faixa etária\u0027, o playground pode continuar funcionando normalmente?",
+                     "resposta":  "A irregularidade \u0027Placa visível com fabricante, data, norma e faixa etária\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 2. Citação técnica: Parte 2, item 9.1 e 10.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-2"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Construtora",
+                     "gravidade":  "Média"
+                 },
+                 {
+                     "id":  "play-046",
+                     "pergunta":  "\u0027Eixos e rolamentos com movimento travado ou seco\u0027 no playground é só detalhe ou é um problema de segurança que precisa corrigir?",
+                     "resposta":  "A irregularidade \u0027Eixos e rolamentos com movimento travado ou seco\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 2 e Parte 7. Citação técnica: Parte 2, item 6.8 / Parte 7, item 4.2-f.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-2"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Condomínio",
+                     "gravidade":  "Alta"
+                 },
+                 {
+                     "id":  "play-047",
+                     "pergunta":  "Com \u0027Ausência de piso de impacto para queda \u003e 600mm\u0027, o piso do playground fica inseguro para quedas?",
+                     "resposta":  "A irregularidade \u0027Ausência de piso de impacto para queda \u003e 600mm\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 2 e Parte 3. Citação técnica: Parte 2, item 6.5.3 / Parte 3, item 4.2.2.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-2"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Mista - requer avaliação técnica",
+                     "gravidade":  "Crítica"
+                 },
+                 {
+                     "id":  "play-048",
+                     "pergunta":  "Se houver \u0027Falta de Sinalização de Segurança/Regras\u0027, o playground pode continuar funcionando normalmente?",
+                     "resposta":  "A irregularidade \u0027Falta de Sinalização de Segurança/Regras\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 5 e Parte 7. Citação técnica: Parte 5, item 4.4.1 / Parte 7, Anexo A-j.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-5"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Condomínio",
+                     "gravidade":  "Média"
+                 },
+                 {
+                     "id":  "play-049",
+                     "pergunta":  "Se houver \u0027Ausência de dados do fabricante e faixa etária\u0027, o playground pode continuar funcionando normalmente?",
+                     "resposta":  "A irregularidade \u0027Ausência de dados do fabricante e faixa etária\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 2. Citação técnica: Parte 2, item 10.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-2"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Condomínio",
+                     "gravidade":  "Alta"
+                 },
+                 {
+                     "id":  "play-050",
+                     "pergunta":  "\u0027Superfícies expostas ao sol que podem causar queimaduras\u0027 pode causar risco de queimadura, alergia ou intoxicação em criança?",
+                     "resposta":  "A irregularidade \u0027Superfícies expostas ao sol que podem causar queimaduras\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 5. Citação técnica: Parte 5, item 4.3.4.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-5"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Condomínio",
+                     "gravidade":  "Alta"
+                 },
+                 {
+                     "id":  "play-051",
+                     "pergunta":  "\u0027Desgaste do gel com fibra de vidro exposta\u0027 no playground é só detalhe ou é um problema de segurança que precisa corrigir?",
+                     "resposta":  "A irregularidade \u0027Desgaste do gel com fibra de vidro exposta\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 2. Citação técnica: Parte 2, item 4.5.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-2"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Mista - requer avaliação técnica",
+                     "gravidade":  "Média"
+                 },
+                 {
+                     "id":  "play-052",
+                     "pergunta":  "\u0027Em assentos de pneus e cabos, a malha de aço não pode estar solta\u0027 pode causar risco de queimadura, alergia ou intoxicação em criança?",
+                     "resposta":  "A irregularidade \u0027Em assentos de pneus e cabos, a malha de aço não pode estar solta\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 2. Citação técnica: Parte 2, itens 4.7 e 4.8.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-2"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Mista - requer avaliação técnica",
+                     "gravidade":  "Média"
+                 },
+                 {
+                     "id":  "play-053",
+                     "pergunta":  "Com \u0027Ausência de laudo HIC ou vencimento do piso\u0027, o piso do playground fica inseguro para quedas?",
+                     "resposta":  "A irregularidade \u0027Ausência de laudo HIC ou vencimento do piso\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 3. Citação técnica: Parte 3, item 7.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-3"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Mista - requer avaliação técnica",
+                     "gravidade":  "Média"
+                 },
+                 {
+                     "id":  "play-054",
+                     "pergunta":  "Com \u0027Circulação livre \u003c 1,50m no entorno\u0027, o espaço do playground fica perigoso em uso e emergência?",
+                     "resposta":  "A irregularidade \u0027Circulação livre \u003c 1,50m no entorno\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 5. Citação técnica: Parte 5, itens 4.7.3 e 4.7.5.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-5"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Condomínio",
+                     "gravidade":  "Média"
+                 },
+                 {
+                     "id":  "play-055",
+                     "pergunta":  "\u0027Alicerces de concreto aparentes (\u003c 200mm)\u0027 no playground é só detalhe ou é um problema de segurança que precisa corrigir?",
+                     "resposta":  "A irregularidade \u0027Alicerces de concreto aparentes (\u003c 200mm)\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 2. Citação técnica: Parte 2, item 6.11.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-2"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Construtora",
+                     "gravidade":  "Alta"
+                 },
+                 {
+                     "id":  "play-056",
+                     "pergunta":  "Quando há \u0027Amortecedores sob extremidades da gangorra ausentes\u0027, o impacto do brinquedo pode ficar acima do seguro?",
+                     "resposta":  "A irregularidade \u0027Amortecedores sob extremidades da gangorra ausentes\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 2. Citação técnica: Parte 2, Anexo E.1.6 e E.2.1.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-2"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Mista - requer avaliação técnica",
+                     "gravidade":  "Alta"
+                 },
+                 {
+                     "id":  "play-057",
+                     "pergunta":  "Com \u0027Design do guarda-corpo permite escala (travessas horizontais)\u0027, existe risco real de queda no brinquedo?",
+                     "resposta":  "A irregularidade \u0027Design do guarda-corpo permite escala (travessas horizontais)\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 2. Citação técnica: Parte 2, item 6.1.2 e 6.1.3.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-2"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Mista - requer avaliação técnica",
+                     "gravidade":  "Alta"
+                 },
+                 {
+                     "id":  "play-058",
+                     "pergunta":  "Com \u0027Inclinação máxima da gangorra acima de 25°\u0027, existe risco real de queda no brinquedo?",
+                     "resposta":  "A irregularidade \u0027Inclinação máxima da gangorra acima de 25°\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 2. Citação técnica: Parte 2, Anexo E.1.4 e Tabela E.1.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-2"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Mista - requer avaliação técnica",
+                     "gravidade":  "Média"
+                 },
+                 {
+                     "id":  "play-059",
+                     "pergunta":  "Brinquedo com \u0027Madeira apodrecida ou rachaduras \u003e 8mm\u0027 pode machucar as crianças?",
+                     "resposta":  "A irregularidade \u0027Madeira apodrecida ou rachaduras \u003e 8mm\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 2. Citação técnica: Parte 2, item 4.2.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-2"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Mista - requer avaliação técnica",
+                     "gravidade":  "Média"
+                 },
+                 {
+                     "id":  "play-060",
+                     "pergunta":  "\u0027Presença de farpas ou lascas na superfície da madeira\u0027 no playground é só detalhe ou é um problema de segurança que precisa corrigir?",
+                     "resposta":  "A irregularidade \u0027Presença de farpas ou lascas na superfície da madeira\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 2. Citação técnica: Parte 2, item 6.2.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-2"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Mista - requer avaliação técnica",
+                     "gravidade":  "Média"
+                 },
+                 {
+                     "id":  "play-061",
+                     "pergunta":  "Essa situação de \u0027Aberturas na malha da rede que permitem aprisionamento\u0027 pode prender dedo, cabeça ou roupa da criança?",
+                     "resposta":  "A irregularidade \u0027Aberturas na malha da rede que permitem aprisionamento\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 2. Citação técnica: Parte 2, Anexo F.2.2 e F.2.4.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-2"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Mista - requer avaliação técnica",
+                     "gravidade":  "Média"
+                 },
+                 {
+                     "id":  "play-062",
+                     "pergunta":  "Se houver \u0027Plano formal de manutenção com livros de registro\u0027, o playground pode continuar funcionando normalmente?",
+                     "resposta":  "A irregularidade \u0027Plano formal de manutenção com livros de registro\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 7. Citação técnica: Parte 7, item 5 e 6.2.3.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-7"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Condomínio",
+                     "gravidade":  "Média"
+                 },
+                 {
+                     "id":  "play-063",
+                     "pergunta":  "\u0027Todo contato manual deve ter acabamento atóxico preservado\u0027 no playground é só detalhe ou é um problema de segurança que precisa corrigir?",
+                     "resposta":  "A irregularidade \u0027Todo contato manual deve ter acabamento atóxico preservado\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 2. Citação técnica: Parte 2, item 4.3 e 4.11.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-2"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Mista - requer avaliação técnica",
+                     "gravidade":  "Crítica"
+                 },
+                 {
+                     "id":  "play-064",
+                     "pergunta":  "\u0027Entorno (1,5m a 2,5m) com objetos perigosos ou blocos aflorando\u0027 no playground é só detalhe ou é um problema de segurança que precisa corrigir?",
+                     "resposta":  "A irregularidade \u0027Entorno (1,5m a 2,5m) com objetos perigosos ou blocos aflorando\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 2 e Parte 7. Citação técnica: Parte 2, 6.5.3 / Parte 7, Anexo A-f.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-2"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Mista - requer avaliação técnica",
+                     "gravidade":  "Crítica"
+                 },
+                 {
+                     "id":  "play-065",
+                     "pergunta":  "\u0027Outras irregularidades relevantes de ambiente\u0027 no playground é só detalhe ou é um problema de segurança que precisa corrigir?",
+                     "resposta":  "A irregularidade \u0027Outras irregularidades relevantes de ambiente\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 5 e Parte 7. Citação técnica: Nao.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-5"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Condomínio",
+                     "gravidade":  "Média"
+                 },
+                 {
+                     "id":  "play-066",
+                     "pergunta":  "\u0027Outras irregularidades relevantes do equipamento\u0027 no playground é só detalhe ou é um problema de segurança que precisa corrigir?",
+                     "resposta":  "A irregularidade \u0027Outras irregularidades relevantes do equipamento\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 2 e Parte 7. Citação técnica: Nao.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-2"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Mista - requer avaliação técnica",
+                     "gravidade":  "Média"
+                 },
+                 {
+                     "id":  "play-067",
+                     "pergunta":  "Parafusos, pontas ou peças com \u0027Parafusos/porcas sobressaindo mais de 8mm\u0027 são considerados perigosos pela norma?",
+                     "resposta":  "A irregularidade \u0027Parafusos/porcas sobressaindo mais de 8mm\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 2. Citação técnica: Parte 2, item 6.2.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-2"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Mista - requer avaliação técnica",
+                     "gravidade":  "Média"
+                 },
+                 {
+                     "id":  "play-068",
+                     "pergunta":  "\u0027Mecanismos emperrados ou desprotegidos\u0027 no playground é só detalhe ou é um problema de segurança que precisa corrigir?",
+                     "resposta":  "A irregularidade \u0027Mecanismos emperrados ou desprotegidos\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 2 e Parte 7. Citação técnica: Parte 2, 6.3 / Parte 7, 4.2-e/f.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-2"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Mista - requer avaliação técnica",
+                     "gravidade":  "Média"
+                 },
+                 {
+                     "id":  "play-069",
+                     "pergunta":  "\u0027Suportes manuais (pegada completa) fora de 16-45 mm\u0027 no playground é só detalhe ou é um problema de segurança que precisa corrigir?",
+                     "resposta":  "A irregularidade \u0027Suportes manuais (pegada completa) fora de 16-45 mm\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 2. Citação técnica: Parte 2, item 6.1.5.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-2"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Mista - requer avaliação técnica",
+                     "gravidade":  "Média"
+                 },
+                 {
+                     "id":  "play-070",
+                     "pergunta":  "Com \u0027Pisos soltos muito compactados; borrachas sem laudo HIC\u0027, o piso do playground fica inseguro para quedas?",
+                     "resposta":  "A irregularidade \u0027Pisos soltos muito compactados; borrachas sem laudo HIC\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 3 e Parte 7. Citação técnica: Parte 3, 4.2 / Parte 7, 4.2-k.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-3"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Mista - requer avaliação técnica",
+                     "gravidade":  "Alta"
+                 },
+                 {
+                     "id":  "play-071",
+                     "pergunta":  "Com \u0027Pisos soltos devem ser aerados; borrachas devem ter laudo HIC\u0027, o piso do playground fica inseguro para quedas?",
+                     "resposta":  "A irregularidade \u0027Pisos soltos devem ser aerados; borrachas devem ter laudo HIC\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 3 e Parte 7. Citação técnica: Parte 3, 4.2 / Parte 7, 4.2-k.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-3"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Mista - requer avaliação técnica",
+                     "gravidade":  "Alta"
+                 },
+                 {
+                     "id":  "play-072",
+                     "pergunta":  "Com \u0027Presença de sujeira, umidade ou falta de condições de uso no piso\u0027, o piso do playground fica inseguro para quedas?",
+                     "resposta":  "A irregularidade \u0027Presença de sujeira, umidade ou falta de condições de uso no piso\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 5 e Parte 7. Citação técnica: Parte 5, item 4.5 / Parte 7, itens 4.2-k, 5-f e 5-g.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-5"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Condomínio",
+                     "gravidade":  "Média"
+                 },
+                 {
+                     "id":  "play-073",
+                     "pergunta":  "\u0027Plástico esbranquiçado/ressecado (perda de propriedade estrutural)\u0027 no playground é só detalhe ou é um problema de segurança que precisa corrigir?",
+                     "resposta":  "A irregularidade \u0027Plástico esbranquiçado/ressecado (perda de propriedade estrutural)\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 2. Citação técnica: Parte 2, item 4.5.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-2"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Mista - requer avaliação técnica",
+                     "gravidade":  "Média"
+                 },
+                 {
+                     "id":  "play-074",
+                     "pergunta":  "Brinquedo com \u0027Plástico com trincas ou quebras\u0027 pode machucar as crianças?",
+                     "resposta":  "A irregularidade \u0027Plástico com trincas ou quebras\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 2. Citação técnica: Parte 2, item 4.4.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-2"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Mista - requer avaliação técnica",
+                     "gravidade":  "Média"
+                 },
+                 {
+                     "id":  "play-075",
+                     "pergunta":  "\u0027Afastamento insuficiente entre partes móveis (\u003c 12mm)\u0027 no playground é só detalhe ou é um problema de segurança que precisa corrigir?",
+                     "resposta":  "A irregularidade \u0027Afastamento insuficiente entre partes móveis (\u003c 12mm)\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 2. Citação técnica: Parte 2, item 6.3 e Anexo E.1.5.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-2"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Mista - requer avaliação técnica",
+                     "gravidade":  "Crítica"
+                 },
+                 {
+                     "id":  "play-076",
+                     "pergunta":  "Com \u0027Cama de areia/cascalho \u003c 300mm de profundidade\u0027, o piso do playground fica inseguro para quedas?",
+                     "resposta":  "A irregularidade \u0027Cama de areia/cascalho \u003c 300mm de profundidade\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 3. Citação técnica: Parte 3, Tabela A.1.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-3"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Mista - requer avaliação técnica",
+                     "gravidade":  "Média"
+                 },
+                 {
+                     "id":  "play-077",
+                     "pergunta":  "\u0027Laterais do deslize entre 100 mm e 500 mm\u0027 no playground é só detalhe ou é um problema de segurança que precisa corrigir?",
+                     "resposta":  "A irregularidade \u0027Laterais do deslize entre 100 mm e 500 mm\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 2. Citação técnica: Parte 2, Anexo B.2.6 e Tab. B.2.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-2"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Mista - requer avaliação técnica",
+                     "gravidade":  "Média"
+                 },
+                 {
+                     "id":  "play-078",
+                     "pergunta":  "Com \u0027Falta de segunda rota de evacuação em Brinquedão\u0027, o espaço do playground fica perigoso em uso e emergência?",
+                     "resposta":  "A irregularidade \u0027Falta de segunda rota de evacuação em Brinquedão\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 2. Citação técnica: Parte 2, item 5.3.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-2"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Mista - requer avaliação técnica",
+                     "gravidade":  "Média"
+                 },
+                 {
+                     "id":  "play-079",
+                     "pergunta":  "Com \u0027Seção de saída do escorregador curta (\u003c 300/500mm)\u0027, existe risco real de queda no brinquedo?",
+                     "resposta":  "A irregularidade \u0027Seção de saída do escorregador curta (\u003c 300/500mm)\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 2. Citação técnica: Parte 2, Anexo B.2.5 e Tab. B.1.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-2"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Mista - requer avaliação técnica",
+                     "gravidade":  "Média"
+                 },
+                 {
+                     "id":  "play-080",
+                     "pergunta":  "Com \u0027Escorregador com calos, parafusos expostos ou degraus\u0027, existe risco real de queda no brinquedo?",
+                     "resposta":  "A irregularidade \u0027Escorregador com calos, parafusos expostos ou degraus\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 2. Citação técnica: Parte 2, Anexo B.2.7.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-2"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Mista - requer avaliação técnica",
+                     "gravidade":  "Média"
+                 },
+                 {
+                     "id":  "play-081",
+                     "pergunta":  "Com \u0027Superfície de acesso com risco de queda por escorregamento\u0027, o piso do playground fica inseguro para quedas?",
+                     "resposta":  "A irregularidade \u0027Superfície de acesso com risco de queda por escorregamento\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 5. Citação técnica: Parte 5, item 4.5.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-5"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Mista - requer avaliação técnica",
+                     "gravidade":  "Alta"
+                 },
+                 {
+                     "id":  "play-082",
+                     "pergunta":  "\u0027Suspensão rígida em balanço tradicional\u0027 no playground é só detalhe ou é um problema de segurança que precisa corrigir?",
+                     "resposta":  "A irregularidade \u0027Suspensão rígida em balanço tradicional\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 2. Citação técnica: Parte 2, Anexo A.3.6.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-2"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Mista - requer avaliação técnica",
+                     "gravidade":  "Média"
+                 },
+                 {
+                     "id":  "play-083",
+                     "pergunta":  "\u0027Presença de plantas tóxicas ou espinhosas\u0027 pode causar risco de queimadura, alergia ou intoxicação em criança?",
+                     "resposta":  "A irregularidade \u0027Presença de plantas tóxicas ou espinhosas\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 5. Citação técnica: Parte 5, item 5.5.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-5"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Condomínio",
+                     "gravidade":  "Crítica"
+                 },
+                 {
+                     "id":  "play-084",
+                     "pergunta":  "\u0027Extremidades de tubos estruturais sem vedação/tampão\u0027 no playground é só detalhe ou é um problema de segurança que precisa corrigir?",
+                     "resposta":  "A irregularidade \u0027Extremidades de tubos estruturais sem vedação/tampão\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 2. Citação técnica: Parte 2, item 6.4.6.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-2"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Mista - requer avaliação técnica",
+                     "gravidade":  "Média"
+                 },
+                 {
+                     "id":  "play-085",
+                     "pergunta":  "\u0027Vão inferior de carrossel entre 60mm e 400mm\u0027 no playground é só detalhe ou é um problema de segurança que precisa corrigir?",
+                     "resposta":  "A irregularidade \u0027Vão inferior de carrossel entre 60mm e 400mm\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 2. Citação técnica: Parte 2, Anexo D.4.2.3.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-2"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Mista - requer avaliação técnica",
+                     "gravidade":  "Crítica"
+                 },
+                 {
+                     "id":  "play-086",
+                     "pergunta":  "\u0027Vao Solo Inadequado\u0027 pode causar risco de queimadura, alergia ou intoxicação em criança?",
+                     "resposta":  "A irregularidade \u0027Vao Solo Inadequado\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 2. Citação técnica: Parte 2, Anexo D.4.2.3 e Anexo A.3.2.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-2"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Mista - requer avaliação técnica",
+                     "gravidade":  "Média"
+                 },
+                 {
+                     "id":  "play-087",
+                     "pergunta":  "\u0027Proibida vegetação com espinhos ou frutos venenosos\u0027 pode causar risco de queimadura, alergia ou intoxicação em criança?",
+                     "resposta":  "A irregularidade \u0027Proibida vegetação com espinhos ou frutos venenosos\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 5. Citação técnica: Parte 5, item 5.5.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-5"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Condomínio",
+                     "gravidade":  "Média"
+                 },
+                 {
+                     "id":  "play-088",
+                     "pergunta":  "Quando há \u0027Velocidade da tirolesa acima de 7 m/s\u0027, o impacto do brinquedo pode ficar acima do seguro?",
+                     "resposta":  "A irregularidade \u0027Velocidade da tirolesa acima de 7 m/s\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 2. Citação técnica: Parte 2, Anexo C.3.10.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-2"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Mista - requer avaliação técnica",
+                     "gravidade":  "Crítica"
+                 },
+                 {
+                     "id":  "play-089",
+                     "pergunta":  "Quando há \u0027Velocidade do carrossel acima de 5 m/s\u0027, o impacto do brinquedo pode ficar acima do seguro?",
+                     "resposta":  "A irregularidade \u0027Velocidade do carrossel acima de 5 m/s\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 2. Citação técnica: Parte 2, Anexo D.3.6.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-2"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Mista - requer avaliação técnica",
+                     "gravidade":  "Crítica"
+                 },
+                 {
+                     "id":  "play-090",
+                     "pergunta":  "\u0027Seccao Transversal Fechada sem Visibilidade\u0027 no playground é só detalhe ou é um problema de segurança que precisa corrigir?",
+                     "resposta":  "A irregularidade \u0027Seccao Transversal Fechada sem Visibilidade\u0027 indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 2. Citação técnica: Parte 2, item 6.4.4 e Tabela 6.",
+                     "normas":  [
+                                    "ABNT NBR 16071",
+                                    "ABNT NBR 16071-2"
+                                ],
+                     "referencias":  [
+
+                                     ],
+                     "responsabilidade":  "Mista - requer avaliação técnica",
+                     "gravidade":  "Média"
+                 }
+             ]
 }
