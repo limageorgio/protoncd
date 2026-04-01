@@ -984,6 +984,26 @@
                     </div>
                 </div>
 
+                <!-- FAQ 2.1 -->
+                <div class="accordion-item"
+                    style="border-radius: var(--radius-md); background: var(--bg-color); margin-bottom: 1rem; overflow: hidden; border: 1px solid var(--border-color); cursor: pointer;">
+                    <div class="accordion-header"
+                        style="padding: 1.5rem; font-weight: 600; display: flex; justify-content: space-between; align-items: center;"
+                        onclick="const c=this.nextElementSibling,i=this.querySelector('i');c.style.display=c.style.display==='block'?'none':'block';i.classList.toggle('fa-plus');i.classList.toggle('fa-minus');">
+                        <span>Can your report support due diligence and maintenance contract disputes?</span>
+                        <i class="fas fa-plus" style="color: var(--primary-color);"></i>
+                    </div>
+                    <div class="accordion-content"
+                        style="padding: 0 1.5rem 1.5rem 1.5rem; display: none; color: var(--text-muted); line-height: 1.6; border-top: 1px solid var(--border-light);">
+                        Yes. Our report is structured for <strong>Elevator Due Diligence</strong>,
+                        <strong>Vertical Transportation Audit</strong>,
+                        <strong>Latent defects inspection</strong>, and
+                        <strong>Maintenance contract compliance review</strong>. It is frequently used by lawyers,
+                        insurers, and property managers to challenge excessive repair claims, validate technical
+                        causation, and document non-conformities with legal-grade engineering evidence.
+                    </div>
+                </div>
+
                 <!-- FAQ 3 -->
                 <div class="accordion-item"
                     style="border-radius: var(--radius-md); background: var(--bg-color); margin-bottom: 1rem; overflow: hidden; border: 1px solid var(--border-color); cursor: pointer;">
@@ -1065,8 +1085,7 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <a href="../en/" class="nav-logo"
-                        style="margin-bottom: var(--space-4); display: inline-flex;">
+                    <a href="../en/" class="nav-logo" style="margin-bottom: var(--space-4); display: inline-flex;">
                         <img src="../img/logo_proton_branco.png" alt="Proton Engineering" width="36" height="36">
                         <span class="nav-logo-text">PROTON <span>Engineering</span></span>
                     </a>
