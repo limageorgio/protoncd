@@ -10,6 +10,11 @@
                 "NBR 16042",
                 "Código de Defesa do Consumidor"
             ],
+            "artigo_relacionado": {
+                "titulo": "Vício de Instalação versus Desgaste Natural em Elevadores",
+                "url": "/artigos/elevadores/artigo-elevadores-vicio-instalacao-versus-desgaste-natural.html",
+                "categoria": "Elevadores"
+            },
             "responsabilidade": "Mista - requer avaliação técnica",
             "gravidade": "Média"
         },
@@ -21,6 +26,11 @@
                 "NBR 16042",
                 "NBR NM 207"
             ],
+            "artigo_relacionado": {
+                "titulo": "Cabos Soltos no Fosso do Elevador",
+                "url": "/artigos/elevadores/artigo-elevadores-cabos-soltos-fosso.html",
+                "categoria": "Elevadores"
+            },
             "responsabilidade": "Construtora",
             "gravidade": "Alta"
         },
@@ -36,6 +46,11 @@
             "referencias": [
                 "https://www.schindler.com.br/content/dam/website/br/docs/elevadores/schindler-ruidos-vibracoes-informe.pdf/_jcr_content/renditions/original./schindler-ruidos-vibracoes-informe.pdf"
             ],
+            "artigo_relacionado": {
+                "titulo": "Ruído e Vibração Excessivos em Elevadores",
+                "url": "/artigos/elevadores/artigo-elevadores-ruido-vibracao-excessivos.html",
+                "categoria": "Elevadores"
+            },
             "responsabilidade": "Construtora",
             "gravidade": "Alta"
         },
@@ -49,6 +64,11 @@
             "referencias": [
                 "https://legisla.casacivil.go.gov.br/api/v2/pesquisa/legislacoes/100721/pdf"
             ],
+            "artigo_relacionado": {
+                "titulo": "Cartaz de Alerta para Elevadores",
+                "url": "/artigos/elevadores/artigo-elevadores-cartaz-alerta-elevadores.html",
+                "categoria": "Elevadores"
+            },
             "responsabilidade": "Construtora",
             "gravidade": "Média"
         },
@@ -59,6 +79,11 @@
             "normas": [
                 "NBR 16042"
             ],
+            "artigo_relacionado": {
+                "titulo": "Ruídos Anormais em Motores de Tração de Elevadores",
+                "url": "/artigos/elevadores/artigo-elevadores-ruidos-anormais-motores-tracao.html",
+                "categoria": "Elevadores"
+            },
             "responsabilidade": "Construtora",
             "gravidade": "Alta"
         },
@@ -70,6 +95,11 @@
                 "Boas práticas de manutenção",
                 "NBR 5410 (organização de quadros elétricos)"
             ],
+            "artigo_relacionado": {
+                "titulo": "Numeração Provisória na Casa de Máquinas do Elevador",
+                "url": "/artigos/elevadores/artigo-elevadores-numeracao-provisoria-casa-maquinas.html",
+                "categoria": "Elevadores"
+            },
             "responsabilidade": "Construtora",
             "gravidade": "Média"
         },
@@ -81,6 +111,11 @@
                 "NR 15",
                 "NR 26"
             ],
+            "artigo_relacionado": {
+                "titulo": "Pintura do Fosso do Elevador",
+                "url": "/artigos/elevadores/artigo-elevadores-pintura-fosso-elevador.html",
+                "categoria": "Elevadores"
+            },
             "responsabilidade": "Construtora",
             "gravidade": "Média"
         },
@@ -92,6 +127,11 @@
                 "Boas práticas de manutenção",
                 "NBR NM 207"
             ],
+            "artigo_relacionado": {
+                "titulo": "Contato com Água em Elevadores",
+                "url": "/artigos/elevadores/artigo-elevadores-contato-com-agua-em-elevadores.html",
+                "categoria": "Elevadores"
+            },
             "responsabilidade": "Construtora",
             "gravidade": "Alta"
         },
@@ -102,6 +142,11 @@
             "normas": [
                 "ABNT NBR 12892:2009, 11.2.2"
             ],
+            "artigo_relacionado": {
+                "titulo": "Folga entre Porta e Piso do Andar no Elevador",
+                "url": "/artigos/elevadores/artigo-elevadores-folga-porta-piso-andar.html",
+                "categoria": "Elevadores"
+            },
             "responsabilidade": "Mista - requer avaliação técnica",
             "gravidade": "Alta"
         },
@@ -113,6 +158,11 @@
                 "ABNT NBR 16858-7, Tabela A.1",
                 "ABNT NBR 12892, 3.23"
             ],
+            "artigo_relacionado": {
+                "titulo": "Desnivelamento do Elevador em Relação ao Piso",
+                "url": "/artigos/elevadores/artigo-elevadores-desnivelamento-elevador-piso-andar.html",
+                "categoria": "Elevadores"
+            },
             "responsabilidade": "Condomínio",
             "gravidade": "Alta"
         },
@@ -123,6 +173,11 @@
             "normas": [
                 "ABNT NBR 16858-3:2022, Tabela 4 e Tabela 5"
             ],
+            "artigo_relacionado": {
+                "titulo": "Botões da Cabina com Braille e Contraste",
+                "url": "/artigos/elevadores/artigo-elevadores-botoes-cabina-braille-contraste.html",
+                "categoria": "Elevadores"
+            },
             "responsabilidade": "Construtora",
             "gravidade": "Alta"
         },
@@ -133,6 +188,11 @@
             "normas": [
                 "ABNT NBR 16858-3:2022, Tabela 4"
             ],
+            "artigo_relacionado": {
+                "titulo": "Dimensão Mínima dos Botões da Cabina do Elevador",
+                "url": "/artigos/elevadores/artigo-elevadores-botoes-cabina-dimensao-minima.html",
+                "categoria": "Elevadores"
+            },
             "responsabilidade": "Construtora",
             "gravidade": "Média"
         },
