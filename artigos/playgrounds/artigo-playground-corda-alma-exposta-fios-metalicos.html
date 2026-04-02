@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Entenda o risco de Brinquedo com 'Corda com alma exposta ou fios metálicos rompidos' pode machucar  em playgrounds, criterios da ABNT NBR 16071, protocolo de inspecao e plano de correcao tecnica.">
+    <meta name="description"
+        content="Entenda o risco de Brinquedo com 'Corda com alma exposta ou fios metálicos rompidos' pode machucar  em playgrounds, criterios da ABNT NBR 16071, protocolo de inspecao e plano de correcao tecnica.">
     <title>Corda com alma exposta ou fios metálicos rompidos: Diagnostico Tecnico | Proton Engenharia</title>
-    <link rel="canonical" href="https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-corda-com-alma-exposta-ou-fios-metálicos-rompidos.html">
+    <link rel="canonical"
+        href="https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-corda-com-alma-exposta-ou-fios-metálicos-rompidos.html">
     <link rel="stylesheet" href="../../css/all.min.css">
     <link rel="icon" href="../../img/faviconb.ico" type="image/x-icon">
     <link rel="stylesheet" href="../../css/variables.css">
@@ -14,29 +17,156 @@
     <link rel="stylesheet" href="../../css/layout.css">
     <link rel="stylesheet" href="../../css/animations.css">
     <style>
-        .article-container { max-width: 920px; margin: 0 auto; padding: var(--space-8) var(--space-4); }
-        .article-content { font-size: 1.03rem; }
-        .article-hero-panel { background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-xl); padding: var(--space-6); margin-bottom: var(--space-7); }
-        .article-intro { max-width: 760px; margin: 0 auto var(--space-5); text-align: center; }
-        .article-mini-stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-3); margin: 0 0 var(--space-5); }
-        .article-mini-stat { background: rgba(255,255,255,0.02); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: var(--space-3); text-align: center; }
-        .article-mini-stat strong { display: block; color: var(--text-primary); font-size: 1.12rem; margin-bottom: 4px; }
-        .article-mini-stat span { color: var(--text-secondary); font-size: var(--fs-sm); }
-        .risk-chart { background: var(--bg-subtle); border: 1px solid var(--border-subtle); border-radius: var(--radius-xl); padding: var(--space-5); margin: var(--space-5) 0; }
-        .risk-row { display: grid; grid-template-columns: 200px 1fr auto; align-items: center; gap: var(--space-3); margin-bottom: var(--space-3); }
-        .risk-row:last-child { margin-bottom: 0; }
-        .risk-bar { height: 10px; border-radius: 999px; background: rgba(255,255,255,0.08); overflow: hidden; }
-        .risk-bar span { display: block; height: 100%; background: linear-gradient(90deg, #f59e0b 0%, #ef4444 100%); }
-        .article-content h2 { font-size: var(--fs-xl); font-weight: var(--fw-bold); color: var(--text-primary); margin-top: var(--space-8); margin-bottom: var(--space-4); padding: var(--space-3) var(--space-4); border: 1px solid rgba(239,68,68,0.28); border-radius: var(--radius-lg); background: linear-gradient(135deg, rgba(239,68,68,0.12), rgba(239,68,68,0.03)); }
-        .article-content p { margin-bottom: var(--space-4); line-height: 1.78; color: var(--text-secondary); }
-        .article-content ul { margin-left: 0; padding: var(--space-4) var(--space-5); margin-bottom: var(--space-4); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); background: rgba(15,23,42,0.45); list-style: none; }
-        .article-content li { margin-bottom: var(--space-2); line-height: 1.6; padding: var(--space-3); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); background: rgba(255,255,255,0.02); }
-        .content-box { background: var(--bg-subtle); border: 1px solid var(--border-subtle); padding: var(--space-4); border-radius: var(--radius-lg); margin: var(--space-4) 0; }
-        .decision-table { width: 100%; border-collapse: collapse; margin: var(--space-4) 0; border: 1px solid var(--border-subtle); }
-        .decision-table th, .decision-table td { border: 1px solid var(--border-subtle); padding: 10px; text-align: left; }
-        .decision-table th { background: rgba(239,68,68,0.08); color: var(--text-primary); }
+        .article-container {
+            max-width: 920px;
+            margin: 0 auto;
+            padding: var(--space-8) var(--space-4);
+        }
+
+        .article-content {
+            font-size: 1.03rem;
+        }
+
+        .article-hero-panel {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-xl);
+            padding: var(--space-6);
+            margin-bottom: var(--space-7);
+        }
+
+        .article-intro {
+            max-width: 760px;
+            margin: 0 auto var(--space-5);
+            text-align: center;
+        }
+
+        .article-mini-stats {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: var(--space-3);
+            margin: 0 0 var(--space-5);
+        }
+
+        .article-mini-stat {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            padding: var(--space-3);
+            text-align: center;
+        }
+
+        .article-mini-stat strong {
+            display: block;
+            color: var(--text-primary);
+            font-size: 1.12rem;
+            margin-bottom: 4px;
+        }
+
+        .article-mini-stat span {
+            color: var(--text-secondary);
+            font-size: var(--fs-sm);
+        }
+
+        .risk-chart {
+            background: var(--bg-subtle);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-xl);
+            padding: var(--space-5);
+            margin: var(--space-5) 0;
+        }
+
+        .risk-row {
+            display: grid;
+            grid-template-columns: 200px 1fr auto;
+            align-items: center;
+            gap: var(--space-3);
+            margin-bottom: var(--space-3);
+        }
+
+        .risk-row:last-child {
+            margin-bottom: 0;
+        }
+
+        .risk-bar {
+            height: 10px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.08);
+            overflow: hidden;
+        }
+
+        .risk-bar span {
+            display: block;
+            height: 100%;
+            background: linear-gradient(90deg, #f59e0b 0%, #ef4444 100%);
+        }
+
+        .article-content h2 {
+            font-size: var(--fs-xl);
+            font-weight: var(--fw-bold);
+            color: var(--text-primary);
+            margin-top: var(--space-8);
+            margin-bottom: var(--space-4);
+            padding: var(--space-3) var(--space-4);
+            border: 1px solid rgba(239, 68, 68, 0.28);
+            border-radius: var(--radius-lg);
+            background: linear-gradient(135deg, rgba(239, 68, 68, 0.12), rgba(239, 68, 68, 0.03));
+        }
+
+        .article-content p {
+            margin-bottom: var(--space-4);
+            line-height: 1.78;
+            color: var(--text-secondary);
+        }
+
+        .article-content ul {
+            margin-left: 0;
+            padding: var(--space-4) var(--space-5);
+            margin-bottom: var(--space-4);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            background: rgba(15, 23, 42, 0.45);
+            list-style: none;
+        }
+
+        .article-content li {
+            margin-bottom: var(--space-2);
+            line-height: 1.6;
+            padding: var(--space-3);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-md);
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .content-box {
+            background: var(--bg-subtle);
+            border: 1px solid var(--border-subtle);
+            padding: var(--space-4);
+            border-radius: var(--radius-lg);
+            margin: var(--space-4) 0;
+        }
+
+        .decision-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: var(--space-4) 0;
+            border: 1px solid var(--border-subtle);
+        }
+
+        .decision-table th,
+        .decision-table td {
+            border: 1px solid var(--border-subtle);
+            padding: 10px;
+            text-align: left;
+        }
+
+        .decision-table th {
+            background: rgba(239, 68, 68, 0.08);
+            color: var(--text-primary);
+        }
     </style>
 </head>
+
 <body>
     <nav class="nav" id="main-nav">
         <div class="nav-inner">
@@ -64,40 +194,66 @@
             <div class="article-hero-panel">
                 <div class="article-intro">
                     <h1>Corda com alma exposta ou fios metálicos rompidos: Diagnostico Tecnico</h1>
-                    <p>Analise tecnica orientada a decisao para inspecao de playgrounds, com base normativa e plano corretivo objetivo.</p>
+                    <p>Analise tecnica orientada a decisao para inspecao de playgrounds, com base normativa e plano
+                        corretivo objetivo.</p>
                 </div>
                 <div class="article-mini-stats">
                     <div class="article-mini-stat"><strong>5.8/10</strong><span>Indice de criticidade</span></div>
-                    <div class="article-mini-stat"><strong>Programada (ate 30 dias)</strong><span>Janela de resposta</span></div>
-                    <div class="article-mini-stat"><strong>Mista - requer avaliação técnica</strong><span>Responsavel principal</span></div>
+                    <div class="article-mini-stat"><strong>Programada (ate 30 dias)</strong><span>Janela de
+                            resposta</span></div>
+                    <div class="article-mini-stat"><strong>Mista - requer avaliação técnica</strong><span>Responsavel
+                            principal</span></div>
                 </div>
             </div>
 
-            <h2>1. Diagnostico tecnico da nao conformidade</h2>
+            <h2 id="sec-identificacao"><i class="fas fa-info-circle" style="margin-right:8px;"></i>1. Identificação
+                Técnica</h2>
             <div class="content-box">
-                <p><strong>Pergunta de campo:</strong> Brinquedo com 'Corda com alma exposta ou fios metálicos rompidos' pode machucar as crianças?</p>
-                <p><strong>Interpretacao tecnica:</strong> A irregularidade 'Corda com alma exposta ou fios metálicos rompidos' indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 2. Citação técnica: Parte 2, item 4.6.</p>
-                <p><strong>Leitura de risco:</strong> Embora a criticidade de média seja moderada a alta, a correcao programada evita progressao do risco e passivo tecnico.</p>
+                <p><strong>Pergunta de campo:</strong> Brinquedo com 'Corda com alma exposta ou fios metálicos rompidos'
+                    pode machucar as crianças?</p>
+                <p><strong>Interpretacao tecnica:</strong> A irregularidade 'Corda com alma exposta ou fios metálicos
+                    rompidos' indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso
+                    eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve
+                    confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme
+                    requisito normativo aplicável. Referência principal: Parte 2. Citação técnica: Parte 2, item 4.6.
+                </p>
+                <p><strong>Leitura de risco:</strong> Embora a criticidade de média seja moderada a alta, a correcao
+                    programada evita progressao do risco e passivo tecnico.</p>
                 <p><strong>Referencias normativas:</strong> ABNT NBR 16071 | ABNT NBR 16071-2</p>
             </div>
 
-            <h2>2. Mecanismo de falha e efeitos em uso real</h2>
-            <p>Na pratica de inspecao, esse desvio tende a surgir por combinacao de desgaste operacional, variacao geometrica e manutencao reativa. Em ambientes com alta frequencia de uso infantil, a janela entre desvio leve e evento costuma ser curta.</p>
+            <h2 id="sec-contexto"><i class="fas fa-microscope" style="margin-right:8px;"></i>2. Contexto e Cenário</h2>
+            <p>Na pratica de inspecao, esse desvio tende a surgir por combinacao de desgaste operacional, variacao
+                geometrica e manutencao reativa. Em ambientes com alta frequencia de uso infantil, a janela entre desvio
+                leve e evento costuma ser curta.</p>
             <ul>
-                <li><strong>Origem:</strong> perda de conformidade dimensional, fixacao inadequada ou degradacao de componentes.</li>
-                <li><strong>Exposicao:</strong> repeticao de ciclos de uso sem bloqueio preventivo do ponto critico.</li>
-                <li><strong>Efeito provavel:</strong> queda, aprisionamento, impacto secundario ou lesoes por contato.</li>
-                <li><strong>Agravantes:</strong> umidade, vandalismo, ausencia de rotina documentada de inspecao e manutencao.</li>
+                <li><strong>Origem:</strong> perda de conformidade dimensional, fixacao inadequada ou degradacao de
+                    componentes.</li>
+                <li><strong>Exposicao:</strong> repeticao de ciclos de uso sem bloqueio preventivo do ponto critico.
+                </li>
+                <li><strong>Efeito provavel:</strong> queda, aprisionamento, impacto secundario ou lesoes por contato.
+                </li>
+                <li><strong>Agravantes:</strong> umidade, vandalismo, ausencia de rotina documentada de inspecao e
+                    manutencao.</li>
             </ul>
 
             <div class="risk-chart">
-                <div class="risk-row"><strong>Probabilidade</strong><div class="risk-bar"><span style="width:60%;"></span></div><span>Média</span></div>
-                <div class="risk-row"><strong>Severidade</strong><div class="risk-bar"><span style="width:65%;"></span></div><span>Média</span></div>
-                <div class="risk-row"><strong>Exposicao</strong><div class="risk-bar"><span style="width:70%;"></span></div><span>Continua</span></div>
-                <div class="risk-row"><strong>Prioridade de acao</strong><div class="risk-bar"><span style="width:60;"></span></div><span>Tratamento tecnico</span></div>
+                <div class="risk-row"><strong>Probabilidade</strong>
+                    <div class="risk-bar"><span style="width:60%;"></span></div><span>Média</span>
+                </div>
+                <div class="risk-row"><strong>Severidade</strong>
+                    <div class="risk-bar"><span style="width:65%;"></span></div><span>Média</span>
+                </div>
+                <div class="risk-row"><strong>Exposicao</strong>
+                    <div class="risk-bar"><span style="width:70%;"></span></div><span>Continua</span>
+                </div>
+                <div class="risk-row"><strong>Prioridade de acao</strong>
+                    <div class="risk-bar"><span style="width:60;"></span></div><span>Tratamento tecnico</span>
+                </div>
             </div>
 
-            <h2>3. Protocolo de inspecao e evidencias minimas</h2>
+            <h2 id="sec-protocolo"><i class="fas fa-clipboard-list" style="margin-right:8px;"></i>3. Protocolo de
+                Inspeção</h2>
             <ul>
                 <li>Registro fotografico com escala de medida e identificacao inequivoca do ponto.</li>
                 <li>Medicoes funcionais e dimensionais comparadas ao criterio normativo aplicavel.</li>
@@ -106,13 +262,32 @@
                 <li>Classificacao de risco com prazo, responsavel e condicao de liberacao apos correcao.</li>
             </ul>
 
-            <h2>4. Matriz de decisao corretiva</h2>
+            <h2 id="sec-matriz"><i class="fas fa-table" style="margin-right:8px;"></i>4. Matriz de Decisão Corretiva
+            </h2>
             <table class="decision-table">
-                <thead><tr><th>Cenario</th><th>Acao recomendada</th><th>Prazo</th></tr></thead>
+                <thead>
+                    <tr>
+                        <th>Cenario</th>
+                        <th>Acao recomendada</th>
+                        <th>Prazo</th>
+                    </tr>
+                </thead>
                 <tbody>
-                    <tr><td>Risco critico com exposicao infantil direta</td><td>Interdicao imediata do ponto ou equipamento e barreira fisica</td><td>0-24h</td></tr>
-                    <tr><td>Risco alto com tendencia de agravamento</td><td>Correcao prioritaria e reinspecao tecnica formal</td><td>Ate 7 dias</td></tr>
-                    <tr><td>Risco moderado sob controle provisorio</td><td>Plano corretivo com marcos de execucao e monitoramento</td><td>Ate 30 dias</td></tr>
+                    <tr>
+                        <td>Risco critico com exposicao infantil direta</td>
+                        <td>Interdicao imediata do ponto ou equipamento e barreira fisica</td>
+                        <td>0-24h</td>
+                    </tr>
+                    <tr>
+                        <td>Risco alto com tendencia de agravamento</td>
+                        <td>Correcao prioritaria e reinspecao tecnica formal</td>
+                        <td>Ate 7 dias</td>
+                    </tr>
+                    <tr>
+                        <td>Risco moderado sob controle provisorio</td>
+                        <td>Plano corretivo com marcos de execucao e monitoramento</td>
+                        <td>Ate 30 dias</td>
+                    </tr>
                 </tbody>
             </table>
 
@@ -120,14 +295,18 @@
             <ul>
                 <li><strong>Contencao:</strong> restringir acesso ao risco ate eliminacao da causa tecnica.</li>
                 <li><strong>Correcao:</strong> adequar componente, geometria e metodo de fixacao conforme norma.</li>
-                <li><strong>Validacao:</strong> reinspecionar e liberar somente com evidencia objetiva de conformidade.</li>
+                <li><strong>Validacao:</strong> reinspecionar e liberar somente com evidencia objetiva de conformidade.
+                </li>
                 <li><strong>Prevencao:</strong> incorporar o item na rotina periodica com checklist rastreavel.</li>
             </ul>
-                    <section class="cta-section" style="margin-top: var(--space-8); padding: var(--space-6); border: 1px solid var(--border-subtle); border-radius: var(--radius-xl); background: linear-gradient(135deg, rgba(14,165,233,0.12), rgba(14,165,233,0.03)); text-align: center;">
+            <section class="cta-section"
+                style="margin-top: var(--space-8); padding: var(--space-6); border: 1px solid var(--border-subtle); border-radius: var(--radius-xl); background: linear-gradient(135deg, rgba(14,165,233,0.12), rgba(14,165,233,0.03)); text-align: center;">
                 <h3 style="margin-bottom: var(--space-3);">Precisa de inspecao tecnica no seu playground?</h3>
-                <p style="margin-bottom: var(--space-4);">A Proton Engenharia realiza diagnostico tecnico com criterios da ABNT NBR 16071 e plano de acao priorizado para reduzir risco e passivo.</p>
+                <p style="margin-bottom: var(--space-4);">A Proton Engenharia realiza diagnostico tecnico com criterios
+                    da ABNT NBR 16071 e plano de acao priorizado para reduzir risco e passivo.</p>
                 <div style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
-                    <a href="https://api.whatsapp.com/send?phone=5562992852704&text=Ola! Preciso de inspecao tecnica de playground." target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                    <a href="https://api.whatsapp.com/send?phone=5562992852704&text=Ola! Preciso de inspecao tecnica de playground."
+                        target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
                         <i class="fab fa-whatsapp"></i> Solicitar Inspecao
                     </a>
                     <a href="tel:5562992852704" class="btn btn-secondary btn-sm">
@@ -141,11 +320,13 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <a href="../../index.html" class="nav-logo" style="margin-bottom: var(--space-4); display: inline-flex;">
+                    <a href="../../index.html" class="nav-logo"
+                        style="margin-bottom: var(--space-4); display: inline-flex;">
                         <img src="../../img/logo_proton_branco.png" alt="Proton Engenharia" width="36" height="36">
                         <span class="nav-logo-text">PROTON <span>Engenharia</span></span>
                     </a>
-                    <p>Engenharia diagnostica com tecnologia 360 exclusiva. Inspecao de playgrounds, laudos tecnicos e pericias mecanicas com ART-CREA.</p>
+                    <p>Engenharia diagnostica com tecnologia 360 exclusiva. Inspecao de playgrounds, laudos tecnicos e
+                        pericias mecanicas com ART-CREA.</p>
                 </div>
                 <div class="footer-col">
                     <h4>Servicos</h4>
@@ -167,18 +348,25 @@
                 <div class="footer-col">
                     <h4>Contato</h4>
                     <ul>
-                        <li><a href="tel:5562992852704"><i class="fas fa-phone" style="margin-right: 6px;"></i> (62) 99285-2704</a></li>
-                        <li><a href="mailto:lima.georgio.eng@gmail.com"><i class="fas fa-envelope" style="margin-right: 6px;"></i> E-mail</a></li>
-                        <li><a href="https://api.whatsapp.com/send?phone=5562992852704" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp" style="margin-right: 6px;"></i> WhatsApp</a></li>
+                        <li><a href="tel:5562992852704"><i class="fas fa-phone" style="margin-right: 6px;"></i> (62)
+                                99285-2704</a></li>
+                        <li><a href="mailto:lima.georgio.eng@gmail.com"><i class="fas fa-envelope"
+                                    style="margin-right: 6px;"></i> E-mail</a></li>
+                        <li><a href="https://api.whatsapp.com/send?phone=5562992852704" target="_blank"
+                                rel="noopener noreferrer"><i class="fab fa-whatsapp" style="margin-right: 6px;"></i>
+                                WhatsApp</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2026 Proton Engenharia Diagnostica. Todos os direitos reservados.</p>
                 <div class="footer-social">
-                    <a href="https://www.linkedin.com/in/georgiolima/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/georgiolima/" target="_blank" rel="noopener noreferrer"
+                        aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i
+                            class="fab fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"
+                        aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
         </div>
@@ -186,4 +374,5 @@
 
     <script src="../../js/main.js"></script>
 </body>
+
 </html>

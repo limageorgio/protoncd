@@ -36,6 +36,19 @@
       "publisher": {"@type": "Organization", "name": "Proton Engenharia"}
     }
     </script>
+    <style>
+        .article-content h2 {
+            font-size: var(--fs-xl);
+            font-weight: var(--fw-bold);
+            color: var(--text-primary);
+            margin-top: var(--space-8);
+            margin-bottom: var(--space-4);
+            padding: var(--space-3) var(--space-4);
+            border: 1px solid rgba(239, 68, 68, 0.28);
+            border-radius: var(--radius-lg);
+            background: linear-gradient(135deg, rgba(239, 68, 68, 0.12), rgba(239, 68, 68, 0.03));
+        }
+    </style>
 </head>
 
 <body>
@@ -62,16 +75,20 @@
                     style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--space-3);margin:0 0 var(--space-5);">
                     <div class="article-mini-stat"
                         style="border:1px solid var(--border-subtle);border-radius:var(--radius-lg);padding:var(--space-3);text-align:center;">
-                        <strong>8.8/10</strong><span>Indice de criticidade</span></div>
+                        <strong>8.8/10</strong><span>Indice de criticidade</span>
+                    </div>
                     <div class="article-mini-stat"
                         style="border:1px solid var(--border-subtle);border-radius:var(--radius-lg);padding:var(--space-3);text-align:center;">
-                        <strong>Imediata (0-24h)</strong><span>Janela de resposta</span></div>
+                        <strong>Imediata (0-24h)</strong><span>Janela de resposta</span>
+                    </div>
                     <div class="article-mini-stat"
                         style="border:1px solid var(--border-subtle);border-radius:var(--radius-lg);padding:var(--space-3);text-align:center;">
-                        <strong>Mista - requer avaliacao tecnica</strong><span>Responsavel principal</span></div>
+                        <strong>Mista - requer avaliacao tecnica</strong><span>Responsavel principal</span>
+                    </div>
                 </div>
             </div>
-            <h2>1. Diagnostico tecnico da nao conformidade</h2>
+            <h2 id="sec-identificacao"><i class="fas fa-info-circle" style="margin-right:8px;"></i>1. Identificação
+                Técnica</h2>
             <div class="content-box"
                 style="background: var(--bg-subtle); border: 1px solid var(--border-subtle); padding: var(--space-4); border-radius: var(--radius-lg); margin: var(--space-4) 0;">
                 <p><strong>Pergunta de campo:</strong> Vao inferior de carrossel entre 60 mm e 400 mm no playground e so
@@ -84,7 +101,7 @@
                     D.4.2.3.</p>
                 <p><strong>Referencias normativas:</strong> ABNT NBR 16071 | ABNT NBR 16071-2</p>
             </div>
-            <h2>2. Mecanismo de falha e risco operacional</h2>
+            <h2 id="sec-contexto"><i class="fas fa-microscope" style="margin-right:8px;"></i>2. Contexto e Cenário</h2>
             <p>Faixa de vao inadequada em carrossel pode aprisionar membros inferiores e gerar contato com partes em
                 rotacao. O risco aumenta em uso coletivo, com aceleracao irregular e diferenca de altura do equipamento.
             </p>
@@ -128,14 +145,16 @@
                     </div><span>Interdicao imediata</span>
                 </div>
             </div>
-            <h2>3. Protocolo de inspecao e evidencias minimas</h2>
+            <h2 id="sec-protocolo"><i class="fas fa-clipboard-list" style="margin-right:8px;"></i>3. Protocolo de
+                Inspeção</h2>
             <ul>
                 <li>Medir vao em varios pontos e em rotacao completa.</li>
                 <li>Registrar concentricidade, folga e variacao sob carga.</li>
                 <li>Checar risco de contato com partes moveis e bordas.</li>
                 <li>Corrigir geometria e validar em ensaio funcional.</li>
             </ul>
-            <h2>4. Matriz de decisao corretiva</h2>
+            <h2 id="sec-matriz"><i class="fas fa-table" style="margin-right:8px;"></i>4. Matriz de Decisão Corretiva
+            </h2>
             <table class="decision-table"
                 style="width:100%;border-collapse:collapse;margin:var(--space-4) 0;border:1px solid var(--border-subtle);">
                 <thead>
