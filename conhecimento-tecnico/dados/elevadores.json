@@ -204,7 +204,12 @@
                 "ABNT NBR 16858-3:2022, Tabela 4"
             ],
             "responsabilidade": "Mista - requer avaliação técnica",
-            "gravidade": "Média"
+            "gravidade": "Média",
+            "artigo_relacionado": {
+                "titulo": "Forca de Acionamento do Botao do Elevador",
+                "url": "/artigos/elevadores/artigo-elevadores-forca-acionamento-botao.html",
+                "categoria": "Elevadores"
+            }
         },
         {
             "id": "elev-014",
@@ -215,7 +220,12 @@
                 "ABNT NBR 12892:2022, 7.6"
             ],
             "responsabilidade": "Condomínio",
-            "gravidade": "Crítica"
+            "gravidade": "Crítica",
+            "artigo_relacionado": {
+                "titulo": "Cortina de Luz na Porta do Elevador",
+                "url": "/artigos/elevadores/artigo-elevadores-cortina-luz-porta.html",
+                "categoria": "Elevadores"
+            }
         },
         {
             "id": "elev-015",
@@ -225,7 +235,12 @@
                 "ABNT NBR 12892:2022, 7.6"
             ],
             "responsabilidade": "Condomínio",
-            "gravidade": "Alta"
+            "gravidade": "Alta",
+            "artigo_relacionado": {
+                "titulo": "Forca de Fechamento da Porta do Elevador",
+                "url": "/artigos/elevadores/artigo-elevadores-forca-fechamento-porta.html",
+                "categoria": "Elevadores"
+            }
         },
         {
             "id": "elev-016",
@@ -235,7 +250,12 @@
                 "ABNT NBR 12892:2022, 9.1 e 9.4"
             ],
             "responsabilidade": "Condomínio",
-            "gravidade": "Crítica"
+            "gravidade": "Crítica",
+            "artigo_relacionado": {
+                "titulo": "Cabos Enferrujados e Arames Soltos no Elevador",
+                "url": "/artigos/elevadores/artigo-elevadores-cabos-enferrujados-arames-soltos.html",
+                "categoria": "Elevadores"
+            }
         },
         {
             "id": "elev-017",
@@ -246,7 +266,12 @@
                 "ABNT NBR 12892, 9.8"
             ],
             "responsabilidade": "Condomínio",
-            "gravidade": "Crítica"
+            "gravidade": "Crítica",
+            "artigo_relacionado": {
+                "titulo": "Limitador de Velocidade: Manutencao Critica",
+                "url": "/artigos/elevadores/artigo-elevadores-limitador-velocidade-manutencao-critica.html",
+                "categoria": "Elevadores"
+            }
         },
         {
             "id": "elev-018",
@@ -256,7 +281,12 @@
                 "ABNT NBR 16858-1, 5.12.1.2"
             ],
             "responsabilidade": "Condomínio",
-            "gravidade": "Alta"
+            "gravidade": "Alta",
+            "artigo_relacionado": {
+                "titulo": "Burlar Sensor de Sobrecarga em Elevador",
+                "url": "/artigos/elevadores/artigo-elevadores-burlar-sensor-sobrecarga.html",
+                "categoria": "Elevadores"
+            }
         },
         {
             "id": "elev-019",
@@ -267,7 +297,12 @@
                 "Tabela A.1 (14.2.6)"
             ],
             "responsabilidade": "Condomínio",
-            "gravidade": "Crítica"
+            "gravidade": "Crítica",
+            "artigo_relacionado": {
+                "titulo": "Slack Rope: Cabo Frouxo no Elevador",
+                "url": "/artigos/elevadores/artigo-elevadores-slack-rope-cabo-frouxo.html",
+                "categoria": "Elevadores"
+            }
         },
         {
             "id": "elev-020",
@@ -277,7 +312,12 @@
                 "ABNT NBR 12892:2009, 8.14 b e 14.3.1.10.1"
             ],
             "responsabilidade": "Condomínio",
-            "gravidade": "Crítica"
+            "gravidade": "Crítica",
+            "artigo_relacionado": {
+                "titulo": "Botao STOP na Manutencao do Elevador",
+                "url": "/artigos/elevadores/artigo-elevadores-botao-stop-manutencao.html",
+                "categoria": "Elevadores"
+            }
         },
         {
             "id": "elev-021",
@@ -287,7 +327,12 @@
                 "ABNT NBR 12892:2009, 13.5.1.1"
             ],
             "responsabilidade": "Condomínio",
-            "gravidade": "Alta"
+            "gravidade": "Alta",
+            "artigo_relacionado": {
+                "titulo": "Cabos Eletricos no Quadro de Comando do Elevador",
+                "url": "/artigos/elevadores/artigo-elevadores-cabos-eletricos-quadro-protecao.html",
+                "categoria": "Elevadores"
+            }
         },
         {
             "id": "elev-022",
@@ -298,7 +343,12 @@
                 "ABNT NBR 16858-1, 5.10.10"
             ],
             "responsabilidade": "Condomínio",
-            "gravidade": "Alta"
+            "gravidade": "Alta",
+            "artigo_relacionado": {
+                "titulo": "Painel Eletrico com Componentes Etiquetados",
+                "url": "/artigos/elevadores/artigo-elevadores-painel-eletrico-componentes-etiquetados.html",
+                "categoria": "Elevadores"
+            }
         },
         {
             "id": "elev-023",
@@ -309,7 +359,12 @@
                 "ABNT NBR 16858-1, 5.10.1"
             ],
             "responsabilidade": "Condomínio",
-            "gravidade": "Alta"
+            "gravidade": "Alta",
+            "artigo_relacionado": {
+                "titulo": "Chaves Seccionadoras com Identificacao Clara no Elevador",
+                "url": "/artigos/elevadores/artigo-elevadores-chaves-seccionadoras-identificacao.html",
+                "categoria": "Elevadores"
+            }
         },
         {
             "id": "elev-024",
@@ -320,7 +375,12 @@
                 "ABNT NBR 16858-1, 5.10.7"
             ],
             "responsabilidade": "Condomínio",
-            "gravidade": "Alta"
+            "gravidade": "Alta",
+            "artigo_relacionado": {
+                "titulo": "Tomadas no Fosso e no Teto da Cabina do Elevador",
+                "url": "/artigos/elevadores/artigo-elevadores-tomadas-fosso-teto-cabina.html",
+                "categoria": "Elevadores"
+            }
         },
         {
             "id": "elev-025",
@@ -331,7 +391,12 @@
                 "ABNT NBR 16858-1:2020, 5.10.1.2.3"
             ],
             "responsabilidade": "Condomínio",
-            "gravidade": "Alta"
+            "gravidade": "Alta",
+            "artigo_relacionado": {
+                "titulo": "DR 30 mA nos Circuitos de Manutencao do Elevador",
+                "url": "/artigos/elevadores/artigo-elevadores-dr-30ma-circuitos-manutencao.html",
+                "categoria": "Elevadores"
+            }
         },
         {
             "id": "elev-026",
@@ -342,7 +407,12 @@
                 "ABNT NBR 12892:2009, 15.4.1"
             ],
             "responsabilidade": "Condomínio",
-            "gravidade": "Alta"
+            "gravidade": "Alta",
+            "artigo_relacionado": {
+                "titulo": "Aviso de Acesso Restrito na Casa de Maquinas",
+                "url": "/artigos/elevadores/artigo-elevadores-aviso-acesso-restrito-casa-maquinas.html",
+                "categoria": "Elevadores"
+            }
         },
         {
             "id": "elev-027",
@@ -353,7 +423,12 @@
                 "ABNT NBR 12892:2022, 6.2"
             ],
             "responsabilidade": "Condomínio",
-            "gravidade": "Alta"
+            "gravidade": "Alta",
+            "artigo_relacionado": {
+                "titulo": "Acesso a Casa de Maquinas em Situacoes de Emergencia",
+                "url": "/artigos/elevadores/artigo-elevadores-acesso-casa-maquinas-emergencia.html",
+                "categoria": "Elevadores"
+            }
         },
         {
             "id": "elev-028",
@@ -364,7 +439,12 @@
                 "ABNT NBR 16858-1:2020, 5.2.1.9"
             ],
             "responsabilidade": "Condomínio",
-            "gravidade": "Crítica"
+            "gravidade": "Crítica",
+            "artigo_relacionado": {
+                "titulo": "Poco de Elevador Contaminado por Agua, Oleo e Residuos",
+                "url": "/artigos/elevadores/artigo-elevadores-poco-contaminado-agua-oleo-residuos.html",
+                "categoria": "Elevadores"
+            }
         },
         {
             "id": "elev-029",
@@ -375,7 +455,12 @@
                 "ABNT NBR 12892:2022, 7.9.3.5"
             ],
             "responsabilidade": "Condomínio",
-            "gravidade": "Crítica"
+            "gravidade": "Crítica",
+            "artigo_relacionado": {
+                "titulo": "Acesso Seguro ao Fundo do Poco do Elevador",
+                "url": "/artigos/elevadores/artigo-elevadores-acesso-seguro-fundo-poco.html",
+                "categoria": "Elevadores"
+            }
         },
         {
             "id": "elev-030",
@@ -386,7 +471,12 @@
                 "Tabelas 2 e 3"
             ],
             "responsabilidade": "Mista - requer avaliação técnica",
-            "gravidade": "Crítica"
+            "gravidade": "Crítica",
+            "artigo_relacionado": {
+                "titulo": "Espacos de Refugio no Elevador",
+                "url": "/artigos/elevadores/artigo-elevadores-espacos-refugio-elevador.html",
+                "categoria": "Elevadores"
+            }
         },
         {
             "id": "elev-031",
@@ -397,7 +487,12 @@
                 "ABNT NBR 12892, 10.1"
             ],
             "responsabilidade": "Condomínio",
-            "gravidade": "Alta"
+            "gravidade": "Alta",
+            "artigo_relacionado": {
+                "titulo": "Iluminacao e Condicao dos Trilhos na Casa de Maquinas e Fosso",
+                "url": "/artigos/elevadores/artigo-elevadores-iluminacao-casa-maquinas-fosso.html",
+                "categoria": "Elevadores"
+            }
         },
         {
             "id": "elev-032",
@@ -408,7 +503,12 @@
                 "ABNT NBR 12892:2022, Anexo E"
             ],
             "responsabilidade": "Construtora",
-            "gravidade": "Alta"
+            "gravidade": "Alta",
+            "artigo_relacionado": {
+                "titulo": "Fundacao dos Trilhos do Elevador: Avaliacao Tecnica",
+                "url": "/artigos/elevadores/artigo-elevadores-quadro-eletrico-trancado-plaqueta.html",
+                "categoria": "Elevadores"
+            }
         },
         {
             "id": "elev-033",
@@ -418,7 +518,12 @@
                 "ABNT NBR 12892:2022, 13.5.1.3"
             ],
             "responsabilidade": "Condomínio",
-            "gravidade": "Alta"
+            "gravidade": "Alta",
+            "artigo_relacionado": {
+                "titulo": "Proteção dos Chicotes e Cabos de Controle no Poço",
+                "url": "/artigos/elevadores/artigo-elevadores-chicotes-cabos-controle-protecao-inspecao.html",
+                "categoria": "Elevadores"
+            }
         },
         {
             "id": "elev-034",
@@ -429,7 +534,12 @@
                 "ABNT NBR 12892:2022, 15.2"
             ],
             "responsabilidade": "Mista - requer avaliação técnica",
-            "gravidade": "Média"
+            "gravidade": "Média",
+            "artigo_relacionado": {
+                "titulo": "Placa de Capacidade da Cabina: Exigência e Conformidade",
+                "url": "/artigos/elevadores/artigo-elevadores-placa-capacidade-cabina.html",
+                "categoria": "Elevadores"
+            }
         },
         {
             "id": "elev-035",
@@ -439,7 +549,12 @@
                 "ABNT NBR 12892:2009, 8.3.1 b"
             ],
             "responsabilidade": "Condomínio",
-            "gravidade": "Média"
+            "gravidade": "Média",
+            "artigo_relacionado": {
+                "titulo": "Ventilação da Cabina: Segurança e Conforto Operacional",
+                "url": "/artigos/elevadores/artigo-elevadores-ventilacao-cabina.html",
+                "categoria": "Elevadores"
+            }
         },
         {
             "id": "elev-036",
@@ -450,7 +565,12 @@
                 "ABNT NBR 12892:2022, 15.10"
             ],
             "responsabilidade": "Condomínio",
-            "gravidade": "Alta"
+            "gravidade": "Alta",
+            "artigo_relacionado": {
+                "titulo": "Chave Triangular de Destravamento: Uso Seguro em Emergência",
+                "url": "/artigos/elevadores/artigo-elevadores-chave-triangular-destravamento-emergencia.html",
+                "categoria": "Elevadores"
+            }
         },
         {
             "id": "elev-037",
@@ -460,7 +580,12 @@
                 "ABNT NBR 12892:2022, 7.2.3.5 e 7.2.3.6"
             ],
             "responsabilidade": "Construtora",
-            "gravidade": "Alta"
+            "gravidade": "Alta",
+            "artigo_relacionado": {
+                "titulo": "Vidros e Espelhos da Cabina: Padrão Técnico Obrigatório",
+                "url": "/artigos/elevadores/artigo-elevadores-vidros-espelhos-cabina-padrao.html",
+                "categoria": "Elevadores"
+            }
         },
         {
             "id": "elev-038",
@@ -470,7 +595,12 @@
                 "ABNT NBR 16858-7:2022, Tabela A.1 (item 5.11)"
             ],
             "responsabilidade": "Condomínio",
-            "gravidade": "Crítica"
+            "gravidade": "Crítica",
+            "artigo_relacionado": {
+                "titulo": "Interfone de Emergência na Cabina: Item Crítico",
+                "url": "/artigos/elevadores/artigo-elevadores-interfone-emergencia-cabina.html",
+                "categoria": "Elevadores"
+            }
         },
         {
             "id": "elev-039",
@@ -480,7 +610,12 @@
                 "ABNT NBR 12892:2009, 8.4.2"
             ],
             "responsabilidade": "Condomínio",
-            "gravidade": "Crítica"
+            "gravidade": "Crítica",
+            "artigo_relacionado": {
+                "titulo": "Saia de Proteção (Avental) da Cabina: Função e Risco",
+                "url": "/artigos/elevadores/artigo-elevadores-saia-protecao-avental-cabina.html",
+                "categoria": "Elevadores"
+            }
         },
         {
             "id": "elev-040",
@@ -491,7 +626,12 @@
                 "ABNT NBR 16858-2, 5.12.2"
             ],
             "responsabilidade": "Condomínio",
-            "gravidade": "Alta"
+            "gravidade": "Alta",
+            "artigo_relacionado": {
+                "titulo": "Proteção Antissalto em Cabos e Polias: Controle de Risco",
+                "url": "/artigos/elevadores/artigo-elevadores-protecao-antissalto-cabos-polias.html",
+                "categoria": "Elevadores"
+            }
         },
         {
             "id": "elev-041",
@@ -502,7 +642,12 @@
                 "ABNT NBR 12892:2022, 14.3.2"
             ],
             "responsabilidade": "Condomínio",
-            "gravidade": "Crítica"
+            "gravidade": "Crítica",
+            "artigo_relacionado": {
+                "titulo": "Fim de Curso (Limitador Final): Última Barreira de Segurança",
+                "url": "/artigos/elevadores/artigo-elevadores-fim-de-curso-limitador-final.html",
+                "categoria": "Elevadores"
+            }
         },
         {
             "id": "elev-042",
@@ -513,7 +658,12 @@
                 "ABNT NBR 12892:2022, 15.10"
             ],
             "responsabilidade": "Condomínio",
-            "gravidade": "Alta"
+            "gravidade": "Alta",
+            "artigo_relacionado": {
+                "titulo": "Chave Triangular sem Aviso: Risco Operacional e Responsabilidade",
+                "url": "/artigos/elevadores/artigo-elevadores-chave-triangular-sem-aviso-seguranca.html",
+                "categoria": "Elevadores"
+            }
         },
         {
             "id": "elev-043",
