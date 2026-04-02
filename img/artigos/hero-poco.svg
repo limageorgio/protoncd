@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" role="img" aria-label="Ilustracao discreta de umidade e risco em poco de elevador">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="water" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="420" fill="url(#bg)"/>
+  <rect x="90" y="60" width="220" height="300" rx="20" fill="#111827" stroke="#334155"/>
+  <rect x="890" y="60" width="220" height="300" rx="20" fill="#111827" stroke="#334155"/>
+  <rect x="330" y="80" width="540" height="260" rx="26" fill="#0b1220" stroke="#334155"/>
+  <rect x="360" y="210" width="480" height="96" rx="18" fill="url(#water)" opacity="0.85"/>
+  <path d="M360 238 C430 214, 515 258, 590 236 C665 214, 745 258, 840 232" fill="none" stroke="#93c5fd" stroke-width="5" opacity="0.8"/>
+  <circle cx="430" cy="180" r="7" fill="#38bdf8"/>
+  <circle cx="500" cy="165" r="5" fill="#38bdf8"/>
+  <circle cx="575" cy="178" r="6" fill="#38bdf8"/>
+  <circle cx="650" cy="170" r="4" fill="#38bdf8"/>
+  <circle cx="735" cy="182" r="6" fill="#38bdf8"/>
+  <g transform="translate(948,112)">
+    <circle cx="52" cy="52" r="48" fill="#7f1d1d" opacity="0.85"/>
+    <path d="M52 26 v36" stroke="#fecaca" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="52" cy="80" r="5" fill="#fecaca"/>
+  </g>
+  <circle cx="366" cy="150" r="8" fill="#38bdf8" opacity="0.8"/>
+  <circle cx="392" cy="150" r="8" fill="#60a5fa" opacity="0.8"/>
+  <circle cx="418" cy="150" r="8" fill="#93c5fd" opacity="0.8"/>
+</svg>

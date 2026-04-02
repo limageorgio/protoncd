@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" role="img" aria-label="Ilustracao discreta de cabos de elevador e nivel de criticidade">
+  <defs>
+    <linearGradient id="bg2" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#1f2937"/>
+    </linearGradient>
+    <linearGradient id="steel" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#cbd5e1"/>
+      <stop offset="100%" stop-color="#64748b"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="420" fill="url(#bg2)"/>
+  <rect x="120" y="70" width="960" height="280" rx="26" fill="#0b1220" stroke="#334155"/>
+  <g>
+    <rect x="380" y="95" width="20" height="230" rx="10" fill="url(#steel)"/>
+    <rect x="450" y="95" width="20" height="230" rx="10" fill="url(#steel)"/>
+    <rect x="520" y="95" width="20" height="230" rx="10" fill="url(#steel)"/>
+    <rect x="590" y="95" width="20" height="230" rx="10" fill="url(#steel)"/>
+    <rect x="660" y="95" width="20" height="230" rx="10" fill="url(#steel)"/>
+    <rect x="730" y="95" width="20" height="230" rx="10" fill="url(#steel)"/>
+  </g>
+  <path d="M390 172 l12 12 M390 184 l12 -12" stroke="#ef4444" stroke-width="4"/>
+  <path d="M460 214 l12 12 M460 226 l12 -12" stroke="#ef4444" stroke-width="4"/>
+  <path d="M600 192 l12 12 M600 204 l12 -12" stroke="#f97316" stroke-width="4"/>
+  <path d="M742 236 l12 12 M742 248 l12 -12" stroke="#f97316" stroke-width="4"/>
+  <rect x="805" y="108" width="230" height="88" rx="14" fill="#1e293b" stroke="#475569"/>
+  <circle cx="845" cy="152" r="10" fill="#ef4444"/>
+  <circle cx="875" cy="152" r="10" fill="#f97316"/>
+  <circle cx="905" cy="152" r="10" fill="#f59e0b"/>
+</svg>

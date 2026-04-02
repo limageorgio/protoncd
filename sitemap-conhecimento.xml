@@ -4,5 +4,18 @@
     <loc>https://www.protoncd.com.br/conhecimento-tecnico/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <lastmod>2026-04-02</lastmod>
+  </url>
+  <url>
+    <loc>https://www.protoncd.com.br/artigos/artigo-elevadores-poco-contaminado.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-04-02</lastmod>
+  </url>
+  <url>
+    <loc>https://www.protoncd.com.br/artigos/artigo-elevadores-cabos-aco.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-04-02</lastmod>
   </url>
 </urlset>
