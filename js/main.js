@@ -16,29 +16,88 @@
 
     // ========== MOBILE MENU ==========
     const mobileToggle = document.getElementById('mobile-toggle');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const mobileClose = document.getElementById('mobile-close');
+    let mobileMenu = document.getElementById('mobile-menu');
 
-    if (mobileToggle && mobileMenu) {
-        mobileToggle.addEventListener('click', () => {
-            mobileMenu.classList.add('active');
-            document.body.style.overflow = 'hidden';
+    function lockBodyScroll(lock) {
+        document.body.style.overflow = lock ? 'hidden' : '';
+    }
+
+    function closeMobileMenu() {
+        if (!mobileMenu) return;
+        mobileMenu.classList.remove('active');
+        mobileMenu.setAttribute('aria-hidden', 'true');
+        lockBodyScroll(false);
+    }
+
+    function ensureMobileMenu() {
+        if (mobileMenu) return mobileMenu;
+
+        const navLinks = document.querySelector('#main-nav .nav-links');
+        if (!navLinks) return null;
+
+        mobileMenu = document.createElement('div');
+        mobileMenu.className = 'nav-mobile-menu';
+        mobileMenu.id = 'mobile-menu';
+        mobileMenu.setAttribute('aria-hidden', 'true');
+
+        const closeButton = document.createElement('button');
+        closeButton.className = 'nav-mobile-close';
+        closeButton.id = 'mobile-close';
+        closeButton.type = 'button';
+        closeButton.setAttribute('aria-label', 'Fechar menu');
+        closeButton.innerHTML = '&times;';
+        closeButton.addEventListener('click', closeMobileMenu);
+
+        mobileMenu.appendChild(closeButton);
+
+        navLinks.querySelectorAll('a').forEach(link => {
+            const mobileLink = link.cloneNode(true);
+            mobileLink.classList.add('mobile-link');
+            mobileLink.addEventListener('click', closeMobileMenu);
+            mobileMenu.appendChild(mobileLink);
         });
 
-        if (mobileClose) {
-            mobileClose.addEventListener('click', () => {
-                mobileMenu.classList.remove('active');
-                document.body.style.overflow = '';
-            });
-        }
+        mobileMenu.addEventListener('click', (event) => {
+            if (event.target === mobileMenu) {
+                closeMobileMenu();
+            }
+        });
 
-        document.querySelectorAll('.mobile-link').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.remove('active');
-                document.body.style.overflow = '';
-            });
+        document.body.appendChild(mobileMenu);
+        return mobileMenu;
+    }
+
+    const existingMobileClose = document.getElementById('mobile-close');
+    if (existingMobileClose) {
+        existingMobileClose.addEventListener('click', closeMobileMenu);
+    }
+
+    document.querySelectorAll('.mobile-link').forEach(link => {
+        link.addEventListener('click', closeMobileMenu);
+    });
+
+    if (mobileToggle) {
+        mobileToggle.addEventListener('click', () => {
+            const menu = ensureMobileMenu();
+            if (!menu) return;
+
+            const isActive = menu.classList.contains('active');
+            if (isActive) {
+                closeMobileMenu();
+                return;
+            }
+
+            menu.classList.add('active');
+            menu.setAttribute('aria-hidden', 'false');
+            lockBodyScroll(true);
         });
     }
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+            closeMobileMenu();
+        }
+    });
 
     // ========== SMOOTH SCROLL ==========
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
