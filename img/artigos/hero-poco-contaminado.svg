@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" role="img" aria-label="Ilustracao discreta de poco de elevador com umidade, residuos e alerta tecnico">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="water" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+    <linearGradient id="rust" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#b45309"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="420" fill="url(#bg)"/>
+  <rect x="92" y="62" width="210" height="296" rx="20" fill="#111827" stroke="#334155"/>
+  <rect x="898" y="62" width="210" height="296" rx="20" fill="#111827" stroke="#334155"/>
+  <rect x="334" y="82" width="532" height="256" rx="26" fill="#0b1220" stroke="#334155"/>
+  <rect x="366" y="214" width="468" height="92" rx="18" fill="url(#water)" opacity="0.84"/>
+  <path d="M366 241 C440 214, 522 258, 594 236 C668 214, 752 258, 834 232" fill="none" stroke="#93c5fd" stroke-width="5" opacity="0.8"/>
+  <rect x="392" y="118" width="66" height="86" rx="12" fill="url(#rust)" opacity="0.75"/>
+  <rect x="744" y="112" width="70" height="96" rx="12" fill="#1f2937" stroke="#475569"/>
+  <circle cx="779" cy="160" r="18" fill="#7f1d1d"/>
+  <path d="M779 149 v20" stroke="#fee2e2" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="779" cy="176" r="3.5" fill="#fee2e2"/>
+  <g fill="#38bdf8" opacity="0.85">
+    <circle cx="430" cy="172" r="7"/>
+    <circle cx="497" cy="160" r="5"/>
+    <circle cx="568" cy="174" r="6"/>
+    <circle cx="648" cy="166" r="4"/>
+    <circle cx="724" cy="178" r="6"/>
+  </g>
+  <rect x="105" y="89" width="170" height="52" rx="14" fill="#1e293b" stroke="#475569"/>
+  <path d="M128 115h124" stroke="#94a3b8" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="130" cy="115" r="5" fill="#94a3b8"/>
+  <circle cx="150" cy="115" r="5" fill="#94a3b8"/>
+  <circle cx="170" cy="115" r="5" fill="#94a3b8"/>
+</svg>

@@ -178,6 +178,18 @@
     cursor: pointer;
 }
 
+/* Article pages: ensure first container starts below fixed header */
+main.article-container {
+    margin-top: 0 !important;
+    padding-top: calc(var(--space-10) + 64px) !important;
+}
+
+@media (max-width: 768px) {
+    main.article-container {
+        padding-top: calc(var(--space-8) + 56px) !important;
+    }
+}
+
 @media (max-width: 768px) {
     .nav-inner {
         padding: 0 var(--space-4);

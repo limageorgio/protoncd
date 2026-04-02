@@ -123,7 +123,7 @@
         }
 
         .article-hero-visual {
-            max-width: 640px;
+            max-width: 500px;
             margin: 0 auto var(--space-6);
             border-radius: var(--radius-xl);
             overflow: hidden;
@@ -135,7 +135,7 @@
         .article-hero-visual img {
             width: 100%;
             height: auto;
-            max-height: 230px;
+            max-height: 170px;
             object-fit: contain;
             display: block;
         }
@@ -424,9 +424,25 @@
             margin-bottom: var(--space-3);
         }
 
-        .article-content > h3, .article-content > p, .article-content > ul { background: var(--bg-subtle); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: var(--space-4); margin: var(--space-4) 0; }
-        .article-content > ul { list-style: none; padding: var(--space-4) var(--space-5); }
-        .article-content > li { margin-left: 0; }
+        .article-content>h3,
+        .article-content>p,
+        .article-content>ul {
+            background: var(--bg-subtle);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            padding: var(--space-4);
+            margin: var(--space-4) 0;
+        }
+
+        .article-content>ul {
+            list-style: none;
+            padding: var(--space-4) var(--space-5);
+        }
+
+        .article-content>li {
+            margin-left: 0;
+        }
+
         @media (max-width: 900px) {
             .article-mini-stats {
                 grid-template-columns: 1fr;
@@ -489,10 +505,6 @@
                     <h1>Poço de Elevador Contaminado: Diagnóstico Técnico e Risco Estrutural</h1>
                     <p>Conteúdo aplicado à engenharia diagnóstica para decisão rápida de síndicos, gestores e equipes
                         técnicas.</p>
-                </div>
-                <div class="article-hero-visual">
-                    <img src="../../img/artigos/hero-poco.svg"
-                        alt="Diagnóstico técnico de elevadores com foco em segurança e causa raiz">
                 </div>
                 <div class="article-mini-stats">
                     <div class="article-mini-stat"><strong>24h</strong><span>Prazo para diagnóstico</span></div>

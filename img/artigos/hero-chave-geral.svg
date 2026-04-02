@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" role="img" aria-label="Ilustracao discreta de chave geral de elevador com identificacao tecnica">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#1f2937"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="label" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0%" stop-color="#f97316"/>
+      <stop offset="100%" stop-color="#ef4444"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="420" fill="url(#bg)"/>
+  <rect x="110" y="68" width="980" height="284" rx="28" fill="#0b1220" stroke="#334155"/>
+  <rect x="165" y="102" width="250" height="216" rx="22" fill="url(#panel)" stroke="#334155"/>
+  <rect x="475" y="88" width="250" height="244" rx="22" fill="url(#panel)" stroke="#334155"/>
+  <rect x="785" y="102" width="250" height="216" rx="22" fill="url(#panel)" stroke="#334155"/>
+  <g transform="translate(522 125)">
+    <rect x="0" y="0" width="156" height="156" rx="28" fill="#111827" stroke="#475569"/>
+    <rect x="24" y="26" width="108" height="30" rx="8" fill="url(#label)"/>
+    <rect x="24" y="70" width="108" height="18" rx="9" fill="#1d4ed8" opacity="0.9"/>
+    <rect x="24" y="98" width="74" height="18" rx="9" fill="#94a3b8" opacity="0.8"/>
+    <circle cx="122" cy="112" r="16" fill="#7f1d1d"/>
+    <path d="M122 99 v20" stroke="#fee2e2" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="122" cy="127" r="3.5" fill="#fee2e2"/>
+  </g>
+  <g fill="#38bdf8" opacity="0.9">
+    <circle cx="235" cy="170" r="7"/>
+    <circle cx="268" cy="156" r="5"/>
+    <circle cx="305" cy="174" r="6"/>
+  </g>
+  <g fill="#94a3b8" opacity="0.7">
+    <circle cx="840" cy="150" r="6"/>
+    <circle cx="882" cy="164" r="5"/>
+    <circle cx="928" cy="146" r="6"/>
+  </g>
+  <path d="M200 278h170" stroke="#475569" stroke-width="6" stroke-linecap="round"/>
+  <path d="M815 278h170" stroke="#475569" stroke-width="6" stroke-linecap="round"/>
+  <text x="225" y="220" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="28" font-weight="700">CHAVE</text>
+  <text x="225" y="255" fill="#94a3b8" font-family="Arial, sans-serif" font-size="20">identificação clara</text>
+</svg>
