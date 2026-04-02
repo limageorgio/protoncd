@@ -1,11 +1,94 @@
-<!DOCTYPE html>
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+import json
+import re
+from pathlib import Path
+
+# Mapping de arquivos para IDs de playgrounds
+FILE_MAPPING = {
+    'artigo-playground-abertura-piso-correr-larga.html': 'play-002',
+    'artigo-playground-assento-pesado-aceleracao.html': 'play-003',
+    'artigo-playground-falta-revestimento-ferrugem.html': 'play-001',
+    'artigo-playground-acumulo-agua-tubos-tuneis.html': 'play-004',
+    'artigo-playground-alcas-suspensas-desgastadas.html': 'play-006',
+    'artigo-playground-corda-alma-exposta-fios-metalicos.html': 'play-007',
+    'artigo-playground-altura-acesso-cadeirante.html': 'play-008',
+    'artigo-playground-altura-assento-movimento-alta.html': 'play-009',
+    'artigo-playground-incompatibilidade-piso-aql.html': 'play-010',
+    'artigo-playground-borda-saida-escorregador-max.html': 'play-011',
+    'artigo-playground-agarras-frouxas.html': 'play-005',
+    'artigo-playground-apoios-frouxos.html': 'play-014',
+    'artigo-playground-ferrugem-desgaste-missing.html': 'play-001',
+}
+
+# Load JSON data
+with open('h:\\apps\\protoncd\\conhecimento-tecnico\\dados\\playgrounds.json', 'r', encoding='utf-8') as f:
+    data = json.load(f)
+
+# Create mapping dict from ID
+playground_data = {}
+for item in data['faqs']:
+    playground_data[item['id']] = item
+
+# Function to generate criticality from gravidade
+def get_criticality_value(gravidade):
+    mapping = {
+        'Crítica': '9.0/10',
+        'Alta': '7.5/10',
+        'Média': '5.8/10',
+        'Baixa': '3.5/10'
+    }
+    return mapping.get(gravidade, '5.8/10')
+
+# Function to generate janela de resposta from gravidade
+def get_janela_resposta(gravidade):
+    mapping = {
+        'Crítica': 'Interdicao imediata (0-24h)',
+        'Alta': 'Prioritaria (ate 7 dias)',
+        'Média': 'Programada (ate 30 dias)',
+        'Baixa': 'Planejada (ate 60 dias)'
+    }
+    return mapping.get(gravidade, 'Programada (ate 30 dias)')
+
+# Function to generate risk bar width from gravidade
+def get_risk_bar_width(gravidade):
+    mapping = {
+        'Crítica': 90,
+        'Alta': 75,
+        'Média': 60,
+        'Baixa': 40
+    }
+    return mapping.get(gravidade, 60)
+
+# Function to sanitize filename
+def sanitize_filename(title):
+    return re.sub(r'[^\w\s-]', '', title).strip().lower().replace(' ', '-')
+
+# Template for HTML generation
+def generate_html(playground_data):
+    pg = playground_data
+    
+    # Extract title from pergunta
+    pergunta = pg['pergunta']
+    title_match = re.search(r"'([^']+)'", pergunta)
+    title = title_match.group(1) if title_match else pergunta[:50]
+    
+    criticality = get_criticality_value(pg['gravidade'])
+    janela = get_janela_resposta(pg['gravidade'])
+    risk_width = get_risk_bar_width(pg['gravidade'])
+    
+    normas_html = ' | '.join(pg['normas'])
+    referencia_main = pg['referencia'] if 'referencia' in pg else pg['normas'][0]
+    responsabilidade = pg['responsabilidade']
+    
+    html = f"""<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Entenda o risco de 'Agarras Frouxas' no playground é só detalhe ou é um problema de segurança que p em playgrounds, criterios da ABNT NBR 16071, protocolo de inspecao e plano de correcao tecnica.">
-    <title>Agarras Frouxas: Diagnostico Tecnico | Proton Engenharia</title>
-    <link rel="canonical" href="https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-agarras-frouxas.html">
+    <meta name="description" content="Entenda o risco de {re.sub(r'<[^>]+>', '', pg['pergunta'][:80])} em playgrounds, criterios da ABNT NBR 16071, protocolo de inspecao e plano de correcao tecnica.">
+    <title>{title}: Diagnostico Tecnico | Proton Engenharia</title>
+    <link rel="canonical" href="https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-{sanitize_filename(title)}.html">
     <link rel="stylesheet" href="../../css/all.min.css">
     <link rel="icon" href="../../img/faviconb.ico" type="image/x-icon">
     <link rel="stylesheet" href="../../css/variables.css">
@@ -14,27 +97,27 @@
     <link rel="stylesheet" href="../../css/layout.css">
     <link rel="stylesheet" href="../../css/animations.css">
     <style>
-        .article-container { max-width: 920px; margin: 0 auto; padding: var(--space-8) var(--space-4); }
-        .article-content { font-size: 1.03rem; }
-        .article-hero-panel { background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-xl); padding: var(--space-6); margin-bottom: var(--space-7); }
-        .article-intro { max-width: 760px; margin: 0 auto var(--space-5); text-align: center; }
-        .article-mini-stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-3); margin: 0 0 var(--space-5); }
-        .article-mini-stat { background: rgba(255,255,255,0.02); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: var(--space-3); text-align: center; }
-        .article-mini-stat strong { display: block; color: var(--text-primary); font-size: 1.12rem; margin-bottom: 4px; }
-        .article-mini-stat span { color: var(--text-secondary); font-size: var(--fs-sm); }
-        .risk-chart { background: var(--bg-subtle); border: 1px solid var(--border-subtle); border-radius: var(--radius-xl); padding: var(--space-5); margin: var(--space-5) 0; }
-        .risk-row { display: grid; grid-template-columns: 200px 1fr auto; align-items: center; gap: var(--space-3); margin-bottom: var(--space-3); }
-        .risk-row:last-child { margin-bottom: 0; }
-        .risk-bar { height: 10px; border-radius: 999px; background: rgba(255,255,255,0.08); overflow: hidden; }
-        .risk-bar span { display: block; height: 100%; background: linear-gradient(90deg, #f59e0b 0%, #ef4444 100%); }
-        .article-content h2 { font-size: var(--fs-xl); font-weight: var(--fw-bold); color: var(--text-primary); margin-top: var(--space-8); margin-bottom: var(--space-4); padding: var(--space-3) var(--space-4); border: 1px solid rgba(239,68,68,0.28); border-radius: var(--radius-lg); background: linear-gradient(135deg, rgba(239,68,68,0.12), rgba(239,68,68,0.03)); }
-        .article-content p { margin-bottom: var(--space-4); line-height: 1.78; color: var(--text-secondary); }
-        .article-content ul { margin-left: 0; padding: var(--space-4) var(--space-5); margin-bottom: var(--space-4); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); background: rgba(15,23,42,0.45); list-style: none; }
-        .article-content li { margin-bottom: var(--space-2); line-height: 1.6; padding: var(--space-3); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); background: rgba(255,255,255,0.02); }
-        .content-box { background: var(--bg-subtle); border: 1px solid var(--border-subtle); padding: var(--space-4); border-radius: var(--radius-lg); margin: var(--space-4) 0; }
-        .decision-table { width: 100%; border-collapse: collapse; margin: var(--space-4) 0; border: 1px solid var(--border-subtle); }
-        .decision-table th, .decision-table td { border: 1px solid var(--border-subtle); padding: 10px; text-align: left; }
-        .decision-table th { background: rgba(239,68,68,0.08); color: var(--text-primary); }
+        .article-container {{ max-width: 920px; margin: 0 auto; padding: var(--space-8) var(--space-4); }}
+        .article-content {{ font-size: 1.03rem; }}
+        .article-hero-panel {{ background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-xl); padding: var(--space-6); margin-bottom: var(--space-7); }}
+        .article-intro {{ max-width: 760px; margin: 0 auto var(--space-5); text-align: center; }}
+        .article-mini-stats {{ display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-3); margin: 0 0 var(--space-5); }}
+        .article-mini-stat {{ background: rgba(255,255,255,0.02); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: var(--space-3); text-align: center; }}
+        .article-mini-stat strong {{ display: block; color: var(--text-primary); font-size: 1.12rem; margin-bottom: 4px; }}
+        .article-mini-stat span {{ color: var(--text-secondary); font-size: var(--fs-sm); }}
+        .risk-chart {{ background: var(--bg-subtle); border: 1px solid var(--border-subtle); border-radius: var(--radius-xl); padding: var(--space-5); margin: var(--space-5) 0; }}
+        .risk-row {{ display: grid; grid-template-columns: 200px 1fr auto; align-items: center; gap: var(--space-3); margin-bottom: var(--space-3); }}
+        .risk-row:last-child {{ margin-bottom: 0; }}
+        .risk-bar {{ height: 10px; border-radius: 999px; background: rgba(255,255,255,0.08); overflow: hidden; }}
+        .risk-bar span {{ display: block; height: 100%; background: linear-gradient(90deg, #f59e0b 0%, #ef4444 100%); }}
+        .article-content h2 {{ font-size: var(--fs-xl); font-weight: var(--fw-bold); color: var(--text-primary); margin-top: var(--space-8); margin-bottom: var(--space-4); padding: var(--space-3) var(--space-4); border: 1px solid rgba(239,68,68,0.28); border-radius: var(--radius-lg); background: linear-gradient(135deg, rgba(239,68,68,0.12), rgba(239,68,68,0.03)); }}
+        .article-content p {{ margin-bottom: var(--space-4); line-height: 1.78; color: var(--text-secondary); }}
+        .article-content ul {{ margin-left: 0; padding: var(--space-4) var(--space-5); margin-bottom: var(--space-4); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); background: rgba(15,23,42,0.45); list-style: none; }}
+        .article-content li {{ margin-bottom: var(--space-2); line-height: 1.6; padding: var(--space-3); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); background: rgba(255,255,255,0.02); }}
+        .content-box {{ background: var(--bg-subtle); border: 1px solid var(--border-subtle); padding: var(--space-4); border-radius: var(--radius-lg); margin: var(--space-4) 0; }}
+        .decision-table {{ width: 100%; border-collapse: collapse; margin: var(--space-4) 0; border: 1px solid var(--border-subtle); }}
+        .decision-table th, .decision-table td {{ border: 1px solid var(--border-subtle); padding: 10px; text-align: left; }}
+        .decision-table th {{ background: rgba(239,68,68,0.08); color: var(--text-primary); }}
     </style>
 </head>
 <body>
@@ -63,22 +146,22 @@
         <article class="article-content">
             <div class="article-hero-panel">
                 <div class="article-intro">
-                    <h1>Agarras Frouxas: Diagnostico Tecnico</h1>
+                    <h1>{title}: Diagnostico Tecnico</h1>
                     <p>Analise tecnica orientada a decisao para inspecao de playgrounds, com base normativa e plano corretivo objetivo.</p>
                 </div>
                 <div class="article-mini-stats">
-                    <div class="article-mini-stat"><strong>5.8/10</strong><span>Indice de criticidade</span></div>
-                    <div class="article-mini-stat"><strong>Programada (ate 30 dias)</strong><span>Janela de resposta</span></div>
-                    <div class="article-mini-stat"><strong>Mista - requer avaliação técnica</strong><span>Responsavel principal</span></div>
+                    <div class="article-mini-stat"><strong>{criticality}</strong><span>Indice de criticidade</span></div>
+                    <div class="article-mini-stat"><strong>{janela}</strong><span>Janela de resposta</span></div>
+                    <div class="article-mini-stat"><strong>{responsabilidade}</strong><span>Responsavel principal</span></div>
                 </div>
             </div>
 
             <h2>1. Diagnostico tecnico da nao conformidade</h2>
             <div class="content-box">
-                <p><strong>Pergunta de campo:</strong> 'Agarras Frouxas' no playground é só detalhe ou é um problema de segurança que precisa corrigir?</p>
-                <p><strong>Interpretacao tecnica:</strong> A irregularidade 'Agarras Frouxas' indica não conformidade técnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correção com base na ABNT NBR 16071. Na prática, a inspeção deve confirmar o desvio em campo, registrar evidências fotográficas e executar adequação conforme requisito normativo aplicável. Referência principal: Parte 2 e Parte 7. Citação técnica: Parte 2, item 6.1.5 / Parte 7, item 4.2-c.</p>
-                <p><strong>Leitura de risco:</strong> Embora a criticidade de média seja moderada a alta, a correcao programada evita progressao do risco e passivo tecnico.</p>
-                <p><strong>Referencias normativas:</strong> ABNT NBR 16071 | ABNT NBR 16071-2</p>
+                <p><strong>Pergunta de campo:</strong> {pg['pergunta']}</p>
+                <p><strong>Interpretacao tecnica:</strong> {pg['resposta']}</p>
+                <p><strong>Leitura de risco:</strong> Embora a criticidade de {pg['gravidade'].lower()} seja moderada a alta, a correcao programada evita progressao do risco e passivo tecnico.</p>
+                <p><strong>Referencias normativas:</strong> {normas_html}</p>
             </div>
 
             <h2>2. Mecanismo de falha e efeitos em uso real</h2>
@@ -91,10 +174,10 @@
             </ul>
 
             <div class="risk-chart">
-                <div class="risk-row"><strong>Probabilidade</strong><div class="risk-bar"><span style="width:60%;"></span></div><span>Média</span></div>
-                <div class="risk-row"><strong>Severidade</strong><div class="risk-bar"><span style="width:65%;"></span></div><span>Média</span></div>
-                <div class="risk-row"><strong>Exposicao</strong><div class="risk-bar"><span style="width:70%;"></span></div><span>Continua</span></div>
-                <div class="risk-row"><strong>Prioridade de acao</strong><div class="risk-bar"><span style="width:60;"></span></div><span>Tratamento tecnico</span></div>
+                <div class="risk-row"><strong>Probabilidade</strong><div class="risk-bar"><span style="width:{risk_width}%;"></span></div><span>{pg['gravidade']}</span></div>
+                <div class="risk-row"><strong>Severidade</strong><div class="risk-bar"><span style="width:{risk_width + 5}%;"></span></div><span>{pg['gravidade']}</span></div>
+                <div class="risk-row"><strong>Exposicao</strong><div class="risk-bar"><span style="width:{risk_width + 10}%;"></span></div><span>Continua</span></div>
+                <div class="risk-row"><strong>Prioridade de acao</strong><div class="risk-bar"><span style="width:{risk_width};"></span></div><span>Tratamento tecnico</span></div>
             </div>
 
             <h2>3. Protocolo de inspecao e evidencias minimas</h2>
@@ -186,4 +269,25 @@
 
     <script src="../../js/main.js"></script>
 </body>
-</html>
+</html>"""
+    return html
+
+# Generate files
+base_path = Path('h:\\apps\\protoncd\\artigos\\playgrounds')
+generated_files = []
+
+for filename, play_id in FILE_MAPPING.items():
+    if play_id not in playground_data:
+        print(f"[AVISO] {play_id} nao encontrado no JSON para {filename}")
+        continue
+    
+    file_path = base_path / filename
+    pg_data = playground_data[play_id]
+    
+    html_content = generate_html(pg_data)
+    
+    file_path.write_text(html_content, encoding='utf-8')
+    generated_files.append(filename)
+    print(f"[OK] Gerado: {filename} ({play_id})")
+
+print(f"\n[SUCESSO] Total de arquivos gerados: {len(generated_files)}")

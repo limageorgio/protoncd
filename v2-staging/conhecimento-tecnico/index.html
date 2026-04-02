@@ -1007,11 +1007,47 @@
                 faq.gravidade.includes('Alta') ? 'sev-alta' :
                     faq.gravidade.includes('Média') ? 'sev-media' : 'sev-baixa';
 
+            function extrairUrlReferencia(ref) {
+                if (!ref) return '';
+                const texto = String(ref).trim();
+                const matchUrl = texto.match(/https?:\/\/[^\s"')]+/i);
+                if (matchUrl) return matchUrl[0];
+                const matchPath = texto.match(/(\/artigos\/[^\s"')]+)/i);
+                if (matchPath) return matchPath[1];
+                if (texto.startsWith('../') || texto.startsWith('./')) return texto;
+                return '';
+            }
+
+            function paraCaminhoRelativo(url) {
+                if (!url) return '#';
+                let valor = String(url).trim();
+                valor = valor.replace(/^https?:\/\/(www\.)?protoncd\.com\.br/i, '');
+                if (valor.startsWith('/')) return '..' + valor;
+                if (valor.startsWith('../') || valor.startsWith('./')) return valor;
+                return valor;
+            }
+
+            function tituloDoArtigo(url) {
+                let valor = String(url || '').replace(/^https?:\/\/(www\.)?protoncd\.com\.br/i, '');
+                const arquivo = valor.split('/').pop() || '';
+                let slug = arquivo.replace('.html', '');
+                slug = slug.replace(/^artigo-playground-/, '');
+                if (!slug) return 'Ver artigo relacionado';
+                const texto = slug.replace(/-/g, ' ').trim();
+                return 'Playground: ' + texto.charAt(0).toUpperCase() + texto.slice(1);
+            }
+
             let referencias = '';
             if (faq.referencias && faq.referencias.length > 0) {
-                referencias = '<div style="margin-top: var(--space-3);"><strong style="color: var(--text-primary);">Referências:</strong><ul style="list-style: none; padding: 0; margin-top: var(--space-2);">';
+                referencias = '<div style="margin-top: var(--space-3); padding: var(--space-3); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); background: rgba(14, 165, 233, 0.08);">' +
+                    '<strong style="color: var(--text-primary); display:block; margin-bottom: var(--space-1);"><i class="fas fa-book-open" style="margin-right:6px;"></i>Veja também:</strong>' +
+                    '<ul style="list-style: none; padding: 0; margin: 0;">';
                 faq.referencias.forEach(ref => {
-                    referencias += '<li><a href="' + ref + '" target="_blank" style="color: var(--accent-blue); font-size: var(--fs-sm);">' + ref + '</a></li>';
+                    const urlOriginal = extrairUrlReferencia(ref);
+                    if (!urlOriginal) return;
+                    const hrefRelativo = paraCaminhoRelativo(urlOriginal);
+                    const titulo = tituloDoArtigo(urlOriginal);
+                    referencias += '<li><a href="' + hrefRelativo + '" style="color: var(--accent-blue); font-weight: 600; font-size: var(--fs-sm);">' + titulo + '</a></li>';
                 });
                 referencias += '</ul></div>';
             }

@@ -1,0 +1,64 @@
+{
+    "missing_articles": [
+        {
+            "id": "play-001",
+            "slug": "ferrugem-desgaste",
+            "title": "Ferrugem e Desgaste em Estruturas de Brinquedos",
+            "description": "Entenda os riscos de ferrugem e desgaste em equipamentos de playground"
+        },
+        {
+            "id": "play-002",
+            "slug": "abertura-piso",
+            "title": "Aberturas Excessivas em Piso de Brinquedos",
+            "description": "Análise de riscos de aprisionamento por aberturas em piso"
+        },
+        {
+            "id": "play-003",
+            "slug": "impacto-assentos",
+            "title": "Impacto de Assentos e Aceleração em Brinquedos",
+            "description": "Segurança relacionada a impacto e aceleração em equipamentos"
+        },
+        {
+            "id": "play-004",
+            "slug": "acumulo-agua",
+            "title": "Acúmulo de Água em Estruturas",
+            "description": "Problemas de acúmulo de água em tubos e túneis"
+        },
+        {
+            "id": "play-006",
+            "slug": "alcas-suspensas",
+            "title": "Alças Suspensas Desgastadas",
+            "description": "Avaliação de segurança em alças suspensas"
+        },
+        {
+            "id": "play-007",
+            "slug": "cordas-cabos",
+            "title": "Cordas e Cabos Danificados",
+            "description": "Inspeção de cordas e cabos em brinquedos"
+        },
+        {
+            "id": "play-008",
+            "slug": "acessibilidade",
+            "title": "Acessibilidade para Crianças com Deficiência",
+            "description": "Adequação de playgrounds para inclusão"
+        },
+        {
+            "id": "play-009",
+            "slug": "altura-assentos",
+            "title": "Altura Inadequada de Assentos",
+            "description": "Conformidade de altura em assentos de brinquedos"
+        },
+        {
+            "id": "play-010",
+            "slug": "piso-queda",
+            "title": "Incompatibilidade entre Piso e Altura de Queda",
+            "description": "Avaliação de piso de segurança para quedas"
+        },
+        {
+            "id": "play-011",
+            "slug": "borda-saida-escorregador",
+            "title": "Borda de Saída do Escorregador",
+            "description": "Segurança na saída de escorregadores"
+        }
+    ]
+}
