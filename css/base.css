@@ -19,6 +19,8 @@ html {
     text-rendering: optimizeLegibility;
     font-size: 16px;
     line-height: var(--lh-normal);
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 body {
@@ -28,7 +30,17 @@ body {
     line-height: var(--lh-relaxed);
     color: var(--text-primary);
     background-color: var(--bg-primary);
+    max-width: 100%;
     overflow-x: hidden;
+}
+
+main,
+section,
+article,
+header,
+footer,
+nav {
+    max-width: 100%;
 }
 
 img,
@@ -367,8 +379,8 @@ strong {
     }
 
     .container {
-        padding-left: var(--space-4);
-        padding-right: var(--space-4);
+        padding-left: var(--space-3);
+        padding-right: var(--space-3);
     }
 }
 
