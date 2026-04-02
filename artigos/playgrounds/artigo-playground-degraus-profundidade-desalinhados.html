@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Guia tecnico sobre Com 'Degraus com profundidade &lt; 140mm ou desalinhados', existe risco real de queda no brinquedo? com criterios da ABNT NBR 16071, protocolo de inspecao e matriz de acao para playgrounds.">
+    <title>Degraus com Profundidade Insuficiente ou Desalinhados | Proton Engenharia</title>
+    <link rel="canonical" href="https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-degraus-profundidade-desalinhados.html">
+    <link rel="stylesheet" href="../../css/all.min.css">
+    <link rel="icon" href="../../img/faviconb.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../css/variables.css">
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/components.css">
+    <link rel="stylesheet" href="../../css/layout.css">
+    <link rel="stylesheet" href="../../css/animations.css">
+    <style>
+        .article-container { max-width: 920px; margin: 0 auto; padding: var(--space-8) var(--space-4); }
+        .article-content { font-size: 1.03rem; }
+        .article-hero-panel { background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-xl); padding: var(--space-6); margin-bottom: var(--space-7); }
+        .article-intro { max-width: 760px; margin: 0 auto var(--space-5); text-align: center; }
+.article-mini-stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-3); margin: 0 0 var(--space-5); }
+        .article-mini-stat { background: rgba(255,255,255,0.02); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: var(--space-3); text-align: center; }
+        .article-mini-stat strong { display: block; color: var(--text-primary); font-size: 1.12rem; margin-bottom: 4px; }
+        .article-mini-stat span { color: var(--text-secondary); font-size: var(--fs-sm); }
+        .risk-chart { background: var(--bg-subtle); border: 1px solid var(--border-subtle); border-radius: var(--radius-xl); padding: var(--space-5); margin: var(--space-5) 0; }
+        .risk-row { display: grid; grid-template-columns: 200px 1fr auto; align-items: center; gap: var(--space-3); margin-bottom: var(--space-3); }
+        .risk-row:last-child { margin-bottom: 0; }
+        .risk-bar { height: 10px; border-radius: 999px; background: rgba(255,255,255,0.08); overflow: hidden; }
+        .risk-bar span { display: block; height: 100%; background: linear-gradient(90deg, #f59e0b 0%, #ef4444 100%); }
+        .article-content h2 { font-size: var(--fs-xl); font-weight: var(--fw-bold); color: var(--text-primary); margin-top: var(--space-8); margin-bottom: var(--space-4); padding: var(--space-3) var(--space-4); border: 1px solid rgba(239,68,68,0.28); border-radius: var(--radius-lg); background: linear-gradient(135deg, rgba(239,68,68,0.12), rgba(239,68,68,0.03)); }
+        .article-content p { margin-bottom: var(--space-4); line-height: 1.78; color: var(--text-secondary); }
+        .article-content ul { margin-left: 0; padding: var(--space-4) var(--space-5); margin-bottom: var(--space-4); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); background: rgba(15,23,42,0.45); list-style: none; }
+        .article-content li { margin-bottom: var(--space-2); line-height: 1.6; padding: var(--space-3); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); background: rgba(255,255,255,0.02); }
+        .content-box { background: var(--bg-subtle); border: 1px solid var(--border-subtle); padding: var(--space-4); border-radius: var(--radius-lg); margin: var(--space-4) 0; }
+        .decision-table { width: 100%; border-collapse: collapse; margin: var(--space-4) 0; border: 1px solid var(--border-subtle); }
+        .decision-table th, .decision-table td { border: 1px solid var(--border-subtle); padding: 10px; text-align: left; }
+        .decision-table th { background: rgba(239,68,68,0.08); color: var(--text-primary); }
+@media (max-width: 900px){ .article-mini-stats{ grid-template-columns:1fr; } .risk-row{ grid-template-columns:1fr; } }
+    </style>
+</head>
+<body>
+    <nav class="nav" id="main-nav">
+        <div class="nav-inner">
+            <a href="../../index.html" class="nav-logo">
+                <img src="../../img/logo_proton_branco.png" alt="Proton Engenharia" width="36" height="36">
+                <span class="nav-logo-text">PROTON <span>Engenharia</span></span>
+            </a>
+            <div class="nav-links">
+                <a href="../../index.html#inicio">Inicio</a>
+                <a href="../../index.html#servicos">Servicos</a>
+                <a href="../../index.html#contato" class="nav-cta"><i class="fab fa-whatsapp"></i> Contato</a>
+            </div>
+            <button class="nav-mobile-toggle" id="mobile-toggle" aria-label="Menu"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+    <div class="nav-mobile-menu" id="mobile-menu">
+        <button class="nav-mobile-close" id="mobile-close" aria-label="Fechar menu">&times;</button>
+        <a href="../../index.html#inicio" class="mobile-link">Inicio</a>
+        <a href="../../index.html#servicos" class="mobile-link">Servicos</a>
+        <a href="../../index.html#contato" class="mobile-link">Contato</a>
+    </div>
+
+    <main class="article-container">
+        <article class="article-content">
+            <div class="article-hero-panel">
+<div class="article-intro">
+                    <h1>Degraus com Profundidade Insuficiente ou Desalinhados</h1>
+                    <p>Conteudo tecnico para decisao rapida em seguranca de playgrounds, com base normativa e plano corretivo.</p>
+                </div>
+                <div class="article-mini-stats">
+                    <div class="article-mini-stat"><strong>5.8/10</strong><span>Indice de criticidade</span></div>
+                    <div class="article-mini-stat"><strong>Programada (ate 30 dias)</strong><span>Janela de resposta</span></div>
+                    <div class="article-mini-stat"><strong>Mista - requer avaliacao tecnica</strong><span>Responsavel principal</span></div>
+                </div>
+            </div>
+
+            <h2>1. Diagnostico tecnico da nao conformidade</h2>
+            <div class="content-box">
+                <p><strong>Pergunta de campo:</strong> Com 'Degraus com profundidade &lt; 140mm ou desalinhados', existe risco real de queda no brinquedo?</p>
+                <p><strong>Interpretacao tecnica:</strong> A irregularidade 'Degraus com profundidade &lt; 140mm ou desalinhados' indica nao conformidade tecnica identificada no PlaygroundScan. Em linguagem simples, isso eleva o risco de acidente e exige correcao com base na ABNT NBR 16071. Na pratica, a inspecao deve confirmar o desvio em campo, registrar evidencias fotograficas e executar adequacao conforme requisito normativo aplicavel. Referencia principal: Parte 2. Citacao tecnica: Parte 2, item 6.6.2.</p>
+                <p><strong>Referencias normativas:</strong> ABNT NBR 16071 | ABNT NBR 16071-2</p>
+            </div>
+
+            <h2>2. Mecanismo de falha e risco operacional</h2>
+            <p>A avaliacao de risco deve considerar o comportamento real do usuario infantil, nao apenas a conformidade geometrica pontual. Em condicoes de uso continuo, pequenas degradacoes acumuladas elevam a energia de impacto, reduzem a previsibilidade do movimento e aumentam a chance de quedas com trauma. Por isso, a classificacao deve combinar severidade potencial, frequencia de exposicao e velocidade de agravamento.</p>
+            <ul>
+                <li><strong>Origem recorrente:</strong> erro de montagem, fadiga de material, manutencao reativa ou especificacao inadequada do conjunto.</li>
+                <li><strong>Modo de falha:</strong> descontinuidade funcional do equipamento com perda de controle do usuario e transferencia abrupta de carga.</li>
+                <li><strong>Agravantes:</strong> drenagem deficiente, corrosao, afrouxamento de fixacoes e ausencia de historico tecnico rastreavel.</li>
+            </ul>
+
+            <div class="risk-chart">
+                <div class="risk-row"><strong>Probabilidade</strong><div class="risk-bar"><span style="width:56%;"></span></div><span>Media</span></div>
+                <div class="risk-row"><strong>Severidade</strong><div class="risk-bar"><span style="width:60%;"></span></div><span>Media</span></div>
+                <div class="risk-row"><strong>Exposicao</strong><div class="risk-bar"><span style="width:72%;"></span></div><span>Continua</span></div>
+                <div class="risk-row"><strong>Prioridade de acao</strong><div class="risk-bar"><span style="width:64%;"></span></div><span>Tratamento tecnico</span></div>
+            </div>
+<h2>3. Protocolo de inspecao e evidencias minimas</h2>
+            <ul>
+                <li>Registrar fotos em angulos ortogonais e obliquos, com escala visivel e identificacao unica do equipamento.</li>
+                <li>Executar medicao com trena calibrada e gabarito, anotando valor encontrado, tolerancia e referencia normativa aplicada.</li>
+                <li>Realizar teste funcional controlado sem publico, documentando criterio de aprovacao/reprovacao e limitacoes operacionais.</li>
+                <li>Emitir classificacao de criticidade com prazo mandatatorio, responsavel tecnico e condicao objetiva de liberacao.</li>
+            </ul>
+
+            <h2>4. Matriz de decisao corretiva</h2>
+            <table class="decision-table">
+                <thead><tr><th>Cenario</th><th>Acao recomendada</th><th>Prazo</th></tr></thead>
+                <tbody>
+                    <tr><td>Risco critico com exposicao direta</td><td>Interdicao imediata e isolamento fisico</td><td>0-24h</td></tr>
+                    <tr><td>Risco alto com tendencia de agravamento</td><td>Correcao prioritaria e reinspecao formal</td><td>Ate 7 dias</td></tr>
+                    <tr><td>Risco moderado sob controle provisorio</td><td>Plano corretivo com monitoramento</td><td>Ate 30 dias</td></tr>
+                </tbody>
+            </table>
+
+            <section class="cta-section" style="margin-top: var(--space-8); padding: var(--space-6); border: 1px solid var(--border-subtle); border-radius: var(--radius-xl); background: linear-gradient(135deg, rgba(14,165,233,0.12), rgba(14,165,233,0.03)); text-align: center;">
+                <h3 style="margin-bottom: var(--space-3);">Precisa de inspecao tecnica no seu playground?</h3>
+                <p style="margin-bottom: var(--space-4);">A Proton Engenharia realiza diagnostico com base na ABNT NBR 16071, priorizacao de risco e plano de acao executavel.</p>
+                <div style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
+                    <a href="https://api.whatsapp.com/send?phone=5562992852704&text=Ola! Preciso de inspecao tecnica de playground." target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                        <i class="fab fa-whatsapp"></i> Solicitar Inspecao
+                    </a>
+                    <a href="tel:5562992852704" class="btn btn-secondary btn-sm">
+                        <i class="fas fa-phone"></i> Ligar Agora
+                    </a>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="../../index.html" class="nav-logo" style="margin-bottom: var(--space-4); display: inline-flex;">
+                        <img src="../../img/logo_proton_branco.png" alt="Proton Engenharia" width="36" height="36">
+                        <span class="nav-logo-text">PROTON <span>Engenharia</span></span>
+                    </a>
+                    <p>Engenharia diagnostica com tecnologia 360 exclusiva. Inspecao de playgrounds, laudos tecnicos e pericias mecanicas com ART-CREA.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Servicos</h4>
+                    <ul>
+                        <li><a href="../../inspecao-playgrounds.html">Inspecao de Playgrounds</a></li>
+                        <li><a href="../../inspecao-predial.html">Inspecao Predial 360</a></li>
+                        <li><a href="../../laudo-pericial-engenharia.html">Laudos Periciais</a></li>
+                        <li><a href="../../landing-servicos.html">Todos os Servicos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Artigos Relacionados</h4>
+                    <ul>
+                        <li><a href="../index.html">Ver Todos</a></li>
+                        <li><a href="artigo-playground-ferrugem-desgaste.html">Ferrugem e Desgaste</a></li>
+                        <li><a href="../elevadores/artigo-elevadores-poco-contaminado.html">Elevadores</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contato</h4>
+                    <ul>
+                        <li><a href="tel:5562992852704"><i class="fas fa-phone" style="margin-right: 6px;"></i> (62) 99285-2704</a></li>
+                        <li><a href="mailto:lima.georgio.eng@gmail.com"><i class="fas fa-envelope" style="margin-right: 6px;"></i> E-mail</a></li>
+                        <li><a href="https://api.whatsapp.com/send?phone=5562992852704" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp" style="margin-right: 6px;"></i> WhatsApp</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Proton Engenharia Diagnostica. Todos os direitos reservados.</p>
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/in/georgiolima/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/main.js"></script>
+</body>
+</html>
