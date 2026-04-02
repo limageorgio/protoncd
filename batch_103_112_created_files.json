@@ -1,0 +1,62 @@
+[
+  {
+    "id": "elev-103",
+    "slug": "comando-inspecao-sem-codificacao-rotulos",
+    "filename": "artigo-elevadores-comando-inspecao-sem-codificacao-rotulos.html",
+    "title": "Comando de Inspeção sem Codificação Clara de Cores e Rótulos"
+  },
+  {
+    "id": "elev-104",
+    "slug": "elevador-emergencia-sem-painel-pavimento-descarga",
+    "filename": "artigo-elevadores-elevador-emergencia-sem-painel-pavimento-descarga.html",
+    "title": "Elevador de Emergência sem Painel de Controle no Pavimento de Descarga"
+  },
+  {
+    "id": "elev-105",
+    "slug": "caixa-elevador-emergencia-sem-compartimentacao-corta-fogo",
+    "filename": "artigo-elevadores-caixa-elevador-emergencia-sem-compartimentacao-corta-fogo.html",
+    "title": "Caixa do Elevador de Emergência sem Compartimentação Corta-Fogo"
+  },
+  {
+    "id": "elev-106",
+    "slug": "velocidade-insuficiente-elevador-emergencia-predio-alto",
+    "filename": "artigo-elevadores-velocidade-insuficiente-elevador-emergencia-predio-alto.html",
+    "title": "Velocidade Insuficiente do Elevador de Emergência em Prédio Alto"
+  },
+  {
+    "id": "elev-107",
+    "slug": "sinalizacao-capacidade-divergente-elevador",
+    "filename": "artigo-elevadores-sinalizacao-capacidade-divergente-elevador.html",
+    "title": "Sinalização de Capacidade Divergente da Realidade do Elevador"
+  },
+  {
+    "id": "elev-108",
+    "slug": "ausencia-checklist-formal-pos-manutencao-corretiva",
+    "filename": "artigo-elevadores-ausencia-checklist-formal-pos-manutencao-corretiva.html",
+    "title": "Ausência de Checklist Formal após Manutenção Corretiva"
+  },
+  {
+    "id": "elev-109",
+    "slug": "folga-critica-cabina-contrapeso-poco",
+    "filename": "artigo-elevadores-folga-critica-cabina-contrapeso-poco.html",
+    "title": "Folga Crítica entre Cabina e Contrapeso no Poço"
+  },
+  {
+    "id": "elev-110",
+    "slug": "abertura-porta-emergencia-sem-instrucao",
+    "filename": "artigo-elevadores-abertura-porta-emergencia-sem-instrucao.html",
+    "title": "Dispositivo de Abertura de Porta de Emergência sem Instrução"
+  },
+  {
+    "id": "elev-111",
+    "slug": "acabamento-solto-paineis-internos-cabina",
+    "filename": "artigo-elevadores-acabamento-solto-paineis-internos-cabina.html",
+    "title": "Cabina com Acabamento Solto em Painéis Internos"
+  },
+  {
+    "id": "elev-112",
+    "slug": "vibracao-excessiva-contrapeso",
+    "filename": "artigo-elevadores-vibracao-excessiva-contrapeso.html",
+    "title": "Excesso de Vibração no Contrapeso"
+  }
+]

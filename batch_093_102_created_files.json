@@ -1,0 +1,62 @@
+[
+  {
+    "id": "elev-093",
+    "slug": "porta-pavimento-fechamento-lento",
+    "filename": "artigo-elevadores-porta-pavimento-fechamento-lento.html",
+    "title": "Porta de Pavimento com Fechamento Lento"
+  },
+  {
+    "id": "elev-094",
+    "slug": "inspecao-periodica-documentada-ausente",
+    "filename": "artigo-elevadores-inspecao-periodica-documentada-ausente.html",
+    "title": "Ausência de Inspeção Periódica Documentada"
+  },
+  {
+    "id": "elev-095",
+    "slug": "diferenca-tensao-cabos-tracao",
+    "filename": "artigo-elevadores-diferenca-tensao-cabos-tracao.html",
+    "title": "Diferença de Tensão entre Cabos de Tração"
+  },
+  {
+    "id": "elev-096",
+    "slug": "protecao-ip-componentes-casa-maquinas",
+    "filename": "artigo-elevadores-protecao-ip-componentes-casa-maquinas.html",
+    "title": "Proteção IP Inadequada em Componentes da Casa de Máquinas"
+  },
+  {
+    "id": "elev-097",
+    "slug": "travamento-recorrente-entre-andares",
+    "filename": "artigo-elevadores-travamento-recorrente-entre-andares.html",
+    "title": "Travamento Recorrente entre Andares"
+  },
+  {
+    "id": "elev-098",
+    "slug": "sinal-luminoso-pavimento-inoperante",
+    "filename": "artigo-elevadores-sinal-luminoso-pavimento-inoperante.html",
+    "title": "Sinal Luminoso de Pavimento Inoperante"
+  },
+  {
+    "id": "elev-099",
+    "slug": "acesso-quadro-comando-sem-barreira",
+    "filename": "artigo-elevadores-acesso-quadro-comando-sem-barreira.html",
+    "title": "Acesso ao Quadro de Comando sem Barreira Física"
+  },
+  {
+    "id": "elev-100",
+    "slug": "folga-anormal-portas-pavimento",
+    "filename": "artigo-elevadores-folga-anormal-portas-pavimento.html",
+    "title": "Folga Anormal nas Portas de Pavimento"
+  },
+  {
+    "id": "elev-101",
+    "slug": "ruido-rolamento-porta-cabina",
+    "filename": "artigo-elevadores-ruido-rolamento-porta-cabina.html",
+    "title": "Ruído de Rolamento na Porta da Cabina"
+  },
+  {
+    "id": "elev-102",
+    "slug": "teste-funcional-freio-maquina-ausente",
+    "filename": "artigo-elevadores-teste-funcional-freio-maquina-ausente.html",
+    "title": "Ausência de Teste Funcional do Freio de Máquina"
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "id": "elev-073",
+    "slug": "combustivel-cabina-interior",
+    "filename": "artigo-elevadores-combustivel-cabina-interior.html",
+    "title": "Cabina com Excesso de Material Combustível no Interior"
+  },
+  {
+    "id": "elev-074",
+    "slug": "ventilacao-poco-insuficiente",
+    "filename": "artigo-elevadores-ventilacao-poco-insuficiente.html",
+    "title": "Ventilação Insuficiente no Topo do Poço"
+  },
+  {
+    "id": "elev-075",
+    "slug": "ruido-recorrente-partida",
+    "filename": "artigo-elevadores-ruido-recorrente-partida.html",
+    "title": "Elevador com Ruído Recorrente na Partida"
+  },
+  {
+    "id": "elev-076",
+    "slug": "protecao-modulos-eletronicos-seguranca",
+    "filename": "artigo-elevadores-protecao-modulos-eletronicos-seguranca.html",
+    "title": "Ausência de Proteção contra Violação em Módulos Eletrônicos"
+  },
+  {
+    "id": "elev-077",
+    "slug": "chave-geral-identificacao",
+    "filename": "artigo-elevadores-chave-geral-identificacao.html",
+    "title": "Falta de Identificação Clara da Chave Geral do Elevador"
+  },
+  {
+    "id": "elev-078",
+    "slug": "emergencia-alimentacao-dedicada",
+    "filename": "artigo-elevadores-emergencia-alimentacao-dedicada.html",
+    "title": "Elevador de Emergência sem Alimentação Dedicada"
+  },
+  {
+    "id": "elev-079",
+    "slug": "porta-casa-maquinas-trancada",
+    "filename": "artigo-elevadores-porta-casa-maquinas-trancada.html",
+    "title": "Porta da Casa de Máquinas Não Trancada e Sinalizada"
+  },
+  {
+    "id": "elev-080",
+    "slug": "infiltracao-casa-maquinas",
+    "filename": "artigo-elevadores-infiltracao-casa-maquinas.html",
+    "title": "Indícios de Infiltração na Casa de Máquinas"
+  },
+  {
+    "id": "elev-081",
+    "slug": "limpeza-poco-periodica",
+    "filename": "artigo-elevadores-limpeza-poco-periodica.html",
+    "title": "Falta de Limpeza Periódica no Poço"
+  },
+  {
+    "id": "elev-082",
+    "slug": "dispositivo-resgate-manual",
+    "filename": "artigo-elevadores-dispositivo-resgate-manual.html",
+    "title": "Falta de Dispositivo de Resgate Manual Funcional"
+  }
+]

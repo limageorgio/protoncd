@@ -1,0 +1,62 @@
+[
+  {
+    "id": "elev-083",
+    "slug": "botao-stop-inspecao-teto-cabina",
+    "filename": "artigo-elevadores-botao-stop-inspecao-teto-cabina.html",
+    "title": "Comando de Inspeção no Teto da Cabina sem Botão STOP Adequado"
+  },
+  {
+    "id": "elev-084",
+    "slug": "deslizamento-tracao-polias",
+    "filename": "artigo-elevadores-deslizamento-tracao-polias.html",
+    "title": "Deslizamento na Tração das Polias do Elevador"
+  },
+  {
+    "id": "elev-085",
+    "slug": "freio-seguranca-retardamento-fora-faixa",
+    "filename": "artigo-elevadores-freio-seguranca-retardamento-fora-faixa.html",
+    "title": "Retardamento do Freio de Segurança Fora da Faixa"
+  },
+  {
+    "id": "elev-086",
+    "slug": "guias-deformacao-fixacao-comprometida",
+    "filename": "artigo-elevadores-guias-deformacao-fixacao-comprometida.html",
+    "title": "Guias com Deformação ou Fixação Comprometida"
+  },
+  {
+    "id": "elev-087",
+    "slug": "vazamento-circuito-hidraulico-continuo",
+    "filename": "artigo-elevadores-vazamento-circuito-hidraulico-continuo.html",
+    "title": "Vazamento Contínuo no Circuito Hidráulico"
+  },
+  {
+    "id": "elev-088",
+    "slug": "falha-watchdog-seguranca-eletronica",
+    "filename": "artigo-elevadores-falha-watchdog-seguranca-eletronica.html",
+    "title": "Falha no Watchdog do Sistema Eletrônico de Segurança"
+  },
+  {
+    "id": "elev-089",
+    "slug": "alarme-sobretemperatura-recorrente",
+    "filename": "artigo-elevadores-alarme-sobretemperatura-recorrente.html",
+    "title": "Alarme de Sobretemperatura Recorrente"
+  },
+  {
+    "id": "elev-090",
+    "slug": "oscilacao-cabina-parada",
+    "filename": "artigo-elevadores-oscilacao-cabina-parada.html",
+    "title": "Oscilação da Cabina na Parada"
+  },
+  {
+    "id": "elev-091",
+    "slug": "contraste-visual-botoeiras-pavimento",
+    "filename": "artigo-elevadores-contraste-visual-botoeiras-pavimento.html",
+    "title": "Falta de Contraste Visual nas Botoeiras de Pavimento"
+  },
+  {
+    "id": "elev-092",
+    "slug": "intermitencia-interfone-emergencia",
+    "filename": "artigo-elevadores-intermitencia-interfone-emergencia.html",
+    "title": "Intermitência no Interfone de Emergência"
+  }
+]

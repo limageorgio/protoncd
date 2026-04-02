@@ -1,0 +1,62 @@
+[
+  {
+    "id": "elev-113",
+    "slug": "sensor-porta-bypass-temporario",
+    "filename": "artigo-elevadores-sensor-porta-bypass-temporario.html",
+    "title": "Sensor de Porta em Bypass Temporário"
+  },
+  {
+    "id": "elev-114",
+    "slug": "comando-prioridade-bombeiro-inoperante",
+    "filename": "artigo-elevadores-comando-prioridade-bombeiro-inoperante.html",
+    "title": "Comando de Prioridade de Bombeiro Inoperante"
+  },
+  {
+    "id": "elev-115",
+    "slug": "ausencia-redundancia-circuitos-criticos-seguranca",
+    "filename": "artigo-elevadores-ausencia-redundancia-circuitos-criticos-seguranca.html",
+    "title": "Ausência de Redundância em Circuitos Críticos de Segurança"
+  },
+  {
+    "id": "elev-116",
+    "slug": "falha-recorrente-nivelamento-elevador",
+    "filename": "artigo-elevadores-falha-recorrente-nivelamento-elevador.html",
+    "title": "Falha Recorrente de Nivelamento do Elevador"
+  },
+  {
+    "id": "elev-117",
+    "slug": "bateria-emergencia-sem-autonomia-comprovada",
+    "filename": "artigo-elevadores-bateria-emergencia-sem-autonomia-comprovada.html",
+    "title": "Bateria de Emergência sem Autonomia Comprovada"
+  },
+  {
+    "id": "elev-118",
+    "slug": "ruido-acima-padrao-multiplos-pavimentos",
+    "filename": "artigo-elevadores-ruido-acima-padrao-multiplos-pavimentos.html",
+    "title": "Ruído Acima do Padrão em Múltiplos Pavimentos"
+  },
+  {
+    "id": "elev-119",
+    "slug": "falta-trava-eletrica-acesso-tecnico-poco",
+    "filename": "artigo-elevadores-falta-trava-eletrica-acesso-tecnico-poco.html",
+    "title": "Falta de Trava Elétrica em Acesso Técnico ao Poço"
+  },
+  {
+    "id": "elev-120",
+    "slug": "ausencia-plano-manutencao-preventiva-formal",
+    "filename": "artigo-elevadores-ausencia-plano-manutencao-preventiva-formal.html",
+    "title": "Ausência de Plano de Manutenção Preventiva Formal"
+  },
+  {
+    "id": "elev-121",
+    "slug": "controle-sobrecarga-sem-teste-periodico",
+    "filename": "artigo-elevadores-controle-sobrecarga-sem-teste-periodico.html",
+    "title": "Controle de Sobrecarga sem Teste Periódico"
+  },
+  {
+    "id": "elev-122",
+    "slug": "revalidacao-itens-criticos-apos-modernizacao",
+    "filename": "artigo-elevadores-revalidacao-itens-criticos-apos-modernizacao.html",
+    "title": "Revalidação de Itens Críticos após Modernização do Elevador"
+  }
+]
