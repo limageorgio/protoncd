@@ -176,7 +176,8 @@
 
                 locs.forEach((loc, index) => {
                     const a = document.createElement('a');
-                    a.href = loc.replace('https://www.protoncd.com.br/artigos/elevadores/', '');
+                    const filename = new URL(loc).pathname.split('/').pop();
+                    a.href = filename;
                     a.className = 'card hover-lift';
                     a.style.textDecoration = 'none';
 
