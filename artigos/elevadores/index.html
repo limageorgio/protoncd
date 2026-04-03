@@ -19,47 +19,25 @@
     <link rel="stylesheet" href="../../css/animations.css">
 
     <style>
-        .article-list-wrap {
-            background: var(--bg-card);
-            border: 1px solid var(--border-subtle);
-            border-radius: var(--radius-xl);
-            padding: var(--space-6);
+        .elevadores-grid {
+            margin-top: var(--space-4);
         }
 
-        .article-list {
-            list-style: none;
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: var(--space-2);
-        }
-
-        .article-list li a {
-            display: block;
-            padding: var(--space-3) var(--space-4);
-            border-radius: var(--radius-md);
-            color: var(--text-primary);
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid transparent;
-            transition: all var(--transition-fast);
+        .elevadores-grid .card {
             text-decoration: none;
         }
 
-        .article-list li a:hover {
-            border-color: var(--border-accent);
-            background: rgba(59, 130, 246, 0.08);
-            transform: translateX(3px);
+        .elevadores-grid .card-text {
+            margin-bottom: 0;
         }
 
         .article-list-empty {
             color: var(--text-secondary);
             text-align: center;
-            padding: var(--space-6);
-        }
-
-        @media (max-width: 768px) {
-            .article-list-wrap {
-                padding: var(--space-4);
-            }
+            padding: var(--space-8);
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-xl);
         }
     </style>
 </head>
@@ -86,14 +64,12 @@
                 <span class="badge badge-blue">Conteudo</span>
                 <h1>Artigos de <span class="text-gradient">Elevadores</span></h1>
                 <div class="section-divider"></div>
-                <p>Lista completa dos artigos tecnicos de elevadores publicados pela Proton Engenharia.</p>
+                <p>Artigos tecnicos de elevadores em formato de botoes/cards para acesso rapido.</p>
             </div>
 
-            <div class="article-list-wrap">
-                <ul id="elevadores-article-list" class="article-list"></ul>
-                <p id="elevadores-article-empty" class="article-list-empty" style="display:none;">Nenhum artigo
-                    encontrado no momento.</p>
-            </div>
+            <div id="elevadores-article-list" class="grid grid-3 elevadores-grid"></div>
+            <p id="elevadores-article-empty" class="article-list-empty" style="display:none;">Nenhum artigo encontrado
+                no momento.</p>
         </div>
     </section>
 
@@ -162,9 +138,23 @@
                 .replace(/\b\w/g, c => c.toUpperCase());
         }
 
+        function subtitleFromTitle(title) {
+            const words = title.split(' ').filter(Boolean);
+            return words.slice(0, 12).join(' ') + (words.length > 12 ? '...' : '');
+        }
+
         async function renderElevadoresList() {
             const list = document.getElementById('elevadores-article-list');
             const empty = document.getElementById('elevadores-article-empty');
+            const iconClasses = [
+                'fas fa-building',
+                'fas fa-tools',
+                'fas fa-shield-alt',
+                'fas fa-cogs',
+                'fas fa-exclamation-triangle',
+                'fas fa-clipboard-check'
+            ];
+            const iconColors = ['blue', 'orange', 'red', 'green', 'gray'];
 
             try {
                 const response = await fetch('../../sitemap-servicos.xml', { cache: 'no-store' });
@@ -184,13 +174,23 @@
 
                 const fragment = document.createDocumentFragment();
 
-                locs.forEach(loc => {
-                    const li = document.createElement('li');
+                locs.forEach((loc, index) => {
                     const a = document.createElement('a');
                     a.href = loc.replace('https://www.protoncd.com.br/artigos/elevadores/', '');
-                    a.textContent = titleFromSlug(loc);
-                    li.appendChild(a);
-                    fragment.appendChild(li);
+                    a.className = 'card hover-lift';
+                    a.style.textDecoration = 'none';
+
+                    const title = titleFromSlug(loc);
+                    const icon = iconClasses[index % iconClasses.length];
+                    const color = iconColors[index % iconColors.length];
+
+                    a.innerHTML = `
+                        <div class="card-icon ${color}"><i class="${icon}"></i></div>
+                        <h3 class="card-title">${title}</h3>
+                        <p class="card-text">${subtitleFromTitle(title)}</p>
+                    `;
+
+                    fragment.appendChild(a);
                 });
 
                 list.appendChild(fragment);
