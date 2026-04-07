@@ -22,6 +22,12 @@
         content="conhecimento técnico engenharia, base conhecimento engenharia, artigos engenharia mecânica, engenharia diagnóstica artigos, dúvidas inspeção predial, perguntas frequentes inspeção predial, FAQ engenharia mecânica, FAQ inspeção predial, normas técnicas condomínio, NBR condomínio, inspeção predial o que é, pmoc o que é, cercon o que é, laudo técnico o que é, ART o que é, proton engenharia blog, proton engenharia artigos">
     <title>Base de Conhecimento Técnico | Proton Engenharia</title>
     <link rel="canonical" href="https://www.protoncd.com.br/conhecimento-tecnico/">
+    <script>
+        // Consolidates /conhecimento-tecnico/index.html into the canonical folder URL.
+        if (window.location.pathname === '/conhecimento-tecnico/index.html') {
+            window.location.replace('/conhecimento-tecnico/' + window.location.search + window.location.hash);
+        }
+    </script>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
