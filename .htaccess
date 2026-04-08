@@ -1,6 +1,9 @@
 <IfModule mod_rewrite.c>
 RewriteEngine On
 
+# Canonical English home URL
+RewriteRule ^en/index\.html$ /en/ [L,R=301,NC]
+
 # Redirect Trailing Slashes if not a directory
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_URI} (.+)/$
