@@ -1,20 +1,18 @@
 # Auditoria Geral de Indexacao - Proton
 
-Data: 2026-04-16 22:24:04 UTC
+Data: 2026-04-16 22:30:13 UTC
 Sitemap raiz: https://www.protoncd.com.br/sitemap.xml
 
 ## Resumo
 
 - URLs auditadas: 283
-- URLs sem issues: 211
-- URLs com issues: 72
+- URLs sem issues: 219
+- URLs com issues: 64
 
 ## Issues por tipo
 
-- title_len_outside_20_70: 47
-- desc_len_outside_70_180: 45
-- http_status_not_200: 1
-- missing_canonical: 1
+- title_len_outside_20_70: 40
+- desc_len_outside_70_180: 36
 
 ## Checklist de Correcao (Gerenciavel)
 
@@ -58,21 +56,14 @@ Sitemap raiz: https://www.protoncd.com.br/sitemap.xml
 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-corrimao-ausente-altura-600-850.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-corrimao-ausente-altura-600-850.html | desc_len_outside_70_180 |
 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-deformacoes-quebras-estruturais.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-deformacoes-quebras-estruturais.html | desc_len_outside_70_180 |
 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-desgaste-do-gel-com-fibra-de-vidro-exposta.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-desgaste-do-gel-com-fibra-de-vidro-exposta.html | title_len_outside_20_70 |
-| https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-design-do-guarda-corpo-permite-escala-travessas-horizontais.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-design-do-guarda-corpo-permite-escala-travessas-horizontais.html | title_len_outside_20_70, desc_len_outside_70_180 |
-| https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-distancia-assentos-balanco.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-distancia-assentos-balanco.html | title_len_outside_20_70, desc_len_outside_70_180 |
+| https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-design-do-guarda-corpo-permite-escala-travessas-horizontais.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-design-do-guarda-corpo-permite-escala-travessas-horizontais.html | title_len_outside_20_70 |
 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-distanciamento-entre-equipamentos.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-distanciamento-entre-equipamentos.html | desc_len_outside_70_180 |
 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-eixos-e-rolamentos-com-movimento-travado-ou-seco.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-eixos-e-rolamentos-com-movimento-travado-ou-seco.html | title_len_outside_20_70 |
-| https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-entorno-1-5m-a-2-5m-com-objetos-perigosos-ou-blocos-aflorando.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-entorno-1-5m-a-2-5m-com-objetos-perigosos-ou-blocos-aflorando.html | title_len_outside_20_70, desc_len_outside_70_180 |
 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-escorregador-com-calos-parafusos-expostos-ou-degraus.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-escorregador-com-calos-parafusos-expostos-ou-degraus.html | title_len_outside_20_70 |
 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-falta-de-segunda-rota-de-evacuacao-em-brinquedao.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-falta-de-segunda-rota-de-evacuacao-em-brinquedao.html | title_len_outside_20_70 |
 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-falta-de-sinalizacao-de-seguranca-regras.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-falta-de-sinalizacao-de-seguranca-regras.html | title_len_outside_20_70 |
-| https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-falta-revestimento-ferrugem.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-falta-revestimento-ferrugem.html | title_len_outside_20_70, desc_len_outside_70_180 |
-| https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-ferrugem-desgaste-missing.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-ferrugem-desgaste-missing.html | title_len_outside_20_70, desc_len_outside_70_180 |
 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-ferrugem-desgaste.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-ferrugem-desgaste.html | title_len_outside_20_70 |
-| https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-frestas-v-eixos-sem-protecao.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-frestas-v-eixos-sem-protecao.html | title_len_outside_20_70, desc_len_outside_70_180 |
-| https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-gangorra-sem-amortecimento.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-gangorra-sem-amortecimento.html | title_len_outside_20_70, desc_len_outside_70_180 |
 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-h-600-mm-exige-barreira-fechada-min-900-mm-para-3-anos.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-h-600-mm-exige-barreira-fechada-min-900-mm-para-3-anos.html | title_len_outside_20_70 |
-| https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-impacto-assentos.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-impacto-assentos.html | title_len_outside_20_70, desc_len_outside_70_180 |
 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-inclinacao-escorregador-acima-60.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-inclinacao-escorregador-acima-60.html | desc_len_outside_70_180 |
 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-inclinacao-maxima-da-gangorra-acima-de-25.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-inclinacao-maxima-da-gangorra-acima-de-25.html | title_len_outside_20_70 |
 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-incompatibilidade-piso-aql.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-incompatibilidade-piso-aql.html | title_len_outside_20_70, desc_len_outside_70_180 |
@@ -102,7 +93,6 @@ Sitemap raiz: https://www.protoncd.com.br/sitemap.xml
 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-vao-assento-piso-horizontal.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-vao-assento-piso-horizontal.html | title_len_outside_20_70, desc_len_outside_70_180 |
 | https://www.protoncd.com.br/inspecao-hvac-pmoc.html | 200 | https://www.protoncd.com.br/inspecao-hvac-pmoc.html | desc_len_outside_70_180 |
 | https://www.protoncd.com.br/laudo-pericial-engenharia.html | 200 | https://www.protoncd.com.br/laudo-pericial-engenharia.html | desc_len_outside_70_180 |
-| https://www.protoncd.com.br/teste-arrancamento-olhais.html | 503 | (vazio) | http_status_not_200, missing_canonical, desc_len_outside_70_180 |
 
 ## Como rodar novamente
 

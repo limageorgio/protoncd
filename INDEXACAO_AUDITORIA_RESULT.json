@@ -1,17 +1,15 @@
 {
-  "generated_at": "2026-04-16 22:24:04 UTC",
+  "generated_at": "2026-04-16 22:30:13 UTC",
   "root_sitemap": "https://www.protoncd.com.br/sitemap.xml",
   "summary": {
     "total_urls": 283,
-    "urls_with_issues": 72,
-    "urls_without_issues": 211,
+    "urls_with_issues": 64,
+    "urls_without_issues": 219,
     "issue_counts": {
-      "desc_len_outside_70_180": 45,
-      "title_len_outside_20_70": 47,
-      "http_status_not_200": 1,
-      "missing_canonical": 1
+      "desc_len_outside_70_180": 36,
+      "title_len_outside_20_70": 40
     },
-    "duration_sec": 67.85
+    "duration_sec": 69.46
   },
   "results": [
     {
@@ -4086,8 +4084,8 @@
       "canonical_self": true,
       "robots": "",
       "has_noindex": false,
-      "title_len": 93,
-      "desc_len": 187,
+      "title_len": 72,
+      "desc_len": 131,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
@@ -4095,8 +4093,7 @@
       "variant_final_url": "",
       "variant_points_to_html": false,
       "issues": [
-        "title_len_outside_20_70",
-        "desc_len_outside_70_180"
+        "title_len_outside_20_70"
       ]
     },
     {
@@ -4108,18 +4105,15 @@
       "canonical_self": true,
       "robots": "",
       "has_noindex": false,
-      "title_len": 72,
-      "desc_len": 236,
+      "title_len": 68,
+      "desc_len": 135,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70",
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-distanciamento-entre-equipamentos.html",
@@ -4172,18 +4166,15 @@
       "canonical_self": true,
       "robots": "",
       "has_noindex": false,
-      "title_len": 95,
-      "desc_len": 189,
+      "title_len": 64,
+      "desc_len": 133,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70",
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-escorregador-com-calos-parafusos-expostos-ou-degraus.html",
@@ -4276,18 +4267,15 @@
       "canonical_self": true,
       "robots": "",
       "has_noindex": false,
-      "title_len": 86,
-      "desc_len": 195,
+      "title_len": 67,
+      "desc_len": 138,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70",
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-ferrugem-desgaste-missing.html",
@@ -4298,18 +4286,15 @@
       "canonical_self": true,
       "robots": "",
       "has_noindex": false,
-      "title_len": 86,
-      "desc_len": 195,
+      "title_len": 68,
+      "desc_len": 131,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70",
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-ferrugem-desgaste.html",
@@ -4341,18 +4326,15 @@
       "canonical_self": true,
       "robots": "",
       "has_noindex": false,
-      "title_len": 74,
-      "desc_len": 225,
+      "title_len": 68,
+      "desc_len": 130,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70",
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-gangorra-sem-amortecimento.html",
@@ -4363,18 +4345,15 @@
       "canonical_self": true,
       "robots": "",
       "has_noindex": false,
-      "title_len": 75,
-      "desc_len": 228,
+      "title_len": 61,
+      "desc_len": 133,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70",
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-h-600-mm-exige-barreira-fechada-min-900-mm-para-3-anos.html",
@@ -4406,18 +4385,15 @@
       "canonical_self": true,
       "robots": "",
       "has_noindex": false,
-      "title_len": 82,
-      "desc_len": 223,
+      "title_len": 68,
+      "desc_len": 135,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70",
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-inclinacao-escorregador-acima-60.html",
@@ -5536,26 +5512,22 @@
     },
     {
       "url": "https://www.protoncd.com.br/teste-arrancamento-olhais.html",
-      "status": 503,
+      "status": 200,
       "final_url": "https://www.protoncd.com.br/teste-arrancamento-olhais.html",
-      "http_ok": false,
-      "canonical": "",
-      "canonical_self": false,
-      "robots": "",
+      "http_ok": true,
+      "canonical": "https://www.protoncd.com.br/teste-arrancamento-olhais.html",
+      "canonical_self": true,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 24,
-      "desc_len": 0,
+      "title_len": 51,
+      "desc_len": 176,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "http_status_not_200",
-        "missing_canonical",
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     }
   ]
 }

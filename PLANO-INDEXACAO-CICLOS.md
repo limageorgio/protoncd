@@ -1,4 +1,4 @@
-# Plano de Indexacao - Ciclo Operacional
+﻿# Plano de Indexacao - Ciclo Operacional
 
 Data base da auditoria: 2026-04-16 18:07:54 UTC
 Origem: INDEXACAO_AUDITORIA_RESULT.json
@@ -180,6 +180,21 @@ Origem: INDEXACAO_AUDITORIA_RESULT.json
   - desc_len_outside_70_180: -7
   - Novo residual tecnico: 1 URL com status nao-200 e sem canonical
 
+## Sincronizacao Externa (2026-04-16 22:32:00 UTC)
+
+- URLs auditadas (sitemap): 283
+- URLs com issues: 64
+- URLs sem issues: 219
+- Delta vs baseline:
+  - URLs com issues: -148
+  - title_len_outside_20_70: 179 -> 40 (-139)
+  - desc_len_outside_70_180: 112 -> 36 (-76)
+  - http_status_not_200: 1 (mantido)
+  - missing_canonical: 1 (mantido)
+- Delta vs pos-lote 11:
+  - URLs com issues: -8
+  - title_len_outside_20_70: -7
+  - desc_len_outside_70_180: -9
 ## Prioridade de execucao
 
 1. Implementar redirecionamento 301 global de URL sem .html para URL .html
@@ -193,9 +208,9 @@ Origem: INDEXACAO_AUDITORIA_RESULT.json
 ### Sprint 1 - Titles
 
 - [x] Implementar regra de redirecionamento 301 para variantes sem .html (deploy realizado)
-- [x] Validar amostra de 50 URLs em produção após o deploy (validação por auditoria completa: 283 URLs)
-- [x] Corrigir lote prioritário inicial (34 URLs: home, regionais, serviços e EN) no repositório
-- [x] Corrigir próximo lote até completar 60 URLs prioritárias (concluido: 134/60)
+- [x] Validar amostra de 50 URLs em produÃ§Ã£o apÃ³s o deploy (validaÃ§Ã£o por auditoria completa: 283 URLs)
+- [x] Corrigir lote prioritÃ¡rio inicial (34 URLs: home, regionais, serviÃ§os e EN) no repositÃ³rio
+- [x] Corrigir prÃ³ximo lote atÃ© completar 60 URLs prioritÃ¡rias (concluido: 134/60)
 - [ ] Garantir unicidade por pagina
 - [ ] Evitar repeticao de padrao em massa
 
@@ -217,7 +232,7 @@ Origem: INDEXACAO_AUDITORIA_RESULT.json
 - 0 URLs com status diferente de 200 no sitemap
 - 0 URLs com noindex indevido
 - 0 URLs sem canonical valido
-- 0 variantes sem .html retornando 200 em URL canônica .html
+- 0 variantes sem .html retornando 200 em URL canÃ´nica .html
 - Reducao continua de title_len_outside_20_70
 - Reducao continua de desc_len_outside_70_180
 
@@ -240,3 +255,4 @@ python _tmp_full_indexing_audit.py
   - URL Inspection por amostra de URLs prioritarias
   - Relatorio de canonical selecionada pelo Google
   - Verificacao de conteudo duplicado entre paginas regionais
+
