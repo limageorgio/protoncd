@@ -1,17 +1,17 @@
 # Auditoria Geral de Indexacao - Proton
 
-Data: 2026-04-16 19:59:09 UTC
+Data: 2026-04-16 20:07:17 UTC
 Sitemap raiz: https://www.protoncd.com.br/sitemap.xml
 
 ## Resumo
 
 - URLs auditadas: 283
-- URLs sem issues: 162
-- URLs com issues: 121
+- URLs sem issues: 172
+- URLs com issues: 111
 
 ## Issues por tipo
 
-- title_len_outside_20_70: 97
+- title_len_outside_20_70: 87
 - desc_len_outside_70_180: 63
 
 ## Checklist de Correcao (Gerenciavel)
@@ -30,16 +30,6 @@ Sitemap raiz: https://www.protoncd.com.br/sitemap.xml
 | URL | Status | Canonical | Issues |
 |---|---:|---|---|
 | https://www.protoncd.com.br/conhecimento-tecnico/ | 200 | https://www.protoncd.com.br/conhecimento-tecnico/ | desc_len_outside_70_180 |
-| https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-oscilacao-cabina-parada.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-oscilacao-cabina-parada.html | title_len_outside_20_70 |
-| https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-painel-tecnico-rotulos.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-painel-tecnico-rotulos.html | title_len_outside_20_70 |
-| https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-placa-capacidade-cabina.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-placa-capacidade-cabina.html | title_len_outside_20_70 |
-| https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-poco-contaminado-agua-oleo-residuos.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-poco-contaminado-agua-oleo-residuos.html | title_len_outside_20_70 |
-| https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-poco-contaminado.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-poco-contaminado.html | title_len_outside_20_70 |
-| https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-porta-abre-fora-nivel.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-porta-abre-fora-nivel.html | title_len_outside_20_70 |
-| https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-porta-casa-maquinas-fechadura-segura.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-porta-casa-maquinas-fechadura-segura.html | title_len_outside_20_70 |
-| https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-porta-casa-maquinas-trancada.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-porta-casa-maquinas-trancada.html | title_len_outside_20_70 |
-| https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-porta-pavimento-fechamento-lento.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-porta-pavimento-fechamento-lento.html | title_len_outside_20_70 |
-| https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-protecao-antissalto-cabos-polias.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-protecao-antissalto-cabos-polias.html | title_len_outside_20_70 |
 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-protecao-ip-componentes-casa-maquinas.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-protecao-ip-componentes-casa-maquinas.html | title_len_outside_20_70 |
 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-protecao-modulos-eletronicos-seguranca.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-protecao-modulos-eletronicos-seguranca.html | title_len_outside_20_70 |
 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-quadro-comando-sobreaquecimento.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-quadro-comando-sobreaquecimento.html | title_len_outside_20_70 |
