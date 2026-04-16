@@ -1,15 +1,17 @@
 {
-  "generated_at": "2026-04-16 22:13:28 UTC",
+  "generated_at": "2026-04-16 22:24:04 UTC",
   "root_sitemap": "https://www.protoncd.com.br/sitemap.xml",
   "summary": {
     "total_urls": 283,
-    "urls_with_issues": 79,
-    "urls_without_issues": 204,
+    "urls_with_issues": 72,
+    "urls_without_issues": 211,
     "issue_counts": {
-      "desc_len_outside_70_180": 52,
-      "title_len_outside_20_70": 55
+      "desc_len_outside_70_180": 45,
+      "title_len_outside_20_70": 47,
+      "http_status_not_200": 1,
+      "missing_canonical": 1
     },
-    "duration_sec": 76.27
+    "duration_sec": 67.85
   },
   "results": [
     {
@@ -3619,18 +3621,15 @@
       "canonical_self": true,
       "robots": "",
       "has_noindex": false,
-      "title_len": 71,
-      "desc_len": 200,
+      "title_len": 57,
+      "desc_len": 130,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70",
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-arestas-vivas.html",
@@ -3683,18 +3682,15 @@
       "canonical_self": true,
       "robots": "",
       "has_noindex": false,
-      "title_len": 82,
-      "desc_len": 195,
+      "title_len": 66,
+      "desc_len": 147,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70",
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-ausencia-de-dados-do-fabricante-e-faixa-etaria.html",
@@ -3810,18 +3806,15 @@
       "canonical_self": true,
       "robots": "",
       "has_noindex": false,
-      "title_len": 86,
-      "desc_len": 194,
+      "title_len": 65,
+      "desc_len": 137,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70",
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-borda-saida-escorregador.html",
@@ -3832,18 +3825,15 @@
       "canonical_self": true,
       "robots": "",
       "has_noindex": false,
-      "title_len": 79,
-      "desc_len": 208,
+      "title_len": 65,
+      "desc_len": 139,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70",
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-buraco-fresta-8-25.html",
@@ -3936,18 +3926,15 @@
       "canonical_self": true,
       "robots": "",
       "has_noindex": false,
-      "title_len": 72,
-      "desc_len": 212,
+      "title_len": 65,
+      "desc_len": 148,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70",
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-corda-alma-exposta-fios-metalicos.html",
@@ -3958,18 +3945,15 @@
       "canonical_self": true,
       "robots": "",
       "has_noindex": false,
-      "title_len": 90,
-      "desc_len": 194,
+      "title_len": 57,
+      "desc_len": 138,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70",
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-cordas-cabos.html",
@@ -3980,18 +3964,15 @@
       "canonical_self": true,
       "robots": "",
       "has_noindex": false,
-      "title_len": 80,
-      "desc_len": 207,
+      "title_len": 61,
+      "desc_len": 140,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70",
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-cordas-rompimento-desgaste-excessivo.html",
@@ -4065,18 +4046,15 @@
       "canonical_self": true,
       "robots": "",
       "has_noindex": false,
-      "title_len": 73,
-      "desc_len": 208,
+      "title_len": 55,
+      "desc_len": 138,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70",
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-desgaste-do-gel-com-fibra-de-vidro-exposta.html",
@@ -5558,22 +5536,26 @@
     },
     {
       "url": "https://www.protoncd.com.br/teste-arrancamento-olhais.html",
-      "status": 200,
+      "status": 503,
       "final_url": "https://www.protoncd.com.br/teste-arrancamento-olhais.html",
-      "http_ok": true,
-      "canonical": "https://www.protoncd.com.br/teste-arrancamento-olhais.html",
-      "canonical_self": true,
-      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+      "http_ok": false,
+      "canonical": "",
+      "canonical_self": false,
+      "robots": "",
       "has_noindex": false,
-      "title_len": 51,
-      "desc_len": 176,
+      "title_len": 24,
+      "desc_len": 0,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": []
+      "issues": [
+        "http_status_not_200",
+        "missing_canonical",
+        "desc_len_outside_70_180"
+      ]
     }
   ]
 }

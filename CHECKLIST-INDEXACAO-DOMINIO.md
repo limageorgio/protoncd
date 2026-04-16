@@ -1,18 +1,20 @@
 # Auditoria Geral de Indexacao - Proton
 
-Data: 2026-04-16 22:13:28 UTC
+Data: 2026-04-16 22:24:04 UTC
 Sitemap raiz: https://www.protoncd.com.br/sitemap.xml
 
 ## Resumo
 
 - URLs auditadas: 283
-- URLs sem issues: 204
-- URLs com issues: 79
+- URLs sem issues: 211
+- URLs com issues: 72
 
 ## Issues por tipo
 
-- title_len_outside_20_70: 55
-- desc_len_outside_70_180: 52
+- title_len_outside_20_70: 47
+- desc_len_outside_70_180: 45
+- http_status_not_200: 1
+- missing_canonical: 1
 
 ## Checklist de Correcao (Gerenciavel)
 
@@ -42,27 +44,19 @@ Sitemap raiz: https://www.protoncd.com.br/sitemap.xml
 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-altura-assento-movimento-alta.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-altura-assento-movimento-alta.html | desc_len_outside_70_180 |
 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-amortecedores-sob-extremidades-da-gangorra-ausentes.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-amortecedores-sob-extremidades-da-gangorra-ausentes.html | title_len_outside_20_70 |
 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-apoios-frouxos.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-apoios-frouxos.html | desc_len_outside_70_180 |
-| https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-aprisionamento-dedo.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-aprisionamento-dedo.html | title_len_outside_20_70, desc_len_outside_70_180 |
 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-arestas-vivas.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-arestas-vivas.html | desc_len_outside_70_180 |
 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-assento-balanco-altura-piso.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-assento-balanco-altura-piso.html | desc_len_outside_70_180 |
-| https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-assento-pesado-aceleracao.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-assento-pesado-aceleracao.html | title_len_outside_20_70, desc_len_outside_70_180 |
 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-ausencia-de-dados-do-fabricante-e-faixa-etaria.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-ausencia-de-dados-do-fabricante-e-faixa-etaria.html | title_len_outside_20_70 |
 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-ausencia-de-guarda-corpo-ou-barreira-lateral-h-600mm.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-ausencia-de-guarda-corpo-ou-barreira-lateral-h-600mm.html | title_len_outside_20_70 |
 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-ausencia-de-laudo-hic-ou-vencimento-do-piso.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-ausencia-de-laudo-hic-ou-vencimento-do-piso.html | title_len_outside_20_70 |
 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-ausencia-de-piso-de-impacto-para-queda-600mm.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-ausencia-de-piso-de-impacto-para-queda-600mm.html | title_len_outside_20_70 |
 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-base-piso-escoamento-agua.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-base-piso-escoamento-agua.html | desc_len_outside_70_180 |
-| https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-borda-saida-escorregador-max.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-borda-saida-escorregador-max.html | title_len_outside_20_70, desc_len_outside_70_180 |
-| https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-borda-saida-escorregador.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-borda-saida-escorregador.html | title_len_outside_20_70, desc_len_outside_70_180 |
 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-buraco-fresta-8-25.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-buraco-fresta-8-25.html | desc_len_outside_70_180 |
 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-cama-de-areia-cascalho-300mm-de-profundidade.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-cama-de-areia-cascalho-300mm-de-profundidade.html | title_len_outside_20_70 |
 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-concreto-armadura-exposta.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-concreto-armadura-exposta.html | desc_len_outside_70_180 |
-| https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-conexoes-frouxas.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-conexoes-frouxas.html | title_len_outside_20_70, desc_len_outside_70_180 |
-| https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-corda-alma-exposta-fios-metalicos.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-corda-alma-exposta-fios-metalicos.html | title_len_outside_20_70, desc_len_outside_70_180 |
-| https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-cordas-cabos.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-cordas-cabos.html | title_len_outside_20_70, desc_len_outside_70_180 |
 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-cordas-rompimento-desgaste-excessivo.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-cordas-rompimento-desgaste-excessivo.html | desc_len_outside_70_180 |
 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-corrimao-ausente-altura-600-850.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-corrimao-ausente-altura-600-850.html | desc_len_outside_70_180 |
 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-deformacoes-quebras-estruturais.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-deformacoes-quebras-estruturais.html | desc_len_outside_70_180 |
-| https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-degraus-profundidade-desalinhados.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-degraus-profundidade-desalinhados.html | title_len_outside_20_70, desc_len_outside_70_180 |
 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-desgaste-do-gel-com-fibra-de-vidro-exposta.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-desgaste-do-gel-com-fibra-de-vidro-exposta.html | title_len_outside_20_70 |
 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-design-do-guarda-corpo-permite-escala-travessas-horizontais.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-design-do-guarda-corpo-permite-escala-travessas-horizontais.html | title_len_outside_20_70, desc_len_outside_70_180 |
 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-distancia-assentos-balanco.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-distancia-assentos-balanco.html | title_len_outside_20_70, desc_len_outside_70_180 |
@@ -108,6 +102,7 @@ Sitemap raiz: https://www.protoncd.com.br/sitemap.xml
 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-vao-assento-piso-horizontal.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-vao-assento-piso-horizontal.html | title_len_outside_20_70, desc_len_outside_70_180 |
 | https://www.protoncd.com.br/inspecao-hvac-pmoc.html | 200 | https://www.protoncd.com.br/inspecao-hvac-pmoc.html | desc_len_outside_70_180 |
 | https://www.protoncd.com.br/laudo-pericial-engenharia.html | 200 | https://www.protoncd.com.br/laudo-pericial-engenharia.html | desc_len_outside_70_180 |
+| https://www.protoncd.com.br/teste-arrancamento-olhais.html | 503 | (vazio) | http_status_not_200, missing_canonical, desc_len_outside_70_180 |
 
 ## Como rodar novamente
 
