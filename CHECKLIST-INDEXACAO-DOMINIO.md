@@ -1,18 +1,18 @@
 # Auditoria Geral de Indexacao - Proton
 
-Data: 2026-04-16 18:48:50 UTC
+Data: 2026-04-16 18:55:22 UTC
 Sitemap raiz: https://www.protoncd.com.br/sitemap.xml
 
 ## Resumo
 
 - URLs auditadas: 283
-- URLs sem issues: 142
-- URLs com issues: 141
+- URLs sem issues: 152
+- URLs com issues: 131
 
 ## Issues por tipo
 
-- title_len_outside_20_70: 116
-- desc_len_outside_70_180: 64
+- title_len_outside_20_70: 107
+- desc_len_outside_70_180: 63
 
 ## Checklist de Correcao (Gerenciavel)
 
@@ -30,16 +30,6 @@ Sitemap raiz: https://www.protoncd.com.br/sitemap.xml
 | URL | Status | Canonical | Issues |
 |---|---:|---|---|
 | https://www.protoncd.com.br/conhecimento-tecnico/ | 200 | https://www.protoncd.com.br/conhecimento-tecnico/ | desc_len_outside_70_180 |
-| https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-deslizamento-tracao-polias.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-deslizamento-tracao-polias.html | title_len_outside_20_70 |
-| https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-espacos-refugio-elevador.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-espacos-refugio-elevador.html | desc_len_outside_70_180 |
-| https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-esquema-eletrico-hidraulico-disponivel.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-esquema-eletrico-hidraulico-disponivel.html | title_len_outside_20_70 |
-| https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-falha-recorrente-nivelamento-elevador.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-falha-recorrente-nivelamento-elevador.html | title_len_outside_20_70 |
-| https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-falha-watchdog-seguranca-eletronica.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-falha-watchdog-seguranca-eletronica.html | title_len_outside_20_70 |
-| https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-falta-trava-eletrica-acesso-tecnico-poco.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-falta-trava-eletrica-acesso-tecnico-poco.html | title_len_outside_20_70 |
-| https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-fim-de-curso-limitador-final.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-fim-de-curso-limitador-final.html | title_len_outside_20_70 |
-| https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-folga-anormal-portas-pavimento.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-folga-anormal-portas-pavimento.html | title_len_outside_20_70 |
-| https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-folga-critica-cabina-contrapeso-poco.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-folga-critica-cabina-contrapeso-poco.html | title_len_outside_20_70 |
-| https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-freio-maquina-ajuste-folga.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-freio-maquina-ajuste-folga.html | title_len_outside_20_70 |
 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-freio-seguranca-retardamento-fora-faixa.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-freio-seguranca-retardamento-fora-faixa.html | title_len_outside_20_70 |
 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-guias-deformacao-fixacao-comprometida.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-guias-deformacao-fixacao-comprometida.html | title_len_outside_20_70 |
 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-iluminacao-casa-maquinas-fosso.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-iluminacao-casa-maquinas-fosso.html | title_len_outside_20_70 |
