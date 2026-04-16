@@ -1,6 +1,6 @@
 # Auditoria Geral de Indexacao - Proton
 
-Data: 2026-04-16 21:14:36 UTC
+Data: 2026-04-16 21:21:28 UTC
 Sitemap raiz: https://www.protoncd.com.br/sitemap.xml
 
 ## Resumo
