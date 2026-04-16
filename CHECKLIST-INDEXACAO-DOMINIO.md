@@ -1,18 +1,18 @@
 # Auditoria Geral de Indexacao - Proton
 
-Data: 2026-04-16 22:01:10 UTC
+Data: 2026-04-16 22:13:28 UTC
 Sitemap raiz: https://www.protoncd.com.br/sitemap.xml
 
 ## Resumo
 
 - URLs auditadas: 283
-- URLs sem issues: 196
-- URLs com issues: 87
+- URLs sem issues: 204
+- URLs com issues: 79
 
 ## Issues por tipo
 
-- title_len_outside_20_70: 63
-- desc_len_outside_70_180: 60
+- title_len_outside_20_70: 55
+- desc_len_outside_70_180: 52
 
 ## Checklist de Correcao (Gerenciavel)
 
@@ -34,22 +34,14 @@ Sitemap raiz: https://www.protoncd.com.br/sitemap.xml
 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-teste-funcional-freio-maquina-ausente.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-teste-funcional-freio-maquina-ausente.html | desc_len_outside_70_180 |
 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-abertura-piso-correr-larga.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-abertura-piso-correr-larga.html | desc_len_outside_70_180 |
 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-abertura-rigida-130-230.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-abertura-rigida-130-230.html | desc_len_outside_70_180 |
-| https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-acumulo-agua-tubos-tuneis.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-acumulo-agua-tubos-tuneis.html | title_len_outside_20_70, desc_len_outside_70_180 |
-| https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-acumulo-agua.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-acumulo-agua.html | title_len_outside_20_70, desc_len_outside_70_180 |
 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-acumulo-lama-pocas-area.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-acumulo-lama-pocas-area.html | desc_len_outside_70_180 |
 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-afastamento-insuficiente-entre-partes-moveis-12mm.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-afastamento-insuficiente-entre-partes-moveis-12mm.html | title_len_outside_20_70 |
 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-agarras-frouxas.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-agarras-frouxas.html | desc_len_outside_70_180 |
 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-alcas-suspensas-desgastadas.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-alcas-suspensas-desgastadas.html | desc_len_outside_70_180 |
-| https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-alcas-suspensas.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-alcas-suspensas.html | title_len_outside_20_70, desc_len_outside_70_180 |
 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-alicerces-de-concreto-aparentes-200mm.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-alicerces-de-concreto-aparentes-200mm.html | title_len_outside_20_70 |
-| https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-altura-acesso-cadeirante.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-altura-acesso-cadeirante.html | title_len_outside_20_70, desc_len_outside_70_180 |
 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-altura-assento-movimento-alta.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-altura-assento-movimento-alta.html | desc_len_outside_70_180 |
-| https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-altura-assentos.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-altura-assentos.html | title_len_outside_20_70, desc_len_outside_70_180 |
-| https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-ambiente-nao-adaptado-para-criancas-com-deficiencia.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-ambiente-nao-adaptado-para-criancas-com-deficiencia.html | title_len_outside_20_70, desc_len_outside_70_180 |
-| https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-amortecedor-curso-ausente.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-amortecedor-curso-ausente.html | title_len_outside_20_70, desc_len_outside_70_180 |
 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-amortecedores-sob-extremidades-da-gangorra-ausentes.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-amortecedores-sob-extremidades-da-gangorra-ausentes.html | title_len_outside_20_70 |
 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-apoios-frouxos.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-apoios-frouxos.html | desc_len_outside_70_180 |
-| https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-apoios-maos-pes-folga.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-apoios-maos-pes-folga.html | title_len_outside_20_70, desc_len_outside_70_180 |
 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-aprisionamento-dedo.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-aprisionamento-dedo.html | title_len_outside_20_70, desc_len_outside_70_180 |
 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-arestas-vivas.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-arestas-vivas.html | desc_len_outside_70_180 |
 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-assento-balanco-altura-piso.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-assento-balanco-altura-piso.html | desc_len_outside_70_180 |
