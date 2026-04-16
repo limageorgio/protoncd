@@ -1,6 +1,6 @@
-﻿# Auditoria Geral de Indexacao - Proton
+# Auditoria Geral de Indexacao - Proton
 
-Data: 2026-04-16 23:03:24 UTC
+Data: 2026-04-16 23:04:02 UTC
 Sitemap raiz: https://www.protoncd.com.br/sitemap.xml
 
 ## Resumo
@@ -19,11 +19,11 @@ Sitemap raiz: https://www.protoncd.com.br/sitemap.xml
 - [ ] Corrigir todas as URLs com status diferente de 200.
 - [ ] Remover noindex (meta ou header) de URLs que devem indexar.
 - [ ] Garantir canonical absoluto e consistente com URL do sitemap.
-- [ ] Implementar redirecionamento 301 da variante sem .html para a URL canÃ´nica .html.
+- [ ] Implementar redirecionamento 301 da variante sem .html para a URL canônica .html.
 - [ ] Revisar titles fora de 20-70 caracteres.
 - [ ] Revisar descriptions fora de 70-180 caracteres.
-- [ ] Validar hreflang (principalmente pares PT/EN recÃ­procos).
-- [ ] Reenviar sitemap e solicitar recrawl no Search Console apÃ³s ajustes.
+- [ ] Validar hreflang (principalmente pares PT/EN recíprocos).
+- [ ] Reenviar sitemap e solicitar recrawl no Search Console após ajustes.
 
 ## URLs com issues
 

@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-04-16 22:56:21 UTC",
+  "generated_at": "2026-04-16 23:04:02 UTC",
   "root_sitemap": "https://www.protoncd.com.br/sitemap.xml",
   "summary": {
     "total_urls": 283,
-    "urls_with_issues": 48,
-    "urls_without_issues": 235,
+    "urls_with_issues": 40,
+    "urls_without_issues": 243,
     "issue_counts": {
-      "desc_len_outside_70_180": 27,
-      "title_len_outside_20_70": 33
+      "desc_len_outside_70_180": 21,
+      "title_len_outside_20_70": 31
     },
-    "duration_sec": 66.05
+    "duration_sec": 74.19
   },
   "results": [
     {
@@ -3751,17 +3751,15 @@
       "canonical_self": true,
       "robots": "",
       "has_noindex": false,
-      "title_len": 62,
-      "desc_len": 214,
+      "title_len": 48,
+      "desc_len": 152,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-borda-saida-escorregador-max.html",
@@ -3810,17 +3808,15 @@
       "canonical_self": true,
       "robots": "",
       "has_noindex": false,
-      "title_len": 69,
-      "desc_len": 214,
+      "title_len": 43,
+      "desc_len": 149,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-cama-de-areia-cascalho-300mm-de-profundidade.html",
@@ -3831,17 +3827,15 @@
       "canonical_self": true,
       "robots": "",
       "has_noindex": false,
-      "title_len": 78,
-      "desc_len": 172,
+      "title_len": 42,
+      "desc_len": 146,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-circulacao-livre-1-50m-no-entorno.html",
@@ -3871,17 +3865,15 @@
       "canonical_self": true,
       "robots": "",
       "has_noindex": false,
-      "title_len": 70,
-      "desc_len": 234,
+      "title_len": 43,
+      "desc_len": 144,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-conexoes-frouxas.html",
@@ -3949,17 +3941,15 @@
       "canonical_self": true,
       "robots": "",
       "has_noindex": false,
-      "title_len": 70,
-      "desc_len": 209,
+      "title_len": 43,
+      "desc_len": 149,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-corrimao-ausente-altura-600-850.html",
@@ -3970,17 +3960,15 @@
       "canonical_self": true,
       "robots": "",
       "has_noindex": false,
-      "title_len": 67,
-      "desc_len": 209,
+      "title_len": 44,
+      "desc_len": 150,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-deformacoes-quebras-estruturais.html",
@@ -3991,17 +3979,15 @@
       "canonical_self": true,
       "robots": "",
       "has_noindex": false,
-      "title_len": 67,
-      "desc_len": 186,
+      "title_len": 37,
+      "desc_len": 147,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-degraus-profundidade-desalinhados.html",
@@ -4031,17 +4017,15 @@
       "canonical_self": true,
       "robots": "",
       "has_noindex": false,
-      "title_len": 74,
-      "desc_len": 168,
+      "title_len": 40,
+      "desc_len": 148,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-design-do-guarda-corpo-permite-escala-travessas-horizontais.html",
