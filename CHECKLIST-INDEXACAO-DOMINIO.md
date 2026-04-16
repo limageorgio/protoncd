@@ -1,29 +1,29 @@
-# Auditoria Geral de Indexacao - Proton
+﻿# Auditoria Geral de Indexacao - Proton
 
-Data: 2026-04-16 22:56:21 UTC
+Data: 2026-04-16 23:03:24 UTC
 Sitemap raiz: https://www.protoncd.com.br/sitemap.xml
 
 ## Resumo
 
 - URLs auditadas: 283
-- URLs sem issues: 235
-- URLs com issues: 48
+- URLs sem issues: 243
+- URLs com issues: 40
 
 ## Issues por tipo
 
-- title_len_outside_20_70: 33
-- desc_len_outside_70_180: 27
+- title_len_outside_20_70: 31
+- desc_len_outside_70_180: 21
 
 ## Checklist de Correcao (Gerenciavel)
 
 - [ ] Corrigir todas as URLs com status diferente de 200.
 - [ ] Remover noindex (meta ou header) de URLs que devem indexar.
 - [ ] Garantir canonical absoluto e consistente com URL do sitemap.
-- [ ] Implementar redirecionamento 301 da variante sem .html para a URL canônica .html.
+- [ ] Implementar redirecionamento 301 da variante sem .html para a URL canÃ´nica .html.
 - [ ] Revisar titles fora de 20-70 caracteres.
 - [ ] Revisar descriptions fora de 70-180 caracteres.
-- [ ] Validar hreflang (principalmente pares PT/EN recíprocos).
-- [ ] Reenviar sitemap e solicitar recrawl no Search Console após ajustes.
+- [ ] Validar hreflang (principalmente pares PT/EN recÃ­procos).
+- [ ] Reenviar sitemap e solicitar recrawl no Search Console apÃ³s ajustes.
 
 ## URLs com issues
 
@@ -32,14 +32,6 @@ Sitemap raiz: https://www.protoncd.com.br/sitemap.xml
 | https://www.protoncd.com.br/conhecimento-tecnico/ | 200 | https://www.protoncd.com.br/conhecimento-tecnico/ | desc_len_outside_70_180 |
 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-slack-rope-cabo-frouxo.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-slack-rope-cabo-frouxo.html | desc_len_outside_70_180 |
 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-teste-funcional-freio-maquina-ausente.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-teste-funcional-freio-maquina-ausente.html | desc_len_outside_70_180 |
-| https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-base-piso-escoamento-agua.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-base-piso-escoamento-agua.html | desc_len_outside_70_180 |
-| https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-buraco-fresta-8-25.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-buraco-fresta-8-25.html | desc_len_outside_70_180 |
-| https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-cama-de-areia-cascalho-300mm-de-profundidade.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-cama-de-areia-cascalho-300mm-de-profundidade.html | title_len_outside_20_70 |
-| https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-concreto-armadura-exposta.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-concreto-armadura-exposta.html | desc_len_outside_70_180 |
-| https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-cordas-rompimento-desgaste-excessivo.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-cordas-rompimento-desgaste-excessivo.html | desc_len_outside_70_180 |
-| https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-corrimao-ausente-altura-600-850.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-corrimao-ausente-altura-600-850.html | desc_len_outside_70_180 |
-| https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-deformacoes-quebras-estruturais.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-deformacoes-quebras-estruturais.html | desc_len_outside_70_180 |
-| https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-desgaste-do-gel-com-fibra-de-vidro-exposta.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-desgaste-do-gel-com-fibra-de-vidro-exposta.html | title_len_outside_20_70 |
 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-design-do-guarda-corpo-permite-escala-travessas-horizontais.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-design-do-guarda-corpo-permite-escala-travessas-horizontais.html | title_len_outside_20_70 |
 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-distanciamento-entre-equipamentos.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-distanciamento-entre-equipamentos.html | desc_len_outside_70_180 |
 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-eixos-e-rolamentos-com-movimento-travado-ou-seco.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-eixos-e-rolamentos-com-movimento-travado-ou-seco.html | title_len_outside_20_70 |

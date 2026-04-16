@@ -269,3 +269,4 @@ python _tmp_full_indexing_audit.py
   - Relatorio de canonical selecionada pelo Google
   - Verificacao de conteudo duplicado entre paginas regionais
 
+
