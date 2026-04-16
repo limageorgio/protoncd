@@ -65,6 +65,20 @@ Origem: INDEXACAO_AUDITORIA_RESULT.json
   - title_len_outside_20_70: -7
   - desc_len_outside_70_180: -6
 
+## Pos-lote 4 (2026-04-16 18:44:46 UTC)
+
+- URLs auditadas (sitemap): 283
+- URLs com issues: 150
+- URLs sem issues: 133
+- Delta vs baseline:
+  - URLs com issues: -62
+  - title_len_outside_20_70: 179 -> 125 (-54)
+  - desc_len_outside_70_180: 112 -> 64 (-48)
+- Delta vs pos-lote 3:
+  - URLs com issues: -11
+  - title_len_outside_20_70: -8
+  - desc_len_outside_70_180: -3
+
 ## Prioridade de execucao
 
 1. Implementar redirecionamento 301 global de URL sem .html para URL .html
@@ -80,7 +94,7 @@ Origem: INDEXACAO_AUDITORIA_RESULT.json
 - [x] Implementar regra de redirecionamento 301 para variantes sem .html (deploy realizado)
 - [x] Validar amostra de 50 URLs em produção após o deploy (validação por auditoria completa: 283 URLs)
 - [x] Corrigir lote prioritário inicial (34 URLs: home, regionais, serviços e EN) no repositório
-- [ ] Corrigir próximo lote até completar 60 URLs prioritárias (progresso atual: 59/60)
+- [x] Corrigir próximo lote até completar 60 URLs prioritárias (concluido: 69/60)
 - [ ] Garantir unicidade por pagina
 - [ ] Evitar repeticao de padrao em massa
 

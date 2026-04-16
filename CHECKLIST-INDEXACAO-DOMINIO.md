@@ -1,18 +1,18 @@
 # Auditoria Geral de Indexacao - Proton
 
-Data: 2026-04-16 18:41:11 UTC
+Data: 2026-04-16 18:44:46 UTC
 Sitemap raiz: https://www.protoncd.com.br/sitemap.xml
 
 ## Resumo
 
 - URLs auditadas: 283
-- URLs sem issues: 122
-- URLs com issues: 161
+- URLs sem issues: 133
+- URLs com issues: 150
 
 ## Issues por tipo
 
-- title_len_outside_20_70: 133
-- desc_len_outside_70_180: 67
+- title_len_outside_20_70: 125
+- desc_len_outside_70_180: 64
 
 ## Checklist de Correcao (Gerenciavel)
 
@@ -30,16 +30,6 @@ Sitemap raiz: https://www.protoncd.com.br/sitemap.xml
 | URL | Status | Canonical | Issues |
 |---|---:|---|---|
 | https://www.protoncd.com.br/conhecimento-tecnico/ | 200 | https://www.protoncd.com.br/conhecimento-tecnico/ | desc_len_outside_70_180 |
-| https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-abertura-porta-emergencia-sem-instrucao.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-abertura-porta-emergencia-sem-instrucao.html | title_len_outside_20_70 |
-| https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-acesso-casa-maquinas-emergencia.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-acesso-casa-maquinas-emergencia.html | title_len_outside_20_70 |
-| https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-acesso-quadro-comando-sem-barreira.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-acesso-quadro-comando-sem-barreira.html | title_len_outside_20_70 |
-| https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-alarme-sonoro-emergencia-cabina.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-alarme-sonoro-emergencia-cabina.html | title_len_outside_20_70 |
-| https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-assento-basculante-acessibilidade.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-assento-basculante-acessibilidade.html | title_len_outside_20_70 |
-| https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-aterramento-equipotencializacao.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-aterramento-equipotencializacao.html | title_len_outside_20_70 |
-| https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-aviso-acesso-restrito-casa-maquinas.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-aviso-acesso-restrito-casa-maquinas.html | desc_len_outside_70_180 |
-| https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-bateria-emergencia-sem-autonomia-comprovada.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-bateria-emergencia-sem-autonomia-comprovada.html | desc_len_outside_70_180 |
-| https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-botao-stop-inspecao-teto-cabina.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-botao-stop-inspecao-teto-cabina.html | desc_len_outside_70_180 |
-| https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-cabos-aco.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-cabos-aco.html | title_len_outside_20_70 |
 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-chave-triangular-destravamento-emergencia.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-chave-triangular-destravamento-emergencia.html | title_len_outside_20_70 |
 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-chave-triangular-sem-aviso-seguranca.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-chave-triangular-sem-aviso-seguranca.html | title_len_outside_20_70 |
 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-chaves-seccionadoras-identificacao.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-chaves-seccionadoras-identificacao.html | title_len_outside_20_70 |
@@ -49,7 +39,6 @@ Sitemap raiz: https://www.protoncd.com.br/sitemap.xml
 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-comando-prioridade-bombeiro-inoperante.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-comando-prioridade-bombeiro-inoperante.html | title_len_outside_20_70 |
 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-combustivel-cabina-interior.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-combustivel-cabina-interior.html | title_len_outside_20_70 |
 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-corrosao-estrutura-casa-maquinas.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-corrosao-estrutura-casa-maquinas.html | title_len_outside_20_70 |
-| https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-desgaste-guias-cabina-contrapeso.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-desgaste-guias-cabina-contrapeso.html | title_len_outside_20_70 |
 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-deslizamento-tracao-polias.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-deslizamento-tracao-polias.html | title_len_outside_20_70 |
 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-espacos-refugio-elevador.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-espacos-refugio-elevador.html | desc_len_outside_70_180 |
 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-esquema-eletrico-hidraulico-disponivel.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-esquema-eletrico-hidraulico-disponivel.html | title_len_outside_20_70 |

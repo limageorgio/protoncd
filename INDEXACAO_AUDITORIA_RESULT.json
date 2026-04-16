@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-04-16 18:41:11 UTC",
+  "generated_at": "2026-04-16 18:44:46 UTC",
   "root_sitemap": "https://www.protoncd.com.br/sitemap.xml",
   "summary": {
     "total_urls": 283,
-    "urls_with_issues": 161,
-    "urls_without_issues": 122,
+    "urls_with_issues": 150,
+    "urls_without_issues": 133,
     "issue_counts": {
-      "desc_len_outside_70_180": 67,
-      "title_len_outside_20_70": 133
+      "desc_len_outside_70_180": 64,
+      "title_len_outside_20_70": 125
     },
-    "duration_sec": 56.86
+    "duration_sec": 56.55
   },
   "results": [
     {
@@ -783,7 +783,7 @@
       "canonical_self": true,
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 80,
+      "title_len": 54,
       "desc_len": 141,
       "hreflang_count": 1,
       "x_robots_tag": "",
@@ -791,9 +791,7 @@
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-acabamento-solto-paineis-internos-cabina.html",
@@ -823,7 +821,7 @@
       "canonical_self": true,
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 72,
+      "title_len": 61,
       "desc_len": 150,
       "hreflang_count": 1,
       "x_robots_tag": "",
@@ -831,9 +829,7 @@
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-acesso-quadro-comando-sem-barreira.html",
@@ -844,7 +840,7 @@
       "canonical_self": true,
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 72,
+      "title_len": 49,
       "desc_len": 150,
       "hreflang_count": 1,
       "x_robots_tag": "",
@@ -852,9 +848,7 @@
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-acesso-seguro-fundo-poco.html",
@@ -903,17 +897,15 @@
       "canonical_self": true,
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 101,
-      "desc_len": 180,
+      "title_len": 54,
+      "desc_len": 167,
       "hreflang_count": 1,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-assento-basculante-acessibilidade.html",
@@ -924,7 +916,7 @@
       "canonical_self": true,
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 71,
+      "title_len": 42,
       "desc_len": 83,
       "hreflang_count": 1,
       "x_robots_tag": "",
@@ -932,9 +924,7 @@
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-aterramento-equipotencializacao.html",
@@ -945,17 +935,15 @@
       "canonical_self": true,
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 98,
-      "desc_len": 180,
+      "title_len": 56,
+      "desc_len": 163,
       "hreflang_count": 1,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-aterramento-inadequado-elevador.html",
@@ -1043,16 +1031,14 @@
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "has_noindex": false,
       "title_len": 64,
-      "desc_len": 65,
+      "desc_len": 151,
       "hreflang_count": 1,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-bateria-emergencia-sem-autonomia-comprovada.html",
@@ -1063,17 +1049,15 @@
       "canonical_self": true,
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 64,
-      "desc_len": 65,
+      "title_len": 55,
+      "desc_len": 158,
       "hreflang_count": 1,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-botao-stop-inspecao-teto-cabina.html",
@@ -1084,17 +1068,15 @@
       "canonical_self": true,
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 64,
-      "desc_len": 65,
+      "title_len": 49,
+      "desc_len": 156,
       "hreflang_count": 1,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-botao-stop-manutencao.html",
@@ -1181,7 +1163,7 @@
       "canonical_self": true,
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 86,
+      "title_len": 49,
       "desc_len": 153,
       "hreflang_count": 1,
       "x_robots_tag": "",
@@ -1189,9 +1171,7 @@
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-cabos-eletricos-quadro-protecao.html",
@@ -1600,17 +1580,15 @@
       "canonical_self": true,
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 94,
-      "desc_len": 180,
+      "title_len": 49,
+      "desc_len": 148,
       "hreflang_count": 1,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-deslizamento-tracao-polias.html",
