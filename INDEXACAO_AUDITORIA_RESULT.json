@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-04-16 18:37:31 UTC",
+  "generated_at": "2026-04-16 18:41:11 UTC",
   "root_sitemap": "https://www.protoncd.com.br/sitemap.xml",
   "summary": {
     "total_urls": 283,
-    "urls_with_issues": 168,
-    "urls_without_issues": 115,
+    "urls_with_issues": 161,
+    "urls_without_issues": 122,
     "issue_counts": {
-      "desc_len_outside_70_180": 73,
-      "title_len_outside_20_70": 140
+      "desc_len_outside_70_180": 67,
+      "title_len_outside_20_70": 133
     },
-    "duration_sec": 56.43
+    "duration_sec": 56.86
   },
   "results": [
     {
@@ -232,8 +232,8 @@
       "canonical_self": true,
       "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 58,
-      "desc_len": 173,
+      "title_len": 55,
+      "desc_len": 162,
       "hreflang_count": 2,
       "x_robots_tag": "",
       "variant_without_html": "",
@@ -327,7 +327,7 @@
       "canonical_self": true,
       "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 77,
+      "title_len": 62,
       "desc_len": 177,
       "hreflang_count": 2,
       "x_robots_tag": "",
@@ -335,9 +335,7 @@
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/belo-horizonte/analise-vibracao-elevadores-bh.html",
@@ -348,18 +346,15 @@
       "canonical_self": true,
       "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 78,
-      "desc_len": 242,
+      "title_len": 60,
+      "desc_len": 166,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70",
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/brasilia/analise-vibracao-elevadores-brasilia.html",
@@ -370,18 +365,15 @@
       "canonical_self": true,
       "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 72,
-      "desc_len": 263,
+      "title_len": 54,
+      "desc_len": 174,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70",
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/brasilia/inspecao-predial-brasilia.html",
@@ -392,18 +384,15 @@
       "canonical_self": true,
       "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 77,
-      "desc_len": 184,
+      "title_len": 62,
+      "desc_len": 168,
       "hreflang_count": 2,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70",
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/curitiba/analise-vibracao-elevadores-curitiba.html",
@@ -414,18 +403,15 @@
       "canonical_self": true,
       "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 72,
-      "desc_len": 237,
+      "title_len": 54,
+      "desc_len": 171,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70",
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/goiania/inspecao-predial-goiania.html",
@@ -702,18 +688,15 @@
       "canonical_self": true,
       "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 76,
-      "desc_len": 251,
+      "title_len": 58,
+      "desc_len": 172,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70",
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/rio-de-janeiro/analise-vibracao-elevadores-rj.html",
@@ -724,18 +707,15 @@
       "canonical_self": true,
       "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 78,
-      "desc_len": 252,
+      "title_len": 60,
+      "desc_len": 177,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70",
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/rio-verde/inspecao-predial-rio-verde.html",

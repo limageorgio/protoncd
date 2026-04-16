@@ -1,18 +1,18 @@
 # Auditoria Geral de Indexacao - Proton
 
-Data: 2026-04-16 18:37:31 UTC
+Data: 2026-04-16 18:41:11 UTC
 Sitemap raiz: https://www.protoncd.com.br/sitemap.xml
 
 ## Resumo
 
 - URLs auditadas: 283
-- URLs sem issues: 115
-- URLs com issues: 168
+- URLs sem issues: 122
+- URLs com issues: 161
 
 ## Issues por tipo
 
-- title_len_outside_20_70: 140
-- desc_len_outside_70_180: 73
+- title_len_outside_20_70: 133
+- desc_len_outside_70_180: 67
 
 ## Checklist de Correcao (Gerenciavel)
 
@@ -30,13 +30,6 @@ Sitemap raiz: https://www.protoncd.com.br/sitemap.xml
 | URL | Status | Canonical | Issues |
 |---|---:|---|---|
 | https://www.protoncd.com.br/conhecimento-tecnico/ | 200 | https://www.protoncd.com.br/conhecimento-tecnico/ | desc_len_outside_70_180 |
-| https://www.protoncd.com.br/anapolis/inspecao-predial-anapolis.html | 200 | https://www.protoncd.com.br/anapolis/inspecao-predial-anapolis.html | title_len_outside_20_70 |
-| https://www.protoncd.com.br/belo-horizonte/analise-vibracao-elevadores-bh.html | 200 | https://www.protoncd.com.br/belo-horizonte/analise-vibracao-elevadores-bh.html | title_len_outside_20_70, desc_len_outside_70_180 |
-| https://www.protoncd.com.br/brasilia/analise-vibracao-elevadores-brasilia.html | 200 | https://www.protoncd.com.br/brasilia/analise-vibracao-elevadores-brasilia.html | title_len_outside_20_70, desc_len_outside_70_180 |
-| https://www.protoncd.com.br/brasilia/inspecao-predial-brasilia.html | 200 | https://www.protoncd.com.br/brasilia/inspecao-predial-brasilia.html | title_len_outside_20_70, desc_len_outside_70_180 |
-| https://www.protoncd.com.br/curitiba/analise-vibracao-elevadores-curitiba.html | 200 | https://www.protoncd.com.br/curitiba/analise-vibracao-elevadores-curitiba.html | title_len_outside_20_70, desc_len_outside_70_180 |
-| https://www.protoncd.com.br/porto-alegre/analise-vibracao-elevadores-poa.html | 200 | https://www.protoncd.com.br/porto-alegre/analise-vibracao-elevadores-poa.html | title_len_outside_20_70, desc_len_outside_70_180 |
-| https://www.protoncd.com.br/rio-de-janeiro/analise-vibracao-elevadores-rj.html | 200 | https://www.protoncd.com.br/rio-de-janeiro/analise-vibracao-elevadores-rj.html | title_len_outside_20_70, desc_len_outside_70_180 |
 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-abertura-porta-emergencia-sem-instrucao.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-abertura-porta-emergencia-sem-instrucao.html | title_len_outside_20_70 |
 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-acesso-casa-maquinas-emergencia.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-acesso-casa-maquinas-emergencia.html | title_len_outside_20_70 |
 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-acesso-quadro-comando-sem-barreira.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-acesso-quadro-comando-sem-barreira.html | title_len_outside_20_70 |

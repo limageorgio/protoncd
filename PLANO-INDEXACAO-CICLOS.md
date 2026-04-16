@@ -51,6 +51,20 @@ Origem: INDEXACAO_AUDITORIA_RESULT.json
   - title_len_outside_20_70: -10
   - desc_len_outside_70_180: -10
 
+## Pos-lote 3 (2026-04-16 18:57:58 UTC)
+
+- URLs auditadas (sitemap): 283
+- URLs com issues: 161
+- URLs sem issues: 122
+- Delta vs baseline:
+  - URLs com issues: -51
+  - title_len_outside_20_70: 179 -> 133 (-46)
+  - desc_len_outside_70_180: 112 -> 67 (-45)
+- Delta vs pos-push lote 2:
+  - URLs com issues: -7
+  - title_len_outside_20_70: -7
+  - desc_len_outside_70_180: -6
+
 ## Prioridade de execucao
 
 1. Implementar redirecionamento 301 global de URL sem .html para URL .html
