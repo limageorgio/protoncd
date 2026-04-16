@@ -1,17 +1,17 @@
 # Auditoria Geral de Indexacao - Proton
 
-Data: 2026-04-16 20:07:17 UTC
+Data: 2026-04-16 21:14:36 UTC
 Sitemap raiz: https://www.protoncd.com.br/sitemap.xml
 
 ## Resumo
 
 - URLs auditadas: 283
-- URLs sem issues: 172
-- URLs com issues: 111
+- URLs sem issues: 182
+- URLs com issues: 101
 
 ## Issues por tipo
 
-- title_len_outside_20_70: 87
+- title_len_outside_20_70: 77
 - desc_len_outside_70_180: 63
 
 ## Checklist de Correcao (Gerenciavel)
@@ -30,16 +30,6 @@ Sitemap raiz: https://www.protoncd.com.br/sitemap.xml
 | URL | Status | Canonical | Issues |
 |---|---:|---|---|
 | https://www.protoncd.com.br/conhecimento-tecnico/ | 200 | https://www.protoncd.com.br/conhecimento-tecnico/ | desc_len_outside_70_180 |
-| https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-protecao-ip-componentes-casa-maquinas.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-protecao-ip-componentes-casa-maquinas.html | title_len_outside_20_70 |
-| https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-protecao-modulos-eletronicos-seguranca.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-protecao-modulos-eletronicos-seguranca.html | title_len_outside_20_70 |
-| https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-quadro-comando-sobreaquecimento.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-quadro-comando-sobreaquecimento.html | title_len_outside_20_70 |
-| https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-quadro-eletrico-trancado-plaqueta.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-quadro-eletrico-trancado-plaqueta.html | title_len_outside_20_70 |
-| https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-revalidacao-itens-criticos-apos-modernizacao.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-revalidacao-itens-criticos-apos-modernizacao.html | title_len_outside_20_70 |
-| https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-ruido-acima-padrao-multiplos-pavimentos.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-ruido-acima-padrao-multiplos-pavimentos.html | title_len_outside_20_70 |
-| https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-ruido-polias-rolamentos.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-ruido-polias-rolamentos.html | title_len_outside_20_70 |
-| https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-ruido-recorrente-partida.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-ruido-recorrente-partida.html | title_len_outside_20_70 |
-| https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-ruido-rolamento-porta-cabina.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-ruido-rolamento-porta-cabina.html | title_len_outside_20_70 |
-| https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-saia-protecao-avental-cabina.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-saia-protecao-avental-cabina.html | title_len_outside_20_70 |
 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-sensor-porta-bypass-temporario.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-sensor-porta-bypass-temporario.html | title_len_outside_20_70 |
 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-sinalizacao-carro-aqui-porta-manual.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-sinalizacao-carro-aqui-porta-manual.html | title_len_outside_20_70 |
 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-slack-rope-cabo-frouxo.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-slack-rope-cabo-frouxo.html | desc_len_outside_70_180 |

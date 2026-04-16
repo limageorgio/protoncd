@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-04-16 20:07:17 UTC",
+  "generated_at": "2026-04-16 21:14:36 UTC",
   "root_sitemap": "https://www.protoncd.com.br/sitemap.xml",
   "summary": {
     "total_urls": 283,
-    "urls_with_issues": 111,
-    "urls_without_issues": 172,
+    "urls_with_issues": 101,
+    "urls_without_issues": 182,
     "issue_counts": {
       "desc_len_outside_70_180": 63,
-      "title_len_outside_20_70": 87
+      "title_len_outside_20_70": 77
     },
-    "duration_sec": 65.32
+    "duration_sec": 56.76
   },
   "results": [
     {
@@ -2512,17 +2512,15 @@
       "canonical_self": true,
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 99,
-      "desc_len": 180,
+      "title_len": 66,
+      "desc_len": 141,
       "hreflang_count": 1,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-protecao-modulos-eletronicos-seguranca.html",
@@ -2533,17 +2531,15 @@
       "canonical_self": true,
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 99,
-      "desc_len": 180,
+      "title_len": 63,
+      "desc_len": 143,
       "hreflang_count": 1,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-quadro-comando-sobreaquecimento.html",
@@ -2554,17 +2550,15 @@
       "canonical_self": true,
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 88,
-      "desc_len": 180,
+      "title_len": 57,
+      "desc_len": 140,
       "hreflang_count": 1,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-quadro-eletrico-trancado-plaqueta.html",
@@ -2575,17 +2569,15 @@
       "canonical_self": true,
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 71,
-      "desc_len": 131,
+      "title_len": 59,
+      "desc_len": 139,
       "hreflang_count": 1,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-revalidacao-itens-criticos-apos-modernizacao.html",
@@ -2596,17 +2588,15 @@
       "canonical_self": true,
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 71,
-      "desc_len": 131,
+      "title_len": 66,
+      "desc_len": 134,
       "hreflang_count": 1,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-ruido-acima-padrao-multiplos-pavimentos.html",
@@ -2617,17 +2607,15 @@
       "canonical_self": true,
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 71,
-      "desc_len": 131,
+      "title_len": 65,
+      "desc_len": 142,
       "hreflang_count": 1,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-ruido-polias-rolamentos.html",
@@ -2638,17 +2626,15 @@
       "canonical_self": true,
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 98,
-      "desc_len": 179,
+      "title_len": 60,
+      "desc_len": 135,
       "hreflang_count": 1,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-ruido-recorrente-partida.html",
@@ -2659,17 +2645,15 @@
       "canonical_self": true,
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 98,
-      "desc_len": 179,
+      "title_len": 59,
+      "desc_len": 127,
       "hreflang_count": 1,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-ruido-rolamento-porta-cabina.html",
@@ -2680,17 +2664,15 @@
       "canonical_self": true,
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 98,
-      "desc_len": 179,
+      "title_len": 57,
+      "desc_len": 136,
       "hreflang_count": 1,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-ruido-vibracao-excessivos.html",
@@ -2739,17 +2721,15 @@
       "canonical_self": true,
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 96,
-      "desc_len": 180,
+      "title_len": 62,
+      "desc_len": 133,
       "hreflang_count": 1,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-sensor-porta-bypass-temporario.html",
