@@ -1,0 +1,5 @@
+{
+  "checked_html_urls": 277,
+  "live_duplicate_variants": 277,
+  "note": "Todas as URLs .html testadas possuem variante sem .html retornando 200 sem redirecionar para a canônica .html"
+}

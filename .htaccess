@@ -9,6 +9,12 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_URI} (.+)/$
 RewriteRule ^ %1 [L,R=301]
 
+# Redirect extensionless URLs to .html when the target file exists
+RewriteCond %{REQUEST_URI} !/$
+RewriteCond %{REQUEST_URI} !\.[^./]+$
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.+)$ /$1.html [L,R=301]
+
 # Redirect Non-WWW to WWW
 RewriteCond %{HTTP_HOST} ^protoncd\.com\.br [NC]
 RewriteRule ^(.*)$ https://www.protoncd.com.br/$1 [L,R=301]
