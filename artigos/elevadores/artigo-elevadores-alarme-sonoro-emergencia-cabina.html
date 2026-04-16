@@ -334,9 +334,25 @@
             margin-bottom: var(--space-4);
         }
 
-        .article-content > h3, .article-content > p, .article-content > ul { background: var(--bg-subtle); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: var(--space-4); margin: var(--space-4) 0; }
-        .article-content > ul { list-style: none; padding: var(--space-4) var(--space-5); }
-        .article-content > li { margin-left: 0; }
+        .article-content>h3,
+        .article-content>p,
+        .article-content>ul {
+            background: var(--bg-subtle);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            padding: var(--space-4);
+            margin: var(--space-4) 0;
+        }
+
+        .article-content>ul {
+            list-style: none;
+            padding: var(--space-4) var(--space-5);
+        }
+
+        .article-content>li {
+            margin-left: 0;
+        }
+
         @media (max-width: 900px) {
             .article-mini-stats {
                 grid-template-columns: 1fr;
