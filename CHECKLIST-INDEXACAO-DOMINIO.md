@@ -1,18 +1,16 @@
 # Auditoria Geral de Indexacao - Proton
 
-Data: 2026-04-16 23:33:03 UTC
+Data: 2026-04-16 23:52:14 UTC
 Sitemap raiz: https://www.protoncd.com.br/sitemap.xml
 
 ## Resumo
 
 - URLs auditadas: 283
-- URLs sem issues: 262
-- URLs com issues: 21
+- URLs sem issues: 283
+- URLs com issues: 0
 
 ## Issues por tipo
 
-- desc_len_outside_70_180: 21
-- title_len_outside_20_70: 16
 
 ## Checklist de Correcao (Gerenciavel)
 
@@ -29,27 +27,6 @@ Sitemap raiz: https://www.protoncd.com.br/sitemap.xml
 
 | URL | Status | Canonical | Issues |
 |---|---:|---|---|
-| https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-piso-queda.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-piso-queda.html | title_len_outside_20_70, desc_len_outside_70_180 |
-| https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-pisos-soltos-devem-ser-aerados-borrachas-devem-ter-laudo-hic.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-pisos-soltos-devem-ser-aerados-borrachas-devem-ter-laudo-hic.html | title_len_outside_20_70, desc_len_outside_70_180 |
-| https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-pisos-soltos-muito-compactados-borrachas-sem-laudo-hic.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-pisos-soltos-muito-compactados-borrachas-sem-laudo-hic.html | title_len_outside_20_70, desc_len_outside_70_180 |
-| https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-placa-visivel-com-fabricante-data-norma-e-faixa-etaria.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-placa-visivel-com-fabricante-data-norma-e-faixa-etaria.html | title_len_outside_20_70, desc_len_outside_70_180 |
-| https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-plano-formal-de-manutencao-com-livros-de-registro.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-plano-formal-de-manutencao-com-livros-de-registro.html | title_len_outside_20_70, desc_len_outside_70_180 |
-| https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-plastico-com-trincas-ou-quebras.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-plastico-com-trincas-ou-quebras.html | desc_len_outside_70_180 |
-| https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-plastico-esbranquicado-ressecado-perda-de-propriedade-estrutural.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-plastico-esbranquicado-ressecado-perda-de-propriedade-estrutural.html | title_len_outside_20_70, desc_len_outside_70_180 |
-| https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-presenca-de-farpas-ou-lascas-na-superficie-da-madeira.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-presenca-de-farpas-ou-lascas-na-superficie-da-madeira.html | title_len_outside_20_70, desc_len_outside_70_180 |
-| https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-presenca-de-sujeira-umidade-ou-falta-de-condicoes-de-uso-no-piso.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-presenca-de-sujeira-umidade-ou-falta-de-condicoes-de-uso-no-piso.html | title_len_outside_20_70, desc_len_outside_70_180 |
-| https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-protuberancias-afiadas-curvatura.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-protuberancias-afiadas-curvatura.html | title_len_outside_20_70, desc_len_outside_70_180 |
-| https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-rotas-acesso-livres-niveladas.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-rotas-acesso-livres-niveladas.html | title_len_outside_20_70, desc_len_outside_70_180 |
-| https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-rotas-acesso-obstruidas-irregulares.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-rotas-acesso-obstruidas-irregulares.html | desc_len_outside_70_180 |
-| https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-secao-de-entrada-deve-ter-barra-para-forcar-a-sentar.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-secao-de-entrada-deve-ter-barra-para-forcar-a-sentar.html | title_len_outside_20_70, desc_len_outside_70_180 |
-| https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-secao-de-saida-do-escorregador-curta-300-500mm.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-secao-de-saida-do-escorregador-curta-300-500mm.html | title_len_outside_20_70, desc_len_outside_70_180 |
-| https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-superficies-expostas-ao-sol-que-podem-causar-queimaduras.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-superficies-expostas-ao-sol-que-podem-causar-queimaduras.html | title_len_outside_20_70, desc_len_outside_70_180 |
-| https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-suportes-manuais-pegada-completa-fora-de-16-45-mm.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-suportes-manuais-pegada-completa-fora-de-16-45-mm.html | title_len_outside_20_70, desc_len_outside_70_180 |
-| https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-todo-contato-manual-deve-ter-acabamento-atoxico-preservado.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-todo-contato-manual-deve-ter-acabamento-atoxico-preservado.html | title_len_outside_20_70, desc_len_outside_70_180 |
-| https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-tuneis-dimensao-interna.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-tuneis-dimensao-interna.html | desc_len_outside_70_180 |
-| https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-vao-assento-piso-horizontal.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-vao-assento-piso-horizontal.html | title_len_outside_20_70, desc_len_outside_70_180 |
-| https://www.protoncd.com.br/inspecao-hvac-pmoc.html | 200 | https://www.protoncd.com.br/inspecao-hvac-pmoc.html | desc_len_outside_70_180 |
-| https://www.protoncd.com.br/laudo-pericial-engenharia.html | 200 | https://www.protoncd.com.br/laudo-pericial-engenharia.html | desc_len_outside_70_180 |
 
 ## Como rodar novamente
 
