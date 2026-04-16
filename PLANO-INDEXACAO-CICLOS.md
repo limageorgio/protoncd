@@ -195,11 +195,24 @@ Origem: INDEXACAO_AUDITORIA_RESULT.json
   - URLs com issues: -8
   - title_len_outside_20_70: -7
   - desc_len_outside_70_180: -9
-## Prioridade de execucao
 
-1. Implementar redirecionamento 301 global de URL sem .html para URL .html
-2. Ajustar title tags fora da faixa 20-70 caracteres
-3. Ajustar meta descriptions fora da faixa 70-180 caracteres
+## Pos-lotes E4 e E5 (2026-04-16 22:56:35 UTC)
+
+- URLs auditadas (sitemap): 283
+- URLs com issues: 48
+- URLs sem issues: 235
+- Delta vs baseline:
+  - URLs com issues: -164
+  - title_len_outside_20_70: 179 -> 33 (-146)
+  - desc_len_outside_70_180: 112 -> 27 (-85)
+  - http_status_not_200: 1 (mantido)
+  - missing_canonical: 1 (mantido)
+- Delta vs Sincronizacao Externa:
+  - URLs com issues: -16
+  - title_len_outside_20_70: -7
+  - desc_len_outside_70_180: -9
+
+## Prioridade de execucao
 4. Revalidar em lote por sitemap no Search Console
 5. Reexecutar auditoria e comparar queda das issues
 
