@@ -1,17 +1,17 @@
 # Auditoria Geral de Indexacao - Proton
 
-Data: 2026-04-16 18:55:22 UTC
+Data: 2026-04-16 19:59:09 UTC
 Sitemap raiz: https://www.protoncd.com.br/sitemap.xml
 
 ## Resumo
 
 - URLs auditadas: 283
-- URLs sem issues: 152
-- URLs com issues: 131
+- URLs sem issues: 162
+- URLs com issues: 121
 
 ## Issues por tipo
 
-- title_len_outside_20_70: 107
+- title_len_outside_20_70: 97
 - desc_len_outside_70_180: 63
 
 ## Checklist de Correcao (Gerenciavel)
@@ -30,16 +30,6 @@ Sitemap raiz: https://www.protoncd.com.br/sitemap.xml
 | URL | Status | Canonical | Issues |
 |---|---:|---|---|
 | https://www.protoncd.com.br/conhecimento-tecnico/ | 200 | https://www.protoncd.com.br/conhecimento-tecnico/ | desc_len_outside_70_180 |
-| https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-freio-seguranca-retardamento-fora-faixa.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-freio-seguranca-retardamento-fora-faixa.html | title_len_outside_20_70 |
-| https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-guias-deformacao-fixacao-comprometida.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-guias-deformacao-fixacao-comprometida.html | title_len_outside_20_70 |
-| https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-iluminacao-casa-maquinas-fosso.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-iluminacao-casa-maquinas-fosso.html | title_len_outside_20_70 |
-| https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-interfone-emergencia-cabina.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-interfone-emergencia-cabina.html | title_len_outside_20_70 |
-| https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-intermitencia-interfone-emergencia.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-intermitencia-interfone-emergencia.html | title_len_outside_20_70 |
-| https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-interruptor-principal-bloqueio-loto.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-interruptor-principal-bloqueio-loto.html | title_len_outside_20_70 |
-| https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-inversor-frequencia-falhas-intermitentes.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-inversor-frequencia-falhas-intermitentes.html | title_len_outside_20_70 |
-| https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-livro-registro-manutencao.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-livro-registro-manutencao.html | title_len_outside_20_70 |
-| https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-nivelamento-preciso-parada.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-nivelamento-preciso-parada.html | title_len_outside_20_70 |
-| https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-numeracao-provisoria-casa-maquinas.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-numeracao-provisoria-casa-maquinas.html | title_len_outside_20_70 |
 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-oscilacao-cabina-parada.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-oscilacao-cabina-parada.html | title_len_outside_20_70 |
 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-painel-tecnico-rotulos.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-painel-tecnico-rotulos.html | title_len_outside_20_70 |
 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-placa-capacidade-cabina.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-placa-capacidade-cabina.html | title_len_outside_20_70 |

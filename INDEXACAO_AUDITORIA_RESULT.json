@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-04-16 18:55:22 UTC",
+  "generated_at": "2026-04-16 19:59:09 UTC",
   "root_sitemap": "https://www.protoncd.com.br/sitemap.xml",
   "summary": {
     "total_urls": 283,
-    "urls_with_issues": 131,
-    "urls_without_issues": 152,
+    "urls_with_issues": 121,
+    "urls_without_issues": 162,
     "issue_counts": {
       "desc_len_outside_70_180": 63,
-      "title_len_outside_20_70": 107
+      "title_len_outside_20_70": 97
     },
-    "duration_sec": 54.99
+    "duration_sec": 58.39
   },
   "results": [
     {
@@ -1961,17 +1961,15 @@
       "canonical_self": true,
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 83,
-      "desc_len": 180,
+      "title_len": 69,
+      "desc_len": 149,
       "hreflang_count": 1,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-guias-deformacao-fixacao-comprometida.html",
@@ -1982,17 +1980,15 @@
       "canonical_self": true,
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 83,
-      "desc_len": 180,
+      "title_len": 59,
+      "desc_len": 135,
       "hreflang_count": 1,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-iluminacao-casa-maquinas-fosso.html",
@@ -2003,17 +1999,15 @@
       "canonical_self": true,
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 81,
-      "desc_len": 164,
+      "title_len": 61,
+      "desc_len": 145,
       "hreflang_count": 1,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-iluminacao-emergencia-cabina.html",
@@ -2081,17 +2075,15 @@
       "canonical_self": true,
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 108,
-      "desc_len": 179,
+      "title_len": 53,
+      "desc_len": 132,
       "hreflang_count": 1,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-intermitencia-interfone-emergencia.html",
@@ -2102,17 +2094,15 @@
       "canonical_self": true,
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 108,
-      "desc_len": 179,
+      "title_len": 61,
+      "desc_len": 139,
       "hreflang_count": 1,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-interruptor-principal-bloqueio-loto.html",
@@ -2123,17 +2113,15 @@
       "canonical_self": true,
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 108,
-      "desc_len": 180,
+      "title_len": 58,
+      "desc_len": 137,
       "hreflang_count": 1,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-inversor-frequencia-falhas-intermitentes.html",
@@ -2144,17 +2132,15 @@
       "canonical_self": true,
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 102,
-      "desc_len": 179,
+      "title_len": 66,
+      "desc_len": 141,
       "hreflang_count": 1,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-limitador-velocidade-manutencao-critica.html",
@@ -2203,17 +2189,15 @@
       "canonical_self": true,
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 90,
-      "desc_len": 180,
+      "title_len": 63,
+      "desc_len": 139,
       "hreflang_count": 1,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-nivelamento-preciso-parada.html",
@@ -2224,17 +2208,15 @@
       "canonical_self": true,
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 82,
-      "desc_len": 180,
+      "title_len": 61,
+      "desc_len": 144,
       "hreflang_count": 1,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-numeracao-provisoria-casa-maquinas.html",
@@ -2245,17 +2227,15 @@
       "canonical_self": true,
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 72,
-      "desc_len": 135,
+      "title_len": 60,
+      "desc_len": 144,
       "hreflang_count": 1,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-oscilacao-cabina-parada.html",
