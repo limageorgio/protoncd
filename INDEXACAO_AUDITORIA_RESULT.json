@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-04-16 21:21:28 UTC",
+  "generated_at": "2026-04-16 22:01:10 UTC",
   "root_sitemap": "https://www.protoncd.com.br/sitemap.xml",
   "summary": {
     "total_urls": 283,
-    "urls_with_issues": 101,
-    "urls_without_issues": 182,
+    "urls_with_issues": 87,
+    "urls_without_issues": 196,
     "issue_counts": {
-      "desc_len_outside_70_180": 63,
-      "title_len_outside_20_70": 77
+      "desc_len_outside_70_180": 60,
+      "title_len_outside_20_70": 63
     },
-    "duration_sec": 20.38
+    "duration_sec": 66.7
   },
   "results": [
     {
@@ -2740,17 +2740,15 @@
       "canonical_self": true,
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 96,
-      "desc_len": 180,
+      "title_len": 63,
+      "desc_len": 113,
       "hreflang_count": 1,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-sensor-porta-deteccao-pessoa.html",
@@ -2818,17 +2816,15 @@
       "canonical_self": true,
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 93,
-      "desc_len": 180,
+      "title_len": 58,
+      "desc_len": 112,
       "hreflang_count": 1,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-slack-rope-cabo-frouxo.html",
@@ -2900,17 +2896,15 @@
       "canonical_self": true,
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 94,
-      "desc_len": 180,
+      "title_len": 58,
+      "desc_len": 119,
       "hreflang_count": 1,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-travamento-recorrente-entre-andares.html",
@@ -2921,17 +2915,15 @@
       "canonical_self": true,
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 94,
-      "desc_len": 180,
+      "title_len": 55,
+      "desc_len": 122,
       "hreflang_count": 1,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-vazamento-circuito-hidraulico-continuo.html",
@@ -2942,17 +2934,15 @@
       "canonical_self": true,
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 94,
-      "desc_len": 180,
+      "title_len": 61,
+      "desc_len": 115,
       "hreflang_count": 1,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-velocidade-insuficiente-elevador-emergencia-predio-alto.html",
@@ -2963,17 +2953,15 @@
       "canonical_self": true,
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 94,
-      "desc_len": 180,
+      "title_len": 69,
+      "desc_len": 125,
       "hreflang_count": 1,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-ventilacao-cabina-obstruida.html",
@@ -2984,17 +2972,15 @@
       "canonical_self": true,
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 105,
-      "desc_len": 180,
+      "title_len": 58,
+      "desc_len": 122,
       "hreflang_count": 1,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-ventilacao-cabina.html",
@@ -3081,7 +3067,7 @@
       "canonical_self": true,
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 77,
+      "title_len": 59,
       "desc_len": 119,
       "hreflang_count": 1,
       "x_robots_tag": "",
@@ -3089,9 +3075,7 @@
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-vidros-espelhos-cabina-padrao.html",
@@ -3102,17 +3086,15 @@
       "canonical_self": true,
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 105,
-      "desc_len": 179,
+      "title_len": 63,
+      "desc_len": 127,
       "hreflang_count": 1,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-visor-vidro-porta-pavimento.html",
@@ -3180,18 +3162,15 @@
       "canonical_self": true,
       "robots": "",
       "has_noindex": false,
-      "title_len": 71,
-      "desc_len": 230,
+      "title_len": 58,
+      "desc_len": 130,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70",
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-abertura-piso-15mm.html",
@@ -3202,18 +3181,15 @@
       "canonical_self": true,
       "robots": "",
       "has_noindex": false,
-      "title_len": 76,
-      "desc_len": 207,
+      "title_len": 58,
+      "desc_len": 135,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70",
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-abertura-piso-correr-larga.html",
@@ -3245,7 +3221,7 @@
       "canonical_self": true,
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 76,
+      "title_len": 58,
       "desc_len": 138,
       "hreflang_count": 1,
       "x_robots_tag": "",
@@ -3253,9 +3229,7 @@
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-abertura-rigida-130-230.html",
@@ -3287,17 +3261,15 @@
       "canonical_self": true,
       "robots": "",
       "has_noindex": false,
-      "title_len": 86,
-      "desc_len": 180,
+      "title_len": 61,
+      "desc_len": 142,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-acessibilidade.html",
@@ -3308,18 +3280,15 @@
       "canonical_self": true,
       "robots": "",
       "has_noindex": false,
-      "title_len": 85,
-      "desc_len": 222,
+      "title_len": 68,
+      "desc_len": 139,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70",
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-acumulo-agua-tubos-tuneis.html",

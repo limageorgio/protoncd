@@ -1,18 +1,18 @@
 # Auditoria Geral de Indexacao - Proton
 
-Data: 2026-04-16 21:21:28 UTC
+Data: 2026-04-16 22:01:10 UTC
 Sitemap raiz: https://www.protoncd.com.br/sitemap.xml
 
 ## Resumo
 
 - URLs auditadas: 283
-- URLs sem issues: 182
-- URLs com issues: 101
+- URLs sem issues: 196
+- URLs com issues: 87
 
 ## Issues por tipo
 
-- title_len_outside_20_70: 77
-- desc_len_outside_70_180: 63
+- title_len_outside_20_70: 63
+- desc_len_outside_70_180: 60
 
 ## Checklist de Correcao (Gerenciavel)
 
@@ -30,24 +30,10 @@ Sitemap raiz: https://www.protoncd.com.br/sitemap.xml
 | URL | Status | Canonical | Issues |
 |---|---:|---|---|
 | https://www.protoncd.com.br/conhecimento-tecnico/ | 200 | https://www.protoncd.com.br/conhecimento-tecnico/ | desc_len_outside_70_180 |
-| https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-sensor-porta-bypass-temporario.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-sensor-porta-bypass-temporario.html | title_len_outside_20_70 |
-| https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-sinalizacao-carro-aqui-porta-manual.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-sinalizacao-carro-aqui-porta-manual.html | title_len_outside_20_70 |
 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-slack-rope-cabo-frouxo.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-slack-rope-cabo-frouxo.html | desc_len_outside_70_180 |
 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-teste-funcional-freio-maquina-ausente.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-teste-funcional-freio-maquina-ausente.html | desc_len_outside_70_180 |
-| https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-torque-fixacoes-maquina-base.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-torque-fixacoes-maquina-base.html | title_len_outside_20_70 |
-| https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-travamento-recorrente-entre-andares.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-travamento-recorrente-entre-andares.html | title_len_outside_20_70 |
-| https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-vazamento-circuito-hidraulico-continuo.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-vazamento-circuito-hidraulico-continuo.html | title_len_outside_20_70 |
-| https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-velocidade-insuficiente-elevador-emergencia-predio-alto.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-velocidade-insuficiente-elevador-emergencia-predio-alto.html | title_len_outside_20_70 |
-| https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-ventilacao-cabina-obstruida.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-ventilacao-cabina-obstruida.html | title_len_outside_20_70 |
-| https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-vicio-instalacao-versus-desgaste-natural.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-vicio-instalacao-versus-desgaste-natural.html | title_len_outside_20_70 |
-| https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-vidros-espelhos-cabina-padrao.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-vidros-espelhos-cabina-padrao.html | title_len_outside_20_70 |
-| https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-abertura-elos-86mm.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-abertura-elos-86mm.html | title_len_outside_20_70, desc_len_outside_70_180 |
-| https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-abertura-piso-15mm.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-abertura-piso-15mm.html | title_len_outside_20_70, desc_len_outside_70_180 |
 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-abertura-piso-correr-larga.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-abertura-piso-correr-larga.html | desc_len_outside_70_180 |
-| https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-abertura-piso.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-abertura-piso.html | title_len_outside_20_70 |
 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-abertura-rigida-130-230.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-abertura-rigida-130-230.html | desc_len_outside_70_180 |
-| https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-aberturas-na-malha-da-rede-que-permitem-aprisionamento.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-aberturas-na-malha-da-rede-que-permitem-aprisionamento.html | title_len_outside_20_70 |
-| https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-acessibilidade.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-acessibilidade.html | title_len_outside_20_70, desc_len_outside_70_180 |
 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-acumulo-agua-tubos-tuneis.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-acumulo-agua-tubos-tuneis.html | title_len_outside_20_70, desc_len_outside_70_180 |
 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-acumulo-agua.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-acumulo-agua.html | title_len_outside_20_70, desc_len_outside_70_180 |
 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-acumulo-lama-pocas-area.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-acumulo-lama-pocas-area.html | desc_len_outside_70_180 |
