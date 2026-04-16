@@ -1,18 +1,18 @@
 # Auditoria Geral de Indexacao - Proton
 
-Data: 2026-04-16 18:35:05 UTC
+Data: 2026-04-16 18:37:31 UTC
 Sitemap raiz: https://www.protoncd.com.br/sitemap.xml
 
 ## Resumo
 
 - URLs auditadas: 283
-- URLs sem issues: 105
-- URLs com issues: 178
+- URLs sem issues: 115
+- URLs com issues: 168
 
 ## Issues por tipo
 
-- title_len_outside_20_70: 150
-- desc_len_outside_70_180: 83
+- title_len_outside_20_70: 140
+- desc_len_outside_70_180: 73
 
 ## Checklist de Correcao (Gerenciavel)
 
@@ -37,8 +37,6 @@ Sitemap raiz: https://www.protoncd.com.br/sitemap.xml
 | https://www.protoncd.com.br/curitiba/analise-vibracao-elevadores-curitiba.html | 200 | https://www.protoncd.com.br/curitiba/analise-vibracao-elevadores-curitiba.html | title_len_outside_20_70, desc_len_outside_70_180 |
 | https://www.protoncd.com.br/porto-alegre/analise-vibracao-elevadores-poa.html | 200 | https://www.protoncd.com.br/porto-alegre/analise-vibracao-elevadores-poa.html | title_len_outside_20_70, desc_len_outside_70_180 |
 | https://www.protoncd.com.br/rio-de-janeiro/analise-vibracao-elevadores-rj.html | 200 | https://www.protoncd.com.br/rio-de-janeiro/analise-vibracao-elevadores-rj.html | title_len_outside_20_70, desc_len_outside_70_180 |
-| https://www.protoncd.com.br/rio-verde/inspecao-predial-rio-verde.html | 200 | https://www.protoncd.com.br/rio-verde/inspecao-predial-rio-verde.html | title_len_outside_20_70, desc_len_outside_70_180 |
-| https://www.protoncd.com.br/sao-paulo/analise-vibracao-elevadores-sp.html | 200 | https://www.protoncd.com.br/sao-paulo/analise-vibracao-elevadores-sp.html | title_len_outside_20_70, desc_len_outside_70_180 |
 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-abertura-porta-emergencia-sem-instrucao.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-abertura-porta-emergencia-sem-instrucao.html | title_len_outside_20_70 |
 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-acesso-casa-maquinas-emergencia.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-acesso-casa-maquinas-emergencia.html | title_len_outside_20_70 |
 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-acesso-quadro-comando-sem-barreira.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-acesso-quadro-comando-sem-barreira.html | title_len_outside_20_70 |
@@ -197,16 +195,8 @@ Sitemap raiz: https://www.protoncd.com.br/sitemap.xml
 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-todo-contato-manual-deve-ter-acabamento-atoxico-preservado.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-todo-contato-manual-deve-ter-acabamento-atoxico-preservado.html | title_len_outside_20_70, desc_len_outside_70_180 |
 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-tuneis-dimensao-interna.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-tuneis-dimensao-interna.html | title_len_outside_20_70, desc_len_outside_70_180 |
 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-vao-assento-piso-horizontal.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-vao-assento-piso-horizontal.html | title_len_outside_20_70, desc_len_outside_70_180 |
-| https://www.protoncd.com.br/inspecao-casa-bombas.html | 200 | https://www.protoncd.com.br/inspecao-casa-bombas.html | title_len_outside_20_70, desc_len_outside_70_180 |
-| https://www.protoncd.com.br/inspecao-combate-incendio.html | 200 | https://www.protoncd.com.br/inspecao-combate-incendio.html | title_len_outside_20_70, desc_len_outside_70_180 |
-| https://www.protoncd.com.br/inspecao-gas-predial.html | 200 | https://www.protoncd.com.br/inspecao-gas-predial.html | desc_len_outside_70_180 |
 | https://www.protoncd.com.br/inspecao-hvac-pmoc.html | 200 | https://www.protoncd.com.br/inspecao-hvac-pmoc.html | desc_len_outside_70_180 |
-| https://www.protoncd.com.br/inspecao-playgrounds.html | 200 | https://www.protoncd.com.br/inspecao-playgrounds.html | title_len_outside_20_70, desc_len_outside_70_180 |
-| https://www.protoncd.com.br/inspecao-pressurizacao-escadas.html | 200 | https://www.protoncd.com.br/inspecao-pressurizacao-escadas.html | title_len_outside_20_70, desc_len_outside_70_180 |
-| https://www.protoncd.com.br/inspecao-ruido-performance-exaustao-coletiva.html | 200 | https://www.protoncd.com.br/inspecao-ruido-performance-exaustao-coletiva.html | title_len_outside_20_70, desc_len_outside_70_180 |
-| https://www.protoncd.com.br/inspecao-sistemas-mecanicos.html | 200 | https://www.protoncd.com.br/inspecao-sistemas-mecanicos.html | title_len_outside_20_70, desc_len_outside_70_180 |
-| https://www.protoncd.com.br/laudo-elevadores-pericia-tecnica.html | 200 | https://www.protoncd.com.br/laudo-elevadores-pericia-tecnica.html | title_len_outside_20_70, desc_len_outside_70_180 |
-| https://www.protoncd.com.br/laudo-pericial-engenharia.html | 200 | https://www.protoncd.com.br/laudo-pericial-engenharia.html | title_len_outside_20_70, desc_len_outside_70_180 |
+| https://www.protoncd.com.br/laudo-pericial-engenharia.html | 200 | https://www.protoncd.com.br/laudo-pericial-engenharia.html | desc_len_outside_70_180 |
 
 ## Como rodar novamente
 

@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-04-16 18:35:05 UTC",
+  "generated_at": "2026-04-16 18:37:31 UTC",
   "root_sitemap": "https://www.protoncd.com.br/sitemap.xml",
   "summary": {
     "total_urls": 283,
-    "urls_with_issues": 178,
-    "urls_without_issues": 105,
+    "urls_with_issues": 168,
+    "urls_without_issues": 115,
     "issue_counts": {
-      "desc_len_outside_70_180": 83,
-      "title_len_outside_20_70": 150
+      "desc_len_outside_70_180": 73,
+      "title_len_outside_20_70": 140
     },
-    "duration_sec": 57.33
+    "duration_sec": 56.43
   },
   "results": [
     {
@@ -746,18 +746,15 @@
       "canonical_self": true,
       "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 78,
-      "desc_len": 187,
+      "title_len": 63,
+      "desc_len": 164,
       "hreflang_count": 2,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70",
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/sao-paulo/analise-vibracao-elevadores-sp.html",
@@ -768,18 +765,15 @@
       "canonical_self": true,
       "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 73,
-      "desc_len": 205,
+      "title_len": 55,
+      "desc_len": 161,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70",
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/analise-vibracao-elevadores.html",
@@ -5534,18 +5528,15 @@
       "canonical_self": true,
       "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 81,
-      "desc_len": 248,
+      "title_len": 57,
+      "desc_len": 173,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70",
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/inspecao-combate-incendio.html",
@@ -5556,18 +5547,15 @@
       "canonical_self": true,
       "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 81,
-      "desc_len": 210,
+      "title_len": 62,
+      "desc_len": 153,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70",
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/inspecao-gas-predial.html",
@@ -5579,16 +5567,14 @@
       "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
       "has_noindex": false,
       "title_len": 62,
-      "desc_len": 203,
+      "desc_len": 167,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/inspecao-hvac-pmoc.html",
@@ -5620,18 +5606,15 @@
       "canonical_self": true,
       "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 76,
-      "desc_len": 199,
+      "title_len": 55,
+      "desc_len": 164,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70",
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/inspecao-pressurizacao-escadas.html",
@@ -5642,18 +5625,15 @@
       "canonical_self": true,
       "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 75,
-      "desc_len": 217,
+      "title_len": 56,
+      "desc_len": 168,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70",
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/inspecao-ruido-performance-exaustao-coletiva.html",
@@ -5664,18 +5644,15 @@
       "canonical_self": true,
       "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 88,
-      "desc_len": 254,
+      "title_len": 58,
+      "desc_len": 162,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70",
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/inspecao-sistemas-mecanicos.html",
@@ -5686,18 +5663,15 @@
       "canonical_self": true,
       "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 79,
-      "desc_len": 294,
+      "title_len": 50,
+      "desc_len": 175,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70",
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/landing-servicos.html",
@@ -5727,18 +5701,15 @@
       "canonical_self": true,
       "robots": "index, follow",
       "has_noindex": false,
-      "title_len": 84,
-      "desc_len": 263,
+      "title_len": 65,
+      "desc_len": 165,
       "hreflang_count": 3,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70",
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/laudo-pericial-engenharia.html",
@@ -5749,8 +5720,8 @@
       "canonical_self": true,
       "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 76,
-      "desc_len": 311,
+      "title_len": 66,
+      "desc_len": 188,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
@@ -5758,7 +5729,6 @@
       "variant_final_url": "",
       "variant_points_to_html": false,
       "issues": [
-        "title_len_outside_20_70",
         "desc_len_outside_70_180"
       ]
     },
