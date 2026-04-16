@@ -13,6 +13,16 @@ Origem: INDEXACAO_AUDITORIA_RESULT.json
   - desc_len_outside_70_180: 112
   - variantes sem .html ativas em 200: 277 de 277 URLs .html auditadas
 
+## Pos-deploy (2026-04-16 18:29:15 UTC)
+
+- URLs auditadas (sitemap): 283
+- URLs com issues: 179
+- URLs sem issues: 104
+- Delta vs baseline:
+  - URLs com issues: -33
+  - title_len_outside_20_70: 179 -> 151 (-28)
+  - desc_len_outside_70_180: 112 -> 84 (-28)
+
 ## Prioridade de execucao
 
 1. Implementar redirecionamento 301 global de URL sem .html para URL .html
@@ -25,8 +35,8 @@ Origem: INDEXACAO_AUDITORIA_RESULT.json
 
 ### Sprint 1 - Titles
 
-- [x] Implementar regra de redirecionamento 301 para variantes sem .html (concluído no repositório; falta deploy)
-- [ ] Validar amostra de 50 URLs em produção após o deploy
+- [x] Implementar regra de redirecionamento 301 para variantes sem .html (deploy realizado)
+- [x] Validar amostra de 50 URLs em produção após o deploy (validação por auditoria completa: 283 URLs)
 - [x] Corrigir lote prioritário inicial (34 URLs: home, regionais, serviços e EN) no repositório
 - [ ] Corrigir próximo lote até completar 60 URLs prioritárias
 - [ ] Garantir unicidade por pagina

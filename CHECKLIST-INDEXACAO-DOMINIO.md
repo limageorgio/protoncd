@@ -1,18 +1,18 @@
 # Auditoria Geral de Indexacao - Proton
 
-Data: 2026-04-16 18:19:35 UTC
+Data: 2026-04-16 18:29:15 UTC
 Sitemap raiz: https://www.protoncd.com.br/sitemap.xml
 
 ## Resumo
 
 - URLs auditadas: 283
-- URLs sem issues: 71
-- URLs com issues: 212
+- URLs sem issues: 104
+- URLs com issues: 179
 
 ## Issues por tipo
 
-- title_len_outside_20_70: 179
-- desc_len_outside_70_180: 112
+- title_len_outside_20_70: 151
+- desc_len_outside_70_180: 84
 
 ## Checklist de Correcao (Gerenciavel)
 
@@ -30,43 +30,16 @@ Sitemap raiz: https://www.protoncd.com.br/sitemap.xml
 | URL | Status | Canonical | Issues |
 |---|---:|---|---|
 | https://www.protoncd.com.br/conhecimento-tecnico/ | 200 | https://www.protoncd.com.br/conhecimento-tecnico/ | desc_len_outside_70_180 |
-| https://www.protoncd.com.br/en/boiler-pressure-vessel-brazil.html | 200 | https://www.protoncd.com.br/en/boiler-pressure-vessel-brazil.html | title_len_outside_20_70, desc_len_outside_70_180 |
-| https://www.protoncd.com.br/en/elevator-inspection-brazil.html | 200 | https://www.protoncd.com.br/en/elevator-inspection-brazil.html | title_len_outside_20_70, desc_len_outside_70_180 |
-| https://www.protoncd.com.br/en/elevator-inspection-report.html | 200 | https://www.protoncd.com.br/en/elevator-inspection-report.html | title_len_outside_20_70, desc_len_outside_70_180 |
-| https://www.protoncd.com.br/en/fire-safety-brazil.html | 200 | https://www.protoncd.com.br/en/fire-safety-brazil.html | title_len_outside_20_70, desc_len_outside_70_180 |
-| https://www.protoncd.com.br/en/forensic-engineering-brazil.html | 200 | https://www.protoncd.com.br/en/forensic-engineering-brazil.html | title_len_outside_20_70, desc_len_outside_70_180 |
-| https://www.protoncd.com.br/en/hvac-inspection-brazil.html | 200 | https://www.protoncd.com.br/en/hvac-inspection-brazil.html | title_len_outside_20_70, desc_len_outside_70_180 |
-| https://www.protoncd.com.br/en/ | 200 | https://www.protoncd.com.br/en/ | title_len_outside_20_70, desc_len_outside_70_180 |
-| https://www.protoncd.com.br/en/mechanical-systems-brazil.html | 200 | https://www.protoncd.com.br/en/mechanical-systems-brazil.html | title_len_outside_20_70, desc_len_outside_70_180 |
 | https://www.protoncd.com.br/en/playground-inspection-brazil.html | 200 | https://www.protoncd.com.br/en/playground-inspection-brazil.html | title_len_outside_20_70, desc_len_outside_70_180 |
-| https://www.protoncd.com.br/en/pressurization-brazil.html | 200 | https://www.protoncd.com.br/en/pressurization-brazil.html | title_len_outside_20_70, desc_len_outside_70_180 |
-| https://www.protoncd.com.br/en/pump-house-inspection-brazil.html | 200 | https://www.protoncd.com.br/en/pump-house-inspection-brazil.html | title_len_outside_20_70, desc_len_outside_70_180 |
-| https://www.protoncd.com.br/en/training-nr-brazil.html | 200 | https://www.protoncd.com.br/en/training-nr-brazil.html | title_len_outside_20_70 |
-| https://www.protoncd.com.br/en/workplace-safety-brazil.html | 200 | https://www.protoncd.com.br/en/workplace-safety-brazil.html | desc_len_outside_70_180 |
 | https://www.protoncd.com.br/anapolis/inspecao-predial-anapolis.html | 200 | https://www.protoncd.com.br/anapolis/inspecao-predial-anapolis.html | title_len_outside_20_70 |
 | https://www.protoncd.com.br/belo-horizonte/analise-vibracao-elevadores-bh.html | 200 | https://www.protoncd.com.br/belo-horizonte/analise-vibracao-elevadores-bh.html | title_len_outside_20_70, desc_len_outside_70_180 |
 | https://www.protoncd.com.br/brasilia/analise-vibracao-elevadores-brasilia.html | 200 | https://www.protoncd.com.br/brasilia/analise-vibracao-elevadores-brasilia.html | title_len_outside_20_70, desc_len_outside_70_180 |
 | https://www.protoncd.com.br/brasilia/inspecao-predial-brasilia.html | 200 | https://www.protoncd.com.br/brasilia/inspecao-predial-brasilia.html | title_len_outside_20_70, desc_len_outside_70_180 |
 | https://www.protoncd.com.br/curitiba/analise-vibracao-elevadores-curitiba.html | 200 | https://www.protoncd.com.br/curitiba/analise-vibracao-elevadores-curitiba.html | title_len_outside_20_70, desc_len_outside_70_180 |
-| https://www.protoncd.com.br/goiania/inspecao-predial-goiania.html | 200 | https://www.protoncd.com.br/goiania/inspecao-predial-goiania.html | title_len_outside_20_70, desc_len_outside_70_180 |
-| https://www.protoncd.com.br/goiania/laudos-nr-goiania.html | 200 | https://www.protoncd.com.br/goiania/laudos-nr-goiania.html | title_len_outside_20_70, desc_len_outside_70_180 |
-| https://www.protoncd.com.br/goiania/seguranca-trabalho-goiania.html | 200 | https://www.protoncd.com.br/goiania/seguranca-trabalho-goiania.html | title_len_outside_20_70, desc_len_outside_70_180 |
-| https://www.protoncd.com.br/goiania/treinamentos-nr-goiania.html | 200 | https://www.protoncd.com.br/goiania/treinamentos-nr-goiania.html | title_len_outside_20_70, desc_len_outside_70_180 |
-| https://www.protoncd.com.br/ibitinga/avcb-clcb-ibitinga.html | 200 | https://www.protoncd.com.br/ibitinga/avcb-clcb-ibitinga.html | desc_len_outside_70_180 |
-| https://www.protoncd.com.br/ibitinga/inspecao-predial-ibitinga.html | 200 | https://www.protoncd.com.br/ibitinga/inspecao-predial-ibitinga.html | title_len_outside_20_70, desc_len_outside_70_180 |
-| https://www.protoncd.com.br/ibitinga/laudo-pericial-ibitinga.html | 200 | https://www.protoncd.com.br/ibitinga/laudo-pericial-ibitinga.html | title_len_outside_20_70, desc_len_outside_70_180 |
-| https://www.protoncd.com.br/ibitinga/nr12-ibitinga.html | 200 | https://www.protoncd.com.br/ibitinga/nr12-ibitinga.html | title_len_outside_20_70 |
-| https://www.protoncd.com.br/ibitinga/playgrounds-ibitinga.html | 200 | https://www.protoncd.com.br/ibitinga/playgrounds-ibitinga.html | title_len_outside_20_70 |
-| https://www.protoncd.com.br/ibitinga/pmoc-ibitinga.html | 200 | https://www.protoncd.com.br/ibitinga/pmoc-ibitinga.html | title_len_outside_20_70 |
-| https://www.protoncd.com.br/ibitinga/prevencao-incendio-ibitinga.html | 200 | https://www.protoncd.com.br/ibitinga/prevencao-incendio-ibitinga.html | title_len_outside_20_70, desc_len_outside_70_180 |
-| https://www.protoncd.com.br/ibitinga/projetos-arquitetonicos-ibitinga.html | 200 | https://www.protoncd.com.br/ibitinga/projetos-arquitetonicos-ibitinga.html | title_len_outside_20_70, desc_len_outside_70_180 |
-| https://www.protoncd.com.br/ibitinga/regularizacao-galpoes-ibitinga.html | 200 | https://www.protoncd.com.br/ibitinga/regularizacao-galpoes-ibitinga.html | title_len_outside_20_70, desc_len_outside_70_180 |
-| https://www.protoncd.com.br/ibitinga/seguranca-trabalho-ibitinga.html | 200 | https://www.protoncd.com.br/ibitinga/seguranca-trabalho-ibitinga.html | title_len_outside_20_70, desc_len_outside_70_180 |
 | https://www.protoncd.com.br/porto-alegre/analise-vibracao-elevadores-poa.html | 200 | https://www.protoncd.com.br/porto-alegre/analise-vibracao-elevadores-poa.html | title_len_outside_20_70, desc_len_outside_70_180 |
 | https://www.protoncd.com.br/rio-de-janeiro/analise-vibracao-elevadores-rj.html | 200 | https://www.protoncd.com.br/rio-de-janeiro/analise-vibracao-elevadores-rj.html | title_len_outside_20_70, desc_len_outside_70_180 |
 | https://www.protoncd.com.br/rio-verde/inspecao-predial-rio-verde.html | 200 | https://www.protoncd.com.br/rio-verde/inspecao-predial-rio-verde.html | title_len_outside_20_70, desc_len_outside_70_180 |
 | https://www.protoncd.com.br/sao-paulo/analise-vibracao-elevadores-sp.html | 200 | https://www.protoncd.com.br/sao-paulo/analise-vibracao-elevadores-sp.html | title_len_outside_20_70, desc_len_outside_70_180 |
-| https://www.protoncd.com.br/analise-vibracao-elevadores.html | 200 | https://www.protoncd.com.br/analise-vibracao-elevadores.html | title_len_outside_20_70, desc_len_outside_70_180 |
 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-abertura-porta-emergencia-sem-instrucao.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-abertura-porta-emergencia-sem-instrucao.html | title_len_outside_20_70 |
 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-acesso-casa-maquinas-emergencia.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-acesso-casa-maquinas-emergencia.html | title_len_outside_20_70 |
 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-acesso-quadro-comando-sem-barreira.html | 200 | https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-acesso-quadro-comando-sem-barreira.html | title_len_outside_20_70 |
@@ -225,9 +198,6 @@ Sitemap raiz: https://www.protoncd.com.br/sitemap.xml
 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-todo-contato-manual-deve-ter-acabamento-atoxico-preservado.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-todo-contato-manual-deve-ter-acabamento-atoxico-preservado.html | title_len_outside_20_70, desc_len_outside_70_180 |
 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-tuneis-dimensao-interna.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-tuneis-dimensao-interna.html | title_len_outside_20_70, desc_len_outside_70_180 |
 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-vao-assento-piso-horizontal.html | 200 | https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-vao-assento-piso-horizontal.html | title_len_outside_20_70, desc_len_outside_70_180 |
-| https://www.protoncd.com.br/cercon-goias.html | 200 | https://www.protoncd.com.br/cercon-goias.html | title_len_outside_20_70 |
-| https://www.protoncd.com.br/franquias.html | 200 | https://www.protoncd.com.br/franquias.html | desc_len_outside_70_180 |
-| https://www.protoncd.com.br/ | 200 | https://www.protoncd.com.br/ | title_len_outside_20_70, desc_len_outside_70_180 |
 | https://www.protoncd.com.br/inspecao-casa-bombas.html | 200 | https://www.protoncd.com.br/inspecao-casa-bombas.html | title_len_outside_20_70, desc_len_outside_70_180 |
 | https://www.protoncd.com.br/inspecao-combate-incendio.html | 200 | https://www.protoncd.com.br/inspecao-combate-incendio.html | title_len_outside_20_70, desc_len_outside_70_180 |
 | https://www.protoncd.com.br/inspecao-gas-predial.html | 200 | https://www.protoncd.com.br/inspecao-gas-predial.html | desc_len_outside_70_180 |
@@ -236,11 +206,8 @@ Sitemap raiz: https://www.protoncd.com.br/sitemap.xml
 | https://www.protoncd.com.br/inspecao-pressurizacao-escadas.html | 200 | https://www.protoncd.com.br/inspecao-pressurizacao-escadas.html | title_len_outside_20_70, desc_len_outside_70_180 |
 | https://www.protoncd.com.br/inspecao-ruido-performance-exaustao-coletiva.html | 200 | https://www.protoncd.com.br/inspecao-ruido-performance-exaustao-coletiva.html | title_len_outside_20_70, desc_len_outside_70_180 |
 | https://www.protoncd.com.br/inspecao-sistemas-mecanicos.html | 200 | https://www.protoncd.com.br/inspecao-sistemas-mecanicos.html | title_len_outside_20_70, desc_len_outside_70_180 |
-| https://www.protoncd.com.br/landing-servicos.html | 200 | https://www.protoncd.com.br/landing-servicos.html | desc_len_outside_70_180 |
 | https://www.protoncd.com.br/laudo-elevadores-pericia-tecnica.html | 200 | https://www.protoncd.com.br/laudo-elevadores-pericia-tecnica.html | title_len_outside_20_70, desc_len_outside_70_180 |
 | https://www.protoncd.com.br/laudo-pericial-engenharia.html | 200 | https://www.protoncd.com.br/laudo-pericial-engenharia.html | title_len_outside_20_70, desc_len_outside_70_180 |
-| https://www.protoncd.com.br/pacotes-servicos.html | 200 | https://www.protoncd.com.br/pacotes-servicos.html | desc_len_outside_70_180 |
-| https://www.protoncd.com.br/teste-arrancamento-olhais.html | 200 | https://www.protoncd.com.br/teste-arrancamento-olhais.html | title_len_outside_20_70, desc_len_outside_70_180 |
 
 ## Como rodar novamente
 

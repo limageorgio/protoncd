@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-04-16 18:19:35 UTC",
+  "generated_at": "2026-04-16 18:29:15 UTC",
   "root_sitemap": "https://www.protoncd.com.br/sitemap.xml",
   "summary": {
     "total_urls": 283,
-    "urls_with_issues": 212,
-    "urls_without_issues": 71,
+    "urls_with_issues": 179,
+    "urls_without_issues": 104,
     "issue_counts": {
-      "desc_len_outside_70_180": 112,
-      "title_len_outside_20_70": 179
+      "desc_len_outside_70_180": 84,
+      "title_len_outside_20_70": 151
     },
-    "duration_sec": 55.09
+    "duration_sec": 55.29
   },
   "results": [
     {
@@ -42,18 +42,15 @@
       "canonical_self": true,
       "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 78,
-      "desc_len": 189,
+      "title_len": 69,
+      "desc_len": 179,
       "hreflang_count": 3,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70",
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/en/elevator-inspection-brazil.html",
@@ -64,18 +61,15 @@
       "canonical_self": true,
       "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 71,
-      "desc_len": 281,
+      "title_len": 70,
+      "desc_len": 173,
       "hreflang_count": 2,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70",
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/en/elevator-inspection-report.html",
@@ -86,18 +80,15 @@
       "canonical_self": true,
       "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 80,
-      "desc_len": 306,
+      "title_len": 69,
+      "desc_len": 174,
       "hreflang_count": 3,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70",
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/en/fire-safety-brazil.html",
@@ -108,18 +99,15 @@
       "canonical_self": true,
       "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 79,
-      "desc_len": 193,
+      "title_len": 52,
+      "desc_len": 172,
       "hreflang_count": 2,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70",
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/en/forensic-engineering-brazil.html",
@@ -130,18 +118,15 @@
       "canonical_self": true,
       "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 72,
-      "desc_len": 191,
+      "title_len": 70,
+      "desc_len": 175,
       "hreflang_count": 2,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70",
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/en/gas-inspection-brazil.html",
@@ -171,18 +156,15 @@
       "canonical_self": true,
       "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 71,
-      "desc_len": 231,
+      "title_len": 52,
+      "desc_len": 176,
       "hreflang_count": 2,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70",
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/en/",
@@ -193,18 +175,15 @@
       "canonical_self": true,
       "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 75,
-      "desc_len": 230,
+      "title_len": 38,
+      "desc_len": 165,
       "hreflang_count": 3,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70",
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/en/machinery-safety-brazil.html",
@@ -234,18 +213,15 @@
       "canonical_self": true,
       "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 79,
-      "desc_len": 227,
+      "title_len": 59,
+      "desc_len": 174,
       "hreflang_count": 2,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70",
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/en/playground-inspection-brazil.html",
@@ -278,18 +254,15 @@
       "canonical_self": true,
       "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 83,
-      "desc_len": 228,
+      "title_len": 65,
+      "desc_len": 178,
       "hreflang_count": 2,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70",
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/en/pump-house-inspection-brazil.html",
@@ -300,18 +273,15 @@
       "canonical_self": true,
       "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 77,
-      "desc_len": 205,
+      "title_len": 51,
+      "desc_len": 175,
       "hreflang_count": 2,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70",
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/en/training-nr-brazil.html",
@@ -322,7 +292,7 @@
       "canonical_self": true,
       "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 80,
+      "title_len": 54,
       "desc_len": 178,
       "hreflang_count": 2,
       "x_robots_tag": "",
@@ -330,9 +300,7 @@
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/en/workplace-safety-brazil.html",
@@ -343,17 +311,15 @@
       "canonical_self": true,
       "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 63,
-      "desc_len": 212,
+      "title_len": 62,
+      "desc_len": 167,
       "hreflang_count": 2,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/anapolis/inspecao-predial-anapolis.html",
@@ -473,18 +439,15 @@
       "canonical_self": true,
       "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 83,
-      "desc_len": 220,
+      "title_len": 53,
+      "desc_len": 176,
       "hreflang_count": 2,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70",
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/goiania/laudos-nr-goiania.html",
@@ -495,18 +458,15 @@
       "canonical_self": true,
       "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 91,
-      "desc_len": 250,
+      "title_len": 40,
+      "desc_len": 179,
       "hreflang_count": 2,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70",
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/goiania/seguranca-trabalho-goiania.html",
@@ -517,18 +477,15 @@
       "canonical_self": true,
       "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 85,
-      "desc_len": 239,
+      "title_len": 52,
+      "desc_len": 179,
       "hreflang_count": 2,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70",
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/goiania/treinamentos-nr-goiania.html",
@@ -539,18 +496,15 @@
       "canonical_self": true,
       "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 89,
-      "desc_len": 241,
+      "title_len": 46,
+      "desc_len": 173,
       "hreflang_count": 2,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70",
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/ibitinga/avcb-clcb-ibitinga.html",
@@ -561,17 +515,15 @@
       "canonical_self": true,
       "robots": "",
       "has_noindex": false,
-      "title_len": 62,
-      "desc_len": 0,
+      "title_len": 70,
+      "desc_len": 138,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/ibitinga/inspecao-predial-ibitinga.html",
@@ -582,18 +534,15 @@
       "canonical_self": true,
       "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 94,
-      "desc_len": 204,
+      "title_len": 70,
+      "desc_len": 172,
       "hreflang_count": 2,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70",
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/ibitinga/laudo-pericial-ibitinga.html",
@@ -604,18 +553,15 @@
       "canonical_self": true,
       "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 85,
-      "desc_len": 218,
+      "title_len": 46,
+      "desc_len": 175,
       "hreflang_count": 2,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70",
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/ibitinga/nr12-ibitinga.html",
@@ -626,7 +572,7 @@
       "canonical_self": true,
       "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 81,
+      "title_len": 61,
       "desc_len": 178,
       "hreflang_count": 2,
       "x_robots_tag": "",
@@ -634,9 +580,7 @@
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/ibitinga/playgrounds-ibitinga.html",
@@ -647,7 +591,7 @@
       "canonical_self": true,
       "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 77,
+      "title_len": 55,
       "desc_len": 157,
       "hreflang_count": 2,
       "x_robots_tag": "",
@@ -655,9 +599,7 @@
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/ibitinga/pmoc-ibitinga.html",
@@ -668,7 +610,7 @@
       "canonical_self": true,
       "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 76,
+      "title_len": 43,
       "desc_len": 161,
       "hreflang_count": 2,
       "x_robots_tag": "",
@@ -676,9 +618,7 @@
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/ibitinga/prevencao-incendio-ibitinga.html",
@@ -689,18 +629,15 @@
       "canonical_self": true,
       "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 100,
-      "desc_len": 218,
+      "title_len": 63,
+      "desc_len": 174,
       "hreflang_count": 2,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70",
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/ibitinga/projetos-arquitetonicos-ibitinga.html",
@@ -711,18 +648,15 @@
       "canonical_self": true,
       "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 99,
-      "desc_len": 199,
+      "title_len": 69,
+      "desc_len": 179,
       "hreflang_count": 2,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70",
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/ibitinga/regularizacao-galpoes-ibitinga.html",
@@ -733,18 +667,15 @@
       "canonical_self": true,
       "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 83,
-      "desc_len": 198,
+      "title_len": 56,
+      "desc_len": 178,
       "hreflang_count": 2,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70",
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/ibitinga/seguranca-trabalho-ibitinga.html",
@@ -755,18 +686,15 @@
       "canonical_self": true,
       "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 86,
-      "desc_len": 218,
+      "title_len": 53,
+      "desc_len": 167,
       "hreflang_count": 2,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70",
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/porto-alegre/analise-vibracao-elevadores-poa.html",
@@ -865,18 +793,15 @@
       "canonical_self": true,
       "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 80,
-      "desc_len": 244,
+      "title_len": 62,
+      "desc_len": 176,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70",
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-abertura-porta-emergencia-sem-instrucao.html",
@@ -5555,7 +5480,7 @@
       "canonical_self": true,
       "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 82,
+      "title_len": 32,
       "desc_len": 149,
       "hreflang_count": 0,
       "x_robots_tag": "",
@@ -5563,9 +5488,7 @@
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/franquias.html",
@@ -5576,17 +5499,15 @@
       "canonical_self": true,
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 69,
-      "desc_len": 189,
+      "title_len": 47,
+      "desc_len": 179,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/",
@@ -5597,18 +5518,15 @@
       "canonical_self": true,
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 72,
-      "desc_len": 270,
+      "title_len": 37,
+      "desc_len": 175,
       "hreflang_count": 3,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70",
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/inspecao-casa-bombas.html",
@@ -5794,16 +5712,14 @@
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "has_noindex": false,
       "title_len": 58,
-      "desc_len": 313,
+      "desc_len": 174,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/laudo-elevadores-pericia-tecnica.html",
@@ -5858,17 +5774,15 @@
       "canonical_self": true,
       "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 70,
-      "desc_len": 212,
+      "title_len": 47,
+      "desc_len": 176,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/teste-arrancamento-olhais.html",
@@ -5879,18 +5793,15 @@
       "canonical_self": true,
       "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 71,
-      "desc_len": 186,
+      "title_len": 51,
+      "desc_len": 176,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70",
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     }
   ]
 }
