@@ -84,7 +84,10 @@ def audit_url(url):
         canonical = ext(r'<link\s+rel="canonical"\s+href="([^"]+)"', html)
         robots = ext(r'<meta\s+name="robots"\s+content="([^"]+)"', html)
         title = ext(r"<title>(.*?)</title>", html)
-        desc = ext(r'<meta\s+name="description"\s+content="([^"]+)"', html)
+        m_desc = re.search(r'<meta\s+name=[\""\']description[\""\']\s+content=[\""\'](.*?)[\""\']', html, re.I | re.S)
+        if not m_desc:
+            m_desc = re.search(r'<meta\s+content=[\""\'](.*?)[\""\']\s+name=[\""\']description[\""\']', html, re.I | re.S)
+        desc = m_desc.group(1).strip() if m_desc else ""
 
         out["canonical"] = canonical
         out["canonical_self"] = canonical == url

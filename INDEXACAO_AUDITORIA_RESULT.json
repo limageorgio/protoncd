@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-04-16 23:04:02 UTC",
+  "generated_at": "2026-04-16 23:16:09 UTC",
   "root_sitemap": "https://www.protoncd.com.br/sitemap.xml",
   "summary": {
     "total_urls": 283,
-    "urls_with_issues": 40,
-    "urls_without_issues": 243,
+    "urls_with_issues": 37,
+    "urls_without_issues": 246,
     "issue_counts": {
-      "desc_len_outside_70_180": 21,
-      "title_len_outside_20_70": 31
+      "desc_len_outside_70_180": 36,
+      "title_len_outside_20_70": 27
     },
-    "duration_sec": 74.19
+    "duration_sec": 71.86
   },
   "results": [
     {
@@ -22,16 +22,14 @@
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "has_noindex": false,
       "title_len": 48,
-      "desc_len": 221,
+      "desc_len": 156,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/en/boiler-pressure-vessel-brazil.html",
@@ -1373,14 +1371,16 @@
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "has_noindex": false,
       "title_len": 58,
-      "desc_len": 179,
+      "desc_len": 2,
       "hreflang_count": 1,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": []
+      "issues": [
+        "desc_len_outside_70_180"
+      ]
     },
     {
       "url": "https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-comando-inspecao-sem-codificacao-rotulos.html",
@@ -2836,16 +2836,14 @@
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "has_noindex": false,
       "title_len": 55,
-      "desc_len": 7,
+      "desc_len": 154,
       "hreflang_count": 1,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-teste-funcional-freio-maquina-ausente.html",
@@ -2856,17 +2854,15 @@
       "canonical_self": true,
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 55,
-      "desc_len": 7,
+      "title_len": 53,
+      "desc_len": 152,
       "hreflang_count": 1,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-tomadas-fosso-teto-cabina.html",
@@ -3847,14 +3843,16 @@
       "robots": "",
       "has_noindex": false,
       "title_len": 67,
-      "desc_len": 161,
+      "desc_len": 18,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": []
+      "issues": [
+        "desc_len_outside_70_180"
+      ]
     },
     {
       "url": "https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-concreto-armadura-exposta.html",
@@ -4036,7 +4034,7 @@
       "canonical_self": true,
       "robots": "",
       "has_noindex": false,
-      "title_len": 72,
+      "title_len": 52,
       "desc_len": 131,
       "hreflang_count": 0,
       "x_robots_tag": "",
@@ -4044,9 +4042,7 @@
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-distancia-assentos-balanco.html",
@@ -4076,17 +4072,15 @@
       "canonical_self": true,
       "robots": "",
       "has_noindex": false,
-      "title_len": 66,
-      "desc_len": 224,
+      "title_len": 55,
+      "desc_len": 159,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-eixos-e-rolamentos-com-movimento-travado-ou-seco.html",
@@ -4097,17 +4091,15 @@
       "canonical_self": true,
       "robots": "",
       "has_noindex": false,
-      "title_len": 80,
-      "desc_len": 129,
+      "title_len": 59,
+      "desc_len": 156,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-entorno-1-5m-a-2-5m-com-objetos-perigosos-ou-blocos-aflorando.html",
@@ -4137,17 +4129,15 @@
       "canonical_self": true,
       "robots": "",
       "has_noindex": false,
-      "title_len": 85,
-      "desc_len": 179,
+      "title_len": 60,
+      "desc_len": 152,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-extremidades-tubos-sem-vedacao-tampao.html",
@@ -4177,17 +4167,15 @@
       "canonical_self": true,
       "robots": "",
       "has_noindex": false,
-      "title_len": 80,
-      "desc_len": 174,
+      "title_len": 52,
+      "desc_len": 154,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-falta-de-sinalizacao-de-seguranca-regras.html",
@@ -4199,7 +4187,7 @@
       "robots": "",
       "has_noindex": false,
       "title_len": 72,
-      "desc_len": 121,
+      "desc_len": 35,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
@@ -4207,7 +4195,8 @@
       "variant_final_url": "",
       "variant_points_to_html": false,
       "issues": [
-        "title_len_outside_20_70"
+        "title_len_outside_20_70",
+        "desc_len_outside_70_180"
       ]
     },
     {
@@ -4317,7 +4306,7 @@
       "robots": "",
       "has_noindex": false,
       "title_len": 94,
-      "desc_len": 143,
+      "desc_len": 35,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
@@ -4325,7 +4314,8 @@
       "variant_final_url": "",
       "variant_points_to_html": false,
       "issues": [
-        "title_len_outside_20_70"
+        "title_len_outside_20_70",
+        "desc_len_outside_70_180"
       ]
     },
     {
@@ -4357,7 +4347,7 @@
       "robots": "",
       "has_noindex": false,
       "title_len": 64,
-      "desc_len": 202,
+      "desc_len": 22,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
@@ -4378,7 +4368,7 @@
       "robots": "",
       "has_noindex": false,
       "title_len": 74,
-      "desc_len": 168,
+      "desc_len": 18,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
@@ -4386,7 +4376,8 @@
       "variant_final_url": "",
       "variant_points_to_html": false,
       "issues": [
-        "title_len_outside_20_70"
+        "title_len_outside_20_70",
+        "desc_len_outside_70_180"
       ]
     },
     {
@@ -4399,7 +4390,7 @@
       "robots": "",
       "has_noindex": false,
       "title_len": 100,
-      "desc_len": 195,
+      "desc_len": 22,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
@@ -4421,7 +4412,7 @@
       "robots": "",
       "has_noindex": false,
       "title_len": 73,
-      "desc_len": 167,
+      "desc_len": 18,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
@@ -4429,7 +4420,8 @@
       "variant_final_url": "",
       "variant_points_to_html": false,
       "issues": [
-        "title_len_outside_20_70"
+        "title_len_outside_20_70",
+        "desc_len_outside_70_180"
       ]
     },
     {
@@ -4442,14 +4434,16 @@
       "robots": "",
       "has_noindex": false,
       "title_len": 70,
-      "desc_len": 164,
+      "desc_len": 18,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": []
+      "issues": [
+        "desc_len_outside_70_180"
+      ]
     },
     {
       "url": "https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-malha-de-aco-solta-assentos-pneus-cabos.html",
@@ -4461,7 +4455,7 @@
       "robots": "",
       "has_noindex": false,
       "title_len": 97,
-      "desc_len": 191,
+      "desc_len": 18,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
@@ -4483,14 +4477,16 @@
       "robots": "",
       "has_noindex": false,
       "title_len": 70,
-      "desc_len": 164,
+      "desc_len": 18,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": []
+      "issues": [
+        "desc_len_outside_70_180"
+      ]
     },
     {
       "url": "https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-molas-sem-limitadores.html",
@@ -4523,7 +4519,7 @@
       "robots": "",
       "has_noindex": false,
       "title_len": 77,
-      "desc_len": 171,
+      "desc_len": 18,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
@@ -4531,7 +4527,8 @@
       "variant_final_url": "",
       "variant_points_to_html": false,
       "issues": [
-        "title_len_outside_20_70"
+        "title_len_outside_20_70",
+        "desc_len_outside_70_180"
       ]
     },
     {
@@ -4544,7 +4541,7 @@
       "robots": "",
       "has_noindex": false,
       "title_len": 80,
-      "desc_len": 174,
+      "desc_len": 18,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
@@ -4552,7 +4549,8 @@
       "variant_final_url": "",
       "variant_points_to_html": false,
       "issues": [
-        "title_len_outside_20_70"
+        "title_len_outside_20_70",
+        "desc_len_outside_70_180"
       ]
     },
     {
@@ -4565,7 +4563,7 @@
       "robots": "",
       "has_noindex": false,
       "title_len": 73,
-      "desc_len": 167,
+      "desc_len": 18,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
@@ -4573,7 +4571,8 @@
       "variant_final_url": "",
       "variant_points_to_html": false,
       "issues": [
-        "title_len_outside_20_70"
+        "title_len_outside_20_70",
+        "desc_len_outside_70_180"
       ]
     },
     {
@@ -4586,7 +4585,7 @@
       "robots": "",
       "has_noindex": false,
       "title_len": 72,
-      "desc_len": 229,
+      "desc_len": 22,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
@@ -4608,7 +4607,7 @@
       "robots": "",
       "has_noindex": false,
       "title_len": 93,
-      "desc_len": 187,
+      "desc_len": 18,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
@@ -4630,7 +4629,7 @@
       "robots": "",
       "has_noindex": false,
       "title_len": 87,
-      "desc_len": 181,
+      "desc_len": 18,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
@@ -4652,7 +4651,7 @@
       "robots": "",
       "has_noindex": false,
       "title_len": 88,
-      "desc_len": 137,
+      "desc_len": 35,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
@@ -4660,7 +4659,8 @@
       "variant_final_url": "",
       "variant_points_to_html": false,
       "issues": [
-        "title_len_outside_20_70"
+        "title_len_outside_20_70",
+        "desc_len_outside_70_180"
       ]
     },
     {
@@ -4673,7 +4673,7 @@
       "robots": "",
       "has_noindex": false,
       "title_len": 81,
-      "desc_len": 175,
+      "desc_len": 18,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
@@ -4681,7 +4681,8 @@
       "variant_final_url": "",
       "variant_points_to_html": false,
       "issues": [
-        "title_len_outside_20_70"
+        "title_len_outside_20_70",
+        "desc_len_outside_70_180"
       ]
     },
     {
@@ -4694,14 +4695,16 @@
       "robots": "",
       "has_noindex": false,
       "title_len": 63,
-      "desc_len": 157,
+      "desc_len": 18,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": []
+      "issues": [
+        "desc_len_outside_70_180"
+      ]
     },
     {
       "url": "https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-plastico-esbranquicado-ressecado-perda-de-propriedade-estrutural.html",
@@ -4713,7 +4716,7 @@
       "robots": "",
       "has_noindex": false,
       "title_len": 98,
-      "desc_len": 192,
+      "desc_len": 18,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
@@ -4735,7 +4738,7 @@
       "robots": "",
       "has_noindex": false,
       "title_len": 85,
-      "desc_len": 179,
+      "desc_len": 18,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
@@ -4743,7 +4746,8 @@
       "variant_final_url": "",
       "variant_points_to_html": false,
       "issues": [
-        "title_len_outside_20_70"
+        "title_len_outside_20_70",
+        "desc_len_outside_70_180"
       ]
     },
     {
@@ -4756,7 +4760,7 @@
       "robots": "",
       "has_noindex": false,
       "title_len": 97,
-      "desc_len": 191,
+      "desc_len": 18,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
@@ -4797,7 +4801,7 @@
       "robots": "",
       "has_noindex": false,
       "title_len": 77,
-      "desc_len": 231,
+      "desc_len": 49,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
@@ -4819,7 +4823,7 @@
       "robots": "",
       "has_noindex": false,
       "title_len": 75,
-      "desc_len": 230,
+      "desc_len": 18,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
@@ -4841,7 +4845,7 @@
       "robots": "",
       "has_noindex": false,
       "title_len": 67,
-      "desc_len": 221,
+      "desc_len": 22,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
@@ -4862,7 +4866,7 @@
       "robots": "",
       "has_noindex": false,
       "title_len": 84,
-      "desc_len": 133,
+      "desc_len": 35,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
@@ -4870,7 +4874,8 @@
       "variant_final_url": "",
       "variant_points_to_html": false,
       "issues": [
-        "title_len_outside_20_70"
+        "title_len_outside_20_70",
+        "desc_len_outside_70_180"
       ]
     },
     {
@@ -4883,7 +4888,7 @@
       "robots": "",
       "has_noindex": false,
       "title_len": 82,
-      "desc_len": 176,
+      "desc_len": 18,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
@@ -4891,7 +4896,8 @@
       "variant_final_url": "",
       "variant_points_to_html": false,
       "issues": [
-        "title_len_outside_20_70"
+        "title_len_outside_20_70",
+        "desc_len_outside_70_180"
       ]
     },
     {
@@ -4942,7 +4948,7 @@
       "robots": "",
       "has_noindex": false,
       "title_len": 88,
-      "desc_len": 137,
+      "desc_len": 35,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
@@ -4950,7 +4956,8 @@
       "variant_final_url": "",
       "variant_points_to_html": false,
       "issues": [
-        "title_len_outside_20_70"
+        "title_len_outside_20_70",
+        "desc_len_outside_70_180"
       ]
     },
     {
@@ -4963,7 +4970,7 @@
       "robots": "",
       "has_noindex": false,
       "title_len": 83,
-      "desc_len": 177,
+      "desc_len": 18,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
@@ -4971,7 +4978,8 @@
       "variant_final_url": "",
       "variant_points_to_html": false,
       "issues": [
-        "title_len_outside_20_70"
+        "title_len_outside_20_70",
+        "desc_len_outside_70_180"
       ]
     },
     {
@@ -5003,7 +5011,7 @@
       "robots": "",
       "has_noindex": false,
       "title_len": 90,
-      "desc_len": 184,
+      "desc_len": 18,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
@@ -5025,7 +5033,7 @@
       "robots": "",
       "has_noindex": false,
       "title_len": 72,
-      "desc_len": 241,
+      "desc_len": 18,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
@@ -5047,7 +5055,7 @@
       "robots": "",
       "has_noindex": false,
       "title_len": 71,
-      "desc_len": 210,
+      "desc_len": 22,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
