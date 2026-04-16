@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-16 23:16:09 UTC",
+  "generated_at": "2026-04-16 23:19:26 UTC",
   "root_sitemap": "https://www.protoncd.com.br/sitemap.xml",
   "summary": {
     "total_urls": 283,
@@ -7,9 +7,9 @@
     "urls_without_issues": 246,
     "issue_counts": {
       "desc_len_outside_70_180": 36,
-      "title_len_outside_20_70": 27
+      "title_len_outside_20_70": 26
     },
-    "duration_sec": 71.86
+    "duration_sec": 64.56
   },
   "results": [
     {
@@ -40,7 +40,7 @@
       "canonical_self": true,
       "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 69,
+      "title_len": 65,
       "desc_len": 179,
       "hreflang_count": 3,
       "x_robots_tag": "",
@@ -116,7 +116,7 @@
       "canonical_self": true,
       "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 70,
+      "title_len": 66,
       "desc_len": 175,
       "hreflang_count": 2,
       "x_robots_tag": "",
@@ -4800,7 +4800,7 @@
       "canonical_self": true,
       "robots": "",
       "has_noindex": false,
-      "title_len": 77,
+      "title_len": 74,
       "desc_len": 49,
       "hreflang_count": 0,
       "x_robots_tag": "",
@@ -5032,7 +5032,7 @@
       "canonical_self": true,
       "robots": "",
       "has_noindex": false,
-      "title_len": 72,
+      "title_len": 69,
       "desc_len": 18,
       "hreflang_count": 0,
       "x_robots_tag": "",
@@ -5041,7 +5041,6 @@
       "variant_final_url": "",
       "variant_points_to_html": false,
       "issues": [
-        "title_len_outside_20_70",
         "desc_len_outside_70_180"
       ]
     },

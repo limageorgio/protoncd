@@ -40,6 +40,8 @@ def ext(pattern, text):
 
 
 def normalize_text_len(text):
+    import html as html_lib
+    text = html_lib.unescape(text)
     return len(re.sub(r"\s+", " ", text).strip())
 
 
