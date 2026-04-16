@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-04-16 18:29:15 UTC",
+  "generated_at": "2026-04-16 18:35:05 UTC",
   "root_sitemap": "https://www.protoncd.com.br/sitemap.xml",
   "summary": {
     "total_urls": 283,
-    "urls_with_issues": 179,
-    "urls_without_issues": 104,
+    "urls_with_issues": 178,
+    "urls_without_issues": 105,
     "issue_counts": {
-      "desc_len_outside_70_180": 84,
-      "title_len_outside_20_70": 151
+      "desc_len_outside_70_180": 83,
+      "title_len_outside_20_70": 150
     },
-    "duration_sec": 55.29
+    "duration_sec": 57.33
   },
   "results": [
     {
@@ -232,18 +232,15 @@
       "canonical_self": true,
       "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 76,
-      "desc_len": 235,
+      "title_len": 58,
+      "desc_len": 173,
       "hreflang_count": 2,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70",
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/en/pressurization-brazil.html",

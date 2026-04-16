@@ -1,18 +1,18 @@
 # Auditoria Geral de Indexacao - Proton
 
-Data: 2026-04-16 18:29:15 UTC
+Data: 2026-04-16 18:35:05 UTC
 Sitemap raiz: https://www.protoncd.com.br/sitemap.xml
 
 ## Resumo
 
 - URLs auditadas: 283
-- URLs sem issues: 104
-- URLs com issues: 179
+- URLs sem issues: 105
+- URLs com issues: 178
 
 ## Issues por tipo
 
-- title_len_outside_20_70: 151
-- desc_len_outside_70_180: 84
+- title_len_outside_20_70: 150
+- desc_len_outside_70_180: 83
 
 ## Checklist de Correcao (Gerenciavel)
 
@@ -30,7 +30,6 @@ Sitemap raiz: https://www.protoncd.com.br/sitemap.xml
 | URL | Status | Canonical | Issues |
 |---|---:|---|---|
 | https://www.protoncd.com.br/conhecimento-tecnico/ | 200 | https://www.protoncd.com.br/conhecimento-tecnico/ | desc_len_outside_70_180 |
-| https://www.protoncd.com.br/en/playground-inspection-brazil.html | 200 | https://www.protoncd.com.br/en/playground-inspection-brazil.html | title_len_outside_20_70, desc_len_outside_70_180 |
 | https://www.protoncd.com.br/anapolis/inspecao-predial-anapolis.html | 200 | https://www.protoncd.com.br/anapolis/inspecao-predial-anapolis.html | title_len_outside_20_70 |
 | https://www.protoncd.com.br/belo-horizonte/analise-vibracao-elevadores-bh.html | 200 | https://www.protoncd.com.br/belo-horizonte/analise-vibracao-elevadores-bh.html | title_len_outside_20_70, desc_len_outside_70_180 |
 | https://www.protoncd.com.br/brasilia/analise-vibracao-elevadores-brasilia.html | 200 | https://www.protoncd.com.br/brasilia/analise-vibracao-elevadores-brasilia.html | title_len_outside_20_70, desc_len_outside_70_180 |
