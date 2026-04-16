@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-04-16 23:19:26 UTC",
+  "generated_at": "2026-04-16 23:33:03 UTC",
   "root_sitemap": "https://www.protoncd.com.br/sitemap.xml",
   "summary": {
     "total_urls": 283,
-    "urls_with_issues": 37,
-    "urls_without_issues": 246,
+    "urls_with_issues": 21,
+    "urls_without_issues": 262,
     "issue_counts": {
-      "desc_len_outside_70_180": 36,
-      "title_len_outside_20_70": 26
+      "title_len_outside_20_70": 16,
+      "desc_len_outside_70_180": 21
     },
-    "duration_sec": 64.56
+    "duration_sec": 63.79
   },
   "results": [
     {
@@ -1371,16 +1371,14 @@
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "has_noindex": false,
       "title_len": 58,
-      "desc_len": 2,
+      "desc_len": 152,
       "hreflang_count": 1,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-comando-inspecao-sem-codificacao-rotulos.html",
@@ -3842,17 +3840,15 @@
       "canonical_self": true,
       "robots": "",
       "has_noindex": false,
-      "title_len": 67,
-      "desc_len": 18,
+      "title_len": 57,
+      "desc_len": 153,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-concreto-armadura-exposta.html",
@@ -4186,18 +4182,15 @@
       "canonical_self": true,
       "robots": "",
       "has_noindex": false,
-      "title_len": 72,
-      "desc_len": 35,
+      "title_len": 50,
+      "desc_len": 145,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70",
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-falta-revestimento-ferrugem.html",
@@ -4246,17 +4239,15 @@
       "canonical_self": true,
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 82,
-      "desc_len": 127,
+      "title_len": 55,
+      "desc_len": 142,
       "hreflang_count": 1,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-frestas-v-eixos-sem-protecao.html",
@@ -4305,18 +4296,15 @@
       "canonical_self": true,
       "robots": "",
       "has_noindex": false,
-      "title_len": 94,
-      "desc_len": 35,
+      "title_len": 51,
+      "desc_len": 149,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70",
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-impacto-assentos.html",
@@ -4347,16 +4335,14 @@
       "robots": "",
       "has_noindex": false,
       "title_len": 64,
-      "desc_len": 22,
+      "desc_len": 152,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-inclinacao-maxima-da-gangorra-acima-de-25.html",
@@ -4367,18 +4353,15 @@
       "canonical_self": true,
       "robots": "",
       "has_noindex": false,
-      "title_len": 74,
-      "desc_len": 18,
+      "title_len": 50,
+      "desc_len": 155,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70",
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-incompatibilidade-piso-aql.html",
@@ -4389,18 +4372,15 @@
       "canonical_self": true,
       "robots": "",
       "has_noindex": false,
-      "title_len": 100,
-      "desc_len": 22,
+      "title_len": 57,
+      "desc_len": 157,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70",
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-laterais-do-deslize-entre-100-e-500mm.html",
@@ -4411,18 +4391,15 @@
       "canonical_self": true,
       "robots": "",
       "has_noindex": false,
-      "title_len": 73,
-      "desc_len": 18,
+      "title_len": 48,
+      "desc_len": 145,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70",
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-madeira-apodrecida-ou-rachaduras-8mm.html",
@@ -4433,17 +4410,15 @@
       "canonical_self": true,
       "robots": "",
       "has_noindex": false,
-      "title_len": 70,
-      "desc_len": 18,
+      "title_len": 51,
+      "desc_len": 142,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-malha-de-aco-solta-assentos-pneus-cabos.html",
@@ -4454,18 +4429,15 @@
       "canonical_self": true,
       "robots": "",
       "has_noindex": false,
-      "title_len": 97,
-      "desc_len": 18,
+      "title_len": 44,
+      "desc_len": 150,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70",
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-mecanismos-emperrados-ou-desprotegidos.html",
@@ -4476,17 +4448,15 @@
       "canonical_self": true,
       "robots": "",
       "has_noindex": false,
-      "title_len": 70,
-      "desc_len": 18,
+      "title_len": 52,
+      "desc_len": 143,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-molas-sem-limitadores.html",
@@ -4497,17 +4467,15 @@
       "canonical_self": true,
       "robots": "",
       "has_noindex": false,
-      "title_len": 61,
-      "desc_len": 202,
+      "title_len": 50,
+      "desc_len": 148,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-outras-irregularidades-relevantes-de-ambiente.html",
@@ -4518,18 +4486,15 @@
       "canonical_self": true,
       "robots": "",
       "has_noindex": false,
-      "title_len": 77,
-      "desc_len": 18,
+      "title_len": 51,
+      "desc_len": 150,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70",
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-outras-irregularidades-relevantes-do-equipamento.html",
@@ -4540,18 +4505,15 @@
       "canonical_self": true,
       "robots": "",
       "has_noindex": false,
-      "title_len": 80,
-      "desc_len": 18,
+      "title_len": 53,
+      "desc_len": 152,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70",
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-parafusos-porcas-sobressaindo-mais-de-8mm.html",
@@ -4562,18 +4524,15 @@
       "canonical_self": true,
       "robots": "",
       "has_noindex": false,
-      "title_len": 73,
-      "desc_len": 18,
+      "title_len": 47,
+      "desc_len": 151,
       "hreflang_count": 0,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70",
-        "desc_len_outside_70_180"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/playgrounds/artigo-playground-piso-queda.html",

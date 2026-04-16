@@ -270,3 +270,13 @@ python _tmp_full_indexing_audit.py
   - Verificacao de conteudo duplicado entre paginas regionais
 
 
+
+## Pos-lote E9
+
+- URLs auditadas (sitemap): 283
+- URLs com issues: 21
+- URLs sem issues: 262
+- Delta vs Pos-lotes E8:
+  - URLs com issues: -8
+  - title_len_outside_20_70: 21 -> 16 (-5)
+  - desc_len_outside_70_180: 29 -> 21 (-8)
