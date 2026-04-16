@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-04-16 18:44:46 UTC",
+  "generated_at": "2026-04-16 18:48:50 UTC",
   "root_sitemap": "https://www.protoncd.com.br/sitemap.xml",
   "summary": {
     "total_urls": 283,
-    "urls_with_issues": 150,
-    "urls_without_issues": 133,
+    "urls_with_issues": 141,
+    "urls_without_issues": 142,
     "issue_counts": {
       "desc_len_outside_70_180": 64,
-      "title_len_outside_20_70": 125
+      "title_len_outside_20_70": 116
     },
-    "duration_sec": 56.55
+    "duration_sec": 56.43
   },
   "results": [
     {
@@ -1296,17 +1296,15 @@
       "canonical_self": true,
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 93,
-      "desc_len": 180,
+      "title_len": 58,
+      "desc_len": 167,
       "hreflang_count": 1,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-chave-triangular-sem-aviso-seguranca.html",
@@ -1317,17 +1315,15 @@
       "canonical_self": true,
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 99,
-      "desc_len": 180,
+      "title_len": 56,
+      "desc_len": 161,
       "hreflang_count": 1,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-chaves-seccionadoras-identificacao.html",
@@ -1338,7 +1334,7 @@
       "canonical_self": true,
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 76,
+      "title_len": 53,
       "desc_len": 144,
       "hreflang_count": 1,
       "x_robots_tag": "",
@@ -1346,9 +1342,7 @@
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-chicote-cabos-manobra-nos-abrasao.html",
@@ -1359,7 +1353,7 @@
       "canonical_self": true,
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 98,
+      "title_len": 52,
       "desc_len": 180,
       "hreflang_count": 1,
       "x_robots_tag": "",
@@ -1367,9 +1361,7 @@
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-chicotes-cabos-controle-protecao-inspecao.html",
@@ -1380,7 +1372,7 @@
       "canonical_self": true,
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 106,
+      "title_len": 58,
       "desc_len": 179,
       "hreflang_count": 1,
       "x_robots_tag": "",
@@ -1388,9 +1380,7 @@
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-comando-inspecao-sem-codificacao-rotulos.html",
@@ -1401,17 +1391,15 @@
       "canonical_self": true,
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 106,
-      "desc_len": 179,
+      "title_len": 54,
+      "desc_len": 147,
       "hreflang_count": 1,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-comando-prioridade-bombeiro-inoperante.html",
@@ -1422,17 +1410,15 @@
       "canonical_self": true,
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 106,
-      "desc_len": 179,
+      "title_len": 50,
+      "desc_len": 160,
       "hreflang_count": 1,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-combustivel-cabina-interior.html",
@@ -1443,17 +1429,15 @@
       "canonical_self": true,
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 106,
-      "desc_len": 179,
+      "title_len": 50,
+      "desc_len": 156,
       "hreflang_count": 1,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-contato-com-agua-em-elevadores.html",
@@ -1540,17 +1524,15 @@
       "canonical_self": true,
       "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       "has_noindex": false,
-      "title_len": 85,
-      "desc_len": 180,
+      "title_len": 50,
+      "desc_len": 163,
       "hreflang_count": 1,
       "x_robots_tag": "",
       "variant_without_html": "",
       "variant_status": "",
       "variant_final_url": "",
       "variant_points_to_html": false,
-      "issues": [
-        "title_len_outside_20_70"
-      ]
+      "issues": []
     },
     {
       "url": "https://www.protoncd.com.br/artigos/elevadores/artigo-elevadores-cortina-luz-porta.html",
