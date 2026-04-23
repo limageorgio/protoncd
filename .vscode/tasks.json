@@ -48,6 +48,77 @@
 			],
 			"isBackground": false,
 			"group": "build"
+		},
+		{
+			"label": "run-full-index-audit",
+			"type": "shell",
+			"command": "python",
+			"args": [
+				"_tmp_full_indexing_audit.py"
+			],
+			"isBackground": false,
+			"group": "build"
+		},
+		{
+			"label": "restore-old-v2-canonicals",
+			"type": "shell",
+			"command": "python",
+			"args": [
+				"_tmp_restore_old_v2.py"
+			],
+			"isBackground": false,
+			"group": "build"
+		},
+		{
+			"label": "normalize-sitemaps-nonhtml",
+			"type": "shell",
+			"command": "python",
+			"args": [
+				"_tmp_update_sitemaps_nonhtml.py"
+			],
+			"isBackground": false,
+			"group": "build"
+		},
+		{
+			"label": "run-full-index-audit-2",
+			"type": "shell",
+			"command": "python",
+			"args": [
+				"_tmp_full_indexing_audit.py"
+			],
+			"isBackground": false,
+			"group": "build"
+		},
+		{
+			"label": "count-local-html-locs",
+			"type": "shell",
+			"command": "python",
+			"args": [
+				"-c",
+				"import glob,re,pathlib; c=0; files=sorted(glob.glob('sitemap*.xml')); \nfor f in files:\n t=pathlib.Path(f).read_text(encoding='utf-8-sig'); n=len(re.findall(r'<loc>https://www\\.protoncd\\.com\\.br/[^<]+\\.html</loc>',t)); c+=n; print(f'{f}: {n}');\nprint('TOTAL_HTML_LOCS',c)"
+			],
+			"isBackground": false,
+			"group": "build"
+		},
+		{
+			"label": "count-local-html-locs-2",
+			"type": "shell",
+			"command": "python",
+			"args": [
+				"_tmp_count_local_html_locs.py"
+			],
+			"isBackground": false,
+			"group": "build"
+		},
+		{
+			"label": "count-local-html-canonicals",
+			"type": "shell",
+			"command": "python",
+			"args": [
+				"_tmp_count_local_html_canonicals.py"
+			],
+			"isBackground": false,
+			"group": "build"
 		}
 	]
 }

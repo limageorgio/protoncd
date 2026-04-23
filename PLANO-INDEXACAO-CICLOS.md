@@ -1,17 +1,30 @@
 ﻿# Plano de Indexacao - Ciclo Operacional
 
-Data base da auditoria: 2026-04-16 18:07:54 UTC
+Data base da auditoria: 2026-04-23 20:04:10 UTC
 Origem: INDEXACAO_AUDITORIA_RESULT.json
 
-## Baseline atual
+## Estado Atual
 
 - URLs auditadas (sitemap): 283
-- URLs com issues: 212
-- URLs sem issues: 71
-- Issues encontradas:
-  - title_len_outside_20_70: 179
-  - desc_len_outside_70_180: 112
-  - variantes sem .html ativas em 200: 277 de 277 URLs .html auditadas
+- URLs com issues: 277
+- URLs sem issues: 6
+- Issue dominante:
+  - duplicate_variant_without_html_live_200: 277
+
+## Foco do Ciclo Atual
+
+- Corrigir a duplicidade entre URL canônica .html e variantes ainda referenciadas fora do padrão.
+- Manter uma única URL final por página em sitemap, canonical, OG e links internos.
+- Assumir GitHub Pages como hospedagem final e não depender de 301.
+- Revalidar canonical, robots, hreflang e links internos após cada lote.
+- Reexecutar a auditoria completa e comparar a redução do residual.
+
+## Marco Inicial do Ciclo
+
+- URLs auditadas (sitemap): 283
+- URLs com issues: 277
+- URLs sem issues: 6
+- Motivo principal: variantes sem .html ainda ativas com status 200.
 
 ## Pos-deploy (2026-04-16 18:29:15 UTC)
 
@@ -22,6 +35,8 @@ Origem: INDEXACAO_AUDITORIA_RESULT.json
   - URLs com issues: -33
   - title_len_outside_20_70: 179 -> 151 (-28)
   - desc_len_outside_70_180: 112 -> 84 (-28)
+
+## Histórico de Ciclos Anteriores
 
 ## Pos-lote 2 (2026-04-16 18:38:42 UTC)
 
@@ -215,6 +230,13 @@ Origem: INDEXACAO_AUDITORIA_RESULT.json
 ## Prioridade de execucao
 4. Revalidar em lote por sitemap no Search Console
 5. Reexecutar auditoria e comparar queda das issues
+
+## Prioridade Atual
+
+1. Revalidar que cada página aponta para uma única URL canônica.
+2. Padronizar os links internos para a mesma forma de URL.
+3. Manter sitemap, canonical e Open Graph alinhados.
+4. Reexecutar a auditoria e acompanhar a queda do residual.
 
 ## Checklist gerenciavel por sprint
 

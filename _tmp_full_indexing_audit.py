@@ -45,7 +45,7 @@ def normalize_text_len(text):
     return len(re.sub(r"\s+", " ", text).strip())
 
 
-CHECK_NON_HTML_VARIANTS = False
+CHECK_NON_HTML_VARIANTS = True
 
 
 def non_html_variant(url):

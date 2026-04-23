@@ -5,15 +5,20 @@ import re
 
 ROOT = "https://www.protoncd.com.br/"
 TARGET_GLOBS = [
-    "artigos/elevadores/*.html",
-    "artigos/playgrounds/*.html",
+    "**/*.html",
 ]
+EXCLUDE_PREFIXES = (
+    "old/",
+    "v2-staging/",
+)
 
 
 def expected_url(path: str) -> str:
     rel = path.replace("\\", "/")
     if rel.endswith("index.html"):
         return ROOT + rel.replace("index.html", "")
+    if rel.endswith(".html"):
+        rel = rel[:-5]
     return ROOT + rel
 
 
@@ -49,9 +54,14 @@ def fix_file(path: str) -> tuple[bool, str | None, str | None]:
 def main() -> None:
     files: list[str] = []
     for pattern in TARGET_GLOBS:
-        files.extend(glob.glob(pattern))
+        files.extend(glob.glob(pattern, recursive=True))
 
-    files = sorted(f for f in files if os.path.isfile(f))
+    files = sorted(
+        f
+        for f in files
+        if os.path.isfile(f)
+        and not f.replace("\\", "/").startswith(EXCLUDE_PREFIXES)
+    )
     total = len(files)
     fixed = 0
 
