@@ -1,15 +1,22 @@
 ﻿# Plano de Indexacao - Ciclo Operacional
 
-Data base da auditoria: 2026-04-23 20:04:10 UTC
+Data base da auditoria: 2026-04-24 11:42:03 UTC
 Origem: INDEXACAO_AUDITORIA_RESULT.json
 
 ## Estado Atual
 
 - URLs auditadas (sitemap): 283
-- URLs com issues: 277
-- URLs sem issues: 6
-- Issue dominante:
-  - duplicate_variant_without_html_live_200: 277
+- URLs com issues: 0
+- URLs sem issues: 283
+
+## Pos-publicacao (2026-04-24 11:42:03 UTC)
+
+- URLs auditadas (sitemap): 283
+- URLs com issues: 0
+- URLs sem issues: 283
+- Delta vs baseline do ciclo:
+  - URLs com issues: -277
+  - duplicate_variant_without_html_live_200: 277 -> 0 (-277)
 
 ## Foco do Ciclo Atual
 

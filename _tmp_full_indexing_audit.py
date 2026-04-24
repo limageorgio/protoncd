@@ -165,7 +165,7 @@ def build_markdown(report):
     lines.append("- [ ] Corrigir todas as URLs com status diferente de 200.")
     lines.append("- [ ] Remover noindex (meta ou header) de URLs que devem indexar.")
     lines.append("- [ ] Garantir canonical absoluto e consistente com URL do sitemap.")
-    lines.append("- [ ] Implementar redirecionamento 301 da variante sem .html para a URL canônica .html.")
+    lines.append("- [ ] Padronizar sitemap, canonical e links internos para uma unica URL canonica por pagina.")
     lines.append("- [ ] Revisar titles fora de 20-70 caracteres.")
     lines.append("- [ ] Revisar descriptions fora de 70-180 caracteres.")
     lines.append("- [ ] Validar hreflang (principalmente pares PT/EN recíprocos).")

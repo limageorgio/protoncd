@@ -119,6 +119,26 @@
 			],
 			"isBackground": false,
 			"group": "build"
+		},
+		{
+			"label": "run-full-index-audit-post-publish",
+			"type": "shell",
+			"command": "python",
+			"args": [
+				"_tmp_full_indexing_audit.py"
+			],
+			"isBackground": false,
+			"group": "build"
+		},
+		{
+			"label": "run-full-index-audit-final-sync",
+			"type": "shell",
+			"command": "python",
+			"args": [
+				"_tmp_full_indexing_audit.py"
+			],
+			"isBackground": false,
+			"group": "build"
 		}
 	]
 }
