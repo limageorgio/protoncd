@@ -1,0 +1,18 @@
+plugins:
+  - jekyll-redirect-from
+
+# Configurações base
+markdown: kramdown
+encoding: utf-8
+exclude:
+  - '.git'
+  - '.gitignore'
+  - 'node_modules'
+  - '*.ps1'
+  - '_tmp*'
+  - 'batch_*_created_files.json'
+  - 'README.md'
+  - 'LICENSE'
+
+# SEO e Performance
+permalink: /:categories/:year/:month/:day/:title.html
