@@ -1,0 +1,5 @@
+{
+  "page_url": "https://www.protoncd.com.br/",
+  "source": "chrome-console",
+  "console_text": "ReferenceError: tracker is not defined\nFailed to load resource: the server responded with a status of 404 ()\nAccess to fetch at https://api.example.com from origin https://www.example.com was blocked by CORS policy"
+}
