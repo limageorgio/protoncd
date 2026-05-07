@@ -139,6 +139,113 @@
 			],
 			"isBackground": false,
 			"group": "build"
+		},
+		{
+			"label": "check-python",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"where python & where py & where python3"
+			],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "fix-playground-canonicals",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+				"-ExecutionPolicy",
+				"Bypass",
+				"-File",
+				".\\_tmp_fix_playground_canonicals.ps1"
+			],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "check-playground-canonicals",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+				"-ExecutionPolicy",
+				"Bypass",
+				"-File",
+				".\\_tmp_check_playground_canonicals.ps1"
+			],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "commit-playground-canonicals",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+				"-NoProfile",
+				"-Command",
+				"git add 'artigos/playgrounds/*.html'; git commit -m 'fix: canonical URLs for playground articles'; git push origin main"
+			],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "push-playground-canonicals",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+				"-ExecutionPolicy",
+				"Bypass",
+				"-File",
+				".\\_tmp_commit_playground_canonicals.ps1"
+			],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "recheck-playground-canonicals",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+				"-ExecutionPolicy",
+				"Bypass",
+				"-File",
+				".\\_tmp_check_playground_canonicals.ps1"
+			],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "remove-tmp-files",
+			"type": "shell",
+			"command": "python3",
+			"args": [
+				"remove_tmp_files.py"
+			],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "final-cleanup",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+				"-ExecutionPolicy",
+				"Bypass",
+				"-NoProfile",
+				"-File",
+				".\\cleanup_all.ps1"
+			],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "build"
 		}
 	]
 }
