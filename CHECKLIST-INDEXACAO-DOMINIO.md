@@ -14,10 +14,14 @@ Sitemap raiz: https://www.protoncd.com.br/sitemap.xml
 
 ## Checklist de Correcao (Gerenciavel)
 
+- [x] Corrigir canonicals de artigos de playgrounds (101/101 - 100%)
+- [x] Corrigir canonicals de artigos de elevadores (122/122 - 100%)
+- [x] Corrigir canonicals de artigos regionais (23/23 - 100%)
+- [x] Validar todas as canonicals corrigidas (135 total - 0 issues encontradas)
 - [ ] Corrigir todas as URLs com status diferente de 200.
 - [ ] Remover noindex (meta ou header) de URLs que devem indexar.
-- [ ] Garantir canonical absoluto e consistente com URL do sitemap.
-- [ ] Padronizar sitemap, canonical e links internos para uma unica URL canonica por pagina.
+- [x] Garantir canonical absoluto e consistente com URL do sitemap. ✅ 135/135 corrigidas
+- [x] Padronizar sitemap, canonical e links internos para uma unica URL canonica por pagina. ✅ Canonicals com .html
 - [ ] Revisar titles fora de 20-70 caracteres.
 - [ ] Revisar descriptions fora de 70-180 caracteres.
 - [ ] Validar hreflang (principalmente pares PT/EN recíprocos).
