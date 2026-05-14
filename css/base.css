@@ -393,3 +393,25 @@ strong {
         font-size: var(--fs-2xl);
     }
 }
+
+/* ===========================
+   RESPONSIVE TYPOGRAPHY
+   =========================== */
+
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: var(--fs-xl);
+    }
+
+    h2 {
+        font-size: var(--fs-lg);
+    }
+
+    p {
+        font-size: var(--fs-sm);
+    }
+}

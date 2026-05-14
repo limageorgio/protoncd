@@ -192,7 +192,8 @@ main.article-container {
 
 @media (max-width: 768px) {
     .nav-inner {
-        padding: 0 var(--space-4);
+        flex-direction: column;
+        gap: var(--space-4);
     }
 
     .nav-logo {
@@ -1366,5 +1367,27 @@ main.article-container {
     .kb-wa-btn {
         justify-content: center;
         text-align: center;
+    }
+}
+
+/* ===========================
+   RESPONSIVE WHATSAPP BUTTON
+   =========================== */
+
+@media (max-width: 768px) {
+    .btn-whatsapp {
+        font-size: var(--fs-sm);
+        padding: var(--space-2) var(--space-4);
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn-whatsapp:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+    }
+
+    .btn-whatsapp:active {
+        transform: translateY(0);
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
     }
 }

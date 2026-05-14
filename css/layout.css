@@ -55,16 +55,16 @@
 
 @media (max-width: 768px) {
     .section {
-        padding: var(--space-16) 0;
+        padding: var(--space-12) 0;
     }
 
     .section-header {
+        padding: 0 var(--space-4);
         margin-bottom: var(--space-12);
-        padding: 0 var(--space-2);
     }
 
     .section-header h2 {
-        font-size: clamp(1.55rem, 6vw, 2.25rem);
+        font-size: var(--fs-lg);
         line-height: 1.12;
     }
 
@@ -634,4 +634,22 @@
     gap: var(--space-3);
     flex-wrap: wrap;
     margin: var(--space-8) 0;
+}
+
+/* ===========================
+   RESPONSIVE DESIGN
+   =========================== */
+
+@media (max-width: 768px) {
+    .section {
+        padding: var(--space-12) 0;
+    }
+
+    .section-header {
+        padding: 0 var(--space-4);
+    }
+
+    .section-header h2 {
+        font-size: var(--fs-lg);
+    }
 }
