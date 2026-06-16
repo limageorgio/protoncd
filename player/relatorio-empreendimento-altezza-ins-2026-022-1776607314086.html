@@ -238,6 +238,68 @@
     }
     .yt-capture-btn:hover { background: #334155; color: #e2e8f0; border-color: #60a5fa; }
     .yt-capture-btn:disabled { opacity: 0.5; cursor: wait; }
+
+    .yt360-controls {
+      position: absolute;
+      right: 12px;
+      bottom: 300px;
+      z-index: 30;
+      display: none;
+      user-select: none;
+      pointer-events: none;
+    }
+    .yt360-pad {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 4px;
+      align-items: center;
+      justify-items: center;
+      width: max-content;
+      padding: 8px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,0.3);
+      background: rgba(0,0,0,0.45);
+      backdrop-filter: blur(8px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.45);
+      pointer-events: auto;
+    }
+    .yt360-btn {
+      width: 28px;
+      height: 28px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.25);
+      background: rgba(255,255,255,0.08);
+      color: #e2e8f0;
+      font-size: 14px;
+      line-height: 1;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s ease, transform 0.1s ease;
+      padding: 0;
+    }
+    .yt360-btn:hover { background: rgba(255,255,255,0.18); }
+    .yt360-btn:active { transform: scale(0.96); }
+    .yt360-btn-reset {
+      width: 24px;
+      height: 24px;
+      font-size: 12px;
+    }
+    .yt360-drag {
+      width: 28px;
+      height: 28px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.4);
+      background: rgba(255,255,255,0.1);
+      color: #f8fafc;
+      font-size: 12px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: grab;
+    }
+    .yt360-drag:active { cursor: grabbing; }
     @media print { .yt-embed-section { display:none !important; } }
   
 
@@ -282,6 +344,130 @@
   window._occYtCfgs=[{"divId":"yt-ep-0","videoId":"sZOdic9TQ4o","elevatorName":"Elevador 1","startTime":19.743184118255616,"occurrences":[{"number":1,"origin":"pontual","status":"preliminary","confirmedCause":"","preliminaryDescription":"[Auto] Problema pontual no ~17º andar — em 0:42 (subida, Ruído: 67.6 dB) e 1:37 (descida, Ruído: 70.2 dB) - Devido à movimentação do contrapeso.","severity":"medium","intervals":[{"start":41,"end":43},{"start":96,"end":96}]}]},{"divId":"yt-ep-1","videoId":"cbApaO0Hb4M","elevatorName":"Elevador 2","startTime":24.024973864578246,"occurrences":[{"number":1,"origin":"pontual","status":"preliminary","confirmedCause":"","preliminaryDescription":"Movimentações acima do limiar — Foram detectados alguns pontos com movimentações atípicas chegando a 36 µm/s² (especificação do fabrincate é de até 6 µm/s² )","severity":"medium","intervals":[{"start":35,"end":38},{"start":116,"end":116}]},{"number":2,"origin":"pontual","status":"preliminary","confirmedCause":"","preliminaryDescription":"[Auto] Problema pontual no ~16º andar — em 0:44 (subida, Ruído: 69.6 dB, Vibr.: X: 32.0 µm/s² (paralela à porta de correr)) e 1:48 (descida, Ruído: 70.0 dB, Vibr.: X: 29.0 µm/s² (paralela à porta de correr)) - Movimentação próxima ao contrapeso.","severity":"medium","intervals":[{"start":43,"end":50},{"start":108,"end":108}]}]},{"divId":"yt-ep-2","videoId":"K37mP8MJdVw","elevatorName":"Elevador 3","startTime":48.226025994277954,"occurrences":[{"number":1,"origin":"pontual","status":"preliminary","confirmedCause":"","preliminaryDescription":"[Auto] Problema pontual no ~16º andar — em 1:11 (subida, Ruído: 65.5 dB) e 2:23 (descida, Ruído: 69.2 dB) - Gerada pela movimentação do contrapeso.","severity":"medium","intervals":[{"start":70,"end":71},{"start":142,"end":142}]}]}];
   /* _ytPlayers: { videoId -> { player, cfg, overlay } } */
   window._ytPlayers=window._ytPlayers||{};
+
+  function _getSpherical(player){
+    try{
+      if(!player||typeof player.getSphericalProperties!=='function')return null;
+      var sph=player.getSphericalProperties();
+      return sph&&Object.keys(sph).length?sph:null;
+    }catch(e){return null;}
+  }
+
+  function _move360(player,axis,delta){
+    try{
+      if(!player||typeof player.setSphericalProperties!=='function')return;
+      var cur=_getSpherical(player);
+      if(!cur)return;
+      var next=Object.assign({},cur);
+      if(axis==='yaw'){
+        var yaw=(Number(cur.yaw)||0)+delta;
+        while(yaw>180)yaw-=360;
+        while(yaw<-180)yaw+=360;
+        next.yaw=yaw;
+      }else{
+        var pitch=(Number(cur.pitch)||0)+delta;
+        next.pitch=Math.max(-90,Math.min(90,pitch));
+      }
+      player.setSphericalProperties(next);
+    }catch(e){}
+  }
+
+  function _reset360(player){
+    try{
+      if(!player||typeof player.setSphericalProperties!=='function')return;
+      player.setSphericalProperties({yaw:0,pitch:0,roll:0});
+    }catch(e){}
+  }
+
+  function _setup360(player,cfg){
+    var root=document.getElementById(cfg.divId+'-360');
+    if(!root)return;
+
+    try{
+      if(typeof player.getIframe==='function'){
+        var iframe=player.getIframe();
+        if(iframe){
+          iframe.setAttribute('allow','accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen; xr-spatial-tracking');
+          iframe.setAttribute('allowfullscreen','');
+          iframe.setAttribute('webkitallowfullscreen','true');
+          iframe.setAttribute('mozallowfullscreen','true');
+        }
+      }
+    }catch(e){}
+
+    if(root.getAttribute('data-bound')!=='1'){
+      root.setAttribute('data-bound','1');
+      var up=document.getElementById(cfg.divId+'-360-up');
+      var down=document.getElementById(cfg.divId+'-360-down');
+      var left=document.getElementById(cfg.divId+'-360-left');
+      var right=document.getElementById(cfg.divId+'-360-right');
+      var reset=document.getElementById(cfg.divId+'-360-reset');
+      var drag=document.getElementById(cfg.divId+'-360-drag');
+      var dragOverlay=document.getElementById(cfg.divId+'-overlay-drag');
+
+      if(up)up.addEventListener('click',function(){_move360(player,'pitch',8);});
+      if(down)down.addEventListener('click',function(){_move360(player,'pitch',-8);});
+      if(left)left.addEventListener('click',function(){_move360(player,'yaw',10);});
+      if(right)right.addEventListener('click',function(){_move360(player,'yaw',-10);});
+      if(reset)reset.addEventListener('click',function(){_reset360(player);});
+
+      var dragState={active:false,x:0,y:0,startX:0,startY:0,startTime:0};
+      if(drag){
+        drag.addEventListener('mousedown',function(ev){
+          dragState.active=true;
+          dragState.x=ev.clientX;
+          dragState.y=ev.clientY;
+          dragState.startX=ev.clientX;
+          dragState.startY=ev.clientY;
+          dragState.startTime=Date.now();
+        });
+      }
+      if(dragOverlay){
+        dragOverlay.addEventListener('mousedown',function(ev){
+          dragState.active=true;
+          dragState.x=ev.clientX;
+          dragState.y=ev.clientY;
+          dragState.startX=ev.clientX;
+          dragState.startY=ev.clientY;
+          dragState.startTime=Date.now();
+        });
+      }
+      window.addEventListener('mousemove',function(ev){
+        if(!dragState.active)return;
+        var dx=ev.clientX-dragState.x;
+        var dy=ev.clientY-dragState.y;
+        dragState.x=ev.clientX;
+        dragState.y=ev.clientY;
+        if(dx)_move360(player,'yaw',dx*0.25);
+        if(dy)_move360(player,'pitch',dy*0.25);
+      });
+      window.addEventListener('mouseup',function(ev){
+        if(dragState.active){
+          var totalDx=Math.abs(ev.clientX-dragState.startX);
+          var totalDy=Math.abs(ev.clientY-dragState.startY);
+          var timeElapsed=Date.now()-dragState.startTime;
+          if(totalDx<5&&totalDy<5&&timeElapsed<300){
+            if(typeof player.getPlayerState==='function'){
+              var state=player.getPlayerState();
+              if(state===1){player.pauseVideo();}else if(state===2){player.playVideo();}
+            }
+          }
+        }
+        dragState.active=false;
+      });
+    }
+
+    var update=function(){
+      root.style.display=_getSpherical(player)?'block':'none';
+      var dragOverlay=document.getElementById(cfg.divId+'-overlay-drag');
+      if(dragOverlay){dragOverlay.style.display=_getSpherical(player)?'block':'none';}
+    };
+    update();
+    var oldInt=root.getAttribute('data-interval');
+    if(oldInt){try{clearInterval(Number(oldInt));}catch(e){}}
+    var intId=setInterval(update,1200);
+    root.setAttribute('data-interval',String(intId));
+  }
 
   /* Extrai videoId de uma URL embed do YouTube (sem regex para evitar problemas de escaping) */
   function _vidId(url){
@@ -353,6 +539,7 @@
         },
         events:{onReady:function(e){
           window._ytPlayers[cfg.videoId]={player:e.target,cfg:cfg};
+          _setup360(e.target,cfg);
           _startOv(e.target,cfg);
         }}
       });
@@ -670,8 +857,24 @@
           
   <div class="yt-embed-section no-print">
     <div class="yt-embed-wrapper">
-      <div id="yt-ep-0"></div>
+      <div id="yt-ep-0" style="position:relative;"></div>
+      <div id="yt-ep-0-overlay-drag-wrap" style="position:absolute;inset:0;z-index:20;pointer-events:none;">
+        <div id="yt-ep-0-overlay-drag" style="position:absolute;left:12%;right:12%;top:14%;bottom:18%;cursor:grab;pointer-events:auto;display:none;" title="Arraste para mover a câmera em 360° ou clique para pausar/reproduzir"></div>
+      </div>
       <div class="occ-video-overlay" id="yt-ep-0-overlay"></div>
+      <div id="yt-ep-0-360" class="yt360-controls" aria-label="Controle de navegação 360">
+        <div class="yt360-pad">
+          <div></div>
+          <button id="yt-ep-0-360-up" class="yt360-btn" type="button" title="Mover para cima" aria-label="Navegar para cima">▲</button>
+          <div></div>
+          <button id="yt-ep-0-360-left" class="yt360-btn" type="button" title="Mover para esquerda" aria-label="Navegar para esquerda">◀</button>
+          <div id="yt-ep-0-360-drag" class="yt360-drag" title="Arraste para navegar" aria-label="Arraste para navegar">✥</div>
+          <button id="yt-ep-0-360-right" class="yt360-btn" type="button" title="Mover para direita" aria-label="Navegar para direita">▶</button>
+          <div></div>
+          <button id="yt-ep-0-360-down" class="yt360-btn" type="button" title="Mover para baixo" aria-label="Navegar para baixo">▼</button>
+          <button id="yt-ep-0-360-reset" class="yt360-btn yt360-btn-reset" type="button" title="Resetar posição" aria-label="Resetar posição 360">⟲</button>
+        </div>
+      </div>
     </div>
     <div style="display:flex;align-items:center;padding:4px 0 2px 0;">
       <button id="yt-ep-0-capbtn" class="yt-capture-btn" onclick="captureYouTubeFrame('yt-ep-0')">
@@ -921,8 +1124,24 @@
           
   <div class="yt-embed-section no-print">
     <div class="yt-embed-wrapper">
-      <div id="yt-ep-1"></div>
+      <div id="yt-ep-1" style="position:relative;"></div>
+      <div id="yt-ep-1-overlay-drag-wrap" style="position:absolute;inset:0;z-index:20;pointer-events:none;">
+        <div id="yt-ep-1-overlay-drag" style="position:absolute;left:12%;right:12%;top:14%;bottom:18%;cursor:grab;pointer-events:auto;display:none;" title="Arraste para mover a câmera em 360° ou clique para pausar/reproduzir"></div>
+      </div>
       <div class="occ-video-overlay" id="yt-ep-1-overlay"></div>
+      <div id="yt-ep-1-360" class="yt360-controls" aria-label="Controle de navegação 360">
+        <div class="yt360-pad">
+          <div></div>
+          <button id="yt-ep-1-360-up" class="yt360-btn" type="button" title="Mover para cima" aria-label="Navegar para cima">▲</button>
+          <div></div>
+          <button id="yt-ep-1-360-left" class="yt360-btn" type="button" title="Mover para esquerda" aria-label="Navegar para esquerda">◀</button>
+          <div id="yt-ep-1-360-drag" class="yt360-drag" title="Arraste para navegar" aria-label="Arraste para navegar">✥</div>
+          <button id="yt-ep-1-360-right" class="yt360-btn" type="button" title="Mover para direita" aria-label="Navegar para direita">▶</button>
+          <div></div>
+          <button id="yt-ep-1-360-down" class="yt360-btn" type="button" title="Mover para baixo" aria-label="Navegar para baixo">▼</button>
+          <button id="yt-ep-1-360-reset" class="yt360-btn yt360-btn-reset" type="button" title="Resetar posição" aria-label="Resetar posição 360">⟲</button>
+        </div>
+      </div>
     </div>
     <div style="display:flex;align-items:center;padding:4px 0 2px 0;">
       <button id="yt-ep-1-capbtn" class="yt-capture-btn" onclick="captureYouTubeFrame('yt-ep-1')">
@@ -1217,8 +1436,24 @@
           
   <div class="yt-embed-section no-print">
     <div class="yt-embed-wrapper">
-      <div id="yt-ep-2"></div>
+      <div id="yt-ep-2" style="position:relative;"></div>
+      <div id="yt-ep-2-overlay-drag-wrap" style="position:absolute;inset:0;z-index:20;pointer-events:none;">
+        <div id="yt-ep-2-overlay-drag" style="position:absolute;left:12%;right:12%;top:14%;bottom:18%;cursor:grab;pointer-events:auto;display:none;" title="Arraste para mover a câmera em 360° ou clique para pausar/reproduzir"></div>
+      </div>
       <div class="occ-video-overlay" id="yt-ep-2-overlay"></div>
+      <div id="yt-ep-2-360" class="yt360-controls" aria-label="Controle de navegação 360">
+        <div class="yt360-pad">
+          <div></div>
+          <button id="yt-ep-2-360-up" class="yt360-btn" type="button" title="Mover para cima" aria-label="Navegar para cima">▲</button>
+          <div></div>
+          <button id="yt-ep-2-360-left" class="yt360-btn" type="button" title="Mover para esquerda" aria-label="Navegar para esquerda">◀</button>
+          <div id="yt-ep-2-360-drag" class="yt360-drag" title="Arraste para navegar" aria-label="Arraste para navegar">✥</div>
+          <button id="yt-ep-2-360-right" class="yt360-btn" type="button" title="Mover para direita" aria-label="Navegar para direita">▶</button>
+          <div></div>
+          <button id="yt-ep-2-360-down" class="yt360-btn" type="button" title="Mover para baixo" aria-label="Navegar para baixo">▼</button>
+          <button id="yt-ep-2-360-reset" class="yt360-btn yt360-btn-reset" type="button" title="Resetar posição" aria-label="Resetar posição 360">⟲</button>
+        </div>
+      </div>
     </div>
     <div style="display:flex;align-items:center;padding:4px 0 2px 0;">
       <button id="yt-ep-2-capbtn" class="yt-capture-btn" onclick="captureYouTubeFrame('yt-ep-2')">
