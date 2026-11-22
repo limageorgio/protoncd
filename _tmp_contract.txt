@@ -1,0 +1,247 @@
+CONTRATO DE PRESTAÇÃO DE SERVIÇOS TÉCNICOS DE ENGENHARIA, GESTÃO DE SEGURANÇA, AUDITORIA FINAL E ASSESSORIA DE INSTALAÇÃO
+Contrato nº: PROTON-KERUI-BYD-2026/003Empreendimento: Complexo Industrial / Complexo de Dormitórios da BYD Auto do Brasil Ltda. – Polo Industrial de Camaçari (Camaçari/BA)Objeto Específico: Assessoria Técnica de Engenharia, Gestão Contratual, Fiscalização Consultiva de Montagem, Gestão de Não Conformidades e Terceiros, Gestão Consultiva de Segurança do Trabalho (SST), Comunicação Intermediada e Auditoria Final de Validação ("Marco Zero") com ART Específica para 10 (Dez) Elevadores.
+CLÁUSULA 1ª – DA IDENTIFICAÇÃO DAS PARTES, DA SEGREGAÇÃO DAS ARTs E DA RESPONSABILIDADE PERANTE O CONSELHO DE CLASSE
+1.1. CONTRATADA:PROTON ENGENHARIA COMÉRCIO E DISTRIBUIÇÃO EIRELI ME, pessoa jurídica de direito privado, inscrita no CNPJ/MF sob o nº 16.887.672/0001-09, registrada no Conselho Regional de Engenharia e Agronomia de Goiás (CREA-GO) sob o nº 1018779540D, com sede em Goiânia/GO, neste ato representada por seu Diretor Técnico, Eng. Mecânico Georgio Batista de Lima (CREA-GO nº 1018779540D-GO), doravante denominada CONTRATADA ou PROTON.
+1.2. CONTRATANTE:SHENZHEN KERUI ELECTROMECHANICAL EQUIPMENT CO., LTD. (em conjunto com SOUTHEAST ELEVATOR CO., LTD.), pessoa jurídica constituída sob as leis da República Popular da China, inscrita no Registro Empresarial / NIF Internacional nº [INSERIR REGISTRO EMPRESARIAL CHINA], com sede internacional em [INSERIR ENDEREÇO COMPLETO NA CHINA], neste ato devidamente representada por seu Representante Legal com poderes comprovados, Sr. Ji Fei Chen, portador do Passaporte / Documento de Identificação nº [INSERIR PASSAPORTE], doravante denominada CONTRATANTE ou KERUI.
+1.3. INTERVENIENTE ANUENTE / PROPRIETÁRIA DO EMPREENDIMENTO (PARA FINS DE ART):BYD AUTO DO BRASIL LTDA., pessoa jurídica de direito privado, inscrita no CNPJ/MF sob o nº 50.351.104/0001-19, com estabelecimento situado na Avenida BYD, nº 2000, Polo Industrial de Camaçari, Camaçari/BA, CEP 42816-260, doravante denominada BYD.
+1.4. DELIMITAÇÃO DO ESCOPO TÉCNICO, SEGREGAÇÃO DAS ARTs E CIÊNCIA QUANTO AO CONSELHO DE CLASSE (CONFEA/CREA):
+1.4.1. Segregação de Responsabilidades e Emissão de ARTs: As responsabilidades técnicas da PROTON, de seu Diretor Técnico e das empresas/profissionais subcontratados serão estritamente formalizadas e delimitadas conforme os serviços efetivamente executados por cada ente e consignados nas respectivas Anotações de Responsabilidade Técnica (ARTs) perante o CREA-BA, observando-se rigorosamente a legislação federal e as resoluções do Sistema Confea/Crea.
+1.4.2. Não Assunção de Responsabilidade por Atividades Executivas de Terceiros: A atuação da PROTON e de seu engenheiro responsável na Fase 1 consiste exclusivamente na assessoria técnica, gestão contratual, fiscalização consultiva e coordenação de terceiros junto à KERUI, não implicando a assunção solidária ou automática de responsabilidade técnica pela execução integral da montagem dos elevadores nem pelas atividades executivas próprias dos profissionais e empresas subcontratadas locais, cada qual respondendo nos estritos limites de sua própria habilitação e ART registrada.
+1.4.3. ART Específica da Auditoria Final ("Marco Zero"): A PROTON assumirá plena responsabilidade técnica pela execução da Auditoria Final de Validação denominada "Marco Zero" (Fase 2), obrigando-se a emitir e registrar perante o CREA-BA, previamente ao início das respectivas atividades periciais em campo, a ART específica referente exclusivamente aos serviços de inspeção, ensaios instrumentados e avaliação técnica assumidos pela PROTON, conforme as atribuições profissionais aplicáveis.
+1.4.4. Atividades Expressamente Fora das ARTs da PROTON e do Engenheiro Consultor: Ficam expressamente excluídas do escopo da PROTON, do Engenheiro Consultor/Fiscalizador e das respectivas ARTs de assessoria e auditoria: (a) a execução física da montagem mecânica ou elétrica dos elevadores; (b) o projeto, fabricação, certificação fabril ou fornecimento de componentes e materiais; (c) o comando direto ou direção operacional das equipes de montagem da KERUI; (d) a execução física de correções ou retrabalhos; (e) o comissionamento operacional executivo e manobras de carga; e (f) quaisquer outras atividades executivas que não estejam expressamente contratadas e atribuídas à PROTON.
+1.4.5. Custeio das Taxas de ART via Fundo de Caução: As taxas administrativas cobradas pelo CREA-BA para emissão, registro, alteração ou baixa das ARTs serão liquidadas diretamente pela PROTON utilizando o saldo do Fundo Rotativo de Caução e Despesas (Cláusula 7ª), mediante apresentação dos comprovantes oficiais na planilha de acerto de contas, ou pagas antecipadamente pela CONTRATANTE caso o saldo do fundo ainda não tenha sido creditado ou esteja insuficiente.
+1.4.6. Titularidade Local e Anuência da BYD: Enquanto a CONTRATANTE não possuir inscrição ativa no CNPJ perante a Receita Federal do Brasil, as ARTs junto ao CREA-BA serão registradas indicando como CONTRATANTE LOCAL / PROPRIETÁRIA DO EMPREENDIMENTO a BYD AUTO DO BRASIL LTDA. (CNPJ/MF nº 50.351.104/0001-19), mediante anuência formal da BYD neste instrumento ou em termo específico.
+1.4.7. Ciência de Denúncia ao Conselho de Classe (CREA): A PROTON declara-se plenamente ciente de que eventual descumprimento injustificado das obrigações técnicas expressamente assumidas sob sua responsabilidade poderá ser comunicado ao Conselho Regional de Engenharia e Agronomia (CREA-BA / CREA-GO) para apuração ético-profissional nos termos da legislação vigente.
+1.4.8. Envio Antecipado: Uma vez quitadas as taxas e cumpridas as exigências cadastrais, as respectivas ARTs serão enviadas antecipadamente à KERUI previamente ao início de cada fase vinculada.
+CLÁUSULA 2ª – DO OBJETO, DO MODELO B2B E DA MATRIZ DE RESPONSABILIDADES
+2.1. Objeto Central do Contrato:O presente Contrato tem por objeto exclusivo a prestação de serviços de assessoria técnica, gestão e coordenação contratual, acompanhamento e fiscalização consultiva da instalação, gestão técnica e administrativa das não conformidades (comunicação, cobrança de prazos e gestão dos terceiros envolvidos), gestão consultiva de segurança do trabalho (SST) e execução da Auditoria Final de Validação ("Marco Zero") para a instalação de 10 (dez) elevadores destinados ao Complexo de Dormitórios da BYD, localizado dentro do perímetro do Complexo Industrial da BYD em Camaçari/BA.
+2.2. Modelo de Contratação B2B e Isenção de Obrigações Trabalhistas (MTE):
+2.2.1. A PROTON viabilizará os serviços locais da Fase 1 por meio da contratação empresarial de prestadores habilitados atuando exclusivamente sob o regime de Pessoa Jurídica para Pessoa Jurídica (B2B — empresas prestadoras de serviços de engenharia e segurança do trabalho).
+2.2.2. Por tratar-se estritamente de contratação empresarial (B2B) sem vínculo empregatício celetista, não se aplicam a este Contrato obrigações trabalhistas perante o Ministério do Trabalho e Emprego (MTE), ficando a PROTON expressamente desobrigada de apresentar guias previdenciárias, folhas de pagamento, registros de ponto ou comprovantes trabalhistas dos terceiros contratados, limitando-se a comprovação documental à habilitação legal no conselho de classe (CREA) e regularidade fiscal das respectivas empresas prestadoras.
+2.2.3. Todas as cláusulas de proteção jurídica, autonomia técnica, limitação de responsabilidade, suspensão dos trabalhos por inadimplência e sigilo previstas neste Contrato estendem-se integralmente às empresas terceirizadas e profissionais vinculados à PROTON na execução deste objeto.
+2.3. Divisão Estrutural dos Serviços:
+Fase 1 – Assessoria Técnica, Fiscalização Consultiva, Gestão de Não Conformidades e SST (Equipe Regional): Acompanhamento presencial amostral da instalação dos 10 (dez) elevadores do Complexo de Dormitórios da BYD, orientação normativa (ABNT/NRs), gestão e cobrança das correções apontadas pelos terceiros e fiscalização consultiva de SST por empresas/profissionais sediados na região de Salvador/Camaçari-BA.
+Fase 2 – Auditoria Final de Validação ("Marco Zero"): Inspeção pericial final executada diretamente sob responsabilidade técnica da PROTON ao término da instalação, em formato de 2 (dois) lotes de 5 (cinco) elevadores ou em lote único de 10 (dez) elevadores, conforme escolha da CONTRATANTE.
+2.4. Matriz de Responsabilidades:
+PROTON ENGENHARIA (CONTRATADA): Assessoria técnica, gestão contratual e administrativa das empresas terceirizadas locais (Engenharia e SST), gestão formal das não conformidades (registro, comunicação e cobrança de prazos), administração transparente do Fundo Rotativo de Caução, execução integral da Auditoria Final ("Marco Zero") com emissão de ART específica de inspeção/ensaios e entrega dos relatórios conclusivos.
+EMPRESA / ENGENHEIRO DE ACOMPANHAMENTO LOCAL (PJ Terceirizada): Orientação técnica normativa, fiscalização amostral de montagem (até 2 visitas semanais), supervisão técnica do TST, emissão de relatórios parciais/notificações e formalização da ART correspondente às atividades locais efetivamente executadas perante o CREA-BA.
+EMPRESA / TÉCNICO DE SEGURANÇA DO TRABALHO – TST (PJ Terceirizada): Fiscalização preventiva diária de SST no canteiro (sem controle de ponto/horário fixo), apoio técnico em APR/PT junto ao SMS da BYD, emissão de alertas de segurança e comunicação imediata de riscos graves.
+KERUI / SOUTHEAST ELEVATOR (CONTRATANTE): Fornecimento dos 10 elevadores, manuais e projetos fabris; coordenação operacional integral das obras; comando direto das equipes de montadores; fornecimento de EPIs, EPCs, ferramentas e cargas de teste; execução física e comprovação de conclusão de todas as correções técnicas e de segurança apontadas.
+BYD AUTO DO BRASIL LTDA. (PROPRIETÁRIA / INTERVENIENTE): Liberação de acesso e integração ao perímetro industrial e ao Complexo de Dormitórios; recebimento de comunicações de risco grave/iminente junto ao seu setor de SMS; anuência como contratante local na ART enquanto a KERUI não possuir CNPJ no Brasil.
+CLÁUSULA 3ª – DA GESTÃO DE NÃO CONFORMIDADES, GESTÃO DOS TERCEIROS E ATRIBUIÇÕES TÉCNICAS
+3.1. Gestão Técnica e Administrativa das Não Conformidades e dos Terceiros:
+3.1.1. A PROTON realizará a gestão técnica e administrativa integral das não conformidades identificadas durante o acompanhamento da obra, compreendendo o registro documental, a comunicação formal à KERUI, a gestão da participação dos terceiros envolvidos, o acompanhamento contínuo das providências corretivas e a cobrança rigorosa dos prazos de atendimento para que os pontos técnicos determinados pelos terceiros sejam efetivamente realizados.
+3.1.2. A execução física das correções apontadas, o retrabalho, o fornecimento de peças e a comprovação documental/física de sua conclusão permanecerão sob responsabilidade exclusiva da KERUI (ou da empresa montadora/executora competente por ela designada), cabendo à PROTON acompanhar, cobrar e verificar, dentro do escopo consultivo contratado, as providências adotadas.
+3.2. Atribuições de Assessoria e Gestão da PROTON ENGENHARIA:
+3.2.1. Selecionar, contratar e gerenciar administrativamente as empresas terceirizadas locais (Engenharia e SST) para o atendimento da Fase 1.
+3.2.2. Coordenar o fluxo técnico de informações, relatórios e cobranças de pendências entre os terceiros locais, a KERUI e a gestão de engenharia da BYD.
+3.2.3. Assegurar a total autonomia técnica e independência pericial das empresas/profissionais envolvidos para emitirem pareceres isentos de pressões comerciais ou de cronograma da obra.
+3.2.4. Assumir a responsabilidade técnica direta pela execução da Auditoria Final ("Marco Zero"), mobilizando a equipe pericial, os instrumentos calibrados e emitindo a ART específica da auditoria.
+3.3. Atribuições e Limites do Engenheiro de Acompanhamento Local (PJ Terceirizada):
+3.3.1. Realizar até 2 (duas) visitas técnicas presenciais por semana no perímetro do Complexo Industrial da BYD em Camaçari/BA (Complexo de Dormitórios), com duração de até 4 (quatro) horas por visita, destinadas à conferência amostral dos pontos críticos de montagem e alinhamento com o gestor da KERUI. Visitas adicionais além do limite semanal serão cobradas à parte conforme Anexo II.
+3.3.2. Orientar tecnicamente a gestão da KERUI quanto ao cumprimento das normas técnicas brasileiras aplicáveis (ABNT NBR 16858, NBR 14712, NR-10 e NR-12).
+3.3.3. Validar tecnicamente os alertas de segurança emitidos pelo TST e elaborar os relatórios parciais de não conformidade a serem geridos e cobrados pela PROTON junto à KERUI.
+3.4. Atribuições e Limites do Técnico de Segurança do Trabalho – TST (PJ Terceirizada):
+3.4.1. Fiscalizar visualmente, no perímetro das obras dos 10 elevadores, a observância das normas regulamentadoras de segurança (NR-06, NR-10, NR-18 e NR-35) pelas equipes de instalação da KERUI.
+3.4.2. Apoiar tecnicamente a interlocução com o setor de Segurança, Meio Ambiente e Saúde (SMS) da BYD para validação de Análise Preliminar de Risco (APR) e Permissão de Trabalho (PT).
+3.4.3. Regime de Disponibilidade sem Horário Fixo (B2B): O TST atuará mediante presença diária operacional por demanda crítica da obra, sem controle de jornada, sem horário fixo de entrada ou saída e sem subordinação hierárquica perante a KERUI ou a BYD. Eventual necessidade de cobertura simultânea em frentes distantes ou turnos noturnos/finais de semana deverá ser objeto de contratação adicional específica.
+CLÁUSULA 4ª – DA BLINDAGEM JURÍDICA, LIMITAÇÃO DE RESPONSABILIDADE E REPRESENTATIVIDADE PERANTE ÓRGÃOS PÚBLICOS
+4.1. Cláusula Prioritária de Delimitação da Responsabilidade Técnica:
+4.1.1. A responsabilidade técnica da PROTON ENGENHARIA ficará estritamente restrita aos serviços expressamente contratados de assessoria, gestão e coordenação técnica na Fase 1, à execução da Auditoria Final ("Marco Zero") na Fase 2 e às atribuições consignadas nas respectivas ARTs por ela emitidas.
+4.1.2. A PROTON não será responsável pela execução física da montagem, fabricação de componentes, fornecimento de materiais ou cargas de teste, comando direto das equipes de instalação, cumprimento do cronograma da obra, comissionamento operacional ou execução física de correções de não conformidades, atribuições que competem exclusivamente à KERUI e às empresas executoras por ela contratadas.
+4.1.3. A fiscalização consultiva realizada na Fase 1 terá caráter técnico amostral, não constituindo garantia de inexistência de defeitos ocultos de fabricação, falhas futuras ou não conformidades não identificáveis nas condições e procedimentos de inspeção realizados.
+4.1.4. A presente disposição não afasta responsabilidades legais de ordem pública que não possam ser excluídas por convenção entre as partes.
+4.2. Isenção Total quanto à Coordenação de Equipes e Execução de Obra:
+4.2.1. A coordenação operacional, direção de obra, comando direto dos montadores e cumprimento das ordens de segurança no canteiro são de responsabilidade exclusiva da KERUI.
+4.2.2. Nem a PROTON nem as empresas terceirizadas possuem poder disciplinar ou hierárquico sobre os empregados ou montadores da KERUI. O dever da PROTON limita-se a orientar, fiscalizar, comunicar, registrar e cobrar a correção das não conformidades; a execução física das correções e o fornecimento/fiscalização de uso efetivo de EPIs/EPCs competem exclusivamente ao Encarregado/Gestor da KERUI.
+4.2.3. Quaisquer falhas ou reprovações ocorridas durante os ensaios de segurança ou comissionamento serão de responsabilidade integral da KERUI, que arcará com peças, retrabalho e eventuais custos de nova vistoria da PROTON.
+4.3. Representatividade Perante Órgãos de Fiscalização e Poder Público:
+4.3.1. A representatividade técnica da PROTON limita-se exclusivamente ao atendimento técnico junto ao CREA-BA quanto à regularidade das ARTs por ela emitidas e aos relatórios técnicos de sua autoria.
+4.3.1. A representatividade técnica da PROTON e do Engenheiro RT limita-se exclusivamente ao atendimento técnico junto ao CREA-BA quanto à regularidade das ARTs emitidas e aos relatórios de fiscalização técnica.
+4.3.2. A PROTON e seus terceirizados não possuem poderes de representação legal, administrativa ou de preposto da KERUI perante o Ministério do Trabalho e Emprego (MTE), Auditoria Fiscal do Trabalho, Receita Federal, Corpo de Bombeiros (CBMBA), Prefeitura Municipal de Camaçari ou diretoria da BYD.
+4.3.3. Em caso de fiscalização trabalhista ou de segurança (MTE ou órgãos públicos), cabe exclusivamente à KERUI designar seu próprio representante legal ou preposto para receber notificações, assinar autos de infração ou termos de embargo/interdição e apresentar defesas. A atuação da PROTON restringir-se-á à apresentação documental dos registros de orientação, alertas e escalonamentos preventivos emitidos.
+4.3.4. Multas, embargos ou autuações decorrentes de irregularidades trabalhistas, ausência de licenças da obra ou descumprimento executivo de NRs serão suportados integralmente pela KERUI.
+CLÁUSULA 5ª – DO PROCEDIMENTO FORMAL DIANTE DE RISCO GRAVE OU CONDIÇÃO INSEGURA, SUSPENSÃO DOS TRABALHOS E RESCISÃO
+5.1. Protocolo Obrigatório Diante de Risco Grave ou Condição Insegura:Embora a PROTON não assuma o comando operacional das equipes de montagem da KERUI, mantém o dever técnico e legal de comunicar, registrar e escalonar condições inseguras identificadas no canteiro. Constatada qualquer situação de risco grave e iminente à integridade física dos trabalhadores ou descumprimento grave das normas ABNT/NRs, será obrigatoriamente executado o seguinte procedimento escalonado em 5 (cinco) etapas:1. Comunicação Imediata: Comunicação verbal e eletrônica imediata ao responsável/gestor da KERUI em campo e simultaneamente à gestão de Segurança, Meio Ambiente e Saúde (SMS) da BYD;2. Registro Formal: Lavratura e envio de registro documental formal descrevendo a condição de risco identificada, o local exato, as normas violadas, as recomendações técnicas e as medidas preventivas exigidas;3. Direito de Interrupção Própria e Retirada da Equipe: Direito imediato e incondicional da PROTON e de seus profissionais/terceiros de interromperem suas próprias atividades de acompanhamento/inspeção na frente afetada e retirarem sua equipe da condição insegura até a completa eliminação do perigo, sem que isso configure falta ou descumprimento contratual;4. Escalonamento Formal: Caso a recomendação de paralisação preventiva e correção não seja prontamente atendida pela equipe de campo, a PROTON promoverá o escalonamento formal imediato da ocorrência à alta gestão responsável da KERUI e à gerência corporativa/SMS da BYD;5. Registro de Recusa ou Continuidade Indevida: Lavratura de termo documental circunstanciado registrando eventual recusa, omissão ou continuidade da atividade insegura pela empresa executora, identificando expressamente os responsáveis comunicados, os horários das notificações e as providências adotadas, servindo tal registro como prova plena de cumprimento do dever de diligência da PROTON e de isenção de responsabilidade por eventuais sinistros decorrentes da desobediência da executora.
+5.2. Suspensão Formal dos Serviços por Inadimplência ou Pendência (Prazo de 5 Dias ÚTEIS):
+5.2.1. Ocorrendo atraso superior a 5 (cinco) dias úteis no depósito inicial ou na recomposição do Fundo Rotativo de Caução (Cláusula 7.2), no pagamento de qualquer planilha mensal de acerto, taxa de ART ou adiantamento de deslocamento, bem como persistência na recusa em sanar risco grave escalonado ou impedimento de acesso ao complexo da BYD por falha da KERUI, a PROTON notificará formalmente a CONTRATANTE concedendo prazo de 48 (quarenta e oito) horas para regularização.
+5.2.2. Não sanada a pendência no prazo acima, a PROTON suspenderá imediatamente a execução de todos os serviços (incluindo a atuação da PROTON e de todas as empresas terceirizadas vinculadas), sem que tal suspensão configure inadimplemento contratual da PROTON.
+5.2.3. Durante o período de suspensão, a PROTON formalizará o registro da situação da obra e comunicará o CREA-BA quanto à paralisação temporária das atividades vinculadas às ARTs, ficando a PROTON e seus terceirizados isentos de responsabilidade sobre atos, montagens ou eventos ocorridos à sua revelia durante a paralisação.
+5.3. Rescisão Antecipada, Aviso Prévio de 30 Dias e Multa de 10%:
+5.3.1. Caso qualquer das Partes deseje rescindir imotivadamente o presente Contrato antes de sua conclusão, deverá notificar a outra Parte por escrito com antecedência mínima obrigatória de 30 (trinta) dias corridos.
+5.3.2. A inobservância do aviso prévio mínimo de 30 (trinta) dias sujeitará a Parte infratora ao pagamento de multa rescisória compensatória equivalente a 10% (dez por cento) sobre o valor global estimado do Contrato, além da quitação integral de todos os serviços já executados, repasses mensais proporcionais, taxas de ART e despesas logísticas já comprometidas (podendo a PROTON reter e compensar tais valores diretamente do saldo do Fundo Rotativo de Caução), ressalvadas exclusivamente as hipóteses comprovadas de caso fortuito ou força maior (art. 393 do Código Civil).
+5.3.3. Em caso de rescisão motivada por descumprimento grave de normas de segurança ou inadimplência superior a 15 (quinze) dias úteis pela KERUI, proceder-se-á à baixa definitiva das ARTs no CREA-BA por interrupção do contrato/empreendimento, notificando formalmente a BYD e os órgãos competentes.
+CLÁUSULA 6ª – DA AUDITORIA FINAL DE VALIDAÇÃO ("MARCO ZERO") E SUA ART ESPECÍFICA
+6.1. Responsabilidade Técnica Plena da PROTON pela Auditoria Final ("Marco Zero"):Ao término da instalação dos equipamentos no Complexo de Dormitórios da BYD, a PROTON assumirá integralmente a execução e a responsabilidade técnica da Auditoria Final de Validação denominada "Marco Zero", emitindo a ART específica de inspeção, ensaios e avaliação técnica antes do início das atividades periciais em campo. A auditoria será executada por equipe especializada de até 2 (dois) profissionais vindos da sede central da PROTON, sob uma das duas modalidades à escolha da KERUI (detalhadas no Anexo II):
+Modalidade A – Execução Fracionada em 2 (Dois) Lotes de 5 (Cinco) Elevadores (5 + 5): Prazo mínimo de execução de 3 (três) dias úteis de campo por lote (totalizando 6 dias úteis nas duas missões).
+Modalidade B – Execução Integrada em Lote Único de 10 (Dez) Elevadores: Prazo mínimo de execução de 6 (seis) dias úteis contínuos de campo para inspeção conjunta de todo o conjunto, conforme necessidade ou interesse operacional da KERUI.
+Atribuições da Equipe Pericial:
+1. Perito em Testes de Segurança e Inspeção de Poços/Fossos: Acompanhamento e testemunho técnico dos ensaios de segurança (limitador de velocidade, freio de segurança progressivo, amortecedores, dispositivos de emergência) e vistoria detalhada dos fossos e casas de máquinas/espaços de polias.
+2. Especialista em Conformidade Normativa (+120 Itens) e Ensaios de Qualidade (Ride Quality): Verificação de mais de 120 itens normativos aplicáveis (ABNT NBR 16858 / NBR 14712) e execução dos ensaios instrumentados de qualidade de viagem (Ride Quality) para avaliação do conforto operacional dos equipamentos.
+6.2. Alcance, Limitações e Finalidade Técnica do Relatório "Marco Zero":
+6.2.1. O Relatório Técnico de Auditoria Final ("Marco Zero") registrará de forma objetiva e documentada as condições físicas, operacionais e normativas constatadas nos equipamentos na data exata da realização dos ensaios e vistorias, consignando eventuais ressalvas, limitações de acesso ou itens não verificáveis sem desmontagem destrutiva.
+6.2.2. O documento servirá como registro técnico de linha de base (baseline) do estado em que os elevadores foram entregues pela KERUI, constituindo elemento de comprovação técnica para resguardar o Engenheiro RT quanto à regularidade normativa no ato da entrega e documentar o estado inicial dos ativos frente a intervenções futuras de terceiros, sem representar garantia comercial estendida do fabricante.
+6.2.3. O Relatório "Marco Zero" constituirá ainda dossiê técnico de referência que poderá subsidiar a KERUI e a BYD no planejamento e na elaboração de edital de concorrência para contratação da empresa de manutenção preventiva/corretiva compulsória exigida pela legislação brasileira.
+CLÁUSULA 7ª – DA TRANSPARÊNCIA FINANCEIRA, FUNDO ROTATIVO DE CAUÇÃO, PRESTAÇÃO DE CONTAS E CÂMBIO EM DÓLAR (USD)
+7.1. Transparência Total, Taxa de Gestão (30%) e Disponibilização de Contratos dos Terceiros Locais:
+7.1.1. A estrutura de remuneração da Fase 1 baseia-se na transparência total dos custos de contratação dos terceiros locais. Os valores pactuados entre a PROTON e as empresas prestadoras de serviços locais (Engenharia e SST) serão integralmente apresentados à KERUI, incidindo sobre o custo direto de cada empresa contratada o acréscimo comercial de 30% (trinta por cento) livre a título de gestão, assessoria técnica, coordenação de não conformidades e administração contratual da PROTON, além dos tributos incidentes conforme detalhado no Anexo II.
+7.1.2. Disponibilização de Contratos de Terceiros (Com Exceção Pericial): Tanto os demonstrativos mensais de acerto de contas quanto as cópias dos contratos celebrados entre a PROTON e as empresas terceirizadas locais (Fase 1) serão disponibilizados à KERUI para auditoria e transparência documental. Ficam expressamente excluídos desta obrigação de exibição contratual os contratos, acordos internos ou remunerações dos gestores da PROTON e dos especialistas/peritos mobilizados para a conclusão da etapa final de avaliação ("Marco Zero" – Fase 2, em lotes ou conjunto), os quais possuem remuneração fechada por pacote técnico conforme Anexo II.
+7.1.3. Concentração de Valores nos Anexos: Todos os valores monetários específicos em Reais (BRL) e suas respectivas equivalências em Dólares Norte-Americanos (USD) encontram-se consolidados exclusivamente no Anexo II deste Contrato.
+7.2. Fundo Rotativo de Caução e Reserva Operacional (Depósito Inicial, Recomposição e Abatimento Final):
+7.2.1. Constituição e Prazo de Depósito (Sem Impedimento ao Início dos Trabalhos): A CONTRATANTE depositará em favor da PROTON, a título de Fundo Rotativo de Reserva Operacional e Caução Contratual, o valor inicial estipulado no Anexo II. O referido depósito deverá ser efetuado no prazo máximo de até 5 (cinco) dias corridos após a assinatura deste Contrato, ficando expressamente pactuado que a aguardada compensação deste depósito não limita nem condiciona o início imediato dos trabalhos técnicos preparatórios pela PROTON.
+7.2.2. Finalidade e Prestação de Contas do Fundo: O Fundo Rotativo destina-se a custear de forma ágil despesas operacionais, taxas de registro/baixa de ARTs junto ao CREA-BA, visitas extras, custas administrativas emergenciais e a servir como garantia contratual real contra inadimplências ou custos de cancelamento de passagens. Toda movimentação debitada deste fundo será rigorosamente demonstrada na Planilha de Acerto de Contas acompanhada dos respectivos comprovantes fiscais/guias oficiais.
+7.2.3. Gatilho de Recomposição Automática e Exceções:Regra Geral de Recomposição: Sempre que o saldo disponível do Fundo Rotativo se tornar insuficiente para cobrir a quitação mensal dos profissionais locais ou atingir patamar inferior ao piso mínimo estabelecido no Anexo II, a PROTON notificará a KERUI para que efetue um novo depósito de recomposição no mesmo valor inicial estipulado no Anexo II, no prazo máximo de 5 (cinco) dias corridos.Exceções à Recomposição Integral: Não será exigido novo depósito integral nas seguintes hipóteses excepcionais: (a) quando o contrato já estiver em seu último mês de vigência ou em fase de conclusão do último lote da Auditoria Final ("Marco Zero"), hipótese em que será exigido apenas o complemento exato necessário para liquidar as despesas finais pendentes; (b) em caso de suspensão formal ou rescisão contratual já notificada entre as Partes; ou (c) quando eventual consumo pontual acima do piso decorrer de erro de lançamento contábil da própria PROTON, o qual será imediatamente estornado na planilha de acerto.
+7.2.4. Abatimento do Saldo Remanescente na Última Etapa: Na etapa final de encerramento do Contrato (liquidação da parcela final da Auditoria "Marco Zero"), todo o saldo credor remanescente existente no Fundo Rotativo de Caução (após deduzidas eventuais despesas comprovadas e baixas finais de ART) será integralmente abatido do valor final devido, cabendo à KERUI pagar à PROTON exclusivamente a diferença líquida entre o saldo remanescente da caução e o valor total dos serviços finais a serem liquidados.
+7.3. Planilha de Acerto de Contas Mensal (Todo Dia 01) e Acúmulo Mínimo:
+7.3.1. A prestação de contas referente às despesas mensais das empresas terceirizadas locais, à taxa de gestão de 30% da PROTON e à movimentação do Fundo Rotativo será consolidada em Planilha de Acerto de Contas e enviada à KERUI todo dia 01 (primeiro) de cada mês, acompanhada dos respectivos comprovantes.
+7.3.2. Despesas extras avulsas inferiores ao piso mínimo estabelecido no Anexo II serão acumuladas para cobrança na planilha mensal subsequente junto com o pagamento dos contratados, salvo se atingirem ou superarem o referido piso, hipótese em que poderão ser faturadas a qualquer momento.
+7.3.3. O pagamento de qualquer planilha de acerto emitida pela PROTON deverá ser efetuado pela KERUI no prazo máximo de 5 (cinco) dias corridos após o envio.
+7.4. Forma de Pagamento da Auditoria Final ("Marco Zero" – Lotes de 5 ou Conjunto de 10 Elevadores):
+7.4.1. Os honorários referentes à Auditoria Final ("Marco Zero") obedecerão ao seguinte cronograma financeiro (conforme modalidade escolhida no Anexo II):30% (trinta por cento) de entrada: Pagos antecipadamente no ato do agendamento da missão pericial, acrescidos integralmente do valor antecipado das despesas de deslocamento e logística da equipe pericial previstos no Anexo II;70% (setenta por cento) finais: Pagos na entrega do Relatório Técnico Conclusivo ("Marco Zero") do respectivo lote ou conjunto, procedendo-se, na etapa derradeira do contrato, ao abatimento do saldo remanescente do Fundo Rotativo de Caução (Cláusula 7.2.4).
+7.5. Conversão Cambial em Dólar Norte-Americano (USD – Data-Base 21/11/2026) e Proteção Cambial:
+7.5.1. Todos os valores expressos em Reais (BRL) no Anexo II deste Contrato possuem referência direta em Dólares Norte-Americanos (USD) calculados pela cotação média de R$ 5,95 (cinco reais e noventa e cinco centavos) por USD 1,00, vigente na data de referência de 21/11/2026.
+7.5.2. Nas datas de vencimento de cada fatura, depósito de caução ou planilha de acerto, os pagamentos internacionais efetuados pela KERUI deverão ser transferidos em Dólares Norte-Americanos (USD) considerando a cotação oficial PTAX/comercial do dia do efetivo pagamento, de modo que o valor líquido creditado em conta bancária da PROTON no Brasil corresponda integralmente ao montante devido em Reais (BRL).
+7.5.3. Proteção contra Desproporção Cambial e Custos de Remessa: Caso ocorra qualquer variação cambial abrupta, desproporção monetária ou retenção bancária internacional (tarifas SWIFT, IOF ou spreads de câmbio) que resulte em crédito inferior ao valor integral em Reais devido à PROTON, a KERUI compromete-se a complementar prontamente a diferença apurada em até 5 (cinco) dias corridos, evitando qualquer prejuízo financeiro à PROTON ENGENHARIA.
+7.6. Incidência Tributária (Gross-Up) e Inadimplência:
+7.6.1. Sempre que o faturamento de repasses ou reembolso de despesas extras transitar pela Nota Fiscal da PROTON, o valor será acrescido da memória de cálculo correspondente aos tributos efetivamente incidentes sobre a emissão fiscal (ISS, PIS, COFINS, IRPJ/CSLL ou tributos vigentes).
+7.6.2. O atraso no pagamento de qualquer fatura, recomposição de fundo ou planilha de acerto implicará multa moratória de 2% (dois por cento), juros de mora de 1% (um por cento) ao mês pro rata die e atualização monetária pelo IPCA (ou variação cambial favorável à CREDORA), além da suspensão dos serviços nos termos da Cláusula 5.2.
+CLÁUSULA 8ª – LOGÍSTICA, CANCELAMENTO DE PASSAGENS, SLA DE COMUNICAÇÃO E INTERMEDIAÇÃO COM A BYD
+8.1. Logística Local vs. Mobilização Pericial e Cancelamento de Passagens:
+8.1.1. O acompanhamento rotineiro de montagem (Fase 1) será executado por empresas/profissionais sediados na região de Salvador/Camaçari-BA, operando dentro do perímetro do Complexo Industrial da BYD em Camaçari/BA sem cobrança de passagens aéreas.
+8.1.2. Para a mobilização da equipe pericial da Auditoria Final ("Marco Zero") ou visitas extraordinárias da gestão central da PROTON (Goiânia/GO), a solicitação deverá ocorrer com antecedência mínima de 7 (sete) dias corridos, aplicando-se o valor fixo de deslocamento estabelecido no Anexo II.
+8.1.3. Ressarcimento por Cancelamento ou Remarcação de Passagens: Caso a KERUI solicite o adiamento, cancelamento ou remarcação de visita já agendada, ou caso ocorra impedimento de acesso ao perímetro industrial da BYD por pendência documental/administrativa da KERUI, todos os custos decorrentes de cancelamento, multas tarifárias de passagens aéreas, remarcação de bilhetes, diárias de hotel já comprometidas e diárias técnicas improdutivas serão integralmente ressarcidos pela KERUI mediante apresentação dos comprovantes (podendo ser debitados diretamente do Fundo Rotativo de Caução).
+8.2. Prazos de Atendimento Técnico (SLA):
+8.2.1. Confirmação de Recebimento: Até 24 (vinte e quatro) horas úteis após o envio da demanda pela KERUI.
+8.2.2. Dúvidas Técnicas Ordinárias: Resposta em até 48 (quarenta e oito) horas úteis, condicionada ao fornecimento prévio dos documentos técnicos aplicáveis pela KERUI.
+8.2.3. Pareceres e Análises Complexas: Prazo de até 5 (cinco) dias úteis (ou prazo maior ajustado entre as partes conforme a complexidade documental).
+8.3. Comunicação Transparente com a BYD e Protocolo de Risco Grave:
+8.3.1. Toda comunicação administrativa ou técnica regular exigida pela BYD Auto do Brasil Ltda. será respondida pela PROTON com conhecimento pleno e cópia imediata (CC) à KERUI, vedada à PROTON qualquer alteração unilateral de escopo comercial, prazos de obra ou preços junto à BYD.
+8.3.2. Nas hipóteses de risco grave e iminente ou condição insegura no canteiro, aplicam-se de imediato as regras de comunicação, escalonamento e registro previstas na Cláusula 5.1.
+CLÁUSULA 9ª – DA NÃO CONCORRÊNCIA ESPECÍFICA E AUSÊNCIA DE CONFLITO DE INTERESSES
+9.1. Compromisso de Não Concorrência Restrito ao Escopo:Durante a vigência deste Contrato e pelo prazo de 12 (doze) meses após seu encerramento, a PROTON ENGENHARIA compromete-se a não realizar negociações comerciais diretas com a BYD Auto do Brasil Ltda. que tenham por objeto o fornecimento, venda ou instalação dos 10 (dez) elevadores integrantes do presente Contrato, nem atuar em conflito direto de interesses com o escopo executivo da KERUI neste empreendimento.
+9.2. Resguardo da Atuação Independente da PROTON:A restrição prevista no item 9.1 limita-se estritamente à oportunidade comercial específica apresentada pela KERUI (os 10 elevadores do Complexo de Dormitórios), não impedindo a PROTON de exercer livremente suas atividades institucionais de engenharia diagnóstica, perícias, auditorias independentes ou participação em concorrências públicas ou privadas junto a quaisquer clientes, inclusive a própria BYD, em outros escopos, plantas ou contratos independentes.
+9.3. Penalidade Proporcional:O descumprimento comprovado da obrigação de não concorrência específica prevista nesta Cláusula sujeitará a PROTON ao pagamento de multa compensatória equivalente a 20% (vinte por cento) do valor efetivamente recebido a título de taxa de gestão neste Contrato, observando-se o teto de responsabilidade contratual.
+CLÁUSULA 10ª – DO TETO DE RESPONSABILIDADE FINANCEIRA, EXCLUSÃO DE DANOS INDIRETOS E PROPRIEDADE INTELECTUAL
+10.1. Teto de Responsabilidade Financeira (Cap of Liability):Fica expressamente pactuado entre as Partes que a responsabilidade financeira total e acumulada da PROTON ENGENHARIA por quaisquer perdas, danos diretos ou pleitos oriundos deste Contrato ficará limitada ao teto máximo equivalente a 100% (cem por cento) do valor líquido dos honorários efetivamente recebidos pela PROTON até a data do evento, ressalvadas exclusivamente as hipóteses legais não passíveis de limitação contratual por dolo comprovado.
+10.2. Exclusão de Danos Indiretos e Lucros Cessantes:Em nenhuma hipótese a PROTON ENGENHARIA ou suas empresas terceirizadas responderão por danos indiretos, danos morais, lucros cessantes, perda de produção industrial, paralisação de linhas de montagem da BYD, perda de receitas ou multas contratuais aplicadas pela BYD à KERUI.
+10.3. Propriedade Intelectual e Metodologia Técnica:Todos os métodos de inspeção, protocolos de ensaio, planilhas de cálculo, softwares, modelos de relatórios técnicos, procedimentos de análise e metodologias diagnósticas desenvolvidas e utilizadas pela PROTON ENGENHARIA permanecem de sua exclusiva propriedade intelectual. Concede-se à KERUI e à BYD licença não exclusiva de uso dos relatórios finais entregues especificamente para fins de comprovação técnica, arquivo de engenharia e licitação de manutenção dos 10 (dez) elevadores deste empreendimento.
+CLÁUSULA 11ª – DA VIGÊNCIA, PRORROGAÇÃO E REMUNERAÇÃO EM CASO DE PARALISAÇÃO DA OBRA
+11.1. Vigência Inicial e Prorrogação:O presente Contrato terá vigência inicial de 6 (seis) meses a contar da data de sua assinatura, podendo ser prorrogado mediante termo aditivo caso o cronograma físico de montagem dos 10 (dez) elevadores no Complexo de Dormitórios da BYD se estenda além deste período.
+11.2. Remuneração durante Atrasos ou Paralisações da Obra (Standby):Caso a obra sofra atrasos de cronograma, suspensão de frentes de serviço ou paralisação imputável à KERUI ou à BYD (excluído o recesso programado do Ano Novo Chinês, desde que previamente comunicado com 30 dias de antecedência para suspensão temporária das mobilizaciones locais), a KERUI deverá manter o pagamento integral das mensalidades contratadas caso exija a manutenção da disponibilidade das empresas terceirizadas e das ARTs ativas, ou formalizar a suspensão temporária do Contrato com baixa provisória das ARTs no CREA-BA.
+CLÁUSULA 12ª – DA LEGISLAÇÃO APLICÁVEL E DO FORO
+12.1. Este Contrato é regido exclusivamente pelas leis da República Federativa do Brasil, prevalecendo o idioma português para todos os efeitos legais e judiciais.
+12.2. As Partes elegem o Foro da Comarca de Goiânia, Estado de Goiás, com renúncia expressa a qualquer outro, por mais privilegiado que seja, para dirimir quaisquer controvérsias ou litígios oriundos deste Contrato.
+E, por estarem justas e contratadas, as Partes e a Interveniente Anuente assinam o presente instrumento em 3 (três) vias de igual teor e forma (ou mediante assinatura eletrônica com validade jurídica ICP-Brasil).
+Goiânia/GO – Camaçari/BA, 21 de novembro de 2026.
+ASSINATURAS DAS PARTES
+CONTRATADA:PROTON ENGENHARIA COMÉRCIO E DISTRIBUIÇÃO EIRELI MECNPJ: 16.887.672/0001-09
+Eng. Mecânico Georgio Batista de LimaDiretor Técnico (CREA-GO 1018779540D)
+CONTRATANTE:SHENZHEN KERUI ELECTROMECHANICAL EQUIPMENT CO., LTD. / SOUTHEAST ELEVATOR CO., LTD.
+Sr. Ji Fei ChenRepresentante Legal (Passaporte/Doc.: ____________________)
+INTERVENIENTE ANUENTE (PARA FINS DE ART LOCAL E ACESSO AO COMPLEXO):BYD AUTO DO BRASIL LTDA.CNPJ: 50.351.104/0001-19
+Representante Legal: _________________________________________________
+TESTEMUNHAS:
+1. Nome: ___________________________________ | CPF/Doc.: _______________________
+2. Nome: ___________________________________ | CPF/Doc.: _______________________
+ANEXO I – ESCOPO QUANTITATIVO DOS EQUIPAMENTOS DESIGNADOS
+Item
+Parâmetro
+Detalhamento do Escopo
+1
+Empreendimento
+Complexo de Dormitórios da BYD — Perímetro do Complexo Industrial da BYD Auto do Brasil Ltda. (Avenida BYD, nº 2000, Polo Industrial de Camaçari, Camaçari/BA).
+2
+Quantidade Total Contratada
+10 (dez) elevadores.
+3
+Opções de Execução da Auditoria Final ("Marco Zero")
+Opção A (Fracionada): 02 (dois) lotes de 05 (cinco) elevadores cada (5 + 5 unidades), com duração mínima de 3 (três) dias úteis de campo por lote.Opção B (Conjunto Único): 01 (um) lote único de 10 (dez) elevadores, com duração mínima de 6 (seis) dias úteis contínuos de campo.
+4
+Identificação Individual
+As especificações técnicas individuais (capacidade, velocidade, fabricante/modelo, número de paradas e localização exata por bloco) serão formalizadas mediante aditivo ou lista técnica complementar assinada pelas Partes previamente ao início da montagem de cada lote, restringindo-se a responsabilidade técnica da PROTON exclusivamente às 10 (dez) unidades designadas.
+ANEXO II – TABELA FINANCEIRA, FUNDO DE CAUÇÃO, CONVERSÃO CAMBIAL (USD = R$ 5,95) E REGRAS DE ACERTO
+1. DATA-BASE DE CONVERSÃO CAMBIAL (USD)
+Data de Referência: 21/11/2026
+Cotação de Referência (USD): R$ 5,95 / USD 1,00
+Regra de Pagamento Internacional: Todos os valores em Reais (BRL) abaixo possuem sua equivalência calculada à taxa de R$ 5,95 na data de 21/11/2026. Na data de cada transferência bancária internacional, a KERUI transferirá o valor em USD pela cotação PTAX/comercial do dia do pagamento, garantindo o crédito líquido integral em Reais (BRL) na conta da PROTON.
+2. FUNDO ROTATIVO DE CAUÇÃO E RESERVA OPERACIONAL (CLÁUSULA 7.2)
+Valor Inicial do Depósito de Caução/Reserva: R$ 10.000,00 (Equivalente a USD 1.680,67 à cotação de R$ 5,95).
+Piso Mínimo para Recomposição Automática e Acúmulo de Extras: R$ 2.000,00 (Equivalente a USD 336,13 à cotação de R$ 5,95) ou insuficiência de saldo para cobrir os pagamentos mensais dos profissionais locais.
+Valor do Novo Depósito de Recomposição: R$ 10.000,00 (USD 1.680,67), pago em até 5 (cinco) dias corridos após notificação, observadas as exceções contratuais da Cláusula 7.2.3.
+Destinação e Encerramento: Custeio ágil de taxas de ART (CREA-BA), despesas operacionais e garantia contratual, com prestação de contas mensal e abatimento integral do saldo remanescente na última etapa da Auditoria Final ("Marco Zero").
+3. FASE 1 – ASSESSORIA, ACOMPANHAMENTO DE MONTAGEM E GESTÃO DE SST (EQUIPE REGIONAL B2B)
+(Contratos das PJs terceirizadas locais disponibilizados à KERUI conforme Cláusula 7.1.2)
+Item
+Descrição do Serviço / Componente
+Custo Direto PJ (BRL)
+Gestão PROTON (30%)
+Subtotal Mensal (BRL)
+Equivalente Est. (USD = R$ 5,95)
+3.1
+Empresa de Engenharia de Acompanhamento LocalAté 2 vistorias semanais (até 4h/visita) no Complexo de Dormitórios, orientação normativa e ART correspondente às atividades locais.
+R$ 8.000,00 / mês
+R$ 2.400,00 / mês
+R$ 10.400,00 / mês
+USD 1.747,90 / mês (PJ: USD 1.344,54 | Gestão: USD 403,36)
+3.2
+Empresa/Profissional de SST (TST Local)Fiscalização diária preventiva de SST no canteiro (sem horário fixo) e apoio em APR/PT junto ao SMS BYD.
+R$ 5.500,00 / mês
+R$ 1.650,00 / mês
+R$ 7.150,00 / mês
+USD 1.201,68 / mês (PJ: USD 924,37 | Gestão: USD 277,31)
+3.3
+Visita Técnica Extraordinária (Engenharia Local)Visita presencial excedente (além das 2 semanais pactuadas, com duração de até 4 horas).
+R$ 1.200,00 / visita
+R$ 360,00 (30%)
+R$ 1.560,00 / visita
+USD 262,18 / visita (Base: USD 201,68 | Gestão: USD 60,50)
+4. FASE 2 – AUDITORIA FINAL DE VALIDAÇÃO ("MARCO ZERO") E ENSAIOS DE QUALIDADE (RIDE QUALITY)
+(Executada sob responsabilidade técnica plena da PROTON com ART específica de inspeção/ensaios — contratos internos dos peritos/gestores não sujeitos à exibição conforme Cláusula 7.1.2)
+Item
+Descrição do Pacote Pericial / Opção
+Valor Unitário (BRL)
+Valor Total do Pacote (BRL)
+Estrutura de Pagamento
+Equivalente Est. (USD = R$ 5,95)
+4.1
+Opção A: Execução Fracionada em 2 Lotes de 5 Elevadores (5 + 5 units)Mínimo de 3 dias úteis de campo por lote. Testes de segurança, Ride Quality e checklist de +120 itens.
+R$ 5.500,00 / elevador
+R$ 27.500,00 / lote(Total 2 Lotes: R$ 55.000,00)
+Por Lote de 5 unidades:Entrada (30%): R$ 8.250,00 (+ R$ 5.000 logísticos)Relatório (70%): R$ 19.250,00 (com abatimento final da caução no 2º lote).
+Unitário: USD 924,37Por Lote: USD 4.621,85Total 2 Lotes: USD 9.243,70
+4.2
+Opção B: Execução Integrada em Lote Único de 10 ElevadoresMínimo de 6 dias úteis contínuos de campo. Inspeção conjunta de todo o conjunto.
+R$ 5.500,00 / elevador
+R$ 55.000,00 / conjunto total
+Entrada (30%): R$ 16.500,00 (+ R$ 5.000 logísticos)Relatório Final (70%): R$ 38.500,00 (com abatimento integral da caução).
+Total Conjunto: USD 9.243,70Entrada: USD 2.773,11Relatório: USD 6.470,59
+4.3
+Vistoria Avulsa / Reteste UnitárioReinspeção individualizada fora dos pacotes fechados acima.
+R$ 6.500,00 / elevador
+R$ 6.500,00 / unidade
+50% no agendamento e 50% na emissão do parecer conclusivo.
+USD 1.092,44 / elevador
+5. CUSTOS DE LOGÍSTICA E DESLOCAMENTO DA EQUIPE PERICIAL / GESTÃO CENTRAL (GOIÂNIA–SALVADOR/CAMAÇARI)
+Item
+Categoria de Despesa
+Valor Fixo / Condição (BRL)
+Regra de Cobrança e Ressarcimento
+Equivalente Est. (USD = R$ 5,95)
+5.1
+Missão Logística Pericial(Até 3 dias úteis por lote de 5, ou 6 dias ajustados para lote único)
+R$ 5.000,00 / missão
+Cobre passagens aéreas GYN-SSA-GYN, hospedagem, alimentação e traslados locais. Pago antecipadamente junto à entrada de 30%.
+USD 840,34 / missão
+5.2
+Diária Técnica / Logística Excedente
+R$ 1.500,00 / dia
+Aplicável para cobertura dos dias adicionais no lote único de 6 dias ou atrasos executivos imputáveis à obra.
+USD 252,10 / dia
+5.3
+Cancelamento / Remarcação de Passagens
+Comprovante fiscal + multas
+Ressarcimento integral de multas aéreas, taxas de remarcação e hospedagens perdidas por alteração da KERUI (ou débito direto no Fundo de Caução).
+Conforme comprovante
+6. REGRAS DE ACERTO DE CONTAS E ACÚMULO MÍNIMO
+Planilha Mensal: Enviada todo dia 01 com comprovantes das PJs terceirizadas locais e movimentação do Fundo de Caução; pagamento em até 5 dias corridos.
+Despesas Extras (ARTs, visitas extras, custas): Acumuladas até o piso mínimo de R$ 2.000,00 (dois mil reais) para faturamento imediato ou incorporadas automaticamente na planilha mensal seguinte.
