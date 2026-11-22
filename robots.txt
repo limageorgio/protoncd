@@ -16,6 +16,9 @@ Disallow: /.vscode/
 # Permitir explicitamente todas as páginas de serviço
 Allow: /laudo-elevadores-pericia-tecnica.html
 Allow: /en/elevator-inspection-report.html
+Allow: /en/engineering-advisory-brazil.html
+Allow: /en/contractor-oversight-brazil.html
+Allow: /en/asset-acceptance-audit-brazil.html
 Allow: /analise-vibracao-elevadores.html
 Allow: /inspecao-hvac-pmoc.html
 Allow: /inspecao-sistemas-mecanicos.html
